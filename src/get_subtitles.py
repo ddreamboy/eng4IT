@@ -6,7 +6,7 @@ from tqdm import tqdm
 
 
 def search_youtube_videos(query, language='en', max_results=10):
-    """Ищет видео на YouTube и проверяет наличие субтитров."""
+    '''Ищет видео на YouTube и проверяет наличие субтитров.'''
     search = YoutubeSearch(f'{query} tutorial', max_results=max_results)
     results = search.to_dict()
 
@@ -27,7 +27,7 @@ def search_youtube_videos(query, language='en', max_results=10):
 
 
 def save_video_subtitles(video_id, language='en'):
-    """Сохраняет субтитры видео в файл."""
+    '''Сохраняет субтитры видео в файл.'''
     try:
         # Проверка на существование файла с таким video_id
         existing_files = os.listdir('subtitles')
