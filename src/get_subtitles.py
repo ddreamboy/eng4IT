@@ -21,9 +21,10 @@ def search_youtube_videos(query, language='en', max_results=10):
             if transcript:
                 videos.append({'id': video_id, 'title': title})
         except Exception as e:
-            print(f"Ошибка проверки субтитров для видео {title}: {e}")
+            print(f'Ошибка проверки субтитров для видео {title}: {e}')
 
     return videos
+
 
 def save_video_subtitles(video_id, language='en'):
     """Сохраняет субтитры видео в файл."""
@@ -38,7 +39,7 @@ def save_video_subtitles(video_id, language='en'):
 
         os.makedirs('subtitles', exist_ok=True)
         file_number = len(existing_files) + 1
-        file_name = f"subtitles/{file_number:03d}_{video_id}.txt"
+        file_name = f'subtitles/{file_number:03d}_{video_id}.txt'
 
         with open(file_name, 'w', encoding='utf-8') as f:
             for entry in transcript:
@@ -50,7 +51,8 @@ def save_video_subtitles(video_id, language='en'):
     except Exception as e:
         print(f'Ошибка сохранения субтитров для видео {video_id}: {e}')
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     with open('search_queries.json', 'r') as f:
         search_queries = json.load(f)
 
@@ -58,20 +60,23 @@ if __name__ == "__main__":
     total_videos_processed = 0
     total_videos_saved = 0
 
-    for query_index, query in enumerate(tqdm(search_queries, desc="Обработка запросов")):
-        print(f"\nОбработка запроса {query_index + 1}/{total_queries}: '{query}'")
+    for query_index, query in enumerate(tqdm(search_queries, desc='Обработка запросов')):
+        print(f'\nОбработка запроса {query_index + 1}/{total_queries}: \'{query}\'')
         videos = search_youtube_videos(query)
-        print(f"Найдено {len(videos)} видео с субтитрами")
+        print(f'Найдено {len(videos)} видео с субтитрами')
 
-        for video in tqdm(videos, desc="Обработка видео", leave=False):
+        for video in tqdm(videos, desc='Обработка видео', leave=False):
             total_videos_processed += 1
             video_id = video['id']
             if not any(video_id in file for file in os.listdir('subtitles')):
                 save_video_subtitles(video_id)
                 total_videos_saved += 1
             else:
-                print(f"Видео {video_id} уже обработано ранее. Пропускаем.")
+                print(f'Видео {video_id} уже обработано ранее. Пропускаем.')
 
-        print(f"Запрос '{query}' обработан. Обработано видео: {len(videos)}, Сохранено новых: {total_videos_saved}")
+        print(f'Запрос \'{query}\' обработан. Обработано видео: {len(videos)}, '
+              f'Сохранено новых: {total_videos_saved}')
 
-    print(f"\nИтого: Обработано запросов: {total_queries}, Проверено видео: {total_videos_processed}, Сохранено новых субтитров: {total_videos_saved}")
+    print(f'\nИтого: Обработано запросов: {total_queries}, '
+          f'Проверено видео: {total_videos_processed}, '
+          f'Сохранено новых субтитров: {total_videos_saved}')
