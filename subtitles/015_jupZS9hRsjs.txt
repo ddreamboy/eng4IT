@@ -1,0 +1,305 @@
+hey guys and welcome to new video in
+this video here we're going to talk
+about like how to get started with
+computer vision how do you actually get
+into computer Vis Vision how did did I
+get into computer vision and how did I
+act like start this journey here with
+the YouTube uh first of all i' I started
+out with computer vision I went more
+into like deep learning now we're
+actually combining deep learning and
+computer vision we're going to talk
+about that and then I'm going to give
+you some some tips and some guidelines
+we're going to set up a road map of like
+how to actually like get into computer
+vision so basically like if you're
+interested in computer vision the first
+step is to learn like the fundamentals
+of computer science and also like
+programming I suggest you start off with
+python if you haven't programmed before
+like definitely start out with python
+you can learn the basics like the if
+statements for loops and all those
+around things and then after you are
+familiar with like the programming
+concept you can actually like go in try
+to do some some different kind of things
+in C++ as well because then you will get
+knowledge on a lower level you also need
+some understanding inside of like some
+math understanding to act like do
+computer vision task of course you can
+call some different kind of functions
+from Frameworks but it is always good to
+know like how does it act like work
+under the hood and you'll also be way
+better at solving problems and also like
+finding solutions to problems if you
+have like fundamental like knowledge in
+math especially for linear algebra and
+also calculus but linear algebra is
+actually really essential uh when we're
+doing all these different kind of
+calculations for computer vision and
+then when you have a strong F foundation
+in these subjects you can start like
+learning the basics stuff about computer
+vision uh image processing video
+processing which is basically just like
+a a sequence of images then when you
+have done that like the basic image
+processing I have tutorials about all of
+it here on the channel my tutorials is
+acts like in C++ so I'll definitely
+recommend uh first start off with the
+basic concepts in Python if you're
+familiar with programming and python you
+can just directly go into uh my tutorial
+with C++ I go over like all the basic
+things so first of all we start with
+image processing how can you faal an
+image how can you blur an image uh how
+to actually like remove noise and images
+we're talking about those different kind
+things on a really low fundamental level
+so you'll get like the basic
+understanding the tutorials I have here
+on the channel about computer vision is
+basically going from like the beginner
+level to more intermediate level and
+then at the end here we act like at a
+pretty high level where we're combining
+all the different kind of things and we
+also like put deep learning optic
+detection and all those different kind
+things on top of our um computer vision
+Foundation with the B basic things and
+also the more intermediate things with
+like for example like background
+subtraction feature extraction how can
+we actually like extract features and
+Frames match them to different kind of
+frames and then on a more advanced level
+how can we do like 3D image processing
+uh depth estimation how can we calculate
+depth with our images and all the
+different kind of things with stereo
+Vision so this is basically like the
+Rope map so start by learning the
+fundamentals of computer science
+programming including like data
+structures and algorithms but and the
+most important things within math it Act
+is actually like algebra linear algebra
+and calculus you'll be able to use it
+for a lot of different kind of like
+computer vision applications uh when
+we're going to do some multiplication
+and all those different kind things when
+we're going to actually like do
+operations on images we're basically
+just using linear algebra then after
+that learn the basics of like image and
+video processing uh including like these
+different kind of techniques for filling
+transforming and acts like just
+analyzing visual data we're doing a lot
+of different kind of like
+Transformations uh filtering methods and
+all those different kind of things I
+both have like practical ways of how to
+act like do it but I also go over the
+theory of how these algorithm filters
+and Transformations act like Works um on
+the math level as well when you know all
+those basic things you can actually like
+just take it into another step so those
+are the more like basic steps for
+actually like getting into computer
+vision now we can take it to an
+intermediate level where we actually go
+inside like feature extraction um
+processing identifying and extracting
+information from our images so basically
+we're just giving some images and then
+we actually like want to do something
+with it we want to be able to use it in
+real life because again like we're just
+learning computer vision to actually
+like get our computers to see something
+in the real world so then we can take it
+to the intermediate steps which is
+actually like feature extraction uh we
+want to like do for example like it's
+detection color histograms how can I
+like get information from color
+histograms how can we manipulate our
+image
+uh so we can actually like see more
+information in our images without doing
+anything else than some post processing
+uh playing around with some histograms
+and so on and then again we can just add
+like pattern recognition optic detection
+and all those different kind things
+which is basically like on a bit more
+high level so when we have the basics
+basic operations of computer vision we
+have the basics then we go to the media
+step extract features and all those
+different kind things and then the next
+level is basically just combining the
+intermediate steps and basic steps we go
+up on an even higher level we combine
+all those different things we do feature
+extracting to try to like find 3D
+information in our images we do stereo
+revision um Optical flow optic detection
+and then when we actually get to that
+stage we can try to like get into deep
+learning how can we combine deep
+learning with computer vision because
+acts like you can just take your images
+Thro and through some um deep learning
+models you can then do optic detection
+optic segmentation and all those
+different kind of things but the more
+advanced computer vision stuff is
+actually like 3D reconstruction
+understanding understanding just seeing
+you're in and understanding what you
+actually see in the images and then also
+visual tracking so again you can both
+like do detection in your images so
+let's say we want to do like a person
+detector then we can actually like just
+detect that person walking around in the
+image frame but sometimes you might lose
+track and we actually like need to
+actually like track the exact objects
+moving in the frame then we can also add
+another step then we're adding tracking
+on top of our detections and now we
+actually get to a really advanced level
+and when we're at that level within
+computer vision and deep learning we can
+actually like start to make some really
+useful things for the real world and
+then when you're at that point you're
+really really good at computer vision
+you can do a lot of different kind of
+things you can actually like work with
+different like projects Concepts you can
+do like pretty much everything within
+computer vision of course new things
+come out all the time you need to keep
+keep updated with that again as you
+continue to learn and improve your
+skills within computer vision also like
+participate in different kind of like
+online communities also here in the
+channel be active on the channel in
+different communities learn from other
+people like talk to other people also if
+you teach other people the concepts and
+the ideas that you learn by yourself
+then you will act like understand them
+way better this was also act like one of
+the main reasons I started this YouTube
+channel was to actually like teach you
+guys something about like computer
+vision deep learning on all those
+different kind things and just as the
+time went by I just get got way better
+at computer vision all these different
+kind things by just like talking about
+them teaching them to you guys I just
+gained a lot of more knowledge um I was
+actually like getting more into like
+implementing these things actually like
+going from like fairy to act like
+implementations how can we use this in
+the real world and then I just kept on
+improving like my my computer vision
+skills and and my understanding of
+computer vision and how it works it just
+got way better by act like teaching
+talking with other guys about it um
+trying it out again if you want to be
+good at something you just need to put
+in the hours so my advice is basically
+just like particip at like talk to other
+guys participate in different kind of
+like communities in forums stay up to
+dat like uh get into like Twitter like
+LinkedIn and all those different kind of
+things just stay up to date with the new
+things in computer vision once you have
+like the basic understanding on the
+fundamental levels or you're at the
+really high level uh you try to like do
+something useful with computer vision
+you can also look at different kind of
+like conferences as all and all those
+different kind things but the most
+important thing is to actually like just
+stay up to date keep learning and the
+way you learn is act like by
+implementing things so again if you just
+like look at it at a fundamental and
+like thetical uh view you won't really
+be able to apply it Implement those
+different kind things in real world
+computer vision applications because you
+can of course call some functions from
+omv and all those different kind of
+things on images but once you are given
+a project in the real world you have a
+camera in a production setup for example
+then it will just be way way harder if
+you haven't done it before so my advice
+is basically just Implement do some
+practical stuff the more practical thing
+to do the better you will be and also if
+you talk with other guys like discuss
+the different kind of things uh try to
+create some project with uh with other
+people as well discuss in different kind
+of like communities or firms your
+understanding of computer vision will
+just be way way better so keep learning
+and keep improving your skills I have
+all these videos here covered like from
+the basic intermediate steps to a more
+like high level step where we're going
+into like freeding information stereo
+Vision op diation deep learning and all
+those different around things because
+like computer vision is a rapidly
+involving field so it's important to
+stay engage continue to learn never stop
+keep on learning keep on implementing
+these things here in practical ways you
+will get way way better and it will pay
+off in the end thank you guys for
+watching this video here and again
+remember to hit the Subscribe button and
+Bell notification on the video also like
+this video here if you like the content
+and you want more in the future again as
+I've mentioned throughout this video I
+have videos about everything with
+computer vision from the basic levels of
+image processing to more like Advanced
+things where we do feature extracting
+match the features do reconstruction
+like freed reconstruction stereo Vision
+like Point clouds applying deep learning
+to computer vision and all those
+different kind things if you're
+interested in it I'll link to one of the
+tutorials up here or else on see next
+for you guys bye for now

@@ -1,0 +1,2717 @@
+[Music]
+[Music]
+[Music]
+[Music]
+[Music]
+[Music]
+what
+good afternoon everyone it's fantastic
+to see you all here today I'm hes mataru
+PR head at UPS CSA Student Chapter and
+I'm excited to welcome you to the third
+session of our Azure AI engineer
+associate boot camp before we begin I
+have some exciting news today we will be
+announcing the winners of the best blog
+Ora page for the previous session so
+stay tuned until the end to find out who
+has
+won this
+session this session is all about
+creating computer vision Solutions with
+a AI Vision this will give you a deep
+dive into how you can leverage a your AI
+Vision to build intelligent applications
+that process and analyze visual data
+thank you all for joining us and let's
+get ready for another another enriching
+experience we are privileged to have
+aditta Pand with us today Aditya is a
+cloud products associate advis Labs with
+a strong background in Cloud
+Technologies with AI his expertise will
+help us navigate the exciting world of
+computer vision showing us how to
+implement AI Vision capabilities in our
+Solutions without further Ado let me
+hand it over to adya over to you
+sir thank you hes thank you so much and
+uh good morning to each and everyone I
+know it's 12: PM but I think on a
+weekend it is still a morning for
+everybody so good morning each and
+everybody uh thank you so much for
+joining in today's session and uh I
+don't think on a weekend this is a uh
+there can be a better start of the
+weekend than organizing the session and
+learning something new right so I think
+weekend should be uh you know should be
+for learning something new right so
+today uh we will be learning a lot of
+new things in this session and uh the
+main thing in this session would be to
+creating computer vision Solutions with
+aure AI vision and if I give give you my
+my brief introduction then uh as hes has
+already uh given beautiful introduction
+and I thank thank V hes for this so if I
+talk about myself my name is adya Pand
+and I'm A Cloud products associate at
+Wiz laabs I have been doing handson on
+Azure for past three years and I have
+gained a very good experience on
+Microsoft asure and today I'll be
+showing you how we can integrate
+different services with computer vision
+or aure AI Vision so before uh coming to
+the uh PPT presentation and starting the
+session I would like to tell each and
+everybody of you those who are attending
+this session I will be talking about
+many use cases in today's session right
+and whenever I give you some use cases
+after my use cases is it will be you who
+will be just uh you know dropping one of
+the use cases which will come to your
+mind that how what else can be done what
+else can be uh the feature of that
+service what else can be uh analyzed
+through that service so you will be also
+dropping some of the use cases in the
+comment section and I would like to see
+that now let's get started with the
+session uh please let me know if my
+screen is visible to everybody
+yes it is visible okay so I've given you
+my brief introduction uh I am a cloud
+products associate Adlabs and today
+we'll be talking about creating computer
+vision Solutions with aure AI Vision
+right so just moving to the introduction
+of computer vision and AI first before
+going to Azure AI Vision so if I talk
+about computer vision what what exactly
+a computer vision is so with the name
+itself you would be able to to
+understand what exactly the meaning of
+this name computer Visions means there
+is a computer there's a system which is
+acting as a vision for you
+right so computer vision is basically a
+branch of artificial intelligence right
+which deals with uh uh different kind of
+you know anal analyzing different kind
+of images and videos and uh you know
+deciding uh
+the based on the visual inputs it will
+decide you it will give you some uh you
+know decisions like what is there what
+is not there what should be the next
+step what should not be the next step
+right and if I talk about AI using AI in
+computer vision so AI actually helps
+with you know machine learning and deep
+learning to train the computer vision
+system every day after every set of data
+right as because is a cloud-based model
+and it works on machine learning and
+deep learning
+it's gives uh it it get trained every
+time whenever uh there is a feed of data
+given to the computer vision it will get
+trained to you know to reach the
+accuracy level level and if you talk
+about the real world application for
+computer vision is uh we can you know
+now I'm talking about applications I'll
+be talking about four applications here
+and the fifth application you will be
+dropping in the comments okay so the
+first application can be
+Healthcare right how computer vision can
+be beneficial to Healthcare Systems in
+healthcare you see uh you know patients
+do x-rays patients do city scan MRIs
+right so computer vision as per a
+pre-trained model or the model given
+model trained by you it can analyze the
+uh you know anomalies in the x-rays or
+city scan it can give you the solution
+or it can tell you where is the problem
+in that x-ray right so this is
+Healthcare System can use it another
+real word application would be retail
+okay how this can be used in retail we
+can use this retail as a product
+recognition system right you can just
+you know scan a product or give a
+product to the computer vision it will
+give you the details of the product it
+will it will tell you all the
+applications all the benefits all the
+limitations of that product right
+another thing is security and
+surveillance right so so how let's say
+let's take an example for this let's say
+you run a supermarket okay and you are
+the owner of that market and every day
+thousands of people are visiting your
+store right now what will happen it it
+will get difficult for you to manage
+thousands of crowd uh every day in your
+store because you know uh you have a
+limited space in your store and people
+are in a large number now what you can
+do you can set up a computer vision in
+your store to check the threats and
+security uh issues in your store let's
+say let's take another example let's say
+uh one day there is a person coming in
+your store and he has surpassed the
+security checks okay uh he has crossed
+the security security security check and
+your guard could not identify that that
+this person is uh having a knife in his
+pocket now at a moment that person is
+you know taking that knife from his
+pocket now what will happen your
+computer vision system will identify
+that okay this person is holding a knife
+and you have trained your computer
+vision in such a way that whenever you
+see any let's say any harmful uh objects
+in your video right it will just turn on
+the siren or it will give you a message
+that there is a knife there there is a
+person who is holding a knife in in your
+Supermarket or it will then it will turn
+the sil uh siren on right so this is how
+you can increase the security so this is
+one of the examples I have given you can
+you know think on yourself how this can
+be uh implemented in many ways for the
+security and uh
+surveillance thing now another thing is
+autonomous vehicles how this can be
+implemented in autonomous vehicles is uh
+let's say you are going uh somewhere uh
+in your vehicle and there is person
+standing on the road so now your
+computer vision system will identify
+that is a person standing on the road
+and it will you know start applying
+brakes automatically or let's say you
+have missed a road sign there is a road
+sign on the road side and you have
+missed that but your computer version
+system is analyzing each and everything
+whenever you are traveling through your
+car in your car right and whenever there
+is any sign comes on the road side it
+will give you a message that there is a
+road sign and it will also tell you this
+road sign is for what on that uh
+decision or on that input given by the
+computer vision to you you can identify
+or you can decide what action you are
+going to take right so this is a brief
+introduction of computer vision and AI
+so computer vision is a branch of AI
+right computer vision is I I won't say
+that this is directly related to
+Microsoft Azure but it is a branch of AI
+which is implemented by Microsoft Azure
+and that is called as azure AI Vision
+right under Azure AI Vision we will be
+learning about computer vision and uh
+custom Vision okay now let's move into
+the next slide and we'll have some brief
+introduction of isure AI Vision I've
+already told you so this is a
+cloud-based service that helps uh build
+and deploy computer vision application
+right it will analyze your image it can
+you know extract information from images
+it can extract information from your
+documents right it can also extract
+information from your uh realtime videos
+it can process videos and extract
+information from that as well right what
+can be the key cap key capabilities of
+azure AI vision is it will do the image
+classification right it can extract
+information from images and not only one
+information but different kind of
+information it can give you the metadata
+for your image right it will also detect
+uh the objects present in the image it
+will also extract the text from your
+images or videos okay how Industries can
+use azurea Vision right so Industries
+can use in manufacturing let's say
+quality control and finance can use uh
+as a document processing uh solution for
+for their uh Financial let's say banks
+are there right uh you have a uh
+physical document you have a hard copy
+which is written by you and not typed on
+your system right so even there is a
+document which is written by you it can
+help you extract data from that right so
+this is how how beautiful this system
+is in a smart cities uh it can be useful
+for traffic monitoring it can tell you
+uh where is the traffic right at what
+place traffic is more at what what place
+traffic is less so that you can you know
+divert from the uh more traffic area to
+the less traffic area right so this is
+how asure AI vision is helpful to you
+know give solutions to your systems or
+to your use cases uh in different
+scenarios now let's moving to the uh
+another point where we will be talking
+about the traditional approaches and uh
+you know advantage of advantages of the
+modern approach of Aid driven
+Vision So In traditional approaches
+approaches what used to happen was you
+know uh everything was hardcoded right
+the traditional methods used to rely on
+uh rule based system so what is Rule
+based system is you have to write rules
+hard code rules for each and everything
+let's say for example you want to
+analyze edges in an image to analyze
+edges in an image you need to hard code
+that right so for everything there is
+hard code required right and you know in
+AI driven Vision we use machine learning
+right through machine learning every day
+your your data set your model gets
+trained and you know it is just
+approaching towards accuracy and but in
+traditional method it is very difficult
+to you
+know uh reach to that level of
+accuracy even uh in traditional methods
+it is very difficult to you know uh to
+apply this uh traditional method AI
+driven Vision I mean uh the traditional
+method to your systems because it
+actually gets difficult and sometime
+what happens is uh in traditional method
+it gets difficult to identify images
+what kind of images let's say there are
+two images which are overlapping now
+your
+traditional uh system will get will find
+it difficult to identify the images when
+two images are overlapping another
+another example where traditional
+systems can fail or can give you less
+accuracy is in low light
+conditions right in low light conditions
+if you have not trained your if you have
+not hardcoded your traditional methods
+properly with with the atmost accuracy
+then it is not going to give you
+accurate uh outputs in low light
+conditions right but this is not the
+case in AI driven Vision the first thing
+uh you need you don't need to take care
+of storage as it is on cloud you just
+need to give data set whatever size of
+data set you have you can just give it
+to uh this uh system AI driven vision
+and it will just keep on training from
+the data sets every day whenever it uh
+it has an encounter with data okay it
+gets trained automatically through
+machine learning and deep learning right
+and it will reach to the accuracy level
+so that's the flexibility AI driven
+Vision gives you right and uh uh you
+know uh it also improved the accuracy
+with the large data sets that I already
+covered and if we talk about the
+advantages of azure AI Vision I've
+already told you the advantage but here
+are few more advantages these are we can
+easily integrate this with other aure
+services sorry we can easily integrate
+with Azure uh Azure services that is uh
+let's take an example uh you can use
+blob storage with your Azure AI Vision
+you can use Azure functions you can use
+use Azure logic apps with your Azure AI
+Vision you know to just uh create a
+system or create a logic to to um
+make it serverless right you can use
+your functions to make it serverless
+right and these are also scalable and
+flexible because these are hosted on
+cloud and in uh Aid driven Visions they
+are pre-trained model on on most of the
+data sets there are few use cases where
+you know uh it's up to you where you
+want your use cases to be identified uh
+by the as Vision then you need to train
+that model you need to train your own
+model create your own model and train it
+and then it will work for you right but
+in most of the cases the AI vision is
+already pre-trained right we will see in
+the handson session further and uh we
+will see uh how these things happen and
+uh how AI vision is helpful in an
+analyzing images extracting uh data from
+the images right moving to the next
+topic we will be having some uh overview
+of AI vision service uh the key
+components are image analysis so in
+image analysis uh we identify image uh
+in image analysis what AI Vision can do
+is it can give you the tags of the
+images right uh let's say there are four
+things in your image four kind of fruits
+it will give you the tags let's say
+fruits are there it will give you tag as
+Apple Orange right it will also identify
+the objects what are what all objects
+are present in your images let's say
+apple let's say orange let's say banana
+okay it will all also generate a caption
+for your image right let's say there is
+a image there are mountains or there
+there are mountains and uh uh there are
+homes available in the image right seen
+in the image so it will generate a
+beautiful caption for you for that
+specific image right uh it can be
+helpful in OCR optical character
+recognition means it will uh extract
+text from your image let's say You have
+given an image to the aurei vision and
+there are text written on the images so
+what it it will do is it will extract
+the text from your images and it will
+digitalize your you know uh the data
+right how it works uh you can use a
+pre-rain model to analyze visual data
+and you can also customize it through
+custom Vision you can give your own data
+set you can train your data train your
+model and then after that after training
+your model you can just give uh any kind
+of object or you can you know Implement
+in uh in your SDK uh if you want a
+custom train model okay uh you can
+easily integrate with other Azure
+Services which I have already
+covered now uh let's move to the next
+slide uh we'll be seeing the basics of
+image analysis uh what exactly it
+detects and when to use image analysis
+so what exactly detects uh I have
+already covered uh you know object in
+object it can Det anything car animal
+Etc infus is an emotion let's say there
+is an image and somebody is standing and
+that person is very happy that person is
+a smiling so that uh your AI Vision can
+detect detect that this person is a
+smiling you know this can detect
+emotions and this can detect faces in
+the images as well right this can also
+detect text and handwriting let's say uh
+you have a PDF document which is typed
+so it can detect that as well if you
+have a document which is handwritten
+this can detect that as
+well okay when to use image analysis you
+it's up to you there are many use cases
+where you can use is use it uh here are
+few use cases which I have mentioned the
+first one is automating automating uh
+visual interpretations building
+searchable image libraries and content
+moderation right so these are some of
+the use cases where you can use your uh
+uh computer vision or AI Vision right
+now moving to the next slide where we
+will be understanding the uh OCR with
+Azure AI Vision so what OCR is basically
+OCR is optical character recognition so
+with the name uh you can understand that
+this is uh this is
+just recognizing the characters present
+in the images or videos right and the
+accuracy of this OCR is is in such a way
+that you know even uh if there are small
+uh you know words written in a very
+small size or very large size it can
+identify each and everything right it
+also supports multiple language so
+that's the beautiful thing about it
+right let's say English is the common
+language we use in the in in in our
+country or in other countries as well
+but let's say in India Hindi is the NA
+national language so if your document is
+written in Hindi okay Hindi language
+then also it can you know extract
+information from images it can uh
+summarize your document it can extract
+uh meaningful information it can give
+you metadata of your documents so this
+is the beautiful thing about aure AI
+vision and see everything is pre-trained
+right let's say there is a document
+where you have written date uh let's say
+user ID let's say your ID uh government
+ID number it will extract that it will
+give you that right and what is the uh
+benefit of this what is the application
+of this again I'm telling you three
+applications but the fourth application
+will be dropped by you in the comments
+and I would be happy to check that after
+I finish my presentation so keep on
+thinking how you can use your computer
+vision models how you can use Azure AI
+Vision that are pre-trained and uh you
+can build Solutions out of that so this
+is the main model motive of this session
+that we will be Building Solutions we'll
+be talking about Solutions of computer
+vision of AI Vision in what all areas we
+can implement it what all things we can
+extract from it right now I'll be
+talking about application of OCR so the
+first application is digitizing printed
+materials right let's say you have a
+hard copy right what it'll do it will do
+it will just scan your hard copy and it
+will digitalize for you
+now you can keep that in your phone
+there are many applications which are
+already there which does this task which
+you know uh you you must have used uh
+many applications for this task but this
+is one of the applications right which
+uh uh which is digitizing printed
+materials even not digitizing you can
+you know extract meaningful information
+and you can digitize that as well you
+can keep that in a secret folder or you
+can uh just you know throw your document
+written document and whatever the
+meaningful information you need you can
+just extract from it through OCR and you
+can keep that in your mobile phone right
+another application is automating
+invoice
+processing how this work let's say uh in
+your Supermarket you are going and uh
+you have bought some some things from
+the supermarket and and now uh they want
+to give you the invoice right so what it
+will do it will you know scan the
+objects scan the products automatically
+and it will generate the invoice right
+here are many applications which you can
+Implement even in Azure AI Services
+there are many uh uh you know Services
+which are available and you all you can
+Implement all these things for
+example let's say in your Supermarket
+I'm just thinking I'm just thinking how
+we can Implement different things in
+your Supermarket you have bought
+something and your Supermarket is
+completely
+automated right you went there and uh
+what you did is uh uh through custom
+Vision what you have did is there is a
+scanner available you scan your product
+and all the products will be listed
+after that there is
+a
+uh voice detection you have enabled
+there you have used voice detection
+feature so what you will do is uh you
+will uh uh maybe speech to text you are
+using right
+you will tell your name and it will just
+write it there right you will whatever
+information they need you will speak it
+out right and all the informations will
+be listed in the invoice the invoice
+will be generated automatically and it
+will give you a print out see how
+hasslefree it has become through AI if
+we start using AI in every field it will
+become hasslefree it will become easy
+for people right so that's how we can
+Implement OCR right another uh uh very
+uh meaningful uh application of OCR is
+reading license
+plates now let's say uh there is a
+vehicle which has hit you and they just
+uh ran away now what you can do you can
+just scan the number plate of that
+vehicle immediately and it will give you
+all the information of that number plate
+the O information of owner the address
+of the owner each and everything right
+and then you can keep it with you you
+can just go to the police station you
+can file the FI you can give all the
+information they can even they can
+identify let's say you do not have all
+the access to know the address and
+mobile number of that person who has
+just ran away but police has that access
+so you can just give a small data about
+that number plate or about that person
+they can identify them and they can just
+do their work they can take the legal
+actions this is how we can Implement OCR
+in different ways now moving to the next
+thing uh we'll be talking about custom
+Vision models in a your AI Vision right
+so there are two types of model which we
+have discussed but now we'll be
+discussing in details there are two
+types of model one is pre-built model
+another one is custom models pre-built
+model is already on Azure AI services
+and uh custom model uh is trained by you
+right you will give a you will have a
+set of data set you will give it to the
+Azure AI vision and it will train the
+data set and then after that you can use
+that data set to identify things okay
+now what are pre-built
+models so uh as it is written here Asar
+AI Vision provides model that can detect
+General objects face and text okay it is
+useful for quick deployments when your
+use cases align with the default
+categories let's say uh again let's take
+an example of supermarket in your
+Supermarket it is all generalized okay
+okay and all the use cases which are
+available in your pre-built model
+matches with your demand okay that you
+also need that in your Supermarket then
+you can use pre-built model
+okay uh what can be the limitations
+limitations uh are uh it has limited
+flexibility for a specific or unique
+object detection needs right so it is a
+general model so let's say there is
+something which is unique to you only
+only you know only you want that to be
+identified by the computer vision then
+at that time you cannot use pre-train
+model you have to train your custom
+model and then you can use that for your
+solution right now coming to the custom
+models it allow you to tailor the model
+for specific object detection let's say
+in your Supermarket let's take an unique
+thing there is a brand only made by you
+okay there are spices which are which
+are made in your company
+you own that company now that brand is
+not available
+on this pre-built models right so to
+identify whether a person is carrying
+your brand or not you need to train your
+custom model you need to build your own
+custom model where you will be giving a
+data set where where your brand is there
+right so now what will happen is at this
+point of time you'll be using custom
+models which will identify as per your
+data set which will identify whether
+that person or whether that object is is
+of your brand or not right so this is
+like they both have uh uh different
+different useful features they they both
+can be used in you know different
+scenarios so I think it is clear to you
+guys where you can use pre-built model
+and where you can use custom models
+another thing is uh use cases where
+predefined model falls short such as
+identifying custom objects logos or
+specialized object in your domain so
+this we have already discussed uh key
+advantages is high flexibility right
+okay so you can
+train whatever model you want right or
+you can train for whatever thing you
+want train the model on your own data
+set to recognize domain specific items
+right domain specific means uh it is
+about your domain what you want to
+identify using custom Vision right so I
+hope this topic is clear to you guys uh
+uh on what are pre-build model mod what
+are custom models how we can use them in
+different
+scenarios now moving to the another
+topic so we have talked about uh custom
+models that there are custom models
+which we can train but the question
+arises how we can train it right so this
+is the main question and I think in
+theory we learn a lot of things that
+okay we can train a model we can use
+that model for our use cases for for uh
+uh in our scenarios but but then when it
+comes to training a model practically I
+think there many people fail there we
+don't know how to train a model how to
+train our custom Vision model so today
+we'll be understanding how we can train
+the model so right now I'll be telling
+you the steps to train a model and after
+that we'll be doing a demo session demo
+session where we will be understanding
+how we can exactly train a model on
+Microsoft Azure okay so the step one is
+collect and label images what you'll do
+here you will gather a set of data set a
+large data set okay you will gather a
+data set let's say uh I'll be showing
+you some I'll be giving you some example
+of data sets as well uh let's say you
+have collected a data set of
+cars thousands of cars right and you
+want to identify the color of car okay
+the color of each car let's say you you
+don't want to identify the brand and uh
+the model of the car but let's keep it
+simple we we are identifying the color
+of the car so what we can do is we can
+collect different cars of different
+colors okay then we will label that how
+we label that uh there is one step when
+we uh you know upload images on custom
+Vision model there is an option comes
+for labeling so we can directly label
+that image there but manually uh uh how
+we label it we will just Mark that image
+in a box okay and then we label that
+that this is a blue color this is a red
+color Okay red color blue color white
+color gray color okay so this is how
+label it so you need to collect the
+images and then you need to label it
+okay so here the first step first step
+is gather a data set of image showing
+the object you want to recognize okay
+another one is label the images to
+categorize them
+accurately so the tip here is use images
+from different angles and lighting
+conditions so this is very important if
+you want a good accuracy level okay you
+need to take different angles you but in
+color it won't be required because uh uh
+it will be easy for the uh AI model to
+identify the colors because you know
+cars are in big size and you can just uh
+click picture from one angle
+or just one angle is required in that
+and you can label that right so this is
+the first step collect label images now
+coming to the Second Step upload images
+to as your computer vision uh sorry
+custom Vision okay so you will be loging
+to the custom Vision studio and then you
+will create a project upload your
+labeled images uh and then you will uh
+choose the right domain or uh you will
+choose what what things you are going to
+do with this uh domain right so I'll be
+showing you through hands on how to do
+it so you have collected the image you
+have labeled them now you have uploaded
+it to custom Vision now coming to the
+step three you will train that model
+okay nothing much is required after you
+have uploaded the image you have labeled
+them you have given uh uh the right
+domain for that image now you need to
+train it after training is done you need
+to test it and deploy so see how simple
+is this right this is that simple that
+you can easily if you have a data set
+you can easily train this model you can
+easily train your custom model
+right sorry so this is that
+simple and uh there is one information
+which I would like to tell you on custom
+Vision uh let's say you want to train a
+model for a single type of data set
+let's say uh in your data set there are
+white color cars there are red color
+cars there are black color cars right to
+train a model the minimum of 15 objects
+are required okay 15 images are required
+to train a model let's say if you want
+to train a model for white car then
+minimum 15 images should be there okay
+if there are 14 images you will get an
+error your your custom Vision will say
+that there are no not sufficient images
+to train it so at least there should be
+15 images this is a very important
+question this can be asked asked in your
+AI engineer associate exam that what are
+the minimum number of images required to
+train a model so the answer should be 15
+okay it's 15 not 550 it's 15 so answer
+should be 15 now we have understood
+theoretically that how we can uh train a
+custom Vision model right now coming to
+the next step the realtime video
+analysis okay we have understand we have
+understood the things related to images
+now we'll be understanding things
+related to realtime video
+analysis so uh your computer vision is
+also helpful in analyzing the videos in
+real time let's say uh we have taken an
+example of your
+Supermarket okay so let's uh start from
+scratch what exactly happens when there
+is a real-time video analysis going on
+okay so first we will understand from
+this uh the use cases can be security
+surveillance and traffic monitoring and
+Retail okay uh how Azure AI Vision
+handles the video this we'll be talking
+in some detail
+DET you uh must have recorded videos
+from your mobile phones okay so what
+exactly happens can can anybody tell me
+what exactly happens in the
+background if there are comments I would
+request moderator to you know um just
+show those comments on the screen
+U just one
+minute I want to see
+okay you guys can drop your comments uh
+I'll see it later so uh I'll tell you
+what exactly happens when you record a
+video your video is captured in frames
+what exactly happens is your camera
+takes pictures let's say you are
+recording a video you are moving from
+this side to this side so what happens
+is uh your camera is clicking pictures
+continuous pictures from this side to
+this side and that pictures are merged
+in such a way that pictures when you
+play that video that pictures moves in
+such a way that you feel that there is a
+video running on your mobile screen but
+actually the images are moving you uh
+let's take an example beautiful example
+you must have seen that video uh where a
+person draws you know characters in in
+that small
+diary at every page there are different
+characters okay and at different angles
+okay now what happens is when that
+person uh just blows The Diary in such a
+way in one go you will see that
+character moving right so this is
+exactly happens in video analysis when
+your computer vision is analyzing a
+video it is capturing
+frames okay then what happens is in in
+those frames it identifies what is
+there let's say in micros seconds it has
+Capture One frame and it will will
+identify uh that there are three persons
+standing there is something uh kept on
+the desk there is something there is a
+um there is a bucket in the store there
+are some soaps in the stores right so
+what happens is it process video frames
+in real time right so this is the what
+this is what the first point is uh
+talking about it processes videos and
+frames in real time and then it analyzes
+we will all Al be seeing how you can
+analyze videos right let's say uh you
+have given a video to custom Vision
+right computer vision and you want to
+see uh let's say there is there is
+something which you want to see whether
+that is available in that video or not
+so you will write that thing in the uh
+in the search box and it will just
+extract from your video that image or
+that object and it will show you whether
+it is available in that video or not
+right so this is also we'll be
+discussing we'll be also doing a demo
+for this uh I hope you have understood
+this thing that how realtime video
+analysis happens
+okay now coming to the next Point
+integrating integrating with Azure
+functions and automations now we have
+talked about we can we can integrate
+computer vision Azure AI Vision with
+different services available on
+Azure so what are the benefits of it
+right why you should automate it right
+the first thing thing is trigger actions
+based on image or video analysis results
+automatically okay and uh the use cases
+can be upload uh and imaged to the Azure
+blob storage let me explain it to
+you why you should first first uh uh
+thing is why you should do it why you
+should Implement different services with
+uh computer
+vision the importance is it will
+automate things for you right let's say
+in our computer vision we we we are
+doing it manually let's say we are
+uploading an image and it is identifying
+things for us it is giving us tags it is
+giving us captions or it is just
+extracting all the metadata from it okay
+but now uh if you guys are aware of
+azure services like blob storage aure
+function Azure logic app and the custom
+Vision which we are talking right right
+now I'll just give you a scenario how
+this can be helpful to you
+let's say you are implementing all the
+four Services okay and you want to
+automate each in everything right let's
+say you have a website okay you have a
+website now what what happened uh what
+happens is uh a person comes and uploads
+a image on the
+website so that's that website is
+actually something where people can
+upload their captured photographs and uh
+that is is actually a directory you have
+created a directory for the
+photographers and they can upload their
+images on on your website now what
+happens is what the what the thing is
+you want to
+check that there should be appropriate
+image right there should not be an image
+which can be harmful or which have uh uh
+inappropriate content okay now what you
+can do is let's say person comes uploads
+an image on your website now that image
+goes to the blob store
+okay now you have connected your blob
+storage to computer vision okay means uh
+let's say your Azure function is also
+working so whenever image gets uploaded
+to The Blob storage the Azure custom
+Vision API calls and then it analyzes
+that image okay it extracts data from it
+okay and it has extracted all the
+important data or if you have your own
+train model the custom model uh you can
+use a custom model whether to identify
+like what exactly you want to check in
+the image so in that cases I think you
+would be using custom models so it has
+your API call have happened and your
+custom model has identified whether that
+image is appropriate or not appropriate
+if that image is not appropriate what is
+there in that image let's say it can be
+killing of an animal that is not
+appropriate right so killing of an
+animal is not allowed that picture is
+not allowed in your website site right
+so your custom Vision will identify that
+this picture has uh uh this this image
+is not appropriate there is a there is
+someone who is killing an animal which
+is not not good at all now what will
+happen there is a logic app you have
+also created a logic app logic uh you
+have also created Logics actions in your
+logic app in logic app designer what
+will happen is when your uh custom
+Vision has identified the problem
+your logic app triggers and then it will
+send you an email it will send you an
+email of the information of that person
+the mail ID the name and what is there
+in the image which is which is not
+appropriate now on that action the
+decision taken by your AI
+model will be sent to you now you have
+to take
+action now you can directly reach out to
+that person you can directly call that
+person that delete that image this is
+not appropriate for the
+website I I hope you have understood how
+this has automated a very big
+task let's take another scenario let's
+see let's take an example uh where you
+have not implemented this automation you
+have not implemented different asure
+services with your with your computer
+vision a person comes uploads an
+image and uh now that image is there
+okay now every day uh at the end of the
+day you are going to your website and
+you are checking how many images are
+being uploaded today uh who all uploaded
+these images and you are check checking
+every single image
+manually and you are checking whether it
+is appropriate or not see you can just
+imagine how time taking this action can
+be right and then uh when you have
+analyzed that this image is not
+appropriate then you will be reaching
+out to that person and then asking them
+to remove but from the morning to the
+evening the uh I I think many people
+have already seen it and your ratings
+the website ratings has been
+decreased but if you are using your
+computer vision your custom Vision you
+are using different as your services and
+you are integrating all these services
+in in in your
+solution then it becomes easy for you it
+becomes easy it becomes uh like your
+time is reduced you have a lot of time
+to work for some other thing because
+most of the things are getting done
+automatically and at the end of the day
+there are many options in your logic app
+uh where you can set timers for emails
+like for every two minutes you will get
+an email or uh with every image upload
+it will directly analyze that image uh
+right and your logic app will trigger
+and then it will send you an email with
+all the data available in that image
+right so your your manual job has been
+vanished right so this is this is one of
+the solutions I have discussed with you
+this is how computer vision solution we
+Implement computer vision solution using
+Azure AI services using Azure AI vision
+and that's the main motive of this
+session that we are not only learning
+how to you know analyze an
+image I'm sorry we are not only learning
+how to analyze an image how to just
+directly go on your portal and and use
+computer vision just give an image to
+that uh service and it will just extract
+uh the information from it no that's not
+the thing we are going to do but the
+thing is uh which we want is we want
+solutions for our
+system right so one of the solutions
+which have which we have discussed is uh
+let's say you have your website and you
+have integrated many of your services to
+create a solution for for your job
+right for the job you want to be uh you
+want to get done right so this is one of
+the solutions we have discussed
+similarly in many fields in many ways
+you can use computer vision solutions
+for your uh for your applications for
+your system for your environment right
+it can be used anywhere it can be used
+in agriculture it can be used in health
+care it can be used in maintaining
+security right it can be used in
+um road traffic it can be used for uh
+for uh
+laws to maintain laws right so there are
+many ways I hope uh how we can integrate
+uh things how we can integrate different
+asour services to computer vision is
+clear to you and the main most important
+thing is please uh understand that if
+you're not implementing not integrating
+different services at one places at one
+place then then it is it is not a good
+idea right so please learn about other
+services as well uh because this
+computer vision can be a very useful
+tool for you guys if you want to
+integrate AI in your
+system now moving to the next topic
+which is very important you must have uh
+um heard about responsible AI right so
+when we do image analysis so there are
+some cases where you know where you give
+let's say if you give an image of a
+celebrity to the AI it will not identify
+it it will just deny because that
+doesn't come under the terms and
+conditions of responsible AI responsible
+AI would not allow it for you right
+so understanding responsib is also
+important that uh uh if you are also
+training your custom models you also
+need to Define things uh where you know
+all the responsibilities of the
+important data can be taken care of
+right and if we talk about the security
+and best practices you need to ensure
+whatever data you are giving to the AI
+it should be
+encrypted right and there should not be
+any confidential information available
+on the image on the document or in the
+video or whatever uh whatever uh thing
+you are giving to the AI whatever data
+you are giving to the AI so this is very
+important because you know you don't
+know where your data is going you never
+know like we are using many tools these
+days uh where we just give a prompt
+where we give our information and then
+it will write things for you or it will
+just design things for you but before
+giving your information try to
+understand or think about it when you
+have given your own information your
+confidential information to the AI where
+that data is going right so it is always
+a good choice or it will it will always
+be a good decision for you to take take
+care of your data do not share any
+confidential things to the AI okay uh
+let's say if you have a system you are
+the administrator of your Microsoft as
+your portal where you have some AI
+Solutions deployed and now you want
+other people to access it so always use
+uh identity and access management and uh
+give only limited permission to the
+people or to the tenants who who who are
+there uh you only give permission
+whatever should be accessed by them and
+not more than that right so this is also
+best practices for this you need to
+regularly audit and monitor usage right
+you need to uh at the end of the day you
+need to come to the a portal you need to
+monitor what all happened uh you need to
+monitor the usage you also need to
+monitor the cost because uh what happens
+is it has happened with me many times
+and what happens is uh I just deploy a
+service and then I leave it I do not
+stop it or I do not delete it right so
+it is it is important when a service uh
+usage is done uh let's say that service
+is no more required you should stop it
+okay you should delete that service so
+that it does not incur cost for you
+extra cost for you right so we have
+talked about uh the rbac role based
+Access Control you need to set some IM
+uh access controls IM IM roles for the
+user so that they have limited access
+uh your data should be encrypted uh in
+transit and at rest so these are the
+important security and best practices
+when you are using artificial
+intelligence or custom Vision or AI
+Vision or any AI
+tool now coming to the pros and cons of
+azure AI Vision Pros can be we can
+integrate it easily with other Azure
+services this is flexible and scalable
+because this is hosted on cloud and we
+have pre-trained model for fast
+deployments okay you you don't need to
+train models for General things let's
+say you want to identify animals so you
+you don't need to train it because you
+know the animals which are there in the
+world I I don't think that uh this spre
+trend model have any uh would have
+missed that right so you can use this uh
+pre-train model for fast deployments the
+cons can be cost maybe a higher concern
+so I already told you that if you are
+not using a surface you need to
+stop that service or you need to delete
+that service because uh AI Services has
+a bit higher cost okay let's say if you
+have a small data set then you do not
+need to worry but if you have a larger
+data set to you know train then cost can
+be a big factor so you need to take care
+of each and everything you need to be
+very active when you are training a
+model and uh you need to monitor each
+and everything on a daily basis right
+complex custom models may require
+significant training time yes uh if you
+train a model I'll be showing you I'll
+be showing you even the smallest model
+take uh minimum 15 20 minutes or 15 or
+or 30 minutes or or uh maybe 1 hour also
+to train a model right so complex if you
+have a complex custom models then it is
+going to take some time to train that
+okay and uh it has limited offline
+capabilities you need to be uh you need
+to require Cloud access if you are using
+a or AI Vision
+right now coming to the demo part uh
+this is going to be very interesting for
+you guys so uh be there and I'll will
+show you uh in the demo we'll be uh
+seeing how how things can be done the
+first thing we'll be setting up the
+Azure a vision resource second thing
+will be we'll be doing image
+analysis uh third thing will be we will
+be implementing OCR and the fourth thing
+will be we'll be training a custom model
+I'll be showing you how you can train a
+custom model if you want to have your
+own uh
+own own trained I mean customly trained
+computer vision model okay and we at the
+end we'll be also seeing how we can uh
+analyze things from a realtime video
+okay we'll be doing realtime video
+analysis now let's come to the demo part
+I have already logged into the ajob
+portal if you search here
+uh a your AI Services you will see that
+uh there is a drop down that is AI
+Services you will go there and then
+today we are mostly talking about the
+computer vision and custom Vision
+computer vision is a pre-trained model
+custom vision is a service where we can
+train our own data set we can we will
+just we will be giving data sets to it
+and we can train it and we can test and
+deploy it
+okay first uh let's move to computer
+vision okay how to create it we will
+click on
+Create and uh we will select the
+resource Group we will give a name let's
+say asure
+AI
+associate okay we will select the
+pricing tier so right now we are going
+to select a standard S1 and uh we will
+just check this that we have
+acknowledged all the terms and
+conditions and then uh for the
+networking thing uh let's let's uh keep
+everything as default and we will click
+on review plus
+create then once the validation is
+passed we will just create this service
+and the service is going to take uh 3 4
+minutes okay
+create okay
+okay now validation passed and we have
+already created the resources now
+deployment is in progress it will take
+around 1 to two minutes to deploy the
+service okay deployment is
+done now we'll click on go to
+Resource and here we have an option to
+go to Vision
+Studio we will click on
+this okay now we are in the vision
+Studio
+you can see there are different options
+for different kind of analysis we have
+optical character recognition where it
+will extract text text from images okay
+we have spatial analysis like count
+people in the area or detect whether
+people whether a person has crossed a
+line or detect when people enter or exit
+a Zone this is a video retrieval in
+summary okay this is Monitor social
+distancing so see how beautifully this
+is uh this has been done in uh the
+pandemic uh this could have used as a AI
+feature for different places let's say
+for a shop for hospitals or for mall
+right so uh first uh another one is uh
+face analysis it will detect faces in
+the image it will detect the liveliness
+and it will uh uh portrait your image it
+will also uh match your photo ID let's
+say again let's take an example for your
+super store
+it will just match uh you know that
+computer vision will scan your face and
+it will also scan your ID ID card and it
+will match whether this ID is yours or
+not so that is again a very beautiful
+feature now coming to image
+analysis so for image analysis we have
+different things available here we can
+recognize products on shelves okay uh we
+can customize model with images and uh
+uh we can search photos with image
+retrieval
+image retrieval means uh from uh you
+know from one image it will retrieve
+different images and it will search
+photos for you okay this is a very
+interesting thing add dense captions to
+images okay if we use this feature add
+dense captions to the images then what
+will happen is we will give an image to
+the AI it will create an caption or it
+will generate different captions for you
+right uh we'll be using this one um
+another one is remove background from
+images uh it will remove background from
+your image it will add uh this one is
+add captions to images it will add
+captions to your
+images and uh so these captions will be
+uh kind of smaller captions okay
+generate a human readable sentence that
+describe the content of the image and
+this will generate generate human
+readable con captions for all important
+objects detected in your image okay so
+what what is the difference between
+dense caption and uh this this one this
+caption so dense cap caption is
+basically let's say your image has
+different objects so it will create a
+caption including
+everything right if we talk about this
+caption let's say there is an image
+where single object is there so it will
+cap it will generate a caption for that
+okay for a single object uh detect
+common objects in the images so when you
+give an image to the computer vision it
+will detect what all objects are present
+let's say if this is a sample there is a
+dog there is there is a house there is
+home okay and extract common tags from
+images it will extract tags tags means
+dog home son
+okay detect sensitive content in an
+image this is also an important thing
+okay see this feature you can use in
+your website the example which I have
+given okay you can use this feature and
+you can detect sensitive content in in
+an image if the sensitive content
+available in this data set is uh
+matching with your demand
+if that is not matching you need to
+train your custom
+models uh you can create a smart cropped
+images let's say there is a big image
+and you want to crop a specific part so
+the uh AI Vision will automatically crop
+a specific part and it will give you a
+relevant relevant thumbnail or re
+relevant cropped image from that image
+okay so these are all the services which
+are used for image analysis right now we
+are going to use this add dense captions
+to
+images
+see uh
+sorry okay so this is the uh page for
+add dense captions to the images uh here
+what you will do you will first
+acknowledge that uh uh this is your
+account and uh this are these are the
+just uh default images which has given
+which are given to this um Studio you
+can use these images or also you can use
+or you can browse a file from from your
+own system okay we'll be doing this as
+well uh this is analyzing this image
+let's see what uh what analysis it gets
+it gives us let's wait for some
+time till then uh I would like to see if
+there are any questions
+okay no
+questions hi everybody hi so excited I'm
+also
+excited right photos in the form of
+frames are captured yes so uh that's why
+it becomes easy for AI to analyze each
+and everything in detail right right
+let's say a video is moving continuously
+then it would it will be difficult for
+it to analyze things but if photos are
+captured in images or in frames then it
+will be easy for AI to analyze each and
+every frame and extract information out
+of it right uh hi SV yes uh these are
+interesting solutions to avoid
+cluttering yes exactly so you can use
+these features uh in many things right
+um let's see
+okay it is still
+analyzing let's try with the uh browsing
+a file
+okay let me give this thing to to the
+AI I think there is something
+okay browse the file let's give this
+picture what is this
+error I think there is some
+problem if we use this
+picture invalid resource
+let's again open the vision studio and
+try this again once
+again uh we will use dense caption okay
+we'll acknowledge
+this choose a different okay we have not
+selected the right resource so this was
+a resource which I was already doing
+some handson so this resource is already
+selected so you know when you try when
+you acknowledge this you need to choose
+your your resource okay so the resource
+uh Let me refresh
+it okay so this is the resource which we
+have created so we will select this and
+we will confirm this now we will
+acknowledge this and we will browse a
+file we will select this
+image perfect you see you have now dense
+captions for it a group of apples in a
+pile close up of a green apple and a red
+apple close up of several apples close
+up of green apples so these are the
+different kind of captions you will get
+and if you want to get this thing in
+Json you can get this you can just see
+this you will see this in Json format as
+well right so there are two options
+available to you know analyze and image
+through uh Vision Studio the one option
+is you can directly come to the jaob
+portal and do it but if you want to
+implement these things these services in
+your solution then you will be
+implementing it in your SDK okay for SDK
+you will be having key uh I mean keys
+and endpoints for the service you can
+use those keys and endpoints in your SDK
+and you can just I mean seemlessly
+Implement all these services in your
+system and in your system you will be
+seeing this kind of solutions you will
+be having Json format Solutions or you
+can have this kind of uh you know direct
+captions as well
+uh let's
+identify this one let's analyze this one
+let's see what captions we have a man
+driving a tractor in a farm see how
+accurately it is giving a caption right
+a man driving a tractor this is also an
+accurate caption a blurry image of a
+tree this is this is a different caption
+for different object a man riding a
+tractor right so for every caption it is
+analyzing a different kind of thing the
+first caption if you see here it is
+analyzing the complete picture and it is
+uh writing a caption out of I mean
+including each and everything so if you
+read the first caption it will say it
+says a man driving a tractor in a farm
+it has included Farm it has included man
+it has included tractor right but the
+second one a man driving a tractor but
+it has not included farm right so this
+caption is for this a specific thing
+this a specific image a man and a
+tractor right so it depends on you what
+which caption you are going to use right
+so it will give you some set of captions
+which you can use and uh it becomes easy
+for you to choose a caption as per your
+need let's try some other image as well
+let's try this one or or you want to see
+some food is it a food or what uh it's a
+food okay a person holding a spring of
+Rosemary okay see this is included each
+and everything in the picture a person
+cutting a a sprig of Rosemary right this
+is included only this part a person and
+a rosemary right so accordingly you can
+just pick the caption you need uh for
+your resource okay now another thing is
+uh we will be analyzing uh some other
+thing as
+well okay we'll be going to the vision
+Studio again and now we are going to
+analiz a video let's do
+this so I uh already uploaded a video
+here okay in advance and these are the
+uh already available videos so this
+video is regarding animals okay uh in
+this video there are different kind of
+animals right and this video has already
+analyze
+things uh if you want to see it from
+scratch I'll show you let's do it from
+scratch okay I've already downloaded a
+video okay and uh this is that video so
+you will upload this video and then it
+will process that video it will see what
+will happen is your video has already
+some set of frames right so what this AI
+Vision will do it will just separate all
+those frames it will uh convert your
+video into frames right now it will
+analyze each and every frame it will
+just detect what all things are there in
+the video right so it is uh already in
+process so let's wait for it
+okay so I think the video has been
+analyzed by the AI now what will happen
+is let's stop this video this complete
+video has been analyzed now you want to
+check whether this video has Penguins or
+not or let's check whether this video
+has dogs or not so you will give your
+tag
+dogs and you will search see your AI has
+identified that this video has dogs and
+it will give you at what time frame that
+dog is see this feature can be used in
+your Supermarket okay we are taking just
+one example in this whole lecture of uh
+a computer vision solutions that is
+Supermarket so again uh you can
+implement this service in your
+supermarket and uh uh your computer
+vision will
+uh uh I mean convert your video into
+into frames and in in those frames if
+you want to check whether uh a person
+with with white shirt is there or not a
+person with white shirt visited your
+Supermarket or not you will just give
+your tag you will just write your
+specific moment in this in this search
+bar and then it will it will show you
+whether there was a person uh visited
+wearing white shirt or not right so
+that's that's see how useful it is right
+let's see if there are penguins uh or
+not
+Penguins see they are penguins it will
+give you different uh time frames so on
+2 minute 18 second this is the Penguin
+on 2 minute 17 second this was there on
+2 minute 33 sorry on 33 second see pins
+32 this 41 this see how beautifully it
+has been done how beautifully it has
+been analyzed by the AI
+right uh what else let's check for some
+other thing let's check for
+Fox see Fox is also there in the video
+okay so you just you you can just check
+randomly or let's say you some time back
+you've already seen a video and you want
+to just recall whether that animal is
+present in that video or not you can
+just come here you can just give your
+video to this uh computer Vision it will
+analyze your video and you can search
+here whether Fox is available in this
+video or not right whether uh let's say
+um uh your friend is there in in that
+video or not okay whether someone is
+there in your video or not so you can
+search it you can just directly search
+it after the video has been analyzed
+okay what else what else we can
+analyze let's try this um
+tags let's try tags okay extract common
+tags uh let's use this uh already
+available image I'll use this it will
+give you tags person clothing forniture
+Indo table all the tags which can be
+there okay now every tag has uh
+probability of accuracy okay so the
+probability of person is 99.6 60% means
+the probability of person is higher
+right see person is there in the image
+clothing clothing probability is again
+99.4% Furniture 98 indoor 96 see the
+area is kind of indoor area uh there are
+Furnitures available uh clothing is also
+available there is a coffee table there
+are human faces they are sitting see how
+accurately it is giving you tags there
+is couch there is laptop
+there are people so people is a common
+thing there is a man there is a
+man wall wall is there group is there
+yes exactly three people woman is there
+coffee okay there is a cup
+okay AI don't know whether that cup has
+coffee or tea or any other um any other
+thing so the probability is
+64.8 C
+that's the beautiful thing about AI it
+is giving you the probability of an of a
+tag uh that how much is the probability
+or how much percentage
+uh that that object is available in the
+image or not so coffee 64.8 one but the
+person's probability is 99 so the
+accuracy is
+99% but the accuracy
+of coffee present in this image is 64%
+right because AI don't know whether this
+cup has coffee or tea right so as for
+the accuracy uh people can understand
+whether they should take decision on
+these Stags or the content generated by
+AI or not right if there is a better
+probability uh uh I can take better
+decisions using AI but the probability
+is not good I cannot take better
+decisions using AI right I cannot take
+accurate decisions using
+AI just use us AI let's say if this AI
+has given me this tag and my friend is
+asking tell me whether this image has
+coffee or t or or whatever is there but
+let's say I have not seen this image
+okay I have my friend has not shown with
+this image he's just saying okay there
+is an image now I'll give that image to
+your AI system your computer vision
+system but you are not required to see
+that image okay your AI will tell you uh
+whether that image has coffee or not
+okay my friend has given this image to
+my uh train model or my computer vision
+it has analyzed this image that image
+and it has generated tags of that image
+from that image okay different tags
+hundreds of tags now my friend is asking
+tell me if that image has coffee or
+not okay I'll just see the tags of this
+AI I'll see the probability of coffee
+the probability of coffee is
+64% I this is not guaranteed that this
+image has a coffee or not but if the
+probability of coffee is
+99% I can say I can take a chance on
+this I can say that yes that image has
+coffee right so this is how you can
+decide after your AI has decided
+something how you can take decisions on
+the uh outputs on the information your
+AI has given you right I hope this these
+things are clear to you uh now we will
+be moving to another thing that is how
+to train your own model okay let's go to
+this uh service I'll I'll just close
+this uh I will also recommend you guys
+to uh just check out this this service
+you just go on the aob portal you create
+computer vision service and you just do
+your hands on with with this you you
+give any kind of image to it okay and
+see how it is analyzing okay because
+this is a very interesting part even if
+you uh you can just do this in your free
+time as well just for the fun
+okay so I'll recommend everyone of you
+to get some handson on this okay before
+moving to the uh training the model
+before moving to training model I'll
+show you
+uh how you can learn about the custom
+Visions
+okay so this event is sponsored by Wiz
+laabs and
+uh so all the winners at the end will be
+getting some wizap subscriptions and I'm
+also a cloud products associate at vlabs
+so I know how these subscriptions can be
+useful to you because the content
+related to Azure which we have built
+here that content is built by us only
+okay we have designed the content in
+such a manner that it will not miss any
+any Concept in that uh in that
+certification examination let's say you
+want to prepare
+for
+ai102 we will go to
+ai102 and you see there are 40 handson
+Labs okay there are 129 video courses so
+uh when you just check out this you will
+go to handson
+Labs okay and you will see that there
+are numerous hands on Labs which will uh
+demonstrate demonstrate different
+capabilities of AI this will also help
+you in understanding how you can use
+these services in your SDK okay uh let's
+say this is an image develop aurei
+service application securely by using
+aure keyal now it will it will just
+demonstrate you that how you can use AI
+service application and you can
+integrate aure keyal with this see this
+is the capability this is how we make
+Solutions uh using custom Vision using
+computer vision or using Azure AI Vision
+right so let me go to the handson lab
+sections we will get
+started I am telling you this is one of
+the best applications or one of the best
+platform to prepare for any
+certification exam you want to prepare
+and uh if you are preparing for assure
+certificate certification exam I can
+guarantee you I can assure you on this
+because we know what kind of content we
+have prepared here and uh what kind of
+sandbox what kind of challenges right
+right let's say you are you have
+performed a lab okay and uh you want to
+do a challenge for it okay there is a
+challenge there is a challenge and it
+will give you some set of scen
+scenarios okay uh it will give you some
+set of scenarios and it will ask you to
+fulfill that scenario or to find
+solution for that scenario now what you
+will do you will just uh
+go there you will deploy Services as per
+you and uh you will see whether you are
+able to you know find a solution for
+that service or not for this that
+problem statement or not right and at
+the end of the lab you will also be able
+to validate whether you have created all
+the required services or not in that lab
+okay let's say
+um let's check out this lab text
+analysis with Azure AI content safety
+okay
+see the content this is the lab overview
+uh this is the introduction of this lab
+and we have also given the architecture
+diagram means how you will be uh you
+know how you'll be performing task what
+task will be performed after what what
+service right these are the task details
+and when you go to the lab steps you
+will see uh all the lab steps are given
+there you will first create the
+workspace and computer resource ources
+and uh uh then you will create the Azure
+AI content safety service then uh you
+will create the environment variables
+and then you will open the vs code so in
+the vs code you will be able to
+understand how you can you how using the
+keys and endpoint of a service you can
+Implement these services in your SDK
+right so just keeping these things in
+mind we have prepared these contents for
+you guys so if you want to uh learn
+about or if you want to prepare for aure
+AI associate exam you can check out Wiz
+laabs courses and uh the Hands-On Labs
+available on this platform that's the
+best resource you can uh you can have uh
+let me also show you the challenges
+which we have created in certification
+uh you will select
+ai102 let's check out this challenge
+this challenge is about classify and
+moderate text with aure content
+moderator okay let's see uh what is
+there in this challenge okay
+these are the challenge overviews there
+are prerequisites given that you you
+must have knowledge of isi services and
+you must have knowledge of aure content
+moderator you you must have a la laptop
+you must have access to internet
+browsing and internet connection
+internet browser and connection now
+coming to the challenge steps this is
+the detail this is the
+uh uh what we call it this is the
+problem statement you have now see how
+the these things can help you in your in
+your interviews or in your exams when
+you have a problem statement let's say
+when I have given you a problem
+statement to work on I have given you a
+scenario in a company where these are
+the problems and you you need to
+implement or you need to find solution
+for it this is what uh this is how we
+find solution uh with computer vision
+with AI Services right let's say your
+Your Leader has told you that uh this is
+the problem in the company or in the
+software and you need to find a solution
+using AI Vision now create a solution
+this is what solution Architects do okay
+in this challenge uh let let me read
+this in this challenge you will showcase
+your expertise in uh as your content
+moderator integration Master the setup
+of content moderator resources testing
+its text moderation capabilities via API
+and evaluating responses for various
+type of content Ensure successful
+resources creation key management and
+through testing to and thorough testing
+to validate the functionality of the
+content moderation service okay so it
+has given you a brief what all things
+you are going to use it or what all
+services you are going to implement in
+this challenge but we are not telling
+you how to implement it we are just
+giving you a scenario the scenario is
+Koso Corporation a global e-commerce
+platform faces challenges in moderating
+user generated
+content efficiently
+manual moderation process leads to slow
+response time and allow inappropriate
+content to slip through impacting user
+experience and band reput brand
+reputation to address this as a
+developer you have been tasked with
+implementing a solution by leveraging
+asure content moderator you aim to
+automate content moderation ensuring a
+safe and positive user environment this
+initiative will enhance the uh enhance
+the content quality protect the brand
+and improve overall user satisfaction
+now you you know the problem statement
+you know the scenario now you need to
+think you need to brainstorm how you can
+use different AI services and you can
+Implement Implement these services to
+resolve this
+issue this is how you develop your
+architect mind this is how you uh you
+know develop your knowledge base okay
+this is how you are exposed to problem
+and you know how to solve it because
+you've already done this in your
+preparation right these things will
+actually help you in your interviews
+when you're sitting for a company and uh
+and they are giving you a scenario to
+resolve it and it is just on your tips
+that what service is there how you are
+using it how you are automating it how
+you are implementing implementing that
+service through API okay and what all
+things you are using it so that's my
+recommendation go check out these
+courses on Wiz laabs and the one who
+will be getting access to whsaps
+platform please use it wisely please
+utilize each and everything available on
+Wiz laabs that will actually help in
+your career growth and your examination
+as well now coming to
+the custom Vision thing
+okay
+okay uh we will uh go to home we will
+click on a your AI services and we will
+check out custom vision service okay so
+what is custom custom vision service uh
+we will we we were understanding about
+computer vision and com custom Vision so
+computer vision is a pre-train model
+okay that can uh extract things identify
+your images analyze your images and
+videos extract relevant information from
+it okay custom vision is a service where
+you will be training your model okay so
+let's create the
+service Resource Group we'll select the
+resource Group what are we going to do
+create options we are going to train it
+we are going to train a model so we will
+be selecting training option and uh
+region is East
+US
+training uh let's give a unique name AI
+associate data
+set okay it is available okay training
+ai ai associate data set we'll be
+selecting the pricing tier that is a
+standard is zero we'll click on review
+and create and once the validation is
+passed we will create
+it
+okay so at the end of this session I
+have two questions for you guys and
+whatever I have discussed in the
+sessions I have just noted down two
+questions from it and I hope you guys
+would be able to answer
+that okay it is getting deployed let's
+wait for few minutes
+okay it is taking some time let's wait
+for it till then I would like to see the
+comments can we do labeling using
+computer vision yes you can you can
+create labels why not there are services
+available uh for image analysis you can
+you can do label you
+can uh label any object or anything
+available in that image that's why I I
+am telling you just go on the a portal
+create that computer vision service and
+uh do your handson just uh go and check
+out all the services available all the
+options available for image analysis for
+video analysis or for pH detection
+analyze it uh do hands on try to
+understand how things are working how
+you can Implement that thing in your uh
+in your system in your website in your
+software or or wherever you want or in
+your uh
+Supermarket okay let's uh move
+to let's see if uh the service has been
+deployed or
+not okay the service has been deployed
+please let me know if my screen is
+visible can anybody confirm me
+it should be
+visible
+yes okay let's go to the
+resource let's go to the resource and in
+this resource we will be uh just red
+redirecting ourselves to the custom
+Vision portal so there are three options
+the first one is get the API key to
+authenticate your application right so
+if you want to implement it in your SDK
+you need to have the API key okay see it
+is written here as well all the custom
+Vision call require a key the key can be
+found in keys and endpoint the keys and
+endpoint section is here okay if you go
+to the key and endpoint section you can
+uh copy the key from here you can copy
+the endpoint from here and you can use
+this in your SDK okay now let's go go to
+the overview page so right now we are
+going to the custom Vision portal
+because we are doing it manually through
+AAW portal now the custom Vision portal
+is getting
+loaded on the custom Vision portal first
+we will create a project creating a
+project means you are creating a uh
+directory where you will be giving name
+to your project and what all things you
+are going to do it you will give a
+description project name is okay train
+model description let's leave it not
+required
+um now you already know that that the
+set of images you have is what kind of
+images right you already know that
+whether those images have uh uh multiple
+objects or single object okay now I have
+already created a folder of some set of
+apples red apples so I'm going to train
+it for red apples
+okay uh here are the options project
+types so the pro project type is
+classification of object detection so we
+will click on object
+detection okay because we will be
+detecting the object the domain is
+General let's leave it now create the
+project
+okay so we are inside the project that
+is train model okay now here is an
+option to add images he will be adding
+images here we'll click on ADD
+images and I already have a folder of
+red
+apples I have already downloaded it for
+you guys so that it won't take much time
+in this session to download each image
+and uh keep them in a folder and then
+upload it so I have selected all the
+images I'll click on
+open all the images are
+here uh there might be some duplicate
+image okay so we will click on upload 20
+images so there are four Images up Flo
+field because they they might be
+duplicate okay see what I told you guys
+uh earlier in the session is the minimum
+images required to train a model is 15
+if images are less than 15 your model
+will not get trained okay so minimum is
+15 maximum is as much as you want okay
+so all the images are here now what was
+the next step let me show
+you um what was the next step
+The Next Step was to upload images to
+Azure custom Vision we have uploaded it
+and in the first step it was just
+collect and label images but in the
+custom Vision after uploading the image
+we label it because that is a Azure
+feature but in general we have images we
+we add tags to the images then we upload
+it and then we train it but in custom
+Vision the feature says that you need to
+upload the images and then by clicking
+on each image you will be adding tags
+now I'll be showing you how you can add
+taxs so that is also interesting
+part
+um okay great so you have opened this
+image if you wait for some time the AI
+will all automatically recognize the
+areas okay where you need to just uh
+Mark that image right but if you want to
+do it uh directly you can just you
+know uh directly select the image okay
+so let's say see it it has already
+analyzed the different areas where you
+can add tags so let's say I'll click on
+this I'll add it add a
+tag Red
+Apple I've created a tag now I'll click
+on this this is again a red apple this
+is again a red apple so these tags are
+getting
+created how it helps when let's say uh
+you give an image to the AI it will
+analyze the complete content and it will
+find where the red apples are available
+in that image see this is also a red
+apple this is also a red apple I'm not
+clicking anywhere I'm just moving my
+cursor and it is showing me uh the
+objects this is again a red
+apple red apple now let's move to the
+another object let's mark this one as
+also a red apple let's move to the next
+image this one see right now right now
+it is again showing me the objects where
+we can mark it I'll select this I'll add
+a tag I'll select this I'll add a tag
+I'll select this one as well I'll add a
+tag as a red apple I'll move to the next
+picture see in the beginning I'll show
+you in the beginning no images has been
+classified but see after a few seconds
+it has analyzed that these images are
+there there can be tags added I'll click
+on this red apple so right now what we
+are doing we have uploaded the image now
+we are adding labels or we are adding
+tags to the images right the tags which
+we want to get analyzed by the AI what
+do you think if I give a tag to this
+object as green apple and this object
+also as green apple so to all the red
+apples I'm giving tag as green apple
+what will happen at the end if you give
+after training your model if you give an
+image to analyze it will identify your
+red apple as aen Apple because you have
+given that tag so giving right tag to an
+object is very
+important if there is a cycle do not
+give a tag for bike because at the end
+when you give an image to your system it
+will identify your cycle as a bike so
+that is not correct in general that is
+not correct maybe you want it to uh
+analyze as a bike that might be correct
+for you but in general it is not correct
+so giving right tag is very important
+for your system if you you are training
+your own custom models
+okay this is a group of Red Apple so we
+can give this as a tag let's give tag as
+red
+apple let's move to the next
+picture Okay this has analyzed red
+apple red
+apple move to
+next so minimum of 15 images are
+required to rain a model so we have 16
+images in this uh uh project so we will
+be marking each and every
+image red
+apple red
+apple red apple red apple
+now what can be the another tag here
+hands or people are holding Red Apple
+because there are hands in this image so
+this AI has analyzed now it is asking
+you to give a tag but I'm not going to
+give any tag because we are only going
+to analyze red apples and not hands okay
+so if you want to analyze whether in an
+image if there are people holding red
+apples then you can you can use this
+kind of tag you can use this kind of
+images where people are actually holding
+red apples okay and you can give tag as
+hands are holding red apples or people
+are holding red apples let's move to the
+next
+image okay this one is also ER
+Apple so right now we are in the process
+of giving tags to each and every
+image
+okay Red
+Apple too many
+images so many red apples I I hope you
+you guys are don't you are you guys are
+not craving for red apples right now
+because I am feeling to have a red apple
+because I have seen too many red apples
+right
+now okay and these are beautiful red
+apples okay
+[Music]
+okay let's cross this okay let's close
+this only one image is uh available here
+or one only one image is left which is
+untagged there is an option to see the
+tagged images see for red apples we have
+15 images these all images are being
+tagged they are already tagged by us
+okay now uh if you want to see if there
+are an image which is untagged you you
+can see that we will click on this we
+will again
+give a label to this image or tag to
+this
+image okay we have given tag now what is
+the next step we have uh we had the data
+set we have uploaded the data set we
+have given tags to the images okay now
+the third step is training the model you
+will click on train now
+see for quick
+training it requires minimum of 1 hour
+okay for Advanced Training let's say you
+have a bigger your data set so it
+require uh it's up to the budget
+training budget
+okay it require uh a large number large
+amount of time and it depends on your
+budget as well so right now we are going
+to use Quick training we will train
+it now after training you will be able
+to see the probability the percentage of
+accuracy uh because uh see the accuracy
+cannot be as good as you have seen uh in
+the pre-trend model that you could have
+seen that for the people there was 99%
+accuracy but you see we have only given
+15 images to this custom models so 15
+images is not enough to train a model or
+to get the accuracy there need to be
+thousands of images if you really want
+to have
+accuracy uh after analyzing an image
+right so that's why it is important uh
+to to prepare a good good amount of or
+large number of data set so that you you
+can train your model for an accuracy for
+a better accuracy and you can get the
+output uh in a better manner okay but
+for 15 images let's see how much
+accuracy we are getting and uh what is
+the probability that uh the app Red
+Apple is available in an image
+okay it is going to take some time it is
+training I think it will take around
+five five minutes I guess till then I
+would like to see the chat
+okay enjoying thank you thank you
+Pima uh krishi thank you interesting
+thank
+you if you guys have any kind of
+questions you can drop in the chat I'm
+available to take questions because the
+model is getting trained so it is going
+to take some
+time at least 5 minutes
+so drop your questions in the chat I am
+available you can tell me how uh what
+all things you understood or uh
+um how you actually enjoyed this session
+or not you you can directly tell me in
+the
+chats uh explain the difference between
+using pre-built models in Azure Vision
+versus training custom models okay so
+there are two things one is pre built
+model one is custom models so custom
+model are for youu guys let's say uh I
+already given an example of a super
+store okay in a super store you want to
+identify whether a
+person whether a person of white shirt
+has entered your super store or not okay
+so that's a generalized thing okay that
+can be available in a pre-trained model
+so white shirt can be identified as by
+the pre pre-train model right so in this
+case you can use pre-train model because
+that is satisfying your need okay that
+is matching with your need because
+because that white Shir can be
+identified by a pre-train model but
+let's say you have recently launched
+your brand and your brand name is
+XYZ okay now what is the probability
+that your brand can be identified that
+pre-train model I don't think there is
+any ability because you have recently
+launched a brand and and there is no
+interaction of your brand with the AI
+how would you able to identify your
+brand using pre-train model so in this
+case you need to have your own custom
+model you train your own model in such a
+way that it identifies your brand okay
+you give all the images or all you give
+logos to the to your model you give
+images to your model you give images of
+objects objects you give images of
+products where your Lo logo is there
+right you you prepare a large data set
+which can identify your logo okay you
+prepare a large data set you give that
+data set to the custom vision and then
+in custom
+Vision uh you can give tags to your
+logos right just now uh like we have
+given tags to red apples there are many
+apples there can be green apples red
+apples but we are only giving tags to
+red apples so to identify your brand you
+just identify that area where your logo
+is mentioned and you can give tag to
+your logo or give a name to your logo
+okay now when you use your custom train
+model if there is any object where your
+logo is used or you want to see whether
+this is this is this uh product is from
+your company or your brand or not your
+custom model would be able to identify
+it I hope uh now it is uh clear you got
+better understanding of where you can
+use pre-train model and where you can
+use your custom
+models uh what industry will it be most
+beneficial for any
+industry Healthcare
+uh laws enforcement Health Care uh uh
+traffic or Product Industry or your
+super store or in security and
+surveillance any industry it's up to you
+what exactly or how exactly you want to
+create a solution using the service
+right let's say even if you are in your
+room okay and uh whole day you are just
+feeling sleepy and you are just lying on
+the bed whole day and you are not doing
+any work so you have trained your model
+in such a way that that if your model
+finds you lying on the bed it will just
+uh call your parents and it will tell
+that uh your kid is lying on the bed and
+not studying so
+anywhere it's it depends on your need
+how you want to implement it okay let me
+see if uh the model has been trained or
+not okay the model has been trained let
+me show you guys please confirm uh when
+my screen is
+visible okay I hope my screen is visible
+to you guys
+see the model has been trained okay the
+tag is uh Red
+Apple and these are the prec Precision
+recall so this number will tell you if a
+tag is predicted by your model uh How
+likely is that to be right okay so the
+Precision is 33% means uh 15 images are
+not enough to you know train a model to
+increase this percentage you need to
+have large number of or large set of
+data sets recall is this number will
+tell you out of the tags which should be
+Ed correctly uh what percentage did your
+model correctly find it okay okay map
+meaning average Precision this number
+will tell you the overall object detect
+performance across the tags okay this
+will give you an average that uh uh the
+accuracy maybe the accuracy of uh of
+your object object
+detection now we want to so here is an
+option to
+publish after publishing you can use its
+key and end point and you can use it in
+your s DK but right now we are first
+going to test it so we'll click on Quick
+Test you can give a image URL or you can
+browse local file so I have downloaded
+this just one
+minute okay I have downloaded this one
+so we'll use this one whether it is able
+to identify or
+not now uh I told you that uh we will be
+able to see the probability of uh the
+analyzed image right so when you check
+check on the click on the first
+probability Red Apple the probability is
+99.6% means you can take decision on
+this right so the decision- making
+ability is better on this uh on this red
+apple okay so this red apple is this one
+this one the
+99.6 this one you can see yes exactly
+this is a red apple let's check the
+another
+one red apple the probability is
+96.7 but this is not a correct
+probability because in the in the Border
+it shows as green apple again coming to
+the point important Point 15 images are
+not enough to train a model right it
+will not give you the exact accuracy so
+in this case what will happen is uh you
+can take decision only on few um few
+analysis or or let's say the first one
+the probability of which the highest
+probability object the highest
+probability object will be this one the
+first one so maybe you can take take
+decision on this uh analysis but not the
+other one let's see the other one as
+well see red apple 92.8% the percentage
+is good probability is good but see
+where is the Red Apple there is no Red
+Apple so taking a decision will only uh
+be you would be able to take decision on
+the highest probability object and not
+the other because you have only given 15
+images to your model you give thousands
+of images it will give you accurate uh
+analysis it will analyze the image
+accurately it will identify whether uh
+it is a r Apple it is a green apple so
+let's say we have only used a data set
+for Red Apple but we will give uh we
+will also use a data set for green apple
+so in a single image it will be able to
+identify or it will able to mark that
+area where the red apple is available
+and where the green apple is available
+so this is how you will be training your
+data set and after training you would be
+able to use its key and endpoint and uh
+you can just you know use it in your SDK
+or in your super store uh super store
+has become a favorite um word in this
+session it just came out of anywhere in
+my mind and I took this word and I've
+given example many example on this thing
+so I hope you guys found it interest
+interesting that's all from my side uh
+let me move to the presentation I have
+few things for you
+guys test your knowledge how can we go
+without testing our
+knowledge okay we have done the demo now
+the time is for knowledge
+check I I uh focused on a very important
+thing when we were doing image analysis
+now it's time for you to answer that the
+question is you want to use the Azure AI
+Vision analyze image function to
+generate an appropriate caption for an
+image which visual feature should you
+specify tags dense captions
+objects okay the another question is
+what is the purpose of the Azure AI
+vision service the first point is to
+provide functionality for audio
+transcription or to extract information
+from images or to detect the presence
+and location of a specific sounds within
+an audio file these are the two
+questions I think they are very simple
+to answer you guys can answer it let me
+know in the comments uh that's all from
+my side thank you so much this is Aditya
+Pand and I hope you guys guys found it
+very useful and uh please check out Wiz
+laabs platform for your preparation
+because it has the most useful content
+for your preparation and even for your
+interview preparation that's all from my
+side thank you so much and have a great
+day thank you so much ad for sharing
+your expertise with us today your
+insights have been incredibly valuable
+and we're grateful for the time and
+effort you put into this session this
+was a really great session and now
+moving on to the Q&A session we' like to
+open the floor for questions if you have
+any questions fora please drop them in
+the chat and we will address as many as
+possible don't hesitate this is your
+chance to get anwers directly from the
+expert uh also guys uh if uh let's
+connect on LinkedIn and uh if you guys
+have any kind of questions you can send
+me on LinkedIn we we let's get connected
+and I would also be starting uh to
+sharing some important things or details
+on important topics on the LinkedIn so
+we can also interact there as well so
+let me share my LinkedIn ID to the
+moderator please share this in the
+comments thank you sir even I had a
+question
+uh What uh how can developers optimize a
+AI Services a vision for image real time
+IM
+processing so I I already mentioned that
+you can use that in your SDK
+uh for software developers uh you can
+use that service in your SDK you can use
+keys and endpoints to implement that so
+again it's depend on
+your use case on your demand or on your
+like how you want to use it it depends
+on what kind of solution you want to
+create out of it right I just cannot
+randomly tell you A solution that this
+is how you can use it but let's say if
+you have a software or you are a
+software developer so the areas where
+you you want to use it you need to
+identify that because using this service
+is very easy the area the implementation
+is the important thing right so if you
+have found the area where you want to
+use it you can just implement it
+directly in your SDK there there is a
+lot of options available and even if you
+don't know how to implement it you can
+just follow the Microsoft learn
+documentations and uh we have some set
+of labs also available on bz laabs so
+that will also help
+so for the general MK like everyone
+who's attending right now is it
+advisable like most of them would be
+from first year second year or even
+third year and now they will be making
+making the projects for the internships
+and right for the CV right so is it
+advisable for them to use these kind of
+services provided by Azure or should
+they use the basic that how we train the
+models using Python and ml so how would
+you uh get to this so the first thing is
+uh I think you do not need any advice on
+this because cloud and AI has become a
+norm right so this is the normal these
+days if you're are not using cloud and
+AI I think you are somewhere you are
+lagging behind Okay so in your project
+let's say you are creating a project you
+can definitely use a pre-trained model
+but let's say you are presenting
+something and you want to show them your
+skills so you can show them how you
+trained your model and how you are able
+to identify what you want to check what
+you want to analyze right pre-train
+model using pre-rain model is very easy
+but but creating your own data sets uh
+like what exactly you want to analyze
+you create your own data set you do some
+work you give tags to your data set you
+analyze different objects in your image
+uh you give different tags uh in that
+image to different objects and then you
+train your model and then you use that
+custom model in your project that will
+have better impact on the let's say
+recruiter or on um your uh uh The
+Faculty who is checking your project
+they will know that you know uh how to
+train a model and how to use your custom
+Vision in your project right so that's
+how you can implement it okay we have
+one question uh how does aoria vision
+handle data augmentation uh can it
+automatically generate synthetic data to
+improve model accuracy when we have a
+limited data set such as with only 15
+images of red apples uh can it
+automatically generate synthetic data to
+improve
+no uh for this smaller data set it it
+won't be uh doing uh it won't be
+happening uh like this but if you have a
+bigger data set let's say you have maybe
+hundreds of images 1500 2,000 images or
+thousands of images and after that if
+you are giving images different kind of
+images to your data set it will start
+training right so uh in the beginning
+you need to train your model for the
+accuracy right the accuracy you want
+after that it will automatically be uh
+get trained by you know using deep
+learning and uh machine learning right
+so in the beginning it is important to
+train your model because uh that is your
+model after that it will be again uh you
+know automatically getting trained uh by
+the images you you are giving as input
+to the AI
+how does it interesting itself from the
+other clouds cloud
+based U this is a very generic questions
+uh Azure AI Vision distinguish itself
+from other cloud-based computer vision
+platform see Azure AI vision is a
+pre-train model and it is being trained
+on a very large data set right it is a
+very generalized model uh I
+think uh if you remove the personal
+identification or personal analysis
+let's say I talked about uh the brand
+analysis the brand of yours if you
+remove that kind of thing I don't think
+it won't be able to analyze any other
+thing it will be able to analyze each
+and everything because that is trained
+on a very bigger data set right so I
+don't know about other platform how it
+is different but I can definitely say
+that Azure AI vision is something which
+is which is uh very Advanced uh
+pre-train model very Advanced service
+given by Microsoft Asar
+okay how can we optimize resource uses
+to minimize
+expense so the cost analysis we can do
+the cost analysis there is a calculator
+by Microsoft Azure that is azure cost uh
+Azure pricing calculator you can go
+there you can just enter your service
+and it will give you the cost right as
+per the uh timing and the amount of data
+set but the uh important thing how you
+can optimize your resource uses or
+optimize minimize your expenses is you
+need to
+monitor monitoring is very important see
+whether you are using AI or Cloud
+whether things are already automated but
+the end at the end of the day you need
+to monitor whether things are moving
+fine or not you need to monitor whether
+there there is no errors because this is
+technology right and Technology machines
+can throw error right we humans machines
+so what we are doing is we are trying to
+train a machine to be a human right if
+human can make errors machine can also
+make errors right so you need to monitor
+monitoring is the best thing to uh
+minimize your cost and uh uh optimize
+your resource
+uses
+right
+um how does aure vision handle the
+classification object in low quality or
+distorted
+images see we have talked about the
+traditional model and we have talked
+about the Azure AI Vision what was the
+uh limitation in traditional model it
+will not perform good in low light
+conditions and you have to hardcode all
+the rules for that but this is the
+benefit or this is the capability of Uh
+custom Vision which is available on
+available on Microsoft Azure that it can
+give you uh Solutions or it can give you
+the output even in the poorest condition
+even in the lowest condition let's say
+for an image it can be low light
+condition right for an image it can be
+distorted image but it will identify it
+will try to identify it will give you a
+better probability that what this object
+can be right so this is the benefit of
+using a pre-train model and the computer
+vision on a ji
+Vision right uh
+so actually that's the capability of
+computer vision right right and uh this
+is how it got trained uh this is how uh
+it has been trained for the poorest or
+for the you know lowest condition
+available for thei that's why it is the
+it is one of the biggest uh model which
+can uh identify your images which can
+extract information from your images you
+can just imagine uh uh the
+OCR um supports different languages not
+only English but Hindi
+Spanish or uh any other language marati
+or whatever language is there are
+Japanese so it can extract
+information from any kind of document
+whether it is written in Hindi English
+or Japanese right so that's why we say
+that uh this is one of the best feature
+of Microsoft Azure the AI uh computer
+vision and custom Vision where you can
+which you can use in your systems in
+your use cases and you can create I mean
+number of Solutions out of it right I
+hope things are clear to you guys and I
+hope I I was able to uh clear concept
+around the computer vision solution
+using Azure AI Vision if you guys have
+any kind of questions you can just
+connect with me on LinkedIn and you can
+drop your questions there I would be
+happy to connect with you guys and I
+would be happy to answer your questions
+thank you so much uh for everybody who
+has been uh stick till the end and uh
+and uh understood each and everything
+thank you so much uh have a great day
+thank you so much sir it was a lovely
+session thank you so muches thank you so
+much developer team thank you so
+much now we arrive at the moment you've
+all been waiting for the announcement of
+the winners of the best blog or get up
+page for the previous session we've seen
+some fantastic submissions and it's been
+tough to select the best but here are
+the
+winners the first unati Agarwal
+moving on we have KS AE and last but not
+the least paridi Agarwal congratulations
+to all the winners you'll receive
+exclusive branded Microsoft goodies and
+we're thrilled to see your dedication
+and hard work paying
+off a quick reminder to stand a chance
+of winning amazing prizes like branded
+Microsoft goodies and wilab
+subscriptions make sure that you write a
+blog or maintain a GI up repository for
+each session share your learnings on
+LinkedIn orx mentioning the Azure
+developer community vlabs and Yar engage
+in live sessions and follow our social
+media channels the deadlines for the
+submission for this session will be
+Thursday 25th October 2024 till 6 p.m.
+keep an eye on your email and WhatsApp
+Community for the submission
+form stay connected and up toate by
+joining our social media channels and
+WhatsApp Community just scan the QR code
+on your screen to stay informed about
+all our upcoming events and
+announcements
+remember the top three participants with
+the best blog or get up page will
+receive branded Microsoft goodies
+additionally at the end of the boot camp
+the top 15 blogs or giup repositories
+will re receive one month subscription
+from this
+lab a huge thank you to the incredible
+team behind the scenes who made this
+event possible your hard work is deeply
+appreciated we look forward to seeing
+you all again on 20th of October for our
+next session on develop Solutions with
+Azure air document intelligence don't
+miss it it promises to be another
+fantastic learning opportunity thank you
+again for joining us today we hope you
+found the session valuable and inspiring
+let's keep learning and exploring the
+endless possibilities of AI together
+have a great day and we'll see you again
+on 20th at 12:00 p.m. thank you
