@@ -1,0 +1,43 @@
+[Music]
+so you have an idea for a new iot device
+or maybe you are looking to upgrade an
+existing product we know that Hardware
+is hard and you still need the software
+to make it smart connect to the cloud
+build a mobile app and manage your iot
+business at scale that's an expensive
+new team to hire and maintain what if
+you could just focus on your core
+product and start selling soon blink
+will cover all of your iot software
+needs here's how it works choose from
+hundreds of connectivity modules out in
+the market add a blink engine to your
+device firmware to manage connectivity
+data exchange over-the-air updates and
+all other vital functions connect
+devices to our secure Cloud use Blink
+app builder to create a mobile app for
+your end users with no coding just drag
+and drop pre-designed elements to build
+a custom UI whether it's a smart home
+agriculture asset tracker or any other
+connected device they can all work in
+the same app the app is integrated with
+blink Cloud so the whole system works
+out of the box once your app is ready it
+can be branded and published to App
+Store and Google Play Now customers can
+buy your device and easily activate it
+with the app control it from anywhere
+and receive important alerts with blink
+managing thousands of devices and
+clients is a breeze business insights
+better tech support remote firmware and
+app updates new marketing channel all of
+the tools are there to help grow your
+business blink is the only iot platform
+you need to prototype launch and manage
+iot devices so you can focus on your
+next big thing
+[Music]

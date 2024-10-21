@@ -1,0 +1,353 @@
+what are the tools in big data analytics
+which tool is the best tool among all
+how it will help organization in
+analyzing the data these are the
+questions you may arrive with by
+watching this video you will be able to
+understand all these hi this is sahana
+from simply learn today we will learn
+which is the best tool for big data
+analytics before that
+please make sure you subscribe to our
+channel and press the bell icon to never
+miss an update
+let's go for today's agenda
+first let's get introduced to what is
+big data
+applications of big data next comes
+hadoop
+after that tableau
+kasandra
+mongodb and lastly
+spark
+and let's get started with
+what is big data
+big data can be defined as the large
+amount of data that is very hard to
+analyze using traditional data handling
+system like microsoft excel
+data generated through new technologies
+like smartphones self-driving cars
+social media websites like facebook
+instagram and computers are categorized
+under big data
+such data sets are very hard to process
+using normal computing techniques
+next comes applications of big data
+big data is used in banking sector to
+analyze complex data sets of customers
+big data markets will analyze and
+anticipate the customers liking while
+maintaining their expenditure record
+this will happen in ecommerce websites
+like amazon flipkart metra etc next let
+us go for best big data tools
+most crucial tool is hadoop
+hadoop is an open source tool written in
+java that allows user to process large
+amount of data hadoop uses a network of
+computers to solve problems involving
+large amount of data
+hadoop is the best efficient tool to
+store large amount of data sets
+next let's go for features of hadoop
+most important one is it is cost
+efficient because hadoop runs on
+inexpensive commodity servers with
+associated storage a less expensive
+design than our dedicated storage area
+network
+next is swiftness
+data localization or the practice of
+performing computation close to the data
+rather than transporting the data itself
+that is why hadoop is very fast
+flexibility hadoop is extremely
+adaptable in terms of its capacity to
+handle various types of data sets like
+it may be structured semi-structured
+unstructured
+all that can be handled efficiently
+using hadoop
+scalability a very scalable model is
+hadoop in a cluster a sizable volume of
+data is split among several affordable
+processes and processed in
+simultaneously
+next let's understand the components of
+hadoop there are mainly three major
+components among hadoop
+first among them is hadoop hdfs which is
+also called as
+hadoop distributed file system
+next comes
+map reduce
+and the third is hadoop yarn
+let's understand them in detail first is
+hdfs
+based on the google file system the
+hadoop distributed file system offers a
+distributed file system that is intended
+to function on common hardware
+it and current distributed file system
+share a lot of similarities the
+differences between this distributed
+file system and others however are
+substantial
+hadoop is used in big organizations for
+both research and production
+hadoop also allows the transfer of data
+between the nodes
+these nodes can also be addressed as
+name node and data node
+next comes mapreduce
+mapreduce is a processing technique used
+in hadoop for distributing computing
+with java as a programming language
+important task of mapreduce is map and
+reduce marg takes a set of data sets and
+converts them into another set
+whereas reduce converts them into small
+set of tuples
+next comes the third important component
+that is yarn
+important concept of yarn is to separate
+the resource management operations
+the concept of yarn is to have an
+overall resource manager which is
+shortly addressed as rm and an
+application master for each application
+which is shortly addressed as am
+either a single job or a group of jobs
+make up an application
+this is all about components of hadoop
+now let's go for data storage in hadoop
+they are
+in the form of racks first is rack 1
+next comes
+rack 2
+rack 3 and rack 4. let's see how data is
+analyzed
+here block a is splitted as
+blocking and another blockade in rack 2
+and block b is splitted in block 3.
+same case for block c
+as well as block d and e
+this is how data storage is very simple
+in hadoop
+next comes crucial big data tool called
+tableau
+tableau is one that tool that aids in
+maintaining a data pool
+they have 40 distinct data sources that
+can have linked to
+tableau software is an american
+interactive data visualization company
+focuses on business intelligence
+to visualize data while conducting
+business intelligence analysis
+organizations employ tableau tableau's
+product range consists of
+visible
+tableau public tableau server tableau
+desktop tableau online and tableau
+mobile it is used to visualize the data
+and explore different views tableau is
+applied in analyzing high volumes of
+data
+next let's go in detail about features
+of tableau
+tableau dashboard tableau dashboards use
+text graphic objects visualizations and
+other elements to give you a complete
+picture of your data dashboards can show
+data as stories allow the addition of
+various views and object it also offers
+a range of layouts and formats and allow
+user to apply appropriate features
+these features make dashboards
+particularly informative
+data sharing among tableau
+tableau offers simple way for users to
+work together and rapidly share the data
+in the form of visualizations sheets
+dashboards etc you can use it to safely
+share the data from many different
+sources including hybrid on-premise and
+on cloud
+tableau provides advanced visualization
+technique for detailed visualization of
+data
+data and user security are given great
+considerations by tableau for data
+communications and use cases it has a
+full proof security system based on
+authentication and permission methods
+these are all some of the important
+features provided by tableau
+this is a simple glimpse of
+tableau dashboard
+next comes cassandra
+apache cassandra is an open source tool
+which is having no sql database that is
+used for handling big data
+apache cachandra has the capability to
+handle structured semi-structure and
+unstructured data
+it allows for storage and retrieving of
+data apache kasundra was originally
+developed at facebook after that
+it was open sourced in 2008. cassandra
+is an apache product it is an open
+source distributed and decentralized
+storage system it is used to manage very
+large amount of structured data spread
+out across the world it provides high
+availability with no single point of
+failure
+features of cassandra
+cassandra is a very highly scalable tool
+and allows more hardware utility
+cassandra provides flexible data storage
+and it supports all possible data
+formats like structured semi-structured
+as well as unstructured data
+cassandra provides
+simple data distribution it is very
+simple and also provide application
+factor
+operations or table operations in
+cassandra
+first is creating a table
+command used to create a table that is
+create table and emp1 is the name of the
+table
+which has data sets like
+id and name of the employee
+in cassandra you can also drop a table
+like any other sql language
+it includes a simple command
+dot table employee 1
+next is altering a table
+it can be done using simple command alt
+table and table name that is employee 1
+next is truncating a table
+to do this operation you have to select
+the table and truncate the table
+with by using the command truncate
+employee 1
+these are all the important or key table
+operations performed in cassandra
+this is how cassandra will look like
+next comes very famous
+nosql database tool which is called as
+mongodb
+mongodb is a
+document based versatile and scalable
+nosql database management system that
+uses key value sets to store data and it
+also supports many data models
+it was created as a way to deal with
+enormous amount of dispersed data that
+relational database
+or relational data models which
+typically provides rows tables
+that cannot handle well mongodb is free
+and open source just like hadoop
+features of mongodb
+data replication is the key feature of
+mongodb
+it creates replica data sets to enable
+fault tolerance data is kept on many
+servers using replication which offers
+high availability and redundancy
+data storage
+like cassandra and hadoop it can also
+store any type of data sets like
+semi-structured unstructured and
+structured
+next comes
+storage ending it employs multiple
+storage engines thereby ensuring the
+right engine is used for the right
+workload which in turn enhances
+performance
+it is a powerful query language that
+enables cred operations which stands for
+create read update and delete operations
+text search and aggregation functions
+due to embedded data models it requires
+less input and output procedures than
+relational databases faster queries are
+also supported by mongodb indexes
+these are all the key features of
+mongodb
+this is a glimpse of mongodb compass
+next comes spark
+fast cluster computing called apache
+spark is made for quick computation
+it was constructed on top of hadoop
+mapreduce and expands the mapreduce
+concept to utilize other
+functions like calculations including
+interactive queries and stream
+processing
+spark is a very flexible and easy to use
+tool
+let's go and understand
+main important components of spark first
+among them is spark shell
+spark offers an interactive shell a
+potent tool for interactive data
+analysis you can get it in either python
+or scala language a distributed
+collection of items known as resilient
+distributed datasets that is rdd
+rdd can be produced by altering existing
+rdds or by using hadoop input formats
+which is
+like hdfc files
+rdd transformations you can establish
+dependencies between rdds by using rdd
+transformation which returns a pointer
+to a new rdd in a dependency chain each
+rdd includes a function for computing
+its data as well as dependency to its
+parent rdd
+spark core
+the basic functionality of spark is
+carried out via spark core it contains
+the parts necessary for managing memory
+interacting with the storage system
+recovering from errors and scheduling
+tasks
+next comes spark sql
+on top of spark core spark sql is
+constructed support for structured data
+is also offered both the sql or
+structured query language and hql apache
+high variation of sql are supported for
+data querying
+next comes machine learning library
+a machine learning library called mlib
+or mlip includes a variety of machine
+learning algorithms these comprise
+principal component analysis
+classification regression clustering
+correlations and hypothesis testing
+compared to apache monarchs it is nine
+times quicker
+spark stages
+this is a glimpse of
+spark stages
+sources spark.org
+these are all the five best tools for
+big data analytics in 2022. thank you
+for watching the video in case of any
+queries leave it in comment section
+you
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

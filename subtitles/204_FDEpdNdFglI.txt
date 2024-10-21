@@ -1,0 +1,1390 @@
+learning aws can be pretty intimidating
+there's hundreds of services and it can
+be difficult to understand which one is
+the right tool for what you're trying to
+accomplish this video is going to help
+you navigate the complex world of aws
+services we're going to approach this by
+examining a standard three-tier
+application architecture like you can
+see here so let's take a look at this
+architecture now before peeling back the
+layers and revealing the aws services
+behind the scenes so what do we have
+here in this application architecture we
+have a pretty standard three-tier
+architecture here with a web backend
+layer we have our application layer here
+which is kind of if you're in an
+organization with a service-oriented
+architecture this will be pretty
+familiar this is where all your backend
+services will be and then you have your
+third tier here which is your database
+layer this includes uh can be relational
+could be a nosql database you can also
+have some caching in there as well and
+then we have a bunch of other components
+related to this so we have deployment
+orchestration to hold on to our source
+code and then facilitate deployment we
+also have a monitoring component here
+for monitoring the state of the system
+uh we have a load balancer here with a
+dns pointing to that load balancer to
+distribute traffic and then we have some
+other toolkits here on the right for
+event coordination say for instance um
+this application did some kind of
+something like google where you have
+search query submission and like every
+time that gets saved to a database you
+want to trigger some kind of event in
+this layer over here we have storage for
+that event we have some analytical
+processing a data warehouse and finally
+some dashboarding for end users to
+examine that content we also have some
+toolkits for rapid development to deploy
+a little bit faster as well and over
+here finally on the left hand side these
+two elements so for user pools to define
+different users that are going to be
+interacting with your application and
+then of course to serve cache content so
+this is our pretty standard application
+here let's take a look now at some of
+the aws services behind the scenes that
+replace each of these different elements
+so the first one is for dns so what is
+the service that we want to use for dns
+and aws
+so for aws that's going to be amazon
+route 53 and row 53 is the service where
+you define all your dns configuration
+including you know where you're going to
+route traffic to from the internet also
+supports other things like you know
+health checks on your endpoints and any
+traffic shaping that you want to do
+that's going to all be done in your
+rel53 service so it's great to be
+familiar with rel53 you're probably
+going to be using it all the time if you
+were defining kind of externally facing
+apis or endpoints
+now from there your dns will typically
+point to an endpoint for a load balancer
+so for aws there's a couple options for
+load balancers but the kind of top level
+category here
+is something called the elastic load
+balancer service and there's two
+variations for elastic load balancer
+there's what's called the application
+load balancer which operates at the l7
+layer and that's more applicable for
+those you that want to use content from
+your http headers to route your traffic
+and for those of you that are looking
+for something a little bit more lower
+level aws also offers a network load
+balancer which operates at the l4 level
+which is a little bit
+more cost effective and supports higher
+throughput limits as well so that's an
+elastic load balancer and some of the
+different options that you may want to
+use now in terms of your web backend
+layer over here this is going to be the
+first kind of
+time that a request from the front end
+touches the back end now with compute
+there's a couple different options that
+you can decide to leverage and those
+compute options it doesn't really matter
+if it's your web backend layer or your
+application layer the compute options
+that you select for either of these two
+things will be the same so what are the
+options that are available to us so the
+first option is amazon ec2 ec2 stands
+for elastic compute cloud very very old
+service and the basic gist of this
+service is that you rent
+virtual machines that you pay for by the
+hour and they're really convenient
+because with ec2 machines you can set
+them up to do whatever you please you
+can use them to host
+back-end databases if you want you can
+host a wordpress blog on it you can
+create and deploy your application for a
+rest api so it's a really flexible
+service that allows you to do whatever
+you want but some of the drawbacks with
+ec2 can include just the all the setup
+and configuration that you're going to
+have to go through to use it so some
+folks shy away from ec2 in favor of
+something a little bit more hands-off
+and for those of you that are interested
+in serverless that's where our next
+point comes in and that's aws lambda so
+aws lambda is a serverless compute
+infrastructure option and what that
+basically means is that you define what
+are called functions and these functions
+are just snippets of code they can be
+small or large pieces of code and aws
+does not require you to have to worry
+about any of the infrastructure as you
+had to do with ec2 you just basically
+write and deploy your functions and aws
+worries about deploying your application
+onto a container and then scaling that
+application whenever the number of
+requests to your lambda function
+increase
+so this is a really really attractive
+model because
+lambda is paper invocation so it's
+really cost effective for application
+workloads that have bursty traffic
+patterns
+or for applications that have traffic
+during the day and then it kind of
+recedes down to nothing in the evening
+so lambda is a really really popular
+service it's getting more and more
+popular by the day and it's definitely
+one to consider if you want to learn
+more about aws lambda you should check
+out my brand new udemy course in the top
+right of this video now if you're not
+into kind of deploying your
+infrastructure onto machines directly
+and you're not into using this
+serverless model there is a third option
+for those you that are more kind of
+docker folks or docker fans
+and that third option is amazon ecs so
+ecs stands for elastic container service
+and there's also a variation of ecs
+called eks or elastic kubernetes service
+and essentially ecs is just a service to
+help you manage your containers helps
+you set up servers with integrated load
+balancing and auto scaling helps you
+facilitate your deployments to those
+containers so it's kind of like
+something in the middle between ec2 and
+lambda and if you're interested in
+learning more about like these three
+services and different compute options
+that are available to you i have a video
+where i compare these three things i'll
+put that in the comments or the
+description section below
+so like i was kind of saying uh the
+application layer doesn't really change
+in terms of the compute options you have
+the same kind of fundamental building
+blocks that are available to you
+regardless of if it's your web backend
+layer or your kind of business logic
+heavy heavy application layer here now
+another service that helps kind of
+facilitate the creation of your rest
+apis and hosting those apis is one
+that's called api gateway over here an
+api gateway is a super super powerful
+service because it offers additional
+functionality on top of just kind of
+using a load balancer to distribute your
+traffic to different nodes here and the
+types of uh kind of features that api
+gateway offers are things like api
+throttling or authorization on an api
+say for example you you're building kind
+of a private api that you only want to
+be accessible from users in a user pool
+which we're going to talk about next
+year
+you can set up your api gateway to
+validate that you know a token is valid
+uh by integrating with the user pool
+service or you can define your own also
+offers other features such as model
+validation so you can define what types
+of models your api supports and then
+have that validation performed before
+the request actually gets to your
+backend layer here
+so you can do like a bunch of different
+combinations here you can do your dns
+pointing to your api gateway which
+points to your load balancer which
+points to your infrastructure layer and
+that is if you want to take advantage of
+some of those features that i just
+described so speaking of user pools we
+just kind of touched on that we might as
+well reveal the service here and that's
+one called amazon cognito so amazon
+cognito is kind of a very very powerful
+but underrated service and what it
+allows you to do is to create user pools
+and these user pools kind of similar to
+what you'd have on any kind of login and
+registration website you know you create
+a user they provide a login a username a
+phone number a recovery option all that
+kind of stuff and so with cognito you
+can
+have users sign up for accounts directly
+within cognito using the hosted ui
+or you can integrate with other
+third-party identity providers such as
+google facebook amazon so anytime you've
+seen like login with amazon or log in
+with google or facebook or any other
+identity provider
+that could be integrated with cognito as
+well so very very useful for
+applications that require user
+registration and if you combine that
+with api gateway you can do things like
+ensuring that a user is part of a
+certain user group before the request
+can be validated and that flows through
+to your backend layer here so that's a
+little bit about cognito let's kind of
+finish this three-tier architecture
+discussion and talk a little bit about
+the database layers now or the storage
+slash persistence layer
+so a lot of applications have caching
+enabled on them just to increase
+performance on some
+lookups of items that are quite common
+or maybe you just want increased
+performance so what's the aws service
+that allows that to happen so that
+service is called elastic cache and
+elastic cache kind of comes in two
+different flavors you can either go with
+the flavor that
+is memcache based or you can choose
+redis now redis is probably the most
+popular one people when people think
+about caches i think redis comes to mind
+almost immediately but regardless of
+what you choose when using elastic cache
+it is a caching service so it's going to
+be based on key value lookups and you
+are going to have to worry about hosting
+that infrastructure essentially you kind
+of own a cluster of nodes and
+these are memory optimized nodes where
+they have plenty of memory to facilitate
+your application's needs um but you
+still have to worry about the
+maintenance of that cluster you know and
+node replacement hardware failures
+things like that it's a relatively
+hands-off service but there are some
+nuances that you may need to know about
+in terms of maintenance and alarming and
+all that now in terms of what should we
+store our database in should we store it
+in a relational database or a nosql
+database so there's a bunch of different
+options here that you can choose from so
+the one that aws likes to push a lot is
+a relatively popular one called amazon
+aurora now amazon aurora is a in-house
+built amazon database that is compatible
+with both my sequel and postgres i
+believe postgres is still in preview
+mode now so it's a fully managed rds
+database that kind of makes your life
+easier in terms of worrying about things
+like administration monitoring
+auto scaling storage auto scaling and
+compute auto scaling also offers
+something called the data api that you
+can use to
+call your rds database using a rest api
+as opposed to a traditional kind of
+database connection so there's a lot of
+features that are coming with aurora and
+you may really want to consider it if
+you're thinking about using a relational
+database now a relatively similar
+service to that is amazon rds or
+relational database service and where
+these two are different is that rds is a
+database service that allows you to
+select which database configuration that
+you would like so you get to pick from
+common database uh platforms such as
+mysql postgres microsoft sql server
+oracle cassandra and probably a couple
+other ones that i'm missing as well so
+rds is probably what i would think most
+people are familiar with but a lot of
+customers are deciding to go with aurora
+just because it's more of a hands-off
+option and just makes life easier one
+other thing about aurora is that it does
+offer a serverless compute model as well
+where you don't need to worry about
+provisioning any type of hardware behind
+the scenes as you would with an rds
+database you can use the serverless
+model and it's kind of like an auto
+scaling type of database thing similar
+to what lambda did for ec2 aurora server
+list is doing for rds so it's it
+provisions your infrastructure whenever
+the request rate requires it so if you
+have a bursty workload it'll add more
+nodes and scale you up so that your
+database can handle more volume
+so that's a little bit for rds here
+let's talk about nosql database options
+now now definitely the most popular
+nosql database that you're going to hear
+about a lot is dynamodb now dynamodb is
+a nosql database that is optimized for
+key value lookups it is a fully managed
+database service so that means that you
+don't worry about anything with regards
+to infrastructure or hardware all you
+really worry about is your scaling
+configuration and dynamodb handles the
+auto scaling for you behind the scenes
+and so it's a really really powerful
+nosql database and it's kind of used as
+the building block for much of the
+internet really if you take a look at
+one of the aws white papers where
+dynamodb unfortunately went down one day
+it brought down with it a large part of
+the internet including common
+services that we all love like netflix
+and other websites as well
+so dynamodb is a super super powerful
+and popular nosql database on aws and
+really this is this service is kind of
+at the heart of many other aws services
+as well like behind the scenes
+so yeah that's it for dynamodb now if
+you're a mongodb type of person and
+you're coming to aws you don't want to
+learn dynamodb
+there is a service option for you so aws
+also offers what's called documentdb
+like you see here and documentdb similar
+to dynamo is a fully managed service but
+this time it is compatible with mongodb
+so that you can you know use mongodb as
+you normally would in a fully managed
+way so that should satisfy any mongodb
+lovers and if you're looking for
+something that supports more flexible
+querying at scale
+you may want to consider a service
+called open search open search is the
+new name for the traditional elastic
+search service i believe aws and
+elasticsearch had a falling out so aws
+kind of came up with their own service
+here but really this is elasticsearch
+behind the scenes now what open search
+allows you to do over some of these
+other nosql databases is perform queries
+that are more kind of fuzzy in nature so
+give me all the records with with value
+equals x y and z and you know value two
+equaling something else and value three
+equaling something else also allows you
+to do some really powerful grouping
+features dynamic grouping as well
+comes with cabana as well which is an
+open source dashboarding technology to
+take a look at your data inside your
+open search database
+this has been used quite effectively as
+a replacement to rds in some cases but
+it's a really neat service that you
+should consider as well now i wanted to
+pause here to talk about some other
+services that don't really fit the molds
+here but kind of play a role in terms of
+packaged infrastructure because so far
+what i've talked to you about here these
+are all kind of lower level building
+block services but aws does offer these
+kind of packaged infrastructure services
+that make your life easier as a
+developer you can tell that if you want
+to build this three-tier application
+architecture here there's a lot of
+moving pieces here there's a different
+compute option there's load balancing
+there's api gateways there's databases
+there's a lot of stuff going on so aws
+does have some services that kind of
+offer a combination of these different
+elements as a single product and so
+instead of having to worry about you
+know each of the building blocks and
+deciding on your own which one you want
+to use you can use these pre-packaged
+infrastructure services that bundle this
+functionality together
+and often they abstract some of the
+complexity away from you at the
+sacrifice of kind of configuration and
+control so some of those different
+services are
+well the first one that i have for you
+here is elastic bean stock now elastic
+beanstalk is a pretty old service it
+allows you to set up any kind of web
+application could be a containerized web
+application as well and it just makes it
+easier for you to set up your app with
+all these different components so a
+backend layer load balancing also lets
+you set up auto scaling and monitoring
+so it comes with a lot of the components
+here but you manage it in one spot
+which is the elastic bean stock console
+so you're still controlling the
+infrastructure with elastic bean stock
+but it's kind of like an orchestrator
+service it'll go out to all these
+different services here and provision
+what it needs for the the type of
+application that you're trying to deploy
+onto it
+now another service that just came out
+pretty recently that does something
+similar is one that's called app runner
+and app runner behind the scenes uses
+ecs and something called fargate which
+is a kind of a serverless mode for
+running containers where it uses
+provision containers that you can
+specify but you don't need to worry
+about the infrastructure
+so that's what app runner relies on so
+with elastic bean stock you know it's
+orchestrating the deployment of your ec2
+machines your load balancers and any
+other stuff that you may need however
+you still have visibility or insight
+into that infrastructure you still need
+to worry about maintaining it with app
+runner it's a little bit different all
+of the lower level components are
+abstracted away from you you just kind
+of worry about your application
+configuration and deployment an app
+runner will worry about deploying that
+onto your infrastructure and scaling it
+if it requires it so that's another
+important service to know as well and
+also there's another option here which
+is amazon light sale and light sale is
+what i actually use for my personal aws
+blog you can check it out at be a better
+dev.com
+and it's another one of these
+pre-packaged services that just makes
+your life easier so it's similar to
+other uh kind of cloud vendors like i
+want to say godaddy or digitalocean
+where you kind of select the type of
+stack that you want to set up for your
+application and there's a bunch of
+different pricing models kind of
+pre-packaged pricing models where you
+don't have to worry about the details of
+kind of which node type is right for you
+as you would have to do with your ec2
+machines over here you just pick
+different pre-packaged options for
+compute and the costs are reasonable as
+well and in terms of what you can deploy
+on lightsail i use it to deploy my
+wordpress blog but you can also use it
+to deploy a lamp stack a mean stack a
+ruby application you can also use it to
+deploy your own containers
+and you can also add other components as
+well such as load balancing and auto
+scaling uh so there's a lot of different
+features that are built into light sale
+but it's a much more simplified and
+paired down version so you can add all
+this extra stuff but you're doing it
+within this kind of i want to say safe
+safe zone or safe version of the aws
+console so things are much more
+streamlined in light sale you have very
+few options of types of things that you
+can do and it's a very beginner friendly
+option for those of you that are just
+getting started not recommended for kind
+of production grade applications but
+something great for smaller applications
+or even a wordpress blog such as in my
+case
+now another honorable mention that i did
+want to talk about briefly for those of
+you that love graphql maybe you're a
+front-end guy you love graphql aws does
+offer a fully managed graphql as a
+service
+service called appsync and appsync just
+makes it easier for you to develop your
+graphql applications by providing you
+with that graphql functionality
+so you can use it to integrate with
+other backend aws services such as
+dynamodb you can use it to integrate
+with lambda functions if you want to
+have some custom resolvers and it can
+also scale really really well too
+completely transparently to you as an
+administrator depending on the level of
+traffic that's hitting your application
+so appsync is another popular one that
+you can think about if you're a graphql
+user
+now one other thing to mention as well
+is in terms of cached content so for
+many of these web applications you're
+going to be serving different types of
+cached content whether that be image
+files your javascript your html your css
+anything that you may want to cache and
+basically put close to the end user so
+you can get better performance
+and for that you're going to be using a
+service called amazon cloudfront
+so cloudfront allows you to deploy a
+cloudfront distribution
+so you can have your application source
+deployed in for example north america
+but what if you have customers that are
+located in europe or asia or australia
+if you don't use cloudfront then any
+customer is going to have to hit that
+north america server which you know does
+take some time so there's going to be
+some performance degradation with
+cloudfront you can set up and deploy
+distributions that replicate some of
+your content from your general object
+storage which we're going to talk about
+a little bit later and then replicate
+that content to regional nodes that are
+located all across the world close to
+your end users and what that allows you
+to do is get some better performance for
+much of this static content so great for
+applications that want to optimize the
+experience for the user
+okay so so far we talked about quite a
+few concepts talked about like routing
+apis user pools load balancing compute
+databases
+packaged infrastructure caching
+now i want to talk about some other
+components in terms of like how do we
+actually deploy and monitor these
+applications so in terms of deployment
+there's actually four different
+smaller services i want to say that aws
+provides and these kind of work hand in
+hand for deployment pipeline so let's
+peel these back one by one so the first
+service at hand is code commits now what
+code commit is basically for is for
+storing your source code so you can
+either store your source code directly
+inside code commit as a service or you
+can integrate code commit with third
+party providers such as
+github if you have a private github
+repository really the option is up to
+you now code commit on its own isn't
+too impressive or too powerful but it's
+the integration with some of these other
+services that do make it powerful and
+the next one is code build now code
+build allows you to take your source
+that's located in code commit or any
+other kind of third-party connected
+repository and then build that up into
+artifacts it also allows you to create
+and run tests in a test environment for
+your source code and when you combine
+that with some other components that
+we're going to get to in a second you
+can build some pretty sophisticated ci
+cd pipelines that have multiple
+different steps here in terms of running
+your unit tests and your integration
+tests and all that but we'll get to that
+in a second here so yeah code build is
+for building and testing your source
+code now how do we actually deploy that
+source code out to our compute
+infrastructure here well that's the job
+for code deploy and like the name kind
+of implies it's all about taking these
+artifacts that are built in the build
+step and then knowing how to integrate
+with these other compute layers to
+actually deploy your artifacts onto
+these different types of services so
+that's what code deploy is all about
+so so far these are kind of individual
+building blocks that are chained
+together but don't really give you a way
+to kind of orchestrate a sophisticated
+deployment pipeline and that's what this
+last service is for and that's called as
+you may imagine code pipeline now code
+pipeline is kind of like a deployment
+orchestration service so code pipeline
+allows you to define a kind of a
+workflow of the different stages that
+your application will run through so for
+instance you first you have your source
+code then you have a build step then you
+have a test step and then maybe you
+deploy that source code to a test
+environment and then after the test you
+run another set of tests and then after
+that maybe you deploy to your production
+environment so code pipeline allows you
+to take these smaller building blocks
+here and weave them together to build a
+pretty sophisticated ci cd pipeline and
+if you're interested i do have a video
+on this where i kind of walk you through
+how to set up a pipeline with all these
+different components here as well
+i'll put a link to that in the
+description so you can check that out
+later so that's it for deployments now
+what about monitoring um and i should
+say that i have monitoring here kind of
+barred over kind of this section of the
+diagram but monitoring really applies to
+this entire diagram for everything that
+we've discussed so far and everything
+that we will discuss monitoring is a
+very important concept and if you're
+running any kind of production workload
+you need to have you know monitoring
+configured and know where to look to
+determine when things are going wrong
+and you need to step in or when things
+are fine and you can go home and sleep
+nicely on your bed so there's two key
+services that are involved in monitoring
+and the first one let's start on the
+right here and that's amazon cloud watch
+so cloud watch i want to call it kind of
+like an umbrella service because there's
+a lot of different features that are
+inside cloudwatch but by far the most
+important feature in my opinion is the
+ability to evaluate your metrics on many
+of these other aws services so you can
+go into cloudwatch and view different
+metrics on your ec2 machines to see over
+time in chart format you know what is it
+cpu utilization what it's what is its
+memory utilization for your lambda maybe
+you want to know what are the concurrent
+number of invocations or all the
+invocations in one day the count that is
+so you use cloudwatch to derive that
+kind of information another useful
+feature is logging so for many of these
+applications you're going to be emitting
+application logs in terms of what your
+application is doing for other services
+that are just kind of managed services
+that sit on their own often these
+services will integrate with cloudwatch
+to give you kind of administration level
+events whenever things are happening on
+the services if you're using that piece
+of infrastructure so you're going to be
+using cloudwatch quite a bit and in fact
+they just released a new feature
+recently called cloudwatch insights that
+lets you search over very very large
+volumes of cloudwatch data using kind of
+like a sql style language so it makes it
+very very convenient to find certain log
+lines if you're looking for them in just
+kind of a giant mess of log files now
+the other service that's important in
+terms of monitoring is one that's called
+cloudtrail and cloudtrail is a little
+bit different than cloudwatch cloudwatch
+helps you monitor the state of your
+applications in your aws account cloud
+trail is more in terms of kind of an
+audit trail of the operations that are
+being performed on your infrastructure
+here not only the operations that are
+being performed but who is performing
+those operations
+whether or not that's an application so
+like a lambda function calling a
+database or maybe it's a user that kind
+of went rogue and maybe they're deleting
+all your infrastructure cloudtrail is
+going to offer you different types of
+events that allow you to gain insight
+into who is accessing different services
+and what they are doing on those
+services so the types of events can
+either be at the
+kind of control or administration level
+those are just kind of when your
+infrastructure gets provisioned or
+deleted or modified in any way there's
+also data level
+events and the the kind of collection of
+events is called trails so the data
+level events give you a little bit more
+granular data so for something if you
+configured it on a dynamodb table it'll
+give you log information on every single
+request that comes to your table i don't
+advise it you're going to be chewing
+through a lot of bandwidth for
+basically log storage but you can enable
+that if there's a situation where you
+kind of need to know
+who is hitting this database
+and then the third one is kind of a
+proactive one it's called insights and
+insights you can configure it to
+automatically monitor your account and
+aws uses machine learning to monitor the
+cloudtrail events for any anomalies so
+very useful for kind of being proactive
+about security threats
+now one other service that i think we
+should mention at this point
+that is kind of similar to monitoring in
+that it applies to any of these
+different infrastructure components is a
+service called uh identity and access
+management which is often referred to as
+iam for short so iam is kind of a
+security management service for aws
+you can you create high-level entities
+such as users or roles and associated
+with these users are policies now these
+policies are important because by
+default a user will not have any kind of
+permissions to do anything on aws unless
+you define a im policy that gives that
+user to perform that action in other
+words aws security management uses a
+implicit deny operation in that you're
+denied access to everything unless
+someone says otherwise so that's what
+you do in iem you create these iem
+policies you attach these policies to
+users you can assign users to different
+groups that have a kind of a policy
+permission set predefined and applied to
+anyone in the group and you can also use
+it to create accounts that users can log
+in directly so a developer a can have
+their own account developer b can have
+their own so on and so forth so again
+identity management is definitely
+something to be very familiar with
+you're going to be using it pretty much
+i want to say every day if you're
+working with aws because you're always
+you know trying to get access to
+something if you're experimenting with a
+new service or feature you're going to
+need to give yourself access so get
+familiar with it you're going to want to
+know about it and if you haven't spent
+the time to learn it you're going to
+kind of stumble over a lot of ambiguous
+permission related errors and i do have
+a video on iem that you should
+definitely check out to learn about
+these concepts more in detail and so now
+i want to talk about two components here
+i want to talk about uh rapid
+development and then some infrastructure
+as code components as well so let me
+just erase some of this i realize i just
+made a mistake as i'm erasing it now
+this stuff was kind of positioned in the
+wrong way in the layer beneath it but i
+hope you forgive me
+so this first section here is for
+infrastructure as code now for those of
+you that are living under a rock for the
+past 10 years infrastructure is coded as
+the preferred way to create and manage
+your infrastructure no one really goes
+into the console anymore to create
+things and manage your infrastructure
+unless it's kind of your first time
+doing it and you're just experimenting
+it's much more preferred to write your
+infrastructure in a code format or
+configuration format so that it can be
+easily picked up and deployed to a new
+environment and cloudformation is one of
+the options that allows you to do that
+now cloudformation is a service that
+allows you to write json or yaml based
+kind of a configuration files and so you
+upload these files to cloudformation and
+cloudformation will be responsible for
+calling these other aws services to
+provision your infrastructure so for
+example you can write a a template file
+here that has a dynamodb table in it and
+maybe a lambda function in it and when
+you upload your your change set here
+into cloudformation cloudformation will
+go and create your lambda function it'll
+go and create your dynamodb table
+it's very very convenient it's pretty
+quick however it does have some
+downfalls and the specific one is that
+writing your your infrastructure as yaml
+or json kind of sucks
+and that's where cdk comes in it kind of
+fixes this problem cdk stands for cloud
+development kit and it is a method of
+writing your infrastructure as code that
+is a little bit more fluent for us
+developers it involves you writing
+actual code so you know you have access
+to loops primitive functions
+and what this allows you to do is be a
+little bit more expressive with your
+infrastructure definition files so that
+you can be a little bit more dynamic and
+structure your code in a much simpler
+way
+using functions using just general
+cloudformation yaml files it gets
+annoying quick you don't have access to
+things like autocomplete whereas with
+cdk you do and the cool thing about cdk
+especially is that it's very easy to use
+what are called higher level constructs
+and these constructs can contain an
+entire
+application specification so you can
+have a construct that's an entire
+serverless architecture that contains a
+lambda function contains a dynamodb
+table contains i don't know a load
+balancer with api gateway and a cognito
+user pool
+all you have to do is use that construct
+and it's just one line that you write in
+your cdk code
+now behind the scenes cdk does generate
+the code that you write into
+cloudformation and then cloudformation
+is the one that deploys that out into
+aws but it's just a much more preferred
+way in my opinion easier way to deploy
+your infrastructure out to the cloud now
+there are some other options that you
+can use for infrastructure as codes such
+as i believe terraform and i think the
+other one is called polumi or something
+like that you can also use those that
+integrate with aws as well but if you're
+looking to do everything native in aws
+you probably want to use cdk also learn
+cloud formation while you're at it as
+well now two services in the rapid
+development category that are of note
+are firstly aws amplify so aws amplify
+is kind of a tool kit style service that
+allows you to rapidly build and deploy
+entire applications here so where where
+amplify is different is that for a it's
+primarily a cli tool so you're going to
+be using the cli a lot and secondly it
+focuses more on the functionality and
+not necessarily on the infrastructure
+of what you're trying to provision so
+for example with amplify you can run a
+very simple command to add an api it's
+literally add api and behind the scenes
+amplify it'll deploy maybe a lambda
+function with an api gateway allows you
+to add things such as user
+authentication and authorization behind
+the scenes it'll give you a cognito user
+pool
+you can add things such as a relational
+database it'll give you an aurora
+probably serverless database that you
+can use
+so it's much more focused on the
+functionality and for a lot of people
+that's great amplify is a great choice
+because you know maybe they're coming
+from a different cloud provider you
+don't want to learn about all this
+different stuff maybe they're more
+overwhelmed than you and they haven't
+watched this video yet and they don't
+know about all these different aws
+services but amplify is a great
+abstraction for you but the one problem
+with it is that it's the abstraction so
+it's great when everything is working
+correctly but anytime something breaks
+or something isn't quite working as it
+should you're gonna need to dive into
+these independent services and if you're
+using amplify you probably don't know
+anything about these other aws services
+so that's going to be a pretty big
+challenge so if you want to stay within
+a well-defined box then amplify is great
+and if you want to venture out of that
+box you probably shouldn't use amplify
+and should just like write your own cdk
+code and understand these other aws
+services um before you get into them but
+apply is great for some of you that um
+maybe you just you don't care about aws
+services and you just want to focus on
+the functionality so that's where
+amplify is great now we have sam so sam
+stands for serverless application model
+and sam is great in terms of providing
+shorthands of uh common infrastructure
+setups that would typically be written
+in cloud formation there's sam templates
+that you can use that
+kind of similar to what those higher
+order constructs do in cdk similar idea
+with sam so it can kind of handle much
+of the complexity of the setup for you
+you'll need to find a couple
+specifications or a couple fields and
+the other stuff it gives an intelligent
+kind of default
+so sam is also great for local testing
+of your lambda functions so you can use
+sam to
+build and run your lambda functions
+locally before you deploy them into aws
+so that's another great reason to use it
+as well
+all right so let's talk about this kind
+of half of this diagram over here and so
+um i put this hypothetical use case here
+so search query submission i was
+thinking like maybe we're building an
+application here that's similar to
+google so you have someone that's
+submitting a request to our application
+layer here through our back end
+maybe someone is searching for i don't
+know aws on google someone's going to
+store that in a database somewhere right
+and then you know as a typical service
+oriented architecture you probably want
+to send a notification out to other
+microservices that hey someone search
+for this thing maybe someone else or
+some other microservice cares about it
+maybe an analytics service or some other
+type of service so what do we use for
+event coordination or pub sub or
+notifications of other services that
+something has changed in our application
+so there's a couple different services
+at play here so uh
+there's a little bit of a misalignment
+here but that's okay
+so the first one is what is called sns
+so simple notification service and sns
+is basically a pub sub service and it is
+the pub in the sub so it is responsible
+for publishing notifications to a topic
+and a topic can have many different
+subscribers
+so the idea is that kind of a domain
+model owner such as you know search
+query service or whatever
+whenever it's kind of puts an entry into
+its database it wants to notify other
+services that hey someone put something
+into my system you guys should check
+this out that system will use an sns
+topic that they publish to to notify
+these other microservices that something
+changed so it is the publisher and the
+subscribers can be many different types
+of infrastructure you can have other aws
+services that are your subscribers such
+as a lambda function you can have a http
+endpoint that exists on maybe an ec2
+instance or something like that
+you can also have a very common one
+which is an sqsq or a simple q service
+queue
+and so
+sqs is simple queue service and this
+service is effectively responsible for
+holding messages so that you can process
+them at a later time and so you define
+cues and queues can be connected to from
+many different types of
+compute infrastructure so you can
+connect your queue to a lambda function
+or an ec2 machine or an ecs task and
+those pieces of infrastructure will pull
+your queue for new messages and then
+perform some type of action when it
+finds new messages in the queue so
+typically people set up an sns to an sqs
+so the sns topic being the publisher and
+the sqsq being the subscriber and if
+you're confused at all between the
+difference of these two surfaces i do
+have a video on this that i discuss this
+at nauseam and i'll put that in the
+description so that you can check that
+out as well
+but basically if you want to tell other
+people about data or data changes use
+sns if you want to be notified of when
+something changes in someone else's data
+use sqs that's the basic gist of it now
+there is another service that's pretty
+similar to sns and it's one that's
+called eventbridge and eventbridge is
+very very similar in terms of what sns
+offers although it does offer some
+distinct benefits so first of all
+instead of sns topics eventbridge uses
+this concept of eventbuses and you can
+integrate your event bridge event bus
+with many different kind of application
+actions all across aws so for instance
+maybe
+you want to integrate your event bridge
+with whenever an ec2 machine gets
+terminated maybe that's some kind of
+operation that you're interested in or
+whenever a lambda function gets updated
+or whenever the configuration on your
+dynamo table gets changed you can
+integrate those events into eventbridge
+and then you can define rules that
+specify who to deliver these events to
+so similar to how sns
+has subscribers eventbridge also has
+subscribers and you define these rules
+and target groups of who to deliver
+these messages to depending on the type
+of event
+now where eventbridge really shines over
+something like sns is that it has two
+important features the first one is
+something that's called schema discovery
+so if you are using sns and you're
+publishing to your topic and someone is
+getting a message in your sqsq what does
+the schema of that message look like
+what does the format of the message look
+like does it have no is it a json is it
+a an xml file does it have you know foo
+as a key and bar as a value like is it
+an array like what's in there so
+eventbridge allows you to define these
+schema definitions to help subscribers
+get access to the models that are going
+to be delivered from the eventbridge
+event bus which is a very very nifty
+feature and also allows you to search
+through different schemas to maybe find
+the one that's necessary for your
+application another important feature is
+third-party integrations and this is
+something that's really cool with
+eventbridge so an example third-party
+integration that you can work with is
+something like shopify so shopify has
+native integration with eventbridge so
+what that means is that anytime someone
+places a order on your shopify
+e-commerce website that can be directly
+integrated into eventbridge and then you
+can have specific rules set up to
+deliver that
+notification to maybe a microservice
+over here or a backend service that
+cares about those updates or maybe you
+just want to deliver that to general
+object storage which can happen as well
+but eventbridge is great because it
+allows for these third-party
+integrations such as shopify pagerduty
+and many many others and that's not
+really natively offered in sns so that's
+where it kind of shines now another
+service that's in this kind of event and
+coordination department let me just
+erase this here so it looks pretty
+smooth
+is step functions and honestly out of
+all of these step functions are one of
+my favorite services offered in all of
+aws
+and what step functions allow you to do
+is to define kind of workflows um so
+it's more like um i want to draw it out
+but maybe i won't but you define like
+workflows and different steps that you
+have so you have a starting step and
+then next you want to do like x step and
+then y step you can have conditional
+logic in your step function workflows
+and so what this allows you to do is
+build things like you know a customer
+ordering workflow where the first step
+is to validate
+the details of the order the next step
+is to package that order in the
+warehouse the next step is to
+you know send out delivery notifications
+and send out a notification to this to
+the customer all of that can be modeled
+in a step function workflow and you can
+have kind of fail safe and conditional
+logic in that workflow so if anything
+fails then a different path or a
+different choice is taken and it offers
+direct integration with many other aws
+services so you can use a service like
+aws lambda to kind of glue different
+parts of the workflow together and this
+is going to be completely serverless so
+in summary step functions are kind of
+this orchestration service that allows
+you to define these very sophisticated
+and large workflows that may run through
+many many steps
+so after you've kind of
+done your event delegation here maybe
+you want to store copies of those events
+in object storage or maybe you want to
+kind of replicate whatever is in your
+dynamo or aurora table or rds table into
+just some cheap cost effective general
+object storage so what service would you
+use for that well the service you're
+going to be using is one that is one of
+the oldest in aws and that's called
+amazon s3
+stands for simple storage service and it
+is just your kitchen sink of data
+storage very cheap very scalable you can
+store like basically exobytes or
+petabytes of data in here just massive
+massive amounts at very very affordable
+rates and you can also move your data
+over time into cold storage to get even
+better price points however it can scale
+really well
+so when we were talking about like
+caching earlier when we were talking
+about cloudfront you would typically
+store your asset files in your s3
+buckets and then connect that to your
+cloudfront distribution so that it can
+be replicated to cloudfront and serve to
+all your customers around the world so
+s3 can be used to store basically any
+type of file images css video
+any type of media that you can think of
+you can store in s3 there are some
+pretty reasonable limits on file sizes
+so you have to check that out if you
+want to upload some massive files but s3
+is a super super important service
+you should definitely know about it if
+you're learning aws
+okay so now for analytical processing
+say we got our data into s3 now you know
+someone saved it into their database
+over here we dispatched an event then we
+stored it in s3 now we want to run some
+analytics on it so what infrastructure
+option should we use for that so i want
+to start with the bottom one here
+emr and emr is a large-scale distributed
+data processing system so it allows you
+to run many different frameworks
+including the most common ones so spark
+clusters hive
+presto you can even run it in a
+serverless mode now but emr is going to
+be the service where you're going to do
+just massive
+number crunching to perform some kind of
+analytics
+so the other option to use instead of
+emr is one that i'm a really big fan of
+which is amazon athena and athena is a
+completely serverless big data
+processing or analytic service so how it
+works is that you can keep your data
+stored in s3 you don't need to load it
+into anywhere as you may with emr but
+you keep your data stored in s3 athena
+will directly connect to your s3 data
+crawl your data automatically detect the
+schema of the data of whatever you have
+in your buckets and then create these
+kind of tables that you can query using
+sql and so whenever you dispatch a job
+to athena it uses aws infrastructure
+behind the scenes to prioritize the
+request so you can run massive massive
+queries on data that is already stored
+in s3 using amazon athena a really
+really powerful analytics service and
+just number crunching service that's a
+very viable option when compared to emr
+now our next step is the data warehouse
+so where do we actually want to store
+this data for things like you know
+business intelligence or any types of
+analytics that we may want to perform on
+it we don't want to store that in
+something like document db dynamo or any
+of these rds options over here because
+they're not really meant for that
+so the service that you'd want to use
+for that type of operation is amazon
+redshift and amazon redshift is a
+columnar style database that allows you
+to perform some very very large queries
+concurrently so it can support many many
+users at the same time it is a little
+bit expensive but they do offer a
+serverless mode i swear everything is
+going serverless these days like all of
+these services now have some kind of
+serverless variation but anyways they
+offer a kind of a provision mode where
+you can provision the nodes
+in a distributed way
+or there's a server list mode where it's
+kind of a pay-per-use type model
+however that's where you're going to be
+running your
+workloads for your kind of olap style
+queries that's going to happen in
+redshift and in fact there is kind of a
+connection you can do with redshift and
+s3 so say there's like no analytics that
+you want to do you can just deliver data
+to s3 and then set up an automatic load
+job to load that into redshift so that
+it can be available for this olap style
+querying
+so redshift is another great one for
+data engineers business intelligence
+users
+anyone that wants to interact with data
+at scale using sql and the next one here
+is dashboarding so dashboarding for that
+i would use quicksite so quicksite is a
+tool that is great for end users so you
+give users their independent logins they
+can access
+data whether it be in redshift or s3 or
+anything else they can create these kind
+of business facing dashboard so similar
+to what
+i think it's called a microsoft bi or
+power bi did for microsoft redshift kind
+of does for aws so that's what your end
+users can use to explore your data
+that's located in many of these
+different aws services
+and one final thing before i let you go
+is this network boundary here so so aws
+is pretty big on security so it does
+offer a service that allows you to
+isolate all of your resources into a
+specific isolated network and the
+service that allows you to do that is
+amazon vpc or virtual private cloud and
+this service allows you to create your
+own vpcs that are basically private
+networking spaces for your
+infrastructure to exist in so it's
+completely separate from all other aws
+users it's just your networking space
+and you can connect your vpcs to other
+vpcs so that if you want to talk to
+other services and maybe a different
+account
+you can open up your vpc so that your
+infrastructure is callable from the
+public internet you can have very very
+large vpcs that host many many different
+microservices here or service oriented
+architectures so there's a lot you can
+do with vpcs in terms of defining the
+setup and configuration in terms of the
+security so there's a lot you can do
+with vpcs in terms of setup to isolate
+your resources from any other system and
+also allows you to find some security
+rules to make sure that your
+infrastructure is protected from any
+outside actor so if you enjoyed this
+video i'm going to put links in the
+description section to what i think are
+pertinent videos on all of these
+different aws services and if you want
+to learn more check out other ones here
+on the right and thanks so much for
+watching i hope you learned a lot about
+aws services thanks so much and i'll see
+you next time

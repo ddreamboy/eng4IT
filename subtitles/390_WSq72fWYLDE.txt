@@ -1,0 +1,211 @@
+hi my name's Bert Richardson I have over
+10 years experience in software
+development and today I'm going to be
+covering what a software development
+methodology is and then seven of the
+most popular software development
+methodologies today if software already
+exists then is far easier to purchase it
+rather than paying for development team
+to crater unwritten software can turn
+what appears to be a simple task into a
+black hole of time and despair for
+everybody involved this means to reach a
+successful finished product we need a
+reciprocal feedback cycle inside the
+team and then between the development
+team and the customer to know if the
+project is on track by the word
+methodology we simply mean a high-level
+way of working their coordinates efforts
+for the project we can't test or deliver
+software before any code is written and
+no code can be written without knowing
+what we're building so we've got a
+sequence of actions that need to be
+performed there are lots of different
+ways of structure and work as a team or
+as a solo developer here I'm going to
+cover seven different methodologies at a
+high level and then in subsequent videos
+cover each one in more detail I've
+chosen these seven so that any other
+methodologies that you come across will
+simply be a variation of one of these
+seven before I cover the first one I'm
+going to share with you a fundamental
+building block of all good business
+practices and that is a basic feedback
+cycle
+first we plan the tasks do something and
+then review what we have done all
+methodologies are simply a variation on
+this some of you might recognize this as
+a methodology called continuous
+development or a simplified plan do
+check adjust cycle this is simply an
+overview video and I'm not covering all
+software methodologies just the ones I
+think should be covered to give you a
+good understanding and working knowledge
+and that can be applied today our first
+methodology is not working with one at
+all I like to call this methodology ad
+hoc or as one of my bosses used to say
+just get it done now this is an anti
+methodology it is sitting down and doing
+work without any formal structure which
+i think is a totally fine and
+that methodology for a small task or
+project companies typically use this
+methodology when discovering an
+integration bug after upgrading a
+production system it is the methodology
+of pure focus of any planning or
+organization excellent for a single
+individual focused on a single task the
+waterfall methodology is the traditional
+view on product development you start
+complete a series of tasks and then
+after a predictable amount of time the
+project is completed this methodology is
+best represented by a Gantt chart where
+each block flows into the next this is
+not a methodology we use in software
+development because it isn't flexible
+enough to handle the multitude of
+unknowns encountered during development
+or cater for all the project adjustments
+are made during development if you're
+working on a cookie-cutter project that
+doesn't include any feedback or testing
+then waterfall is fine but this isn't
+software development software
+development is full of problems and
+project adjustments that needs to be
+made to keep things going but somehow
+when teams discuss ways of working this
+methodology is accepted as a viable
+option in my opinion a lot of companies
+that believe they are using waterfall
+are actually using our next methodology
+the v-model is a well-structured
+methodology with good formal lines of
+feedback you start from top left corner
+and follow the v-shape down doing all of
+the planning steps at the bottom you
+code and then you continue the model to
+the right and up testing as you go each
+type of testing will now use the plan
+documentation test against if there's a
+problem discovered at any stage during
+the project or feedback is needed then
+you reverse direction away from user
+acceptance testing and project
+completion the W model is similar to the
+V model but each step has the Quality
+Assurance team as part of the process
+providing feedback writing additional
+documentation ready for the testing and
+validation stages I'm not going to say
+that the W model is better than the V
+model because that depends on your
+project I'm only going to cover two
+types of agile methodology the first is
+Kanban which is essentially a board
+where tickets move from a to-do column
+to a doing column and
+eventually to a dung column what I've
+presented here is an overly simplified
+version of Kanban but I'll be going into
+a lot more detail in a future video in
+this series Kanban is excellent for solo
+developers and large teams as it is
+effective at tracking work and allowing
+everyone to quickly see the current
+state of tasks and the overall project
+scrum is a second agile methodology I
+will cover and this is a diagram I
+created because I wasn't happy with any
+of the ones currently out there with
+scrum a team is selected to be part of a
+scrum this might be the whole
+development team just a few developers
+or one developer work the team is
+selected from a backlog placed into a
+sprint which is a set amount of time
+that the team has to complete the work
+this is typically 1 to 4 weeks each
+morning the team holds a standing
+meeting where each team member will say
+what they did yesterday or they're doing
+today and if they are having any
+problems that is blocking their progress
+at the end of the sprint they will do a
+release and a group retrospective
+meeting on the Sprint agile scrum is
+currently the most popular of all
+software development methodologies and I
+will go into why in another more
+in-depth video later in this series this
+is another diagram that I created
+because I wasn't happy with any of the
+ones out there extreme development is a
+methodology where only the customers
+current highest priority items chosen by
+the customer are worked on and releases
+are deployed to the customer weekly when
+a customer requirement is implemented
+only the most basic aspects of the
+requirement is implemented so that
+feedback can be given by the customer
+and the customer can receive something
+sooner before any coding is done unit
+tests for the feature are created
+encoding is always done by a pair of
+developers working together when they
+believe the work is complete the code
+passes through the project's unit tests
+and then user acceptance tests are
+performed only then is it released the
+idea of this way of working is that it
+is a highly responsive to customer
+requirements there is a set of values
+that users of extreme development should
+have like communication good feedback
+respect etc but these aren't enforced by
+the methodology structure
+I will go into these in more in depth in
+another specific video on extreme
+development later in this series so
+which is the best methodology that
+depends on the team and on the project
+at the moment agile scrum is the most
+popular but that doesn't mean that is
+the best for all projects my advice to
+you is they should pick one try it for a
+set amount of time and then review it
+that review should be finding ways of
+making the methodology produce better
+results for your project be leaner and
+more efficient do not add complexity
+without need often it is the customer or
+stakeholders requirements that chooses a
+methodology for us and my final bit of
+advice is to never allow a methodology
+to drive you away from what is right a
+methodology is there as a structure for
+work and cooperation not to prop up your
+poor discipline or to blame for problems
+that concludes my very brief overview of
+different software development
+methodologies I'm currently producing
+the rest of the series covering each
+methodology in detail plus one very
+useful bonus one at the end there'll be
+a direct link to those in the video
+description below or click the pop-up in
+the top right corner if you found this
+video useful hit the like button and if
+you watch more content like this hit
+subscribe

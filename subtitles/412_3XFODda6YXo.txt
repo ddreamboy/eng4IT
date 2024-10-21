@@ -1,0 +1,131 @@
+meet rob he runs an online shopping
+portal the portal started with a modest
+number of users but has recently been
+seeing a surge in the number of visitors
+on black friday and other holidays the
+portal saw so many visitors that the
+servers were unable to handle the
+traffic and crashed
+is there a way to improve performance
+without having to invest in a new server
+wondered rob
+a way to upscale or downscale capacity
+depending on the number of users
+visiting the website at any given point
+well there is amazon web services one of
+the leaders in the cloud computing
+market
+before we see how aws can solve rob's
+problem let's have a look at how aws
+reach the position it is at now
+aws was first introduced in 2002 as a
+means to provide tools and services to
+developers to incorporate features of
+amazon.com to their website
+in 2006 its first cloud services
+offering was introduced
+in 2016 aws surpassed its 10 billion
+revenue target
+and now aws offers more than 100 cloud
+services that span a wide range of
+domains thanks to this the aws cloud
+service platform is now used by more
+than 45 of the global market
+now let's talk about what is aws
+aws or amazon web service is a secure
+cloud computing platform that provides
+computing power database networking
+content storage and much more
+the platform also works with a
+pay-as-you-go pricing model which means
+you only pay for how much of the service
+is offered by aws you use
+some of the other advantages of aws are
+security aws provides a secure and
+durable platform that offers end-to-end
+privacy and security
+experience you can benefit from the
+infrastructure management practices born
+from amazon's years of experience
+flexible it allows users to select the
+os language database and other services
+easy to use users can host applications
+quickly and securely
+scalable depending on user requirements
+applications can be scaled up or down
+aws provides a wide range of services
+across various domains
+what if rob wanted to create an
+application for his online portal aws
+provides compute services that can
+support the app development process from
+start to finish
+from developing deploying running to
+scaling the application up or down based
+on the requirements
+the popular services include ec2 aws
+lambda amazon light cell and elastic
+bean stock for storing website data rob
+could use aws storage services that
+would enable him to store access govern
+and analyze data to ensure that costs
+are reduced agility is improved and
+innovation accelerated
+popular services within this domain
+include amazon s3 ebs s3 glacier and
+elastic file storage
+rob can also store the user data in a
+database with aw services which he can
+then optimize and manage
+popular services in this domain include
+amazon rds dynamodb and redshift
+if rob's businesses took off and he
+wanted to separate his cloud
+infrastructure or scale up his work
+requests and much more he would be able
+to do so with the networking services
+provided by aws
+some of the popular networking services
+include amazon vpc amazon route 53 and
+elastic load balancing
+other domains that aws provide services
+in are analytics blockchain containers
+machine learning internet of things and
+so on
+and there you go
+that's aws for you in a nutshell now
+before we're done let's have a look at a
+quiz
+which of these services are incorrectly
+matched one
+two
+three
+four
+we'll be pinning the question in the
+comment section comment below with your
+answer and stand a chance to win an
+amazon voucher
+several companies around the world have
+found great success with aws companies
+like netflix twitch linkedin facebook
+and bbc have taken advantage of the
+services offered by aws to improve their
+business efficiency
+and thanks to their widespread usage aws
+professionals are in high demand they're
+highly paid and earn up to more than 127
+000 per annum once you're aws certified
+you could be one of them too
+take your first step towards getting
+certified by clicking on the top right
+corner
+if you enjoyed this video a thumbs up
+would be really appreciated
+don't forget to subscribe to the simply
+learn channel and hit the bell icon to
+never miss an update on the latest
+trending technologies
+thank you for watching and stay tuned
+for more from simplylearn
+[Music]
+you

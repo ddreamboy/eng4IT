@@ -1,0 +1,4291 @@
+[Music]
+hello guys today we are going to do a
+lot of amazing things with respect to
+eda so
+so zomato
+data set
+exploratory data analysis right
+we are going to complete this today
+so before we start please make sure that
+you download the data set inside my data
+set i have so many things i'll just show
+you you'll be having files like country
+code dot xlx zomato dot csv
+file ball json file to json file three
+json file position file file json
+today the data set that we are going to
+use is jomato dataset uh i have found
+out this particular data set from kaggle
+so i put this
+entire link over here github link so you
+can download the data set from here also
+you can download it from the print
+comment
+so let's go first of all i'm just going
+to import
+some basic libraries
+import partners spd
+import numpy
+as
+np import matplotlib
+dot pi plot as plt
+and one more library that i am going to
+use is something called a c bond and
+finally we will be using matlab inline
+so that the images or any visualization
+gets displayed here itself i'll keep it
+restricted to all these things and
+understand the main thing the main thing
+is that whenever you are performing eda
+that is exploratory data analysis
+you really need to think about the data
+what the data is basically seeing or
+telling you right that is most important
+so whenever you have a specific data set
+even though if you don't have much
+domain knowledge
+some basic information definitely you'll
+be able to capture it so what we are
+going to do over here is that till now
+we have actually
+imported all the libraries now let's go
+ahead and first of all let's download
+the data set from here so here you can
+see that there is a data set called as
+zomato.csv
+countrycode.xlx and there are multiple
+json file
+now why this json file was given guys
+because this json file is in the form of
+this json format okay
+this format has been converted already
+into zomato.csv now how it has been com
+converted you really need to write a
+python script to convert this we will
+not see this right now but in the later
+stages i will also show you how we can
+convert this json file
+into
+zomato.csv that part we will do it in
+the later stages in the upcoming classes
+but today we have one xlxx file one csv
+file we'll try to combine this file also
+we'll try to see what all information
+you have in this specific file so let's
+start
+so first of all as usual i'll just write
+df my data set and i'll write
+pd dot read underscore csv and i will
+read the data set which is
+zomato.csv now when you are actually
+importing this zomato.csb the other
+thing that you need to see is over here
+is that if i just execute it like this
+so here i will be getting some errors it
+says that utf-8 codec can't decode byte
+0 xed in position 7 0 7 4 7 0 4
+whenever you get this kind of error
+always remember that you have to use
+some kind of encoding format now in this
+case what encoding you will be using if
+you probably go and see in read
+underscore csv and press shift tab here
+you will be able to see lot of options
+so one options i'll see over here
+encoding encoding somewhere it will be
+or you can see the parameters you can
+search the parameters over here with
+respect to encoding
+what you need to put over there you can
+play with three to four different values
+but understand you need to have utf and
+eight encoding so for this what i'm
+going to do i'm going to use an encoding
+and remember this encoding i did not
+understand i did not use directly in the
+first instance but i used after
+exploring some of the things over here
+with respect to the kind of error so
+encoding here i'm going to use latin
+dash one you have different different
+encodings again utf-8 encoding uh you
+can just check out the documentation
+over there so i'm just going to use
+latin one and then i'm going to
+basically say df.head now if you go and
+see over here these are all my data sets
+that are available over here
+it's a huge data set with respect to the
+number of columns
+but understand this is how we read the
+data set over here
+and with respect to this you can check
+it out all the features and all but now
+one
+thing that we have done is that we have
+imported all the data set over here in
+inside my df let's go to the next step
+now
+so this is my data set over here that is
+present now the next step what i'm
+actually going to do i'm just going to
+see what all columns i have inside my
+data set so now this is in the basic eda
+part so over here you have restaurant id
+restaurant name country code city
+address locality
+locality verbose longitude latitude
+questions average cost for two currency
+and many more features are actually
+present over here just go and search for
+pandas documentation
+anytime you have any kind of queries
+with respect to what encoding you have
+to write and all you can just directly
+search for it
+you can search from here when you search
+from here anyhow anywhere you will be
+able to see it why encoding is used why
+utf-8 is used from here you have to
+explore it over here you can see
+encoding as none right white is
+basically used
+just click on this try to understand
+that specific keyword now the next thing
+over here let's go ahead and let's see
+one more way of understanding about the
+data set is like df.info
+if you write df.info here you will be
+able to see
+what all columns are there
+whether this column is normal or null
+whether it is what is the data type of
+this here you can see in 64. in 64 is
+specifically for integer variables
+whenever you see objects in pandas in
+data frame object basically means
+strings it can it can also mean like it
+is maybe a categorical variable it may
+be a text variable it can be anything
+over here so here you can basically see
+all those things you also have float
+uh you have objects objects wherever
+objects is there just consider that it
+may be a categorical variable it may be
+an integer variable it may be a text
+data initially always you do this you
+try to find out what are the columns try
+to find out what are the
+important information about the columns
+with respect to the data type now coming
+to the next step now let's see what we
+can further do what what
+actual information we can actually come
+up with this there is also an inbuilt
+keyword which is called as describe
+so this is a basic inbuilt function
+which is called a describe which will
+actually help you to find out all the
+specific information now one key
+important information from this is that
+here you will be able to see that all
+the features that are basically taken
+inside this describe function right
+these are only integer features you will
+not be able to find out any categorical
+features any text features any object
+features over there so here definitely
+see with respect to any feature that you
+see restaurant id if i go and see
+restaurant id it is in 64. if i go and
+see country code it is basically uh int
+64. if i go ahead with longitude it is
+always float or in 64c over here
+longitude latitude float64 so all these
+values that you are actually able to see
+over here this is completely based on
+your
+uh integer variables because whatever
+thing you are doing like count mean
+standard deviation mean you have to
+basically find it out in the integer and
+numerical variable now i'll just give
+you a basic information in data analysis
+the first thing that i would like to
+find out is that we'll try to find out
+missing values
+first of all always it is very much
+important in our data set do we have
+missing values the second thing that we
+may probably do
+uh check
+explore
+about the numerical variables
+third i would like to definitely explore
+about
+categorical variables these are some
+basic things because i need to know that
+how many categories are there how many
+numerical variables are there the fourth
+major thing that we probably do is that
+finding relationship between features
+let's go ahead and try to find out what
+are the missing values in order to find
+out the missing values you can basically
+write df dot
+is null
+dot sum
+so if i go and search over here you will
+be able to see that with respect to
+every feature it is just saying that how
+many features are basically having null
+value here you can see that 0 0 is there
+0 is there 0 is there
+what about duplicates i'll talk about
+duplicates also so here you can see in
+city 0 is there address 0 is there
+locality 0 is there locality verbose
+zero is their longitude latitude zero is
+there but in cosines you can see that
+there are nine missing values remaining
+all you have zero missing values so here
+in cosines you can see that there are
+nine missing values if you want to do
+anything with respect to the missing
+values you basically have to work on
+this specific feature now can i find out
+any relationship with respect to cosines
+with any other
+target variables or any other
+independent features okay that we will
+try to do but right now you have got
+this specific information that that many
+number of missing values are there now
+this is one way in another way i will
+just write a simple code which will
+actually tell me all the informations
+all the features that has missing values
+over here so what i can basically do
+i'll say that
+features
+for
+features
+so i'll write df.columns
+i want to check which all variables has
+missing values so i'm saying that for
+every features in df.column
+go and check if df of columns
+df of columns which is represented by
+feature
+dot is null
+dot sum
+is greater than one
+so this is basically a list
+comprehension so here what i'm saying is
+that features for features
+in df.columns that basically means we
+are using this temporary variable called
+as features which will iterate through
+df.columns and then i will say that if
+that specific feature is null
+or dot sum is greater than 1
+i should not write greater than 1 but
+instead i can write greater than 0 also
+so if i go and execute it here
+you can see that i am having cosines so
+definitely i am able to get what is the
+specific thing with respect to this that
+i am able to see the null value now
+let's go to the next step with respect
+to
+is uh with respect to heat map can we
+plot something so for heat map i will
+basically be using snh dot heat map and
+here i'll basically put the condition
+which says that df dot is null
+and here i will say that in y
+because my second parameter is white
+tick labels if i go and press shift tab
+over here always try to see this feature
+and with respect to this particular
+feature whatever i am actually using x
+stick label is there why tick label is
+there right now i don't want to show
+much things in y so i will just keep it
+as false
+because i am focusing only on df with
+respect to that then i can also use c
+bar it is also another feature over
+there you can understand by just seeing
+the documentation what all things it can
+do
+and then i will use a c map
+and inside this cmap i can use any one
+i'll basically search for it over here
+you can see
+here more options is not visible you can
+go to the c bond documentation page and
+basically take out that specific
+information so here i'm going to use a
+cmap which is called as varidis
+so here obviously i'm not able to see
+that nine records because it may be
+somewhere
+probably i won't be able to see that
+probably in this specific thing i should
+have that right
+let's see
+sum sum cosines has 9 okay the total
+number of let's say total number of
+df
+dot
+they are around nine five five one rows
+so because of that it is not getting
+visible over here
+very small number of nand values so that
+is the reason we cannot see it but if
+there are many many you can definitely
+check it out so we have we have
+understood about the missing values and
+we have seen that now i have already
+told you that there is another data set
+which is called as country code now
+let's try to see that what this data set
+basically have so i'm going to write df
+dot underscore country and i'm going to
+say pd.read underscore csv
+and i'm going to use
+and then i'm going to basically write
+df.country dot head
+it is giving me an error let's see what
+is the error
+okay here also some problems with
+respect to invalid continuation byte i
+cannot use read underscore csv i have to
+use read underscore excel because it is
+an excel file otherwise again you have
+to use that same encoding things to make
+it work how to deal with missing values
+uh that i will try to show you in
+feature engineering so here you have
+this one country code country code xls
+so what you have over here see
+country code country two features if i
+go and probably see my df dot columns do
+we have country code over here here also
+country code are there can we combine
+these two data frames so what we will do
+in order to combine we will be using
+pd.merge
+so merge is a function which will
+actually help us to combine
+in the left i will give my another data
+set in the right i can give another data
+set
+so here i'll give df and here i'll give
+df
+df underscore country but let's see
+another feature
+so there will be one feature which will
+basically say on
+this on basically says that on which
+feature you are basically going to
+combine that two tables so here i'm just
+going to say on is equal to
+i'm going to copy this country code so
+here i've come copied this country code
+and then it'll basically left as how
+and here there is also one more keyword
+which is called as how
+this how will basically specify whether
+you have to focus on
+left table or right table so here
+probably somewhere you will be able to
+see this is how whether you want a left
+join the right join or inner join but
+right now i want to really focus on my
+left hand side of table which is df
+because this has the entire data set in
+the right hand side i just have one
+additional column that is country name
+so in order to combine it what i'm
+actually going to do i'm just going to
+focus on left
+so here is my left and once you see this
+you will be able to see that i will be
+able to get all the records
+and somewhere you'll also be able to see
+country see in the last thing country is
+getting added i will just save this in
+my final data frame which is called as
+final underscore df so this is my final
+underscore df and now if you go and
+probably see final underscore df dot
+head
+and if you check the first two records
+you will be able to find out everything
+so finally final underscore df is my
+entire data set now let's go ahead
+inside the data set and try to explore
+what all things we have there is also
+another way to check data types
+if you want to check data types you just
+have to write something like this
+final underscore df dot d types so there
+is also d types which will actually help
+you to just get the data types
+information
+so just use dot d types and there you
+will be able to see the entire data type
+this on is basically used to match on
+which column you are basically going to
+combine just like how you do left join
+right join
+on on a specific column if you if you
+have seen my sequel of my videos i have
+already uploaded let's go to the next
+step now
+let's try to do something amazing and
+now let's try to explore something from
+the data now understand one thing is
+that
+if i go and see this data there are
+features like
+okay let's let's open this let's open
+this final underscore
+df dot columns
+here you'll be able to see there are
+features like country code city address
+locality locality verbs longitude
+latitude cuisines average cost for two
+currency this this this are there let's
+pick up something okay let's pick up
+probably let's see that i i just want to
+find out something okay and mainly
+understand whatever things i will do
+right now i will make sure that i'll
+write observations for those so what i'm
+actually going to do over here is that
+let's say that i'm going to use
+something like this final
+underscore df
+dot
+country
+dot
+value underscore count what i'm actually
+doing over here i'm just trying to find
+out how many different countries are
+there and with respect to this
+particular countries so in this records
+right with respect to a specific
+countries how many records are there so
+in india you will be able to see 8652
+records
+in united states you'll be able to see
+434 united kingdom 80 60 60 60 60. so
+from this what kind of observation do
+you feel that you can come up with
+can you say that zomato is mostly
+available in india itself obviously in
+usa they just have a website
+which they will recommend some kind of
+restaurants
+but
+just understand one thing over here is
+that in india the main base of zomato is
+there so maximum number of transactions
+that may probably be happening is in
+india right i hope everybody is able to
+understand right so from this this
+information you are able to get
+now if i write dot index
+now with respect to the dot index you'll
+be able to see i'm able to get all the
+countries name with respect to that
+specific records okay
+so let me just save this probably in a
+variable which is like country names
+i'll tell you why i'm doing it
+everything will make understand
+completely after this i'm going to plot
+some pie chart i'm going to plot some
+chart now similarly if i use the same
+thing
+and if i execute it
+with dot index you will be able to see
+that i'm getting this country names but
+with dot value counts i will also be
+able to get
+dot value counts
+i'll be able to get
+sorry countries dot sorry value count
+start valuable
+dot values
+let's see
+dot v a l values okay so with respect to
+dot values i'm actually getting all the
+number of records for that particular
+country name now this two i have the
+reason why i'm doing this here is that
+because i'm going to create some pie
+chart
+now how do we create a flight chart so
+you use plot.pi
+and
+with respect to this
+you use plot.pi
+and with respect to this you can
+actually put out all your variables so
+i'm going to press shift tab
+i need to have my x variable
+if i am actually putting plot uh pi pie
+chart over here i definitely have to use
+this
+now over here in the x value i will try
+to use my names or values whatever
+things you want let's say that i want to
+use my values so here i will store this
+as my country
+value so i'm going to put this entirely
+over here in the x axis because i want
+to see in the pie chart
+which country has the maximum
+transactions or maximum
+online orders or maximum kind of orders
+over here so i'm going to use this as my
+x axis so this is my x axis in plot.pi
+so here if you expand it here you will
+be able to see it and then you have
+labels this is important okay labels is
+basically to give the labels on top of
+it so i'm just going to use labels is
+equal to i'm going to assign this value
+to something like country name okay
+country name so these two things are
+there now if i execute it here you will
+be able to see that i'm getting a plot
+now this plot looks really bad because
+obviously the percentage of the
+information spread towards the different
+different countries is very less so it
+is like jumbled up complete so what i am
+going to do is that i am just going to
+say
+which are the top five countries
+top five countries or top three
+countries the top three countries that
+uses zomato that is based on your
+transaction right so what i'm going to
+do here i'm just going to use colon 3
+here also i'm going to use colon 3
+colon 3.
+so that basically says from entire all
+the values over here i'm just going to
+take the top three values at top three
+countries and i'm going to just display
+now it looks good now which is the top
+three countries that is basically using
+india united states and united kingdom
+right so i hope you are able to
+understand over here with respect to the
+pie chart like how is my data
+distributed and over here definitely
+with respect to zomatos no matter the
+base companies in india so obviously you
+can come to a conclusion that maximum
+number of transactions will happen in
+india now one more thing that i probably
+want to add is something called as
+percentage because i need to see some
+percentage also right that would be
+pretty much amazing right
+so what i'm actually going to do over
+here there will be a parameter which is
+called as percentage also and that
+parameter is something called auto
+percentage so i will use this auto
+percentage
+and i'm going to use one
+property
+if i want to see one property over here
+what will i assign to this you can
+assign one format and that format i can
+basically write something like this this
+basically says that after this after the
+decimal two values will be mentioned
+when it is getting converted into
+percentage so i'm just going to remove
+this double quotes
+and this will definitely work then play
+with it if i write if i remove this two
+what will happen if i remove this
+if i remove f what will happen just try
+to play with it now if i execute it here
+you can see now
+94.39 percentage
+is basically the orders are from india
+4.73 transaction is from united states
+0.87 is from
+united kingdom so here you need to write
+your
+observation now tell me suggest me what
+observation should i write over here
+from this diagram what kind of
+observation that you can see you just
+need to add this particular property
+to get the percentage values
+tell me what is the percent observation
+that you will write
+zomato
+maximum
+records
+or transactions
+are from
+india
+okay
+and then
+after that
+usa
+and then united kingdoms
+you have to write your observation in
+your own words here i have just written
+something
+but just try to write so here obser
+zomata maximum records the transaction
+are from india after that usa and then
+united states
+united kingdom sorry so this is my first
+observation that i have been able to
+take from this pie chart
+major business is happening in india you
+can say and all a lot of things can come
+okay everybody is clear with this i hope
+it's very simple till here okay
+now
+let's go with respect to the next one
+that is numerical variables
+how do we identify how many numerical
+variables are there how many numerical
+variables are forget about numerical
+variable let's do some exact
+relationship
+numerical variables we can check it
+check it in later stages
+but i want to really do more observation
+things more relationships things so that
+i will be able to see something now if i
+go and write final underscore df dot
+columns
+if i execute this here you can see some
+amazing features which is called as
+aggregating rating because i want to
+also see with respect to the rating from
+which country more rating is actually
+coming and i want to see this data which
+is called as rating color rating text
+and all okay so what i'm actually going
+to do
+i'll just write a small query
+final underscore df dot
+group by i am going to use a group by
+operation
+and with respect to a group by operation
+here i am going to use features
+which is called as aggregate rating
+aggregate rating and then i will also
+use the rating color
+see this everybody rating color i'm
+going very slowly guys very very slowly
+i think you can write it down i am
+writing each and every line of code
+rating color
+and then i'm also going to use rating
+text
+rating test so i'm basically going to uh
+group by this three main features
+and after this i'm also going to do one
+thing so if i group by this
+and probably execute
+i'll be getting an error let's see what
+is the error rating text so it should be
+rating small t
+so if i execute here you can see that it
+is now a data frame group by object
+now if i write dot size
+so if you if i execute this dot size
+here you will be able to see all the
+values like white
+not rated this this this this are there
+and similarly good good good very good
+see over here one thing you can see that
+when the rating color is white that
+basically means your aggregate rating is
+0.0
+if your rating is red then it is
+basically showing 1.8
+1.9 is also red 2.0 is also red 2.1 is
+also red like this 2.4 is also red so
+all these are red red basically means it
+is poor it is poor so this ratings are
+poor with respect to this aggregate
+rating you can see that it is poor if i
+go with respect to the next one which is
+in orange color here you can see that
+these are my all average ratings from
+2.5 to 3.4 then you have from 3.5 to 3.9
+that is another rating over here here
+you can also see that these are good
+right so it is displayed in yellow color
+or the text is written in yellow color
+that like the rating colors are there
+and then from 4.0 to 4.9 we have very
+good and excellent so this information i
+know i have actually able to find it out
+so i'll also can write my uh
+i'll try to write my own observation
+over here now what i'm actually going to
+do over here is that after i do this
+i'll convert this into data frame now in
+order to convert this into data frame
+what i will do is that i will just write
+reset underscore index
+and this is an invalid error the reason
+it is an invalid error because i have to
+continue over here
+reset underscore index and then i'm
+basically going to just say that rename
+or if i just execute this let's see what
+i'll get so here you can get see that
+i'm getting this particular things and
+this is my zero value since i have done
+group by
+with respect to 0.0 ratings i have 2148
+records then with respect to 1.8 i have
+one record 1.92 records 2.07 records
+over here 0 is coming so instead of this
+0 i'll try to rename it with different
+column so here i'm just going to use
+after reset index dot rename
+and here i'm going to basically use
+columns
+is equal to
+and i'm going to name it to 0 colon
+let's say i'm using rating count
+now let's do one thing
+now see what i've done after doing reset
+index i'm using rename function
+and i'm saying wherever the columns is 0
+change it to rating count
+so once i execute this
+you can see that i'm getting one error
+because i have not closed it i will
+close it now
+so here i've closed it and here
+with this
+and now here you can see that i'm
+actually able to see this everybody you
+just write down this code i know many
+people will get stuck over here
+now we we'll do multiple things with
+respect to this so what are the
+important information that i'm actually
+able to get from here
+are they correlated we'll try to find
+out don't worry right now i've still not
+gone into correlation those are some
+inbuilt directly you're using inbuilt i
+don't want to go into inbuilt right now
+now over here main features everybody
+has written this final underscore df dot
+group by aggregate rating rating color
+rating text dot size dot reset index dot
+rename
+columns you are renaming from 0 to
+rating count
+so here you can see that aggregate
+rating is there rating color is there
+rating text is there rating count is
+there so all these informations you have
+with yourself right all these amazing
+information you have over here
+now let's go to the next step
+now what i'm actually going to do over
+here is that i have my rating count
+information
+reset index basically means it will just
+reset this index
+this index
+by default whatever index is coming you
+have to reset that
+so i hope everybody has done this
+now i will just save this in a variable
+this variable will play a very important
+role guys now
+so i'm giving you another one minute
+please write it down so ratings is equal
+to this one
+ef
+final underscore
+df dot
+guys please write it down
+if anybody is not write it written down
+then again i am going to share it to you
+here
+please write them down this particular
+code because it will be very much
+important
+now i have all these things if you go
+and see
+ratings
+so here you have all the values average
+rating rating color rating text and
+writing now let's go ahead let's go
+ahead and let's plot some amazing
+beautiful diagrams now i want to really
+find out
+this all relationship with respect to
+different different countries
+with respect to different different
+problem statements with respect to this
+how see how as a data analyst data
+scientist you have to think okay this is
+my data set okay probably what what type
+of visualization i can draw from this
+because i want to do some kind of edn
+okay what what kind of things i can do
+about this just by seeing the data i can
+definitely come up with one conclusion
+is that
+around 2148 ratings have zero rating
+maximum number of people have actually
+given zero ratings that basically means
+they have not rated
+the app or the entire zomato app itself
+right so here what we are focusing on we
+are trying to understand okay maximum
+number of ratings zero basically means
+person has not given any ratings right
+so here you can see rating text is not
+rated right people who are giving
+ratings you can see poor average good
+along with that colors are also given so
+can we plot this in an amazing way so
+that we can understand in a visualized
+way also so let's go ahead
+from this i can come up with conclusions
+again i'll write conclusions
+conclusions is very much important
+observations i can also say observation
+so this is my observation from this data
+set
+the first observation is that
+the first observation is that
+whenever the rating is from
+4
+to 4.9
+or let's say from 4.9 to 4 sorry 4.5 to
+4.9 so here i'm going to write the
+observation when rating
+is between
+4.5 to 4.9
+this indicates what does it indicate it
+indicates that it is excellent
+probably the foot that was delivered was
+basically excellent second thing that we
+can come up with this observation is
+that
+here you can see that from
+from
+3.5 to 3.9
+when the rating
+when
+when ratings
+are between
+3.5 to 3.9
+here you can basically say that
+it is very good
+i hope 3.9 only right
+no 4.0
+to 4.5 extremely sorry i missed that
+4.0 to
+4.4
+the ratings are very good the third
+thing that i can come up with is that if
+the rating is between
+3.5
+to
+3.9
+here the rating is
+good
+so this is my observation because i can
+definitely see from the data right and
+remaining all please go ahead and write
+it down okay
+so another observation from 2.5 to 2.9
+it is average
+so i'm just going to come copy this
+2.5 to 3.0 or 2.9
+wait wait wait wait average 3.0 to 3.4
+is average so 3.0 to
+3.4 is average
+so this is my next observation and fifth
+i will go ahead and write
+when the rating
+[Music]
+6 i'm going to write when the rating
+when the rating is between
+2.5
+to 2.9
+and it is 2.0
+to 2.4
+right so 2.9 how much it is average
+again this is also average
+uh 2.0 to 2.4 is poor
+right
+so these are some of my observation just
+complete down all the observations that
+you can find out from this and one more
+thing that you can see that zero rating
+has been given by many of the people
+right so these are all my observations
+with respect to this but if i am writing
+observation it is better that we also
+draw some kind of diagrams now here i'm
+going to basically draw a diagram so
+this is my ratings so here i'm going to
+use aggregate rating let's say that this
+is my writing dot head
+so here i have aggregate hitting rating
+color rating text rating count so i'm
+going to use now c bond bar plot let's
+see can we visualize with the help of
+bar plot something in this so here i'm
+basically going to use
+uh in bar plot always understand what
+all features you have so here you have x
+y we data order we order everything is
+there but what i am going to do i am
+just going to do a simple bar plot
+so here in the x axis i am going to
+basically use
+aggregate rating
+so i'm going to use aggregate rating
+in the y i'm basically going to use
+rating count
+let's say that i'm going to see the
+relationship between
+aggregating rating aggregate aggregate
+rating and rating count see this is my
+aggregate rating and this is my rating
+count i want to basically draw a bar
+plot and basically check how the graphs
+look like okay so the third parameter
+here i am going to basically use data is
+equal to ratings so once i write this
+and execute it here you can basically
+check out how beautiful it looks now the
+diagram looks smaller so what i'm
+actually going to do i'm just going to
+put one
+simple settings to increase the diagram
+so that you'll be able to see it in a
+better way okay and that settings is
+basically there in the matplotlib so i'm
+going to use something like this
+and there is another setting which is
+called as
+matplotlib dot rc params figure dot
+figure size here you can give with
+respect to width and height i am now
+giving 12 6.
+so here
+matplotlib okay import matplotlib i'm
+just going to write it down
+so now here you can see the diagram
+looks quite bigger
+now if i probably go and execute the
+heat map over here again
+let's see whether it will change or not
+so now you can see this values right the
+missing values once i made the diagram
+little bit bigger
+you can see this i've done it now what
+is this missing code that we have missed
+with respect to increasing the figure
+size just write matplotlib dot rc parent
+so with respect to any parameter that
+you want to change you can basically use
+this here i have set it to 12 comma 6
+now once you see this diagram from this
+diagram you can definitely find out a
+lot of information this diagram looks
+super cool
+zero rating is more than 2000 over here
+then you can see 2.2 2.3 2.9
+complete it looks like a gaussian curve
+right
+whenever you have a gaussian curve you
+get a good sense of feeling
+yes
+now let's do one thing
+over here you can see that rating color
+is also there so it is always a good way
+that we should also color this aggregate
+rating with the help of colors that is
+given over here
+so this is the code everybody write it
+down
+x aggregate ratings y rating count
+now as i said okay i have this coloring
+text rating color i have this white red
+and all should we use this colors over
+here also and probably try to get in the
+form of colors and then try to see it so
+that also will try to do it okay so to
+get the colors uh what i'm actually
+going to do i'm just going to copy the
+same thing entirely there is one more
+parameter which is called as hui
+so if i write hui
+is equal to
+rating color
+if i write this
+and execute it
+you will be able to see
+c o h
+orange color green color red color and
+all but understand whatever color is
+that this is not matching right
+white looks like blue so this is
+wherever you can see blue right it is
+basically showing you zero rating but
+according to this white red why this
+zero should have white color right
+so what i'm actually going to do over
+here is that we have to map the colors
+also now how to map the colors we will
+try to see so mapping the colors let's
+see over here so mapping i'm going to
+basically use palette
+and inside this palette i'm going to
+basically use different different colors
+so the first color that i want to show
+over here is something called as white
+the second color that i want to show is
+red
+the third color that i want to show is
+orange
+it should be in the list okay the fourth
+color that i want to show in in yellow
+the fifth color that i want to show is
+in green
+the sixth color also i want to show it
+in green so here is what i have written
+in palette this palette is a feature
+that is present or
+is an attribute that is present in bar
+plot where you can give your own colors
+as it is required based on your
+requirement so once i execute this now
+let's see some error is there has no
+okay pellet spelling is wrong i guess it
+should be tte
+p a l e t t e palette
+so once i execute this
+and let's see now
+so now you can see that i'm getting the
+perfect color
+right white is white then red
+then orange then this then this then
+this now from this also
+what kind of observation you can
+basically get
+right what kind of observation
+maximum number see i'll again write
+observation first of all you write down
+the code everybody
+you'll be able to see that i'm getting
+the colors but just go ahead and write
+down the code and quickly see that what
+type of graphs we are able to get over
+here
+white is invisible don't worry it's fine
+you want to make it in different color
+then make it instead of white use it
+blue
+now here you have this right
+now from this what kind of observations
+we can actually
+get
+so observations i'll write it on over
+here again
+observation
+first observation that i would like to
+make
+not rated basically means this blue
+color
+count is very high
+then
+the second thing is that
+now
+second observation that you can see that
+maximum number of ratings
+are between
+2.5
+to 3.4
+maximum number of ratings are between
+this
+so definitely these two observations you
+can basically find it out
+this two observation you can definitely
+find it out clear everybody these two
+observations we can basically fight it
+off now just imagine that if you have
+some ratings as missing then what do you
+do
+suppose let's say that a person has
+rated but you have some missing values
+now
+can't you think that now probably you
+can use the values between 2.5 to 3.4 as
+an average
+right so this is what
+type of observations you can basically
+have this is what because maximum number
+of observations or ratings are between
+2.5 to 3.5 so you will try to find out
+the average between them and then try to
+get it
+so i hope you are having fun guys
+clearly able to understand
+now the next step
+we will also see right now we have just
+seen with respect to aggregate rating
+and rating count i probably also want to
+use with respect to just the coloring
+part this rating color i want to plot
+this as a count plot so count plot let's
+plot it so i'm going to use snh dot
+count plot
+and here i'm basically going to use x is
+equal to
+rating
+color okay
+in count plot
+we basically use this for plotting with
+respect to categorical variables so here
+also you basically give an x and y value
+and we value so here i'm giving x value
+and then i'm also going to give my data
+which is my ratings
+and then again i can give my palette
+over here with the same list
+that i have actually defined over here
+palette the color should be same right
+so that is the reason i'm just going to
+copy this entirely
+and paste it over here
+so once i execute it here you will be
+able to see
+i'm getting
+every time i write the wrong spelling so
+here you can see
+white
+red orange yellow green
+dark green
+this is with not respect to count guys
+don't worry okay this y y axis here you
+are able to see over here but understand
+in rating what you have
+what you have you basically have
+something like this right so white is
+only one record
+red is so many records right this is my
+red they are around five records then
+orange they are around seven to eight
+records
+right yellow there are on this many
+records green they are this many records
+don't consider that this count is
+basically your rating count no this is
+the frequency how frequently it is
+basically present in this uh data frame
+now let's go ahead and do some more
+in-depth
+in-depth analysis in depth now you will
+get more confused now i'll give you a
+question please try it out from your
+side okay
+find
+the countries
+that has given
+find the countries or country name a
+country's country countries name
+that has given
+zero rating
+now this is my one of my query for you
+all
+try to do it and i'll wait
+i'll wait for you all
+let's let's try to do something guys you
+should be getting some queries at least
+very important interview question as a
+data analyst find the country name
+country's name that is that has given
+zero ratings
+please do it everybody
+i'll be waiting for you
+that has given zero rating how do you do
+it
+you will definitely get more confused
+that is where a data analyst will come
+find the country's names that has been
+given
+that has given zero rating
+i'll also try till then
+final underscore df dot columns
+so
+i need to basically get
+all the country name so country name is
+obviously there
+okay and
+those who are given zero ratings if zero
+rating is there
+probably i can identify with zero
+ratings i can identify with
+aggregate rating
+or
+i can also identify with rating color
+okay so two parameters i can definitely
+find out with
+so what i'm going to do over here is
+that i'm just going to say rating color
+let's use rating color
+rating color
+if i say if the rating color is equal to
+white
+white is capital or small
+white is capital
+so if i execute this here i'll be
+getting like this false false true true
+so
+i'll just write final underscore df
+so here so many information i'm getting
+now
+city city so many records are there
+but i don't think so this is right
+because here i may see different rating
+also
+so here what i will do i'll do group by
+and here i will specify my country
+so if i execute this this is my data
+frame so here again i'll be doing
+dot size
+dot reset index
+if i execute this now i'm able to get it
+brazil five different zero ratings is
+given india two one three one three nine
+zero ratings has been given
+united kingdom one united states three
+so again what is observations that you
+can basically say
+so here write down the observations
+again
+now here observations are what
+right
+just the say observation
+maximum
+number of
+zero
+ratings are from
+indian customers right
+no no it's not about imbalanced data set
+in this case
+because if you see the data set right
+over here two one three nine
+zero ratings see out of the total
+ratings how much is the total rating
+that we saw
+two one four eight
+right and from them if you try to see
+two one three nine
+it's a huge number
+this is not getting used for models guys
+because we don't know what we need to
+predict right now we are just analyzing
+the data taking out information from
+that data
+okay next question next question to you
+find out
+which currency
+which currency
+is used by which country
+so this is my next question to you all
+if you probably go and see final
+underscore df.head
+you will be able to see this specific
+thing
+so sorry dot columns i will just write
+it as dot columns
+so here you have um
+let's say where it is currency is there
+okay
+currency is there so
+just try to do this
+find out which currency is used by which
+country if you want all the list of
+records what you'll do so
+what i'm actually going to do now
+i'm going to use final underscore df
+there are two
+i i want basically country with respect
+to currency so what i'm actually going
+to write over here i'm going to
+basically say country
+comma currency
+and then i'm going to basically use
+group by again
+and group by will again be based on
+these two groups
+that is country and currency
+dot
+size dot reset
+reset index
+reset index is used in many ways
+so here you can see i'm actually getting
+australia
+dollar
+brazil brazilian rail canada dollars
+indian indian rupees
+um indonesia rupay new zealand and all
+so two things one is group by dot size
+dot reset index that's it
+you don't have to do group by by
+everything you have to just focus on two
+records two features
+that is this and that
+now here one more feature is there see
+has online delivery or not
+so my next question to you all
+for those people who have done this
+the next question is that
+which
+countries
+do have
+online deliveries
+online deliveries option
+so india has two four two three uae has
+two eight amazing
+that's nice
+that basically means that the online
+delivery is only available in india and
+us but let's say that i want to find out
+uh all the countries that has or has not
+okay i will just use this code
+so reset index that's it so what he has
+done is that
+he's basically used uh
+two features has online delivery country
+group by has online delivery country
+and size dot reset index so here you can
+basically see that australia it does not
+have any brazil no online delivery
+canada no online delivery
+why india
+how come india is again coming over here
+why india is getting repeated again
+okay in india also probably in some of
+the reasons online delivery may not be
+there perfect
+in india in some of the regions you will
+not be finding online zomato delivery
+available okay so because of that some
+records you will not be able to see so
+but here you can see main two countries
+that has online delivery is india and
+uae
+so obviously make some observation from
+this and try to find out
+so here i'm basically going to basically
+say observations
+again
+what is my observations over here
+i will basically say
+number one
+my first observation is that
+online deliveries
+are available in
+india and
+you a
+[Music]
+done
+dhamal
+next question
+now the next type that i am actually
+focusing on is that i'll give you one
+question like how we did with respect to
+the countries
+how we did with respect to the country
+similarly try to find out or create a
+pie chart
+for cities distribution
+i hope everybody is understanding the
+question
+so here if i write final underscore
+df.columns
+you will be able to see there is also a
+city
+now i want to create a pie chart
+with respect to this specific cities
+again the same thing like how we did it
+for country so i'll go up
+i'll go up
+and i'll copy this two things let's see
+so here is one
+here instead of writing country i will
+write it as city
+then this is my values this is my index
+so this is my countries cities that from
+where the order has happened and i'll
+try to draw a plot
+pie plot okay so here i'll say plt dot
+pi
+and here i'm going to give two things
+one is with respect to
+values and then with respect to index
+final underscore df country.values i
+hope this works
+fine x x and y
+i have to basically given this as labels
+okay
+labels
+or let me make it little bit easy for
+you
+let it make easy for you okay city
+values
+i'm going to save it in this city labels
+i'm going to save it in this
+and this will basically be using index
+so i've executed this so this will go
+with city values
+and this entirely will go with respect
+to
+city labels so i let's say that i want
+to
+get the top five cities
+for cities which issue for top five city
+distribution
+top five city distribution so here i
+will just use
+colon five
+and here also i'll be using colon try
+so once i execute this here you will be
+able to see this
+the first
+oh it's coming as india why
+city labels
+dot dot by city value city labels why
+why why why why
+[Music]
+i think there is some mistake
+plot pie
+final underscore
+oh i have to use city
+mistaken mistaken
+i had copied right so you should not do
+copy and paste a lot
+don't do copy paste
+so new delhi has the maximum number of
+transaction
+gurgaon noida gaziabad and faridabar why
+not bangalore i think in the data set
+bangalore is not given
+after this i'll also add one auto
+percentage
+and here i can basically specify 1.2
+f
+so if i go and see this here you'll be
+able to see percentage
+so maximum number of transaction is
+basically happening from new delhi
+so guys overall how was the session
+everybody
+one assignment for you
+so
+assignment
+find the
+top 10
+questions
+questions basically means food okay
+put item so this will be for you
+just do it one assignment and remaining
+all i think i have done it
+now in this data set i had never used
+this data set for doing machine learning
+modeling i needed this data set to find
+out what all information i can capture
+from it and finally i was able to do so
+many things right i i did not worry
+about distribution and all that is the
+part when we
+actually create a model with respect to
+the data set at that point of time we do
+so i hope you liked this particular
+session it was fun it was comedy it was
+inten it was good
+can we group the other cities under rest
+yes obviously you can do it
+right
+tomorrow
+another amazing day another amazing data
+set
+so that we will be working on it and
+definitely you'll be able to learn a lot
+as i said
+right
+visit the website guys because here i'm
+going to give the entire
+materials
+have you seen my website how do you like
+to rate my website guys
+so this i created in three to four hours
+probably i'll also start showing you how
+to create websites
+so this entirely i created three to four
+hours so everything will get updated in
+this article also
+see this
+this live session is going on right now
+currently see
+all the materials will get uploaded over
+here data set materials
+so please make sure you do this
+and yeah
+start exploring it
+okay guys so thank you keep on rocking
+i'll see you all in tomorrow's video and
+yes i will see you in tomorrow's session
+tomorrow we'll have more in-depth
+session thank you everybody bye bye take
+care thank you guys i hope everybody has
+downloaded the data set you'll have this
+two data set one is test and train right
+i'll talk about the problem statement
+and today we are also going to do
+feature engineering
+and both these things right as usual
+today we are going to do
+black friday
+data set i'll talk about the agenda
+everything
+eda and feature engineering we are going
+to do both of this and we will keep our
+model ready for model training
+ready
+means cleaning doing everything
+cleaning
+[Music]
+and preparing the data
+for
+model training we are going to do this
+today so this is the two things that we
+are going to do this is the agenda
+so after doing this
+you can basically use any kind of model
+and start working on it
+so quickly what are the basic library
+that is required start
+uploading it
+write import pandas as pd i'll talk
+about the problem statement what exactly
+is this
+import numpy
+as np
+import
+matplot
+lib dot pi plot as plt
+import
+c bond as
+sns and then
+matplotlib dot pi plot as plt yeah sorry
+in line so this is basically given in
+kaggle okay
+so in kaggle whenever you get a specific
+data set what do you have to do train
+and test
+that all steps i'll show you so that you
+can also participate in kaggle so let's
+go ahead and let's go ahead with first
+of all importing the data site always
+make sure that you write the comment
+so importing the data set the data set
+is already given to you so let's say i'm
+going to name it as df train because i
+have two data set one is train and one
+is test data so this df train i'm just
+going to write pd dot read csv
+and i'm just going to give my data set
+name
+black friday train dot underscore train
+dot csv i have renamed the name guys for
+you it will be train dot csv okay
+and then if i probably write df
+underscore train dot shape
+i will be able to
+see it
+or if i write df.head i'll be able to
+see it
+so i'll talk about the data what this
+data is basically about uh so this data
+is an e-commerce data
+so
+people who have bought some kind of
+products
+and based on that we need to predict
+what is the purchase capacity again
+understand
+i'm just going to basically talk about
+the problem statement
+here we want to build a model i'm just
+going to
+put the problem statement over here
+let's say i'm going to put a problem
+statement over here
+everybody read the problem statement
+anyhow i will be giving you all these
+things materials everything
+in the github don't worry
+so
+i'll also put the data set link over
+here
+data set link
+so data set link is this
+data set link and this will get saved
+over here so what is the problem
+statement so this is the problem
+statement that we are going to focus on
+so the problem statement is that a
+retail company abc private limited wants
+to understand the customer purchase
+behavior is an e-commerce data set data
+set is also very huge so it will be very
+good to work on it against various
+products of different categories they
+have shared purchase summary of various
+customers for selected high volume
+products from last month
+the data set also contains customer
+demographics like age gender marital
+status city type stay in the current
+city product details product id and
+product category and total purchase
+amount from last month so
+over here now they want to build a now
+they want to build a model to predict
+the purchase amount of customer against
+various product that will help them to
+create a personalized offer for customer
+against different products
+so this is the problem statement over
+here the problem statement is very
+simple you need to create a model to
+predict the purchase amount of a
+customer against various products right
+so suppose if i have if i give this
+information like this product with this
+product information these all things i
+give then we should create a model that
+will be able to
+predict this purchasing capacity
+right so this is the entire information
+regarding the problem statement okay
+so this is what we are going to do
+interesting we'll solve the problem here
+only in front of me so i have
+read
+the training data set the next step that
+you have to do is basically start
+reading the
+test data set now train data set test
+data set see whenever you are given
+train and test obviously what initially
+you have to do you have to combine them
+in a kaggle computation always remember
+to combine them so that all the data
+pre-processing that we can do we can
+perform on both the data set so here i
+am going to now import
+the test data
+right so here i am going to say df
+underscore test
+is equal to pd dot read underscore csv
+and here i'm going to basically write
+black friday dot csv
+df underscore test dot head
+in the test data you will not be able to
+find the output variable variable so
+here you can see
+only take product category 3 is there
+here additional purchase column is there
+right
+so now if you want to combine the train
+and test data how do you do it the next
+statement is merge
+both
+train and test data so how do you merge
+both train and test data
+we can use pandas dot merge
+can we use pandas.merge or pandas.concat
+or panda does append what what you want
+to use
+let me try it some different way now
+here i'm basically going to say df1 dot
+append there is an append function
+sorry df underscore train
+dot append
+and df underscore test
+so what will append basically do
+you can see the definition over here
+append rows of other to the end of the
+caller returning a new object right so
+i'm just going to do this there is also
+one more parameter that i see with
+respect to sort so sort by default is
+false right so i'm just going to execute
+this
+and then i'm basically going to store
+this inside my df
+so this is my df dot head now
+you can also append it in different
+different ways i have no problem
+okay it is up to you
+so this is the first step that we have
+actually merge also you can do
+but again understand we have to append
+it at the bottom right we are not
+merging it like this
+so merge
+if you want to do with words if it is
+possible with merge try to do it
+instead of writing merge here i could
+also add written append
+merge also you can do it okay
+so this was the next step now let's go
+to the next step everybody
+so basic basic
+code that we have seen already right one
+is df.info
+we can check out this one here we can
+understand that how many different types
+of features are here
+so obviously int is there object is
+there object is there object is the int
+is the object intent float float float
+is there so definitely when you see
+product id it will be a combination of
+both integer and
+different values so it is basically an
+object then you have gender obviously it
+has male and females so categories that
+is an object age is basically an object
+why age is an object because here you
+will be able to see age is given in some
+range 0 to 17 0 to 17 55 plus so this i
+can consider it as categorical variables
+i'll also show you how to solve that
+particular problem also but i hope
+everybody has got our understanding till
+here the next statement that we are
+going to basically find out is something
+called
+df.describe just to find out like what
+is the percentile values and all so here
+is just a basic information
+that we are going to differ now tell me
+um
+which which column do you think out of
+this is just waste you can directly
+blindly you can delete it
+see over here there is a column which is
+called as user id user id
+is just a unique id over here
+so you can definitely go ahead and
+delete it okay user id will be of no use
+product category everything other will
+be getting used don't worry about that
+but user id is definitely not useful so
+i am going to delete it so what i am
+actually going to do i am going to
+basically write df.drop
+df.drop this is a statement which will
+basically use to drop the feature and
+here i can give any number of features
+any number of features
+with respect to my feature name so
+feature name is nothing but user
+underscore id
+so i'm just going to copy this paste it
+over here user underscore id and here
+one very much important parameter if i
+see in df.drop is access
+access is equal to 0 basically means
+horizontally right row wise access is
+equal to 1 basically means vertically
+right column wise so we really need to
+drop it column wise so here i'm going to
+basically say it has access is equal to
+1 and here i'm going to specify in place
+is equal to true
+the in place is equal to true what it
+will do is that it will remove that user
+id and it will update automatically into
+the df value so if i go and probably
+execute it and now if i go ahead and see
+df.head you will be able to see that
+i'm actually able to see my product id
+gender
+all the other information perfect
+so here we have basically done this we
+have dropped the user id we have df.head
+we have everything ready now let's go
+ahead towards the data preprocessing
+side now tell me how many categorical
+variables are there
+how many categorical variables are there
+just by seeing this one you have gender
+one you have age
+one you have occupation city stay in
+current city this this but before that
+i also need to make sure that how many
+number of missing values are there for
+the missing values i may do something
+which i will show you in the later
+stages but let's focus on fixing the
+categorical features right now so how
+many category features are there you see
+over here gender is there age is there
+city category is also there so we will
+try to fix this category features
+because our model will definitely not be
+able to understand
+uh how my categorical features will be
+there or not
+marital status is already numbers
+but let's see what all things will
+basically be there
+so
+let us go ahead and take up age and try
+to solve this convert this categorical
+into
+a
+category into a numerical will try to do
+that okay
+so
+first of all let's focus on this
+and let's go ahead
+now tell me with respect to gender i
+have male and female right with respect
+to gender i have male and female now
+what should i do in order to probably in
+male and female what kind of encoding i
+can definitely use so if i write pd dot
+get underscore dummies
+and if i give my df of
+gender
+if i execute it here i will be able to
+get either
+male or female so here am i actually
+getting ones or zeros right one is
+basically given to f
+zero is basically given to male okay so
+either in this way you can do it but
+again see what is the problem here if i
+convert in this way then i have to
+create another data frame then i have to
+add this data frame over here then
+delete this gender column can i do
+something within the data set itself
+where probably i can directly convert
+this wherever the f is zero sorry
+wherever the gender is f i am going to
+convert this into 0 or 1 whether
+m whether the gender is male i am going
+to convert it to 0 to 1. so how we are
+going to do that guys
+how we are going to do that
+yes i can definitely use drop drop
+underscore first is equal to 1 i can
+definitely use over here
+but understand i don't want to do in
+this way because i have to save this
+somewhere then i have to add a column
+over here i don't want to do in that way
+i want to find i want to find out a way
+where directly i have to do it over here
+itself in this particular data frame
+itself so how do i do it so for this i
+will be using a code simple code so i'll
+write df of
+gender
+and here i will say df of gender
+dot map
+map method what it does is that see what
+does map method do
+map method will basically map with
+respect to the conditions that i am
+giving over here so here if i say my
+first condition is that wherever i get
+female i'm going to convert it into 0
+and wherever i get male i'm just going
+to convert it into one
+many people ask me when i'm
+teaching what is the map functionality
+in python so here you can see easily
+within this particular data set you will
+be able to see it over here now if i
+write df dot head
+and if i probably see this
+you will be able to see now gender will
+be zeros and ones so everybody write
+down this code okay one more way is that
+directly i assign this to
+df of
+df of gender right so this way also you
+can do it
+so both the ways whichever way you feel
+you want to do it just do it both the
+ways it will work
+is not ranking guys zeros and ones are
+not ranking one two three four five six
+is basically ranking
+uh zahida sen says do we have to apply
+feature engineering on training set only
+on touch data no on both on both you
+have to apply i'll show you how you have
+to apply both
+okay perfect so everybody has done this
+right
+so this is with respect to handling the
+categorical feature
+handling
+categorical feature
+age
+sorry gender
+so this is done
+now let's go to the next step now the
+next step what i'm actually going to do
+gender is done now we also need to
+handle age
+handle
+categorical feature
+age now why i am specifically saying age
+because here you go and see
+age is what age is also a categorical
+feature see 0 to 17 0 to 17 55 plus so
+first thing i will try to execute
+something like this
+i will write
+df of h
+dot uni
+so this will basically give me how many
+unique values are there in age like 0 to
+17 55 plus 26 35 46 50 51 55 36 45 18 to
+25
+now if i have in this particular unique
+way now tell me how should i convert
+this categorical feature into some
+numerical features so here also i can
+actually do encoding so the type of
+encoding what i will probably be doing
+many people will again get confused over
+here so why why you are doing like this
+so i'll just tell you so here also i'm
+going to use df.h
+i'll assign it to df of age
+right
+two things i can definitely do one is
+directly get
+dummies
+you can directly do
+pd.getgrammys see this if i write pd dot
+get underscore dummies
+right and if i give it for df of age
+i'll be able to get like this right
+and if i drop
+drop
+first is equal to true then i will be
+able to get like this then what i can do
+i can save with this column name
+and i can put it inside my data frame
+i can do this okay
+but just imagine something guys here a
+domain knowledge will definitely come
+one very important thing
+do you think like shopping 0 to 17 years
+it will be very less right in an
+e-commerce website it will be very very
+less right whereas if i say 26 to 35 it
+may be more
+and where i say 18 to 25 it may be more
+15 to 55 it may be more
+55 plus it may be very less right or 46
+to 50 it may be also very very less so
+here what we will do is that we'll just
+not try to convert this into dummies
+let's do some ordinal encoding only
+let's let's give some rank to it okay
+let's let's give some directly some
+values like 0 1 2 3 4 5 why i'm saying
+to give 0 1 2 3 4 5 because
+if i'm training the model
+my model maths will definitely be able
+to understand right my model maths will
+definitely be able to understand with
+respect to the values that we are given
+like zero one two three four five
+whatever values i am actually given with
+respect to the other features my model
+will definitely be able to understand
+this is also called as target guiding so
+we will do something like this okay but
+this this will definitely not work this
+is not a very good practice also so here
+i'm just going to comment it out and
+this will definitely not work
+instead
+what i will actually give is that
+i will say
+uh let's apply the same map function
+which i had applied over here so here
+i'm going to basically give it this way
+map function
+and i'm just going to basically put it
+inside this
+here definitely i'll say age
+this h
+and
+mapping i will do for 0 to 17 first
+let's say for 0 to 17 i am actually
+giving some numbers let's say i'm giving
+it over here as 1
+because at least some value should be
+there then 18 to 25 in the sorted order
+i'll try to give 18 to 25 my second one
+and here i will give it h2
+then third one again in the sorted order
+26 to 35
+i will give it over here
+because see my model when i'm training
+my model it will be able to understand
+this is called as target guiding target
+ordinal encoding then
+what we have 36 to 45
+i hope i'm doing it right
+colon here i'm actually going to give it
+as 4.
+and then after 36 to 45 i have 46 to 50
+46 to 50 i have
+5
+and then i will be writing 51 to 55
+and i will say
+it as 6
+and then
+55
+i'll say it as seven
+label encoding can also be done
+label encoding will also work
+perfect label encoding will also work
+but again
+understand
+for this again you have to for label
+encoding you have to import a library
+and then perform it here also you can do
+this way you will become
+good at maths
+don't put zero guys see as i said i as
+i'm saying right there will be some
+mathematical equations that will be
+happening so if you want to do label
+encoding how you'll do
+label encoding
+in python let's see some articles uh i
+have some article from geeksforgreek
+so
+[Music]
+let's see so i have to basically
+upload this entire thing right this
+entire code
+see entire code by using pre-processing
+label encoder and all but i don't want
+to do it because as i get a new data set
+over there also i should be able to
+apply all these things right so here
+i'll just copy this
+from sklearn you can see over here
+right
+and then you can basically do it with
+respect to df dot
+age
+and df.h so you can execute this
+and automatically it will work
+do not hesitate to google
+it is up to you
+right
+it is up to you
+so you can also do this in this way this
+is the second technique
+so i have already done this now if i
+probably go and see my df dot head
+you will be able to see in age also i'll
+be okay i have not executed data
+so i have executed it now if i go and
+see my df.head you will be able to see
+one two three four like that you will be
+able to see
+see there will be hundred of ways label
+encoder fit transform for the test data
+you have to do transform
+but here i've actually combined it so
+this is not a good practice
+for this case
+suppose if i'm doing for trained data or
+touch data i will just transform it no
+need to give any any any weightage guys
+arvinds see
+our machine learning model will
+automatically understand so one more
+category that i have actually we have
+actually seen
+is something called as city categories
+see oh yes city category is also there
+so for this i will just use pd dot get
+dummies if you want pd dot get dummies
+and then you can basically combine them
+but in order to do that also
+what you will do so here i can basically
+say that pd dot
+get dummies
+and then i'm basically going to give my
+df off
+city name is city category so
+fixing
+categorical
+categorical
+city underscore category
+dot get dummies df or city category and
+here i'm going to basically say
+drop first is equal to true
+so here i have all my values so i'm just
+going to save this in one variable where
+i am going to say df
+underscore city
+let's say
+so df underscore city is this one
+dot head
+now i have to combine this entire cities
+with this df okay which i have actually
+shown you
+before
+and now
+i hope everybody has done till here so
+this two features will now get compiled
+to this data set
+now in order to get combined into this
+particular data set what i will write is
+that i will say
+pd.concat
+and then here i'm basically going to
+give df
+and df underscore city
+and when i'm doing concatenation i also
+have to give my axis value as 1
+so this i will save it in my df
+and this will basically be my df.head
+so if i go probably in the last year you
+will be able to see b and c
+now i don't require this city category i
+can drop the city category but i hope
+everybody is able to understand
+so why drop underscore first is equal to
+true because always understand if i have
+three categories
+two categories is sufficient to
+represent all the three categories now
+let me go to the next step let me
+quickly
+drop
+so drop
+i'll i'm just going to write drop
+city category
+because i don't require this feature now
+right
+i don't require this feature city
+category right
+so i'm just going to do df.drop and here
+i'm just going to basically say
+uh my category name which is city
+category
+but again i understand here your access
+will be one
+so
+what is the error not found in access
+why
+okay it is city underscore category guys
+understand why we are doing this because
+any new data will come we have to again
+follow this entire thing
+okay this is entire steps you have to
+follow whatever things we have actually
+done this encoding everything will be
+done so here you can see df dot drop
+city category axis is equal to 1 that
+particular feature is gone so what i am
+actually going to do to make this
+operation permanently i'm going to use
+in place
+is equal to true
+so if i now go and probably check
+df.head
+here it is entirely
+so bc is there this is there
+so we have fixed all these things still
+here
+we have
+done a better work till here
+now let's go and check the missing
+values
+missing values
+city category is a category feature uh
+pt category one is another is age and
+one is uh gender so three categories we
+have fixed up
+axis is equal to one basically means
+column wise we are adding or we are
+appending that specific data frame
+in this axis is equal to one basically
+means we are deleting the column
+guys again i have told you eda basics
+the prerequisite is that you need to
+know python
+you need to know some basic things
+if you are not knowing it
+difficult now with respect to diff uh
+df dot is null missing values what i'm
+actually going to do i'm just going to
+do sum
+df dot is null dot sum
+this is also function now here you can
+see product category has so many null
+values
+purchase also has so many null values
+product category 2 has so many null
+values product category 3 has so many
+null values purchase has so many null
+values
+amazing
+now whenever null values are there
+people will get shocked what to do now
+everybody will get shocked what to do
+now
+okay categories are there should we
+replace categories with something just
+tell me
+purchase y null are there because this
+is the test data the null values that
+are present that is the test data that
+should be null only but this two we
+should definitely fix it up right
+we should this two we should definitely
+fix it up so what i'm actually going to
+do will focus on
+focus on
+replacing
+missing values
+focus on replacing missing values
+now when i focus on replacing the
+missing values what i'm going to do i'm
+going to basically replace the missing
+values for this two feature so we have
+to do some kind of data exploration for
+these two features so what i'm actually
+going to do i'm going to basically write
+df dot
+product category now tell me guys
+if i write dot
+unique
+tell me what kind of feature this
+becomes what kind of features this
+becomes
+or if i write
+dot underscore door underscore2.unic
+what kind of features this will become
+will this become a discrete feature
+discrete categorical discrete continuous
+feature
+or whether this will become a continuous
+feature this will become a discrete
+feature guys see discrete because this
+is only getting repeated
+this will only get repeated so for the
+people who have attended my start
+session will definitely know this right
+so they will be definitely focusing on
+and they'll be knowing this entire thing
+okay so over here here you you can
+specifically see that this will be a
+discrete feature okay this will entirely
+be a discrete feature now in a discrete
+feature if i have a nand value what is
+the best way to replace the missing
+values tell
+me quickly now this this this should be
+a lot of discussions that needs to be
+done on this
+so
+tell me what should be a better way to
+replace the missing values what i will
+also do is that i'll make your work
+little bit easy i will also write
+product category 2 and i will say value
+counts
+value counts basically will give me
+all the values that are present with
+respect to this okay
+value underscore counts so here you can
+see eight is basically having this many
+values
+four is basically having this many
+records six is having this many records
+what do you think if i want to replace
+the nand values what is the best way to
+replace in this feature
+so here what we will do with respect to
+any categorical features or discrete
+feature the best way is to replace
+the missing value
+missing value
+with mode so in order to replace the
+missing value
+with mode okay mean don't use mean guys
+because mean will create a new category
+altogether so in order to replace the
+mode that is very much simple
+and how do you do it just let me know
+how do you replace
+that with mode tell me guys
+so first of all
+i'll write a simple code for you
+i will say
+df of
+product
+product
+product category two okay
+please think over it try to write the
+code guys okay
+so here i will definitely use something
+called as fill name fill in a function
+is already there which i have also
+mentioned or explained in my
+lot of lectures so i'll say dot fill n a
+and here i'm basically going to say df
+of
+product category
+to
+dot mode right see if i if i basically
+just copy this entire thing okay
+and if i write df of product category
+dot mode
+what will be the output that i will get
+i will get this 2 output 8.0 so if i
+want to find out the mode what i have to
+do i have to basically write something
+like this
+for this right
+now here i'm getting two values one is
+zero and one is eight point zero so this
+becomes a series now in order to pick up
+this value i can basically use indexing
+so if i use this then i'll be getting
+8.0 okay so here what i'm going to do
+after this i'm going to basically just
+copy this entire thing over here
+dot mode
+so once i do this this will get
+reflected over here
+and now
+if i probably write df of
+product
+category 2 dot
+is null
+dot sum
+so here you can see that now my values
+are 0 that basically means the
+replacement has happened
+clear
+interesting problem the data set is also
+quite huge
+now similarly what i'll do for
+product category 3 because there are 54
+000
+okay so we will also do it for product
+category 3.
+okay product
+product
+category 3
+category
+3
+replace missing values
+again i'm going to paste it over here
+i'm just going to write dot three
+underscore three dot unique so here also
+i see 1417 this this is there if i want
+to also want to see how what is the
+value counts
+i can basically write dot value counts
+dot value counts
+so here is all my values with respect to
+this particular value counts okay
+so
+let's go ahead and replace it
+replace with missing values with modes
+and
+again i'm going to going to copy
+please playing the missing value so here
+it is
+okay i'm going to just use it with
+product category 3
+so now if i execute it
+now if i go and probably see my df.head
+okay so here it is everything
+so product categories three this this is
+fixed
+why shouldn't we just remove
+product categories the reason is that
+because
+if i go and see df dot shape
+here you have around 7 lakh 83 000
+records
+and around 5 lakhs records are basically
+missing
+if you see over here
+five lakhs two lakhs are there you
+cannot just drop it okay
+probably that may be an important
+information
+so you said for purchase column then
+missing values are fine because it is
+for test data but train test split is
+random no titration we don't just do
+random we do cross validation
+let's go to the next step
+anything that is left
+one more category is this one right stay
+in current years
+so what do you think we should do for
+this so here if i say
+hashtag
+stay for current years right stay in
+current city years
+so if i write df of
+state current city yes
+if i write dot unique
+so here i am having 2 4 plus 3 1 0 okay
+so what we can actually do we can also
+consider this as 4 only right because
+anyhow if it is 4 plus also it will be
+treated as 4 it can be treated as 4 if
+it is value is also increasing it is
+fine right so what we can do is that we
+can replace this 4 plus with 4. now tell
+me how to do it
+so i will write tf of
+stay in current
+years
+dot htr dot replace
+and then i'm actually going to replace
+plus with
+with blank right
+so if i do this i will probably be able
+to find out all these things
+right
+so this entirely i can save it inside my
+df dot
+stay in current
+so if i execute over here done
+some warning is there but it's okay
+so here you can see this
+now i don't have four plus i've fixed it
+another category any more categories
+today we are just focusing on solving
+categories
+now
+let's do one thing okay
+now even though we are basically
+checking categories we are we are
+basically checking other other things
+over here right if i probably just go
+and write df.info
+so here we we are seeing that product id
+is an object that is fine
+gender it has an integer that is fine
+age is an integer occupation is an
+integer stay in current city years is
+also an object
+but here you can see that i am having
+values like 2 2 4 4 4. so we need to
+convert this object into integers that
+is a major step
+that we have to actually do so what we
+are actually going to do over here is
+that we have to convert this
+which is an object into integers so how
+to do that
+so convert
+because this kind of task also you may
+be getting
+convert object
+into integers can quick anybody tell me
+how to do it
+it's very simple
+here i'm just going to write df of
+stay in current city years is equal to
+df off
+stay in current city years dot as type
+as type integer
+if i do this
+done
+now if i write df dot head
+or df dot info you will be able to see
+this
+so here you can see
+stain current is basically assigned in
+32 you can also assign in 64 by
+providing in 64 directly over here okay
+there are two more columns which has b
+and c as u u int 8
+q intake what is u intent
+u int 8
+it is an 8 bit assigned integer ranging
+between 0 to 255 decimals it's okay you
+can also convert that into in type
+so if you want to convert that into in
+type i will just use this two quotes
+so what i will do here i will say b and
+c right so df of b
+is equal to df of b
+dot as type
+int
+and same thing i can copy and paste it
+for dfr
+c
+hello execute it
+now if i go and probably see my df.info
+you will be able to see this
+now
+once we have done this the best
+visualization what i feel
+visualization
+is present in cbot
+which is called as
+sns dot pair plot
+if i give pair plot and just give df
+see what is the amazing diagram
+but it will take lot of time because
+there are so many data points
+along with that so many data sets
+okay it is giving me an error let's say
+what is the error
+cannot reindex from a duplicate access
+df dot
+duplicate
+points why this error has come
+it's okay see if there is something like
+a product type right
+that will
+actually get removed in the pair plot
+that is the
+reason why do we use this
+will give an error
+i'll have a look on to this okay don't
+worry
+till then let's see some other
+visualization diagrams okay
+till then let's see other visualization
+diagrams
+so i i'll just have a look why that
+probably is not coming but i can
+definitely use another plot like bar
+plot
+let's say that i'm using bar plot and i
+want to basically compare
+age with respect to purchase so this
+will actually help you to find out
+who has
+purchased more or who has purchased less
+and here there is a gender over here so
+i'm just going to use a hui as gender
+okay i've done some observation over
+here and data is equal to df
+okay
+so let's execute this
+so this is the diagram that you are
+getting
+so age
+one two three four five so which you can
+basically map with it
+but definitely you can see that even 55
+plus
+with respect to genders so from this
+observation
+if gender zero
+zero what we have replaced with male
+right
+gender uh zero we had replaced with
+female or male
+very gender very gender
+i think for male for female we have made
+it to zero yeah
+so from this definitely you can come up
+with some conclusion that whether female
+has bought more or male has bought more
+but over here with respect to the
+purchases maximum amount of purchases
+you can see that uh mail has a huge
+purchase
+with respect to the orders also we'll
+try to see will with respect to
+different different orders
+this is nothing but visualization of age
+versus purchase so please write down
+your observations what do you feel with
+respect to this kind of things
+purchasing of goods of each range of age
+are almost equal
+but we can conclude definitely that the
+purchasing percentage of purchasing
+goods of men over women is high
+right is this possible
+no
+[Laughter]
+purchasing of
+men over
+men is high
+then women
+so this is the observation that i have
+done
+which is not at all
+possible right
+but data does not lie right
+so definitely
+all the other purchases with respect to
+the ages are uniform but purchasing of
+men is higher than women
+yeah
+nice
+i like it
+so this is my first observation
+let's say with respect to purchase we'll
+try to visualize the occupation okay so
+visualization of
+purchase
+with occupation
+so i'm just going to copy the same thing
+and i'm going to paste it over here
+so here i'm just going to say it as
+occupation
+ah let's see the diagram
+this will be quite huge because it will
+be stuffed right
+occupations are many right
+occupations are money so you can just go
+and check out which all occupations are
+there at 20 different occupations so
+from this data set you will be able to
+find it out the initial data set
+and you can make some observations from
+this
+let's see what is occupation
+occupation with this some categories are
+mapped okay so with respect to this
+i'll i'd suggest that this is also
+uniform
+it won't affect a lot let's compare
+whether product category 1
+product category one versus persist like
+many people have bought product category
+one because if you go and see the data
+set then we'll be able to see it over
+there so i'm just going to copy this
+with the bar plot
+i'm going to write it over here
+and i'm going to basically write product
+category one product so let's see
+product category one how many people
+have bought
+with respect to the purchases so that
+amount will be shown
+so here you can see this is the graph
+with respect to product category 1.
+similarly let's see with respect to
+product category 2 i don't know whether
+we'll be able to see it or not
+in the same thing we can see it
+two graphs
+two graphs will not be able to see it i
+guess
+now it is coming
+no only one is coming
+okay i will remove this i think it will
+replace
+in that same order
+okay
+so i will just execute this product
+category one
+and then this will be my product
+category two
+and the next one is my product category
+3
+but observe this and come up with some
+conclusion guys
+here you can see with respect to 12 000
+is there here till 14 to 16 000 product
+category 2 is sold what more whereas
+product category 1 is bought the most
+right it is still 20 000 right
+so definitely that information you can
+take it out from this particular graph
+any other graphs that you want to
+propose but you can definitely use this
+tell me guys is this mo is this data set
+good for the model or not now
+because the type of database processing
+we have done
+i think we are good to do it right
+we are good to do it we can also drop
+product id
+we can also drop product id
+now let's probably do the one last thing
+okay
+that is feature scaling
+okay feature scaling
+this will now become my df underscore
+test
+and then
+i can remove
+df dot purchase dot is null
+see wherever the purchase in the
+purchase column it is null right that
+all belongs to the test data so i'm just
+trying to find out
+apart from is null how do i find out
+if it is not null
+so if you use like this
+so here by this you will be able to see
+this and here you can basically write df
+run train
+so now you have your df draw train and
+df underscore test
+so df underscore train and test you have
+now let's go to the feature scaling
+in the future scaling how do you do it
+we basically apply standard scalar as a
+feature scaling so for that it's very
+much simple
+from
+sklearn
+dot
+pre-processing
+i'm going to import standard scalar
+and then i'm going to write sc is equal
+to standard scalar
+and on my trained data set always
+remember
+df underscore test
+okay before that if you want to do train
+test split definitely go ahead and do it
+i don't have any problem so i can
+definitely write df underscore train
+you can do that x train x test y train y
+test it's up to you okay
+so
+uh before this let me write one code
+where we will do the train test plate
+for the training data so here what i am
+going to do scale on
+train test split okay it is always good
+to google it and copy and paste and do
+it instead of writing it okay
+so i'm just going to copy this
+and paste it over here
+you also do that same thing don't tell
+me krish bring me the
+queries or answers so here i'm just
+going to change it but before that let
+me
+write from sk learn dot
+model selection import
+trend test split
+okay so here will basically be my
+df underscore test
+my x
+so my x will basically be df underscore
+train colon minus 1
+i hope so it works
+so x dot
+head
+just make our x and y axis so that it
+will get our independent and dependent
+feature so this is my x similarly for my
+y what i will do
+i will also create my y where i'll write
+d f off
+colon no minus one will basically give
+my
+okay minus one is not there okay colon
+minus one colon
+colon
+how do we get the last column
+no df of
+colon minus one will give you the entire
+thing
+double colon minus one
+so this will basically give your last
+value
+no it is not giving
+double colon no just a second
+i can basically say it as df of
+purchase
+right
+so this is my y value
+colon comma minus 1 will also work
+colon comma minus 1 will also work
+just give me a second guys
+yeah
+so this is my x and y
+now what i'm going to do give it to my x
+and y here
+and here i will
+get a error why
+on input variable inconsistent number of
+samples comma 36 why
+i made some mistake
+x dot shape
+let's see
+this is basically having 12 rows that is
+fine
+what is this having
+y dot shape
+hey how come difference is there
+my mistake
+it should be
+df underscore
+train
+that was the mistake that i made
+fine now it will work
+now i've got the same answer here i'll
+basically go and execute it
+extra next test x comma y
+d f underscore train that i have written
+but still i'm getting this error why
+a scalar node model import train test
+split this this x comma y is there
+y is also here
+y dot shape also i might be able to get
+it
+same
+oh one extra record is there hook up
+one extra record how come
+purchase is not the last column your
+screen is not visible properly looking
+hazy
+then please reload it okay
+oh purchase is not the last column
+that is the problem
+so i made one mistake over here
+so what i will do is that i can
+basically say
+df dot train dot drop
+of purchase
+with axis is equal to 1 now this will
+definitely work
+this is done
+so i have all my features over here
+if i do x dot shape now i have 11
+columns
+then df underscore train this is there
+this is the perfect perfect perfectness
+it happens i'll google it it happens
+now it is fixed see
+now df underscore train instead of
+writing like this now i'm going to do
+fit
+and
+fit transform on xtrain so finally i
+will write
+sc.fit fit underscore transform
+and here i'm basically going to write x
+underscore train
+which will basically give me x
+underscore train is equal to this one
+x underscore test is equal to
+sc dot
+transform on
+x underscore y transform think over it
+so let's execute this
+and again it gives me an error why could
+not okay let's drop one last thing
+from this
+i think i could have dropped in df.train
+only and df.test only so that drop it
+that will be an assignment to you all
+i'm going to drop the
+product id
+in place is equal to true
+i don't want to get killed right now
+x underscore test
+product id this is this
+done
+finished so
+92 lines of code more than 100 lines of
+code i've written in front of you
+did the complete analysis
+now this is your data set go and train
+your model the next step is basically
+train your
+model that's it
+if you want to
+see correlation and all
+okay so here i will just name this file
+as
+black friday
+and
+feature engineering everything i'll be
+giving you i will be uploading this in
+my github so that
+you will be able to find it out
+just a second i'm doing it i'm uploading
+it okay guys so just uh reload the page
+and uh yes you will be able to see the
+file in the description so tomorrow also
+we are going to take up any other
+different data set and then we are
+trying to see that how things are going
+just reload the data set and tomorrow
+we'll continue the session
+uh thank you everyone for joining and
+yes i hope you liked it so thank you
+have a great day bye bye guys keep on
+rocking
+we'll see you tomorrow hello guys i hope
+everybody is able to hear me out
+so from that today we are basically
+going to solve
+flight
+price
+prediction
+and here we are basically going to do
+eda
+eda plus feature engineering
+so data set here i'm actually giving you
+the data set
+so if you go and see the data set the
+data set looks something like this data
+train test set okay
+two xls file
+will be there
+so you have to download these two files
+if you want to download make sure that
+go to this download it
+right as a zip file and inside flight
+prediction we have this specific data
+set
+these two data set we are going to take
+it up data train and test underscore set
+and this problem statement was given
+this flat price prediction problem
+statement was given in a hackathon that
+we are going to basically solve over
+here and let's start so initially we'll
+start with importing some basic
+libraries
+importing basic libraries
+quickly do it which all libraries we
+require already we have done in study
+session i'll write import pandas as pd
+import numpy
+as np
+then import
+matplotlib
+matplotlib dot
+pi plot
+as plt
+and then import
+c bond
+as a sns
+import cbon as a sns and then probably
+we will also be importing
+will write matpotlib inline
+now guys many people usually ask me what
+is this used for matplotlib inline
+see suppose if you want to probably show
+the diagram within this
+without writing plot dot show
+so you can basically go with respect to
+this one matplotlib inline so as soon as
+you plot anything you don't have to
+write plot dot show and automatically it
+will get shown over here itself
+so uh
+now why i have specifically taken this
+data set because if we go and see this
+data set
+there is something very amazing about
+this data set because it also has
+date time information okay
+so date time information you have to
+really be careful whenever you are
+working at it so that is the reason why
+i have specifically taken this uh
+because i wanted to show you different
+different domain problem statements kind
+of data so that you will be able to see
+okay what are challenges you may
+probably face into it so as usual what
+i'm actually going to do first of all uh
+i'm going to just
+import the training data set
+which i will write pd.read underscore
+csv
+read underscore excel so let me just
+execute this one first
+so read the data set like this
+and here i'm basically going to give my
+datatrain.xls
+and if i go and probably see my train
+underscore df.head you will be able to
+see this specific data set
+so here you have airline date of journey
+source destination
+route
+if it is given like this bangalore to
+delhi
+departure time arrival time duration
+total stops
+additional info price
+so after this what we have to probably
+do is that
+same thing i'll do it for the test data
+set so here i'm going to basically do it
+for test data set
+so test
+uh test underscore df
+and specifically here i will write
+test xls
+this is the file name
+and if i want to
+display test df.head so here is my test
+data only one column will not be there
+which is this last column that you can
+see that is price
+so this both are done
+i hope everybody is done
+now as usual after importing
+i did not try
+training the model see if if you are
+getting model score bad like 12 13 with
+the help of linear regression
+or other algorithms try different
+algorithms right like other algorithms
+are also there like decision tree
+regressor random forest regressor
+right you have xgb boost regressor
+no one tried that i don't know you're
+just saying 12
+and 13 for linear and lasso and you're
+just keeping quite that is the problem
+with you all
+you know where i've taught all the
+machine learning algorithms previously
+why you don't want to try with other
+machine learning algorithm obviously
+linear regression creates a straight
+line and there you have so many features
+so your accuracy will be bad see if you
+don't get this much common sense then at
+that point of time i think
+trust me for cracking interviews it will
+become difficult how you will work in
+the real world industry
+so if you go and use different different
+algorithms so i i always tell you do
+hyper parameter tuning on top of it i i
+just did linear regression sir rich sir
+i got 12 percent not tell me what to do
+i don't want to do anything
+like that you'll learn tomorrow you'll
+given a problem statement how you'll do
+that
+at that time krishnak will not come
+right
+so
+let's do one thing first of all i'm just
+going to combine
+this
+train df and test df into another
+variable called as final df so what i'm
+going to do in order to combine i'll
+just write trend df dot append
+and then i'll write test df
+comma
+and
+ndf dot append
+of test df so test df is my this data
+set and train df is this data set so
+once i will do this
+i can go and finally write final
+underscore df.head
+so this what i'm doing i'm combining
+both the train and test
+remember
+if i go and see the tail path if i go
+and see the tail part
+then you will be able to see that
+you will have some nan values in the
+prices this is because of the test data
+set okay so this much i think you will
+be able to do it
+appending the data set which is getting
+converted into this one now see the
+features looks quite complex over here
+because the feature that you have is
+like airlines you have date of journey
+source destination
+route then departure time then arrival
+time you know arrival time then you have
+duration then you have
+total stops then you have additional
+info
+very you different different types of
+columns are there so lot of feature
+engineering is basically required and
+here i'm just going to focus more on
+feature engineering because we have done
+extensive eda now let's go ahead and try
+to do feature engineering on each and
+every field okay
+now the first field that you may
+probably see over here is something
+called a date of journey
+now in this date of journey you have
+obviously
+you have a day you have months and you
+have year and probably just let me just
+write final underscore df.info
+so here you can basically see that date
+of journey is also an object so date of
+journey is an object that basically
+means it is in the string format so we
+have to convert that into a date time
+format now this after converting
+probably into a date time format what i
+will do is that
+i i need to pick up this specific
+information like day and this will
+basically be my month and this may
+probably be my year so this technique
+from this particular field i have to
+create three more fields which will
+specify my day
+month and year so here what do we say to
+this is that we are trying to create a
+derived feature now tell me guys from
+date of journey how do i create these
+three fields anyone you can actually try
+it out and you can basically
+let me know you can try it out you can
+say some code how we should go ahead
+with doing it so here basically i'm
+starting my future engineering process
+and what i told that first i will try to
+take out or derive some features like
+from this i will definitely be able to
+take out day month and year how do we do
+it
+so for that what i am actually going to
+do it in a very simple way i'm basically
+going to say that final underscore df
+and i will try to create three features
+as i said one feature will basically be
+my
+month
+or date first i'll start with date
+so one feature will be this
+the next feature that i'm actually going
+to create is with respect to month
+and the third feature that we are
+probably going to create
+is with respect to ear so this three
+feature we need to derive and we need to
+create and how do we do it we already
+know that i have a feature which is
+called as date of journey right now from
+this date of journey i basically have to
+split okay split by using what character
+split by using this specific character
+that is this forward slash if i do
+probably split then i will basically be
+able to get three important information
+one is this six zero six and 2019 now in
+the case of date i need to focus on the
+first index that is the zeroth index
+then in in the case of month i need to
+focus on the first index and in case of
+2019 i need to focus on the second index
+so that is what i'm actually going to do
+over here so i'm basically going to
+write over here dot str
+dot split because i have to convert that
+into an str
+or if i need to basically do the split
+and after doing the split if i copy this
+and if i run this code let's see what
+will happen
+you will be able to see over here if i
+write 0 that basically means i will be
+able to get this all entire information
+okay so here you can see that if i write
+string
+sorry
+here i have written 0 then also i'm
+getting this specific information what i
+will do i'll also use one keyword called
+dot htr of zero so here you can see that
+i'm able to get all the dates
+okay so this is all my dates that i'm
+actually able to get so
+in order to get the dates i'm just going
+to use this and in forward i'm just
+going to write dot htr of 0
+so this is the this is the process that
+we can basically use to take out the
+date
+no need to convert into date or time
+also because once we get that we'll
+convert that into an integer
+then
+if i'm doing for forecasting kind of
+task
+at that point of time i may use it then
+for the month i need to just change the
+index to 1
+and for this i need to change the index
+to 2.
+so here i will be able to get date month
+and year now if i execute you will be
+able to see this
+final underscore df dot head
+and head i'll just see the top two
+records here somewhere at the end you
+will be able to see date month and year
+is created
+this also works well you can apply a
+lambda function which is very very good
+so i'm just going to ping or copy paste
+this code over here this is also a very
+good technique how to do it definitely
+you can also do it with using this
+so he has given this specific technique
+where he has specifically used lambda
+function this will also definitely work
+so i hope everybody is able to
+understand till here okay so either of
+this code you can basically use
+and you can actually go ahead and do it
+but this is a very good technique of
+applying a lambda function very nice
+means efficient coding
+okay it's all about googling and trying
+to find out a better way
+that will definitely work
+okay now let's see in the next step what
+we have to do simple it is that
+we have to basically also make sure that
+we convert that into
+an integer right so integer also we need
+to convert that date month date month
+and year so in order to do this uh it's
+very simple how do i do it i will just
+write
+final underscore df
+is equal to
+final underscore df
+of
+date
+and i'm actually going to convert this
+into as type
+end okay
+then i'll copy this probably
+i'll paste it i'll paste it i'll do it
+for
+month
+and
+but one mistake i'm definitely making
+over here i have to apply this to
+the same feature right
+so i'm just going to copy this here
+here
+here i'll just make this to month
+and i'll just make this to here
+so once we do this and once we execute
+this has got executed now if i write
+final underscore dot df.info
+and if i see
+so here you can see date month and year
+is now in 32
+in 32
+price is already float 64 but we are
+starting to focus on different different
+features
+so uh we have done this uh let's go to
+the next feature now
+which one do you want to catch hold of
+the next feature since you have done it
+we'll do one more step is that we will
+try to drop this particular feature now
+i don't require date of journey right
+now so what i'm actually going to do now
+i'll just write
+final underscore df dot drop
+and here i'm basically going to give my
+feature name which is
+date off
+i'll just copy this
+date of journey
+with
+access is equal to 1
+uh in place is equal to true this we
+have already seen
+yesterday now if i go and probably see
+my final underscore df
+dot head of one
+then here you can see month and year are
+there date is also there but you don't
+have any date of journey
+now let's go to the next feature next
+feature
+see this is how we have to catch one
+feature at a time and probably
+do need the necessary changes okay
+so the next feature basically uh we will
+go with respect to
+route
+let's say what we can do for this route
+also will try to understand
+okay arrival time
+route
+okay route uh
+let's wait for some time for route let's
+focus on the arrival time or departure
+time
+okay so let's do one thing
+let's focus on arrival or departure time
+first we'll focus on something and then
+similar type of fields always remember
+when you are probably doing feature
+engineering try to catch up similar
+types of field which we basically have
+to do again and again let's go ahead and
+take up arrival time now from this
+arrival time
+what you can do is that obviously you
+don't require this information like 22
+march
+if i probably go and see around 10
+records
+so here you will be able to see that
+wherever there is this gap
+this space
+how we can split it let's see
+if we are using some space over here
+we can definitely get something
+okay uh if you are using this space and
+probably trying to split it i will
+probably be able to get the arrival time
+my arrival time should be in such a way
+that i should be only able to get this
+first four
+important information
+think over it because i don't require
+this 10 june and all because there is
+date for that i don't require that i
+need to focus only on this first four
+values so how do i do it so i will write
+final underscore df
+of arrival time
+dot
+str
+dot split
+if i split with the help of
+an empty braces and if i write dot htr
+or if i just execute this here you will
+be able to see like this
+right
+so out of all these things i just need
+to pick up the first value see in the
+first value i will be able to get all
+the important information
+okay like 4 25 7 15 only the first one i
+need to focus on so to get the first one
+i will just use indexing of htr of 0
+and if i execute this now i will be able
+to get this particular value
+to do the same thing there is also one
+amazing code which can be done using
+this lambda function
+so here you can see dot apply lambda
+this this
+okay if i execute it
+sorry final underscore df
+and execute it here you can also see
+that i'm getting the same information
+so what i'm actually going to do i'm
+going to use this particular code and
+make that changes in final underscore df
+of
+arrival time
+any one of the code you can basically
+use and you can do it
+more new new things you can basically
+get it in order to do it
+one thing that i forgot to check whether
+it has null value or not
+so
+price basically has null values it's
+okay that is for the test data route has
+one null value
+total stops has one null value
+route
+that basically means route in that
+specific it may be the same row it may
+be the other row but total stops has one
+null value and this has one null value
+everybody clear
+now
+from this arrival time
+we still have to
+take out the hour
+and we still have to take out the
+what we need to take out from this
+arrival time guys hour and minutes right
+so that specific thing i will do next
+step
+so here i'm actually going to write
+final underscore df
+with the same
+lambda function or in in an easy way you
+can basically do the split
+and here i will actually create two more
+features
+arrival underscore hour
+is equal to
+final underscore df
+arrival underscore
+time
+then you can use dot apply lambda or you
+can also do dot
+htr dot split
+and this split will now happen with
+colon right because within the hours and
+this one colon is there
+so i'm going to split with the help of
+colon
+right
+so when i split with the help of colon
+it will be dot htr dot split dot
+htr of 0 if i write like this it will
+become my hour
+and similarly if i want to
+know the arrival
+minutes
+then i can basically write like this
+and here
+i will just write htr of one
+done
+and if i go and probably see now final
+underscore df
+dot head of one
+you will be able to see this one
+and here you have arrival of hour and
+minute
+remember this is still in
+object type so i also need to convert
+this into an integer type so same thing
+if i go up i had written that specific
+code how to do it i'll just copy this
+one like this
+okay i will copy the code over here and
+keep it over here and here i am going to
+basically write arrival of hour
+and convert this into in type
+and arrival minute
+and convert this into in type
+so two steps one is converting into n
+type is also done over here along with
+this so if i execute it
+you will be able to now see that
+if i write final underscore df dot info
+now you will be able to see that there
+are integer values added
+in arrival hour and arrival mean minutes
+so this is the code that i have actually
+written
+and then after that you can drop the
+arrival time
+so
+here i will write final underscore
+df.drop
+arrival time
+arrival underscore time
+comma axis is equal to
+1
+in place
+is equal to true
+step by step we are doing it in a nice
+way
+so i hope everybody is able to think
+so now if i probably go and see my final
+underscore df dot head of one record
+here you will be able to see these
+things are also there
+okay uh what about
+departure time i hope everybody will be
+able to do the same thing for the
+departure time just do it because
+departure is also having the same format
+so i'm just going to copy all the code
+paste it over here
+paste this also over here
+now paste this to line also over here
+and finally
+paste this also over here
+and keep it with respect to
+arrival time like that we had departure
+time right
+so i'm going to write departure
+time right depth time
+i'm going to copy this everywhere
+paste
+paste
+paste
+and here i'm going to basically write
+the pt hour
+pept minutes
+this i don't require
+dept
+hour
+and this will be my dept minute
+so just by doing this i think everybody
+will be able to understand that we are
+going to change it now
+yes that will also work on herod
+done
+oh error is coming let's see
+with base 10 20 to 10.
+[Music]
+oops
+this should be department of hour
+and department of
+maine
+so i don't have to execute this again
+so
+i will just
+remove this
+paste it away well done
+so it's final underscore df
+dot info now you will be able to see two
+more features getting added and it will
+be department of our
+and this one both will be there
+perfect we have done this now we have to
+take care of all these other things
+right airline and all are actually there
+so her departure is done
+now let's catch up route
+now inside this you will be able to see
+route
+is basically having this information
+like bangalore to delhi
+bangalore to delhi okay
+see anyhow over here you will be able to
+see that uh even though i basically find
+out like what is the route like route
+one two three four
+maximum to maximum over here you can see
+that there are
+two places like bangalore is the origin
+delhi is the destination here you have
+four different different places that
+basically means first you are going from
+kolkata to ixr then ixr to bbi then bbi
+to bangalore so total number of stops
+you have is two over here in this
+particular case you just have one stop
+so what we will do is that we will try
+to
+capture the route one route to all the
+all the places away over here in the
+source and destination you just have two
+values
+right number of
+stops you have to one like that you have
+right so it is better that we get this
+specific information very much clearly
+so that we actually
+be able to see route 1 route 2 route 3
+route 4 like that right so
+one thing that you need to know over
+here is that
+you may definitely get
+null values you may definitely get null
+values a lot of null values you may be
+getting
+but understand null values will be there
+for like if i want to capture for route
+4 definitely null values will be there
+okay
+instead of this also what we can do we
+can also delete this and we can just
+focus on this total number of stops
+right total stops like total underscore
+stops we can also focus on this
+particular values also so what do you
+think should we do
+should we delete this specific feature
+directly
+and just focus on
+because we have the source and the
+destination and obviously we have number
+of stops
+but
+i just think like as a person right we
+really need to focus on two things okay
+first of all is that if probably i'm
+going from kolkata to bangalore and
+these two places are going then the
+price might increase drastically
+okay just not based on the top of the
+number of stops now in this particular
+case you can see from delhi to cok right
+here you have lucknow and bombay lucknow
+in bombay
+you feel that probably more price will
+be taken place over there
+so
+just see what you need to do we can
+definitely drop this route you can just
+focus on total stops but before focusing
+on total stops what i'm actually going
+to write i'm going to basically say
+final underscore
+total
+total stops
+dot
+unique
+if i write unique
+let's see how many total stops are there
+so here you have
+non-stops non-stop basically means
+probably
+uh it's like just a single stop
+here you can see here you can basically
+replace this with 0 here you can replace
+with 2 here you can replace with 1
+3 this nand value if i try to see that
+there is one null value i guess
+is null
+dot sum
+so here you can see one nand value you
+can replace it
+uh
+which one is
+required with respect to that okay so
+so everybody focus on doing what we will
+try to convert this into and map these
+values with 0 1 2 3 4 5 like that
+tell me someone tell me the code
+amazing
+so rishi has already written the code so
+rishi has basically said something like
+this by using the map
+so here is my final underscore df
+final underscore df
+so final disco df total stops total
+stops dot map non-stop is equal to zero
+one stop is equal to 1 2 stops is equal
+to 2
+3 is this
+for nan also if you want to place place
+it out because there is only one nand
+value so for nan also i will make sure
+that
+i can directly see right which is that
+specific record
+wait
+i can definitely see which is that
+specific record for nan just a second
+df of
+total
+sorry
+final underscore df
+total stops dot
+um what i can do is that dot is null
+dot
+is null
+and here i can basically write final
+underscore df and i'll try to take out
+this specific values
+so here you can see route is nan but the
+total number of stops is also nan
+so total number of stops is also nan
+route is also nan
+so here you can see from delhi to cochin
+okay delhi to coaching i don't think so
+there will be a direct flight
+but which value do you want to replace
+with since it is just a single record
+i think it won't matter that much so let
+me do one thing let me just replace it
+with one stop
+or
+just common sense i think for coaching
+bangalore coaching at least one stop is
+required
+so like this i will just try to change
+it
+delete the coaching sorry
+so i have got executed now okay and now
+if i go and probably see my final
+underscore df
+dot head you will be able to see the
+specific values
+and
+here you can see total stops has been
+converted into integer floating value
+now we can drop this route column so
+final underscore df drop
+route
+i'm going to drop route from axis is
+equal to 1
+and in place is equal to true
+because i don't definitely require 2 2
+information right
+so finally you can see final underscore
+df dot head
+here you have all the values
+amazing
+now what is the next thing that you
+should probably want to do guys
+i've deleted everything right so we have
+department department
+departure hour also we have dropped
+total stops is also there
+let's catch up any other one you want to
+do
+additional info that all will be our
+normal uh
+feature engineering like transformation
+encoding we can do any special character
+if you if it is there somewhere probably
+we have to catch hold of that so if i
+write final underscore df
+and if i go ahead with additional info
+additional info dot
+unique how many unique values are there
+so here you can see this many unique
+values are there this can be converted
+into
+uh
+one hot encoded format because there are
+less number of records
+let me just check
+more anything that we can do with this
+data set anyone who wants to do some
+more things who wants to play with this
+data set who wants to
+tear apart the specific data set
+let me just see df dot
+final underscore df dot
+info now here you will be able to see
+all this are there additional
+information object that is fine
+duration is still there
+okay
+can we do something like convert this
+duration into something else
+nah duration into minutes i'm basically
+need to convert duration into minutes
+right so this this this this this i can
+basically apply a mathematical formula
+um
+i will just take this let's say
+come on try it out guys
+try it out
+so here i'm basically going to write
+duration
+oh this way
+2 hours 50 minutes can be mentioned as
+2.50 this will also be a good way
+um
+but what if i convert
+duration into minutes that would
+actually
+be amazing okay
+so here i'm basically going to say
+duration
+okay if i do split of zero that
+basically means i'm getting my answer as
+uh htr of zero
+split no
+if i use this blank space i'll be
+getting two hours okay
+two hours two hours
+and probably have to further split it
+down
+i have to further split it down
+because h is there
+okay h is there this is becoming a
+series right now
+if i do dot split
+with respect to h
+okay series does not have a split
+perfect
+so if i have like this
+duration two minutes sir can you run
+split it down with h
+just start replace dot replace will work
+over here
+see this becomes a series right now okay
+if i execute this
+and i'm actually getting something like
+this okay
+then if i write htr of
+zero
+comma zero
+no
+this will also not work zero
+zero zero zero
+come on anybody
+spring dot replace
+um this is a series okay
+this is a series
+this is a series guys understand we
+cannot do
+string dot something like that see if i
+go and probably see the type of this
+this will definitely become a series
+see it is a series
+i can search in the google
+okay search in the google
+series
+split
+pandas
+series pandas provide method to split uh
+series series hdr dot split
+str.split
+again i have to do dot htr dot split
+okay so here i'm going to basically
+write htr dot
+split
+and here i'm going to basically use h
+see i'm getting it right
+and then i can basically again write htr
+of 0
+so here i'm actually getting all the
+values
+this should be multiplied
+this should be converted into an integer
+no this will actually be
+okay
+so here i'm actually able to get all
+this information
+okay
+this will basically give me the hours
+if i want to convert this into
+minutes
+okay if i want to basically convert this
+into minutes what i have to do
+now this is entirely series if i want to
+convert this into minutes
+as type
+yeah as type can work
+dot ask type
+and
+no
+error is coming probably
+no it will not work but
+htr 0 will work
+so let's consider that i am converting
+this into df of
+duration
+underscore hour
+is equal to this one
+duration of hour
+final underscore df
+if i execute this
+final underscore
+df
+dot head
+so duration hour i have actually got
+so with the help of duration hour we
+will be able to do it okay
+but you also have to get the minutes
+because minutes are also very important
+but before that what i'm actually going
+to do i'm basically going to write
+our final df for
+dot info
+because i want to check
+whether
+there's still an object right so what
+i'm actually going to do
+i'm basically going to convert this as
+type
+okay
+final underscore df
+hey guys for me also same thing i am
+also facing the same difficulty what you
+face
+right but we need to think of an
+approach
+if you are able to think as an approach
+obviously that will get solved
+uh what is the error
+for end there is 5m
+somewhere
+somewhere 5m is there
+i hope i have done the syntax correct
+definitely 5 m is there somewhere
+5 ohm value is there
+final
+final underscore df of duration
+w is equal to
+5m
+final underscore df
+okay five minutes okay duration is also
+there for five minutes
+okay this is the problem
+but how how come five minutes
+mumbai to hyderabad will take only five
+minutes
+how this is possible
+it is better we drop this we drop this
+features
+right
+if i just use this
+is equal to this one
+not possible right so
+how how this will be possible
+so tell me if you want to remove this
+what you have to do
+alt
+halt duration okay
+all duration
+that is the total duration right
+yeah we have to probably drop these
+records right
+okay tell me how to drop these records
+now
+drop row axis zero
+okay perfect so if i write final
+underscore df dot drop
+and here i'm basically going to give my
+index number
+uh should i use i lock to drop it
+because here it will ask for labels so
+suppose if i give six four five
+seven four comma axis is equal to zero
+you'll be able to see that it will get
+executed
+right it is getting executed then
+let's say n place is equal to one
+and same thing i will probably do it for
+two six six zero
+two six six zero
+once a plane
+receive type as input for argument in
+place expected type boolean
+oh in place is equal to true
+so executed this is working fine now if
+i go and see this one i'm actually
+getting empty now okay
+so
+i have actually fixed this i will
+convert this into as in type done
+and then i will multiply this all by 60.
+multiply by
+60
+so here you can see i'm actually able to
+get this in the form of minutes
+or
+let it be an hour only then no problem
+if you don't want to do also it is fine
+at least hours will increase but if you
+are considering the minute part also so
+try to use that
+okay and try to convert that that is
+just given to you as an assignment
+please try to do for the minutes also
+try to get that specific data what i
+have done for minutes okay
+everybody you have to basically do it
+okay don't say that chris you did not do
+in the class so we are not going to do
+don't do it so here you have integer
+integer integer integer
+price is float additional info is object
+then you have duration now we can drop
+the duration
+final underscore df dot drop
+okay duration
+with axis is equal to 1
+okay and then in place
+is equal to 2
+so this is done why why why capital d
+capital d capital d
+okay duration done
+and then finally we have final
+underscore df dot
+head of
+one so here you can see i have all these
+things remaining all have been converted
+remaining all are category features so
+in order to do for the category features
+one we need to do simple we will try to
+first of all see with respect to
+airlines
+so
+uh
+airline
+dot
+unique if i try to see this
+how many are this specific airline
+final underscore df
+final underscore df so here you can see
+only this many airlines are there so we
+will try to do label encoding for all of
+them now in order to do the label
+encoding
+i will write from sk learn
+dot pre-processing
+dot pre-processing import
+label encoder
+many people are saying right krish why
+you are doing get dummies get dummies
+can also be done but since
+we
+try to work with train and test data so
+it is better to use the transform
+techniques right
+so here i'm going to basically use label
+encoder
+is equal to label encoder
+okay
+so label encoder is there
+and then finally you do it for every
+data set that you want like airline
+source destination
+and additional info so this four
+features so here you have final
+underscore df
+and here you can basically write
+airline
+airline
+okay
+label encoder
+dot fit underscore transform
+and here i'm basically going to give my
+feature
+that is final underscore dm
+on
+airline right so like this i have
+written for this now you do it for other
+feature also like this same way
+how many features are there for right
+then you have source
+source you can put it over here
+then you have destination
+and then finally you have additional
+info
+once you do this done
+and this is your final underscore df dot
+shape if i try to see there on 14
+columns which is good enough
+and if i want to probably see my
+final disco day dot
+head of first two records
+then you can see all these things
+perfect
+okay i've done just done label encoding
+you can also do
+other type of encoding that is one hot
+encoding
+it's okay guys i've done label encoding
+now one more step you can do is one hot
+encoding
+from sk learn dot
+pre-processing import
+one hot encoder just do it no
+kevin uh don't do it with get dummies
+because see whenever we have a test data
+we need to transform that test data
+right so we can save this
+encoder in the form of pickle file
+right
+so one hot encoder so o h e
+i'll write it as one hot encoder
+and then you can do the same thing
+where you're specifically saying
+this
+okay airline
+ohe dot fit transform
+okay
+and then you have all the necessary
+other information
+done
+okay
+do it
+okay i'm getting some error what is the
+error
+expected a 2d array
+expected a 2d array over here
+reshape your data
+okay i understood what is the problem
+what is the problem i understood
+[Music]
+how to give it as
+wait i will execute it in front of you
+till then just see what is the error
+that we are getting in this i have
+understood the error
+of it transform c if i execute this i
+will be getting an expected 2d array
+dot
+it is okay this is a series dot dot dot
+dot dot dot dot
+o h e transform n p dot treble
+yeah
+np dot rival okay
+but i don't think so this will work
+there will be an error
+expected a 2d array instead of getting
+one
+i can understand this i should not give
+this in the form of series
+okay that is the problem
+i should definitely not give in the form
+of series
+so if i write
+final
+underscore df of airline
+so here you can see that i'm getting in
+the form of series this should not be in
+the form of series
+use two brackets
+like this using
+oh but then it becomes something else
+here
+the double cases we are getting
+compressed sparse row format
+p dot array df of airline
+okay one way i can basically do over
+here is like np dot array
+final object dot
+reshape
+minus 1 comma 1
+same thing we are getting
+let's try this
+airlines
+doors
+so here will be source
+here will be destination
+and uh
+there will be additional info
+but i hope you are able to understand
+first one is ambiguous using get shape
+of zero
+ah this is one hot encoding we are doing
+already encoding is done
+wait wait wait wait let's see
+final underscore df
+dot head
+so this is one hot encoding so if i
+probably search for
+one hot encoding
+sql on
+let's see the documentation
+you are encoding many times
+no i did not encode many times i just
+encoded one time right
+so after encoding that value get has got
+converted to this right now
+if you go and see final underscore df
+final underscore df dot
+info so here you will be able to see
+that
+this is all converted into integer types
+okay
+i know i i should not had done this
+encoding separately like this fit
+transform instead of this i could have
+focused on
+one hot encoder it would have done it
+completely
+but it's okay let's do one thing then
+simple
+if this is not working
+i'm just going to do a very simple thing
+so i'm i'm basically going to do final
+underscore df
+of airline
+dot
+get underscore dummies
+get under the dummies is not there
+okay
+pd dot get dummies right
+sometimes syntax it's very difficult to
+remember all the syntax
+df of airline
+final df
+so let's go ahead and do this
+and then you will be able to get it
+try to create a different data frame
+let's say this is df1
+then i will create another data frame
+which is df2
+here i will say pd.get underscore
+dummies
+and then here basically write it as
+other column final underscore df of
+the next column that you wanted which
+one is the column that you are working
+on
+source
+destination and additional info
+then combine those data frame
+train data this is also nice
+will it work like this
+this is also a very good way
+see one single line they have written
+this will be my final underscore df
+columns are airline source destination
+and additional info
+sources
+additional info also
+and probably this will definitely work
+so what all things he has done is
+written pd dot get dummies final
+underscore df columns with this all name
+drop first is equal to true if i execute
+it here is all the values that you will
+be able to get it thank you all have a
+great day ahead and

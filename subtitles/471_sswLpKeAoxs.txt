@@ -1,0 +1,140 @@
+welcome to whiteboard programming, where we 
+simplify programming with easy to understand  
+whiteboard videos and today I'll be sharing 
+with you types of cloud storage, alongside  
+their meaning, individual advantages, and 
+disadvantages they offer... so let's get started!  
+when considering storing data in the cloud, you 
+have three main cloud storage types available to  
+choose from, the first one being, block storage, 
+which is a technology primarily used for storing  
+data files in cloud-based storage environments, 
+or on storage area networks (sans). in the cloud,  
+it is typically implemented through the attachment 
+of a virtual disk to a cloud-based virtual machine  
+to state the least, block storage uses the process 
+of breaking data into individual blocks, which can  
+then be stored as individual pieces. each data 
+block is given a unique identifier, which further  
+allows the storage system to place the smaller 
+pieces of data in the most efficient location.  
+and here, the approach itself involves storing 
+blocks across different systems, with each  
+block configured (or partitioned) to work with 
+a different operating system. this means blocks  
+of the same original data can be stored in both 
+a linux environment and a windows unit as well  
+further, by decoupling data from your user 
+environment, block storage allows the data  
+to be spread across multiple environments. 
+in creating such multiple paths to the data,  
+the process of retrieving data is accelerated. 
+so, here, if you or an application request data  
+from a block storage system, the data is 
+retrieved and reassembled by the underlying  
+storage system before being presented back to 
+you also, block storage is a popular choice in  
+modern data centers due to the advantages it 
+offers like higher performance, scalability,  
+ease of file modifications, and 
+operating system bootability....  
+but similarly, it does has its drawbacks as well, 
+which include issues related to server binding,  
+metadata limitations, and higher cost some of 
+the major use cases for block storage include  
+building transactional databases, email servers, 
+and virtual machine file system (or vmfs) volumes  
+next on the list, 2. object storage 
+or also known as object-based storage,  
+is a process that involves splitting data 
+files into individual chunks known as objects.  
+these objects are further stored in a single 
+self-contained repository and can be distributed  
+across multiple cloud-based servers and networked 
+systems here, each object is given a unique  
+identifier, which can be used by applications to 
+identify and retrieve objects when stored across a  
+distributed system. also, metadata is attached to 
+each object which contains important information.  
+this further can be extremely detailed and 
+can include information like object size,  
+date last modified, media type, and access rights 
+also, the flat structure of object storage makes  
+it efficient to store large quantities of data. 
+and it’s also possible to store any kind of data,  
+be it photos, videos, and log files as objects 
+with it further, a few of the major advantages of  
+object storage include reduced complexity, ease of 
+searchability, resiliency, and cost efficiency...  
+but similarly, object storage disadvantages 
+include no locking mechanism, inability to  
+use object storage services to back a traditional 
+database, operating systems can’t easily mount an  
+object storage like a normal disk and in 
+addition, object storage tends to be the  
+least well-performing of all storage modes 
+because of the heavier metadata overheads  
+some of the major use cases for object storage 
+include building iot data management systems,  
+disaster recovery storage, data 
+analytics and video surveillance  
+next, 3. file storage so, file storage in the 
+cloud is a hierarchical approach to storing data,  
+and is also known as file-level or file-based 
+storage. the process involves storing data in  
+files, then these files are arranged in folders, 
+which are then organized into directories and  
+subdirectories. for users and applications to 
+locate and retrieve a file, they will need to know  
+the pathway from the directory all the way through 
+to the folder and specific file. this information  
+is included in a set amount of metadata that 
+is attached to the file to state further,  
+file storage has a range of capabilities 
+and can store almost any type of data.  
+and just like with any computer, you can store a 
+range of complex files, and it’s fairly quick for  
+you to navigate. it’s also very easy to configure 
+wherein you can control access to files with user  
+rights, file locking, and other controls and if 
+seen from a technical approach, hierarchical file  
+storage performs well to a point. but do note that 
+once your file storage gets to a certain size,  
+you will begin to experience performance issues 
+with a slow-down in file retrieval. this is caused  
+by the constraints of only having a single pathway 
+to each file, which only continues to increase as  
+more folders, directories, and subdirectories 
+are added to the system and don't you worry  
+by the way, here, the nature of cloud systems 
+will allow you to mitigate these performance  
+issues to a certain extent. scaling too with file 
+storage system includes adding higher-capacity  
+virtual machines with additional compute power. 
+though, you may find it less efficient and more  
+expensive than if you were to instead opt for an 
+object or block storage approach for your system  
+some of the major use cases for file storage 
+include building financial modeling systems,  
+machine learning, application migrations, and 
+running web content management infrastructure  
+lastly, are you wondering which cloud storage 
+type you should use? well, the type of storage  
+selected affects the cost of the storage and how 
+easily you can access the data in the future.  
+organizations must account for factors like 
+cost, scalability, retrievability, security,  
+data volumes, and ease of management when 
+choosing any of the cloud storage types for  
+their use case. further, as new data types and 
+use cases arise, organizations must constantly  
+evaluate and optimize their storage types for 
+each subset of data. and accordingly, storage  
+strategies and decisions should continually 
+evolve as business needs and technology changes  
+with that, I hope this video was helpful to 
+you and served value. if you love my content,  
+feel free to smash that like button and if 
+you haven't already subscribed to my channel,  
+please do as it keeps me motivated and helps 
+me create more content like this for you

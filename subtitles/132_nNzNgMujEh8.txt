@@ -1,0 +1,704 @@
+all right so yes finally I'm bishar I'm
+having like overall so 12 plus years
+nearly like you know 14 years of
+experience in this multiple domains of
+experience currently I work in Google as
+a cyber security engineer and again mine
+is like completely Cloud sof security
+engineer and again where I need to go
+with like to like application security
+network security data security Cloud
+security un information security
+security under compliance and governance
+all the things I us to go with on this
+right so now one of the interesting
+topics we also doing with AI and ml data
+security how we can go with hand to hand
+implementations with the secure
+development life cycle policies so how
+can we use and again what the tools we
+can going to use for like know Ai and ml
+Concepts like know idas tools intr
+detection systems and again prevention
+system tools also we can use endpoint
+production systems like know example
+like a sentinel Microsoft Sentinel we
+can use that one and you can also like
+know security information and again
+event management tools we're using like
+know spunk here
+especially and again also like we using
+like know threat intelligence platforms
+like especially working with like threat
+connects I mean threat models especially
+and also like know fishing deductions
+and we are more focusing on like know
+data loss prevention techniques how can
+we prevent this one with the semantic so
+to understanding this semantic we should
+know first know secure development life
+cycle with data loss prevention policies
+those are like know how to identify for
+the data identifications with know
+financial
+data Phi datas know any kind of like how
+to implement with data protection roles
+like know preventive controls and
+monitoring controls and user roles and
+permission levels transfer policies
+levels and again incident responses
+levels all these things that will be
+this is like one of the major topics in
+the
+AIML this is one of the cyber security
+concepts with nowadays it is a newly
+implementing to the AIML because you
+these are the algorithms and again these
+are the models what came
+recently right so again we are going to
+use the tools here especially Splunk IBM
+C and also like we using like idps tools
+like core impact also right anyway that
+we will be discussing in the later point
+now uh last but least utkus so hi
+utkus hello
+hello
+hello are you
+there is it
+aible
+hello you're
+audible yeah exctly thank you mankos how
+about you
+I think is in
+M okay this is a demo class of
+completely cyber security and what the
+security and again you guys know that
+right so what are the Securities we are
+doing this implementations all these
+things now meanwhile to understand this
+areas what is cyber security first thing
+why we need to learn this cyber security
+and again what is the difference between
+cyber security and again ethal hacking
+all this
+play right and what are the types of
+sties we
+have all the things we can see
+now is it my screen is
+visible hello yeah it's a zoom actually
+yeah now came up okay we'll go with to
+understand with I make you to
+understand simple
+cyber security how PP and P send the
+documentations cyber security and list
+the types of cyber
+security simple
+okay so we have completely cyber
+security is nothing but in simple way to
+understand cyber security is a umbrella
+and in the umbrella when we open the
+umbrella there is a n number of threads
+will come H and spoke right those SP
+work are called as a network security
+application security information
+security endpoint security Cloud
+security identity access management and
+operational security disaster recovery
+and cryptography incident responses
+security awar training and again
+physical security and again is the data
+security here data security is like one
+more area
+Okay more I'll show this Lee think the
+types mobile security iot devices
+security yes this is what especially in
+the mod cases you should more deeper
+into the data security and again data L
+prevention stuff okay and P policies
+also all these things like we should
+practice on this right and again
+critical infos security how to maintain
+and again web security how to do this
+and again print testing again how to do
+this one assessment and can threat
+intelligence and blockchain and is one
+no need to do this yes forensic inent
+analysis this is very important and
+again red team and again blue team
+depending upon the which team you are
+going to work on this that is very
+important thing you need to understand
+and again identity access management and
+again governance level especially this
+is the top most priority section
+especially in the data L prion
+implementations right these are the
+types of Securities like example if I
+give like more still show
+me here comes like you know artificial
+intelligence am and again ml Securities
+involving like using Ai and machine
+learning algorithms to detect anomal and
+can predict threats automate responses
+so all this things
+Okay C if I show this small example on
+this
+case and
+ml this
+see this is what we need to focus like
+especially applications of AI and again
+ml security thre detections by default
+we can use snot tools any kind of Spun
+tools and you can also Juniper Networks
+all these
+things right and can fishing detections
+and again by default Mal Anis yes user
+and again entity Behavior analytics
+default vulnerab management World
+notability management thre intelligence
+all these things clear
+so this is what I end to end we focusing
+meanwhile
+here first thing we can go with the
+deeper level see
+network security in the firewall mode we
+can use this tools so follow hard and
+Cisco AI 4 we can download the free
+tools we can do with this firewalls we
+can use and again idps interion
+detection system prevention systems and
+again we can use this open source
+tools VPN we can use openvpn or cisq
+connect endpoint security we can use
+stic make Cafe and endpoint detection
+and ding we can use like Crow strike Pon
+or El
+Sentinal see right now we are using
+Sentinal here so okay one again I'll
+show this in my company sentinol see
+sentinol one is already it is installed
+C right so whatever I'm doing the
+tracking and again how to prevent this
+all theas will be pring it see I click
+on this
+Sentinel so it is already running but I
+don't want to open this one
+now right then again application
+security definitely we are going to use
+ver code sonar both and th we can use
+WhatsApp B both the rols and SSO we
+using SSO and Can Microsoft Azure with o
+l multiactor authentications yes we are
+using and in Pam also we going to use
+cber or all this tools but depending
+upon like which security you have to
+focus see as a cyber security engineer
+you should have all this knowledge but
+in a companies you'll be going to work
+only the specific domain if you
+application security working the
+application security
+and again data security team you'll be
+the data security team right then again
+incident responses team vulnerability
+management team thre intelligence team
+foreign investigation team security
+awareness training team something like
+know a and again ml teams see here
+thread detections see a ml what and all
+we are going to do thre detections
+insent responses also we can do fishing
+detections and malware Anis just I'm
+using the charart GPD to make you to
+understand what exactly the tools we are
+going to use and again here we are going
+to use all the tools this tools is
+commonly used for normal security also a
+ml tools also we going to use and again
+management again we can use like know
+either K security these are like know
+open source tools and can intelligence
+all
+this in the a ml only we having like
+thre detections insurent responses
+fishing detections malware analysis
+under vulnerability management all these
+things right
+any questions here up to
+here Vish are we going to learn about
+ethical hacking as well or is it comes
+under
+cyber security or a different domain no
+comes that is a different Ealing is
+different again it comes under only the
+cyber security how to prevent this all
+these things so all the domains we going
+to work in the all these domains we
+going to work in the a cloud see suppose
+we don't have un promis INF right now
+I'll show
+this all these
+tools
+compare all
+these types of
+and
+tools comparing this Azure gcp in table
+format
+example see suppose in the on
+premises
+okay for
+let see
+see these are the open source tools
+we're going to use like no snot if
+suppose network security in the databas
+Cloud suppose take an example in databas
+Cloud we can log into the databas cloud
+see now it is all what is the cloud
+basically cloud is a collection of
+domains if someone is working in the
+database domain if someone is working
+with the network domain how to make the
+network security data security and
+database security and the application
+security the on premises they will do
+but in the cloud multiple domains will
+be deployed there and you can how to do
+this all this domain
+security make it not one
+second yeah each and every tool we
+should learn network security identity
+access management data protections
+endpoint security thread detections and
+again responses application security
+compliance and governance one management
+inent responses encryptions monitoring
+loging so these are the tools these are
+the open source tools we going to use
+and on top of this open source
+tool on top of this open source tool
+we're going to use AWS property tools
+compare compare the tools
+for
+each types of
+Securities
+for Azure
+GC see example take an example network
+security open source tool where you're
+going to use snot and what is the
+benefit here inion detection and again
+prevention systems detects and again
+prevent insurances uses what is use
+cases protects Network and again from
+Mal no is suppose I'm going to use notot
+every day and again this C also we can
+going to use this one for container
+applications definitely we are going to
+use
+snot snot and again key clock open L we
+are going to use this two for Iden
+access management for data Pro open SSL
+j&v PG also two things we can use
+endpoint security definitely CC and
+again CS we're going to use open DXL and
+in the I we can use application security
+two things I'm going to use here open Z
+and again busit Cloud security scan if
+you want we can use and again compliance
+and
+governance we can use
+here open
+SC and sc one Management Open b n to
+both instant expenses again the I only
+and encrytion SSL from this Gra
+suppose on top of this we also need to
+learn like there's a sad Cloud if I
+click on this so
+suppose if I click on cloud security
+post management cloud mapper and again
+configurations of this and again
+security monkey and
+okay okay see this also we should learn
+here see Cloud security post management
+this is a open source tool Cloud we
+should use and you can also cloud map
+this is helps you to analyze your head
+services within the diagram and will be
+finding the complet one the output looks
+like this okay then again CCPA is
+nothing but C right confidential
+Integrity availability right so how to
+use this one all these cases next Cloud
+mapper it is a security monkey monitor
+for red gcp and open
+St clear the output looks like this
+and again last one security
+TOS cloud
+mapper cloud mapper is already a
+shown yes Cloud
+mapper this show
+F okay
+now this the types of
+Securities
+inws Azure gcp and open source
+tools
+equalent yes see now it CES perfect so
+now open source snot surata pfSense if
+we use the snot in the code we going to
+use Ed firewall manager Shar with Shi in
+the Azure Azure firewall Azure D and the
+Google code Google code armor and VPC
+service control
+okay the thing is why today the market
+is more important in the cloud security
+because all the companies are moving to
+the cloud and even though in the
+government sees they Appo the
+application to the cloud areas right so
+that's why in the a this Services we
+should learn but here I'm going to take
+two clouds one is another one is either
+JP either azure here and again identity
+accessment first we should learn open
+source tool how to use this one key
+clock open ad app then again in I
+am am how to use and C how to use for
+that you should know basic understanding
+of the Aus
+Cloud play right
+everyone what is the prerequisite for
+this uh
+training the prerequisite you should
+know one of the thing mainly OS layer OS
+basic networking skills we should have
+and again basic operating system skills
+we should have and again basic python
+scripting we should have on top of that
+if I if I'm opening the network security
+the end to end CCNA knowledge we should
+have that will be covered here
+only clear
+it yes clear clear hello yes with yes
+sir are we going to learn
+metwork yes default tools metal spit B
+suit snot right and again all the open
+source tools and again all the open
+source source tools how to implement
+into the a cloud those are completely
+Cloud Securities with a multiple domains
+with open source
+tools okay okay sir
+right yes sir
+do do you have a day wise syllabus or
+something where we can go through like
+know how
+it know continue how we'll continue it
+are you guys planning for weekend bches
+or weekday bches if it is all
+well actually uh see I'll tell you as
+for seeing the syllabus whatever you
+like know that is that is I feel that is
+like know pretty big so I don't think
+that 10 weekend batches will or five
+weekend batches will accomodate
+everything I think weekday batches only
+I'll be looking for so anything you are
+like is there please let me know yeah
+please you know one thing cyber security
+is a vast area and in meanwhile network
+security minimum it will takes two two
+weeks because I want to understand how
+to use the open source tools and yes I
+can understand like by using the open
+source tools this is good now now if I
+use the load how to implement the open
+source tools and also how to use the AWS
+prerequisite AWS property tools how to
+use network security two weeks identity
+access management two weeks at least one
+week for that data production one week
+endpoint security exactly three days we
+required thre detection and responses 3
+days application security we required
+like one week compliance and governance
+3 days is enough vulnerability
+management teams two days is enough
+inent responses two days encryptions
+definitely request minimum 3 to four
+days monitoring logging it requ know one
+day but to implement and again to
+capture it but this is more again
+compliance governance one more and again
+perameter security physical security
+Cloud security there like any number of
+security suppose take an example now as
+a udai yes boss I don't want to learn
+all the Securities I want to focus only
+that is a mo requirement I want to focus
+only data productions for this data
+Productions how long it will take for
+this data Productions I can take only
+three weekends that's like two weekends
+two two hours classes three weekends but
+cyber security why I made with a less
+package of 15,000 rupes to learn all the
+Securities because you guys today is a
+world because whichever the field might
+be get what is it lesser jobs or there
+might be like a lot of firing but
+especially in the cyber security it will
+be keep on extending the jobs more and
+more right now in India less skilled
+people especially in the government
+sectors they require more cyber security
+engineer
+if we have this cyber security tag we
+can rule like anything for that we
+should understand like end to end cyber
+security types C right after that
+ethical acing see this is the cyber
+security we should use all the tools why
+we are going to use all the tools
+because whatever I did suppose if I
+created a network suppose take an
+example if I created a Willa in my place
+for that Willa if I kept the compound
+whether that compound is correct or not
+and again if anyone is penetrating my
+compound wall or not and again if anyone
+is if anyone is jumping to the my
+compound how many of them are jumping
+and how to know all the things we are
+doing with a physical security right
+that physical security we dealing with
+either security either security guards
+either CCTV cameras but in this case if
+I create a application suppose take an
+example data Productions in the data
+Productions if I get the data from the
+banking database how can the data will
+be transferred with the secure mode so
+for that we should know the encryptions
+and again withl format so those are the
+things we should understand this are the
+very very prerequisite to get the
+knowledge play right this is like
+maximum as a weekend batches if you want
+to join weekend batches also we can join
+or else if you want to join to my
+personal batches the same fees also here
+that will be 9 months sorry 3
+months
+right what are the timings for your
+batch no if because already two batches
+are running the morning batch it is one
+week is over for that but if you guys
+are okay to join
+everyone so I planning for like know
+night
+time in my IST night
+time around what time to what time Bally
+so night time of the timings will be uh
+I'm planning for like uh 10:30 I mean
+yeah 10 p.m. to 11:00 p.m. 10 p.m. to
+11:30
+p.m. you don't have anything like now
+little before like 6:30 7:00 around
+there is availability time but you know
+I'm doing with one data list dat classes
+there it is the ending of like you know
+after five days it will keep on ending
+that in that batch if you want I can
+schedle that Tims 6:30 to
+7:30 uh I think that is suitable for
+me how about
+moan sir but uh if if we skip any
+session then we will recording sorry if
+I am unable to join the session
+and we will get recorded recorded video
+yes s this will be regularly will be
+available okay then no
+problem
+ready how about
+moan evening 6:30 to 7:30 right yeah 72
+8:30 we can plan it like this yeah 728
+8:30 that
+I'm okay with that okay then
+udk
+omaran yeah I'm also okay yeah for you
+also right yeah yes
+yes one one more question I have sorry
+one more question I have actually like
+know you have a syllabus like know PDF
+or something can you put it on chat or
+something we'll download it and see and
+second thing what is the prerequisite in
+terms of Hardware or anything else like
+know required so you have to inform us
+so we have to arrange or something like
+that yeah so now the hardware is you
+should have a good laptop there and and
+again for network security one
+management no need to buy any rotor
+switches just everything we can use in
+the CL because in the a load everything
+there is a multiple domain see be
+devops dat Ops MLS
+wish
+password three four
+pass see here we do have multiple
+domains here we have multiple domains
+suppose if I take the one domain
+networking content domain in this
+networking content domain I want to I'm
+going to share my knowledge on premises
+tool how to implement and again
+meanwhile you should understand the if
+it is if I'm working with the networking
+level how the UN premises networking
+routers switches how they configure
+subnets how they configure public IPS
+and again private subnets all these
+things we can go with like VPC level R
+53 private gateways all these things
+first I will show this one then again
+after that I will go to that for each
+domain this is one
+thing
+it yes correct
+okay I'll share my syab one second
+syllabus I
+kept now the sessions will be conducted
+on week days right yes yes so if you
+want like not tomorrow like on small
+demo if you want to see with the
+practically we can also see thator
+practically if you guys sfed you guys
+can pay the Fe to the d s and actually
+my personal bades I charge nearly 65,000
+for three month three and half months of
+this completely service security with
+multiple but the soft is my
+collaboration I mean NE so that's why
+know he's telling that to support so
+that's why the same pH I'm taking and
+again I'm merging my personal students
+and I'm merging this dof students and
+again there's there's no P discussion
+only the technical challenges
+discussions and again the more advanced
+technology discussion that is what like
+I'm doing this
+and okay
+okay because generally my personal
+batches I do stay in Bangalore I charge
+for each stent 65,000 with the security
+three and a half
+months but luckily your bches like three
+to four members will be there extra
+please uh don't communicate with this
+what that Financial
+stuff sure sure no problem we will not
+what are the career opportunities in Cy
+sec I'm now playing the delivery
+Ro
+sorry carer opportunities like how we
+can grow in this okay I want to
+understand know small thing uh in which
+domain currently you are in I mean what
+is the role you are
+handling I'm currently playing a
+delivery manager role managing a
+projects for uh retail supply chain the
+applications are uh built on Java micros
+services and the server application
+everything is posted on your cloud and
+uh they are also you know supporting
+products for demand forecasting and
+generation order generation and we are
+also exploring AI tools and uh building
+a small a
+application know managing all the
+projects
+okay got it got
+it
+okay so it's me CLE so don't worry about
+that I understand the career opportunity
+will be like huge career opties and
+especially you are a delivery manager
+and In This Cloud Securities you can
+learn all the cyber security types and
+the tools and how to do this what is iel
+but I understand as a delivery manager
+there's no time to learn like end of the
+year meanwhile you can have intermediate
+knowledge and again the high level
+knowledge on this and again as a
+delivery manager right now in the
+industry especially in the cloud
+security they required like more
+compliance and governance in that domain
+you can go that is also the part of
+cyber security there that is also one of
+the type of security if you know
+application security network security
+data L preventions and data security and
+Endo security compliance and governance
+this five out of 18 18 to 20 types of
+security these five types of security if
+you have there's a huge demand in the
+market and you can double the package
+example if your packages 40 at least you
+can demand like now 50 percentage
+minimum 75
+plus so for that if you want any kind of
+for that if you want like any kind of
+instructions all these things I'll be
+supporting for
+that and will you also support to
+prepare any certification in this B
+yeah CSP you can go
+that see right now example there's one
+real time scenario yesterday in my one
+of the cloud I have launched like 10
+servers in one server I got like know
+this are the one I want to find out
+which servers and again I need to update
+like all the patches here like this for
+that the is asking like one of the good
+question what is the prequit yes
+operating system Linux should be know
+you should know like thly L commands and
+in the second thing you should know
+networking basic commands networking
+Concepts basic Linux commands basic
+Linux voice and in the basic python
+scripting and all the Securities that's
+what I know the first two weeks I'm
+taking the basic networking Concepts
+understanding and in the operating
+system Linux commands all these things
+right yeah thanks yes clear yes sir if
+he doesn't know that one then no need to
+learn service security because please
+see right now I'm finding the one vulner
+here right so to find out this one one
+vulner they're telling that like we
+should install this patch we should
+update this patches and again I cannot
+able to copy like one by one line and
+again I can run write a python code to
+to install all the patches at the
+time right so that's why the first tutor
+is the basic Linux basic Lin supporting
+system concept networking Concepts then
+again basic python introduction and
+again meanwhile some shell scripting
+then again we can go with like know our
+application Security One topic network
+security one topic data security one
+topic and INF Security One topic
+information security other topic and
+again Cloud security all these
+things thank you everyone so we'll
+connect again tomorrow and again we'll
+understand this Concepts okay

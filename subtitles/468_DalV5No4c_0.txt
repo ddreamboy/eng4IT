@@ -1,0 +1,340 @@
+hey my name is Felipe and welcome to my 
+channel, in this video I'm going to show  
+you a fully comprehensive computer vision roadmap 
+I'm going to show you all the skills you should  
+learn to become a computer vision engineer
+and all the different ways 
+in which you can specialize in computer vision
+and I'm also giving you very specific resources 
+you can use in order to learn all the skills 
+I show you in this roadmap and now let's get started
+so let's get started with 
+this computer vision roadmap, in this
+video I'm going to show you an entire roadmap in 
+order to go from zero from scratch from having  
+absolutely no background in IT whatsoever up to a 
+complete expert computer visual engineer so let's  
+get started the first step you should follow 
+in this roadmap is covering the fundamentals  
+and when I say fundamentals I mean Python and 
+opencv these two skills are definitely the most  
+important skills you should start with in order to 
+become a computer vision engineer, and this video,  
+this computer vision roadmap is an updated version 
+of one of my previous videos, and in this version  
+I have added some specific resources you can take 
+you can follow in order to learn all the different  
+skills I am going to show you in this roadmap so 
+in order to Learn Python and in order to learn OpenCV  
+you can take a look at these two resources I have 
+added over here and regarding opencv this is a  
+three hours long fully comprehensive course of 
+opencv with python and I definitely recommend  
+you to check out this course but if you do not 
+have three hours in order to take this course  
+then these are the most important lessons you 
+should take in order to cover the basics of  
+opencv with python so if you do have three hours 
+then please take a... take a look at this course but  
+if you do not don't worry you can just take some 
+of these lessons and you are going to cover the  
+most important aspects of opencv with python so 
+this is the first step you should take in order to  
+learn computer vision, in order to become a computer 
+vision engineer and now let's continue the next  
+step in this roadmap is the basics of machine 
+learning, machine learning is very very very  
+important in computer vision and these are the 
+most important things you should learn, these are  
+the four most important tasks in computer vision 
+image classification object detection semantic  
+segmentation and pose detection and this is the 
+way I recommend you to learn machine learning by  
+learning how to solve these four very specific 
+problems, these four very specific tasks, so by  
+learning how to build an image classifier how to 
+build an object detector how to build a semantic  
+segmentation algorithm and how to build a pose 
+detector oh my God you will have learned so much  
+machine learning and you will be super super 
+proficient in machine learning these are the  
+most important machine learning tasks in computer 
+vision and these are some very specific resources  
+you could use in order to learn how to solve 
+these problems right these are some courses  
+and some tutorials I recommend you in order to 
+solve these problems in order to learn how to  
+solve these problems and by doing so by solving 
+these problems you are going to learn how to use  
+some very specific tools which are... let me show you 
+scikit learn yolo V8 yolo nas pytorch tensorflow  
+and many many many more tools and please pay 
+attention because this is very very very important  
+these are the tools we use in order to solve these 
+problems right but the important thing is not the  
+tools we use the important thing is the problems 
+we are solving by using the tools right so my  
+recommendation for you is do not focus on learning 
+how to use the very specific tools but focus on  
+how you are going to solve each one of these 
+problems and by doing so you are going to learn  
+how to use different tools right my recommendation 
+for you is do not focus on learning the tools  
+focus on learning how to solve these very specific 
+problems but if you are one of those people who  
+prefer to learn the tools that's perfectly fine 
+I have also added some resources for you right  
+because I know we all have different preferences 
+so if you prefer to learn how to use the  
+tools these are some resources you could use right 
+but remember my recommendation is do not focus on  
+the tools focus on how you're going to solve 
+the high level problems image classification  
+object detection semantic segmentation and pose 
+detection which are perhaps the most important  
+machine learning problems in computer vision now 
+let's continue and you can see that from here from  
+basic machine learning you can take it in either 
+one of these two paths let's take it over here for  
+now and later on I'm going to show you what's 
+over here so following this path we have the  
+specialization right now that you feel confident 
+in Python and opencv, now that you have learned  
+the basics of machine learning now it's time to 
+specialize right and you have many different ways  
+to specialize one of these different ways is low 
+level programming and electronics which basically  
+involves C++ and how to work with an 
+edge device for example Arduino or jetson nano  
+and the reason this is one of the ways in which 
+you can specialize in computer vision is because  
+although C++ is a very very very important 
+programming language you can definitely take up  
+many projects as a computer vision engineer 
+and you can just become a computer vision  
+engineer without really doing anything related 
+to low level programming or anything related to  
+electronics right it's perfectly possible so this 
+is one of the ways in which you can specialize if  
+you want to go deep into low level programming if 
+you want to go deep into working with electronics  
+working with robotics for example then you can 
+just specialize and you can do it learning C++  
+and learning how to work with this type of 
+edge devices now another way in which you can  
+specialize is by taking the research path 
+right, by doing research and this  
+involves learning very advanced machine learning 
+and also very advanced mathematics there's a huge  
+misconception in computer vision which is that you 
+definitely need very advanced mathematics and you  
+differently need to know how to work with very 
+Advanced mathematical objects and operations in  
+order to do computer vision and that is not true 
+that's a misconception that is false I can tell  
+you that you can definitely work in the field as 
+a computer vision engineer and you can definitely  
+take many many projects and you can definitely 
+make a lot of money as a computer visual engineer  
+by knowing Python opencv and the basics of machine 
+learning only by knowing these skills you will be  
+able to solve the machine learning part of many 
+many projects and you will be able to solve many  
+projects. Knowing the advanced mathematics and 
+the advanced machine learning and the advanced  
+everything is not absolutely needed that's why this 
+is... I consider this is one of the ways in which you  
+can specialize right and if you want to take this 
+route these are some very specific resources you  
+could take right and I forgot to mention these 
+are some very specific resources you can follow  
+in order to learn this other way to specialize in 
+computer vision which is low level programming and  
+electronics but let's continue now let's take 
+it to the other way which you can specialize  
+which is generative Ai and this basically involves 
+image generation and also text generation right this is  
+something that I would say it's huge already 
+it's already a very very important field in  
+computer vision and my thoughts are that in the 
+next few years this is going to be bigger and  
+bigger this is going to be a very very important 
+field in computer vision and these are some very  
+specific tutorials from my own YouTube channel 
+you can take in order to learn how to work with  
+image generation and text generation in a computer 
+vision project now let's continue these are  
+some of the ways in which you can specialize 
+in computer vision these are definitely not  
+all the ways in which you can specialize there 
+could be other ways but I think these are some  
+of the most important paths you could take as 
+a computer vision engineer but now let's take  
+it back remember that from basic machine 
+learning we could take another path right let's  
+see what's over here and this is where we have 
+all the software related skills right because  
+remember as a computer vision engineer you are 
+not working on a vacuum right you are working  
+with other software developers you are building 
+products you are doing some things which involve  
+software so the more you know about software 
+the more software related skills you may have  
+is going to be much much more better for you 
+and these are some very specific examples of  
+some very specific software skills which are very 
+important in computer vision as a computer vision  
+engineer you definitely need to know how to work 
+with a Version Control software for example GitHub  
+you'll definitely need to know how to work with 
+Docker is going to be a plus for sure in your  
+career if you know how to work with Docker it's 
+very important you know how to work with a cloud  
+provider with a cloud development platform for 
+example AWS Google cloud or Azure and it's also  
+a plus it's something very important if you are 
+familiar with web development technologies let me  
+tell you a very quick story about me about myself 
+when I was just starting in computer vision I  
+completely underestimated how important it is all 
+these software related skills and I thought that  
+by learning Python opencv and the Very basics 
+of machine learning the very Basics by learning  
+how to build an image classifier, the very basics 
+of machine learning I was all set I was ready to  
+work in the top companies in the field to work 
+in Google in Tesla in SpaceX... I thought I  
+was ready, that was all, that was it, and I was 
+wrong I was so so super wrong for many different  
+reasons and one of them is because I completely 
+underestimated all these software related skills  
+if you are going to work in computer vision 
+you'll definitely need to know something other  
+than computer vision and this is very important 
+because this is very often underestimated by many  
+people in the computer vision industry or in 
+the machine learning industry there are many  
+people who believe who think that by learning 
+the basics of machine learning that's it  
+that's not all if you're going to work in the 
+field or you need to know something other than  
+computer vision and these are some very specific 
+resources you could take in order to learn all  
+these skills and also remember that working in a 
+company as an employee it's only one of the many  
+many different career choices you can take in your 
+professional career you could also be something  
+like a freelancer, a freelance computer vision 
+engineer, and if you decide to be a freelancer  
+and a client hires you to do something like 
+building a machine learning model, building  
+an object detector and serving this model through 
+an API and you tell the client 'okay I can help  
+you building the model but in order to serve it 
+through the API hire someone else because I don't  
+even know what's an API' the client is going to 
+say something like 'oh okay okay I am going to  
+hire someone else, I'm going to hire someone else 
+to do the entire project is going to be much more  
+affordable it's going to be much more easier to 
+manage than if I hire many different developers  
+to make each one of the tasks in this project' so 
+this is especially the case if you decide to be  
+something like a freelancer because the moment 
+you tell your client you don't know how to do  
+something the moment this client replaces you by 
+someone else so this is very important if you want  
+to be a freelancer as well now let's continue 
+I have already show you the entire roadmap you  
+should take in order to become a computer vision 
+engineer with very specific resources and I have  
+also shown you all the different ways in which 
+you can specialize as a computer visual engineer  
+now let's continue because now it's time to 
+show you how to enhance your skillset, how to  
+grow your skills and one of the ways in which you 
+can grow your skills as a computer vision engineer  
+is by working on projects by making projects by 
+doing projects by hands-on experience working  
+on projects and there are two different ways in 
+which you can do that one of them is by following  
+coding tutorials and projects in YouTube, 
+and there are many many projects you can take you  
+can do on YouTube these are only a few examples 
+of some of my tutorials of my projects in this  
+YouTube channel and you can also take many paid 
+courses right if you want to take your skills a  
+step further if you really want to become like 
+an absolute expert then you also have many paid  
+resources you could use in order to enhance your 
+skillset even further right and these are only  
+a few examples also from my own paid products for 
+example this is a project which is available in my  
+Patreon and in this project I show you the entire 
+process of how to build a video summarization API  
+I take you from the requirements up to the project 
+deliverable and I show you every single step of  
+this process how to do the planning how to do the 
+system design how to work in the execution every  
+single step of this process and this is exactly 
+how a real world computer vision project looks like,
+then this is another example this is also 
+available my Patreon and this is a very Advanced lesson  
+on how to train a machine learning model and it 
+involves how to control the randomness when you  
+are training a machine learning model this is 
+a very very Advanced lesson and these are a few  
+resources you will take in order to enhance your 
+skillset as a computer vision engineer and then  
+you also have other resources and in these other 
+resources are for example books you could read  
+books on computer vision in order to improve 
+your skill set as a computer vision engineer  
+these are only a few examples of some of the books 
+you could read in order to become a super absolute  
+expert computer vision engineer then another very 
+interesting resource is joining a community and  
+these are some examples this Discord server is 
+this YouTube channel Discord server right this is  
+our community and this is a very very interesting 
+resource the way usually work is that the members  
+of our community post the projects in which 
+they are currently working in and everyone else  
+recommend this user different things he or she can 
+do with his or her project we say something like  
+hey have you tried to do this have you tried to 
+do the other thing have you tried to do this with  
+the data I don't know we collaborate in many 
+different ways so we help everyone with their  
+computer vision projects this is a very very very 
+interesting resource in order to go deeper into  
+your knowledge of computer vision then these 
+are some subreddits you could consider, computer  
+vision, machine learning, these are some super 
+high levels subreddits but you also have  
+many other subreddits which are very very valuable 
+in order to learn more about a very very specific  
+niche for example this one about stable diffusion 
+I have used this subreddit a lot lately because I  
+have been learning a lot about stable diffusion and 
+this subreddit is perhaps one of the most valuable  
+resources in order to learn stable diffusion 
+so these are only a few examples of some of the  
+communities and some of the subreddits you could 
+use and then another very interesting resource in  
+order to go deeper into your computer vision 
+knowledge is joining a competition, competing  
+with other people that's oh my God that's going 
+to take your skill set a step further for sure in  
+order to do so I recommend you to use kaggle 
+which is perhaps the most important and the  
+most relevant site in order to do competitive 
+computer vision in order to join a competition  
+in which you have to train a computer vision 
+model and compete against other competitors so  
+this is going to be all for this computer vision 
+roadmap please let me know what you think in the  
+comments below if you enjoyed this video I invite 
+you to click the like button and I also invite you  
+to subscribe to my channel this is going to be 
+all for this video and see you on my next video

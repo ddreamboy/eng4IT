@@ -1,0 +1,1245 @@
+hey my name is Felipe and welcome to my channel 
+in this video we are going to train an object  
+detector using yolo V8 and I'm going to walk you 
+step by step through the entire process from how  
+to collect the data you need in order to train an 
+object detector how to annotate the data using a  
+computer vision annotation tool how to structure 
+the data into the exact format you need in order  
+to use yolo V8, how to do the training and 
+I'm going to show you two different ways to  
+do it; from your local environment and also from 
+a Google collab and how to test the performance  
+ofthea model you trained so this is going to be 
+a super comprehensive step-by-step guide of  
+everything you need to know in order to train 
+an object detector using yolo v8 on your own  
+custom data set so let's get started so let's 
+start with this tutorial let's start with this  
+process and the first thing we need to do is to 
+collect data the data collection is the first step  
+in this process remember that if you want to train 
+an object detector or any type of machine learning  
+model you definitely need data, the algorithm, the
+specific algorithm you're going to use in this  
+case yolo V8 is very very important but the data 
+is as important as the algorithm if you don't have  
+data you cannot train any machine learning model 
+that's very important so let me show you the data  
+I am going to use in this process these are some 
+images I have  
+downloaded and which I'm going to use in order 
+to train this object detector and let me show  
+you a few of them these are some images of alpacas 
+this is an alpaca data set I have downloaded for  
+today's tutorial and you can see these are all 
+images containing alpacas in different postures  
+and in different situations right so this is 
+exactly the data I am going to use in this process  
+but obviously you could use whatever data set you 
+want you could use exactly the same data set I am  
+going to use or you can just collect the data 
+yourself you could just take your cell phone or  
+your camera or whatever and you can just take the 
+pictures the photos the images you are going  
+to use you can just do your own data collection 
+or something else you could do is to just use a  
+a publicly available data set so let 
+me show you this data set this is the open image  
+dataset version 7 and this is a dataset which is 
+publicly available and you can definitely use it  
+in order to work on today's tutorial in order to 
+train the object detector we are going to train  
+on todays tutorial so let me show you how it looks 
+like if I go to explore and I select detection  
+uh you can see that I'm going to unselect all 
+these options you can see that this is a huge  
+data set containing many many many many many 
+many many many categories I don't know how  
+many but they are many this is a huge data set 
+it contains millions of images, hundreds of  
+thousands if not millions of annotations thousands 
+of categories this is a super super huge data set  
+and you can see that you have many many different 
+categories now we are looking at trumpet and you  
+can see these are different images with trumpets 
+and from each one of these images we have a  
+bounding box around the trumpet and if I show you 
+another one for example we also have Beetle and in  
+this category you can see we have many different 
+images from many different type of beetles so  
+this is another example or if I show you this one 
+which is bottle and we have many different images  
+containing bottles for example there you can see 
+many different type of bottles and in all cases we  
+have a bounding box around the bottle and I could
+show you I don't know how many examples because  
+there are many many many different categories 
+so remember the first step in this process is  
+the data collection this is the data I am going 
+to to use in this project which is a dataset  
+of alpacas and you can use the exact same data 
+I am using if you want to you can use the same  
+data set of alpacas or you can just collect your 
+own data set by using your cell phone your camera  
+or something like that or you can also download 
+the images from a publicly available dataset  
+for example the open images dataset version 7. if you 
+decide to use open images dataset version 7 let  
+me show you another category which is alpaca this 
+is exactly from where I have downloaded all of the  
+images of alpacas so if in case you decide to use 
+this publicly available data set I can provide you  
+with a couple of scripts I have used in order to 
+download all this data in order to parse through  
+all the different annotations and to 
+format this data in the exact format we need  
+in order to work on today's tutorial so in case 
+you decide to use open image data set I am going  
+to give you a couple of scripts which are going to 
+be super super useful for you so that's that's all  
+I can say about the data collection remember you 
+need to collect data if you want to train an object  
+detector and you have all those different ways 
+to do it and all these different categories and  
+all these different options so now let's move on 
+to the next step and now let's continue with the  
+data annotation you have collected a lot of images 
+as I have over here you have a lot of images which  
+you have collected yourself or maybe you have 
+downloaded this data from a publicly available  
+data set and now it's the time to annotate this 
+data set maybe you were lucky enough when you were  
+creating the dataset and maybe this data set you 
+are using is already annotated maybe you already  
+have all the bounding boxes from all of your 
+objects from all your categories maybe that's  
+the case so you don't really need to annotate your 
+data but in any other case for example if you were  
+using a custom data set, a dataset you have collected 
+yourself with your own cell phone your camera and  
+so on something you have collected in that case 
+you definitely need to annotate your data so in  
+order to make this process more comprehensive in 
+order to show you like the entire process let me  
+show you as well how to annotate data so we are 
+going to use this tool which is CVAT this is a  
+labeling tool I have used it many many times in 
+many projects I would say it's one of my favorite  
+tools I have used pretty much absolutely all 
+the object detection computer vision related  
+annotation tools I have used maybe I haven't used 
+them all but I have used many many of them and if  
+you are familiar with annotation tools you would 
+know that there are many many of them and none of  
+them is perfect I will say all of the different 
+annotation tools have their advantages and their  
+disadvantages and for some situations you prefer 
+to use one of them and for other situations it's  
+better to use another one CVAT has many advantages 
+and it also has a few disadvantages I'm not saying  
+it's perfect but nevertheless this is a tool I 
+have used in many projects and I really really  
+like it so let me show you how to use it you 
+have to go to cvat.ai and then you select try  
+for free there are different pricing options 
+but if you are going to work on your own or or  
+in a very small team you 
+can definitely use the free version so I have  
+already logged in this is already logged into my 
+account but if you don't have an account then you  
+will have to create a new one  so you 
+you're going to see like a sign up page and you  
+can just create a new account and then you can 
+just logged in into that account so once you are  
+logged into this annotation tool you need to 
+go to projects and then create a new one I'm  
+going to create a project which is called alpaca 
+detector because this is the project I am going  
+to be working in and I'm going to add a label 
+which in my case is going to be only one label  
+which is alpaca and then that's pretty much all 
+submit and open I have created the project it has  
+one label which is alpaca remember if your project 
+has many many different labels add all the labels  
+you need, and then I will go here which is create 
+a new task I am going to create a new annotation  
+task and I'm going to call this task something 
+like alpaca detector annotation task zero zero one  
+this is from the project alpaca detector and this 
+will take all the labels from that project now  
+you need to upload all the images you are going to 
+annotate so in my case I'm obviously not going to  
+annotate all the images because you can see these 
+are too many images and it doesn't make any sense  
+to annotate all these images in this video These 
+are 452 images so I'm not going to annotate them  
+all but I'm going to select a few in order to show 
+you how exactly this annotation tool works and how  
+exactly you can use it in your project also in my 
+case as I have already as I have downloaded these  
+images from a publicly available data set from 
+the open images dataset version 7 I already  
+have the annotations I already have all the 
+bounding boxes so in my case I don't really need  
+to annotate this data because I already have the 
+annotations but I'm going to pretend I don't so  
+I can just label a few images and I can show you 
+how it works so now I go back here and I'm just  
+going to select something like this many images 
+right yeah I'm just going to select this many  
+images I'm going to open these images and then 
+I'm going to click on submit and open right so  
+this is going to create this task and at the same 
+time it's going to open this task so we can start  
+working on our annotation process okay so this is 
+the task I have just created I'm going to click  
+here in job number and this and the job number 
+and this will open all the images and now I'm  
+going to start annotating all these images so we 
+are working on an object detection problem so we  
+are going to annotate bounding boxes we need to 
+go here and for example if we will be detecting  
+many different categories we would select what 
+is the category we are going to label now and and that's  
+it in my case I'm going to label always the same 
+category which is alpaca so I don't really need to  
+do anything here so I'm going to select shape 
+and let me show you how I do it I'm going to  
+click in the upper left corner and then in the 
+bottom right corner so the idea is to enclose the  
+object and only the object right the idea is to 
+draw a bonding box around the object 
+you only want to enclose this object 
+and you can see that we have other animals in the  
+back right we have other alpacas so I'm just going 
+to label them too and there is a shortcut which is  
+pressing the letter N and you can just create 
+a new bounding box so that's another one this  
+is another one this is another alpaca and this is 
+the last one okay that's pretty much all so once  
+you're ready you can just press Ctrl s that's 
+going to save the annotations I recommend you  
+to press Ctrl S as often as possible because it's 
+always a good practice so now everything is saved  
+I can just continue to the next image now we are 
+going to annotate this alpaca and I'm going to do  
+exactly the same process I can start here obviously 
+you can just start in whatever corner you want  
+and I'm going to do something like this okay 
+this image is completely annotated I'm going to  
+continue to the next image in this case I am going 
+to annotate this alpaca too. this is not a real  
+alpaca but I want my object detector to be able 
+to detect these type of objects too so I'm going  
+to annotate it as well this is going to be a very 
+good exercise because if you want to work  
+as a machine learning engineer or as a computer 
+visual engineer annotating data is something  
+you have to do very often, actually training 
+machine learning models is something you have to  
+do very often so usually the data annotation is 
+done by other people, right, it is done by annotator s 
+there are different 
+services you can hire in order to annotate data  
+but in whatever case whatever service you use 
+it's always a very good practice to annotate  
+some of the images yourself right because if 
+you annotate some of the images yourself  
+you are going to be more familiar with the data 
+and you're also going to be more familiar on how  
+to instruct the annotators on how to annotate this 
+particular data for example in this case it's not  
+really challenging we just have to annotate these 
+two objects but let me show you there will be  
+other cases because there will be always situations 
+which are a little confusing in this case it's not  
+confusing either I have just to I have to label 
+that object but for example a few images ago  
+when we were annotating this image if an annotator 
+is working on this image that person is going  
+to ask you what do I do here should I annotate 
+this image or not right if an annotator is working  
+on this image and the instructions you provide 
+are not clear enough the person is going  
+to ask you hey what do I do here should I annotate 
+this image or not is this an alpaca or not so for  
+example that situation, another situation will be 
+what happened here which we had many different  
+alpacas in the background and some of them for 
+example this one is a little occluded so there  
+could be an annotator someone who ask you hey do 
+you want me to annotate absolutely every single  
+alpaca or maybe I can just draw a huge bonding box 
+here in the background and just say everything  
+in the background is an alpaca it's something that 
+when an annotator is working on the images they  
+are going to have many many different questions 
+regarding how to annotate the data and they are  
+all perfect questions and very good questions 
+because this is exactly what's about I mean when  
+you are annotating data you are defining exactly 
+what are the objects you are going to detect right  
+so um what I'm going is that if you annotate some 
+of the images yourself you are going to be more  
+familiar on what are all the different situations 
+and what exactly is going on with your data so you  
+are more clear in exactly what are the objects 
+you want to detect right so let's continue this  
+is only to show a few examples this is another 
+situation in my case I want to say that both of  
+them are alpacas so I'm just going to say 
+something like this but there could be another person  
+who says no this is only one annotation 
+is something like this right I'm just going  
+to draw one bonding box enclosing both of them 
+something that and it will be a good criteria I  
+mean it will be a criteria which I guess it would 
+be fine but uh whatever your criteria would be 
+you need one right you need a criteria so while you 
+are annotating some of the images is that you  
+are going to further understand what exactly is 
+an alpaca what exactly is the object you want to  
+consider as alpaca so I'm just going to continue 
+this is another case which may not be clear but  
+I'm just going to say this is an alpaca this 
+black one which we can only see this part and  
+we don't really see the head but I'm going to 
+say it's an alpaca anyway  
+this one too this one too this one too also this 
+is something that always happens to me when I am  
+working when I am annotating images that I am more 
+aware of all the diversity of all these images for  
+example this is a perfect perfect example because 
+we have an alpaca which is being reflected on a  
+mirror and it's only like a very small 
+section of the alpaca it's only like a  
+very small uh piece of the alpacas face so what 
+do we do here I am going to annotate this one too  
+because yeah that's my criteria but another person 
+could say no this is not the object I want to detect  
+this is only the object I want to detect and maybe 
+another person would say no this is not an alpaca  
+alpacas don't really apply makeup on them this is 
+not real so I'm not going to annotate this image  
+you get the idea right there could be many different 
+situations and the only way you get familiar  
+with all the different type of situations 
+is if you annotate some of the images yourself  
+so now let's continue in my case I'm going 
+to do something like this  
+because yeah I would say the most important 
+object is this one and then other ones are like...  
+yeah it's not really that important if we detect 
+them or not okay so let's continue this is very  
+similar to another image I don't know how many I have 
+selected but I think we have only a few left
+I don't know if this type of animals are natural... I'm very surprised about this like  
+the head right it's like it has a lot of 
+hair over here and then it's completely  
+hairless the entire body I mean I don't know I'm 
+surprised maybe they are made like that or maybe  
+it's like a natural alpaca who cares who cares... 
+let's continue so we have let's see how many  
+we have only a few left so let's continue uh let's 
+see if we find any other strange situation which  
+we have to Define if that's an alpaca or not so 
+I can show you an additional example also when you  
+are annotating you could Define your bounding box 
+in many many different ways for example in this  
+case we could Define it like this we could Define 
+it like this I mean we could Define it super super  
+fit to the object something like this super super 
+fit and we could enclose exactly the object or we  
+could be a little more relaxed right for example 
+something like this would be okay too and if we want  
+to do it like this it will be okay too right you 
+don't have to be super super super accurate you  
+could be like a little more relaxed and it's 
+going to work anyway uh now in this last one
+and that's pretty much all 
+and this is the last one okay
+I'm going to do something like this now I'm 
+going to take this I think this is also alpaca  
+but anyway I'm just going to annotate this part 
+so that's pretty much all, I'm going to save and  
+those are the few images I have selected in order 
+to show you how to use this annotation tool so  
+that's pretty much all for the data annotation and 
+remember this is also a very important step this  
+is a very important task in this process because 
+if we want to train an object detector we need  
+data and we need annotated data so this is a very 
+very important part in this process remember this  
+tools cvat this is only one of the many many 
+many available image annotation tools, you  
+can definitely use another one if you want it's 
+perfectly fine it's not like you have to use this  
+one, at all, you can use whatever annotation tool 
+you want but this is a tool I think it's very easy  
+to use I like the fact it's very easy to use it's 
+also a web application so you don't really need  
+to download anything to your computer you can 
+just go ahead and use it from the web that's also  
+one of its advantages so yeah so this is a 
+tool I showed you in this video how to use in order  
+to train this object detector so this is going 
+to be all for this step and now let's continue  
+with the next part in this process and now that 
+we have collected and annotated all of our data  
+now it comes the time to format this data to 
+structure this data into the format we need  
+in order to train an object detector using yolo V8 
+when you're working in machine learning and you're  
+training a machine learning model every single 
+algorithm you work with it's going to have its own  
+requirements on how to input the data that's going 
+to happen with absolutely every single algorithm  
+you will work with it's going to happen with yolo 
+with all the different YOLO versions and it's  
+going to happen with absolutely every single 
+algorithm you are working with so especially yolov8
+needs the data in a very specific format so 
+I created this step in this process so we can  
+just take all the data we have generated all the 
+images and all the annotations and we can convert  
+all these images into the format we need in order 
+to input this data into yolo V8 so let me show  
+you exactly how we are going to do that if you 
+have annotated data using cvat you have to go to  
+tasks and then you have to select this option and 
+it's export task data set it's going to ask you  
+the export format so you can export this data into 
+many different formats and you're going to choose  
+you're going to scroll all the way down and you're 
+going to choose YOLO 1.1 right then you can also  
+save the images but in this case it's not really 
+needed we don't really need the images we already  
+have the images and you're just going to click ok 
+now if you wait a few seconds or a few minutes if  
+you have a very large data set you are going to 
+download a file like this and if I open this file  
+you are going to see all these different files 
+right you can see we have four different files so  
+actually three files and a directory and if I open 
+the directory this is what you are going to see  
+which is many many different file names and if I 
+go back to the images directory you will see that  
+all these images file names they all look pretty 
+much the same right you can see that the file name  
+the structure for this file name looks pretty 
+much the same as the one with as the ones we have  
+just downloaded from cvat so basically the way 
+it works is that when you are downloading this  
+data into this format into the YOLO format every 
+single annotation file is going to be downloaded  
+with the same name as the image you have annotated 
+but with a different extension so if you have an  
+image which was called something.jpg then The 
+annotation file for that specific image will be  
+something.txt right so that's the way it works 
+and if I open this image you are going to see  
+something like this you're going to see in this 
+case only one row but let me show you another  
+one which contains more than one annotation I 
+remember there were many for example this one  
+which contains two different rows and each one of 
+these rows is a different object in my case as I  
+only have alpacas in this data set each one of 
+these rows is a different alpaca and this is how  
+you can make sense of this information the first 
+character is the class, the class you are detecting  
+I wanted to enlarge the entire file and 
+I don't know what I'm doing there okay
+okay the first number is the class you are 
+detecting in in my case I only have one so  
+it's only a zero because it's my only class and 
+then these four numbers which Define the bounding  
+box right this is encoded in the YOLO format which 
+means that the first two numbers are the position  
+of the center of the bounding box then you have 
+the width of your bounding box and then the  
+height of your bounding box, you will notice 
+these are all float numbers and this basically  
+means that it's relative to the entire size of 
+the image so these are the annotations we have  
+downloaded and this is in the exact same format 
+we need in order to train this object detector  
+so remember when I was downloading these 
+annotations we noticed there were many many many  
+different options all of these different options 
+are different formats in which we could save the  
+annotations and this is very important because you 
+definitely need to download YOLO because we are  
+going to work with yolo and everything it's pretty 
+much ready as we need it in order to input into  
+yolo V8 right if you select YOLO that's exactly 
+the same format you need in order to continue with  
+the next steps and if you have your data into 
+a different format maybe if you have already  
+collected and annotate your data and you have your 
+data in whatever other format please remember you  
+will need to convert these images or actually to 
+convert these annotations into the YOLO format  
+now this is one of the things we need for 
+the data this is one of the things we need in  
+order to we need to format in order to structure 
+the data in a way we can use this object detector  
+with yolo V8 but another thing we should do is 
+to create very specific directories containing this  
+data right we are going to need two directories 
+one of them should be called images and the other  
+one should be called labels you definitely need 
+to input these names you cannot choose whatever  
+name you want you need to choose these two names 
+right the images should be located in an directory  
+called images and the labels should be located in 
+a directory called labels that's the way yolo V8  
+works so you need to create these two directories 
+within your image directory is where you are going  
+to have your images if I click here you can 
+see that these are all my images they are all  
+within the images directory they are all within 
+the train directory which is within the images  
+directory this directry is not absolutely needed 
+right you could perfectly take all your images all  
+these images and you could just paste all your 
+images here right in the images directory and  
+everything will be just fine but if you want you 
+could do something exactly as I did over here and  
+you could have an additional directory which is 
+in between images and your images  
+and you can call this whatever way you want this 
+is a very good strategy in case you want to have  
+for example a train directory containing all the 
+training images and then another directory which  
+could be called validation for example and this 
+is where you are going to have many images in  
+order to validate your process your training 
+process your algorithm and you could do the  
+same with an additional directory which could be 
+called test for example or you can just use these  
+directories in order to label the data right 
+to create different versions of your data which is  
+another thing which is very commonly done so you 
+could create many directories for many different  
+purposes and that will be perfectly fine but you 
+could also just paste all the images here and  
+that's also perfectly fine and you can see that 
+for the labels directory I did exactly the same we  
+have a directory which is called train and within 
+this directory is that we have all these different  
+files and for each one of these files let me 
+show you like this it's going to be much better
+for each one of these files for each one of 
+these txt files we will have an image in the  
+images directory which is called exactly the 
+same exactly the same file name but a different  
+extension right so in this case this one is called 
+ .txt and this one is called .jpg but you can  
+see that it's exactly exactly the same file name 
+for example the first image is called oa2ea8f  
+and so on and that's exactly the same name as 
+for the first image in the images directory  
+which is called oa2ea8f and so on so basically for 
+absolutely every image in your images directory  
+you need to have an annotations file and a file in 
+the labels directory which is called exactly the  
+same exactly the same but with a different extension 
+if your images are .jpg your annotations files  
+are .txt so that's another thing which also 
+defines the structure you'll need for your data  
+and that's pretty much all so remember you need 
+to have two directories one of them is called  
+images, the other one is called labels within the images 
+directories is where you're going to have all your  
+images and within your labels directories is where 
+you will have all your annotations, all your labels  
+and for absolutely every single image in your 
+images directory you will need to have a file  
+in the labels directory which is called exactly 
+the same but with a different extension if  
+your images are .jpg your annotation files should 
+be .txt and the labels should be expressed in  
+the yolo format which is as many rows as 
+objects in that image and every single one  
+of these rows should have the same structure you 
+are going to have five terms the first one of them  
+is the class ID in my case I only have one class 
+ID I'm only detecting alpacas so in my case this  
+number will always be zero but if you're detecting 
+more than one class then you will have different  
+numbers then you have the position the X and Y 
+position of the center of the bounding box and  
+then you will have the width and then you will 
+have the height and everything will be expressed  
+in relative coordinates so basically this is 
+the structure you need for your data  
+and this is what this step is about so that's 
+pretty much all about converting the data or about  
+formatting the data and now let's move on to the 
+training now it's where we are going to take all  
+this data and we are going to train our object 
+detector using yolo V8 so now that we have  
+taken the data into the format we need in order to 
+train yolo v8 now comes the time for the training  
+now it comes the time where we are going to take 
+this custom data set and we are going to train an  
+object detector using yolo V8 so this is yolo 
+V8 official repository one of the things  
+I like the most about YOLO V8 is that in order 
+to train an object detector we can do it either  
+with python with only a few python 
+instructions or we can also use a command line  
+utility let me see if I find it over here we can 
+also execute a command like this in our terminal  
+something that looks like this and that's pretty 
+much all we need to do in order to train this  
+object detector that's something I really really 
+liked that's something I'm definitely going to  
+use in our projects from now on because I think 
+it's a very very convenient and a very easy way  
+to train an object detector or a machine learning 
+model so this is the first thing we should notice  
+about yolo V8 there are two different ways 
+in which we can train an object detector we  
+can either do it in python as we usually do or 
+we can run a command in our terminal I'm going  
+to show you both ways so you're familiar with both 
+ways and also I mentioned that I am going to show  
+you the entire process on a local environment in a 
+python project and I'm also going to show you this  
+process in a google colab so I I know there are 
+people who prefer to work in a local environment I  
+am one of those people and I know that there are 
+other people who prefer to work on a Google colab  
+so depending on in which group are you I 
+am going to show you both ways to do it so you  
+can just choose the one you like the most so let's 
+start with it and now let's go to pycharm this is  
+a pycharm project I created for this training and 
+this is the file we are going to edit in order to  
+train the object detector so the first thing I'm 
+going to do is to just copy a few lines I'm just  
+going to copy everything and I'm going to remove 
+everything we don't need copy and paste so we want  
+to build a new model from scratch so we are going 
+to keep this sentence and then we are going  
+to train a model so we are just going to remove 
+everything but the first sentence and that's all  
+right these are the two lines we need in order to 
+train an object detector using yolo V8 now we are  
+going to do some adjustments, obviously the 
+first thing we need to do is to import  
+ultralytics which is a library we need to use in 
+order to import yolo, in order to train a yolo  
+V8 model and this is a python Library we need to 
+install as we usually do we go to our terminal and  
+we do something like pip install and the library 
+name in my case nothing is going to happen because  
+I have already installed this library but please 
+remember to install it and also please mind that  
+when you are installing this Library this library 
+has many many dependencies so you are going to  
+install many many many many different python 
+packages so it's going to take a lot of space  
+so definitely please be ready for that because you 
+need a lot of available space in order to install  
+this library and it's also going to take 
+some time because you are installing many many  
+many different packages but anyway let's continue 
+please remember to install this library and these  
+are the two sentences we need in order to run 
+this training from a python script  
+so this sentence we're just going to leave it as 
+it is this is where we are loading the specific  
+yolo V8 architecture the specific yolo V8  model we are going to use you can see that  
+we can choose from any of all of these different 
+models these are different versions or these are  
+different sizes for yolo V8 you can see we have 
+Nano small medium large or extra large we are  
+using the Nano version which is the smallest one 
+or is the lightest one, so this is the one we are going  
+to use, the yolo V8 Nano, the yolo V8 n then about 
+the training about this other sentence we need to  
+edit this file right we need a yaml file which 
+is going to contain all the configuration for our  
+training so I have created this file and I have 
+named this file config.yaml I'm not sure if this  
+is the most appropriate name but anyway this is 
+the name I have chosen for this file so what I'm  
+going to do is just edit this parameter and I'm 
+going to input config.yaml this is where the  
+config.yaml is located this is where the main.pi 
+is located, they are in the same directory so if I do  
+this it's going to work just fine and then let 
+me show you the structure for this config.yaml  
+you can see that this is a very very very simple 
+configuration file we only have a few Keys which  
+are PATH train val and then names right let's 
+start with the names let's start with this this  
+is where you are going to set all your different 
+classes right you are training an object detector  
+you are detecting many different categories many 
+different classes and this is where you are going  
+to input is where you're going to type all of 
+those different classes in my case I'm  
+just detecting alpacas that's the only class 
+I am detecting so I only have one class, is the  
+number zero and it's called alpaca but if you are 
+detecting additional objects please remember to  
+include all the list of all the objects you are 
+detecting, then about these three parameters these  
+three arguments the path is the absolute path to 
+your directory containing images and annotations  
+and please remember to include the absolute path. 
+I ran some issues when I was trying to specify  
+a relative path relative from this directory from 
+my current directory where this project is created  
+to the directory where my data is located when 
+I was using a relative path I had some issues  
+and then I noticed that there were other people 
+having issues as well I noticed that in the GitHub  
+repository from YOLO V8 I noticed this is in the 
+the issues section there were other people having  
+issues when they were specifying a relative path 
+so the way I fixed it and it's a very good way to  
+fix it it's a very easy way to fix it it's just 
+specifying an absolute path remember this should  
+be an absolute path so this is the path to this 
+directory to the directory contain the images  
+and the labels directories so this is this is the 
+path you need to specify here and then you have to  
+specify the relative path from this location to 
+where your images are located like the specific  
+images are located right in my case they are in 
+images/train relative to this path if I show you  
+this location which is my root directory then if 
+I go to images/train this is where my images are  
+located right so that's exactly what I need to 
+specify and then you can see that this is the  
+train data this is the data the algorithm is going 
+to use as training data and then we have another  
+keyword which is val right the validation dataset 
+in this case we are going to specify the  
+same data as we used for training and the reason 
+I'm doing this is because we want to keep things  
+simple in this tutorial I'm just going to show 
+you the entire process of how to train an object  
+detector using yolo V8 on a custom data set 
+I want to keep things simple so I'm just going  
+to use the same data so that's pretty much all 
+for this configuration file now going back to  
+main that's pretty much all we need in order to 
+train an object detector using yolo V8  
+from python that's how simple it is so now I'm 
+going to execute this file I'm going to change the  
+number of epochs I'm going to do this for only 
+one Epoch because the only thing I'm going to  
+show you for now is how it is executed, I'm going to 
+show you the entire process and once we notice  
+how everything is working once we know
+everything is up and running everything is  
+working fine we can just continue but let's just 
+do this process let's just do this training for  
+only one Epoch so we can continue you can see that 
+now it's loading the data it has already loaded 
+the data you can make use of all the different 
+information of this debugging  
+information we can see here you can see now 
+we were loading 452 images and we were able  
+to load all the images right 452 from 452 and if 
+I scroll down you can see that we have additional  
+information additional values which are related 
+to the training process this is how the training  
+process is going right we are training this object 
+detector and this additional information which we  
+are given through this process so for now the 
+only thing we have to do is only waiting we  
+have to wait until this process is completed so 
+I am going to stop this video now and I'm going  
+to fast forward this video until the end of this 
+training and let's see what happens okay so the  
+training is now completed and you can see that 
+we have an output which says results saved to  
+runs/detect/train39 so if I go to that directory 
+runs/detect and train39 you can see that we have  
+many many different files and these files are related to how the training process  
+was done right for example if I show you these 
+images these are a few batches of images which  
+were used in order to train this algorithm 
+you can see the name is train batch0  
+and train batch1 I think we have a train batch2 so we have a lot of different images of a lot  
+of different alpacas of different images we used 
+for training and they were all put together they  
+were all concatenated into these huge images so 
+we can see exactly the images which were used for  
+training and The annotation on top of them right 
+the bonding boxes on top of them and we also have  
+similar images but for the validation dataset 
+right remember in this case we are using the same  
+data as validation as we use for training so it's 
+exactly the same data it's not different data but  
+these were the labels in the validation data set 
+which is the training data set and these were the  
+predictions on the same images right you can see 
+that we are not detecting anything we don't have  
+absolutely any prediction we don't have absolutely 
+any bounding box this is because we are doing a  
+very shallow training we are doing a very dummy 
+training we are training this algorithm only for one epoch 
+this was only an example to show you the output 
+how it looks like to show you the entire process  
+but it is not a real training but nevertheless 
+these are some files I'm going to  
+show you better when we are in the next step 
+for now let me show you how the training is done  
+from the command line from the terminal using the 
+command I showed you over here using a command like  
+this and also let me show you how this training 
+is done on a Google colab so going to the terminal  
+if we type something like this yolo detect train 
+data I have to specify the configuration file  
+which is config.yaml and then model yolov8n.yaml  
+and then the number of epochs this  
+it's exactly the same as we did here exactly the 
+same is going to produce exactly the same output  
+I'm just going to change the number of epochs for 
+one so we make it exactly the same and let's see  
+what happens you can see that it we have exactly 
+the same output we have loaded all the images and  
+now we are starting a new training process and 
+after this training process we are going to have  
+a new run which we have already created the new 
+directory which is train40 and this is where  
+we are going to save all the information related 
+to this training process so I'm not going to do  
+it because it's going to be exactly the same as 
+as the one we did before but this is exactly how  
+you should use the command line or how you 
+can use this utility in order to do this training  
+from the terminal you can see how simple it is 
+it's amazing how simple it is it's just amazing  
+and now let me show you how everything is done 
+from a Google colab so now let's go back to the  
+browser so I can show you this notebook I created 
+in order to train yolo V8 from a Google colab  
+if you're not familiar with Google collab the way 
+you can create a new notebook is going to Google  
+Drive you can click new more and you select 
+the option Google collaboratory this is going  
+to create a new google colab notebook and you 
+can just use that notebook to train this object  
+detector now let me show you this notebook and 
+you can see that it contains only one two three  
+four five cells this is how simple this will 
+be the first thing you need to do is to upload  
+the data you are going to use in order to train 
+this detector it's going to be exactly the same  
+data as we used before so these are exactly 
+the same directories the images directory and  
+the label directory we used before and then 
+the first thing we need to do is to  
+execute this cell which mounts Google Drive into 
+this instance of google collab so the only  
+thing I'm doing is just I just pressed 
+enter into this cell and this may take some time  
+but it's basically the only thing it does is 
+to connect to Google Drive so we can just access  
+the data we have in Google Drive so I'm going to 
+select my account and then allow and that's pretty  
+much all then it all comes to where you have the 
+data in your Google drive right in the specific  
+directory where you have uploaded the data in 
+my case my data is located in this path right  
+this is my home in Google Drive and then this 
+is the relative path to the location of where  
+I have the data and where I have all the files 
+related to this project so remember to specify this  
+root directory as the directory where you have 
+uploaded your data and that's pretty much all  
+and then I'm just going to execute this cell 
+so I save this variable I'm going to execute  
+this other cell which is pip install ultralytics the 
+same command I ran from the terminal in my local  
+environment now I'm going to run it in Google 
+collab remember you have to start this command by  
+the exclamation mark which means you are running 
+a command in the terminal where this process is  
+being executed or where this notebook is being 
+launched so remember to include the exclamation  
+mark everything seems to be okay everything 
+seems to be ready and now we can continue to  
+the next cell which is this one you can see that 
+we have done exactly the same structure we have  
+input exactly the same lines as in our 
+local environment if I show you this again you  
+can see we have imported ultralytics then we have 
+defined this yolo object and then we have called  
+model.train and this is exactly the same as we are 
+doing here obviously we are going to need another  
+yaml file we are going to need a yaml file in our 
+Google Drive and this is the file I have specified  
+which it's like exactly the same 
+configuration as in the um as in the in the  
+yaml file I showed you in my local environment is 
+exactly the same idea so this is exactly what you  
+should do now you should specify an absolute 
+path to your Google Drive directory that's the  
+only difference so that's the only difference 
+and I see I have a very small mistake because  
+I see I have data here and here I have just 
+uploaded images and labels in the directory  
+but they are not within another rectory which 
+is called Data so let me do something I'm going  
+to create a new directory which is called Data 
+images labels I'm just going to put everything  
+here right so everything is consistent so now 
+everything is okay images then train and then the  
+images are within this directory so everything 
+is okay now let's go back to the Google collab  
+every time you make an edit or every time you do 
+something on Google Drive it's always a good idea to  
+restart your runtime so that's what I'm going 
+to do I'm going to execute the commands again  
+I don't really need to pip install this Library 
+again because it's already installed into this  
+environment and then I'm going to execute this 
+file I think I have to do an additional edit which  
+is uh this file now it's called google_colab_config.yaml and that's pretty much all I'm just going  
+to run it for one Epoch so everything is exactly 
+the same as we did in our local environment and  
+now let's see what happens so you can see that 
+we are doing exactly the same process everything  
+looks pretty much the same as it did before we 
+are loading the data we are just loading the  
+models everything it's going fine and 
+this is going to be pretty much the same process  
+as before you can see that now it takes 
+some additional time to load the data because now  
+you have... you are running this environment you're 
+running this notebook in a given environment and  
+you're taking the data from your Google Drive so 
+it takes some time it's it's a slower process but  
+it's definitely the same idea so the only thing we 
+need to do now is just to wait until all this uh  
+process to be completed and that's pretty much all 
+I think it doesn't really make any sense to wait  
+because it's like it's going to be exactly the 
+same process we did from our local environment  
+at the end of this execution we are going to have 
+all the results in a given directory which is the  
+directory of the notebook which is running this 
+process so at the end of this process please  
+remember to execute this command which is going 
+to take all the files you have defined in this  
+runs directory which contains all the runs you 
+have made all the results you have produced and  
+it's going to take all this directory 
+into the directory you have chosen for your files  
+and your data and your google collab and so on 
+please remember to do this because otherwise  
+you would not be able to access this data and 
+this data which contains all the results and  
+everything you have just trained so this is how 
+you can train an object detector  
+using yolo V8 in a Google collab and you can 
+see that the process is very straightforward and  
+it's pretty much exactly the same process exactly 
+the same idea as we did you in our local environment  
+and that's it so that's how easy it is to train 
+an object detector using yolo Y8 once you have  
+done everything we did with the data right once 
+you have collected the data you have annotated  
+data you have taken everything into the format 
+yolo V8 needs in order to train an object  
+detector once everything is completed then 
+running this process running this training  
+is super straightforward so that's going to be 
+all about this training process and now let's  
+continue with the testing now let's see how these 
+models we have trained how they performed right  
+let's move to the next step and this is the last 
+step in this process this is where we are going  
+to take the model we produced in the training 
+step and we're going to test how it performs  
+this is the last step in this process this is how 
+we are going to complete this training of an object  
+detector using yolo v8, so once we have trained 
+a model we go to the uh to this directory remember  
+to the directory I showed you before regarding... the 
+directory where all the information was saved  
+where all the information regarding this training 
+process was saved and obviously I I'm not going to  
+show you the training we just did because it was 
+like a very shallow training like a very dummy  
+training but instead I'm going to show you the 
+results from another training I did when I Was  
+preparing this video where I conducted exactly the 
+same process but the training process was done for  
+100 epochs so it was like a more deeper training 
+right so let me show you all the files we have  
+produced so you know what are all the different 
+tools you have in order to test the performance of  
+the model you have trained so basically you have 
+a confusion Matrix which is going to give you a  
+lot of information regarding how the different 
+classes are predicted or how all the different  
+classes are confused right if you are familiar 
+with how a confusion Matrix looks like or it  
+should look like then you will know how to read 
+this information basically this is going to give  
+you information regarding how all the different 
+classes were confused in my case I only have  
+one class which is alpaca but you can see that 
+this generates another category which is like  
+uh the default category which is background and we 
+have some information here it doesn't really say  
+much it says how these classes are confused but 
+given that this is an object detector I think the  
+most valuable information it's in other metrics in 
+other outputs so we are not really going to mind  
+this confusion Matrix then you have some plots 
+some curves for example this is the F1 confidence  
+curve we are not going to mind this plot either 
+remember we are just starting to train an  
+object detector using yolo V8 the idea for this 
+tutorial is to make it like a very introductory training  
+a very introductory process so we are not going to 
+mind in all these different uh plots we have over  
+here because it involves a lot of knowledge and 
+a lot of expertise to extract all the information  
+from these plots and it's not really the idea for 
+this tutorial let's do things differently let's  
+focus on this plot which is also available in 
+the results which were saved into this directory  
+and you can see that we have many many many 
+different plots you can definitely go crazy  
+analyzing all the information you have here 
+because you have one two three four five  
+ten different plots you could knock yourself out 
+analyzing and just extracting all the information  
+from all these different plots but again the idea 
+is to make it a very introductory video and a very  
+introductory tutorial so long story short I'm 
+just going to give you one tip of something the  
+one thing you should focus on these plots for now 
+if you're going to take something from this video  
+from how to test the performance of a model 
+you have just trained using yolo v8 to train an object  
+detector is this make sure your loss is going 
+down right you have many plots some of them are  
+related to the loss function which are this one this 
+one and this one this is for the training set and  
+these are related to the validation set make 
+sure all of your losses are going down right this  
+is like a very I would say a very simple way to 
+analyze these functions or to analyze these plots  
+but that's... I will say that that's more powerful 
+that it would appear make sure all your losses are  
+going down because given the loss function we 
+could have many different situations we could  
+have a loss function which is going down which 
+I would say it's a very good situation we could  
+have a loss function which started to go down and 
+then just it looks something like a flat line and  
+if we are in something that looks like a flat line 
+it means that our training process has stuck so it  
+could be a good thing because maybe the the 
+algorithm the machine learning model really  
+learned everything he had to learn about this 
+data so maybe a flat line is not really a bad  
+thing maybe I don't know you you would have to 
+analyze other stuff or if you look at your loss  
+function you could also have a situation 
+where your loss function is going up right  
+that's the other situation and if you my friend 
+have a loss function which is going up then you  
+have a huge problem then something is obviously 
+not right with your training and that's why I'm  
+saying that analyzing your loss function what 
+happens with your loss is going to give you a  
+lot of information ideally it should go down if 
+it's going down then everything is going well  
+most likely, if its something like a flatline 
+well it could be a good thing or a bad thing I  
+don't know we could be in different situations 
+but if it's going up you have done something  
+super super wrong I don't know what's going on 
+in your code I don't know what's going on in  
+your training process but something is obviously 
+wrong right so that's like a very simple and a  
+very naive way to analyze all this information 
+but trust me that's going to give you a lot a  
+lot of information you know or to start working 
+on this testing the performance of this model  
+but I would say that looking at the plots and analyzing 
+all this information and so on I would say that's  
+more about research, that's what people 
+who do research like to do and I'm more like  
+a freelancer I don't really do  research so 
+I'm going to show you another way to analyze this  
+performance, the model we have just 
+trained which from my perspective it's a more...  
+it makes more sense to analyze it like this and it 
+involves to see how it performs with real 
+data right how it performs with data you have 
+used in order to make your inferences and to  
+see what happens so the first step in this more 
+practical more visual evaluation of this model of  
+how this model performs is looking at these images 
+and remember that before when we looked at these  
+images we had this one which was regarding the 
+labels in the validation set and then this other  
+one which were the predictions were completely 
+empty now you can see that the the predictions  
+we have produced they are not completely empty 
+and we are detecting the position of our alpacas  
+super super accurately we have some mistakes 
+actually for example here we are detecting  
+a person as an alpaca here we are detecting also 
+a person as  an alpaca and we have some missdetections  
+for example this should be in alpaca and it's not 
+being detected so we have some missdetections but you  
+can see that the the results are pretty much okay 
+right everything looks pretty much okay the same  
+about here if we go here we are detecting pretty 
+much everything we have a Missdetection here we  
+have an error over here because we are detecting 
+an alpaca where there is actually nothing so things are  
+not perfect but everything seems to be pretty much 
+okay that's the first way in which we are going to  
+analyze the performance of this model which is 
+a lot because this is like a very visual way to  
+see how it performs we are not looking at plots we 
+are not looking at metrics right we are looking at  
+real examples and to see how this model performs 
+on real data maybe I am biased to analyze things  
+like this because I'm a freelancer and the way it 
+usually works when you are a freelancer is that  
+if you are building this model to deliver this 
+project for a client and you tell your client oh  
+yeah the model was perfect take a look at all 
+these plots take a look at all these metrics  
+everything was just amazing and then your client 
+tests the model and it doesn't work the client  
+will not care about all the pretty plots and so 
+on right so that's why I don't really mind a lot  
+about these plots maybe I am biased because I am a 
+freelancer and that's how freelancing works but I  
+prefer to do like a more visual evaluation 
+so that's the first step we will do and we  
+can notice already we are having a better 
+performance we are having an okay performance  
+but this data we are currently looking at right 
+now remember the validation data it was pretty  
+much the same data we use as training so this 
+doesn't really say much I'm going to show you  
+how it performs on data which the algorithm have 
+never seen with completely and absolutely unseen  
+data and this is a very good practice if you 
+want to test the performance of a model, so I have  
+prepared a few videos so let me show you these 
+videos they are basically... remember this is  
+completely unseen data and this is the first video 
+you can see that this is an alpaca which is just  
+being an alpaca which is just walking around 
+it's doing its alpaca stuff it's having an  
+alpaca everyday life it's just being an alpaca 
+right it's walking around from one place to  
+the other doing uh doing nothing no it's doing 
+its alpaca stuff which is a lot this is one of  
+the videos I have prepared this is another video 
+which is also an alpaca doing alpaca related stuff  
+um so this is another video we are going to 
+see remember this is completely unseen data and  
+I also have another video over here so I'm 
+going to show you how the model performs on these  
+three videos I have made a script in Python 
+which loads these videos and just calls the  
+predict method from yolo v8, we 
+are loading the model we have trained and we are  
+applying all the predictions to this model and 
+we are seeing how it performs on these videos  
+so this is the first video I showed you and these 
+are the detections we are getting you can see  
+we are getting an absolutely perfect detection 
+remember this is completely unseen data and we are  
+getting I'm not going to say 100 perfect detection 
+because we're not but I would say it's pretty good  
+I will say it's pretty pretty good in order to 
+start working on this training process uh yeah  
+I would say it's pretty good so this is one of 
+the examples then let me show you another example  
+which is this one and this is the other video 
+I showed you and you can see that we are also  
+detecting exactly the position of the alpaca 
+in some cases the text is going outside of the  
+frame because we don't really have space but 
+everything seems to be okay in this video too  
+so we are taking exactly the position of this uh 
+alpaca the bonding box in some cases is not really  
+fit to the alpaca face but yeah but everything 
+seems to be working fine and then the other video  
+I showed you you can see in this case the detection 
+is a little broken we have many missdetections  
+but now everything is much better and yeah in 
+this case it's working better too it's working  
+well I would say in these three examples this one 
+it's the one that's performing better and then the  
+other one I really like how it performed too in 
+this case where the alpaca was like starting its  
+alpaca Journey... we have like a very 
+good detection and a very stable detection then it  
+like breaks a little but nevertheless I would say 
+it's okay it's also detecting this alpaca over  
+here so uh I will say it's working pretty much 
+okay so this is pretty much how we are going to  
+do the testing in this phase remember that if you 
+want to test the performance of the model you have  
+just trained using yellow V8 you will have a lot 
+of information in this directory which is created  
+when you are yolo the model at the end of your 
+training process you will have all of these files  
+and you will have a lot of information to knock 
+yourself out to go crazy analyzing all these  
+different plots and so on or you can just keep it 
+simple and just take a look at what happened with  
+the training loss and the validation 
+loss and so on all the loss functions make sure  
+they are going down that's the very least thing 
+you need to make sure of and then you can just  
+see how it performs with a few images or with 
+a few videos, take a look how it performs  
+with unseen data and you can make decisions from 
+there maybe you can just use the model as it is  
+or you can just decide to train it again in this 
+case if I analyze all this information I see that  
+the loss functions are going down and not 
+only they are going down but I notice that there  
+is a lot of space to to improve this training, to 
+improve the performance because we haven't reached  
+that moment where everything just appears to be 
+stuck right like that a flat line we are very far  
+away from there so that's something I would do 
+I would do a new deeper training so we can just  
+continue learning about this process also I w 
+change the validation data for something that's  
+completely different from the training 
+data so we have even more information and that's  
+pretty much what I would do in order to iterate in 
+order to make a better model and a more powerful  
+model so it is going to be all for today my name 
+is Felipe I'm a computer region engineer if you  
+enjoyed this video please remember to click the 
+like button it's going to help me a lot it's going  
+to help the channel and you know how it is so this 
+is going to be all for today in this channel I  
+make tutorials, coding tutorials which are related 
+to computer vision and machine learning I also  
+share my experience as a computer vision engineer 
+I talk about different things related to computer  
+vision or machine learning so if you're curious 
+to know more about these topics please consider to  
+subscribe to my channel this is going to be all 
+for today and see you on the next video

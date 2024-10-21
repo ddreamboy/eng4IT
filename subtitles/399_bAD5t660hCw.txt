@@ -1,0 +1,289 @@
+in today's world we create a massive
+amount of information every day to
+understand and use all this data
+companies use Advanced Technologies in
+this video on top Big Data Technologies
+in 2024 we will learn about the top Big
+Data technologies that are changing how
+we analyze data these tools help us
+process data and use it for the things
+like machine learning from managing and
+processing data to conducting
+sophisticated machine learning analysis
+these Technologies play an important
+role in using the immense power of data
+they are like the tools in a data
+scientist toolbox enabling businesses to
+make informed decisions optimize
+operations and gain a Competitive Edge
+so let's get started with this video but
+before we begin let me ask you a quick
+question so which technology is commonly
+used for processing and analyzing Big
+Data option A is Apache Hadoop option b
+is Microsoft Excel options is Adobe
+Photoshop and option D is Javascript now
+you can pause this video and answer in
+the comment section below so let's start
+exploring these important Technologies
+First Technology on the list is Apache
+Hadoop Apache group is like a superhero
+of the Big Data world it is an amazing
+open source tool that's been at the
+heart of Big Data Revolution think of it
+as a magical framework that's specially
+designed to handle and make sense of
+incredibly huge piles of data all while
+using a bunch of regular computers now
+the secret source of Hadoop is its two
+main parts that is Hadoop distributed
+file systems that is hdfs and mapreduce
+hdfs is like a super organized librarian
+that keeps all your data neatly in order
+and mapreduce is like a team of super
+fast workers who can process this data
+lightning quick the cool thing about
+Hadoop is that it can work with many
+regular everyday computers making it
+super flexible and cost effective you
+don't need any fancy expensive Hardware
+Etc Hadoop can take your data and spread
+it out across many computers like a big
+puzzle this way it's stored safely and
+processed super fast because all these
+computers can work on it together this
+was about Apache Hadoop now second on
+the list we have is Apache spark Apache
+spark is a popular and efficient tool
+that can be used instead of hadoops
+mapreduce it has a special feature
+called in memory processing which means
+it can work with the data faster this
+makes it a great choice for people who
+work with data like engineers and
+analysts what's cool about spark is that
+it can do a lot of different things it
+can handle batch processing interactive
+queries and real-time data streaming and
+even process data as it's coming in this
+makes it a flexible and Powerful tool so
+in summary Apache spark is fast and
+versatile tool that's great for people
+who work with data it can do a lot of
+different things and is Preferred Choice
+for many professionals next we have is
+Apache Kafka Pachi Kafka is a super
+smart messenger for data it's designed
+to handle lots of information flying
+around in real time imagine you have a
+huge amount of data that needs to be
+sent from one place to another quickly
+and safely that's where Kafka comes in
+think of it as a super highway for data
+where information can flow smoothly and
+reliably it's like having a special Mail
+system that never loses your letters or
+packages no matter how much you send
+Kafka is super important because it
+helps businesses and applications keep
+up with the latest information it's like
+having a news feed that never stops
+updating so you always know what's
+happening right now one of the cool
+things about Kafka is that it can handle
+a lot of data at once and it's really
+good at making sure none of that data
+gets lost along the way so if you're
+Building A system that needs to stay
+update in real time Kafka is a key tool
+to have in your toolkit next big data
+technology in 2024 is Apache Hive Apache
+Hive is a helpful tool that makes it
+easier for people to analyze and query
+data stored in Hadoop it does this by
+providing a user-friendly interface that
+looks a lot like SQL called hiveql this
+means that even if you are not a tech
+expert you can still use Hive to work
+with data in Hadoop Hive takes the
+queries you write and turns them into
+tasks that can be processed by hadoop's
+mapreduce or Apache tests these are just
+fancy terms for the behind the scenes
+operations that happen in Hadoop to
+process and analyze data so you don't
+have to worry about the nitty-gritty
+details Hive takes care it for you here
+the Hadoop itself can store all sorts of
+data including structured and
+semi-structured in a system called hdfs
+Hive is like a bridge that connects you
+to this data making it accessible and
+easy to work with so in a nutshell
+Apache Hive is a handy tool that lets
+people who may not be Tech visas easily
+query and analyze data stored in Hadoop
+hdfs thanks to its sql-like interface
+and smart data processing capabilities
+all right next we have is Presto so
+Presto is a powerful tool that helps
+people analyze data from different
+sources like Hadoop Cassandra and
+regular databases it's like a super
+smart detective that can find and make
+sense of data no matter where it's
+stored this is really useful because it
+means you can explore and study data
+without having to worry about where it
+is kept imagine you have a big puzzle
+with pieces scattered all over the room
+Presto is like the detective who can
+find all those pieces and put the puzzle
+together for you even if some pieces are
+under the couch press to act like a
+super smart search engine for your data
+it helps you find and use your data no
+matter where it is hiding so if you want
+to understand your business better
+Presto can help you get all the answers
+you need from your data so if you are
+interested in mastering the world of
+data engineering look no further than a
+post Gadget program in data engineering
+this comprehensive course is tailor made
+for professionals like you in this
+course you will be diving deep into
+essential topics such as Hadoop
+framework spark based data processing
+Kafka driven data pipelines and the
+introsities of man managing big data on
+AWS and Azure Cloud infrastructures our
+unique approach Blends live session
+Hands-On industry projects exciting IBM
+hackathons and interactive ask me
+anything sessions to provide you with
+the most enriching learning experience
+for admission to this data engineering
+course candidates need a bachelor's
+degree with an average of 50 or higher
+marks two plus years of work experience
+then basic understanding of
+object-oriented programming that is
+preferred so elevate your data
+engineering skills and career prospects
+today enroll now hi I am Assad Shah from
+Canada and I recently upskilled myself
+with a professional certification
+program in data engineering offered by
+simply learned in collaboration with
+Purdue University after working for a
+long time in SQL domain moving to Big
+Data was a great challenge for me I
+needed to upgrade my skills to improve
+my performance in my current Workhorse
+curriculum is well formulated while
+industrial relevant Concepts and project
+which helped increase deeper knowledge
+about big data now I can easily carry
+out my big data projects as well as
+successfully lead a team of Engineers I
+even got a decent salary hike
+the wall is moving at a much faster Pace
+than we think make sure you don't make
+behind so obstacle yourself and move to
+a step forward and step closer to your
+dream so the next big technology on the
+list for 2024 is rapid Miner so
+rapidminer is a user friendly and open
+source platform for data science that
+helps organizations build and use
+predictive models even if they don't
+have advanced programming skills this
+means that anyone who works with data
+can benefit from its features regardless
+of their level of expertise one of the
+great things about rapidminer is that it
+can handle a variety of tasks related to
+data such as preparing and cleaning it
+training it and like training machine
+learning models and deploying these
+models to practical use this makes it
+versatile tool that can be used in
+different stages of data project so
+whether you are a data scientist or just
+someone who occasionally works with data
+rapid Miner can simplify your workflow
+and make it easier to achieve your goals
+it is designed to be accessible and user
+friendly so you don't need to be a
+coding expert to get the most out of it
+alright coming to the last one that is
+the last big data technology for 2024
+which is Apache Cassandra Apache
+Cassandra is a type of database that is
+specifically designed to handle a lot of
+data in a highly reliable and efficient
+manner it is particularly well suited
+for situations where you need to store
+and access large amounts of information
+quickly and without any descriptions one
+of the key features of Cassandra is its
+ability to handle a large amount of data
+points across multiple computers or
+nodes which makes it a greater choice
+for applications that need to process a
+high volume of information this
+distributed nature of Cassandra also
+ensures that even if one node fails the
+system will still keep running smoothly
+making it incredibly fault tolerant
+Cassandra is often used in Industries
+and applications that require fast and
+reliable data storage and retrieval for
+example in the internet of things that
+is iot where a massive number of devices
+are constantly generating data Cassandra
+can efficiently manage this influx of
+information similarly e-commerce
+websites and on social media platforms
+that need to handle numerous
+transactions in user interactions find
+the center to be a valuable tool so
+these were the top Big Data Technologies
+in 2024 to sum up these leading Big Data
+Technologies Apache Hadoop Apache spark
+Apache Kafka Apache Hive Presto Etc are
+the Forefront of data processing and
+analytics today they have transformed
+the way organizations handle and utilize
+data whether it's managing large data
+sets enabling real-time processing or
+casting data pipelines or optimal
+queries so alright guys with that we
+have come to the end of this video If
+you like this video please give it a
+thumbs up I hope it will help you all
+thanks for watching stay safe and keep
+learning staying ahead in your career
+requires continuous learning and
+upskilling whether you're a student
+aiming to learn today's top skills or a
+working professional looking to advance
+your career we've got you covered
+explore our impressive catalog of
+certification programs in Cutting Edge
+domains including data science cloud
+computing cyber security AI machine
+learning or digital marketing designed
+in collaboration with leading
+universities and top corporations and
+delivered by industry experts choose any
+of our programs and set yourself on the
+path to Career Success click the link in
+the description to know more
+foreign
+hi there if you like this video
+subscribe to the simply learning YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

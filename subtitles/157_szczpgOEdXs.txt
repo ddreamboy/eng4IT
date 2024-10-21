@@ -1,0 +1,1010 @@
+ever wondered how people feel about you
+want to get a better read on how they're
+feeling well in this video we're going
+to be doing exactly that and taking a
+look at sentiment analysis now one of
+the cool things that we're going to be
+doing in
+this video is we're going to be doing it
+using a state-of-the-art model
+called vert but we'll be able to do this
+reasonably easily using the transformers
+package
+let's take a deeper look as to what
+we'll be going through so in order to
+build up our sentiment model we're going
+to first up start out by installing the
+transformers library transformers is
+an amazing library particularly when it
+comes to nlp which is where sentiment
+analysis falls in
+particularly when we're doing it on text
+what we're then going to do is perform
+some sentiment scoring
+using a pre-trained vert model now this
+makes it really really easy to get up
+and running
+and so we'll pass through a couple of
+prompts and see what the sentiment looks
+like
+but then the real kicker we're going to
+take this one step further
+scrape down some data and reviews from
+yelp so i'm going to show you how to do
+that
+and we're going to run our sentiment
+analysis pipeline on those yelp reviews
+so you could extend this out and do it
+on just about anything
+in this case we're going to be doing it
+on yelp let's take a look as to how this
+is all going to fit together though so
+what we're first up going to be doing
+is downloading and installing the
+pre-trained
+burp model from hugging face
+transformers so hugging face just makes
+it super easy to go about doing this
+what we're then going to do is run our
+sentiment analysis on a single
+block of text so we'll be able to
+actually pass through our own text
+and see what the sentiment looks like
+from a rating scale between
+one to five now i kind of like this
+model because it actually sort of mimics
+what you'd have with like a star rating
+profile
+but in this case we're doing it for
+sentiment analysis and then last but not
+least what we're going to do is scrape
+down our yelp reviews and apply it to
+those yelp reviews and have
+all of that data stored in a pandas data
+set pretty cool right
+ready to do it let's get to it alrighty
+guys so in order to go through and
+perform our sentiment analysis there's
+going to be five things that we need to
+do
+so first up we're going to go through
+and install and import our dependencies
+then what we're going to do is
+instantiate and download our pre-trained
+nlp model now the cool thing about this
+is that it's a fully pre-trained model
+you don't really need to do too much
+else so once we go through that we'll be
+able to leverage our nlp model to
+perform sentiment analysis and i'll show
+you that model
+uh once we get to it then what we're
+going to do is encode and calculate our
+sentiment so we'll take our sentence
+convert it into a sequence
+and then pass it through to our
+sentiment analysis model
+and then what we're going to do is take
+this one step further and actually
+leverage it in part of a practical
+implementation so what we're going to do
+is we're going to eventually use
+beautiful soup to scrape some data
+off yelp we'll collect those reviews put
+it into a data frame and then we'll run
+our sentiment analysis model on those
+reviews so we'll actually be able to see
+real time sentiment scoring so if you've
+got a business or if you've got
+a company that you're working with or
+the company that you're running
+you'll be able to leverage a sentiment
+analysis pipeline on
+that now on that note let's go on ahead
+and install and import our dependencies
+now there's a couple of key dependencies
+that we're going to need
+one of the key ones that we're going to
+need is going to be pie torch
+so in order to get pie torch all you
+need to do is go to pytorch.org and
+you'll be able to install it
+now specifically what we need to do is
+scroll on down here
+and you'll be able to see how exactly to
+install it onto your machine
+so you just need to choose the pi torch
+build so in this case we're going to
+choose
+a stable i'm on a windows machine so
+i'll select windows but if you've got a
+mac or a linux machine you can
+effectively choose whichever one you
+need
+we're going to choose windows and in
+this case i'm going to choose pip to
+install it we're going to leverage it
+using python and then last but not least
+i'm going to use
+cuda 11.1 so i'll just copy this command
+down here and what we're going to do is
+put that into our notebook so what i'll
+do is i'll
+include an exclamation mark paste that
+in and i'm just going to get rid of d3
+after pip so effectively just go to
+pytorch.org
+select what your environment looks like
+and how you want to install
+paste it into your notebook with an
+exclamation that mark at the front and
+then drop the three
+and this effectively if we go and run
+this now this is going to go on ahead
+and install pi torch now i believe
+i've already got it installed in this
+kernel yep so looks like it went pretty
+quickly but
+if you're getting started for the first
+time might take a little bit of time but
+don't stress
+that's pretty straightforward to get
+that all installed
+now the next thing that we need to do is
+actually install some other dependencies
+so
+let's go ahead and write these out and
+then i'll pause and we'll take a look at
+what we're actually installing
+all righty so those are our new
+dependencies that we're going to go on
+about and install so let's just run that
+and that will kick off that installation
+so what we're doing is we're installing
+five different packages there
+so in order to do that written
+exclamation mark pip
+install transformers requests beautiful
+soup for
+pandas and numpy now i'm going to
+explain why we need each one of these
+libraries
+so we're going to leverage transformers
+for our actual nlp model so this is
+going to allow us to easily
+import and download and install our nlp
+model and specifically
+the nlp model that we're going to be
+using is this one so this is actually
+awesome right so it's a multi-lingual
+bert model that allows you to perform
+sentiment analysis so it actually works
+on english dutch german french spanish
+and italian
+which is pretty cool so this is actually
+a really
+wide scope sentiment model so if you
+wanted to do it on different languages
+you could definitely do that
+now one of my favorite things there that
+is that it actually allows you or gives
+you
+a sentiment score between one and five
+so this means that rather than just
+getting a confidence interval or a
+number between zero and one you're
+actually getting a bit of a score which
+i kind of like
+now in order to install this we'll just
+be using transformers that'll be pretty
+straightforward
+then the next roof what is that for
+libraries so requests
+is going to allow us to make a request
+to the yelp site that we're going to be
+scraping
+beautiful soup is going to allow us to
+actually work through that soup that we
+actually get returned back from the page
+and extract the data that we actually
+need
+pandas is going to allow us to structure
+our data in a format that makes it easy
+to actually work with
+and then numpy's just going to give us
+some additional data transformation
+processes now on that bit about data
+here's other nick
+if you've worked in analytics for a
+while you've probably come across
+excel virtually every person that works
+with data would have some point
+started working with excel leveraging
+transforming and even sometimes storing
+your data
+but what happens when it comes to taking
+your data skills just that one step
+further
+with something like python transitioning
+can be really really difficult
+but it doesn't need to be with my tone
+today's video is brought to you by
+an awesome startup and named mido it
+allows you to import transform and
+export your data inside of a jupyter
+notebook with just a couple of clicks
+with a single import you can bring in
+and explore your data
+you can then apply transformations and
+create new feature columns
+but one of my absolute favorite features
+is that you can visualize interactively
+this makes it super easy to get a feel
+for what's happening with your
+information
+but what's even better is that it writes
+the python code for you
+so for every transformation that you
+make with your mido sheet
+you're able to see the code that
+actually represents that transformation
+this means that you can save a bunch of
+time when it comes to performing your
+exploratory data analysis
+and more time on adding value but what's
+best of all is that you can try mido at
+yourself
+for free just head over to trimato.io
+and you can try it out yourself
+inside of your jupiter notebook back to
+our regular program
+alrighty and back to it so what we're
+now going to do is
+import the dependencies that we're
+actually going to need so in this case
+we've gone and installed all the stuff
+that we need now we need to actually
+import it into our notebook so let's go
+ahead and do that
+alrighty and those are our dependencies
+now
+imported so we've gone and written five
+different lines of code there so let's
+take a step back and take a look at what
+we actually wrote
+so first up what we're doing is we're
+bringing in our tokenizer and
+our model class from transformers so to
+do that written from
+transformers import auto tokenizer and
+then auto model for sequence
+classification so our tokenizer is going
+to allow us to pass through a string and
+convert that into a sequence of numbers
+that we can then pass to our nlp model
+and our auto model for sequence
+classification is going to give us the
+architecture from transformers to be
+able to load in our nlp model but you'll
+see that a little bit in a sec
+then what we've gone and done is we've
+imported pytorch so import torch and
+we're really going to use the
+arg max function from torch to be able
+to extract our highest
+sequence result then we've imported
+requests so remember request is going to
+be used to grab
+data or grab the web page from yelp and
+then
+we're importing beautiful soup so from
+bs4
+import beautiful soup so beautiful soup
+allows us to actually traverse
+the dom results from yelp so this allows
+us to extract data that we actually need
+in this case going to be our reviews
+and then we're importing re so re is
+going to allow us to create a regex
+function to be able to extract the
+specific comments that we want
+so all up five lines of code so
+transformers torch request
+beautiful soup and re so now we're good
+to go
+that is step one done now the next thing
+that we need to do is actually
+instantiate and set up our model so
+let's go ahead and do that
+okay so that is our tokenizer and our
+model
+now loaded so i've gone and written two
+lines of code there so
+first up we're creating our tokenizer
+which is this over here and then we're
+actually loading in our model so to do
+that we've written tokenizer
+equals auto tokenizer and then we're
+using the
+from pre-trained model to be able to
+load up a pre-trained
+nlp model which in this case is coming
+from this link over here and i will make
+this link available in the description
+below
+as well as all the code that you're
+seeing in this tutorial so as per usual
+just jump over to my github account or
+check the description below you'll be
+able to grab those links
+so in this case the pre-trained model
+that we're going to be using is nlp town
+forward slash bert dash base dash
+multilingual
+dash uncased sentiment so this is this
+model over here so in order to do this
+i've just grabbed
+effectively the end of the url to be
+able to go on ahead and load that but
+again i'm going to make all of that
+available in the description below
+and then what we've also gone and done
+is created our model so we've gone and
+written model
+equals auto model for sequence
+classification which is what we had from
+up here
+and then we're again using the from
+pre-trained method to be able to go and
+load in the pre-trained model which in
+this case is the exact same as what
+we're using for our tokenizer
+so nlp town forward slash bert
+multilingual dash uncased
+sentiment so we are good to go now so
+that is our model setup now done so just
+those two lines of code
+now if you are doing this for the first
+time it is going to need to actually
+download the model so i believe it's
+about
+665 megabytes i might be a little bit
+off with that
+but it'll ins download and install it
+for the first time and then once you've
+got that then
+and done it's all good to go you don't
+need to download it again now that
+that's done
+let's go on ahead and actually test this
+out so we're going to pass through
+a string or a prompt to our tokenizer
+tokenize it and then pass it through to
+our model and get our classification so
+let's go ahead and try this out
+okay so first up what we've gone and
+done is created our token so if we take
+a look at our tokens now
+you can see that it has just converted
+this prompt that i'm passing through
+into a sequence
+of numbers so again this is all our
+tokenizer is doing in this case now we
+can
+encode and we can also decode so if we
+wanted to decode this set of tokens i
+can write tokenizer
+dot decode and this will convert it back
+to
+a uh what have we gotten done there
+let's take a look at our tokens
+up we need the first list let's try that
+there you go so we can reconvert our
+tokens back to its original text so the
+reason that we can't just pass through
+this is because we can't pass through
+a list to that decoder so what we need
+to do is extract
+that single set of lists there so by
+doing that all i'm doing is i'm grabbing
+the internal list or the internal string
+and then we're decoding
+that single string and you can see there
+that this string
+over here so i hated this comma
+absolutely the worst is exactly the same
+string prompt that we're passing through
+to our encoder now again we don't really
+need to decode in this particular case
+but i wanted to sort of show you how
+that works
+so what we've written there is tokens
+equals tokenizer dot encode and then
+we've passed through our prompt which in
+this case is i hated this comma
+absolutely the worst and then we're
+passing through a keyword argument which
+is return
+underscore tenses and we've set that to
+pi torch
+so this entire line over here is giving
+us our encoded string
+now what we need to do to actually
+perform some sentiment analysis is pass
+that to our model so let's go ahead and
+do that
+okay so we've now gone and passed our
+tokens to our models again
+reasonably straightforward right so i've
+written result equals model
+and then to that i've passed through our
+tokens now if we take a look at our
+result
+you can see that what we're going to get
+out of here is a sequence classifier
+output class and then we're going to get
+our loss
+and then over here this is the bit that
+we actually need so you can see it says
+logits equals tensor and then we've got
+these numbers
+now these values over here in really
+simple terms represent
+the probability of that particular class
+being
+the sentiment so in this case you can
+see that this number here is the highest
+that means that position
+zero or ideally really bad sentiment is
+the uppermost class
+now again so these positions just
+represent one two
+three four and five when we're
+extracting it using pi torch it's going
+to be represented as
+0 1 2 3 and 4 because it starts from 0.
+now in order to grab this result and
+convert it into something that's useful
+for us we can actually do that so let's
+try that
+so you can see from here what we can do
+is we can use torch.argmax to get the
+highest
+value result out of our results.logit's
+attribute so if we type in
+results.logits
+i've got caplocks on
+you can see uh what have we done that it
+should be a result logic so you can see
+out of there we're able to get
+all of the tensor results out of this
+now again remember the highest value is
+going to represent
+what position represents the actual
+sentiment so in this case
+our sentiment score is zero now if we
+wanted to we can convert this into an
+integer
+and then add one so in this case the
+string that we've passed through is
+getting a sentiment rating of one now
+remember it's between one to five
+now we could actually try this out with
+a different string so we could say um
+this is amazing i loved it
+great and then let's delete the rest of
+that and we can run it through that
+pipeline again so we'll just go and
+hit shift enter and run it again and in
+this case you can see the sentiment that
+we're getting back is five so again you
+can pass through a whole bunch of
+different strings and you're going to
+get
+different values depending on what the
+text that you're passing through
+actually is so we could say
+meh it was okay
+and ideally this should be sort of uh in
+the middle of the road and in this case
+you can see that we got three
+so it actually allows you to return a
+result which is sort of just an integer
+or in this case a binary value
+so one two three four or five so the
+higher the number the better
+the sentiment the lower the number the
+worse the sentiment now in this case
+three is sort of middle of the road um
+we can also let's try to get it between
+like
+four so we might say um it was
+good but could have been better
+oh we're still getting three let's say
+great
+okay there we go so we managed to get it
+to four so again you can see
+that the model actually responds really
+really well to changes
+in the text that it's passing through so
+you might get if you pass through a
+really really great review then you're
+likely to get a five result if you pass
+through a
+moderate review or one that's really
+crap you're going to head
+closer towards the one two or three
+values but again this sort of gives you
+an idea of how to actually use it
+now in this case we're going to take it
+one step further and
+actually collect some reviews so what
+we'll do is we're going to go out to
+yelp now in this case i've got
+two reviews that i want to take a look
+at so i've got this
+page from mexico it's like one of my
+favorite restaurants
+we're going to go ahead and extract
+these reviews down here
+and actually use them and pass them
+through our sentiment pipeline
+so we've got a bunch of work to do here
+now what we need to do first up is
+actually make a request to this site
+and this is where the request library is
+going to come in and then if you
+actually take a look
+each of these comments are actually
+stored within a class
+that starts with comment so you can see
+there that it actually contains comment
+in that class
+now what we can actually do is use regex
+to actually extract all of those classes
+out and that's exactly what we're going
+to do
+so let's go ahead and do it
+oop looks like we've got a bit of an
+error so let's uh let's take a look at
+this
+this should be a result there we go
+okay so we've now gone and ridden
+our scraper code now again i've plugged
+this all into five lines of code so
+if you'd like a deeper dive into how to
+actually perform scraping by all means
+do let me know i'd love to hear your
+thoughts on it but in this case in five
+lines of code we can effectively build a
+scraper
+so the first line of code is using the
+request library to actually go on ahead
+and
+grab our web page in this case it's yelp
+dot com forward slash beers forward
+slash mexico dash sydney dash two
+but again you could do this on a whole
+bunch of other sites and we'll actually
+test that out
+so what you'll get from that is a
+response code
+then what you can actually do is type in
+text to get the text
+out of that web page and this represents
+everything that actually comprises that
+web page
+so what we're then going to do is pass
+this text to beautiful soup so the next
+line of code that we've written is soup
+equals beautiful soup and then to that
+we're passing through this
+r.text and then we're setting our parser
+which in this case is a html pass up
+then the next bit is actually going on
+and extracting the specific components
+that we want
+from this web page so if we actually
+take a look
+what we're then doing is we're writing
+some regex so in this case we're looking
+for anything that has a comment within
+the class
+so remember i was sort of saying that
+each one of these comments has a class
+which starts with comment
+and if we take a look at this one you
+can see again it's got a class which
+starts with comment if we
+look at uh what about this one
+again it's got a class that starts with
+comment so what we're doing is we've
+written regex
+equals re dot compile and then we've
+written inside of quotes
+full stop asterisks comment full stop
+asterisks and then close quotes
+then what we're doing is we're actually
+passing that regex through to our soup
+so beautiful soup allows you to
+effectively create a soup so if i
+actually show you this
+so this is our soup so this is in a
+format that beautiful soup is able to
+actually search through it so this is
+this line over here
+what we're then able to do is use a
+function like find all to be able to
+find
+all the tags within that soup that match
+our specific formatting
+so in this case we're looking for
+paragraphs so in this case you can see
+that i've got paragraphs here
+and then we're looking for anything that
+has a class which matches our regex
+which in this case is going to be
+comment
+so if you actually take a look all of
+our reviews
+are wrapped inside of a p tag which is a
+paragraph so again if we take a look at
+some others
+again wrapped in a p tag has a class of
+comment
+wrapped in a p tag has a class of
+comment right
+cool so what we're now going to do out
+of this results line so if we actually
+take a look the full line is results
+equals soup dot find underscore all and
+then we're passing through the class
+that we or the tag that we want to look
+for which in this case is a p
+tag and then we're looking for the class
+which matches our reject so if we take a
+look at our results now
+you can see that we've got all of our
+different reviews so all of them are
+here so you can see this person saying
+the food is fresh and tasty the scallops
+of each a started the lunch
+sounds fancy the scallops were tender
+with the great acidity and used to make
+i'm not going to read all these reviews
+but you sort of get the idea right
+but in this case you can see that these
+are keep saying in this case a
+terrible habit anyway so you can see
+here that
+all of these reviews are actually
+wrapped inside of these html tags we
+don't want that we
+just want the text so we can actually
+extract the text from each of these
+reviews so if we take a look at one of
+our first results
+all i need to do is type in dot text and
+this
+just gives me the text from that tag
+which is exactly how we want it
+so the last line of code that i've
+written is reviews equals
+and then we're doing a list
+comprehension so we're looping through
+each one of the results in our results
+array so for result in results
+we're just going to go ahead and extract
+results.txt and then we're storing that
+inside of a list which you can see there
+so now if we take a look at our reviews
+we've got only the reviews that we want
+so it's removed
+all of those tags that are going to
+screw up our results it's just giving us
+exactly what we need cool so those are
+our reviews collected now again we'll
+come back to this and we'll actually do
+it on another link and another business
+so you could do this on just about any
+link that you wanted from yelp
+now again the structure of the website
+may change in the future so if you do
+get stuck
+by all means hit me up in the comments
+below and let me know if you'd like to
+see a bigger web scraping for data
+science tutorial i'd love to do
+something in that space
+but for now we've got our reviews so
+what we're going to do
+is we're going to load them into a data
+frame so this is step 5 and we're going
+to
+run through each one of these reviews
+and score them so let's go ahead and do
+that
+okay so that is our line of code but it
+doesn't look like i've imported pandas
+yet so let's do that so import
+pandas as pd
+and we also need to import numpy how did
+we miss that do we not okay we didn't
+import those
+import numpy simpy
+alrighty so those are the three lines of
+code that we need to write to be able to
+get our reviews into a data frame now
+why a data frame
+just makes it easier to go through and
+process your reviews that way
+so what i've gone and done is we've gone
+and imported two additional libraries so
+import numpy as mp and then we've
+imported pandas so import
+pandas as pd and then we're actually
+going on ahead and creating a data frame
+so to do that i've written df equals pd
+dot
+data frame and then we're actually
+passing through our reviews so in this
+case you can see we're converting our
+reviews to a numpy
+array because that's what pandas likes
+working with so
+mp.array and then two that we're passing
+through our reviews
+and then we're specifying what our
+columns are going to be called so we're
+specifying columns equals review inside
+a square bracket so if we take a look at
+our data frame now
+you can see that we've got all of our
+reviews easily stored in a data frame so
+we can type df.head to view our first
+five rows in df.tail
+to review our last five rows in this
+case it looks like we've got about nine
+reviews
+to work with looking pretty good so far
+now what we're actually going to do is
+we're actually going to loop through
+each one of these reviews so if we
+actually take a look at one so df dot
+ilock zero so in this case we can see
+our review let's just extract our review
+so you can see that effectively we're
+just grabbing this entire string review
+and we're storing it inside of our data
+frame now if we wanted to grab
+each one we could definitely do that now
+again we can take this block of text and
+we can pass it through to our same
+model that we had up here we first up
+need to pass it to our tokenizer
+we then pass it to our model and then we
+do this little transformation down here
+to be able to get our actual sentiment
+result
+now what we're going to do is we're
+going to create a quick function
+that allows us to do exactly that so we
+can take a string
+pass it to that function and effectively
+what we get at is our sentiment result
+so let's do it
+okay so what i've gone and done there is
+effectively just copied over the code
+that we wrote in step three
+so i've copied over the tokenizer.encode
+method or line
+i've copied over the result line which
+actually goes and calculates our
+sentiment
+and i've copied over this line down here
+which actually extracts our sentiment
+score
+and i've put that inside of a function
+so let's actually take a look at this
+whole thing
+so i've written def so we're defining a
+new function so sentiment
+underscore score and then to that
+function we're going to be passing
+through
+each individual review then what we're
+doing is we're using the
+tokenizer.encode method
+on the actual review and again we're
+returning our python
+chances and we're going to be storing
+that inside of a variable called tokens
+again
+no different to what we're doing up here
+then what we're doing is we're passing
+those tokens to our model to get our
+result and then we're going and
+performing that transformation exactly
+as we did
+over here to get our sentiment score so
+now if we run this function so if we use
+sentiment score
+on this line over here for example
+what we should get back is our result so
+there you go so by doing that we're able
+to go through
+and grab our result or review out of our
+data frame and actually run that so if i
+did it on a different review so if we
+say we did it on the second line and
+again this is just going through and
+running our sentiment pipeline
+on that specific review but now say for
+example we wanted to do this
+on mass so rather than going through one
+by one we wanted to do it on all of our
+reviews
+and store those reviews inside of our
+data frame how would we go about doing
+that
+well we can use a apply lambda function
+to be able to go through
+run through each one of the reviews in
+our data frame and then store that
+inside of a column so let's do it
+okay so before i go on ahead and run
+that let me explain
+the lines of code so what we're doing is
+we're going through and we're going to
+loop through
+every single one of our reviews in our
+review column so df
+and then square brackets review so this
+allows us to extract our review column
+so if i show you that
+so you can see that's just our review
+column and then we're using the apply
+function and lambda to be able to loop
+through
+each one of the reviews within that
+column so we've written dot
+apply and then inside of that we're in
+lambda x
+and then this is going to allow us to
+work with each individual view as the
+variable x
+so then what we're doing is we're using
+our sentiment score function which we
+defined up here
+and then we're passing through x but now
+let me explain
+why i've got this extra little block
+over here on this so our nlp
+pipeline is actually limited as to how
+much text or how many tokens you can
+pass through to it at one particular
+time
+and in this case it's limited to 512
+tokens so what i've gone and done
+is i've just gone and grabbed the first
+512 tokens from each one of these
+reviews now again this may influence the
+results of your sentiment pipeline you
+could actually append these together or
+do it in multiple steps and get taken
+average
+but in this case this is a quick
+workaround so what i've written is x
+square brackets colon 512 to effectively
+grab
+everything before the 512th value
+and then close square brackets so if i
+run this now
+this is going to loop through every
+single one of our lines and if we take a
+look at our data frame now
+you can see that we've now got our
+sentiment score
+fully calculated so in this case you can
+see that for
+review one the food is fresh and tasty
+that's giving us a sentiment score of
+four
+don't come here expecting legit mexican
+food score three
+out of all the restaurants i've tried in
+sydney i'm guessing that's going to be a
+positive review
+got a score of five ordered feed me for
+59
+i'm guessing the rest of that review
+wasn't too great let's actually take a
+look
+so if we go and grab what would that be
+so to do which one was two so let's grab
+three
+so ordered feed me for 59 along with
+that food was good quality but the
+service was tragic and weight was poorly
+managed personally if you're with a
+group looking for light finger food size
+portion this would maybe be suitable for
+you so again that's pretty consistent
+with the sentiment score that it's
+actually got there
+i was pleasantly surprised with what a
+great job so on and so forth
+okay so you can start to see that this
+allows us to loop through
+and calculate a sentiment on a bulk
+set of data now i promised at the start
+that we do this on another business so
+let's go ahead and try this out
+so all we need to do to do this is
+really just go and grab another business
+so i'm going to grab this one which is
+yelp.com forward slash beers forward
+slash social brew dash cafe dash
+piermont so i'm going to grab this
+and all i need to do in order to rerun
+this is just change
+the link that we've got in our
+request.getline so if i paste that in
+now
+this is going to go and grab our new
+reviews
+you can see we've now got our reviews
+another thing to call that as well is
+if you wanted to run this as sort of
+like a pipeline or a python script
+the nice thing about jupyter is that you
+can actually just download this as a dot
+python script and you can run it that
+way
+the only thing that you need to be
+mindful of is if you're going to be
+doing that you need to remove
+these command or you need to remove
+these jupiter and magic
+lines so you have to do the pip install
+inside of your environment
+not inside of the python script okay so
+what we went and did is we went and
+changed our link inside of our request
+line and this is giving us a new review
+so if we take a look these shouldn't be
+mekki co-related
+looking pretty good and then we can just
+keep running through our next pipeline
+so we're going to convert our data frame
+again
+and then we're going to run our
+sentiment pipeline on it
+and there you go so we're now getting a
+sentiment for our coffee shop so again
+this sort of shows you how you can
+easily run through and actually go and
+calculate sentiment
+on a whole bunch of data now on that
+note we are done
+so we've gone and done a bunch of stuff
+in this tutorial so we installed and
+imported our dependencies
+we instantiated our model we encoded and
+calculated our sentiment
+collected our reviews and then loaded
+our reviews into our data frame and
+performed our sentiment analysis
+and on that note that about wraps it up
+thanks so much for tuning in guys
+hopefully you enjoyed this video if you
+did be sure to give it a thumbs up hit
+subscribe and tick that bell and let me
+know what you thought of the video and
+if you had any trouble by all means do
+hit me up in the comments below i'm
+happy to help you out with
+any difficulties or troubles or even
+just to have a good
+old yarn thanks again for tuning in
+peace

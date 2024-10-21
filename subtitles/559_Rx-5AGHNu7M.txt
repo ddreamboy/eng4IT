@@ -1,0 +1,677 @@
+gpt3 has gotten a lot of attention
+recently
+so i got curious and i want to dig a
+little bit deeper and understand what
+exactly
+gpt3 is how it works what it's doing
+but also how it compares to other nlp
+models that i use on a pretty consistent
+and regular basis
+i'd like to share some of what i've
+learned with you all and hopefully by
+the end of it you'll also have a sense
+of
+how exactly gpt3 works what it's good at
+what some of its limitations are
+and how it compares to alternative
+models and there's been a lot of models
+over the last couple of years and this
+is a good thing
+it's a good thing because we've seen a
+pretty radical change in state of the
+art and natural language processing
+but all of these models bert roberta
+gpt xlnet they all have a few things in
+common
+first of all they're all language models
+that means at their core
+they're looking at raw text and trying
+to learn something
+just by looking at the raw text because
+presumably the words that we use in the
+way that we arrange words
+conveys meaning so if we can train a
+model machine learning model to extract
+the meaning from the words
+and the grammar then well that would be
+a good thing and it turned out to work
+for quite well
+now the other thing that all these
+models have in common is that they're
+all based on transformers
+now transformer is the the specific uh
+neural network architecture that has
+been implemented
+in all of these models starting from
+bird
+through gpt and all the ones in between
+and the idea of transformers is that
+they use this
+thing called attention so the model
+looks at sentences
+and it plays these games with sentences
+by looking and paying attention
+to different parts of the sentence to
+try to understand and extract
+meaning and insight from text so
+although all these models have these
+things in common
+there are two general families that we
+can
+slot these models into on the one hand
+we have the bert and the roberta and the
+albert family of models which for
+obvious reasons i'll call the burnt
+family
+these are bi-directional encoders and
+there's a fundamental difference
+subtle but fundamental difference
+between the bert family of
+transformers the burt family models and
+gpt and xlnet and this other family
+and the second family that gpt falls
+into they're called auto regressive
+decoders
+now the best way to see the difference
+is graphically
+so here's a picture which i've taken
+from a blog that's linked at the bottom
+it's a very good blog
+to understand how these models work i i
+highly recommend you go there and visit
+that
+that blog but from a high level models
+like burt and the burt family
+they're shown on the left and these are
+bi-directional encoders which means
+that when you give bert a piece of text
+bert will look at that entire piece of
+text from left to right from right to
+left
+and as it's looking at any one
+particular word it will look at the
+surrounding words for context
+so if i take the example sentence i'm
+going to throw a ball to the outfielder
+well bert will take that sentence and if
+i focus in on the word
+ball well when it's trying to encode or
+embed that word
+it will know that i am throwing the ball
+and it will look at the other side of
+the word and also get that context so it
+will know that i am going to throw that
+ball to an
+outfielder now let's contrast that
+situation
+with the situation on the right and the
+situation on the right this is the gbt
+style of family
+if you give a gpt or similar models that
+same sentence it's not going to look at
+all the context to the left and right of
+the word ball
+it's going to start at the beginning and
+say i am going to throw a ball
+and then gbt tries to predict what's
+going to come next that's its
+language learning task all it's doing is
+trying to predict what word comes next
+and it turns out that's a pretty good
+way to learn
+a language and to extract information
+from language
+that's all gpt is trying to do now of
+course there's some downsides so
+if for that example sentence when i get
+to the word ball
+gbt doesn't know whether i'm going to
+throw the ball to an outfielder or to a
+wide receiver or to my daughter in the
+backyard
+it tries to guess these things and you
+know it does a pretty good job
+but on the other hand this is where you
+see a lot of attention
+no pun intended around gpt3 is that it's
+really good
+at writing it's really good at
+generating text because it was trained
+to guess
+the next word and so if you give gpt a
+sentence like i'm going to throw the
+ball well gpt has seen enough examples
+that it can
+fill in the blanks it can fill in the
+rest of the sentence fill in the rest of
+that sentence
+in several ways that makes sense and so
+again to reiterate that's why
+a lot of the attention around gbt3 has
+been its uncanny ability to to write
+to write things like uh news articles
+even code
+and this is pretty impressive and it's
+pretty remarkable
+now the big thing with gpt3 apart from
+its impressive
+performance at at writing and generating
+text
+is its size and the authors write
+each increase in model size has brought
+improvements in text synthesis
+and or downstream nlp tasks so in other
+words looking back at the recent history
+of transformer models
+they've noticed that we add more
+parameters make the models bigger they
+tend to work
+better so effectively gpt3 is an
+experiment
+to see if we can extrapolate off the end
+of that
+curve and make a really big model
+and we'll see if that really big model
+does really well
+how far can we take this size argument
+so to give you a sense of how big big is
+in the context of gpt3
+let's look at a few examples i'll start
+with bert bert had
+340 million or so parameters
+which is a lot of parameters and you
+know a parameter is the the
+most granular part of a model it's the
+smallest bit of a model
+more parameters the bigger model the
+more capacity it has to learn
+now let's look at roberta which was an
+extension of
+bird but roughly the same size about 355
+million or so parameters
+now if we look ahead to gpt2 gpt2 was
+quite a bit bigger over 700 million
+parameters
+similar to that was t5 again between 700
+and 800 million parameters
+these are big models already but how big
+did gpt3 go
+huge gpe t3 clocks in
+at 175 billion
+parameters it's a big model
+now to show this on a slightly more
+equitable chart
+we can go to a log scale so we're
+looking at the number of parameters log
+number of parameter
+parameters on the vertical scale now but
+even here you see that gpt3 is about
+three orders of magnitude larger
+than the models that came before it now
+these numbers
+it's hard to get an intuitive sense of
+how big 175 billion is
+but kind of an interesting thought
+experiment is well what if i take
+one parameter and equate that to a unit
+i'm more familiar with
+like one second so if one parameter in
+one of these models equates to one
+second
+then both bert and roberta come out to
+be roughly
+10 years of time equivalent
+the next larger models next two larger
+models gpt2 and t5
+if one parameter represents one second
+then those models come out to be about
+24
+25 years but now with gpt3 with 175
+billion parameters
+that would be over 5 000 years
+if one parameter equaled one second it's
+a lot bigger
+gpd3 in fact takes supposedly 320
+gigabytes of memory
+and it costs 12 million dollars to train
+so gpd3 is a very large model but what
+does it actually
+do and how is it different than the bird
+family now a few slides ago i showed you
+kind of the structural difference
+between gpt and the bird family of
+transformers
+but what i'd like to get into now is how
+it's
+functionally different perhaps even
+philosophically or conceptually
+different
+and i think one interesting way to
+unpack this question
+is simply through the titles of the
+papers that came out describing these
+models
+so with burp the title of the paper was
+bert pre-training of deep bi-directional
+transformers for language understanding
+i think the key word that i want to
+focus on here is pre-training
+that's always been bert's mo you you
+start off by
+pre-training a generic model so this is
+a transformer that understands
+language well it has smart embeddings
+for words
+but it's not useful for anything yet you
+have to start off with that pre-trained
+model but then
+take it further and fine-tune it to do
+some specific tasks
+so for example you might take a
+pre-trained bird model but then
+fine-tune it
+to do text classification or fine-tune
+it to do question answering
+you might fine-tune it to do sentiment
+analysis or
+named entity extraction
+the idea though is to starting with a
+pre-trained generic model and
+specializing that model in any number of
+directions
+gpt 2 and 3 seem to have a slightly
+different objective in mind however so
+the gpt-2 paper
+said was titled language models are
+unsupervised
+multi-task learners so if you
+notice the emphasis is different i think
+the operative word here is multi-task
+learners
+their approach was to posit that a
+language
+model could be pre-trained
+but also be good at performing multiple
+tasks
+more or less out of the box they were
+not interested
+in fine-tuning gpt to be really good at
+one thing or another thing
+at least not necessarily so but they
+were more interested in the fact that
+this could be good at several things
+without fine tuning and that thread was
+carried on to gpt 3.
+the title of the gpt3 paper was language
+models are few shot learners
+and so we'll get into a few shot what
+what few shot learning means
+but the idea is that you have a
+pre-trained model that is
+right out of the box right off the bat
+good at
+several different tasks how does it do
+this
+one way to describe this is to break the
+training into two different parts
+the top part which is shown in purple
+and is called the outer loop in this
+diagram by the way is out of the gpt3
+paper
+is kind of your standard language
+pre-training bert does this and gpt-3
+does this
+and this is learning via gradient
+descent during unsupervised pre-training
+this is where you're just learning the
+model with burt and the burt family it
+tries to fill in blanks
+that's the game it plays to learn the
+language with gpt3 as we mentioned
+earlier is trying to predict the next
+word
+but it's still unsupervised pre-training
+it's not necessarily
+task specific training these models
+after completing the outer loop they're
+not really good at anything
+in particular right well gpt
+2 and 3's position was that even
+stopping with that pre-training
+we can follow it on with something
+called an inner loop
+and this is not done during training the
+inner loop is at run time
+is when you have your pre-trained model
+can you take a model and
+show it a few examples of what you would
+like it to do
+and then have it learn on the fly to do
+these different things
+so this is specific to gpt bert again as
+i said does not take this approach
+let me show you a few more concrete
+examples to help clarify this
+an approach like bert and the bert
+family of models
+if we want to translate a phrase from
+english to french
+we'll have to show bert multiple
+examples of translation from
+english to french and after every
+example every batch of examples
+bert will update its model parameters
+through the gradient update
+and so as we're going through these
+examples and bert
+is learning it's updating the model and
+this model is becoming
+an english to french translation
+specialist
+all the parameters in the model are
+adjusting themselves specifically to
+this task
+and it can actually get pretty good at
+that task that's burnt
+gpt 2 and 3 as i mentioned have a
+different approach
+we'll start with zero shot learning the
+idea here is can i take a gpt-3 model
+that has just been pre-trained not
+specialized like bert
+but can i give it some task and just
+tell it what i want to do
+at inference time at runtime so i'm
+going to say hey gpt3
+i want to translate english to french so
+here's cheese blank
+and i want gbt3 to be smart enough out
+of the box to
+know what i wanted to do by reading what
+the task in the input
+and then doing that automatically this
+is called zero shot learning because
+gpt3 has never seen an example of
+english to french translation
+i'm just telling you what i want to do
+at the input and asking it to do it
+automatically contrast this with one
+shot learning
+with one shot it's the same idea i'm
+going to take the gpt3 model and say
+at input not during training time but at
+input time hey take this uh translate
+english to french
+and i'm gonna give you one example
+here's your one shot to learn what i
+want you to do
+sea otter maps two i'm not going to try
+to read french but there it is
+now after gpt3 sees that one example i
+want to
+fill in the blank in my real example
+which is translating cheese to french
+can gpt3 do that if it does that's an
+example
+a successful example of one-shot
+learning again
+i'm going to say this a couple of times
+this is the big difference gpg3 is not
+fine-tuned to translate english to
+french i'm telling it what i want to do
+after it's trained in this case giving
+it one example and expecting it to take
+it from there
+now in reality it might take more than
+one example
+so uh you'll hear the exam you'll hear
+the phrase few shot learning
+it's the same idea at input time at
+runtime at inference time i'm going to
+say hey gbt3 translate english to france
+french but now i'm going to give you a
+couple of examples so here you see three
+examples of english to french
+translation and then on the last one
+i give it the english and i ask gpt3 to
+fill in the blank it turns out
+it's pretty good at this this is a chart
+that's
+you know i took it out of the gpt3 paper
+there's a lot of these kind of charts i
+picked this one just as a typical
+example
+but what you see is along the the bottom
+axis
+you have the size of the model in
+billions of parameters you know again
+testing this
+theory of bigger is better when it comes
+to model performance
+and so let's say all the way out here on
+the right which is 175 billion that's
+the largest model they trained
+these horizontal lines at the bottom you
+see random guessing up here you see a
+couple of burp models and up here
+you see kind of state of the art and
+human performance and all of these are
+measured on the super glue score which
+is an
+which is an nlp benchmark
+so the blue line is zero shot i don't
+show gpth3 in examples
+and i just see how well it can do on
+this variety of nlp tasks that's
+measured by super glue
+and surprisingly it does well not
+horribly better than random guessing
+but what's really interesting is if i
+give it one example i give it one shot
+or a few shots which in this case is i
+give it 32 examples
+and then i ask it to take it from there
+gpt3 does
+quite well it's competitive actually it
+beats a little
+bit fine-tuned burnt
+and again just to reiterate this in this
+case that fine-tuned bert was
+specifically trained
+to do those tasks as well as it could
+gpt-3 is just a generic
+pre-trained big model and then give it a
+few examples
+and then ask to take it from there so
+the fact that it's competitive with a
+few shots
+is interesting and impressive
+so what tasks were actually tested
+there's a variety of them
+you can read about this in the paper
+it's a very well written paper
+but gpt3 was tested on things like
+sentence and paragraph completion which
+is
+you know you would think it would be
+good at because that's what it was
+trained on as well as trained how to do
+but it was also asked to do things like
+question answering
+uh translation as we've seen pronoun
+reference resolution which can be
+you know quite tricky and then some you
+can read the list here and there's also
+synthetic demonstrations that i think
+are
+fun and interesting so to give you an
+example of one of the synthetic
+demonstrations i think highlights
+uh how potentially impressive gbt3 is
+this is an example from the paper
+but we're going to give gpt3 a new word
+a made up word a fictional word but
+we're going to ask gpth3 to use it in a
+sentence
+so again how do i tell gpt3 that i
+wanted to do that well i have to give it
+an example first
+so in gray here is the example i give to
+gpt3
+i'm going to say hey gpd3 a watpu is a
+small furry animal native to tanzania an
+example of a sentence that uses the word
+the word wapu is we were traveling in
+africa and we saw these very cute wapoos
+now i continue and say now to do a far
+duddle
+means to jump up and down really fast an
+example of a sentences that uses
+the word the word far duddle is and then
+i asked gbt3 to give me an example of
+this made-up word that i just defined
+for it on the fly and shebt3 says
+one day when i was playing tag with my
+little sister she got really excited and
+she started doing these crazy far
+doubles
+that's pretty cool i i told it i gave it
+the definition of this word
+at runtime and it and it gave me a very
+coherent
+and reasonable sentence that uses the
+word correctly
+so this is an example of a couple of
+things gpt3 was it good at it's pretty
+good text generation
+and it's also which is one of the main
+arguments of the paper
+good at learning just from examples
+without fine-tuning
+so the 12 million dollar question is is
+gpt-3 a child prodigy
+or simply a parlor trick now the chop
+prodigy analogy i saw it online it's not
+original to me i saw on a blog somewhere
+but the idea is
+you know for example i'll play this game
+with my daughter where i'll say
+five times ten is fifty six times ten is
+sixty seven times ten is seventy
+so what's eight times ten and i wanna
+see if she can pick up the pattern and
+extrapolate off of it
+that's basically what gpt3 is doing
+which is impressive
+on the other hand is this just kind of a
+neat trick
+most of the examples that we see online
+are of gpt3
+writing it's generating text and it
+turns it you know it is good at that it
+was trained to generate text it was
+trained to write text so for example
+i give it the headline of an article and
+it completes that article
+now not all the articles it writes are
+going to make sense and in fact you
+don't have to look
+too closely to find some holes in logic
+or just see some bad examples where
+things don't make sense
+on the other hand how often do i need a
+175 billion parameter model to write a
+news article for me
+all things considered there's still a
+few practical considerations
+regardless of which side of this
+you know choice that you come down on
+one of them is
+obviously the issue of size and the
+authors acknowledge this in their paper
+they say a limitation associated with
+models at the scale of gpt-3 regardless
+of what you're trying to do
+is that they're both expensive and
+inconvenient to perform inference on
+so yeah with a model this size i'm going
+to need
+multiple servers i'm going to have to
+distribute the model across multiple
+gpus it's going to be a headache to run
+jobs on and not to mention just the
+expense of
+either buying or renting that hardware
+and it's a huge model so it's going to
+take a long time to even run data
+through it and so
+it's it's big but that makes it all so
+unwieldy
+and the last thing that i would mention
+and i think this is
+one of the big issues for me i do think
+gpt3 is very impressive but
+is it what i need and the answer is
+probably no
+in my day-to-day work i want a model
+that's really good
+usually at doing one particular thing if
+i want to do text classification
+i want to take a model and adapt it to
+the domain that i'm working in
+and have that model be the best text
+classification model for that domain
+that i can come up with
+and well that's bert or at least the
+bert family of models
+i can fine tune it on the specific
+language domain specific language that
+i'm interested in
+and have it be really good at the
+specific text classification tasks that
+i'm interested in
+i don't need an all-purpose model and in
+fact going to something like gpt3
+i would have to tell it i would have to
+repeat the instructions i have to give
+examples of text classification
+every time that i wanted to to classify
+text and it wouldn't be as good as a
+special purpose model built just for
+that
+case and again the authors acknowledge
+this in the paper
+you know they say that you know it's
+really impossible to have
+at least at this point uh a language
+system that's
+the best at everything now on the other
+hand although gpt3 may not be a useful
+model
+for me on a day-to-day basis i still
+think that gb83 is very interesting and
+i think it's an important
+very important uh piece of work that was
+performed
+it's it's asking the question of what
+happens if we build a really
+big model where is that edge point have
+we detected it yet
+i don't know but i think this is an
+important step in learning more about
+natural language processing and learning
+more about
+you know transformer models and what
+they're capable of i think there's a lot
+here to learn
+at an academic level at an intellectual
+level even if it's not
+a day-to-day tool that i would use so
+that's it for me guys i hope that you
+have learned something
+if you're still watching uh if you have
+any comments or feedback i'd love to
+hear from you and
+i hope it was useful or informative
+thanks
+you

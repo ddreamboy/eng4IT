@@ -1,0 +1,280 @@
+alright welcome back and this part we're
+gonna cover functions and why do we want
+to create functions how do we create
+them and why they are awesome
+so let's start off with creating another
+variable here so we're gonna call this
+Const and we're gonna call it name all
+right super original and we're gonna
+call it dev add like so good we're gonna
+save this and now we're gonna create the
+function so what is a function a simple
+way to explain a function is a set of
+code that we're gonna write to do things
+for us so we just we just separate a
+specific task that we had into a
+function so in a real-life example it
+would be something like it is a function
+because it has more steps so you go into
+the kitchen grab the food you prepare
+the food then you're gonna eat it and
+then if you want you can wash the plates
+if you want and that's the whole process
+okay so the function would be a set of
+code that you write that does a task
+alright so rather than doing like grab
+food eat food whoa
+and write a whole bunch of crap down
+here rather than doing this we can
+create a function that's gonna isolate
+everything that we want it to do so to
+show you a great example we're gonna I'm
+gonna introduce you to something that we
+can do on this name so what we can do is
+the way we create a function is we're
+gonna write function like so and again
+we can give it a name like let's say
+this function is gonna take our name
+here and it's gonna put everything in
+uppercase alright so
+we're gonna name this upper case like so
+and it's a good convention also to use a
+lower case here and then upper case here
+so let's say you want to have a variable
+called gallery images cons gallery
+images like so so this is how we're
+gonna write it just because it's gonna
+make everything more clear it's gonna
+make everything more visible on what's
+going on and it's just basically a
+convention that people use so rather
+than doing it lowercase like this and
+then everything just goes together like
+this it's gonna look ugly and it's gonna
+be hard to to read it and like this is
+everything it's just gonna be more
+visible so anyways this is why we wrote
+it like this and what we're gonna do
+here is we're gonna open up some
+parentheses like so and then some
+brackets like so all right I'm gonna go
+over what all of these dot do but what
+we did here is we created a function and
+in here we can give a set of
+instructions of what we want it to do
+now let's for now remain this rename
+this to logger and here let's say we're
+gonna console.log Party Time party time
+like so
+alright multiple times and the way I did
+that is I just hold shift and alt and
+press down on the down arrow and it's
+just gonna multiply it's gonna create a
+copy of this down here alright so this
+is our function it's just gonna console
+a quick time pretty time four times good
+but if we look at our code our console
+here nothing's happening why is that
+well this is now gonna execute so when
+we run this code what's gonna happen
+basically is JavaScript is gonna take a
+look at this and it's gonna say oh okay
+so we have a name variable alright it
+has a value of Devitt cool I'm gonna
+save this in memory nice okay we have a
+function here
+and it has console logs or whatever you
+want cool I'm gonna save this in memory
+so whenever we want to run the function
+we need to run it we need to run it so
+this is just saving it to memory all
+right it's not actually doing anything
+right now so the way we run this code is
+we're gonna write the name of it like so
+logger add the parentheses and then
+we're gonna close it like so so the way
+we did it so far hit save and now you're
+gonna see Party Time party time party
+time party time so this is called a
+function invocation all right so this is
+where you want to execute your function
+so this is all it does cool but why do
+we need to add these things here
+and why are these brackets here well the
+thing is that the brackets mean that
+everything that's available here is only
+available here and what I mean by that
+is if we take the sconce name and add it
+in here like so our name down here is
+not gonna be available so what's gonna
+happen here is we pass the variable in
+this function so it's only gonna be
+available in here all right name is not
+gonna be available down here all right
+so whatever variables you add inside the
+function are not gonna be available down
+here outside of the function all right
+so basically what these are called to
+quickly go to this is called the global
+scope and this call this is called the
+function scoped all right so but however
+if you add this to global scope then in
+here console.log name so this is gonna
+be available here so everything from
+global scope is gonna be available in
+our function scope
+however variables declared in our
+function scope are now gonna be
+available in our global
+so whatever you have in your function is
+closed and whatever you have in global
+is available everywhere okay that's all
+you need to know for now all right cool
+so let's delete this and why do we need
+these well now it's the time to change
+this to two upper is we're going to do
+our text to uppercase cool
+so let's invoke it again here to upper
+like so close let's see if we get
+partytime good
+well rather than having party time we
+want to get this and make it uppercase
+cool so what we can do here is we can
+add the reason why we add these
+parentheses is that we can add key
+parameter to it and what the parameter
+does is basically you can inject a
+variable or a value inside of it and
+it's gonna run down here you're gonna
+have access to it down here so what I
+mean by that is let's say we have
+actually I say let's say we want to add
+two numbers together so to let's say
+either like so so here what we can do is
+we can console.log and we're gonna say
+let's just add two values here so you
+can name these whatever you want you can
+say number one number two with comments
+okay so here we can console log number
+one plus number two all right now this
+doesn't make any sense
+what is number one and what is number
+two we don't know and we can't log the
+addition down here cool well it makes no
+sense until you invoke the function so
+either here we can pass in here the two
+different numbers that we want and
+that's going to be injected in the
+parameter here and then it's gonna pass
+down here and add the numbers together
+so if we add five here and
+five or ten then the five is gonna go in
+here so basically it's gonna be injected
+in here ten is gonna be injected in here
+and then the console.log it's gonna add
+these two numbers together so if we save
+we're gonna get 15 here so that's that's
+why we use the parentheses is because we
+can add different parameters and here
+now why is this useful well again if we
+go back jumping around with this to
+upper case 10,000 times but if we had
+the two upper well we know that we are
+gonna get a text that we want to
+uppercase now we can we might need
+different kind of text to be uppercase
+so we don't want to just execute it on
+this and I'm gonna show you in one bit
+so let's just say we have a text in here
+and what we can do here is we can get
+the text and if we add dot we can call
+additional functions that are built into
+JavaScript so as strings so texts have
+different functions built into them
+numbers have different built-in
+functions that we can use on our code so
+we can do text dot to upper case like so
+and then we do the parameters again this
+is something inbuilt in JavaScript
+that's gonna make our text uppercase so
+now we can say console.log text like so
+it's safe and down here we can say to
+upper and now what we can do is we can
+inject the name from up here down here
+so if we say name and we check well
+actually what we need to do is we can
+take and create a new variable rather
+than just console logging text because
+that that the value that's going to be
+console logged what we can do is we can
+create a cons called upper case
+like so so we create a new variable and
+dysfunction and we just set it equal to
+our text that we get from our parameter
+and then uppercase it so we can
+console.log uppercase t' here so if we
+hit save then you're gonna see that
+everything is uppercase like so so again
+to walk through this super fast we
+create a function like so we give it a
+name so just like variables this is a
+parameter here we create a new variable
+and we just set it equal to our
+parameter that's going to come in which
+is the name so we're passing the name
+this one from up here into here so this
+is dev add here and then our uppercase
+is going to be equal to dev ed dot to
+uppercase so this is a again a a
+function that's already built in for us
+that we can use on our text and then we
+just cancel out the uppercase so that's
+how we can use functions so the cool
+thing now is that we can create cons
+YouTuber is equal to you name a youtuber
+and Trevor C media right so down here we
+can just save to upper youtuber and boom
+we should have traversing media all
+uppercase so there we go
+that's how that's the basic sub
+functions that we can use and later on
+we're gonna cover again different
+functions that are already built in for
+us that we can use alright so this is
+one way we can use a function I'm gonna
+delete everything here another way we
+can use one is by doing the way we do
+variables which I prefer actually rather
+than this so then this method so what we
+can do is we can do const and we can
+right give it a name so two upper like
+so equals u and we can set it equal to a
+function just like normal okay so this
+is another version you can use and the
+last version which is the modern version
+we can use this is rather than
+writing this whole function thing we can
+make this one shorter so we don't even
+need to write function so what you can
+replace here is you can remove the
+function keyword and after the
+parameters you can just add an equal and
+a bigger than sign so this is the
+shortest way you can write a function so
+you set it equal to a some empty
+parameters that you have here and you do
+equal and bigger than sign so you don't
+need to write function anymore so these
+are the three ways I prefer this way you
+can use different ones but I thought I'd
+show all three of them for you all right
+so that's it those are functions
+basically and in the next video we're
+gonna cover Ray's objects and all the
+other good stuff so thanks again for
+watching the next videos are gonna be up
+and like one or two days so I'm gonna
+release three parts again for you
+alright thank you so much for watching
+again please drop a subscribe and I'm
+gonna see you in a bit bye bye

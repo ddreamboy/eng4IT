@@ -1,0 +1,331 @@
+hey there I'm happy to welcome you to
+another video series in which we will
+explore four different dimensionality
+reduction techniques chances are a lot
+of you have come across these methods in
+research papers or even applied them in
+cyc learn but have you ever wondered
+what's happening behind the scenes if so
+great that you are here we will learn
+all of that in the next videos based on
+your voting we will Deep dive into each
+of the techniques and also have a bit of
+hands-on experience the goal is really
+to get a proper understanding that
+allows you to select the right method
+for your problem so let's get started in
+this first video we will talk about the
+basics of dimensionality reduction and
+discuss some of the terminologies such
+as manifold learning or the curse of
+dimensionality from image data like
+amness to word embeddings and language
+models to the molecular space there are
+many situations where we have
+high-dimensional data which we try to
+better understand and visualize human
+perception is limited to the thre
+dimension dimensional space and
+therefore multivariat or
+multi-dimensional data somehow needs to
+be converted to a lower dimensional
+space that is depictable and
+comprehensible pixels for example have
+thousands of Dimensions but the plot on
+the top left does a pretty good job at
+clustering the amness data set therefore
+these techniques are absolutely Central
+for data analysis in this series I'm
+mostly interested in using these
+techniques for the sake of visualizing
+data usually embeddings it is however
+also common to reduce the number of
+Dimensions to improve machine learning
+algorithms to create these low
+dimensional representations we can
+choose from a variety of techniques
+which can be categorized in various ways
+here we will just distinguish between
+linear methods and nonlinear methods
+nonlinear approaches belong to the field
+of manifold learning which can be
+further divided into local and Global
+techniques which means if they just look
+at the neighborhood or if they consider
+the entire data set a classical example
+of a linear method we will talk about is
+the principal component analysis most of
+you are probably familiar with it then
+we will also talk about the linear
+variant of multi-dimensional scaling
+called metric MDS a global technique
+considered in the series is the
+nonlinear variant of MDS called
+non-metric MDS as a local manifold
+learning approach we will look at the
+popular tne and lastly we will discuss
+umap a method that can be considered to
+fall somewhere between local and Global
+approaches besides the one mentioned
+here there are of course plenty of
+others which would however extend the
+scope of this series this also includes
+neuron network based techniques like
+Auto
+encoders again this is just one way of
+grouping the techniques and hopefully
+this provides a rough overview now let's
+quickly revisit the overall concept of
+dimensionality reduction there's a way
+to mathematically formulate this idea we
+all start with a set of high dimensional
+data for example n samples with a
+dimensionality of M dimensionality here
+simply refers to the number of
+coordinates needed to describe a data
+point in this example it equals to 10
+this is the original data space let's
+assume there exists a metric that allows
+us to Define how similar data points are
+in this space we will call this metric
+DM our goal is to transform these data
+points into a low dimensional
+representation which allows us to for
+example visual them in this example we
+choose a dimensionality of two and call
+the samples Y and in this
+two-dimensional space we also have a
+metric which allows us to quantify data
+similarity the idea of most
+dimensionality reduction approaches is
+to optimize a mapping function that
+transform the high dimensional data into
+a lower Dimension while and this is the
+important piece preserving the ratio of
+the distance Matrix and therefore
+approxim imate the original data space
+of course it's impossible to squeeze all
+of the information of 10 Dimensions into
+two because there are simply less
+degrees of freedom therefore this
+mapping will have an inherent error most
+of the time the actual information
+contained in the data is less relevant
+and instead we care about the
+topological structure of the data which
+means the relationship between points
+and how they are arranged in space but
+there is a difficulty because all of
+this is based on distance metrics there
+are some pretty interesting studies for
+example the paper on the surprising
+behavior of distance Matrix in high
+dimensional space that highlight that
+distance Matrix become less meaningful
+in higher Dimensions the so-called curse
+of dimensionality was coined by Bellman
+in
+1961 and exactly describes What's
+Happening Here I assume that many of you
+are familiar with it basically the
+higher the number of dimensions
+the more uniform the distance becomes
+this is especially the case for the
+ukian metric this phenomenon of distance
+concentration is also a reason why many
+machine learning algorithms struggle to
+separate data when the data points have
+too many dimensions having more features
+is therefore not always better what you
+can also see here is that absolute
+values of the distances become larger
+which means the more Dimensions the
+further away the points are from each
+other visually this reflects the
+well-known fact that most of the data
+spreads out to the shell and edges of
+the data space rather than lying inside
+of the volume these visuals are from a
+great tutorial on the curse of
+dimensionality from vision.com the link
+is in the video description okay so this
+might have been a refresher for most of
+you but it's crucial for understanding
+some of the following concepts before we
+move on and discuss how to solve the
+issue with the curse of dimensionality
+let's take a moment to look at the
+sponsor of this video which is
+brilliant.org
+brilliant is a free and easy way to
+learn math data science and computer
+science
+interactively there are thousands of
+lessons from basic to Advanced topics
+including neuron networks probability
+Theory programming large language models
+and many more what I personally like
+about this learning platform is that you
+can use it on every device like mobile
+phone computer or tablet
+and therefore can learn stuff wherever
+you are nowadays people spend a lot of
+time in the internet and Brilliant is a
+great way to spend your time
+meaningfully by learning new things
+every day all of the learning is
+possible in a fun and gamified way as
+you can see here and in a future video
+of this series we will also dive a bit
+deeper into some of the courses to get a
+feeling for what it's like to learn with
+brilliant if you want to try this you
+can use the link in the video
+description and the first 200 will get
+20% off also there's a free 30 days
+trial for
+everyone back to dimensionality
+reduction let's remind ourselves of the
+difficulties when dealing with many
+dimensions we realize that it's getting
+more difficult for distance metrics as
+well as machine learning models to
+operate on high dimensional data but
+there is hope the data might in reality
+have a lower intrinsic dimensionality
+than the original data space this
+opposite effect to the curse of
+dimensionality is the so-called blessing
+of
+non-uniformity which means that the data
+is typically not uniformly distributed
+in the original space and therefore can
+be reduced into a lower dimensional
+space there is a pretty intuitive
+example for this namely faces images of
+faces consist of thousands of pixels
+which span a high-dimensional space the
+blessing of non-uniformity tells us that
+most real world data sets don't spread
+out
+uniformly for the face images this means
+that we observe a specific concentration
+in the pixel space this gets even more
+obvious when we realize that we are able
+to describe faces with only very few
+attributes such as the hair
+characteristics shape of the lips and so
+on this means faces have an
+intrinsically low Dimension and
+therefore the actually relevant
+information lays on the lower
+dimensional space there's also pretty
+cool paper on finding the intrinsic
+dimension of image representations which
+is linked in the video description
+so-called manifolds are a useful
+framework to understand all of this from
+a mathematical point of view the data
+like the face images we've just seen is
+embedded in a multi-dimensional space
+this is also called the ambient space
+the data itself however might actually
+lie on a Surface which can be found in a
+smaller dimensional space such a
+topological space is called manifolds a
+term originating from the mathematician
+remman who used it to refer to the
+variety of topological spaces which can
+fold in unique ways mathematically
+speaking a manifold is a description of
+a flat geometric surface that locally
+behaves like the ukian space what this
+means is that moving through the
+manifold is easily possible as the
+neighborhood is always well behaved
+there are different types of manifolds
+and also manifolds with specific names
+in fact you can find a large collection
+of different types but I won't go into
+further details in this video this is
+just to give you some ideas
+one-dimensional manifolds are lines and
+circles two-dimensional manifolds are
+spheres or the plane and of course the
+probably most prominent manifolds to
+planet Earth the Swiss roll data set
+which you can see here is a benchmark
+for evaluating dimensionality reduction
+techniques it's called like that because
+it looks like the tasty Swiss cake which
+comes in many different
+flavors M anyways on the left the data
+is embedded in three dimensions and
+forms a curved manifold we also say that
+the data lies on this manifold a
+successful manifold learning algorithm
+is able to unroll the data into to the
+shape on the right which is a lower
+dimensional 2D plane manifold and in
+many cases data can be separated more
+effectively on specific manifolds which
+improves the performance of machine
+learning algorithms now what I've just
+described is also known as the manifold
+hypothesis which posits that many high
+dimensional data sets actually lie on
+low-dimensional latent manifolds and
+latent is the keyword here because
+usually we don't know how they look look
+like that's why some of the techniques
+captured in this series belong to the
+class of manifold learning approaches
+because they approximate the underlying
+low dimensional manifolds for the last
+minutes let's have a look at some
+randomly selected real world
+applications of dimensionality reduction
+a variety of methods are used in
+computational biology for example on
+gene expression data sets this paper
+uses umap to analyze genetic
+interactions clustering of genes I think
+that's a very nice way to make sense of
+the data dimensionality reduction is not
+only applied in the supervised setting
+but sometimes all of the data is
+projected into a smaller Dimension and
+clustering is applied afterwards here's
+an example for unsupervised anomaly
+detection in heating systems performed
+on time series data and one last example
+that demonstrates that dimensionality
+reduction can be applied on pretty much
+any data set in analysis of the Dow
+Jones index using different
+dimensionality reduction algorithms the
+different clusters indicate data points
+with certain characteristics regarding
+the dynamical behavior of markets for
+example stock market crashes or
+pandemics overall a great example for
+preserving topological information on a
+lower dimensional manifold finally here
+are three takeaways from this short
+introduction first there are linear and
+nonlinear as well as Global and local
+techniques to perform dimensionality
+reduction secondly dimensionality
+reduction tries to transform
+high-dimensional data into a low
+dimensional space while preserving the
+data
+structure and finally data might lie on
+low dimensional manifolds we can try to
+learn them and that's it for this
+introduction in the next video we will
+have a look at principal component anal
+is the probably most popular
+dimensionality reduction technique
+thanks for watching and see you
+soon

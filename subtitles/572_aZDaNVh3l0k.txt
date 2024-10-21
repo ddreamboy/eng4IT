@@ -1,0 +1,152 @@
+Hey everyone. Today, let's talk about 
+RPA, or Robotic Process Automation.  
+In my opinion, the definition lies 
+more in the terms process automation  
+and less than actual robots. But RPA is changing 
+the software world much like physical robots have  
+changed the world that we live in every 
+day. For example, take a vending machine,  
+there's not a person standing there sorting 
+all your money and bending the goods it's  
+automated because it's a tedious task. Now RPA 
+is doing the same thing in the software world  
+for tedious repetitive tasks. But for things 
+like IT, or even Business Process Management,  
+RPA is not going to help and that's because 
+these require more specialized skills.  
+So where can RPA assist? Well let's start with an 
+example inspired by one of my favorite TV shows.  
+Let's say we've got a disgruntled employee, 
+we're going to call him Pete. Now Pete has  
+to take a number of documents that are stored 
+you know digitally and then convert them into  
+forms that he then has to file. So this is a very 
+tedious task so he has to take all of these forms,  
+write them out manually, and then 
+finally actually go and file them.  
+So this process let's see has to do this you know 
+10,000 times. That means, you know Pete's going  
+to be pretty unhappy about this because this is a 
+very tedious repetitive task it's something that  
+you know with RPA he could actually automate. So, 
+let's see what Pete would do if he wanted to set  
+up an automation to do this flow. So the first 
+thing he has to do is identify what's the data,  
+where is it coming from. So in this 
+particular example the data is already in  
+a computer somewhere and let's say that's coming 
+in through email, or maybe his co-worker Kelly  
+is manually inputting them from you know phone 
+calls with customers. So they take the customer  
+forms they they put them into the computer. Now 
+Pete has to extract data, right. So that's going  
+to be the first thing that RPA can help with. Now, 
+so with OCR, or Optical Character Recognition,  
+along with the data that's in the computer Pete's 
+able to pull out data and what he's going to do  
+is actually extract that data for further 
+processing. So that data can be things like  
+the customer's name and the info, let's say 
+in the customer form it's the complaints that  
+make up that information. So taking that data 
+so the next thing Pete's going to do is let's  
+say validate it so make sure that none of the data 
+is corrupt and you know all the data looks good.  
+Finally he has to input it into a digital 
+form. So he puts it into a digital form  
+and finally he sends it off to a printer. Now at 
+this phase all Pete really has to do is take the  
+final forms that are printed out and then file 
+them and that's going to be a whole lot easier  
+to do than doing this manually for all 10,000 
+customer complaint forms that are coming in.  
+So that's where RPA can really assist with tedious 
+repetitive tasks that require things like clicking  
+through user interfaces, copying and pasting data, 
+or kind of other things like Optical Character  
+Recognition where you have to extract data. So, 
+when choosing an RPA solution which is going to  
+enable you to do this type of automation, I'd say 
+there's four major things that you really need to  
+be looking for. Now the first one I'm going to 
+start with you want to make sure that your RPA  
+tool is intelligent. Now in this particular flow, 
+Pete used a lot of capabilities so he used OCR,  
+Optical Character Recognition, in addition he 
+used different data manipulation techniques.  
+So this enables Pete to do things 
+like extract, input data, validate it,  
+and finally he even had a function to be able 
+to print something out create a physical piece  
+of paper from a software-based automation. 
+That's just scratching the tip of what Robot  
+RPA can do today. So, another thing RPA can 
+do is things like AI or machine learning to  
+train a model to recognize not just you know 
+simple characters, but maybe even images. So,  
+that's something that Pete might want to 
+augment this automation with in the future.  
+So, that's one thing you want to make 
+sure is that your RPA tool is intelligent.  
+Number two, low code. So, RPA is really only going 
+to be effective if the users that are creating  
+these automation find that process to be easy, 
+otherwise management might choose to actually just  
+have their employees do it manually if creating 
+this type of automation was too time consuming.  
+So, a low code RPA environment is going to 
+enable Pete to do things like drag and drop  
+components and have minimal touch to actually 
+get this automation created end to end.  
+Number three, concurrency. So this is going 
+to be the ability to run multiple robots at  
+the same time, multiple automation tasks. 
+So, for the 10,000 customer complaint forms,  
+say this task takes 15 seconds, that's a lot of 
+time. So, imagine if you could launch multiple  
+robots and divvy up that work well you could get 
+through the task at hand much more quickly. So an  
+RPA solution should have concurrency support. And 
+the last one I want to mention here is RPA as a  
+Service. Now an "as a Service" model is going 
+to come with a number of advantages. For one,  
+it's going to give you shorter time to value and 
+that's because Pete doesn't have to worry about  
+spinning up his own infrastructure, installing 
+the software, managing that environment, he can  
+just log in and start building these automations 
+right away. That brings me to my next point,  
+currency, so not concurrency, but currency, which 
+is keeping up with the latest versions that are  
+available. So RPA and the world of RPA is changing 
+quite rapidly and so with some of the intelligent  
+capabilities enabled within RPA, say a new 
+version of OCR comes out and he wants to use it,  
+well with an RPA as a Service capability you 
+can get updates more quickly, you're more  
+current with the latest versions of software. 
+So you get to use those latest components and  
+maybe OCR 2.0 kind of helps fix some of the bugs 
+with pulling data from customer complaint forms.  
+Finally, I think the last one that I want to 
+mention here is that it allows you to collaborate.  
+So imagine that Pete builds this automation, 
+publishes it, and then now wants to share it with  
+the the Nashua branch of this company so that 
+they can take advantage of the same process  
+to automate this flow and kind of file customer 
+complaint forms. So "as a Service" environments  
+generally are multi-tenant and enable 
+you to collaborate with your co-workers.  
+So, this was a quick overview of RPA. RPA 
+tools are quickly growing in popularity,  
+and so is the scope of what RPA is able to 
+actually automate. Now if you like this video,  
+have any questions or comments, be sure to 
+drop a like or a comment below. As always,  
+stay tuned and subscribe for more videos like 
+this in the future. Thank you. RPA is growing  
+very rapidly and the scope of what RPA is able to 
+automate is also growing rapidly. Now if you want  
+to see what IBM is doing in the RPA space be sure 
+to check out the links in the description below.

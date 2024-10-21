@@ -1,0 +1,1780 @@
+convolution neural network tutorial my
+name is richard kirschner with the
+simply learn team that's
+www.simplylearn.com
+get certified get ahead today we're
+going to be covering the convolutional
+neural network tutorial do you know how
+deep learning recognizes the objects in
+an image and really this particular
+neural network is how image recognition
+works it's very central one of the
+biggest building blocks for image
+recognition it does it using convolution
+neural network and we over here we have
+the basic picture of a hummingbird
+pixels of an image fed as input you have
+your input layer coming in so it takes
+that graphic and puts it into the input
+layer you have all your hidden layers
+and then you have your output layer and
+your output layer one of those is going
+to light up and say oh it's a bird we're
+going to go into depth we're going to
+actually go back and forth on this a
+number of times today so if you're not
+catching all the image
+don't worry we're going to get into the
+details so we have our input layer
+accepts the pixels of the image as input
+in the form of arrays and you can see up
+here where they've actually labeled each
+block of the bird in different arrays so
+we'll dive into deep as to how that
+looks like and how those matrixes are
+set up your hidden layer carry out
+feature extraction by performing certain
+calculations and manipulation so this is
+the part that kind of reorganizes that
+picture multiple ways until we get some
+data that's easy to read for the neural
+network this layer uses a matrix filter
+and performs convolution operation to
+detect patterns in the image and if you
+remember that convolution means to coil
+or to twist so we're going to twist the
+data around and alter it and use that
+operation to detect a new pattern there
+are multiple hidden layers like
+convolution layer rel u is how that is
+pronounced when that's the rectified
+linear unit that has to do with the
+activation function that's used pooling
+layer also uses multiple filters to
+detect edges corners eyes feathers beak
+etc and just like the term says pooling
+is pulling information together and
+we'll look into that a lot closer here
+so if you're if it's a little confusing
+now we'll dig in deep and try to get you
+squared away with that and then finally
+there is a fully connected layer that
+identifies the object in the image so we
+have these different layers coming
+through in the hidden layers and they
+come into the final area and that's
+where we have the one node or one neural
+network entity that lights up that says
+it's a bird
+what's in it for you we're going to
+cover an introduction to the cnn what is
+convolution neural network how cnn
+recognizes images we're going to dig
+deeper into that and really look at the
+individual layers in the convolutional
+neural network and finally we do a use
+case implementation using the cnn we'll
+begin our introduction to the cnn by
+introducing the pioneer of convolutional
+neural network jan lecun he was the
+director of facebook ai research group
+built the first convolutional neural
+network called lynnette in
+1988. so these have been around for a
+while and have had a chance to mature
+over the years it was used for character
+recognition tasks like reading zip code
+digits imagine processing mail and
+automating that process
+cnn is a feed forward neural network
+that is generally used to analyze visual
+images by producing data with a grid
+like topology a cnn is also known as a
+convent and very key to this is we are
+looking at images that was what this was
+designed for and you'll see the
+different layers as we dig in near some
+of the other some of them are actually
+now used since we're using uh tensorflow
+and karas in our code later on you'll
+see that some of those layers appear in
+a lot of your other neural network
+frameworks but in this case this is very
+central to processing images and doing
+so in a variety that captures multiple
+images and really drills down into their
+different features in this example here
+you see flowers are two varieties orchid
+and a rose i think the orchid is much
+more dainty and beautiful and the rose
+smells quite beautiful i have a couple
+rose bushes in my yard uh they go into
+the input layer that data is in sent to
+all the different nodes in the next
+layer one of the hidden layers based on
+its different weights and its setup it
+then comes out and gives those a new
+value those values then are multiplied
+by their weights and go to the next
+hidden layer and so on and then you have
+the output layer and one of those nodes
+comes out and says it's an orchid and
+the other one comes out and says it's a
+rose depending on how it was well it was
+trained what separates the cnn or the
+convolutional neural network from other
+neural networks is a convolutional
+operation forms the basis of any
+convolutional neural network in a cnn
+every image image is represented in the
+form of arrays of pixel values so here
+we have a real image of the digit 8.
+that then gets put on to
+its pixel values represented in the form
+of an array in this case you have a
+two-dimensional array and then you can
+see in the final in form we transform
+the digit 8 into its representational
+form of pixels of zeros and ones where
+the ones represent in this case the
+black part of the eight and the zeros
+represent the white background to
+understand the convolution neural
+network or how that convolutional
+operation works we're going to take a
+side step and look at matrixes in this
+case we're going to simplify it and
+we're going to take two matrices a and b
+of one dimension now kind of separate
+this from your thinking as we learned
+that you want to focus just on the
+matrix aspect of this and then we'll
+bring that back together and see what
+that looks like when we put the pieces
+for the convolutional operation here
+we've set up two arrays we have in this
+case our single dimension matrix and we
+have a equals 537597
+and we have b equals one two three so in
+the convolution as it comes in there's
+gonna look at these two and we're gonna
+start by doing multiplying them a times
+b and so we multiply the arrays element
+wise and we get five six six
+where five is the five times one six is
+three times two and then the other six
+is two times three and since the two
+arrays aren't the same size they're not
+the same setup we're going to just
+truncate the first one and we're going
+to look at the second array multiplied
+just by the first three elements of the
+first array now that was going to be a
+little confusing remember a computer
+gets to repeat these processes hundreds
+of times so we're not going to just
+forget those other numbers later on
+we'll see we'll bring those back in and
+then we have the sum of the product in
+this case 5 plus 6 plus 6 equals 17. so
+in our a times b our very first digit in
+that matrix of a times b is 17. and if
+you remember i said we're not going to
+forget the other digits so we now have 3
+2 5 we move one set over and we take 3 2
+5 and we multiply that times b and
+you'll see that 3 times 1 is 3 2 times 2
+is 4 and so on and so on we sum it up so
+now we have the second digit of our a
+times b product in the matrix and we
+continue on with that same thing so on
+and so on so then we would go from 375
+to 759 to 597. this short matrix that we
+have for a we've now covered all the
+different entities in a that match three
+different levels of b now in a little
+bit we're going to cover where we use
+this math at this multiplying of
+matrixes and how that works but it's
+important to understand that we're going
+through the matrix of multiplying the
+different parts to it to match the
+smaller matrix with the larger matrix i
+know a lot of people get lost at is
+what's going on here with these matrixes
+oh scary math not really that scary when
+you break it down we're looking at a
+section of a and we're comparing it to b
+so when you break that down your mind
+like that you realize okay so i'm just
+taking these two matrixes and comparing
+them and i'm bringing the value down
+into one matrix a times b we're reducing
+that information in a way that will help
+the computer see different aspects let's
+go ahead and flip over again back to our
+images
+here we are back to our images talking
+about going to the most basic
+two-dimensional image you can get to
+consider the following two images the
+image for the symbol backslash when you
+press the backslash the above image is
+processed and you can see there for the
+image for the forward slash is the
+opposite so we click the forward slash
+button that flips uh very basic we have
+four pixels going in can't get any more
+basic than that here we have a little
+bit more complicated picture we take a
+real image of a smiley face um then we
+represent that in the form of black and
+white pixels so if this was an image in
+the computer it's black and white and
+like we saw before we convert this into
+the zeros and one so where the other one
+would have just been a matrix of just
+four dots now we have a significantly
+larger image coming in so don't worry
+we're going to bring this all together
+here in just a little bit layers in
+convolutional neural network we're
+looking at this we have our convolution
+layer and that really is the central
+aspect of processing images and the
+convolutional neural network that's why
+we have it and then that's going to be
+feeding in and you have your relu layer
+which is you know as we talked about the
+rectified linear unit we'll talk about
+that a little bit later the release and
+how it act is how that layer is
+activated is the math behind it what
+makes the neurons fire you'll see that a
+lot of other neural networks when you're
+using it just by itself it's for
+processing smaller amounts of data where
+you use the atom activation feature for
+large data coming in now because we're
+processing small amounts of data in each
+image the relu layer works great you
+have your pooling layer that's where
+you're pulling the data together pooling
+is a neural network term it's very
+commonly used i like to use the term
+reduce so if you're coming from the map
+and reduce side you'll see that we're
+mapping all this data through all these
+networks and then we're going to reduce
+it we're going to pull it together and
+then finally we have the fully connected
+layer that's where our output's going to
+come out so we have started to look at
+matrixes we've started to look at the
+convolutional layer where it fits in and
+everything we've taken a look at images
+so we're going to focus more on the
+convolution layer since this is a
+convolutional neural network a
+convolution layer has a number of
+filters and perform convolution
+operation every image is considered as a
+matrix of pixel values consider the
+following 5x5 image whose pixel values
+are only 0 and 1. now obviously when
+we're dealing with color there's all
+kinds of things that come in on color
+processing but we want to keep it simple
+and just keep it black and white and so
+we have our image pixels
+so we're sliding the filter matrix over
+the image and computing the dot product
+to detect the patterns and right here
+you're going to ask where does this
+filter come from this is a bit confusing
+because the filter is going to be
+derived
+later on we build the filters when we
+program or train our model so you don't
+need to worry what the filter actually
+is but you do need to understand how a
+convolution layer works is what is the
+filter doing filter and you'll have mini
+filters you don't have just one filter
+you'll have lots of filters that are
+going to look for different aspects and
+so the filter might be looking for just
+edges it might be looking for different
+parts we'll cover that a little bit more
+detail in a minute right now we're just
+focusing on how the filter works as a
+matrix remember earlier we talked about
+multiplying matrixes together and here
+we have our two dimensional matrix and
+you can see we take the filter and we
+multiply it in the upper left image and
+you can see right here one times one one
+times zero one times one we multiply
+those all together then sum them and we
+end up with the convolved feature of
+four we're going to take that and
+sliding the filter matrix over the image
+and computing the dot product to detect
+patterns so we're just going to slide
+this so we're going to predict the first
+one and slide it over one notch predict
+the second one and so on and so on all
+the way through until we have a new
+matrix and this matrix which is the same
+size as the filter has reduced the image
+and whatever filter whatever that's
+filtering out it's going to be looking
+at just those features reduced down to a
+smaller matrix so once the feature maps
+are extracted the next step is to move
+them to the relu layer so the relu layer
+the next step first is going to perform
+an element-wise operation so each of
+those maps coming in if there's negative
+pixels so it says all the negative
+pixels to zero and you can see this nice
+graph where it just zeros out the
+negatives and then you have a value that
+goes from zero up to whatever value is
+coming out of the matrix this introduces
+non-linearity to the network
+so up until now we have a we say
+linearity we're talking about the fact
+that the feature has a value so it's a
+linear feature this feature
+came up and has let's say the feature is
+the edge of the beak you know it's like
+or the backslash that we saw you'll look
+at that and say okay this feature has a
+value from negative 10 to 10 in this
+case if it was one it'd say yeah this
+might be a beak it might not might be an
+edge right there a minus five means no
+we're not even going to look at it to
+zero and so we end up with an output and
+the output takes all these features all
+these filtered features remember we're
+not just running one filter on this
+we're running a number of filters on
+this image and so we end up with a
+rectified feature map that is looking at
+just the features coming through and how
+they weigh in from our filters so here
+we have an input of a looks like a
+toucan bird
+very exotic looking real image is
+scanned in multiple convolution and the
+relu layers for locating features and
+you can see up here is turn it into a
+black and white image and in this case
+we're looking in the upper right hand
+corner for a feature and that box scans
+over a lot of times it doesn't scan one
+pixel at a time a lot of times it will
+skip by two or three or four pixels uh
+to speed up the process that's one of
+the ways you can compensate if you don't
+have enough resources on your
+computation for large images and it's
+not just one filter slowly goes across
+the image you have multiple filters have
+been programmed in there so you're
+looking at a lot of different filters
+going over the different aspects of the
+image and just sliding across there and
+forming a new matrix
+one more aspect to note about the relu
+layer is we're not just having one value
+coming in
+so not only do we have multiple features
+going through but we're generating
+multiple relu layers for locating the
+features that's very important to note
+you know so we have a quite a bundle we
+have multiple filters multiple rail u
+which brings us to the next step forward
+propagation now we're going to look at
+the pooling layer the rectified feature
+map now goes through a pooling layer
+pooling is a down sampling operation
+that reduces the dimensionality of the
+feature map that's all we're trying to
+do we're trying to take a huge amount of
+information and reduce it down to a
+single answer this is a specific kind of
+bird this is an iris this is a rose so
+you have a rectified feature map you see
+here we have a rectified feature map
+coming in
+we set the max pooling with a 2 by 2
+filters and a stride of two and if you
+remember correctly i talked about not
+going one pixel at a time uh well that's
+where the stride comes in we end up with
+a two by two pooled feature map but
+instead of moving one over each time and
+looking at every possible combination we
+skip a st we skip a few there we go by
+two we skip every other pixel and we
+just do every other one and this reduces
+our rectified feature map which is you
+can see over here 16 by 16 to a four by
+four so we're continually trying to
+filter and reduce our data so that we
+can get to something we can manage and
+over here you see that we have the max
+three four one and two and in the max
+pooling we're looking for the max value
+a little bit different than what we were
+looking at before so coming from the
+rectified feature we're now finding the
+max value and then we're pulling those
+features together so instead of think of
+this as image of the map think of this
+as how valuable is a feature in that
+area how much of a feature value do we
+have we just want to find the best or
+the maximum feature for that area they
+might have that one piece of the filter
+of the beak said oh i see a one in this
+beak in this image and then it skips
+over and says i see a three in this
+image and says oh this one is rated as a
+four we don't want to sum it together
+because then you know you might have
+like five ones and it'll say ah five but
+you might have uh four zeros and one ten
+and that ten says well this is
+definitely a beak where the ones will
+say probably not a beak a little strange
+analogy since we're looking at a bird
+but you can see how that pulled feature
+map comes down and we're just looking
+for the max value in each one of those
+matrixes pooling layer uses different
+filters to identify different parts of
+the image like edges corners body
+feathers eyes beak etc i know i focus
+mainly on the beak but obviously each
+feature could be each a different part
+of the bird coming in so let's take a
+look at what that looks like structure
+of a convolution neural network so far
+this is where we're at right now we have
+our input image coming in and then we
+use our filters and there's multiple
+filters on there that are being
+developed to kind of twist and change
+that data and so we multiply the
+matrixes we take that little filter
+maybe it's a two by two we multiply it
+by each piece of the image and if we
+step two then it's every other piece of
+the image that generates multiple
+convolution layers so we have a number
+of convolution layers we have
+set up in there just looking at that
+data we then take those convolution
+layers we run them through the relu
+setup and then once we've done through
+the release setup and we have multiple
+values going on multiple layers that are
+relative then we're going to take those
+multiple layers and we're going to be
+pooling them so now we have the pooling
+layers or multiple poolings going on up
+until this point we're dealing with
+sometimes there's multiple dimensions
+you can have three dimensions some
+strange data setups that aren't doing
+images but looking at other things they
+can have four five six seven dimensions
+so right now we're looking at 2d image
+dimensions coming in into the pooling
+layer so the next step is we want to
+reduce those dimensions or flatten them
+so flattening flattening is a process of
+converting all of the resultant
+two-dimensional arrays from pooled
+feature map into a single long
+continuous linear vector so over here
+you see where we have a pooled feature
+map maybe that's the bird wing and it
+has values 6847 and we want to just
+flatten this out and turn it into
+6847 or a single linear vector and we
+find out that not only do we do each of
+the pooled feature maps we do all of
+them into one long linear vector so now
+we've gone through our convolutional
+neural network part and we have the
+input layer into the next setup all
+we've done is taken all those different
+pooling layers and we flatten them out
+and combine them into a single linear
+vector going in so after we've done the
+flattening we have just a quick recap
+because we've covered so much so it's
+important to go back and take a look at
+each of the steps we've gone through the
+structure of the network so far is we
+have our convolution where we twist it
+and we filter it and multiply the
+matrixes we end up with our
+convolutional layer which uses the relu
+to figure out the values going out into
+the pooling as you have numerous
+convolution layers that then create
+numerous pooling layers pulling that
+data together which is the max value
+which one we want to send forward we
+want to send the best value and then
+we're going to take all of that from
+each of the pooling layers and we're
+going to flatten it and we're going to
+combine them into a single input going
+into the final layer once you get to
+that step you might be looking at that
+going boy that looks like the normal
+into it to most neural network and
+you're correct it is
+so once we have the flattened matrix
+from the pooling layer that becomes our
+input so the pulling layer is fed as an
+input to the fully connected layer to
+classify the image and so you can see as
+our flattened matrix comes in in this
+case we have the pixels from the
+flattened matrix fed as an input back to
+our toucan or whatever that kind of bird
+that is i need one of these to identify
+what kind of bird that is it comes into
+our forward propagation network
+and that will then have the different
+weights coming down across and then
+finally it selects that that's a bird
+and that is not a dog or a cat in this
+case
+even though it's not labeled the final
+layer there in red is our output layer
+our final output layer that says bird
+cat or dog so quick recap of everything
+we've covered so far we have our input
+image which is twisted and multiplied
+the filters are multiplied times the
+matrix the two matrixes multiplied all
+the filters to create our convolution
+layer our convolution layers there's
+multiple layers in there because it's
+all building multiple layers off the
+different filters then goes through the
+relu as this activation and that creates
+our pooling and so once we get into the
+pooling layer we then and the pooling
+look for who's the best what's the max
+value coming in from our convolution and
+then we take that layer and we flatten
+it and then it goes into a fully
+connected layer our fully connected
+neural network and then to the output
+and here we can see the entire process
+how the cnn recognizes a bird this is
+kind of nice because it's showing the
+little pixels and where they're going
+you can see the filter is generating
+this convolution network and that filter
+shows up in the bottom part of the
+convolution network and then based on
+that it uses the relu for the pooling
+the pooling then find out which one's
+the best and so on all the way to the
+fully connected layer at the end or the
+classification in the output layer so
+that'd be a classification neural
+network at the end so we covered a lot
+of theory up till now and you can
+imagine each one of these steps has to
+be broken down in code so putting that
+together can be a little complicated not
+that each step of the process is overly
+complicated but because we have so many
+steps we have one two three four five
+different steps going on here with sub
+steps in there we're going to break that
+down and walk through that in code so in
+our use case implementation using the
+cnn we'll be using the cfar10 dataset
+from canadian institute for advanced
+research for classifying images across
+10 categories unfortunately they don't
+let me know whether it's going to be a
+toucan or some other kind of bird but we
+do get to find out whether it can
+categorize between a ship a frog deer
+bird airplane automobile cat dog horse
+truck so that's a lot of fun and if
+you're looking anything in the news at
+all of our automated cars and everything
+else you can see where this kind of
+processing is so important in today's
+world and very cutting edge as far as
+what's coming out in the commercial
+deployment i mean this is really cool
+stuff we're starting to see this just
+about everywhere in industry so great
+time to be playing with this and
+figuring it all out let's go ahead and
+dive into the code and see what that
+looks like when we're actually writing
+our script
+before we go on let's do uh one more
+quick look at what we have here let's
+just take a look at data batch one keys
+and remember in jupiter notebook i can
+get by with not doing the print
+statement if i put a variable down there
+it'll just display the variable and you
+can see under data batch one for the
+keys since this is a dictionary we have
+the batch one label data and file names
+so you can actually see how it's broken
+up in our data set so for the next step
+or step four as we're calling it uh we
+want to display the images using matte
+plot library there's many ways to
+display the images you can even uh well
+there's other ways to drill into it but
+matplot library is really good for this
+and we'll also look at our first reshape
+uh setup or shaping the data so you can
+have a little glimpse into what that
+means uh so we're gonna start by
+importing our map plot and of course
+since i am doing jupiter notebook i need
+to do the matplot inline command so it
+shows up on my page so here we go we're
+going to import matplot library.pipelot
+as plt and if you remember matplot
+library the pie plot is like a canvas
+that we paint stuff onto and there's my
+percentage sign matplot library inline
+so it's going to show up in my notebook
+and then of course we're going to import
+numpy as np for our numbers python array
+setup and let's go ahead and set
+x equals to data batch one so this will
+pull in all the data going into the x
+value and then because this is just a
+long stream of binary data we need to go
+a little bit of reshaping so in here we
+have to go ahead and reshape the data we
+have 10 000 images okay that looks
+correct and this is kind of an
+interesting thing it took me a little
+bit to i had to go research this myself
+to figure out what's going on with this
+data and what it is is it's a 32 by 32
+picture and let me do this let me go
+ahead and do a drawing pad on here so we
+have 32 bits by 32 bits and it's in
+color so there's three bits of color now
+i don't know why the data is
+particularly like this it probably has
+to do with how they originally encoded
+it but most pictures put the three
+afterward so what we're doing here is
+we're going to take
+the shape we're going to take the data
+which is just a long stream of
+information and we're going to break it
+up into 10 000 pieces and those 10 000
+pieces then are broken into three pieces
+each and those three pieces then are 32
+by 32. you can look at this like an
+old-fashioned projector where they have
+the red screen or the red projector the
+blue projector and the green projector
+and they add them all together and each
+one of those is a 32 by 32 bit so that's
+probably how this was originally
+formatted was in that kind of ideal
+things have changed so we're going to
+transpose it and we're going to take the
+three which was here and we're going to
+put it at the end so the first part is
+reshaping the data from a single line of
+bit data or whatever format it is into
+10 000 by three by 32 by 32 and then
+we're going to transpose the color
+factor to the last place so it's the
+image then the 32 by 32 in the middle
+that's this part right here and then
+finally we're going to take this which
+is three bits of data and put it at the
+end so it's more like we do process
+images now and then as type this is
+really important that we're going to use
+an integer eight you can come in here
+and you'll see a lot of these they'll
+try to do this with a float or a float
+64. what you got to remember though is a
+float uses a lot of memory so once you
+switch this into uh something that's not
+integer eight which goes up to 128 you
+are just gonna the the amount of ram let
+me just put that in here is going to go
+way up the amount of ram that it loads
+so you want to go ahead and use this you
+can try the other ones and see what
+happens if you have a lot of ram on your
+computer but for this exercise this will
+work just fine and let's go ahead and
+take that and run this so now our x
+variable is all loaded and it has all
+the images in it from the batch one data
+batch one and just to show we are
+talking about with the as type on there
+if we go ahead and take x0 and just look
+for its max value let me go ahead and
+run that
+you'll see it doesn't oops i said 128
+it's 255. you'll see it doesn't go over
+255 because it's basically an ascii
+character is what we're keeping that
+down to we're keeping those values down
+so they're only 255 0 to 255 versus
+float value which would bring this up
+exponentially in size and since we're
+using the matplot library we can do
+oops that's not what i wanted since
+we're using the map plot library we can
+take our canvas and just do a plt dot im
+for image show and let's just take a
+look at what x0 looks like and it comes
+in i'm not sure what that is but you can
+see it's a very low grade image broken
+down to the minimal pixels on there and
+if we did the same thing oh let's do uh
+let's see what one looks like hopefully
+it's a little easier to see run on there
+not enter let's hit the run on that
+and we can see this is probably a semi
+truck that's a good guess on there and i
+can just go back up here instead of
+typing the same line in over and over
+we'll look at three that looks like a
+dump truck unloading uh and so on you
+can do any of the 10 000 images we can
+just jump to 55. uh looks like some kind
+of animal looking at us there probably a
+dog and just for fun let's do just one
+more uh
+run on there and we can see a nice car
+for our image number four uh so you can
+see we paste through all the different
+images it's very easy to look at them
+and they've been reshaped to fit our
+view and what the
+matplot library uses for its format so
+the next step is we're gonna start
+creating some helper functions we'll
+start by a one hot encoder to help us or
+processing the data remember that your
+labels they can't just be words they
+have to switch it and we use the one hot
+encoder to do that and then we'll also
+create a
+class uh cfar helper so it's going to
+have an init and a setup for the images
+and then finally we'll go ahead and run
+that code so you can see what that looks
+like and then we get into the fun part
+where we're actually going to start
+creating our model our actual neural
+network model so let's start by creating
+our one hot encoder we're going to
+create our own here
+and it's going to return an out and
+we'll have our vector coming in and our
+values equal 10. what this means is that
+we have the 10 values the 10 possible
+labels and remember we don't look at the
+labels as a number because a car isn't
+one more than a horse i'd be just kind
+of bizarre to have horse equals zero car
+equals one plane equals two cat equals
+three so a cat plus a car equals what so
+instead we create a numpy array of zeros
+and there's going to be 10 values so we
+have 10 different values in there so you
+have
+0 or 1. 1 means it's a cat 0 means it's
+not a cat
+in the next line it might be that one
+means it's a car zero means it's not a
+car so instead of having one output with
+a value of zero to ten you have ten
+outputs with the values of zero to one
+that's what the one hot encoder is doing
+here and we're going to utilize this in
+code in just a minute so let's go ahead
+and take a look at the next helpers we
+have a few of these helper functions
+we're going to build and when you're
+working with a very complicated python
+project dividing it up into separate
+definitions and classes is very
+important otherwise it just becomes
+really ungainly to work with so let's go
+ahead and put in our next helper which
+is a class and this is a lot in this
+class so we'll break it down here and
+let's just start oops we put a space
+right in there there we go that was a
+little bit more readable at a second
+space so we're going to create our class
+the cipher helper and we'll start by
+initializing it now there's a lot going
+on in here so let's start with the init
+part uh self dot i equals zero i'll come
+in a little bit we'll come back to that
+in the lower part we want to initialize
+our training batches so when we went
+through this there was like a meta batch
+we don't need the meta batch but we do
+need the data batch one two three four
+five and we do not want the testing
+batch in here this is just the self all
+train batches so we're gonna come make
+an array of all those different images
+and then of course we left the test
+batch out so we have our self.testbatch
+we're going to initialize the training
+images and the training labels and also
+the test images and the test labels so
+these are just this is just to
+initialize these variables in here then
+we create another definition down here
+and this is going to set up the images
+let's just take a look and see what's
+going on in there now we could have all
+just put this as part of the
+init part since this is all just helper
+stuff but breaking it up again makes it
+easier to read it also makes it easier
+when we start executing the different
+pieces to see what's going on so that
+way we have a nice print statement to
+say hey we're now running this and this
+is what's going on in here we're going
+to set up the self training images at
+this point and that's going to go to a
+numpy array v stack and in there we're
+going to load up
+in this case the data for d itself all
+train batches again that points right up
+to here so we're going to go through
+each one of these
+files or each one of these data sets
+because they're not a file anymore we've
+brought them in data batch one points to
+the actual data and so our self training
+images is going to stack them all into
+our into a numpy array and then it's
+always nice to get the training length
+and that's just a total number of uh
+self training images in there and then
+we're going to take the self training
+images and let me switch marker colors
+because i am getting a little bit too
+much on the markers up here oops there
+we go bring down our marker change
+so we can see it a little better and at
+this point this should look familiar
+where did we see this well when we
+wanted to uh
+look at this above and we want to look
+at the images in the matplot library we
+had to reshape it so we're doing the
+same thing here we're taking our self
+training images and uh based on the
+training length total number of images
+because we stacked them all together so
+now it's just one large file of images
+we're going to take and look at it as
+our three video cameras that are each
+displaying a 32 by 32 we're going to
+switch that around so that now we have
+each of our images that stays the same
+place and then we have our 32 by 32 and
+then by our three our last are three
+different values for the color and of
+course we want to go ahead and they run
+this where we say divide by 255 that was
+from earlier it just brings all the data
+into zero to one that's what this is
+doing so we're turning this into a zero
+to one array which is uh all the
+pictures 32 by 32 by three and then
+we're going to take the self training
+labels and we're going to pump those
+through our one hot encoder we just made
+and we're going to stack them together
+and
+again we're converting this into an
+array that goes from
+instead of having horse equals one dog
+equals two and then horse plus dog would
+equal three which would be cat
+now it's going to be you know an array
+of 10 where each one is 0 to 1. then we
+want to go ahead and set up our test
+images and labels and when we're doing
+this you're going to see it's the same
+thing we just did with the rest of them
+we just changed colors right here this
+is no different than what we're doing up
+here with our training set we're going
+to stack the different images
+we're going to get the length of them so
+we know how many images are in there you
+certainly could add them by hand but
+it's nice to let the computer do it
+especially if it ever changes on the
+other end and you're using other data
+and again we reshape them and transpose
+them and we also do the one hot encoder
+same thing we just did on our training
+images so now our test images are in the
+same format so now we have a definition
+which sets up all our images in there
+and then the next step is to go ahead
+and batch them or next batch and let's
+do another breakout here for batches
+because this is really important to
+understand tends to throw me for a
+little loop when i'm working with
+tensorflow or cross or a lot of these we
+have our data coming in if you remember
+we had like 10 000 photos let me just
+put 10 000 down here we don't want to
+run all 10 000 at once so we want to
+break this up into batch sizes and you
+also remember that we had the number of
+photos in this case length of test or
+whatever number is in there we also have
+32 by 32 by 3. so when we're looking at
+the batch size we want to change this
+from 10 000 to
+a batch of in this case i think we're
+going to do batches of a hundred so we
+want to look at just 100 the first
+hundred of the photos and if you
+remember we set self i equal to
+zero uh so what we're looking at here is
+we're going to create x we're going to
+get the next batch from the very
+initialize we've already initialized it
+for 0. so we're going to look at x from
+0 to batch size which we set to 100 so
+just the first hundred images and then
+we're going to reshape that into uh and
+this is important to let the data know
+that we're looking at 100 by 32 by 32 by
+3. now we've already formatted it to the
+32 by 32 by 3. this just sets everything
+up correctly so that x has the data in
+there in the correct order and the
+correct shape and then the y just like
+the x
+is our labels so our training labels
+again they go from 0 to batch size in
+this case they do sell fi plus batch
+size because the cell phi is going to
+keep changing and then finally we
+increment the self i because we have
+zero so we so the next time we call it
+we're going to get the next batch size
+and so basically we have x and y x being
+the photograph data coming in and y
+being the label and that of course is
+labeled through one hot encoder so if
+you remember correctly if it was say
+horse is equal to zero it would be
+one for the zero position since this is
+the horse and then everything else would
+be zero in here let me just put lines
+through there there we go there's our
+array
+hard to see that array so let's go ahead
+and take that and uh we're going to
+finish loading it since this is our
+class and now we're armed with all this
+uh
+our setup over here let's go ahead and
+load that up and so we're going to
+create a variable ch with the c4 helper
+in it and then we're going to do
+ch.setup images
+now we could have just put all the setup
+images under the init but by breaking
+this up into two parts it makes it much
+more readable and also if you're doing
+other work there's reasons to do that as
+far as the setup let's go ahead and run
+that and you can see where it says uh
+setting up training images and labels
+setting up test images and that's one of
+the reasons we broke it up is so that if
+you're testing this out you can actually
+have print statements in there telling
+you what's going on which is really nice
+uh they did a good job with this setup i
+like the way that it was broken up in
+the back and then one quick note you
+want to remember that batch to set up
+the next batch since we have to run
+batch equals ch next batch of 100
+because we're going to use the 100 size
+but we'll come back to that we're going
+to use that just remember that that's
+part of our code we're going to be using
+in a minute from the definition we just
+made so now we're ready to create our
+model first thing we want to do is we
+want to import our tensorflow as tf i'll
+just go ahead and run that so it's
+loaded up and you can see we got a
+warning here
+that's because they're making some
+changes it's always growing and they're
+going to be depreciating one of the
+values from float 64 to float type or is
+treated as an np float64 nothing to
+really worry about this doesn't even
+affect what we're working on because
+we've set all of our stuff to a 255
+value or zero to one and do keep in mind
+that zero to one value that we converted
+the 255 is still a float value but it'll
+easily work with either the numpy float
+64 or the numpy d type float it doesn't
+matter which one it goes through so the
+depreciation would not affect our code
+as we have it and in our tensorflow uh
+we'll go ahead and just increase the
+size in there just a moment so you can
+get a better view of the um what we're
+typing in uh we're going to set a couple
+placeholders here and so we have we're
+going to set x equals tf placeholder tf
+float 32 we just talked about the
+float64 versus the numpy float we're
+actually just going to keep this at
+float 32 more than a significant number
+of decimals for what we're working with
+and since it's a placeholder we're going
+to set the shape equal to and we've set
+it equal to none
+because at this point we're just holding
+the place on there we'll be setting up
+as we run the batches that's what that
+first value is and then 32 by 32 by
+three that's what we've reshaped our
+data to fit in and then we have our y
+true equals placeholder tf float 32 and
+the shape equals none comma 10. 10 is
+the 10 different labels we have so it's
+an array of 10. and then let's create
+one more placeholder we'll call this a
+hold prob or hold probability and we're
+going to use this we don't have to have
+a shape or anything for this this
+placeholder is for what we call drop out
+if you remember from our theory before
+we drop out so many nodes is looking at
+or the different values going through
+which helps decrease bias so we need to
+go ahead and put a placeholder for that
+also and we'll run this so it's all
+loaded up in there so we have our three
+different placeholders and since we're
+in tensorflow when you use keras it does
+some of this automatically but we're in
+tensorflow direct kara sits on
+tensorflow we're going to go ahead and
+create some more helper functions we're
+going to create something to help us
+initialize the weights initialize our
+bias if you remember that each layer has
+to have a bias going in we're going to
+go ahead and work on our conversional 2d
+our max pool so we have our pooling
+layer our convolutional layer and then
+our normal full layer so we're going to
+go ahead and put those all into
+definitions and let's see what that
+looks like in code and you can also grab
+some of these helper functions from the
+mnist the nist setup let me just put
+that in there if you're under the
+tensorflow so a lot of these are already
+in there but we're going to go ahead and
+do our own and we're going to create our
+init weights and one of the reasons
+we're doing this is so that you can
+actually start thinking about what's
+going on in the back end so even though
+there's ways to do this with an
+automation sometimes these have to be
+tweaked and you have to put in your own
+setup in here now we're not going to be
+doing that we're just going to recreate
+them for our code and let's take a look
+at this we have our weights and so it
+comes in is going to be the shape and
+what comes out is going to be
+random numbers so we're going to go
+ahead and just knit some random numbers
+based on the shape with a standard
+deviation of 0.1 kind of a fun way to do
+that and then the tf variable
+init random distribution so we're just
+creating a random distribution on there
+that's all that is for the weights now
+you might change that you might have a
+higher standard deviation in some cases
+you actually load preset weights that's
+pretty rare usually you're testing that
+against another model or something like
+that and you want to see how those
+weights configure with each other now
+remember we have our bias so we need to
+go ahead and initialize the bias with a
+constant in this case we're using 0.1 a
+lot of times the bias is just put in as
+one and then you have your weights add
+on to that but we're going to set this
+as point one so we want to return a
+convolutional 2d in this case a neural
+network this is uh would be a layer on
+here what's going on with the con 2d is
+we're taking our data coming in uh we're
+going to filter it strides if you
+remember correctly strides came from
+here's our image and then we only look
+at this picture here and then maybe we
+have a stride of one so we look at this
+picture here and we continue to look at
+the different filters going on there the
+other thing this does is that we have
+our data coming in as 32
+by
+32
+by
+3 and we want to change this so that
+it's just this is three dimensions and
+it's going to reformat this as just two
+dimensions so it's going to take this
+number here and combine it with the 32
+by 32 so this is a very important layer
+here because it's reducing our data down
+using different means and it connects
+down i'm just going to jump down one
+here
+it goes with the convolutional layer so
+you have your your kind of your
+preformatting and the setup and then you
+have your actual convolution layer that
+goes through on there and you can see
+here we have init weights by the shape a
+knit bias shape of three because we have
+the three different uh here's our three
+again and then we return the tfnn relu
+with the convention 2d so this
+convolutional
+has this feeding into it right there
+it's using that as part of it and of
+course the input is the x y plus b the
+bias so that's quite a mouthful but
+these two are the are the keys here to
+creating the convolutional layers there
+the convolutional 2d coming in and then
+the convolutional layer which then steps
+through and creates all those filters we
+saw then of course we have our pooling
+uh so after each time we run it through
+the convectional layer we want to pull
+the data if you remember correctly on
+the on the pool side and let me just get
+rid of all my marks it's getting a
+little crazy there and in fact let's go
+ahead and jump back to that slide let's
+just take a look at that slide over here
+uh so we have our image coming in we
+create our convolutional layer with all
+the filters remember the filters go um
+you know the filter is coming in here
+and it looks at these four boxes and
+then if it's a step let's say step two
+it then goes to these four boxes and
+then the next step and so on uh so we
+have our convolutional layer that we
+generate or convolutional layers they
+use the
+relu function there's other functions
+out there for this though the relu is
+the most the one that works the best at
+least so far i'm sure that will change
+then we have our pooling now if you
+remember correctly the pooling was max
+so if we had the filter coming in and
+they did the multiplication on there and
+we have a one and maybe a two here and
+another one here and a three here three
+is the max and so out of all of these
+you then create an array that would be
+three and if the max is over here two or
+whatever it is that's what goes into the
+pooling of what's going on in our
+pooling uh so again we're reducing that
+data down reducing it down as small as
+we can and then finally we're going to
+flatten it out into a single array and
+that goes into our fully connected layer
+and you can see that here in the code
+right here we're going to create our
+normal full layer so at some point we're
+going to take from our pooling layer
+this will go into some kind of
+flattening process and then that will be
+fed into the full the different layers
+going in down here
+and so we have our input size you'll see
+our input layer get shape which is just
+going to get the shape for whatever's
+coming in uh and then input size initial
+weights is also based on the input layer
+coming in and the input size down here
+is based on the input layer shape so
+we're just going to already use the
+shape and already have our size coming
+in and of course uh you have to make
+sure you knit the bias always put your
+bias on there and we'll do that based on
+the size so this will return
+tf.matmul
+input layer w plus b this is just a
+normal full layer that's what this means
+right down here that's what we're going
+to return so that was a lot of steps we
+went through let's go ahead and run that
+so those are all loaded in there and
+let's go ahead and create the layers
+let's see what that looks like
+now that we've done all the heavy
+lifting and everything we get to do all
+the easy part let's go ahead and create
+our layers we'll create a convolution
+layer one and two two different
+convolutional layers and then we'll take
+that and we'll flatten that out and
+create a reshape pooling in there for
+our reshape and then we'll have our full
+uh layer at the end so let's start by
+creating our first convolutional layer
+then we come in here and let me just run
+that real quick and i want you to notice
+on here the 3
+and the 32 this is important because
+coming into this convolutional layer we
+have three different channels and 32
+pixels each
+so that has to be in there the four and
+four you can play with this is your
+filter size so if you remember you have
+a filter and you have your image and the
+filter slowly steps over and filters out
+this image depending on what your step
+is for this particular setup 4 4 is just
+fine that should work pretty good for
+what we're doing for the size of the
+image and then of course at the end once
+you have your convolutional layer set up
+you also need to pull it and you'll see
+that the pooling is automatically set up
+so that it would see the different shape
+based on what's coming in so here we
+have max toolbar two by two and we put
+in the convolutional one that we just
+created the convolutional layer we just
+created goes right back into it and that
+right up here as you can see is the x
+that's coming in from here so it knows
+to look at the first model and set the
+the data accordingly set that up
+so matches and we went ahead and ran
+this already i think i read let me go
+and run it again and if we're going to
+do one layer let's go ahead and do a
+second layer down here and it's uh we'll
+call it convo 2.
+it's also a convolutional layer on this
+and you'll see that we're feeding
+convolutional one in the pooling so it
+goes from convolutional one into
+convolutional one pooling from
+convolutional one pooling into
+convolutional two and then from
+convolutional 2 into convolutional 2
+pooling and we'll go ahead and take this
+and run this so these variables are all
+loaded into memory and for our flattened
+layer let's go ahead and we'll do since
+we have 64 coming out of here and we
+have a 4x4 going in let's do 8 by 8 by
+64. so let's do
+4096. this is going to be the flat layer
+so that's how many bits are coming
+through on the flat layer and we'll
+reshape this so we'll reshape our
+convo two pooling and that will feed
+into here the convo to pulling and then
+we're going to set it up as a single
+layer that's
+4096 in size that's what that means
+there we'll go ahead and run this so
+we've now created this variable the
+convo to flat and then we have our first
+full layer this is the final
+neural network where the flat layer
+going in and we're going to again use
+the relu for our setup on there on a
+neural network for evaluation and you'll
+notice that we're going to create our
+first full layer our normal full layer
+that's our definition so we created that
+that's creating the normal full layer
+and our input for the data comes right
+here from the this goes right into it
+the convo too flat so this tells it how
+big the data is and we're going to have
+it come out it's going to have 10 24
+that's how big the layer is coming out
+we'll go ahead and run this so now we
+have our full layer one and with the
+full layer one we want to also define
+the full one dropout to go with that so
+our full layer one comes in uh keep
+probability equals whole probability
+remember we created that earlier and the
+full layer one is what's coming into it
+and this is going backwards and training
+the data we're not training every weight
+we're only training a percentage of them
+each time which helps get rid of the
+bias so let me go ahead and run that and
+finally we'll go ahead and create a y
+predict which is going to equal the
+normal full one drop out and 10 because
+we have 10 labels in there now in this
+neural network we could have added
+additional layers that would be another
+option to play with you can also play
+with instead of 10 24 you can use other
+numbers for the way that sets up and
+what's coming out going into the next
+one we're only going to do just the one
+layer and the one layer drop out and you
+can see if we did another layer it'd be
+really easy just to feed in the full one
+drop out into full layer two and then
+full layer 2 dropout would have full
+layer 2 feed into it and then you'd
+switch that here for the y prediction
+for right now this is great this
+particular data set is tried and true
+and we know that this will work on it
+and if we just type in y predict and we
+run that
+we'll see that this is a tensor object
+uh shape question mark 10 d type 32 a
+quick way to double check what we're
+working on so now we've got all of our
+we've done a setup all the way to the y
+predict which we just did we want to go
+ahead and apply the loss function and
+make sure that's set up in there
+create the optimizer and then
+trainer optimizer and create a variable
+to initialize all the global tf
+variables so before we dive in to the
+loss function let me point out one quick
+thing or just kind of a rehab over a
+couple things and that is when we're
+playing with this these setups
+we pointed out up here we can change the
+4 4 and use different numbers there the
+change your outcome so depending on what
+numbers you use here will have a huge
+impact on how well your model fits and
+that's the same here of the 1024 also
+this is also another number that if you
+continue to raise that number you'll get
+possibly a better fit you might overfit
+and if you lower that number you'll use
+less resources and generally you want to
+use this in
+the exponential growth an exponential
+being 2 4 8 16 and in this case the next
+one down would be 5 12. you can use any
+number there but those would be the
+ideal numbers uh when you look at this
+data so the next step in all this is we
+need to also create a way of tracking
+how good our model is and we're going to
+call this a loss function and so we're
+going to create a cross entropy loss
+function and so before we discuss
+exactly what that is let's take a look
+and see what we're feeding it
+we're going to feed it our labels and we
+have our true labels and our prediction
+labels so coming in here is where the
+two different variables we're sending in
+or the two different probability
+distributions is one that we know is
+true and what we think it's going to be
+now this function right here when they
+talk about cross entropy in information
+theory the cross entropy between two
+probability distributions over the same
+underlying set of events measures the
+average number of bits needed to
+identify an event drawn from the set
+that's a mouthful really we're just
+looking at the amount of error in here
+how many of these are correct and how
+many of these are incorrect so how much
+of it matches and we're going to look at
+that we're just going to look at the
+average that's what the mean the reduced
+to the mean means here so we're looking
+at the average error on this
+and so the next step
+is we're going to take the error we want
+to know our cross entropy or our loss
+function how much loss we have that's
+going to be part of how we train the
+model so when you know what the loss is
+and we're training it we feed that back
+into the back propagation setup and so
+we want to go ahead and optimize that
+here's our optimizer we're going to
+create the optimizer using an atom
+optimizer remember there's a lot of
+different ways of optimizing the data
+atoms are most popular used uh so our
+optimizer is going to equal the tf train
+atom optimizer if you don't remember
+what the learning rate is let me just
+pop this back into here here's our
+learning rate when you have your weights
+you have all your weights and your
+different nodes that are coming out
+here's our node coming out
+it has all its weights and then the
+error is being prop sent back through in
+reverse on our neural network so we take
+this error and we adjust these weights
+based on the different formulas in this
+case the atom formula is what we're
+using we don't want to just adjust them
+completely we don't want to change this
+weight so it exactly fits the data
+coming through because if we made that
+kind of adjustment it's going to be
+biased to whatever the last data we sent
+through is instead we're going to
+multiply that by 0.001 and make a very
+small shift in this weight so our delta
+w is only 0.001 of the actual delta w of
+the full change we're going to compute
+from the atom and then we want to go
+ahead and train it so our training or
+set up a training
+variable or function and this is going
+to equal our optimizer minimize cross
+entropy and we make sure we go ahead and
+run this so it's loaded in there and
+then we're almost ready to train our
+model but before we do that we need to
+create one more um variable in here and
+we're going to create a variable to
+initialize all the global tf variables
+and when we look at this
+the tf global variable initializer this
+is a tensorflow
+object it goes through there and it
+looks at all our different setup that we
+have going under our tensorflow and then
+initializes those variables
+so it's kind of like a magic wand
+because it's all hidden in the back end
+of tensorflow all you need to know about
+this is that you have to have the
+initialization on there which is an
+operation um and you have to run that
+once you have your setup going so we'll
+go ahead and run this piece of code and
+then we're going to go ahead and train
+our data so let me run this let's load
+it up there and so now we're going to go
+ahead and run the model by creating a
+graph session graph session is a
+tensorflow term so you'll see that
+coming up that's one of the things that
+throws me because i always think of
+graphics and spark and graph as just
+general graphing uh but they talk about
+a graph session so we're gonna go ahead
+and run the model and let's go ahead and
+walk through this uh what's going on
+here and let's paste this data in here
+and here we go so we're going to start
+off with it with a tf session as sess so
+that's our actual tf session we've
+created uh so we're right here with the
+tf uh
+session our session we're creating we're
+going to run tf global variable
+initializer so right off the bat we're
+initializing our variables here uh and
+then we have for i in range 500. so
+what's going on here remember 500 we're
+going to break the date up and we're
+going to batch it in at 500 points each
+we've created our session run so we're
+going to do with tf session as session
+right here we've created our variable
+session and then we're going to run
+we're going to go ahead and initialize
+it so we have our tf global variables
+initializer that we created
+that initializes our session in here the
+next thing we're going to do is we're
+going to go for i in range of 500 batch
+equals ch.nextbatch
+so if you remember correctly this is
+loading up
+100 pictures at a time and
+this is going to loop through that 500
+times so we are literally doing uh what
+is that 500 times 100 is
+50 000 so that's 50 000 pictures we're
+going to process right there and the
+first process is we're going to do a
+session run we're going to take our
+train we created our train variable or
+optimizer in there we're going to feed
+it the dictionary we had our feed
+dictionary that we created and we have x
+equals batch zero coming in y true batch
+one hold the probability point five and
+then just so that we can keep track of
+what's going on we're going to every 100
+steps we're going to run a print so
+currently on step format
+accuracy is
+and we're going to look at matches
+equals tf.equal tf argument y prediction
+one tf dot arg max y true comma 1. so
+we're going to look at this as how many
+matches it has and here our acc
+all we're doing here is we're going to
+take the matches how many matches they
+have it creates it generates a chart
+we're going to convert that to float
+that's what the tfcast does and then we
+just want to know the average we just
+want to know the average of the accuracy
+and then we'll go ahead and print that
+out
+print session run accuracy feed
+dictionary so it takes all this and it
+prints out our accuracy on there so
+let's go ahead and take this oops
+screens there let's go ahead and take
+this and let's run it and this is going
+to take a little bit to run
+so let's see what happens on my old
+laptop and we'll see here that we have
+our current uh we're currently on step
+zero it takes a little bit to get
+through the accuracy and this will take
+just a moment to run we can see that on
+our step 0 it has an accuracy of 0.1 or
+0.1028
+and as it's running we'll go ahead you
+don't need to watch it run all the way
+but this accuracy is going to change a
+little bit up and down so we've actually
+lost some accuracy during our step two
+but we'll see how that comes out let's
+come back after we run it all the way
+through and see how the different steps
+come out it's actually reading that
+backwards
+the way this works is the closer we get
+to one the more accuracy we have uh so
+you can see here we've gone from a point
+one to a point three nine um and we'll
+go ahead and pause this and come back
+and see what happens when we're done
+with the full run all right now that
+we've
+prepared the meal got it in the oven and
+pulled out my finished dish here if
+you've ever watched any of the old
+cooking shows let's discuss a little bit
+about this accuracy going on here and
+how do you interpret that we've done a
+couple things first we've defined
+accuracy
+the reason i got it backwards before is
+you have
+loss or accuracy and with loss you'll
+get a graph that looks like this it goes
+oops that's an s by the way there we go
+you get a graph that curves down like
+this and with accuracy you get a graph
+that curves up this is how good it's
+doing now in this case uh one is
+supposed to be really good accuracy that
+means it gets close to one but it never
+crosses one so if you have an accuracy
+of one that is phenomenal in fact that's
+pretty much impos you know unheard of
+and the same thing with loss if you have
+a loss of zero that's also unheard of
+the zero's actually on this this axis
+right here as we go in there so how do
+we interpret that because you know if i
+was looking at this and i go oh 0.51
+that's uh 51 you're doing 50 50. no this
+is not percentage let me just put that
+in there it is not percentage uh this is
+log rhythmic what that means is that 0.2
+is twice as good as 0.1 and when we see
+0.4 that's twice as good as 0.2 real way
+to convert this into a percentage you
+really can't say this is is a direct
+percentage conversion what you can do
+though is in your head if we were to
+give this a percentage we might look at
+this as fifty percent we're just
+guessing equals 0.1 and if 50
+roughly equals 0.1 that's we started up
+here at the top remember at the top here
+here's our 0.1028 the accuracy of 50
+percent then 75 percent is about 0.2 and
+so on and so on don't quote those
+numbers because that doesn't work that
+way they say that if you have .95
+that's pretty much saying a hundred
+percent and if you have anywhere between
+you'd have to go look this up let me go
+and remove all my drawings there
+so the magic number is 0.5 we really
+want to be over a 0.5 in this whole
+thing and we have
+both 0.504 remember this is accuracy if
+we were looking at loss then we would be
+looking the other way but 0.00 you know
+instead of how high it is we want how
+low it is uh but with accuracy being
+over 0.5 is pretty valid that means this
+is pretty solid and if you get to a 0.95
+then it's a direct correlation that's
+what we're looking for here in these
+numbers you can see we finished with
+this model at
+0.5135 so still good
+and if we look at when they ran this in
+the other end remember there's a lot of
+randomness that goes into it when we see
+the weights they got
+.5251 so a little better than ours but
+that's fine you'll find your own comes
+up a little bit better or worse
+depending on just that randomness and so
+we've gone through the whole model we've
+created we trained the model and we've
+also gone through on every 100th run to
+test the model to see how accurate it is
+and now that we have a solid running
+model and accuracy let's go ahead and
+take a look at what we covered today we
+did cover a lot because this is a very
+complicated subject and it's not so much
+complicated in
+any individual step it just has a lot of
+steps involved so today we covered what
+is a convolutional neural network and
+you can see we have the pictures coming
+in to the input layer to the hidden
+layers to the output layer and then or
+get a rows we talked about the very
+basics at the beginning and we discussed
+how a cnn recognizes images very basics
+as we converted the image into a pixel
+map of zeros and ones then we dive into
+layers in a convolutional neural network
+and we had our convolutional layer our
+fully convected layer our
+relu layer and our pooling layer and we
+looked at pooling layer it reduces
+the data down to a smaller amount by
+finding the
+first defines the matches and then it
+finds the maximum value in that match
+and we discussed all the different
+layers in there we went into the fully
+connected layer which is your normal the
+neural networks you're probably used to
+dealing with where we're just building a
+forward propagation neural network and
+we connected them all together and you
+can see here
+we took the bird we
+did our extracting our feature
+extraction and multiple hidden layers
+where we had our convolution which then
+generated those little individual
+filters and we had our relu and then we
+took the real u we max pooled those and
+then we took all those pooled values at
+the end so they've been reduced to
+smaller mappings we've reduced that and
+then we fed that into the fully
+connected layer and then finally we went
+into the use case implementation using
+cnn and we walked through a full demo on
+the coding on there with that i want to
+thank you for joining us today uh so
+thank you for more information visit
+www.simplylearn.com
+get certified get ahead you can also
+post questions down below in the youtube
+and we'll try to answer those as best we
+can
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

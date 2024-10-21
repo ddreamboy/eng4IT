@@ -1,0 +1,239 @@
+hi are you researching python frameworks
+to become a better developer
+and to get developer contracts well then
+this video is for you because that's
+exactly what i'm going to give you
+so we're going to cover the types of
+frameworks the best current frameworks
+for this year and their uses
+and the differences between frameworks
+and libraries
+which a lot of developers get wrong so
+why am i qualified to talk about this
+well i've been in web development for 11
+years and i'm currently working directly
+with over 200 freelancers developers and
+agency owners
+so this video is for people who are
+serious about learning python and
+getting
+contracts so before we dive into the
+content do click on the subscribe button
+and the bell notification
+for all notifications icon so that you
+get future updates
+on more python tutorials so who uses
+python
+full stack developers back-end
+developers and front-end developers
+there are three types of python
+frameworks
+first one is the full stack framework
+such frameworks are
+one-stop solutions for all developer
+requirements
+they feature form generators form
+validation and
+template layouts this is usually
+available
+in a full stack framework the second
+type of python framework
+is the micro framework these are light
+to late frameworks that don't offer
+additional functionalities
+and features such as database
+abstraction layers
+form validation and specific tools and
+libraries developers using a micro
+framework
+usually need to add a lot of code and
+additional requirements
+manually so the third type of python
+framework is the asynchronous framework
+any asynchronous framework is a micro
+framework that allows for handling
+a large set of concurrent connections
+usually an
+asynchronous framework is built for
+python using
+the programming languages async io
+library so now let's get into the list
+of the most popular frameworks and their
+uses the first one is django from
+djangoproject.com the free to use and
+open source full stack python framework
+includes a huge amount of in-built
+features
+rather than offering them as individual
+libraries django makes use of its
+object relational mapper for mapping
+objects
+to database stables this results in
+allowing the code to work across
+different databases as well as
+making it easier to migrate from one
+database to another so this allows the
+code to work across different databases
+as well as making it easier to migrate
+from one database to another
+django features ready-to-use libraries
+and authentication support
+the second most popular framework for
+python currently is
+flask from c
+o o flask.poco.org org this is a micro
+framework available
+under the bsd license flask allows
+developers to build
+a solid web application foundation from
+where it is possible to use
+any kind of extensions required this
+micro framework is compatible with
+google app engine and it has a built-in
+fast debugger and restful request
+dispatching it also features support for
+plugging in any orm
+so the third most popular python
+framework is tornado from
+tornadoweb.org the tornado is
+an open source python framework and an
+asynchronous networking
+library it's a tool to build high
+performance
+high concurrent user amount apps so the
+fourth most popular framework is aiohttp
+it relies heavily on python 3.5 and
+beyond features
+such as async and awaits in addition to
+being a server
+web framework ai oh ttp can also serve
+as a client framework it supports both
+client websockets and server websockets
+without the callback hell
+the fifth most popular python framework
+is
+fast api fast api is a high performance
+framework it basically is a web
+framework for building apis with python
+3.6 and beyond
+based on standard python type hints
+it's very high performance and on par
+with node.js and
+goling the sixth most popular python
+framework is bottle this micro framework
+creates a single source file for every
+application developed using it this
+micro framework for python was
+originally developed
+for building apis other than the python
+standard library
+bottle has no dependencies required for
+crafting
+small web applications one of the most
+important advantages
+of using bottle is that it allows
+developers to work
+closer to the hardware so the seven most
+popular python framework is pyramid so
+this is a full stack framework
+for python and the primary goal of this
+open source python
+based web development framework is to
+achieve as much
+as possible with minimalistic complexity
+it features flexible authentication and
+authorization
+function decorators predicates and
+renderers
+so what's the difference between a
+framework and a python library
+it's kind of what happened in the
+industrial revolution we went from
+families running their own little
+production facilities where they did
+everything from scratch
+in the big backyard essentially or in a
+shed to
+create basic necessities to having a
+bunch of factories
+churning out cheaper better quality
+products at a thousand times the
+efficiency right
+that's basically what happened when
+developers started using
+frameworks and by efficiency i don't
+just mean how well the code works
+i also mean how fast it's created so a
+web framework is a collection of
+packages or modules which allow
+developers to write web applications or
+services
+without having to handle such low level
+details as protocols
+sockets or process thread management
+they promote
+rapid development and clean design they
+are developed by a group of experienced
+programmers
+who aim to remove the hassles of
+developing and allow teams to focus on
+writing code
+without having to reinvent the wheel
+every time that means writing fewer
+lines of code
+a framework usually includes the
+structure
+and foundation for building some
+frameworks contain basic code that use
+libraries frameworks define how you
+solve a problem
+and usually include tools to use their
+ways to solve problems
+python libraries however are a set of
+useful functions
+that eliminate the need for writing code
+from scratch
+there are over a hundred and thirty
+thousand python libraries present today
+a library in python is a pre-built piece
+of code that can do
+all the things you are too lazy or
+inexperienced
+to do or if you're just pressed for time
+you can also use them in the past people
+used to write all the code themselves
+this is
+super inefficient if you want to get
+stuff done faster meaning
+if you want to get something done in a
+week rather than two months
+you should remove repetitive tasks this
+is what frameworks help with
+the most libraries help you solve very
+direct problems so now let's talk about
+getting
+contracts for yourself as a developer
+and as a python developer so what you
+want to do essentially is
+use the skills that you're building to
+go on places like upwork which is a
+freelancing
+platform and get contracts on there it's
+very beginner friendly
+regardless of what crazy angry youtubers
+are saying it's not that
+hard to approach upwork especially if
+you use the guy that i've got about to
+link you which is right here
+so click on the video right here there's
+a whole playlist with how to use
+upwork and get contracts as a python
+developer
+or a different type of developer so
+watch the video list
+right here and it's also in the
+description if you can't
+click on the video if you have any
+comments or questions i usually respond
+to the best ones myself below this video
+here in the comment section

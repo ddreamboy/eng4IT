@@ -1,0 +1,19 @@
+top python libraries for data scientists
+part two number one plotly plotly is an
+open source tool and also it provides
+publication ready high quality
+interactive charts for examples it
+provides box plots heat maps and also
+bubble charts number two tensorflow it
+is an end-to-end machine learning
+library which provides so many tools and
+libraries and resources for the research
+community to build and develop machine
+learning models number three scrappy it
+is a large-scale website data extracting
+tool so in this case it's called web
+scraping it lets you
+extract data from websites and also
+process them and also store them in any
+format you want so for more such
+insightful content follow scalar

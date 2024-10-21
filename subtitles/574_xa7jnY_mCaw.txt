@@ -1,0 +1,303 @@
+hi i'm victor in this video we are going
+to explore the concept of ubiquitous
+computing
+let's first define the term ubiquitous
+computing
+is a concept of software engineering and
+computer science
+where computing is made to appear
+anytime and everywhere
+ubiquitous computing can occur using any
+device
+in any location and in any format it is
+the use of computers in
+everyday life this is also known as
+pervasive computing
+the terms ubiquitous and pervasive both
+mean
+existing everywhere this is a post
+desktop model of human computer
+interaction
+in which information processing has been
+thoroughly integrated
+into everyday objects and activities
+this is the idea that almost any device
+from clothing to tools
+to appliances to cars to homes
+can be embedded with chips to connect
+the device to an infinite network of
+devices
+it supports one user to many computing
+tasks
+and in one device with multiple
+computing tasks
+like a smartphone
+the father of ubiquitous computing is
+mark weisser
+who was the chief scientist at xerox
+park
+palo alto research center in the u.s he
+coined the term ubiquitous computing
+around 1988
+he articulated the idea of ubiquitous
+computing
+he stated that the highest ideal of
+ubiquitous computing is to make
+computers so embedded
+so fitting so natural another known
+personality in this concept
+is manual castles he suggested in his
+book
+the rise of the network society that
+there is an ongoing shift from already
+decentralized
+standalone microcomputers and mainframes
+towards entirely pervasive computing
+in its model of a pervasive computing
+system castos
+used the example of the internet as the
+start of a pervasive computing system
+he imagined a system where billions of
+miniature
+ubiquitous interconnected devices will
+be spread
+the goal of ubiquitous computing is to
+create an environment where the
+connectivity of devices are embedded
+in such a way that connectivity is
+unobtrusive and always available
+such devices characteristics may be very
+tiny
+small inexpensive and robust network
+processing
+it is either mobile or embedded in
+almost any type of objects
+such as cars tools appliances
+clothing and various consumer goods all
+communicating through
+increasingly interconnected networks
+here are some examples of ubiquitous
+computing
+computer sensors in your floor that can
+monitor your physical health
+computer in your car that can assist you
+when you drive to work
+replacement of old electric meter with
+smart meter
+smart meters are tools used to manage
+and record electricity
+and performance of electronic devices in
+the home
+one of the advantages of smart meter is
+it eliminates manual monthly meter
+readings
+automatic intelligent lighting system
+and cooling system
+the ubiquitous computing environment
+might interconnect
+lighting and environmental controls with
+personal biometric monitors
+woven into clothing so that illumination
+and heating conditions
+in a room might be modulated
+continuously
+and gradually this is a smart thermostat
+it can be controlled with a phone tablet
+smart speaker or other internet
+connected device
+smart thermostats typically allow you to
+schedule your desired temperature
+settings
+and you can also incorporate them into
+home automation systems
+refrigerators that are aware of their
+suitably tagged contents
+and are able to plan a variety of menus
+an interactive whiteboard it is a large
+interactive display as a whiteboard for
+education or business presentations
+it can either be a standalone
+touchscreen computer used independently
+to perform tasks and operations
+or a connectable apparatus used as a
+touch
+pad to control computers from a
+projector
+use of rfid tags with both barcodes and
+qr codes
+it allows the consumer to connect to the
+internet of things
+with a simple scan of a smartphone or
+tablet
+making objects marked with a qr code or
+barcode
+would mean improving the retail
+environment for consumers
+because they will be more educated about
+the item before purchasing and they will
+be able to check for an item's
+availability
+let's compare virtual reality and
+ubiquitous computing
+virtual reality puts people inside a
+computer-generated three-dimensional
+environment
+on the other hand ubiquitous computing
+focuses the computer to live out here
+in the world with people
+here are some challenges of ubiquitous
+computing
+privacy and security in a fully
+networked world with ubiquitous sensor
+equipped
+devices several privacy and security
+issues may arise
+the people in this environment will be
+worried about their privacy
+since there is the potential of total
+monitoring ubiquitous computing has a
+social impact on our society
+for example how will an individual know
+if they are within a smart environment
+where embedded devices are gathering
+data
+is it ethical to gather information from
+individuals without their knowledge
+next is volatility not only does the
+world change
+but also the set of users devices and
+software components in an environment
+they change over time with this the
+trending device might be replaced fast
+by the technologies
+that are to be released in the coming
+days support for the current technology
+may then be stopped
+this results in incurring more expenses
+to individuals and businesses
+impromptu interoperability this means
+many technology producing companies
+produce their own products
+speaking their own proprietary language
+this leads to non-interoperability
+between devices
+from different companies this results to
+lack of systems
+administrations or regulations
+here are some advantages brought to us
+by ubiquitous computing
+it processes information effectively and
+enhances effortless user experience
+it allows us to manage information
+efficiently
+it removes complexity of new technology
+since they are designed to be used on a
+day-to-day basis
+it is designed to be integrated for
+man's use
+seamlessly or invisibly
+it allows socialization and faster
+guided decision
+making here are some uses of ubiquitous
+computing
+information access text or multimedia
+document retrieval
+like when we are using an electronic
+book
+those uses can be performed through the
+help of the following hardware and
+software technologies
+like automatic indexing automated
+indexing is the process of assigning and
+arranging index terms without human
+intervention
+the index is produced using algorithms
+rule sets or machine learning
+next is networking speech recognition
+wireless protocols and user sensitive
+devices
+to end our discussion about ubiquitous
+computing let's discuss
+its key elements which are ubiquitous
+sensing
+access middleware and networking
+ubiquitous sensing uses a sensor it is a
+device that responds to a physical
+stimulus
+such as heat light sound pressure
+magnetism or a particular motion and
+transmits a resulting impulse
+as for measurement or operating a
+control this gives
+systems eyes and ears and adding more
+awareness to ubiquitous computing
+ubiquitous access represents the ability
+for a cloud service
+to be widely accessible by devices
+transport protocols
+interfaces and security technologies
+example is when mobile computers
+or wearable computers access information
+next is ubiquitous middleware it is
+typically a software
+it shields an application from low level
+details that is interacting with
+ubiquitous networking
+sensing and access the last key element
+is ubiquitous networking it is the
+distribution of communications
+infrastructure and wireless technologies
+throughout the environment to enable
+continuous connectivity
+here is an example where all these
+elements are identified
+the floor detects user movements through
+its sensors
+which sends signals and are accepted by
+a device with
+application software the device sends
+data to the cloud
+and useful or relevant information
+needed may be returned
+the information will then be shown to
+the screen and effect devices
+this next example is from the article
+entitled google's
+smart bathroom patent put sensors in
+your toilet
+tub and mirror by christian the looper
+on
+august 10 2016 at www.digitaltrends.com
+the patent describes sensors in a bath
+mat that measures heart rate
+through the body's electrical patterns
+it has a camera in the bathroom mirror
+which would be able to detect things
+like skin color variations
+it has sensors in the bathtub creating
+an ultrasonic bathtub that could perform
+an echo test
+additional sensors may also be installed
+to detect blood pressure
+and to help keep track of the nervous
+endocrine
+and muscular systems all those data
+could be collected
+and sent to health professionals with
+users consent
+according to google those collected data
+could provide
+much more valuable data as it's
+collected daily
+rather than once every few months the
+patent was filed by jeffrey rogers
+who was director of engineering at
+google when the patent was filed
+here are the references
+thank you for watching
+please don't forget to leave your
+feedback please consider liking and
+sharing this video too
+again this is victor thank you all for
+watching
+you

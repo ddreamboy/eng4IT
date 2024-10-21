@@ -1,0 +1,274 @@
+how's it going everyone so I want to
+have a little discussion about how do
+you build complex software how do you
+build out applications and I want to
+give you my thought process there's a
+lot of different ways that you can do
+this so for what I noticed in the
+industry there's like different mindsets
+of how you can potentially build out
+applications some people like to sit
+down
+in terms of like whether about the code
+the load up like uml diagrams if you
+know
+uml diagram is it looks like like as an
+example let's say you're trying to
+create a database and you want to set up
+some entities and some schemas some
+people sit down and they'll draw out
+this huge diagram of all these entities
+how they interconnect
+um which is which is cool but it's a
+very waterfall type of approach to
+software engineering and from what I've
+learned where I work in like the mindset
+that I have is I like to try this who
+work in an agile mindset so basically
+instead of sitting down and trying to
+design out the diagram of what every
+single entity might look like for
+example in this application I'm building
+for Starcraft 2 build orders I could
+have sat down and tried to plan out
+every single database table and how they
+interconnect and how they do this and
+that and the other
+but what I found to be most beneficial
+to me is that start on
+one single thing that helps you
+implement the feature that you need
+right that's like the agile mindset of
+do the bare minimum that you need to do
+to actually create a feature for your
+users now the reason that I like to do
+that is because most of the time you
+don't know if what you're building is
+actually going to be useful for the
+users that you're building it for you
+may spend weeks or months designing this
+giant system
+you have all these nice diagrams with
+arrows and stuff and then you start
+coding it up and you realize that
+everything you designed is completely
+wrong or it's not going to work or it's
+just not fun to use or it's not good to
+like be maintainable in terms of the
+long scale projection of your system so
+I try to avoid diagramming now if you
+get a feature where you need to like do
+something where like for example let's
+say they create this build and you need
+to have that send out an email and also
+send out notifications to people who
+might be subscribing to you as a user
+then yeah I might sit down with excella
+draw and I might start diet like
+diagramming out like what happens how
+does the flow of code happen for this
+particular feature but I'm just focusing
+on that one feature I'm trying to add
+I'm not going to go off and start like
+adding all these different pieces to the
+puzzle especially since if we're not
+focused on building that feature yet
+then I would not waste time thinking
+about that feature and this does have
+some drawbacks because sometimes you you
+need to stick a step back and think
+about the bigger the bigger pieces like
+you need to holistically look at what
+you're building and make sure that
+you're kind of engineering or you know
+maintainability and proper structure and
+sometimes you have to think about the
+what-s but a lot of times what I notice
+is that the more you plan for the what
+ifs like oh what if the user needs to do
+this so what if the user needs to do
+that I'm going to go ahead and add that
+into my code you end up building a
+really hard to maintain monstrosity in
+my opinion because now I have a bunch of
+over engineered like things in your code
+base that you may or may not even need
+right so don't add things to your code
+unless you know it's going to achieve
+the feature that you're trying to build
+out for the user
+and I like to do this step by step so
+every feature along the way you
+continuously iterate and build upon the
+feature and I'm not saying that the code
+you write has to be sloppy like you
+should be shipping quality code you
+should have tests that cover everything
+you write you have integration tests
+unit tests end-to-end tests you should
+make sure your code you know follows
+proper coding standards like you know
+clean code you have your magic numbers
+removed you have any constants pulled
+out to a shared location
+um you know stuff is documented stuff is
+commented but I'm not but what I am
+saying is like don't try to add in a
+bunch of additional things into your
+code for the what ifs right you don't
+know what the user needs in the future
+so don't try to code for that so that's
+kind of the approach I like to take in
+the way that I've been kind of taught um
+with where I work and like since I
+started in the industry to have an agile
+mindset of just build one feature and
+then ship it get it out there in front
+of users so that they can play around
+with it and they can give you some
+feedback even if you have like a feature
+flag that basically only lets certain
+subset of users to use this new feature
+it's more important to get this in front
+of like a test group of people so they
+can say hey you're wasting your time
+building this like this is not what we
+want we do not want this ability to
+basically create a build order for
+Starcraft 2 by clicking on buttons I'd
+rather just go in and manually type
+stuff if that's what your users want
+then you don't have to spend weeks
+building out this feature that no one
+would ever want to use and then also
+polluting your code base with a bunch of
+stuff that you're just going to end up
+deleting or just let sit around and rot
+that you don't want and so that's kind
+of like the way I do things like I kind
+of start with a single user story like
+for example in this build order project
+I'm building that's that's using the T3
+stack with like Prisma and next and
+stuff I basically just write down a
+single sentence like as a user I should
+be able to URL bookmark a search
+scenario
+and all the stuff that comes after that
+is all like
+implementation detail that's not really
+important
+and I just work towards implementing
+whatever that feature is then once I'm
+done I will just commit that and then
+hopefully your CI CD pipeline will
+automatically deploy that to your users
+they can start using it and they can
+give you feedback and then you move on
+to the next user story so that's kind of
+like the agile mindset obviously I'm
+kind of boiling this down to the most
+basic
+um explanation there's a lot more that
+goes into it with like the planning and
+the orchestration of your stories and
+actually deploying these things and
+testing them but overall if you're
+working on like a side project I like to
+just do this just write out a simple
+feature
+and add the most minimal amount of code
+that you can to make this feature work
+like for example a user shall be able to
+upvote builds well if I wanted to add
+that
+basically I would just go and find a
+single area like maybe it's here maybe
+you want to be able to upload up vote
+builds from this little card component
+or maybe you have to go into the build
+itself to upvote and you don't know like
+the good design
+you won't know if it were if it works
+better here it works better here if
+works better on both Pages until you
+actually get into the the weeds of the
+implementation and start adding it in
+and start using it and you realize okay
+with with like analytics and tracking on
+your app you notice that only five
+percent of users are actually up voting
+Builds on this page so if you have it
+here and you have it here you're kind of
+wasting that feature so just delete it
+from here because there's extra noise
+for the user so that's how you kind of
+go about building complex software it's
+all about like
+understanding your user needs what do
+they actually use what do they not use
+can you delete the stuff that's used by
+a very small portion of users
+and then also in terms of like the
+coding and the designing can you design
+and code the the most minimal thing to
+get the feature working and then you
+might say that okay you're going to code
+yourself into a corner because you're
+just going to add code that's sloppy and
+it's not going to be extendable
+but the point is is that when you get a
+feature down the road that requires you
+to change or modify or extend your
+current code that's when you go back and
+you refactor your code to make it that
+you know solid approach or to make it
+that like
+design patterns approach to make it
+really extensible
+to make it really extendable and really
+modifiable and maintainable but yeah
+that's all I wanted to really rant about
+um I've met people who like to think
+about all the different edge cases when
+they're building code and that's fine
+too I think it's good to have now that's
+just my mindset again there's different
+types of people I have had people on my
+Discord ask me like like a beginner my
+Discord whose Professor is basically
+telling them to design this huge uml
+diagram or ER diagram of like 20
+database entities all from the get-go
+and I was basically telling him there's
+really no point to sitting down and
+doing that like the real benefit comes
+from just slowly adding these features
+for your users and getting them to use
+it and slowly adding migrations and
+changing your database and getting
+everything built out there are teams who
+sit like would sit down and literally
+plan out every single page like they'll
+plan out this page and they'll have like
+designs for this page and they'll have
+designs for this page and before you
+even start getting into the code like
+all these pages are being like drawn out
+and designed with mocks and stuff and
+the mindset again like I think works
+best is just start on a single thing
+get a prototype out get a mock-up just
+work on it implement it deploy it and
+then you move on to the next thing the
+one thing at a time get that feedback
+and iterate and make it better anyway
+I'm just rambling at this point so
+hopefully you guys enjoyed watching this
+give me a thumbs up if you did and uh be
+sure to join my Discord if you want to
+talk to me directly or just find a place
+to hang out with other developers and
+get some help along the way as you're
+trying to learn how to code have a good
+day and happy coding

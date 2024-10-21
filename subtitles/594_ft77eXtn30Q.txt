@@ -1,0 +1,708 @@
+if you want to learn how to extract the
+best possible
+information from your data from your
+tabular data and create high performance
+machine learning models
+this video will teach you everything i
+know about it my name is mario i'm a
+kaggle competition's gray master and
+multiple time price winner and
+every price i won in any machine
+learning competition
+i can say that the number one reason was
+because of
+developing the feature engineering skill
+every time i created a high performance
+model for a consulting
+job or for any job that i had the most
+important part after
+of course understanding the business
+problem and actually solving the right
+problem was how to extract the maximum
+information from any data that i had
+available
+to solve that problem this is definitely
+one of the most important
+and more art than science part of
+creating machine learning models
+so let's begin i tell you i have to tell
+you this is not
+a code tutorial because what you learn
+here you can apply in sql inspired in
+our
+independence in whatever language you
+already work or
+we work in the future what i want here
+is to teach you how to think
+teach you how to reason about this give
+your strategy and tactics so that you
+can
+actually extract these representations
+from your data in the problems that you
+have
+that include structured tabular data
+the first part of this tutorial will be
+a more abstract part a more framework
+part
+kind of giving you a template a
+blueprint for you to think about this in
+any cases that you
+have to solve that you have tables and
+in the second part i will show you a
+real example in with data from facebook
+about competition bot detection
+competition that
+really gave me a lot of insight in the
+about feature engineering and how it
+affects machine learning so let's begin
+the first
+question that you have to ask yourself
+is about the keys that you have
+and why i say the keys what are these
+skills it's creating data creating
+features
+for tabular data is all about
+aggregation
+so every time this was a game changer
+for my machine learning skill when i
+started thinking about all the tables
+that i had as how can i aggregate this
+data and extract
+information by aggregating and this will
+be very clear to you
+after this tutorial in more practical
+terms we can think about aggregation as
+the usual group by function that we have
+in a lot of
+our languages to to deal with tabular
+data
+the basic concept is whatever tables you
+have you will need to find the keys to
+join these tables
+and you need to find the variables that
+you can group
+by and actually extract some operations
+on
+function over the values of some other
+columns that you have
+let me give you an example to make this
+more clear let's say that you work for a
+credit card company
+and you are trying to predict fraud
+after looking at the tables that you
+have available you have tables of
+transactions
+of your customers you have a table of
+customers of your credit cards and let's
+keep only at these two so that we can
+understand this
+in a more simplified way so in this
+transaction data set
+you have both a transaction id a
+customer id
+for each row i'm saying this the
+transaction value the currency
+of the transaction the location the time
+of the transaction and you can have many
+more
+many more places like the merchant id
+the machine id where the the transaction
+was covered if it was online if it was
+offline you have a lot of data but you
+have this log
+of transactions and for the customer you
+have of course the customer id
+and you have the address how many credit
+cards this person has
+any information that is related to the
+customer
+so how can you create this model by
+aggregating data so the first thing you
+have to think is what are the keys that
+i will need to do a join to do a merge
+here
+and you will predict this for each
+transaction so
+our key will be transaction id and we
+will have customer id too so for each
+transaction of a given customer
+you need to create features so that you
+can predict if this transaction is fraud
+or if it is a regular transaction of
+this customer
+one feature for example that you can
+calculate here is let's aggregate on
+customer id and let's take for example
+how many transactions that customers a
+customer usually does
+in a period of a month so here we have
+one feature so if a customer
+is usually doing 10 transactions a month
+and
+suddenly he's doing 10 transactions in a
+day probably
+there is something wrong then why i say
+about keys because
+then you have uh you have a row with the
+customer id and the number
+related to this information that we just
+computed and that you can join with
+the row of the transaction that you are
+trying to predict
+next if it is fraud or not in a more
+technical term this would be a group by
+customer id and then you can use count
+or size if you are using pandas count
+over the rows in this case it can be
+over customer id but you
+don't need to only aggregate over one
+variable you can aggregate
+over many variables so for example let's
+say that we want to
+understand if this customer usually
+makes transactions internationally or if
+his transactions are usually only
+domestic
+in this case we would use the group by
+we can aggregate for
+by customer id and currency and we can
+count
+and i can count how many times a
+customer actually made a transaction in
+a given currency and then we can
+for example create a table to join where
+we have for example
+the number of transactions in dollars in
+british pounds etc
+so if a customer usually only transacts
+in
+dollars probably if you see a
+transaction
+that is in canadian dollars well maybe
+this is not a big problem canada and us
+are close by maybe the customers is over
+the border
+or something like this but if you see
+the same customer
+actually transacting in chilean pesos or
+brazilian realize
+probably it is an indication that
+something is at least
+different it may be it may still be the
+customer but maybe
+it's not so this is the general
+framework that i want you to think about
+these features it's
+all about aggregation you can take the
+median you can take the average the
+maximum the minimum the entropy
+of any columns aggregated by any other
+columns that you have
+in your data set usually you will
+aggregate over categorical columns or
+ordinal columns of course aggregating
+over numerical columns usually it
+is not very feasible but i think you get
+the idea from here
+and just to be complete i have to tell
+you that for example if you have
+categorical
+data you can actually do a one hot
+encoding
+you can do count or frequency of your
+data like the examples that i'm giving
+you here
+so for example the account of currencies
+we could for example take the amount of
+the transactions and say
+okay usually this customer buys every
+purchase of this customer it is actually
+around 50 dollars so if this customer is
+suddenly
+spending five thousand dollars in one
+transaction it may be an anomaly
+of course this is what the machine
+learning model will decide but
+you have to put this type of feature so
+that it can capture this kind of pattern
+if it is an indicator of fraud and you
+have of course the target encoding which
+is
+very popular on kego because it's highly
+effective
+when it actually works another thing i
+want you to remember from this
+is that time time you can treat just as
+an ordinal variable
+and even a categorical variable i know
+categorical variables
+have no order and etc but for our
+purposes
+think about time as a discrete ordinal
+sequential variable what does this mean
+this means that
+it is just a list of numbers a list
+of data so if you have a day you can
+have day one day two day three day four
+always think about it
+as just another ordinal variable and you
+can group by
+by by this ordinal variable so for
+example you can get
+how much money someone spends in a day
+you group by time
+and take the sum of the amount of
+transactions that these people has in
+their credit card
+in our example there are four types of
+variables that i usually like to
+recommend one is the leg if you think
+about it it's just a group by
+and the shift of the of the data so lag
+is simply saying okay what was the end
+time
+the end value of this variable uh across
+time so for example if we have a list of
+10 transactions
+what was the value of the last
+transaction would be a lag
+of one if you get the 10th transaction
+it would be a lag of 10. so legs can be
+applied to sequences in general and time
+is just another way to order a sequence
+another feature that i usually like is
+the difference so difference is just
+like lag but instead of just taking for
+example the
+last transaction you take the last two
+transactions and subtract
+one from the other so what's the
+difference in transactions from this
+current transaction to the last one so
+it's just a different simple difference
+it's very effective for machine learning
+another one that i like is the rolling
+so a moving average is a classical
+example and if you think
+about this as the sequence that i'm
+telling you you can think about
+rolling as just taking a given window of
+the data that you have and actually
+computing an aggregation
+remember aggregation is over everything
+here so
+think about it when you have a time
+series you just have to think about
+aggregations but
+now you have another dimension that you
+can aggregate you have
+time so you can still aggregate but now
+you have a time
+hour aggregation that you have and the
+last one the last two
+let's say i say it four but actually we
+can think about five of them
+uh the other one is date components so
+the specific
+date that something actually occurred
+some there are some patterns depending
+on the types of data that you are
+dealing with that are more common in
+weekends for example
+sales usually have some seasonal
+patterns across
+when you are getting to black friday or
+when you are getting to christmas so
+there are seasonal patterns and you can
+capture
+them with date components this is
+another type
+of extraction that can be used in an
+aggregation but can be used as a
+an independent column so for example
+extracting the month of a day so today
+is 2021
+july 15 so i can take for example only
+the year
+or only the month and try to capture
+some kind of seasonality in agriculture
+this can be important because we have
+different seasons in the year
+if you are selling fashion items of
+course
+you will have different fashion items
+that you should recommend depending on
+the season of the year so this can be
+one way to tell it to your model and the
+fifth one that i thought
+it is just an additional is actually the
+fifth one is the time difference
+so now instead of taking the difference
+let's say the positional difference
+like we are we were doing with the lag
+we are talking about
+taking a difference between dates so
+let's say that you have
+the transactions again of our credit
+card fraud case and
+you can compute how much time have has
+passed how much time has passed
+since the last transaction on how
+usually what's the average time between
+transactions of this customer
+how long has been since this customer
+actually made the purchase in this
+currency or how long it has been
+since this customer actually made any
+purchase this can be important too so
+for example i have a credit card
+that i only use for something like
+spotify subscription
+and it has been months since the only
+charge in that credit card
+is actually a spotify subscription so if
+someone if suddenly i have three
+transactions buying some
+game coins in a random internet game
+probably it is a fraud not only because
+of course it is a thing that i'm not
+usually buying but it is a big number of
+transactions suddenly and
+the time between these transactions is
+actually completely different from what
+the credit card companies use it to seem
+in my profile
+so let's go to the example that i told
+you so that you can see this in practice
+and it is actually a great
+exercise for you to do an exercise that
+i will recommend
+is take some tabular data competitions
+from kaggle look at the solutions that
+are shared and try to
+reverse engineer how people computed
+the features that they are telling you
+that they computed and i will give you
+an example here so this is a competition
+that happened
+six years ago it's the facebook
+recruiting the idea was
+given some bids in a given auction
+you had to determine if if an user was a
+person or a machine
+so this site this data was from a
+website where people
+where the company did not want bots to
+actually bid
+in their auctions so you had to
+determine so they wanted to identify it
+with machine learning to identify
+if the users were using some kind of
+illegal software
+so that they could block these users
+from bidding at the auctions
+so it's a huge data set huge for not for
+the the size today but it has 7.6
+million beats
+and it's actually a tiny data set after
+you do your
+data processing and we have basically
+two tables we have the bidder table so
+we have the id of the bidders this can
+be compared to the customer id
+in our previous example we have the
+payment account it's an identifier
+of the account that the payment
+information of the user the address
+and the outcome so was this user about
+or
+was this user a human but the most
+important part for us here
+is the bid data set it's where i
+actually extracted most of the features
+and the winners actually extracted most
+of the features from so we have
+a data set that has a bid id a bidder id
+so
+like we said about the transactions it's
+a transaction id
+and the user id the customer id in this
+case
+the auction that this customer was
+participating so we can
+think about this as let's say the
+merchant where the person actually made
+a purchase on the credit card and this
+will change of course case by case
+depending on what you are modeling but
+i'm trying to keep this very very
+general here so that you can use it in
+any tabular case that you have where you
+have to extract features from multiple
+tables
+and then you have device time country ip
+url
+the category of the auction everything
+so let's see
+how a very brilliant woman a
+small yellow duck she actually created a
+very very
+good solution she took the second place
+in this
+competition and she actually wrote an
+article that i will link
+in the in the description of this video
+with her solution and it has the code if
+you want to look at how she computed
+these features and let's do the exercise
+that i told you about
+trying to reverse engineer the features
+that she computed
+based on our aggregation framework so
+the first
+feature here is the median time between
+end users bid and of course these are
+only some of the features these are not
+all the features you can see all the
+features and
+she has a great the she made some
+products and
+a very very good explanation in the
+article but uh
+here let's see this feature the features
+that she described here so the median
+time between end users bid and the
+user's previous
+review speed so like i told you about
+the case of the transactions
+where you calculate the time between
+transactions in a credit card so let's
+try to translate this
+into a group by so she did a group by
+and you can pause the video and try to
+do it yourself before seeing the
+solution but
+i will tell you here how i would do it
+so she made a group by
+on user so in this case be their id
+this actually gave her a data frame
+let's think about this as data frame
+this actually
+gave her a data frame of all the bits
+that this user had in the data set
+and then the aggregation that she did
+was first
+she computed the difference between the
+time
+of each of these beads so at this point
+we have
+bid one bit two bit three so she took
+the difference
+of all these beads and then with the
+differences
+she actually calculated the median at
+the end
+she had a data set that had the user and
+this new feature the median
+time between bits basically second
+feature the mean number of bids a user
+made per auction how did she compute it
+let's take our group by in this case
+user and i
+i will here use the the pandas notation
+that is the one that i'm mostly familiar
+with
+so she grouped by user by auction and
+she took
+the size operation or the count depends
+on missing data and some details of
+pandas for example so this
+gave her an user auction size table
+that she could merge with the original
+data
+and to finalize i will take a third
+feature here
+so let's take the group by and let's
+take this deflection of
+ips used by a bidder which were also
+used by another user which was a bot
+this one is a more complex one so she
+had to group by
+user ip and she probably computed
+size so she had this so let's say that
+few thread tutoring is another
+way of telling of saying that you are
+selecting some roles but let's say that
+she filtered a data set that had
+only users that were bought so the
+outcome
+was one in this case then what she did
+was probably this
+she took the first one and we you can do
+an inner join for example
+or some kind of filtering so that you
+get only the rows that correspond
+to this filter and then after this you
+have
+a a table that has only these users but
+you have the user
+the ip and this you have user ip and the
+size
+but only for users that actually wear
+bots and then you can take this
+and merge over the original data by ip
+so in the original data you had user you
+had auction
+you had ip and you can actually merge
+this
+merge this the result of this one above
+with this data
+and then you can actually create another
+indicator that can tell you
+if any of these ips actually were about
+were used by a bot before
+so this one is a more complex one but i
+wanted to show you how you can go
+deep into these features how you can
+compute very very deep features you
+don't have to limit yourself
+just one or two or even three
+categoricals to group by to aggregate
+you can do
+many many aggregations and then try
+basically everything
+in your model as you are
+learning this it's very important that
+you use some kind of reference so i will
+leave
+here some i'll leave a link to this
+feature tools documentation feature
+tools
+is a library that tries to automate this
+process of aggregation
+and extraction from features from
+multiple tables
+i have not used this in production so i
+don't know i can't tell you if it is
+very good very bad whatever but
+what i can tell you is it has a lot of
+these lists they are trying to automate
+this so they have in the documentation a
+list
+of future primitives of variable types
+that you can actually
+compute so you can see what types of
+aggregations they do
+what type of of variables they are using
+and join all these together so
+what kind of aggregations they usually
+do for a categorical variable for
+example and they have a lot of examples
+both to predict customer churn to
+predict next purchase
+in many many areas it's very very good
+for you to learn future engineering i
+really don't understand why this
+this library is not more popular and i'm
+not sponsored by them i'm not being paid
+to tell you this i just know from my
+experience that i really wish i had
+something like this when i was learning
+so i'll leave this link below and to
+finish this video
+i want to tell you that there are two
+other types of features that may be
+interesting
+to you that i will not cover here
+because it goes a little bit
+too deep into specific cases which are
+geolocation features
+so for example hover sign distance to
+calculate distance between two places on
+earth
+or some other kinds that i can imagine
+of spatial
+data features that you can extract so
+there are
+basically two dimensions that we usually
+see in
+real data so so real data can be spatial
+and can be
+usually bound by time so you have to to
+know some
+ways of computing uh some geolocation
+features to help you so the distance for
+example from points of interest the
+distance of a customer from a given
+store
+or from his home can be important in a
+given model and
+we have a new type of feature not a very
+new type but something that has been
+more popular and i've seen some very
+very good solutions on kaggle that use
+them which are network or graph features
+so you put your data into a graph and
+you can actually
+do some aggregations actually or
+something like aggregations that you can
+use to extract some information from the
+data so for example when we are trying
+to
+identify in our case here on facebook
+this last feature that i tried to
+explain to you about the eyepiece
+it could be a graph a graph where the
+nodes could be a piece and the edges
+it could be a graph where the nodes
+could be users and the graphs the edges
+could be a piece
+the edges could be a piece so if a user
+actually used the same ips another user
+it would have an edge on our graph if
+not
+of course it will not have and we could
+compute a lot
+of metrics about it so the edge degree
+and a lot of the node degree actually a
+lot of features
+that are specific to graphs that can
+actually help our model to predict
+we can just put into a table and
+actually use it in a model so please
+think about these graph features too i
+may make a video only about them but
+they are basically
+aggregations but at a different let's
+say level
+that we have but they are ever more
+important another thing that i want to
+tell you is that
+an advanced example for you to try this
+exercise of trying to reverse engineer
+these
+features is actually looking at the
+instacart competition mainly the kazuki
+onodera solution
+where he describes in detail and
+actually has published code
+of the features that he used to take i
+think the second place in the instacart
+competition and it's a very very good
+exercise for you to learn
+how to do this feature engineering in
+more tables
+and including the time dimension to like
+we seen
+here and if you want something specific
+about time series forecasting i will
+leave a link to my
+specific video on my specific workshop
+on time series forecasting here that
+you're can watch now just click the link
+if you like this video please
+leave your like subscribe to the channel
+turn on the notifications and give your
+comment here
+thank you for watching and have a
+wonderful day

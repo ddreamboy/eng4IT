@@ -1,0 +1,290 @@
+foreign
+python is the most widely used
+programming language today when it comes
+to solving data science tasks and
+challenges python never ceases to
+surprise its users most data scientists
+are already leveraging the power of
+Python programming every day
+it's an easy to learn easy to debug
+widely used object oriented open source
+high performance language and there are
+many more benefits of Python Programming
+python has been built with extraordinary
+libraries for data science that are used
+by programmers every day in solving
+problems Master Python and other core
+data science topics to help you
+Kickstart your data Journey with a
+professional certificate program
+delivered in partnership with Purdue
+University and IBM this data science
+certification features master classes by
+Purdue faculty and IBM experts exclusive
+hackathons and AMS sessions by IBM
+experts this course covers tools and
+techniques like numpy pandas Python and
+sci-fi along with industry projects like
+uber Transport service provider Amazon
+e-commerce and Retail in Walmart
+choosing this course can get you hired
+in renowned companies like Netflix
+Amazon Facebook Adobe and average salary
+hike of 70 percent so what are you
+waiting for join the data science
+professional certificate program and
+Excel your candidate data science the
+link is in the description box below if
+getting your learning started is half
+the battle what if you could do that for
+free visit scale up by simply learn
+click on the link in the description to
+know more
+now before talking about top python
+libraries let's take a look at what a
+library is python has produced a number
+of Open Source libraries each with its
+own root Source a library is a
+previously combined set of code scripts
+that may be utilized iteratively to save
+time now in contrast to languages such
+as C plus plus or C python libraries are
+not context specific now a library in
+this context refers to a collection of
+essential components a library is a
+collection of modules that can be
+installed with the help of a package
+manager such as pip now that we know
+what libraries are let's take a closer
+look at some of the most popular
+libraries in Python first on the list we
+have numpy numpy is an open source
+python Library used for scientific
+Computing and data analysis it provides
+powerful numerical and mathematical
+functions that enable efficient
+computation of large multi-dimensional
+arrays and matrices numpy is an
+essential library for data manipulation
+and Analysis in fields such as machine
+learning image processing and scientific
+Computing now some of the key features
+of numpy include multi-dimensional
+arrays numpy provides a powerful
+n-dimensional array object that can be
+used to store and manipulate large data
+sets mathematical functions numpy
+provides a wide range of mathematical
+functions that can be applied to arrays
+and matrices as well including linear
+algebra Fourier transforms and random
+number generation numpy is widely used
+library in a data science and machine
+learning communities and is often used
+in conjunction with other libraries like
+pandas scikit-learn and tensorflow
+second on the list we have pandas pandas
+is an open source data manipulation and
+Analysis library for the Python
+programming language it provides easy to
+use data structures and data analysis
+tools for handling and manipulating
+structured data panels provides two main
+data structures one is series and other
+one is data free now a series is a one
+dimensional label array that can hold
+any data type while the data frame is a
+two-dimensional label data structure
+with columns and potential of different
+data types some of the key features of
+Partners include data cleaning Partners
+provide tools for cleaning filtering and
+transforming data such as filling
+missing values removing duplicates and
+replacing values data manipulation
+pandas provide powerful tools for
+manipulating data such as grouping
+merging and reshaping data integration
+with other libraries pandas integrate
+with other popular libraries such as
+numpy scipy and scikit-learn to provide
+a complete data analysis and machine
+learning environment pandas is widely
+used in data science and Analysis and
+are particularly useful for working with
+tabular data such as data in CSV and
+Excel files next on the list we have
+matplotlib matplotlib is a python
+Library used for data visualization it
+provides a wide range of tools for
+creating graphs plots charts and other
+visual representation of data it is a
+highly customizable library that allows
+you to control every aspect of
+visualization you create you can
+customize the style color size
+appearance of elements such as lines
+markers access titles and legends it
+also offers several types of plots
+including line plots Scatter Plots bar
+plots histogram plots pie chart and many
+more
+matplotlip is built on top of numpy
+which makes it easy to work with arrays
+and other numerical data matward lib
+also integrates well with other python
+libraries such as pandas for data
+manipulation sci-fi for scientific
+Computing and c-bond for statistical
+data visualization
+fourth on the list we have scikit-learn
+scikit-learn also known as sklearn is a
+popular open source machine learning
+library for python it provides a wide
+range of algorithms and tools for
+building and evaluating machine learning
+models
+scikit-learn is built on top of numpy
+scipy and matplotlib which makes it easy
+to integrate with other scientific
+Computing libraries in Python it
+provides a comprehensive set of tools
+for various machine learning tasks such
+as classification regression clustering
+dimensionality reduction model selection
+and pre-processing it also includes
+popular algorithms such as decision
+trees random Forest support Vector
+machines logistic regression K nearest
+neighbors and many more scikit-learn
+provides a consistent API for all
+algorithms making it easy to switch
+between different models and algorithms
+scikit-learn also provides a wide range
+of pre-processing tools for cleaning and
+transforming data such as scaling
+normalization and feature extraction
+fifth on the list we have Scrappy the
+next one python libraries for data
+science is Scrappy Scrappy is one of the
+most popular fast open source web
+crawling framework written in Python it
+is commonly used to extract data from
+web pages with the help of selectors
+based on XPath and talking about its
+application Scrappy helps in building
+crawling programs that can retrieve
+structured data from the web
+Scrappy is also used to gather data from
+apis and follow a don't repeat yourself
+principle in the design of its interface
+influencing users to write universal
+codes that can be reused for building
+and scaling large crawlers sixth on the
+list we have Keras similar to tensorflow
+Keras is another popular library that is
+used extensively for deep learning and
+neural network modules Keras supports
+both tensorflow and piano backends so it
+is a good option if you don't want to
+dive into the details of tensorflow
+talking about such features Keras
+provides vast pre-labeled data sets
+which can be used to directly import and
+load it contains various implemented
+layers and parameters that can be used
+for construction configuration training
+and evaluation of neural networks next
+in the list of top python libraries for
+data Sciences pytorch which is a python
+based scientific Computing package that
+uses the power of Graphics processing
+units pie torch is one of the most
+commonly used preferred deep learning
+research platforms built to provide
+maximum flexibility and speed
+talking about its application pie torch
+is famous for providing two of the most
+high level features first one is tensor
+competitions with strong GPU
+acceleration support and building deep
+neural networks on a tape-based
+autograph system eighth on the list we
+have beautiful soup beautiful soup is
+the next python library for data science
+this is another popular python Library
+most commonly known for web crawling and
+data scraping users can collect data
+that's available on some website without
+a proper CSV or API and beautiful soup
+can also help them scrape it and arrange
+it into required format now beautiful
+soup is widely used in web scraping
+applications and is considered as one of
+the most popular and Powerful web
+scraping tool available in Python
+ecosystem next on the list we have Pi
+game pie game is a set of python modules
+designed for writing video games it
+provides functionality for working with
+Graphics sound and user input as well as
+tools for handling events and timing now
+python game is built on top of the sdl
+library which provides a low level
+interface for accessing hardware and
+input devices some of the features
+provided by pi game include support for
+2D Graphics rendering including image
+loading and manipulation Sprite handling
+and drawing Primitives support for
+playing sounds and music including
+playback control and volume adjustment
+support for handling user input
+including keyboard mouse and joystick
+events pygame is often used for
+prototyping and developing small to
+medium sized games as well as for
+educational purposes its ease of use and
+flexibility makes it a popular choice
+for game development beginners and
+hobbyists and finally on the list we
+have Tiano Tiano is a python library for
+numerical computation designed for deep
+learning and machine learning
+applications it allows users to Define
+optimize and God's mathematical
+Expressions which includes
+multi-dimensional arrays the fundamental
+building blocks of many machine learning
+algorithms now talking about features
+theano is designed to efficiently
+perform numerical computations on both
+CPU and GPU which can significantly
+speed up the training and testing of
+machine learning models piano provides
+automatic differentiation functionality
+making it easy to compute gradients and
+optimize parameters while training
+machine learning models and some of its
+applications are scientific Computing
+simulation optimization and deep
+learning in addition to these top 10
+python libraries for 2023 there are many
+other helpful python libraries ones that
+deserve to be looked at if you are
+interested in learning and mastering
+data science with python head on to
+Simply learns professional certificate
+program in data science do explore the
+frequently Asked data science interview
+questions and unlock your career as a
+data scientist thank you for watching
+this video and don't forget to check
+this course link from the description
+box below till then stay safe and keep
+learning
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

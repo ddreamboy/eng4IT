@@ -1,0 +1,808 @@
+hey elon you need some help uh landing
+the starship
+yeah well uh check this out
+i was very sad to see that
+worth a try what's happening guys my
+name is nicholas renate and in this
+video
+we're going to be going through
+reinforcement learning for beginners
+and who knows along the way we might
+even help elon out let's take a deeper
+look at what we'll be going through
+so in this video we're going to be
+covering three key things so first up
+we're going to start out by
+installing the stable baselines package
+so this is going to be
+a package that makes it a whole heap
+easier
+to get started with reinforcement
+learning then what we're going to do is
+we're going to set up the open ai gym
+luna lander environment so this allows
+us to build a model that allows us to
+actually try to land a spaceship on the
+surface of the moon
+so we're actually going to try to build
+an ai model and specifically a
+reinforcement learning model
+that's able to land that spaceship
+successfully then what we're going to do
+is once we've gone and built that model
+and trained it up we're going to test it
+out and run it and you'll be able to see
+how our ai performs in real time
+let's take a look as to how this is all
+going to fit together so first up what
+we're going to be doing is we're going
+to be setting up our lunar lander
+environment and you can see on the slide
+this is a little spaceship that we're
+going to be trying to land between the
+flags
+so the main goal is that we'll have our
+landers sort of pop up onto the screen
+and the goal is to direct
+the jets on that particular lunar lander
+so that we're able to land it
+successfully within those flags so if
+our ai and our reinforcement learning
+model
+is able to do that then we've completed
+the task successfully
+so in order to do that we're going to be
+training a reinforcement learning model
+from the
+stable baselines package and we'll go
+through setting all that up
+once we've trained it then we'll unleash
+our reinforcement learning model on the
+lunar lander environment so hopefully we
+can land it between those flags
+ready to do it let's get to it alrighty
+so in order to kick off our
+reinforcement learning for beginners
+tutorial there's going to be
+four key things that we need to do so
+first up what we're going to need to do
+is
+install and import our dependencies then
+what we're going to do is test out our
+environment so specifically we're going
+to be passing through random actions to
+our environment there so if you've seen
+the reinforcement learning crash course
+video that i did again
+link will be in the description below
+you'll see how we wrote this code but as
+always
+all the code that we write in this
+particular video is going to be
+available
+in the description below via my github
+account
+so once we've tested out our environment
+what we're then going to do is build and
+train our model and this is going to be
+where we use some of the algorithms from
+stable baselines
+to actually go on ahead and train a
+reinforcement learning agent
+then last but not least we'll save and
+test it out so we'll actually be able to
+see our lunar land up model
+actually working in real time now on
+that note so our core dependencies
+are going to be stable baseline so
+stable baselines is just
+a ridiculously useful reinforcement
+learning library that has some really
+really good algorithms
+available in it so if you actually
+scroll on down go to
+stable dash baselines.read
+you'll be able to access this
+documentation but again this link will
+be in the description
+below you'll see that we've got a whole
+bunch of rl algorithms that we can work
+on so we're going to be working with
+acer but ppo2 i've had really good
+results with that and a2c
+as well the other dependency that we're
+going to be working with
+is open ai gym so this is obviously one
+of the most
+popular libraries when it comes to
+reinforcement learning environments
+and the environment that we're going to
+be working with is luna lander so you
+can see that we've got this little
+spaceship that's trying to land
+just in general but also in between
+these flags so if you land within the
+flags then you get
+more points but ideally the goal is to
+take this little purple spaceship that
+you can see here
+and get it to land successfully without
+breaking its little legs so what we're
+going to do
+is we're going to be trying to build our
+reinforcement learning agent to be able
+to solve that problem
+and we're going to approach this in a
+reasonably straightforward manner so
+we're going to leverage stable baselines
+to help us to do that
+all righty without further ado let's
+first go ahead and
+install and import our dependencies so
+i'm going to write the line of code and
+then we'll take a step back and we'll
+take a look at what we've got
+alrighty so before we go ahead and run
+that let's take a look at the code that
+we've actually written so first up we've
+got exclamation mark let's just make
+sure this is zoomed in perfect cool
+so we've got exclamation mark pip
+install
+tensorflow equals equals 1.15.0
+this is a key thing to note so if you're
+working with stable baselines you need
+to be using
+a tensorflow version which is before
+tensorflow 2.0 so ideally
+what you want to be doing is using 1.15
+so what we've got here in this line is
+we're going to install tensorflow 1.15.0
+and tensorflow gpu 1.15 and to do that
+we've written tensorflow
+equals equals 1.15.0 tensorflow
+gpu equals equals 1.15.0 so this pip
+install line is going to go on ahead and
+install both of those
+and this really just covers all bases
+whether or not you're using gpu or a
+non-gpu machine
+then the next package that we're
+installing is stable underscore baseline
+so this is going to install
+all of our algorithms that we saw on
+stable baselines
+then the next thing that we're
+installing is gym so this is open ai gym
+and we're also installing box 2d dash pi
+so this is a dependency that you're
+going to need if you're using
+the lunar lander environment so we're
+just going to install it just to make
+sure our lives
+remain easy as we're going through this
+and then i'm also passing
+user so this is going to use the user
+flag to install it for me as a user
+just avoids any administrator
+dependencies if that happens to
+occur on your machine so in this case
+we're going to hit shift enter and
+run that cell and that's going to go
+ahead and install our dependencies
+now you can see that that's run pretty
+quickly and that's because i've got
+already got it installed so we can go
+on ahead to our next step which is
+importing these dependencies so let's go
+ahead and do that
+alrighty so those are our dependencies
+now imported so what we've done is we've
+written four lines of code there
+and specifically what we've gone and
+imported is open ai gym
+and then a whole bunch of different
+dependencies from stable baselines
+so our first line of code that we've
+written is import gym
+so this is going to import open air gym
+and it's going to allow us to create a
+lunar lander
+environment that we can then apply our
+reinforcement learning models to
+then what we've gone and written is from
+stable underscore baselines
+import acer so this is importing the
+acer policy or asap
+agent that's going to allow us to train
+our reinforcement learning agent
+so think about this as a algorithm so
+similar if you've done any machine
+learning before think of this as a
+specific machine learning type of
+algorithm so in this case we could also
+sub
+out and we could use something like
+uh let's take a look we could do
+something like dqn
+ppo ddpg so think of them as different
+algorithms in this case we're going to
+be using acer but you could try
+different ones if you wanted to then the
+next line that we've written is from
+stable underscore baselines dot common
+dot vect underscore env import
+dummy vec env so this is basically a
+wrapper that goes around our open ai gym
+environment
+that allows us to create a dummy
+vectorized environment
+for stable baselines so when we're
+working with certain stable baselines
+algorithms it's expecting that our open
+ai gym
+is vectorized now in this case we're not
+going to explicitly
+vectorize our lunar lander environment
+but instead we're going to wrap it
+inside of our dummy vec
+environment you'll see that once we go
+to set that up
+and then the last dependency that we've
+imported is evaluate policy so to do
+that we've written from
+stable underscore baselines dot common
+dot evaluation
+import evaluate underscore policy and
+the evaluate policy method just makes it
+really easy to test out our model and
+see how it's performing
+so we'll use that right in step three
+where we go on ahead and test out our
+model
+all right so those are our dependencies
+done now what we're going to do is we're
+going to set up a variable that's going
+to hold the name of our environment
+and in this case our environment is
+going to be named lunalander v2 so we
+can actually just copy that
+and we're going to create a new variable
+called environment name
+create an empty string and then paste
+that in so
+this basically is just going to save us
+time from writing luna lander dash v2
+each time we want to create an
+instance of our environment now that's
+pretty much step zero done so we've gone
+and
+installed our dependencies we've also
+gone and imported a whole bunch of stuff
+and we've created our environment
+variable
+now the next step that we need to go
+through is to test out our environment
+and i've said random environment but
+really it is a standard environment
+what we're actually doing though is
+we're actually just going to go and take
+a bunch of random steps inside of that
+environment
+because if you take a look you can see
+that our lunarland is taking random
+steps here in this particular
+video on the open ai gym web page
+we're going to try to replicate that
+just to see what our environment looks
+like and how it actually operates
+so what we can do in order to do that is
+just run this cell
+which is going to use jim dot make and
+then it's going to pass through our
+lunar lander string here
+to be able to go and head and create our
+environment so if we run that cell
+that's created our environment now what
+we can actually do is we can actually go
+on ahead
+and run this block of code so what it's
+going to do is
+it's going to attempt to land our lunar
+lander three times so we've gone and set
+up
+episodes equals three and this basically
+means that we're going to try it three
+times to try to land it successfully
+we're initially going to reset our
+environment set done and score to
+false and zero respectively so this is
+just resetting variables
+and then what it's going to try to do is
+actually go on ahead and land it and
+specifically
+we're only just going to take random
+steps so there's no logic
+or reasoning behind how it's going to
+land it's just going to take random
+steps so you see that it won't actually
+perform that well
+when we go and run this code now ideally
+what should happen is once we finish
+training our model and we go and apply
+it in a similar way
+we'll actually be able to land our
+lander more appropriately when it comes
+to doing that
+so let's go ahead and run this and see
+how it actually looks like so i'm going
+to set it
+episodes back to 10 so this is going to
+give us a little time
+to actually see the pop-up um appear at
+the bottom of our screen
+so when you run this you'll get a little
+python pop-up and this is actually going
+to be the screen that we're able to see
+our environment in so if i run this you
+can see we've got that little pop-up
+you can see our lunar lander right now
+it's nowhere near landing so
+if so ideally our goal is to either land
+it anywhere
+ideally we want to land it between these
+flags and our model will learn to do
+that
+but right now it's not even getting
+close right it's crashing each and every
+single time
+and our score isn't getting anywhere
+into the positive numbers
+so those are our goals right so we want
+to be able to land our lander
+ideally get it between the two flags and
+that should mean that our score
+is no longer in the negatives but we're
+now in the positive values
+so now that that's done and we've tested
+out our code that's step
+one done or this particular step done
+the next thing that we want to go ahead
+and do is actually build and train our
+model
+so let's go ahead and write that code
+then we'll take a step back and see what
+we've written
+all righty so we've gone and written
+three lines of code there and the nice
+thing about stable bass lines is that it
+makes it reasonably simple to get up and
+running
+so this particular step you could really
+skip this testing out of your
+environment but it's a good idea to
+understand how the environment actually
+operates
+these three lines here actually create
+our environment set up our model
+and really if we wanted to there's one
+additional line which we'll do in a sec
+which is going to go on ahead and kick
+off our training
+to be able to train our reinforcement
+learning algorithm so let's take a quick
+step
+back and see what we've written here so
+first up we've written env
+equals gym dot make and then we'll pass
+you our environment name which we had up
+here
+then as i said what we did is we're
+going to wrap our environment inside of
+this dummy vec
+environment and our dummy vec
+environment is actually
+expecting an environment generator as
+its input so what we've done rather than
+writing a full-blown function
+we've just wrote lambda and then we're
+creating a new environment each time we
+loop through that
+so ideally what you're going to get out
+of this is a number of environments
+generated in this case it's just going
+to be one because we're only passing it
+through once
+and then we're effectively going to
+reset our environment variable equal to
+e
+and v then what we're doing is we're
+creating a new instance
+of our asa algorithm and remember this
+is the algorithm that we imported up
+here
+and if you wanted to you could swap this
+out for any one of these algorithms that
+you see there
+so again play around with them you're
+going to probably get differing results
+and differing
+training times depending on which
+algorithm you use but in this case we're
+going to be using acer which you can see
+here
+then to that algorithm we've gone and
+passed three key
+variables so specifically two arguments
+and one keyword argument
+so to do that we've written model equals
+acer
+and this is our algorithm that we
+brought in up here
+and then we're passing through the
+policy so think of this as the neural
+network
+that sits behind this algorithm in this
+case we're using a
+multi-layer perceptron policy i believe
+that's what it stands for
+but you could just as easily use a cnn
+policy which is going to work with
+image-based environments you could also
+use an lstm based policy which is going
+to give you a recurrent neural network
+which is particularly good if you've got
+sort of time series based environments
+or environments that rely
+on previous states to that we're then
+also passing our environment which we
+created over here
+and we're setting verbose equal to one
+because this is going to give us a whole
+bunch of additional information
+when we kick off our training run so
+basically in a nutshell
+creating our environment wrapping it
+inside our dummy vec environment
+then setting up our model initially so
+the next thing that we need to do is
+actually go on ahead and
+kick off our training so let's go ahead
+and write that line of code
+and we'll see what it looks like
+so that's really the last line of code
+that we need to write to be able to
+build
+and train a model so to do that what
+we've written is model
+dot learn so this is akin to a fit
+method and what it's effectively going
+to go on ahead and do
+is kick off that training run now to
+that we've passed through
+one keyword argument which is total
+underscore time
+steps and then to that we've passed
+through a hundred thousand
+so this basically means that our
+reinforcement learning model is going to
+go on ahead and try to train
+for a hundred thousand different steps
+using our lunar lander model
+so what we can now go ahead and do is
+run that cell and it's going to kick off
+our training
+run now if you wanted to you could train
+for a shorter amount of time or train
+for a longer amount of time
+but ideally what we want out of our
+model is as high possible
+explained variance which we'll see in a
+sec and as high a possible
+mean episode reward so let's go ahead
+and kick this off
+i'll show you what the results look like
+initially and then we'll let it run and
+we'll be right back
+all right so that's our model kicked off
+so you can see here that as
+our model runs we get these little bits
+of information and this is because we
+set verbose equals to one up here
+now as i was saying what we want out of
+this is as higher possible explained
+variance
+and as high of possible mean episode
+reward so right now
+i explained variance is not that great
+so we've got
+in the zero 0.000 399
+and mean episode reward is currently
+zero so ideally we want our mean episode
+reward to be in the positive numbers and
+not negatives
+and explain variance to be as high as
+possible so ideally
+uh the closer to the number one we get
+the better it's going to be
+so let's go on ahead and let that run
+and we'll be right back
+alrighty so in the end what i ended up
+doing is pausing the training a little
+bit earlier as we're already getting
+reasonably good performance so ideally
+what you want to do
+is once your model starts performing
+reasonably well you don't want to
+over train it because sometimes what
+that will mean is that your model starts
+performing
+more poorly and starts to overfit the
+particular environment
+so in the end what we did is we got our
+explained variance to
+0.831 which is pretty good and we also
+got our main
+episode reward to a 122.
+so this should ideally mean that we're
+able to successfully
+land our lunar rover pretty accurately
+so
+the next thing that we actually want to
+go and do now that we've gone and
+trained our model
+is we actually want to go on ahead and
+test it out and this is where the
+evaluate policy method comes in so what
+we're now going to go ahead and do is go
+on ahead and test out our
+evaluate policy method so the other
+thing also to note when you're running
+model.learn is you can also
+run a callback so this will allow you to
+go on ahead and automatically pause your
+training
+once you sort of get to the optimal
+level if you'd like to see a video on
+that by all means
+leave a mention in the comments below
+and i'll get to it
+so the next thing that we're going to do
+is now run evaluate policies so let's go
+ahead and write that loan
+code and see how model is actually
+performing
+okay so before we run that let's take a
+look at our code as usual so what we've
+gone and written is
+evaluate underscore policies so this is
+using
+our evaluate policy method that we
+brought in up here in our imports
+and then to that we're passing through
+two arguments and
+true keyword arguments so specifically
+we're passing through our model
+our environment which we defined earlier
+we're then defining
+how many evaluation episodes we want to
+run through so that this is how many
+chances
+we want to give our model to be able to
+prove its performance in this case we're
+setting that to 10
+and we're specifying render equals true
+because we want to visualize our
+performance and our results
+so what we should effectively see is our
+ai or our reinforcement learning model
+trying to land our lunar lander and then
+we're running env.close to be able to
+close it off so let's go ahead and run
+this line of code and let's see our
+performance
+so again we should get the little pop-up
+down below and you can see our model is
+attempting to land outlander
+they go so it's landed successfully and
+you can see it's now
+more accurately adjusting each one of
+those boosters to be able to go on ahead
+and land our lander between the flag so
+that's two successful landings now so
+as you can see it's performing pretty
+well even though we didn't hit the
+elusive 0.99 explained variance and
+ridiculously high accuracy or
+ridiculously high
+mean episode reward you can see that
+we're still getting there in this case
+it's trying to push the booster
+to try to get it between the flags but
+in this case it's performing a lot
+better
+once it's adjusting while it's still in
+the sky so you can see this one's
+obviously performing really well it's
+getting quite close
+come on yes all right elon come on you
+got to come and hire us now
+okay
+pretty cool right so performing
+reasonably well
+not quite falcon heavy but we're getting
+there right
+and so again we've done this on luna
+lander but you could try this out
+obviously we had a last minute crash
+landing there but you can see that
+obviously our reinforcement learning
+model was performing a lot better than
+what we had
+when we were just going and running our
+random environment up here
+so now that that's all done the next
+thing that we want to do is go on ahead
+and
+save our model so again this is all part
+of a good data science workflow you want
+to be able to
+reload your model and try it out
+particularly if you wanted to go and
+deploy this into production later on
+so let's go ahead and save our model so
+to do that we can just write model dot
+save and then in this case just name it
+whatever you'd like so we'll call it
+acer
+underscore model if we now go into the
+same folder as our jupyter notebook you
+can see that it has in fact saved so
+this is our acer model here
+we can now delete our model if we try
+running our model you can see it's not
+going to work
+and then we can reload it so again this
+is all to do with being able to reuse
+your model later on
+so to do that we can just type in
+model.load
+and then copy this
+and we also need to pass through our
+environment when we're reloading it
+sorry acer.load so again it's our
+algorithm that we're going to use
+dot load and then the name of the model
+that we say so to be able to save it
+it's model.save
+to reload name of the algorithm.load so
+in this case
+this should reload our model which again
+we've now reloaded we'll just throw it
+inside of a variable called model
+equals and now we can actually start
+testing this out again
+so rather than using evaluate policy
+this time i'm going to write out a
+little bit of a flow which sort of
+closely mimics this
+and really ideally mimics how you might
+put this into production particularly if
+you got sensors on a particular
+environment
+so let's go ahead and write this and see
+how a model performs there
+okay so that's our last bit of code
+done now before we go ahead and run that
+let's take a look at what we've written
+so first up what we've gone and done is
+we've gone and reset our environment so
+whenever we're going out and testing our
+new code or
+testing out our rl model we want to
+reset our environment back to its base
+state
+and this is exactly what this line is
+doing here then what we're doing is out
+of that base state was capturing those
+observations
+inside of a variable called obs and so
+the full line is
+obs equals env dot reset
+and then we're going through and kicking
+off a loop so this basically just going
+to keep
+running different instances of our lunar
+lander environment
+multiple times so we'll actually have to
+force stop this if we want it to stop
+running
+so written while true and then with a
+colon and then what we're doing
+is we're using a model that we've
+trained up here and we're using the
+predict method
+to go and generate an action based on
+the observations
+from our environment space so think
+about this as
+our model receiving the inputs from our
+lunar lander environment
+then trying to predict what the best
+action should be
+to be able to land our rover
+successfully and out of that what we're
+going to get
+is the most appropriate type of action
+and the current state of our model so
+what we're then going to go ahead and do
+is apply that action to our environment
+which you can see there
+based on env dot step so we're going to
+our environment we're taking a step
+using the action that our model has just
+predicted and out of that we're going to
+get new observations
+rewards whether or not our particular
+episode is done
+and any additional info and then we're
+going to render the current frame so
+this will allow us to see
+how model is performing in real time so
+let's go ahead and run this and then
+eventually we'll have to kill it off to
+stop it running and we can then close it
+so
+again it should look pretty similar to
+our evaluate policy except this time
+it's just going to keep running so let's
+kick it off
+and again to open up our window and it's
+going to try to land our lander
+and again working pretty successfully
+you can see that it's landed and it's
+just going to restart so this is just a
+slightly different way
+to go on ahead and kick off your code
+again that's another successful landing
+again it's looking like it's performing
+reasonably well now
+all right and we'll stop that there and
+if we wanted to you can see that our
+little icon is still open so to close
+that we can just type in env.close
+and that will close the little pop up
+there so that you can then go on ahead
+and kick off
+evaluate policy or that whole loop all
+over again
+and that about wraps it up so what we've
+now gone and done is we've gone and
+installed and imported our dependency
+we've gone and tested out our random
+environment
+and again all this code is going to be
+available inside of the description
+below just check that out you'll be able
+to grab it
+so on step two we built and trained our
+model and really these four core lines
+were the core components to actually
+going ahead
+build our environment and train our
+reinforcement learning model
+we then went and saved and tested it out
+and we tested it using
+the evaluate policy method and we also
+wrote our own custom code to go on ahead
+and test it out
+and that about wraps it up thanks so
+much for tuning in guys hopefully you
+found this video useful if you did be
+sure to give it a thumbs up hit
+subscribe and tick that bell for more
+awesome reinforcement learning content
+and let me know how you went about
+building your own reinforcement learning
+model
+thanks again for tuning in peace

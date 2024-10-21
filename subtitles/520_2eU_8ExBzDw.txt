@@ -1,0 +1,310 @@
+hi there I am inside of a Jupiter
+notebook and I'm once again going to be
+using my trusty little widget to draw me
+a data set that I will use what I'm
+drawing here is a classification data
+set but there's going to be a Twist what
+you see here are two circles one inside
+the other and the goal is to separate
+the orange dots from the blue ones and
+when you look at this your initial
+thinking might be well that's relatively
+easy and you wouldn't be wrong many
+algorithms inside a s could learn would
+totally be able to handle something like
+this but what I'm going to do now is I'm
+going to make a small change to this
+classification problem that suddenly
+will make it a whole lot harder for a
+whole lot of algorithms including the
+gradient boosting algorithms the point
+of this video is partially to emphasize
+that even though gradient boosting
+algorithms are great they can't be
+shoehorned into every problem out there
+but there are also many other subm
+modules of psyched learn that could also
+be worth exploring that can deal with a
+situation that I'm about to create for
+this data set and here's the change that
+I'll be making what you're looking at
+here is exactly the same data set that I
+just drew we've got the outside Circle
+and we've got the inside Circle and the
+outside Circle has blue points and the
+inside Circle has orange ones the big
+difference now though is that I'm taking
+a very small subset so only a few blue
+dots and only a few orange ones are
+going to be in here with this change you
+could Wonder well how well can we expect
+our class classification approaches to
+still work it's an interesting thought
+experiment and feel free to pause the
+video to think about that because the
+answer might surprise you
+initially so let's start by giving the
+histogram gradient boosted classifier a
+spin I using this algorithm in the Cell
+Block below here to fit me a good data
+set and when I scroll down you can see
+the predictive results when this is the
+input to the algorithm then this is the
+prediction that the histogram boost of
+class classifier will make and you'll
+immediately notice everything is blue
+and that'll be the case even if I were
+to rerun this no matter how often it
+always seems that only one color comes
+out over here and you might start to
+wonder why that is we can introduce a
+small change by maybe sampling some more
+points but still it seems that the
+default settings of the boosted
+algorithm doesn't really do what we want
+it to and the reason for this is pretty
+subtle but you can get a small Hint by
+just inspecting the settings notice that
+there is this Min samples Leaf setting
+over here uh let's copy that and let's
+turn that down maybe to something like
+five when we do this then we do see that
+something indeed is happening now the
+reason why this makes such a difference
+is because the default setting of the
+gradient boosted classifier actually
+assumes that a big data set is going in
+not some somewhat artificially small
+data set like what I've got down below
+here here and if there's a setting like
+this around with the default of 20 where
+we're saying well don't make another
+Leaf unless there are more data points
+than 20 well then it shouldn't be that
+much of a surprise that we only get one
+class out it is just going to take the
+majority class now alternatively if I
+set the number of samples back to 10 I
+could also choose to go for another
+algorithm maybe the K neighbors
+classifier could do some good here and
+just from eyeballing it does certainly
+seem like it is uh doing something
+better just from the get-go but also
+here we have to mind the some of the
+settings right now it's looking at the
+nearest five neighbors and for this data
+set you could maybe Wonder maybe two is
+better I could even tune it down to
+one but all in all also for this use
+case the results just don't look great
+now one logical response here would be
+to say well this is really not a whole
+lot of data and most of the
+classification algorithms may just need
+a lot more because in the end
+they do assume there's a big data set to
+learn from and especially in this case
+one thing that you really see happen
+here is that we are just overfitting on
+the nearest neighbor and we're not
+really paying any attention to the
+structure of the underlying data simply
+because that's not what the algorithm is
+meant to do but there are algorithms
+that actually do precisely this the main
+idea here is to rethink the problem by
+saying that this is perhaps not a
+supervised machine learning problem but
+maybe this is a semi super vised machine
+learning problem and maybe something
+like label propagation would work a lot
+better here in a moment I will show what
+label propagation would do to this data
+set but I figured it wouldn't hurt to
+maybe explain some of the intuition
+behind it first let's pretend that we
+just have a data set with these six
+points then one thing I could do is I
+could consider that maybe the structure
+of the data set even when there's no
+labels could be approximated by
+considering nearest Neighbors
+so the data point to the center over
+here these would be the closest
+neighbors as far as that one entry point
+is
+concerned I could do that for this one
+point but I could also do it for some of
+the other points so let's also do it for
+this
+one and let's also do it for this
+one and I could keep drawing and drawing
+and drawing but hopefully one thing that
+you recognize here is that I will be
+constructing a graph of sorts one that's
+kind of directional if I'm at a point
+there are three places that I can jump
+to and if you've taken a course in
+probability Theory this may sound like a
+mark of chain of sorts if I were to
+describe this mathematically and if I
+were to give a name to every single
+point over here then one way of looking
+at it is to say that we've got some sort
+of a transition Matrix where if I have
+all of these points listed over here
+then I can start filling in some
+probabilities if I start over at Point a
+that would be this point
+then there's a third chance that I might
+jump to point D or to point B or to
+point C I could do the same thing for
+point B etc etc etc and what I'm going
+to do now is I'm going to give this big
+Matrix a name t t for transition so to
+say so let's now consider a larger data
+set and again for this large data set
+I'm able to construct some sort of graph
+with
+neighbors and this would again result in
+some sort of a transition Matrix T but
+the interesting thing about this uh
+transition Matrix is that you can at
+some point get chunks that are separate
+suppose that I were a frog and I was
+jumping around randomly and I would
+start over here only jumping over the
+edges that exist then there would simply
+be no way for me to get over here
+because there's no Arc going from one
+set to another one and hopefully you can
+also see how that might encode something
+about the data when the data has very
+clear clusters so let's now consider
+what might happen if there's also labels
+around so let's pretend that I've got a
+green label just for this one point over
+here and let's say I've got a red label
+just for this point over here well then
+one thing I could do is I could come up
+with some sort of input array X that
+indicates where the green points are
+there would be a bunch of zeros but
+let's say that there's a one which
+indicates where this Green Dot with the
+label is
+well then what I could do is I could
+multiply that with my big Matrix T and
+out of this would come a new array where
+there would be a third at a few
+places and a bunch of zeros elsewhere
+which again kind of represent a jump to
+uh the neighbors so to say but you could
+Wonder well why stop there I could also
+multiply by this transition Matrix let's
+say n times then I would get a different
+array coming out this array would be a
+lot more flat if n is big enough we
+should at some point mimic some sort of
+longterm probability assuming that this
+was like a jumping frog but then this
+array will represent the probability
+where the Frog will be anywhere on this
+graph and where would that be well there
+will be a uniform Distribution on this
+Outer Circle over here and hopefully you
+recognize that the same argument would
+also hold for this red Point by
+resembling this point as an array by
+multiplying it with this transition
+Matrix T we end up with a probability
+distribution of sorts that will
+represent uniform distribution over all
+the points within this one cluster over
+here I suppose I could also put this in
+more layman's terms you could also just
+look at this as a graph where all the
+stuff that's close to the original Green
+Label will just start turning green as
+well and from there on it just kind of
+starts to
+spread same thing with this red
+point it's just that from a a math
+perspective there are also very
+convenient properties about being able
+to translate this into a matrix that
+behaves like a marov chain there are
+also all sorts of details that I could
+go into with this algorithm but the main
+thing that I hope that you appreciate is
+that the way that we're going about
+spreading the labels is related to the
+structure of the graph the points are in
+initially and that is also why this kind
+of approach is usually called
+semisupervised a lot of the learning
+happens in an unsupervised Way With No
+Label whatsoever but from that we gain
+some knowledge and that allows us to
+just be able to apply our label
+hopefully more effectively and
+especially in uh low label kinds of
+scenarios stuff like this can really be
+informative so given that intuition of
+how label propagation Works let's now
+make a comparison this is the result
+using K nearest neighbors and if I were
+to scroll down now then you see the
+results using label propagation and you
+can see in this case it is a near
+perfect classification entirely as what
+you might expect and again the reason
+why this works is because we have these
+two sets of data points that will never
+have an arc going between them when you
+only have a few nearest Neighbors when
+you are really just looking at the
+nearest three or five neighbors let's
+say the odds of there ever being an arc
+that jumps from the inner circle to the
+Outer Circle is pretty much zero in this
+data set the label propagation call that
+I'm using here uses K nearest neighbors
+under the hood to construct the graph
+that I mentioned earlier but I suppose
+one final demo that will be good to show
+is to also show what might happen if I
+change this data set just
+slightly so I'm just going to draw some
+extra parts like so kind of turn this
+into a steering wheel of sorts and let's
+see what happens when this is the new
+data set that I'm interested in and now
+you can see that the results are
+actually fairly different and the simple
+reason is we now no longer have two
+circles that don't touch because the
+circles now touch each other there's
+also more doubt in the entire system
+sampling a blue dot over here close to
+the inner orange circle might actually
+cause the label propagation to believe
+that there's a lot of blue that should
+be here so even though label propagation
+as an idea is definitely pretty neat it
+should also not be seen as a silver
+bullet it can be helpful in situations
+where you've got not a whole lot of
+label data but a lot of data that does
+have internal structure but once you are
+dealing with data where there might be
+clusters internally but they do touch a
+lot then you are just going to have to
+accept that you'll need more labels and
+once you've got more labels then maybe
+label propagation isn't what you need
+anymore given a lot of labels then the
+classical machine learning approaches
+like the classification algorithms would
+also be a bunch better

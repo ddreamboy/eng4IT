@@ -1,0 +1,83 @@
+looking to the past to predict the
+future
+[Music]
+predictive modeling the core function in
+predictive analytics applications
+is a mathematical process that aims to
+predict future events or outcomes
+based on past behavior it does so by
+analyzing data to identify patterns that
+can be used to forecast what is likely
+to happen in the future
+the predictive modeling process begins
+once a set of current or historical data
+is collected for analysis
+then data scientists or analysts create
+algorithms in statistical models
+train them with subsets of the data and
+run them against the full data set to
+generate the predictive model
+in many cases multiple models are used
+at once to create
+one prediction while the terms
+predictive modeling and predictive
+analytics are sometimes used
+interchangeably
+modeling can be seen instead as the
+hands-on part of analytics applications
+which you can learn more about here or
+in the description below
+there are many different modeling
+methods and algorithms some popular ones
+include decision trees time series
+analysis neural networks
+linear regression and logistic
+regression
+predictive modeling is popularly
+associated with meteorology and weather
+forecasting
+but has many business applications as
+well online advertising and marketing is
+one of the most common uses
+analysts take user data like what you
+click on what you buy
+and how long you view something and run
+it through algorithms to determine what
+kind of products you're likely to click
+on and purchase in the future
+predictive modeling is also used in spam
+filters fraud detection
+crm capacity planning change management
+disaster recovery engineering medical
+diagnosis
+and security management to name a few
+while predictive modeling can aid in
+business decision making
+processes it must be used correctly some
+considerations for effective predictive
+modeling include
+acquiring sorting cleansing and
+preparing enough data for analysis
+which is often said to take about 80
+percent of the process
+being careful not to over fit or over
+test models
+which can cause a model to just memorize
+points in a data set
+rather than generalized outcomes
+planning for technical and
+organizational barriers
+like accessing useful data in
+decentralized systems
+and making sure predictive modeling
+projects address real business
+challenges
+keeping in mind that statistical
+significance does not always equal
+business insight what other applications
+are there for predictive modeling
+how has your organization benefited from
+it share your thoughts in the comments
+and be sure to hit that like button
+[Music]
+you

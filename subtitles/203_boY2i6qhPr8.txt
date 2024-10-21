@@ -1,0 +1,257 @@
+hi guys welcome to an other video by
+simply learn today we are going to see
+the different types of cloud computing
+service models so let's get started
+what's in it for you first we are gonna
+see what is cloud computing then the
+different types of service models and
+then we are going to see the key
+features pros and cons of each then we
+are going to see the top companies
+providing these service models and
+finally the end users of these service
+models what is cloud computing before we
+go into cloud computing what does the
+term cloud mean cloud refers to a
+network or Internet it provides services
+over public and private networks so many
+applications execute on the cloud and
+also it is present at a very remote
+location so the users can access these
+files and applications that is present
+on the cloud from any device unless and
+until it has strong internet
+connectivity now let's look at few of
+the cloud computing benefits the first
+is cloud computing you reduces cost so
+it is a pay-as-you-go pricing and you
+pay for what service you use next cloud
+backs up and restores huge amounts of
+data so let's take an example
+we knew that iPhone uses iCloud for
+backup if in case the phone crashes all
+the backed up data can be restored cloud
+computing is highly reliable and this is
+one of the biggest advantages you can
+always get instant updates about the
+changes cloud based applications
+automatically refresh and update
+themselves this saves valuable IT staff
+time and money spent on updating and
+refreshing the applications like I've
+said before cloud computing has
+unlimited storage capacity at any time
+you can expand your storage capacity
+with very nominal monthly fees now that
+we know what cloud computing is let's
+look at the types of cloud computing
+service models for a better
+understanding let's consider a scenario
+consider making lasagna you have four
+options you can either bake it at home
+or you can go to a restaurant to eat
+lasagna or walk into an event and bake
+or get it delivered to your door
+step but how is this related to cloud
+computing well let's take a look we have
+four boxes we have the traditional
+method we have the infrastructure as a
+service we have platform as a service
+and we have software as a service in the
+traditional method everything is made at
+home and all the components are managed
+by us that is kitchen electricity
+microwave lasagna sheets then toppings
+meat and cooking the lasagna but when it
+comes to infrastructure service the main
+kitchen appliances are managed by the
+vendor and the other things are managed
+by us so basically the infrastructure is
+managed by the vendor when we look at
+platform and service the infrastructure
+and the main ingredient for the software
+is managed by the vendor and the other
+things are managed by us but when we
+look at software as a service everything
+from the infrastructure till the end
+product is managed by the window now
+let's get into brief of all this when we
+look at the traditional method
+everything is done from scratch from
+choosing the right ingredients to the
+mode of preparation and have the full
+control of the toppings this is similar
+to traditional method where all the
+hardware software components are built
+by a choice of requirements when you
+look at infrastructure as a service we
+can say kitchen electricity and
+microwave is the infrastructure and this
+is where the code runs the next step is
+to alter the software as per our
+requirements when you look at platform
+as a service it's similar to going to
+event and baking so you have the main
+ingredient there is a lasagna sheet and
+then you have all the appliances that is
+kitchen electricity and microwave and
+the rest is managed by us you can add
+the put toppings or you don't want to
+put meat or you wanted to be veg it's
+all up to us so the components are
+altered as per our requirements
+finally in software service the entire
+thing is modeled by the vendor so this
+is where you just given your
+requirements and you get the software
+delivered to you it's basically where
+the deployment and framework of the
+project is already set now that we have
+a brief of all these services let's dive
+deep into each one of them first we have
+infrastructure as a service
+infrastructure cloud provider gives a
+variety of infrastructures such as tour
+aged services network hardware and so on
+it
+so maintains and supports these
+infrastructures customers can access
+these resources over the Internet next
+let's look at the benefits of
+infrastructure as a service so the first
+feature is that these resources can
+easily be scaled up and down next the
+cost depends on the consumption so
+basically it's a pay-as-you-go pricing
+and you pay for what you use you pay for
+the services you use a single piece of
+server can give out a lot of information
+to many users and finally the client has
+complete control over the architecture
+now let's look at the pros of
+infrastructure as a service model
+firstly it is highly flexible this is
+because only the infrastructure is
+provided and the rest depends on the
+customer requirements next like I said
+before it is cost effective and you pay
+for what you use it is easy to use as
+all the updates are deployed and all the
+hardware is deployed automatically
+management tasks are wash alized so that
+the other employees have time for other
+tasks now let's look at few of its call
+it is a multi-tenant architecture due to
+this there is an issue with data
+security when a new infrastructure is
+introduced team training is required to
+learn all about this new infrastructure
+and it consumes a lot of time if in case
+the so crashes at the vendor side the
+customers cannot access the data for a
+while and they would have to wait for
+quite a lot of time until the window
+fixes this issue now that we know what
+infrastructure as a service is let's
+look at platform as a service platform
+as a service cloud computing platform is
+a developer programming platform which
+is used for the programmers to develop
+test and run and manage the applications
+a developer drives the applications and
+deploys it directly into this layer all
+the infrastructure to run the
+applications will be over the Internet
+let's look at the benefits now firstly
+the resources can be scaled up and down
+based on the requirements of the user
+multiple users can access the same
+application it allows for testing and
+hosting apps in the same environment the
+web services and databases and servers
+are integrated into one and finally the
+teams can collaborate very easily next
+let's look at the pros of paas firstly
+the development process
+is quick and easy as it is a developer
+programming platform it is
+cost-efficient you only pay for those
+services you use when you use
+platform-as-a-service the coding is done
+by the developer before so less coding
+is required and then the migration to
+hybrid cloud is very easy
+next let's look at few of the cons of
+platform-as-a-service similar to IAS
+data security is an issue because it has
+a multi-tenant architecture there is a
+compatibility issue with the existing
+infrastructure pass is dependent on the
+window speed reliability and support now
+that we know about platform as-a-service
+let's go ahead and dive deep into
+software as a service and software as a
+service everything is done by the
+vendors the end-users are only
+responsible to give their requirements
+and everything is done by the providers
+now let's go ahead and look at its
+benefits the installations and updations
+are done by the providers resources are
+scaled up and down based on requirements
+of the users the only requirement is
+that there has to be a strong network
+connectivity and finally the provider is
+responsible for everything now let's go
+ahead and look at the pros of SAS
+upgrades are automatic firstly then next
+it is again a pay-as-you-go model it is
+easier to customize in SAS rather than
+the other service models it is
+accessible from any location the only
+constraint is that you need to have a
+strong internet connectivity let's see
+the cons of SAS the provider has an try
+or control the end users only have the
+control of giving the requirements there
+are only few solutions for software
+crashes the devices should always be
+connected for better performance now
+that we've seen all the three models
+let's see few of the companies providing
+these service models the famous is
+providers are Amazon Web Services
+Rackspace digital ocean Linode and
+Microsoft Azure these are only a few
+there are many more apart from these
+Amazon offers many features such as auto
+scaling cloud monitoring and load
+balancing features when Castro Rackspace
+the cloud computing platform window
+focuses family on enterprise level
+hosting services when you look at famous
+fast provider
+you have Hiroko Apache Stratus openshift
+Microsoft Azure and many other providers
+going ahead in SAS providers the most
+important one is Google Apps then the
+Salesforce there is cisco webex this
+Dropbox and many more finally let's look
+at the end users of the cloud computing
+service models we can picture this as a
+pyramid so in IAS the end users a system
+admins who are responsible for
+maintaining everything except the
+infrastructure then in pass the end
+users of the developers who code on the
+platform provided by the vendors in SAS
+the end users are the customers who give
+only the requirements and the software
+is built based on those requirements by
+the windows thank you for watching I
+hope you found this informative and stay
+tuned for more from simply learn hi
+there if you liked this video subscribe
+to the simple learn YouTube channel and
+click here to watch similar videos to
+nerd up and get certified click here

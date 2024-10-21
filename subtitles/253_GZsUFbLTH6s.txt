@@ -1,0 +1,146 @@
+hi everyone
+this is going to be a very short and
+focused video on four types of cloud
+deployment model
+along with some of their variants
+let's start with discussing the basic
+and the most famous cloud deployment
+model which is public cloud
+please note that
+the diagram used here is a repeat of
+what was shown in the previous video of
+this very series which was titled
+introduction to cloud computing
+the intent of that video was to
+introduce cloud computing to you
+with the help of
+how a public cloud looks like
+here i have explained it in terms of
+deployment model
+so
+in this model the infrastructure is
+hosted at cloud service providers
+physical boundaries and can be made
+available to or basically can be shared
+by
+multiple individuals and organizations
+and hence promotes multi-tenancy
+servers here are shared
+this model is more cost effective one
+this was a very initial model that was
+used and
+it hugely became popular
+but for large organizations who had
+certain data security
+data privacy jurisdiction and other
+regulatory requirements it still didn't
+solve their problems
+now
+let's move on to discussing private
+cloud which solve this problem for large
+organizations
+private cloud is one where an
+infrastructure is operated exclusively
+for an organization and is not shared
+with any other organization
+there can be variance to this
+first variant is
+when the servers or machines or
+infrastructure is hosted within the
+physical boundaries of an organization
+for which the cloud is being set up
+this is typically the organization's
+data center
+here a particular data center or a part
+of a data center that organization owns
+can be dedicated for cloud
+this variant is popularly known as
+on-premise or simply on-prem
+the next variant to this is where the
+infrastructure which is to be
+exclusively hosted and operated for an
+organization is hosted on cloud service
+providers physical boundaries
+this is known as off-premise
+only one organization will have access
+to this even though it is on
+not on their data center
+and finally in terms of who operates
+both these type of setups it can be the
+organization or the cloud service
+provider
+which could be another two variants
+private cloud did solve the problem of
+data security and compliance but it
+didn't fully utilize the benefits that
+that cloud provides
+hence came hybrid cloud which is now the
+most popular one amongst large
+organization and is also the way forward
+simply put a hybrid cloud is a
+combination of at least one public cloud
+and at least one private cloud
+here
+private cloud can be on-premise or
+off-premise
+what's shown in the diagram is a hybrid
+cloud that uses a combination of an
+on-premise private cloud
+and a public cloud
+so how best can this model work for
+large organizations
+well
+the best way is to use on-premise
+private cloud to keep applications and
+data that is core to the business of the
+organization and which has specific
+regulatory requirements
+on the other hand
+applications that are not closer to core
+business and are genetic in nature are
+good candidates for being hosted at
+public cloud
+next and final type of deployment model
+is community cloud
+this is a relatively newer
+and an interesting model
+here
+organizations with common requirements
+and interests share a cloud
+infrastructure
+in terms of hosting and managing this
+cloud there could be various
+combinations it can be hosted or managed
+by one organization combination of
+organizations or by cloud service
+provider itself
+considering the requirements and use
+cases
+an example of where this type of model
+can work
+and this is just a thought
+is kyc
+kyc is performed by banks during
+onboarding of a customer as well as
+periodically
+there is a lot of duplicated efforts and
+costs that take place during this
+process
+a community cloud can be ideal place in
+future to share such information across
+banks
+another example is various government
+agencies and bodies
+using this type of model to share data
+for better governance
+in terms of costs this model sits
+somewhere between a public cloud and a
+private cloud setup
+so that's all we have for today if you
+liked the video and had a good learning
+experience then do check out our other
+videos do like and share
+also subscribe the channel for latest
+videos and trends in the world of
+architecture
+see you in the next video

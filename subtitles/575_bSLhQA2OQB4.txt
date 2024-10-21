@@ -1,0 +1,1422 @@
+[Music]
+[Music]
+so let's just uh dive right into it
+because in some sense uh my talks
+already been introduced uh previously
+so you've already heard this term
+ubiquitous Computing ubic comp and I I
+want to just fill in some details from
+what you heard earlier so uh yes this is
+another picture of Mark Weiser and yes
+this is the article that you've already
+been told you should read um or if you
+want to know about it and the thing was
+is that I was part of this team and and
+and and fairly involved in this project
+and I I want to go into a little bit
+more detail by way of background because
+it's um it's not trivial uh and there's
+some interesting things that happen here
+so I want to try and get two key words
+and Concepts out about what ous
+Computing is about and it's it's about
+basically how do you make things
+transparent how do you make computation
+or the benefits of computation which is
+a much better way to say it how do you
+make the benefits of
+computation available everywhere where
+it's
+relevant while keeping it transparent to
+the user and so it's sort of like this
+thing where I have to cross this water
+from this uh Shore to the other Shore
+and how do I get there in a way that's
+uh makes sense now in the old days you
+just swam but there's sharks in the
+water and you you you run the risk of
+getting um eaten so you introduce some
+technology and so the engineering
+approach is you build a motorboat that
+pollutes and so on so forth and it costs
+a bunch of money and uh you go across
+that way in some sense the purpose of
+ubiquitous
+computing in this metaphor would be that
+you build a
+bridge hence you get around from Island
+to island or from Shore to Shore exactly
+the same way you get around on any one
+of those Shores that is you use the same
+skills you've used through a lifetime of
+living in the everyday world you walk
+now it's not that you can't see the
+bridge the bridge is there and that's
+part of the Aesthetics of design as well
+as the functionality of design so you
+walk across the bridge so it's not that
+you can't see the bridge transparency of
+technology is sort of like this the
+dining room table because it belongs in
+the dining room is transparent to your
+functioning in the household however
+that very same dining room if you put it
+in the toilet not in the toilet but in
+the bathroom would be out of place
+likewise if you put the toilet and
+removed it from the bathroom and put it
+into the dining room or the kitchen that
+would sort of be noticed and and so it's
+not about it being invisible it's just
+being appropriately placed in a way that
+integrates into the workspace now what
+we did at Park is we started to do
+exactly this was already described and
+Mark's notion was that you had these
+three form factors that you worked with
+basically boards um uh slates which we
+call pads and
+tabs and we typically talked about in
+your office in your space you might have
+one or two boards you might have two to
+five slates and you might have up to
+five to multiple tens of of of tabs the
+notion was that each of these form
+factors were going to come cheaper and
+in some sense you'd have as many tabs
+around as you might have Post-it
+notes I'm going to you can see actually
+uh that's Mark at the one of the first
+generation live boards and uh and you
+can see a slate you'd think it was a
+this is photograph is from about uh 1993
+um you can see a a slate there
+everything was networked the the the the
+pads and the tabs were all um wirelessly
+networked and this is a closeup that's
+actually my hand from I did the
+Industrial design on on on the of the
+the basic specs for the uh for the tab
+um and Fitz Richardson Smith the the the
+detail design but the thing about it was
+is that there's a couple well there's a
+couple things about it that that's
+interesting that relates to what I'm
+about to talk
+about it looks like a PDA this
+photograph is some 1993 so this is 3
+years before the pal
+pilot it's one year before the Simon
+which was the world's first
+smartphone it's wireless it uses IR
+which meant it knew what room it was
+in
+and in one sense it's a wireless PDA
+that you can carry around but was
+Network to everything else in in in the
+building by the way they were absolutely
+useless the minute you left the building
+they had no light they had no internal
+apps they were actually in the jargon of
+the the day it ran X clients or sorry it
+ran X servers because a server is a
+client in today's
+Parliament you could use it had a
+resista film touchscreen so you could
+use your finger or you could use the
+stylus but what I want you to notice
+about it and this is the part that I
+insisted
+on was notice how I'm holding it I'm
+holding it to one
+hand and the three buttons are Des
+designed around the end of the device so
+that the same hand that's holding it the
+fingers wrap around and can be used to
+operate any of the buttons to get stayed
+my background of music is no coincidence
+in terms of the what the design came up
+to it was shaped and the form was
+largely determined by a trumpet Valves
+and likewise by being able to hold it
+and operate the buttons by the same hand
+that holds it just like a trumpet which
+I used to play um you could actually
+have seven buttons but you not only can
+push any one of them you can push them
+in seven combinations that you get by
+trumpet the ne most important part was
+you could hold it without even looking
+at it and work the buttons where it was
+necessary and by the way after the fact
+I discovered there's a guy named
+Livermore who lived in the New England
+in around 1867 who made a six button
+device that had exactly that form factor
+which was the world's first Portable
+typewriter and he kept it in his pocket
+and he would sit and take notes and
+describe in exactly the same way Thad
+Starner and the and cyborgs did so it
+was all mechanical but he was actually
+taking eyesee typing which is something
+none of us can do with our smartphones
+even
+today
+um what was important about this and why
+I wanted to do it that way is from the
+very beginning before we built anything
+was the notion was that it wasn't these
+three islands a tab a slate and a on a
+board they all had to work when they're
+alone but they were designed and
+conceived of that they joined together
+in different combinations generally
+based on proximity and an oper and fun
+and and
+intent so the my model and I had a
+photograph actually of Queen Elizabeth
+rather than Queen Victoria but this is
+this shows it up better if you look at
+the English Queen most of the formal
+photographs have her doing two things in
+the non-dominant hand holding this ball
+with a cross on it which is called an
+orb and the scepter in the other hand
+this is the Regal pose and that was the
+metaphor that we would talk about that
+the tab when I was working on the live
+board I would have the stylus as my
+scepter and I would have the park tab as
+my orb so that when I came up and
+started writing I could check my notes
+and have secondary material here that I
+could as as a secondary screen for
+coaching while I wrote here and this
+same pen that worked on the board I
+could come and actually make notes on
+here as well but likewise while holding
+I could do things like if I was was in a
+window and and anything like that I
+could scroll up or scroll down or page
+up or page down by doing one or two keys
+on either side so that the the buttons
+when I'm working on the live board the
+buttons on the park tab actually
+affected the what I was doing on the
+board not on the tab so that the the
+park tab became a peripheral to the
+board and as I walked away it seamlessly
+decoupled and became an autonomous
+entity whose Behavior changed as I as it
+became
+alone and again those R visions and
+things that still haven't been realized
+did we finish making all that stuff work
+at Park absolutely not a lot of things
+happen but the main thing was from day
+one that drove the physical architecture
+of the device and it's still probably
+the only PDA that you can operate with
+one hand the button functions the same
+hand that's holding
+it
+now in terms of to be honest we didn't
+work a lot because we were just trying
+to make this stuff work but in the early
+phases but we got stuff working when you
+could work at the board and you'd work
+at the tab when it's by
+itself but unfortunately gods in the
+details and the most important detail is
+not that state or this state not the
+state of coupled versus solo but moving
+from one to the other because we live in
+a dynamic world and if you've read my
+book or heard me speak I tend I spent a
+year or two ranting about the following
+is that just as when I see storyboards
+which are screen shots or screen
+um um Pro sketches of screens connected
+by arrows I scream really
+loudly for the following reason that if
+you don't have as much detail in your
+early sketches in the arrows as you do
+in the things that the arrows connect
+you probably don't deserve a
+job I'm overstating this but let's just
+say you might want to rethink how you do
+your
+job because it's all about the
+Transitions and if anybody says
+something like the iPhone is successful
+because of the touchcreen or the
+graphics or the skin not at all the
+thing that it
+did is it made the transitions the flow
+it's all about the flow and those of us
+who think we're doing storyboards when
+we put up thumbnails or screens and have
+arrows have never worked in Hollywood
+and have never seen a
+storyboard and if you study it Rochester
+for example industrial design you will
+take a multi-week course and doing
+nothing but drawing arrows and getting
+the semantics of arrows right so you can
+get the vocabulary of the motion
+captured if you put a bunch of snapshots
+connected by arrows to show the sequence
+and an engineer sees them that's what
+they will build and it'll go snap snap
+snap and when you say that's not how
+it's supposed to Flow It's supposed to
+be tumbling supposed to do all these
+wonderful transitions you say you didn't
+specify it it's not in the arrows I gave
+you you I gave you what you asked for
+and if you didn't ask for it properly
+guess whose problem that
+is and they're
+right so this comes right back to this
+morning right when Steve was talking
+about this every time there was a
+transition something
+broke and this is true at the micro
+level when you bring things really small
+and at the level where people are moving
+from device to device or context to
+context at every scale we need to have
+these hierarchies of these State
+diagrams when I'm changing State and
+understand what the transitions are and
+and we need to be as effective as a game
+designer and or a filmmaker and how we
+do those Transitions and my biggest
+suggestion is we start recruiting people
+from the video game industry into
+dealing with that part of the creative
+direction of our our
+products and there's two words that have
+to drive all of this type of how we do
+the Transitions and how we make these
+graceful changes and one with the term
+is seamless the other is graceful and I
+want to talk about this in a sense
+because um we've all heard the world
+word like if you're going to have a uh
+something that's going to break down for
+some other reason it should you know
+have graceful degradation so let's let's
+push on that because we're a little bit
+familiar with that
+term when we bring things together
+that's an act of
+aggregation we bring multiple devices
+together to work in
+concert and of course when I take them
+apart that's
+disaggregation and what happens and
+should be happening there in terms of
+the value proposition and whatever
+currency is relevant for what we're
+doing should by aggregation have
+augmentation of power and actually a
+diminution of complexity by the way that
+I won't get to that level of detail
+though but the same thing as I have
+disaggregation I have degradation of
+this whatever it was I was doing before
+things will this just like the park tab
+could be spectacularly powerful when
+it's working with here but it still is
+valuable here it's just when I have the
+aggregation I get more and maybe
+different but it's it works this way but
+the key thing is those two things are
+coupled and and and the up and down
+arrow is where the transitions lie and
+that's where the real design effort
+needs to take
+place so uh yeah Derek uh sort of did
+this thing this morning and it showed
+you know look at all the stuff how many
+of you have this much stuff with you and
+so let's play a really quick game um
+what do you got with you Who's got
+what okay I you have a laptop okay
+what else come on sh it out we don't
+have time
+slate a
+camera what else
+phone it's not a phone it's a
+mobile anything
+else paper
+pen paper I see a video
+camera oh what's wrong you on your
+fingers good enough
+that's my invitation Steve Jobs
+um that
+it well I got a
+watch I get a wallet IP MP3
+player so I didn't say Zoom all right
+now the snap shot
+here might support the
+notion that so what we're talking about
+are these different form factors of
+different screen sizes and so on so
+forth and they're coming together and
+all that crap is all feeding back into
+almost this sort of office directed
+business kind of gooey blah you
+know that's apparently
+wrong and what and we've got to go to
+this new place where we have this other
+type of aesthetic but but Jesse actually
+talked about
+a whole other way to think about this
+this morning which I thought was pretty
+good
+and come
+on and all I can tell you is
+that this thing isn't on your list now I
+actually don't have it with me right now
+but that's called the wx7 and it's an
+electronic saxophone I worked on it for
+Yamaha back in 1982 I think is is that
+true no when it came out
+80 85 I think or
+86 but that's doesn't look like anything
+you've described in fact I don't think
+anybody would call that a computer I
+think it's just a musical instrument
+that if you haven't practiced 10 hours a
+day for many days you're going to sound
+like a piece of
+crap especially when you have to program
+it and what I trying to say is that we
+don't have to
+wait to find examples
+about how digital devices are
+beautifully integrated into our lives
+and here's the only problem nobody's
+mentioned is that if you want to be a
+really really successful designer in our
+field then prepare to be anonymous
+because the only time you should notice
+great design is or design is when it's
+broken it's like Plumbing if there's
+crap all over the floor you notice it
+but if it if there's not you
+don't right it's transparent it's just
+there everything's where you need it and
+it might be beautiful so you might get a
+bit of styling stuff that but the
+primary function is it doesn't draw
+undue attention to itself at a certain
+point the design gets over the top and
+becomes
+ostentatious an ego rather than great
+design I just say that there's tons of
+examples of things like this that
+already
+exist and it's not have to move from
+office or business types of things the
+stuff in the office belongs in the
+office there's nothing wrong with an
+office office and it's not the then the
+graphic user interface on Excel is
+probably the most natural user interface
+that you can have if you're trying to do
+spreadsheets in an office on a desk
+which by the way doesn't mean that that
+saxophone is a bad
+thing that thing is crap at doing your
+incom tax which is why it's good my
+Excel spreadsheet is great at doing
+spreadsheets but it's crap at doing
+music which is
+good and it's this notion of strong
+specific Tools in in the form factor the
+a and then with the appropriate
+interface that's appropriate for the
+task that are dispersed through our
+environment that let things work here
+I'm going to say this really quickly
+because I don't have a lot of time but
+everyone in this room has probably had
+this conversation I'm going to imitate
+my wife right now Bill you're always on
+your
+computer right everybody's had that
+right all right my father and mother in
+my entire time growing up I never heard
+my mother say my father he was also
+named Bill Bill you're always on your
+pencil
+okay you're going to laugh out of the
+other side of your face when I tell
+other half of that story listen there's
+nothing that I do with a computer that
+my father didn't used to do with a
+pencil every activity that we
+do more or less right statistically
+speaking everything we do with the
+computer today was done with a pencil
+before but but the activities were
+visible because of the other devices and
+other Technologies and the Loca other
+locations where the activities took
+place so therefore they were cues to let
+you know I'm writing you a love letter
+I'm writing the Great Canadian novel I'm
+paying our income tax I'm actually
+buying you a vacation off to you know
+Tahiti or something like that I'm
+writing my Paro parole board report
+whatever but the point is they all had
+location and they had other things
+around that gave cues that you weren't a
+monom manic thing and the computer
+didn't dominate it disappeared the
+activity became transparent or visible
+and the tools became
+transparent that's your bous Computing
+and if you do everything through your
+mobile I'm sorry it doesn't cut it to
+show me an example that took three hours
+to create of Windows every single
+function of of word I'm not criticizing
+I'm just saying think about this for a
+minute because critical thinking is
+really
+yes we can make Windows fill up your
+entire screen but at the same token I
+could load every free app from the App
+Store onto an iPhone and have the same
+type of of of overrun ridiculous thing
+what good are 5,000 apps and that's not
+even that's the tip of the iceberg of
+what's available on my iPhone try and
+work on that
+too Common Sense prevails but putting
+overloading
+anything pick your take your pick is
+going to make a mess
+and in terms of
+this just to show that I used to have
+hair the can sense turn y up perhaps
+we've hooked it up to a sound and so
+we've got a high pure sound here this
+descend and richness with
+X and degree controlling
+volume and I can finger
+paint
+[Music]
+okay why am i showing you that because I
+want to just again push these things
+about beautiful gesture and movement
+predate the
+Macintosh that was 1982 that's that the
+original multi-touch device that was
+first published in 1985 so we were doing
+multi-touch the same year mark zuker
+bird was born born and the same year the
+Macintosh was born okay that's how long
+it's been there and it was done to make
+a drum a musical instrument not to do
+something in the office not to do
+something productive not to make money
+but to do something and there's no
+there's a very good reason for that no
+profession has a longer history of
+articulating powerful and creative ideas
+through a technological intermediary
+than musicians and the aesthetic we took
+when we were doing this stuff in terms
+of a lot of the gesture stuff the pen
+stuff and the touch stuff
+in the early days was to make musical
+instruments that were worthy of playing
+on stage as as performers that's the
+aesthetic we brought and it's only
+recently that that that at the mass
+produced level we've been able to get
+the means to deliver that in the broader
+space but I have to tell you it was that
+that and this work that got Alan Kay
+when he visited and saw it that drag got
+me to go to park the next
+week now
+now the as we come along through this
+path we start to realize that things are
+snowballing out we have all of these
+devices we have social networking we
+have the internet just going crazy and
+more and more and more and more and more
+as you so correctly said now I'm happy
+to prune some of the stuff
+off but there's social networks of
+people and we've got the internet which
+is sort of like
+whatever but for me
+I want to talk about the social network
+of
+devices not because I'm a hardware
+person but because of what I already
+said with that simple example of the
+whiteboard in my tab when they start to
+work together in concert when they when
+they become a social network a nice
+pairing but where they can also come off
+and be individuals for a while and I
+might if if you get nothing else out of
+what I want to say it's this I believe
+that going
+forward the only way we're going to
+avoid Our Lives being po populated with
+a whole bunch of G garbage
+gadgets just think of the remote
+controls that are on your living room uh
+coffee table any one of which anybody
+knows how to use but together nobody in
+your family knows how to turn on the TV
+after you've watched a uh
+DVD it's going to get way
+worse and if you tell me you're going to
+have a better at living room remote
+control universal remote control take
+that on the road when you you know just
+I'll give you another example and
+another then we'll have so many
+universal remote controls in so many
+locations the complexity just moves
+there you fix it here it goes there take
+take the two buttons off the mouse get a
+one button Mouse you transfer the
+complexity that's always been the case
+again you've already heard that but the
+question is by the right combinations of
+simple devices where they augment each
+other we reduce complexity it's one of
+the few cases where we have the
+opportunity if we do our job right where
+more is less more of the right devices
+gives us less complexity and in fact
+more of the the right devices is gives
+us more squared or to the nth power of
+value and that's what this network
+brings now we're in this sort of network
+and mesh of things and there's a lot of
+ways we have to think about it and it
+seems to me that in this web and and so
+on so forth we have to ask one
+fundamental question and that question
+is who's the
+spider and even there this sounds like a
+stupid question maybe and it's maybe
+just a way CU I like getting my
+photographs and my slides and then
+figuring out a way I can rationalize it
+but it's in this
+case is the cloud The Spider and then we
+all hang off the cloud and so we're the
+tentacles at the very end gripping hang
+out the tree for deal life so we don't
+spring in the Spider-Man fashion or is
+it you and me the people that are at the
+center of this and I'd
+argue that the way I think about these
+things is that I'm the center of my own
+web and my web is Interlink with your
+web and so our our networks our webs can
+can link and the social networking isn't
+link from me to you it's my web to yours
+some of which may overlap but my
+immediate web is made up of the devices
+that I personally own and then how they
+interact with the things that might be
+embedded in the environment that I'm
+moving through in the public space and
+to the things of people are in my close
+Network how they might be able to start
+have that kind of relationship
+too and the key thing about this is
+forget the technical part what are the
+social mores of approach and departure
+and connection and I going to do this
+all the time but um this is you're Irish
+so you can take this okay right I'm
+going to give my talk just like this
+right now this is kind of
+strange right and he said nasty things
+about Microsoft so I didn't put my
+stylus in his ear now the deal is this
+you're laughing because it's so it's the
+only thing to do other than being a
+guest because it's so
+inappropriate
+but watch this I'm going to do something
+equally terrible i've got my cell phone
+I just put it against her
+laptop so
+what who gives a crap who cares nobody
+knows electronically in that web they
+don't know each other exist if I put it
+side my laptop it has no idea it exists
+they're both running
+Windows what's with
+that proximity approach departure and by
+the way as I got a certain distance away
+from you when I bet if we both wrote
+down we could predict exactly how far I
+got away from you when you started to
+feel comfortable again
+right we're guys what can I
+say but this is really important and I'd
+argue if you want to think about when
+you talk about ubiquitous computing
+the reason I you know I'm not picking
+anybody but when I put the saxophone up
+and the drum and and this sort of stuff
+as well as the computer
+screens or phone screens or whatever
+they
+are that the way to calibrate is this
+prend their browsers okay in the future
+the
+diversity of web browsers is going to
+match the current diversity of Inc
+browsers
+and Inc browsers are also known as
+paper and if you want to do your
+ethnography study then get the people in
+your team or your clients or yourselves
+you can make money doing this with your
+clients is that they have to do a
+24-hour diary study where they take an
+inventory of every encounter they have
+with paper over the course of 24 hours
+where they n not only notate what it was
+where it is how big it was what's the
+message how long should it be there what
+did it cost and so on so
+forth because every one of those is a
+potential case where our interactive
+digital things are going to have a place
+going
+forward from
+money to newspapers to posters to
+Billboards to labels I literally
+yesterday I saw here in Lisbon a company
+that's making things that are electronic
+displays that are going to are at a
+price point now where there can be
+labels on products like Coca-Cola
+bottles at that level of M
+manufacturing so this is not
+exaggerating I'm just saying this is
+happening where
+appropriate the technology is no longer
+the inhibitor this is the most important
+thing that we all should
+recognize the reason things were
+difficult before in the era that ended
+about 5 years
+ago was because the miracle was anything
+we built actually
+worked and that could be sold I don't
+mean we Microsoft I mean we as an
+industry it was a miracle that we could
+actually get this stuff working
+sufficiently reliable that we could get
+money out of cash machines and not feel
+nervous and so on so forth and send
+money with PayPal and so on so
+forth those days are
+gone and the only question that if you
+can't make it work you shouldn't be in
+business now that we can make anything
+work the ultimate question is what's
+worth making work how should it work now
+that we can do anything what should we
+do
+and that's what this is about and my
+view is my focus these days is not about
+any single device if you can't make
+something as good as anything Apple
+makes or anything as bit good as the
+connect it shouldn't be in
+business I take that for granted just
+like I take for granted when I drive
+over a bridge that it doesn't fall down
+and it looks really
+good right it's just engineering it's
+design that's professional it's just
+doing your job the next job is make the
+stuff work
+together so we I want to come back to
+the paper thing though just to make my
+point because I every once in a while
+Point needs to be emphasized redundancy
+isn't a bad thing we think about eaper
+and
+ebooks and e-readers but you hard to
+ever think about a newsprint uh magazine
+straight off the stand this is the 75th
+Anniversary issue of Esquire Magazine
+from October 2008 it has an e in exactly
+the same technology that's in your
+Kindle not only in the front cover but
+on the inside cover there's an
+advertisement that that is quasi
+animated
+with the battery and everything in the
+cover for the same price as the regular
+magazine sound that thing blew me away
+when I saw it because I'm supposed to
+know about this stuff I'm supposed to be
+some kind of visionary and it caught me
+completely with my pants down I had no
+idea and then a year later almost
+exactly came
+this this is an issue that was on the
+news stands in New York City and and and
+in Hollywood of Entertainment Weekly and
+on it there is a 2-in LCD television set
+in the print edition for the same price
+and it has 6 hours of Replay on the
+battery and it had 40 minutes of video
+inside it it had trailers for every
+single show that was going to be
+launched in the fall season for CBS it
+was sponsored by pepsicola and and these
+buttons along the side here are the
+channel Changers you could just push and
+select which show you wanted to look
+at
+and if that doesn't just give your
+entire conceptual framework if you
+aren't familiar with this a total
+refresh and rewrite in terms of how
+broad should we be thinking we talk
+about e-readers and ebooks and
+e-publishing I don't know what else it
+takes because this floors me I chase
+both those down I have working versions
+of both of them because I just can't
+believe it and I want to show them
+people all the time whenever I
+can and and that speaks to what I said
+about ink
+browsers if we can do that what
+economically in a business what else can
+we do well this is what else we can do
+this is what they used to do in London
+to change the the posters um I can't
+remember when Sid Kai was in Vienna but
+I think it was at least six years ago
+but already six years ago in Vienna they
+had projectors mounted above the Subways
+and they replaced the paper with
+projected video and by the way it was
+the worst crap content I've ever seen in
+my life it was like the QVC Shopping
+Channel it was like these people had no
+idea about media it's got a projector
+it's video so it must be
+Television right and they had no idea
+and there's no way to interact with it
+that's the other part but that's then
+this is now think about it Subways are
+the most perfect place to have
+projection because there's no daylight
+you've got a controlled lighting
+environment you don't get killed or
+electrocuted when you're on the tracks
+with your with your ladders and that
+stuff can be changed by time of day and
+so on so forth and you could if if
+things were done right use your Mobile
+to actually take things from that but
+we're going to I get ahead of myself
+we'll come back to that in fact I'm
+going to do it right
+now every place you see one of these
+posters these advertisements on a bus
+shelter that are made out of film with
+back lit with uh with lights that is
+going to be a thin film polymer display
+that's on the net whether it's wireless
+or tethered who cares it's got
+processing power it's on the network
+it's there and it can be changed by time
+of day and so on so forth and it can do
+all kinds of other things but here's the
+nature of the types of how our
+transactions can start to change and
+there's very subtle things that come out
+of there so you come up with your La
+your phone because I'm Stranger in Town
+and I come up and I pull out my phone
+and I by pointing my phone at the device
+by the way all I'm asking here is that
+my mobile phone be able to do my
+so-called smartphone what a term um if
+you call these things smart I think
+think we should all stop using that term
+they're smarter phones in the sense
+they're smarter than the phones we had
+before but if you take this as smart
+then I worry about the people you hire
+because you probably think they're smart
+too would you hire your phone if it was
+a ux designer given its level of
+intelligence okay that's what I'm saying
+all right now if I could do what my Palm
+Pilot could do in 1996 that is without
+any handshaking just point it at your
+Palm Pilot push a button and pass you my
+business card or an address whatever I
+wanted which I cannot do Bluetooth
+doesn't let you do that because what I
+pointed at you it's going to the person
+in the room on the other side of that
+wall we can't do that yet this isn't
+just about software it's the whole deal
+it's the entire ecos system just like
+those three buttons like a trumpet on
+the PDA of the park tab but Watch What
+Happens I do it Bingo up Pops a map
+because that's what I asked
+for why would I use the dinky screen on
+my
+smartphone when I've Got That honk and
+big display there that Nike is willing
+to loan me and now I'll just use the
+touchpad here the same way I use the
+touchpad on my laptop to control
+whatever's up there on the big screen by
+the way it doesn't have to be a map you
+and I could be playing video games we're
+waiting for the best or whatever
+whatever is appropriate but the point is
+notice two or three things this simple
+coupling the aggregation of these two
+things reduces complexity for people
+like me that are 63 I just became a
+grandfather and I can't read as well as
+I used to so I appreciate the big screen
+thank you very much and I want to be
+able to get the information and take
+advantage of it and I don't want to be
+searching around for
+hotspots but just a minute all of my
+experience with ads online have been
+banner ads and popup ads that are
+absolutely pissing me
+off they get in my way and despite the
+fact I know intellectually that they're
+paying for my free stuff I still resent
+them cuz I want it free and I don't want
+to be charged for it in any way at all
+in inconvenience in that it's nothing's
+free by the way you we'll talk about the
+valuation for of Facebook and what
+you're act what they're actually buying
+on the boat tonight but anyhow the point
+here notice what has happened and by the
+way I love advertising because it it
+keeps us going but here's the
+point by this simple thing I just
+did seemingly just coupling up two
+devices heterogeneous
+devices almost like the lifeboard right
+the big display with the Palm a handheld
+exactly the same with before but in a
+different context therefore different
+product I've completely reversed or
+transformed the relationship between me
+and the advertisement and The
+Advertiser I have always had an annoying
+popup ad on my
+application I have a welcome popup
+application on the ad
+and if I know that Nike offers that to
+me I'm going to search it out every
+place and furthermore popup ads you get
+rid of they're not persistent and
+they're in your peripheral vision and we
+know the F con of vision is about 14
+degrees and you're up close you're not
+going to see them
+anyhow I've put a Nike Swoosh Watermark
+right in the fulvio cone of vision in
+the center of the app in know such a way
+that it does not intrude with my ability
+to use the map or the application but I
+still got the imprint of the
+brand see I'm not disrespecting the ads
+I want the ads to work for everybody
+including
+me and it's this notion of coupling that
+opens up completely different
+opportunities because now is that a
+phone app or is it a is it an outdoor
+advertising app or is it a service Kiosk
+app the answer is yes to all of the
+above but the relationships among the
+people in the ecosystem that play in
+this have to change dramatically to make
+this stuff actually work and by the way
+just to give you an example that I'm not
+smoking crack or anything like
+that in Yahoo's already implemented um
+touch screens of that size in bus
+shelters in Washington DC and in the Bay
+Area to do field trials so this is not
+that far away Gibson was right the
+future's already here it's not just not
+uniformly distributed and if you read my
+essays about the long nose you'll you'll
+understand that these things have been
+around for
+decades
+so some examples just as I wrap up
+we have to become collectors we have to
+start to actually watch around and just
+like people don't notice things like a
+saxophone because it's a saxophone not a
+computer it's a camera not a computer a
+camera is just a computer with P light
+in and and pixels
+out use a spring taxs your mp3 player
+it's not a it's it's a computer but
+nobody calls it that
+way your Nintendo
+DS can absolutely my kids are all
+sitting around in the same room playing
+like Mario Kart
+party which really interesting too this
+is a little bit more hetrogeneous as
+opposed to homogeneous Network whereas
+the electronic cart Scrabble you can
+actually use that for plain Scrabble one
+of the modes that comes is that you use
+your your iPad sorry your iPhone or your
+iPod Touch for the tiles and an iPad for
+the game and you can sit and mimic the
+round table social thing it's it changes
+completely the social nature of playing
+electronic
+games um Nest learning has a thermostat
+get this a normal digital thermostat
+costs about $25 to $30 this thing cost
+$250 and they can't make them fast
+enough because you can uh use your
+iPhone or whatever your mobile to to
+control the heat and set the Heat and
+turn it down you're driving home from
+the um from a 3we vacation in the winter
+you can turn the heat up so the house is
+warm you don't have to do any of this
+fancy programming now all of the things
+things around this remember I said it's
+about the transitions transitions are
+the transactions are are are the key
+part of the
+transactions and if we step outside of
+our own um small world the there's some
+Theory and knowledge that we can apply
+really to how we think about these
+things how we evaluate because the term
+keeps coming up and I think
+appropriately so how do you measure how
+do you determine for yourself much less
+your clients or your boss or anyone else
+um or even sell it to your customers
+what why this is better and why you
+would do this instead of that and the
+answer is taken from this guy Edmund Co
+sorry Ronald Coast 1991 he won the Nobel
+Prize he won the Nobel Prize for this
+theory of TR of how firms interplayed uh
+amongst themselves according to the cost
+of doing business
+transactions and this notion of
+transaction cost should be in every
+single one of our vocabulary it should
+dominate all of our conversations if we
+care about Transitions and transactions
+and say what is the cost
+but that's not a good enough question
+you have to say what are the currencies
+that are relevant in this
+context According to which we determine
+much less measure the cost what should
+it cost and what's determined and what's
+the exchange rate amongst these other
+currencies otherwise we cannot do an
+appropriate cost benefit
+analysis that notion of different
+currencies exchange rates among them and
+then cost benefit analysis on the cost
+of the transition it could be learning
+how long do it take learn what's the
+risk of failure what's the enjoyment
+Factor you know what's how what kind of
+AC does it take and so on so forth
+what's the Comfort level how how subtle
+can it be or how loud is it all those
+things are important to think about it
+but it it really plays into
+this and I want to give you some
+examples all through I've tried to throw
+examples that you can buy today to show
+that the future really is there we can
+we don't have to start from from a
+standing
+start but one of the arguments I think
+that everybody gets over and over and
+over again is it uh no no why should we
+do that you can already do that why
+would I pay for that why would you add
+that to my product look you can always
+it in in when we were doing Maya which
+is this three package every time I said
+here we could really streamline the
+interface by making it really simple
+this is what people do they're not doing
+this and this and that they just want to
+do that they say well you can already do
+that look and they give the cutest thing
+that I fallen asleep by the time they
+finish telling me how to get there from
+here I want us this propose pretend I
+have a consumer electronics product
+that's in everybody's home and that
+consumer electronics product works
+pretty well people love it it works and
+they they spend hours and hours and
+hours a day with that consumer
+electronics product let's pretend we
+call it
+television and let's pretend I am some
+idiot at Sylvania decides I'm going to
+put on on make the customer pay for an
+entirely second set of controls I'm
+going to get a second volume control a
+second channel changer and a second
+onoff switch and I'm going to make them
+pay for it now by the same logic that
+every one of you have had by your
+management at least once tell you you
+can already do that why would we add
+that I'm going to say I'm going to do it
+anyhow we should do it I'd love to meet
+the person who made this argument and
+actually got this to happen because what
+they
+did for that television is the added the
+remote
+control it's absolutely useless it
+brings zero new functionality from any
+engineering
+perspective but the one thing that
+changed was the transaction
+cost and think about this for a
+minute when we were in that period of
+transition if I went to a hotel that did
+not have remote controls in the hotel
+rooms I never went back to that hotel
+room again in the same way today if you
+charge for Wi-Fi I don't go back to your
+hotel
+again it saved you getting up out of
+your seat was it good for the health of
+North Americans or of people
+no but it's sold so it's good for the
+health of the investors we got to deal
+with those things and by the way this is
+the first one I this is one of the first
+ones I own this and they were called
+clickers because the original ones
+worked with acoustic sounds when you
+push the buttons down they made a
+distinct sound you could each button
+made a different sound uh and it was a
+clicking sound and it was a microphone
+that could sense those and that's how it
+it wasn't ir and it wasn't um Bluetooth
+and and and but it was that was those
+were the first wireless remote controls
+but that's why they're called
+clickers
+now Peter today just said some really
+interesting stuff and and he talked
+about the right multis and he talked
+about taxonomies and multi- channel
+multimodal um and and and so on so forth
+and and again this says that's good
+because I don't have to talk about it
+more I just want to make a couple things
+to say here's here's another distinction
+to help a meaningful dimension of
+differentiation that helps us carve up
+the space in terms of a meaningful
+taxonomy that helps us reduce and
+deliver here's
+connect this is connect being used to
+control the TV as a foreground activity
+okay this is my foreground intentional
+action my job now my purpose is to a
+game therefore everything else get out
+of my face this is the interface
+right but here's the earlier version of
+connect you may not have known this but
+but connect's been shipping for
+decades and you didn't even notice
+perhaps and here's example this is a
+Staples other what other than a an early
+version of connect is the optical sensor
+above the door at the business supply
+Center there that opens the door for you
+and what other is it than a video game
+where the game opens the door for you as
+you go out with this with the with the
+um with a buggy now this is really
+important that is a foreground task my
+task is to play the game My foreground
+task here again it comes right back to
+what you heard earlier today is it is to
+get out of the store and get what I
+bought into the car to go home and
+because I got this buggy in front of me
+I can't reach the door to open it
+and therefore just opens for me by
+proximity sensing that's connect it's a
+trivial gesture but here's the thing it
+is a computer but unlike it in the Sega
+esqu having billions and billions and
+billions of switches it has one switch
+but that one switch is smarter than any
+of your computers or mine for this
+purpose because it senses activities in
+the environment the same way you sensed
+me and acts on accordingly but the
+intelligence is in the location and
+placement of that switch it's notice
+it's not on the bank
+vault and what it does is it offloads
+complexity adding technology reduces the
+interference the task interference that
+would otherwise Exist by opening the
+door and it come
+through it it has
+value and to close the loop by the
+way and this is why this type of
+analytical thinking really helps us do a
+better job
+is we've only done half the job because
+I'm live in Canada you think it's
+horrible weather in Ireland for you
+should live where I am when in the
+springtime you got a foot of sloppy wet
+snow and you got paper bags of groceries
+and you come up to the back of your car
+your keys are in your pocket or your
+purse and you've got to put the bags
+down on the wet snow to open up the
+trunk of the car and then in order to
+put these things
+in now just let me do a little
+arithmetic here my car
+whose keys are in my
+pocket that even lights up when I walk
+past it at night time because it's got
+keyless entry
+socalled I have to put my bags down get
+them soaking wet and get my keys out the
+supermarket which I don't even own I
+don't even know who owns it opens the
+door for me why does my own $30,000 car
+treat me worse than the
+store and why isn't connect of some
+version in the back of the of the car it
+recognizes me by my key fob it knows I'm
+there I can see with a 3D imaging that
+I've got bags in my hand at least in the
+supermarket if I have to put my bags
+down the floor is
+dry and way we go but you realize it's
+all about offloading complexity and
+saying what's the foreground task what's
+your principal task again you've heard
+this already this afternoon I don't have
+to repeat it except my grandmother was
+Irish she's a Doyle and
+and so we go but here's another better
+example I'll wrap up with this because
+this is really important here's my car
+this really is my car mine's black but
+it's a Ford Escape I gave my BMW which
+is about 6 years old to my kid as a
+graduation presentent so he could pay
+the service bills instead of
+me he works for a bank he's okay he can
+afford it
+and and I bought it because it has sink
+in it which is a this the software that
+synchronizes now here's my
+phone now it's really interesting to me
+and this is the most delightful thing I
+experience with Computing devices that
+makes me whenever I feel upset or
+frustrated with what I see in the
+software industry this puts a smile on
+my face think about this for a minute my
+phone it works okay I get in my phone my
+car I throw it in the passenger seat I
+drive away I turn on the stereo I'm
+listen to music everything's good and
+the phone rings my hands don't leave the
+steering wheel my eyes don't leave the
+thing I go bang hello I have a
+conversation
+all right so you start of
+saywell so what well because that was
+magic think about this for a minute who
+knows what a mobile phone
+is hands please chickens come on come on
+come on be brave be brave be honest all
+right you with the glasses back there
+you put up your hands uh where is the
+mobile phone in that transaction I just
+described
+seat on the car seat how many people
+agree with him the naive young
+man all right let me let me just do a
+little bit of electron Jour I am a you
+know I am a Scientist please don't try
+this at home
+however the only thing that's being used
+of that phone is the Sim chip the
+Bluetooth trans transceiver the battery
+and a tiny tiny bit of
+logic everything else is in the car the
+speech recognition in the car the
+address book in the car the speaker in
+the car it even turns down the instead
+of opening the door it turns down the
+stereo so I can hear the call and the
+microphone in the
+car the correct answer where is it I
+think the best answer is
+yes and the next best answer or perhaps
+even a better answer say who cares are
+you having a good
+conversation no are you having an
+appropriate conversation because notice
+if that magic didn't happen I should
+lose my driver's license oh because this
+brings another thing ask anybody talk to
+somebody from Microsoft if you really
+want to put the if you really want to
+get them going say so what's this uh
+interface what's the interaction
+language for Windows Phone 7 by the way
+you can do the same thing with people
+from uh from Apple but they just don't
+have a name I gu they do for the
+interface Style on on the iPhone but I
+just don't know what it is cuz I don't
+work Apple but the I'm kidding here's
+the deal I no I'm not kidding about not
+working for Apple I'm just kidding
+here's the
+deal if somebody says
+Metro just say I beg your pardon mean
+when I'm driving my car and I'm using
+sink and with a speech that I'm using
+metro well guess what you're
+not and this is the re-education all of
+us have to have no it's Metro when Metro
+is
+appropriate it's not Metro when Metro is
+inappropriate like when you're driving a
+car so that if my after I've hung up the
+phone and I I have a text I get a voice
+hey your wife just no Liz is just texted
+you you want to take you want to hear it
+yes I'll read it to you bang she reads
+it to me it's a woman who's in my car
+the computer and I don't know why but
+it's it's okay um my wife approves
+and when she's speaking to me after
+she's finished she says would you like
+to reply yes okay start dictating I
+dictate would you like me to dick read
+back what I think you said yes I have to
+say honestly it's never made a mistake
+so yes send
+it then here's the best
+part
+I my son
+phones I park the car I'm still in a
+conversation I pick up the phone off the
+seat turn the as after I've turned the
+key off and I just go like this and walk
+down the
+street and 90% of the technology at the
+local end supporting my call just
+changed completely
+seamlessly and
+transparently as I disaggregated so I
+had disaggregation I don't have all the
+fancy speech stuff anymore and I'm back
+to
+Metro but because everything changed 90%
+of the technology changed I had zero
+change in the continuity of the
+conversation and so when anybody says
+your user interface has to be consistent
+just say give them this example example
+right I tell these stories because
+stories are the most original form of
+viral marketing make them your own
+pretend you you invented it place it in
+your own context personalize it but have
+these in your hip pocket so you can say
+no consistency unless you can guarantee
+there's consistency in context location
+and people and task in when people use
+this application or this device then
+then
+forget this notion of consistency other
+than consistency in quality of
+experience
+and consistency in
+value those are the only consistencies
+that matter because they're the ones
+expressed in human
+terms that's the stylesheet we should
+write
+first all right we're wrapping
+up this I love this right you can't
+depend on your eyes when your
+imagination's out of focus these things
+we've been doing today just going on the
+ship tonight the reason to get out of
+town get out of your computer is to help
+our imagination
+grow PR said the only true Voyage of
+Discovery is not to go to different
+places but to see through different
+eyes and our job is to be the best damn
+what do you call them OB not
+Obstetricians uh what's an eye doctor
+anyhow optometrists in the
+world and with that I'm going to stop
+say thank you very much and I'm happy to
+take
+questions

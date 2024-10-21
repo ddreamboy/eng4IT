@@ -1,0 +1,3464 @@
+[Music]
+what is blockchain and why so much of
+hype what if I say the next big thing in
+the industry is blockchain as Internet
+has affected all major industries in the
+same thing blockchain will also be
+affecting it and that's for sure
+maybe next two years or three or some in
+five years the option will be there but
+what is blockchain and why it is so
+important so let's get started welcome
+back to aliens minus 720 and let's get
+start with blockchain if you have heard
+about bitcoins you might have heard
+about blockchain as well so they work on
+Bitcoin started in 2008 by a pseudo name
+it may be of one it may be one person or
+it may be a group of people and the
+pseudonym is Satoshi Nakamoto so that
+person or you can say see don't pseudo
+name has created bitcoins with
+blockchain so the technology behind bit
+points is blockchain but what exactly
+doctrine gives you now if you talk about
+bitcoins it is basically a digital
+currency right and it works on
+peer-to-peer network which is all you
+can also call it as a distributed
+systems so there's no central system
+example when you wanted to ask for money
+now you have a bank in between but in
+bitcoins you don't have any central bank
+right everything is distributed so when
+you talk about distribute is one problem
+the first problem is security and the
+second problem is trust how can you
+trust this technology and how much
+security now this one solution for
+security we can use cryptography right
+so we can we can use a concept of
+asymmetric cryptography and we can
+achieve security but how what trust how
+do you trust someone that you are
+sending data to or you're sending money
+to or how do you trust the data which is
+available on the Internet because when
+you say on the entire Internet if one
+person is transferring the money to
+other person who is maintaining the
+database that's a big issue right
+because it say if I transfer five
+bitcoins to you how can you sure that
+you have five bitcoins
+I have and I don't have those five
+bitcoins which I have sent you who is
+maintaining this system so that's where
+this ledger comes into picture
+now what is that later will it be a
+normal database not thinking about it
+what if what we can do is we can have a
+central database oh that's a problem now
+because we are talking about distributed
+system right and in distributed why you
+need something in central ok so that's
+one problem so what if every node or
+what's node here so let's say if there
+are five people working with bitcoins or
+if you have five people in this network
+every machine will be called as nodal so
+can you maintain the ledger on every
+machine we can do that but how can you
+trust them because there's one problem
+if you have a ledger that anyone can
+tamper it with right now if you're
+confusing it if you're getting confuse
+with the ledger imagine a simple
+database or you can imagine a simple
+file excel file on any any file it's a
+txt file because if you have a txt file
+anyone can change the data okay thing
+about this let's say if you talk about
+government okay so in let's say in
+government we have got a production side
+and everyone want to stop corruptions
+and the one way to do that is look at
+their database so what do I did whatever
+they have worked on everything will be
+stored in a database right so what if we
+as normal people can see the database we
+can do that but they have the power to
+change the debase right they can change
+the history of the database okay so we
+want something where it should not be
+changed so we want a ledger which will
+be available on every machine but no one
+should be able to change it and that's
+where blockchain comes into picture
+so once you save data on blockchain and
+no one can change it and even if someone
+changes it you will know that something
+has changed but how
+so let's unless try to understand this
+concept so what happens in blockchain is
+we have the list of blocks okay so let's
+talk about one block so if we talk about
+bitcoins in bitcoins we do a lot of
+transactions all this transaction will
+become one block that's a Bitcoin why
+can we use this thick this concept
+anywhere else yes we can we can also use
+this data for your personal information
+we can use this block for your over your
+Facebook data right we can store
+anything literally anything on this
+block but for bitcoins we store
+transactions right so for different
+purpose we can use this block we can use
+this for bitcoins we can use this for
+hospitals we can use this for government
+information
+and that thing will be stored inside
+this block okay now but now what I'm
+saying is you cannot chase this block
+but can be we can't change the block
+right because if you have a block anyone
+can change it but that's not how Bitcoin
+works oh won't be twice doers they use a
+concept of hashing what is hashing now
+so hashing means we use different
+algorithms to generate a simple hash key
+now it can be any any algorithm we can
+use we have md5 we have sha sha also we
+have different different lengths sha so
+what we can do is we can use this
+algorithm on a specific input let's say
+the input is my name is 1120 so if this
+is the input you can perform the
+operation which will give you a key now
+the awesome thing is it doesn't matter
+how big your input is it it can be a
+simple line as my name is my beam 20 or
+it can be entire Wikipedia database so
+even if you pick the entire we keep it a
+database and if you apply the algorithm
+you will can be a key length which is
+depend upon what you use example if you
+are using sha-256 algorithm you will be
+the same length key which is 256 bits so
+even if I apply a key on the mean Freddy
+you will get the same length key but the
+key will be different okay for every
+data you will begin different keys and
+that's the power of hashing because if
+you perform at the hash on one input it
+will give you the output which is
+different from all different data so if
+you have two different data you cannot
+have you will not be having same hash
+sometimes we do have it and that's why
+we say hash collision but then that's a
+very rare kids so not only if you apply
+hashing on different data you will get
+different keys but how that is useful
+the important thing is if you have let's
+say if I were text which is my name is
+720 and for that if I'm getting this key
+if I change a 1 1 later in my name for
+example if I say my name is name in 20
+where I'm changing that I to double e
+normally people do that for me which I
+will be there the moment you make a
+small change then it will affect your
+key as well so even if you change
+something in the data it will change the
+key as well so you can imagine your key
+as your fingerprint right and your data
+is yourself so you are data and this is
+your
+hashkee and advantages the moment you
+change something from that body or
+something from data it will affect the
+hash as well so how do we know if
+someone has tempered your data just take
+the key right because if key is
+different of course there's a there's
+been some change in your data but how
+that is useful in blockchain so what we
+do is remember that block so we have a
+block so what will you do is once you
+got this block here you will apply hash
+so let's say for block ay we have a hash
+something hash there and then let's say
+you have a next block now the next block
+will have the data of course plus it
+will also have a key of the previous
+block or the hash of the previous block
+so let's say the block a and then we
+have a key let's say K 1 then the second
+log B will have K 1 which means if you
+find a key or the hash of this block now
+it's a combination of the data and the
+and the previous key so now you will get
+K 2 so for a we got K 1 for B we got K 2
+and now let's say if you have third
+block which is C you will have K 3
+remember linked list yeah so we have in
+linnaeus what we do is one node so this
+second node knows about the previous
+node of previous node next knows about
+the next node right so that's how we
+create chain so what we have is we have
+number of blocks and all these blocks
+are connected with a chain and that's
+why we say this is called as this is
+called as basically a block chain
+because we have lot of blocks and
+they're connected with the help with the
+help of hash value but you will see
+that's that simple right but how can you
+make sure that this these are trusts
+involve you and no one can change it now
+think about this if you change data
+about if you change let's say Block B
+the thing is the moment you change one
+bit okay what if a small change in B it
+will affect the key right and in in
+Block C we have a key of B and now when
+you compare the block of B and this
+block and the key available in Block C
+is different that means someone has
+tampered with your data now you know
+that someone has done some changes
+that's why we say blockchain is safe now
+if you will you will be amazed to know
+that till this point no one was able to
+crack the blockchain database it's that
+powerful yeah
+there has been some hacking on bitcoins
+but that's not on drugs and that's the
+the the ballot which you use so height
+was done on the ballot not on the
+blockchain so it is secure it is safe
+and you can trust it now it is only for
+Bitcoin on exactly you can use
+blockchain everywhere so in future for
+government hospitals personal entity
+bitcoins everywhere you will be using
+blockchain and some banks and India all
+as well they have started using
+blockchain and most of the industries
+which have talked to they are doing POC
+which is proof of concept on blockchain
+if it is it is flexible for them to use
+blockchain they will be implementing it
+soon so there are a lot of jobs
+available into option for sure in future
+so if you want to learn something new
+now start with dog chain so I hope
+you've got some ideas about blockchain
+from this video
+everyone is talking about blockchain it
+doesn't matter which industry you work
+for all of them are trying to implement
+blockchain some of them are still doing
+POC and some of them are actually
+implementing it in fact last year when I
+was talking to some of the companies
+they were doing POC and now they're
+implementing it look at the speed now
+and that's why everyone want to get into
+this technology world now blockchain is
+a cutting-edge technology which is
+changing a lot of stuff light it is
+replacing the old way of working and
+then implementing a new way now there
+are three questions which we want to
+answer in this video the first one is
+why blockchain why it is so famous in
+fact we already have a video on
+blockchain
+what is blockchain how it works if you
+have not seen that video check the
+description area in this video we'll
+talk about why is so famous second
+question we want to answer this who can
+get into blockchain technology because
+some people feel they have to be into
+the technical field to get into
+blockchain let's see how that works
+the third question is what are the
+prerequisites
+[Music]
+welcome back everyone my name is Ivan
+ready and let's get started so the first
+question why blockchain now first of all
+there are certain issues with the
+current technology which you're working
+with example let's say the Internet
+which we are using now it's amazing
+technology right it has changed the way
+business work it has created different
+types of domains or businesses right
+think about Google Facebook Amazon they
+are all running because of this feature
+of internet right now internet was meant
+to be open to everyone but now the
+internet is actually controlled by few
+companies and we don't want that we
+don't want to have central power because
+it is good as of now but what about the
+future the second issue is when you do
+online transaction it's a bank
+transaction so if you want to send money
+to someone we need a bank in between
+that's not an issue with me that's fine
+so if I want to transfer me to someone
+else and this bank says hey first you
+have to link it from my side that's fine
+with me but the amount of fees they are
+charging for each transaction is
+something which are concerned about
+example even if you do PayPal they
+charge your own photos and per
+transaction we don't want that right we
+don't want a central server so that's
+one issue right we have money issue the
+second one is the time so even if I do
+international transaction it does take
+some days all ours right we don't want
+to wait for such time we want it to be
+fast right and that's why blockchain
+says hey you can use our way of doing it
+which is decentralize applications you
+can implement everything in a
+decentralized way you don't want
+something in between you don't want a
+central server but then we have one
+issue here we could have implemented
+digitization way before right because
+it's not a new term it's very old term
+initially the column was even if you
+implement everything in decentralized
+way can you trust someone as example
+let's say if I want a class for mine to
+someone else and if I transfer to edge
+what if some day that guy says hey you
+have not done that transaction how can
+it trust other parties and that's where
+blockchain also provides you trust okay
+because everything you do online will be
+saved in one ledger now I can we'll talk
+about that later in detail so everything
+we will store in one ledger and that
+ledger will be transparent so anyone can
+see the transactions
+and that's where if you have a
+transparency you can actually trust the
+system the next thing is the moment we
+talk about that later no one can change
+it so the later which we create okay so
+let's basically your database okay
+imagine a big database if you have a
+ledger there and if you are storing lot
+of transactions we don't want it to be
+changed right we want our transaction to
+be saved in a same way for a longer time
+and it should not be changed so we want
+it to be immutable and blockchain does
+provide that see how exactly all this
+thing works that we'll see later but
+then it provides you a feature of
+digitization it provides your feature of
+trust and I provides your features of
+immutability okay the next question
+would be is it secured of course the
+entire blockchain system works on
+cryptography so yes the base itself is
+the same right so you can trust
+blockchain that it is safe so these are
+the reason why block sin is famous
+because it provides you all these
+features and it is amazing okay so every
+industry wanting different blockchain
+just because of these features the
+second question is who should get into
+blockchain do we need a technical
+background for that are not exactly
+sleep doctor is very new in the industry
+right so yes we need technical people
+who can actually work on blockchain who
+can build the blocks and applications we
+also need people who will act as an
+advisor now these people are more
+towards business so they have a business
+mindset they understand business they
+understand how we can implement
+something for putting the application if
+you understand how blocks in the works
+if you understand what are the use cases
+we can work on on blockchain you can be
+an adviser so yes we have a blocking
+developer who needs a technical skills
+we also have a blockchain adviser when
+you can pencil it companies and then we
+have blocks and expert who are more
+towards architect right who can actually
+design everything from start to end
+so yes we have different options but
+then if you don't have a technical
+knowledge if you don't have a technical
+skills example if you are not good with
+programming we have not done it working
+before or not cryptography that's fine
+you can still understand blockchain and
+you can be an adviser and the third
+question which is very important the
+prerequisites what are the prerequisites
+for blockchain to think about this it
+doesn't matter what time of course you
+do example if you want to be little
+machine learning if you want to get into
+push development we need to have some
+sort of very positive example for
+machine learning it should be good at
+maths find some other concepts and now
+they on the other hand if you want to be
+into full stacks
+should be doing about designing and
+other stuff right and then how exactly
+servo works and different stuff
+what about blockchain and yes some
+courses do say you don't need certain
+knowledge to get into blockchain and the
+answer is yes you can diagnose block
+change from start and we will try to do
+that in this course as well we don't
+expect you to have any base knowledge to
+learn blockchain
+but is it twist year the twisters block
+change will be easy or difficult for you
+is depend upon what you know already
+example when I was learning blocks in
+for the first time I was quite
+comfortable for several reasons one I
+loved this technology and when you have
+something you feel comfortable second
+reason is the topic which is there is
+docked an example cryptography
+distributed computing because I used to
+take lectures on this I have made some
+projects based on these applications so
+I'm quite comfortable on cryptography
+I'm quite comfortable on distributed
+computing and that's where blockchain
+just played and that's what I'm
+expecting from your side if you know
+something from the base and it will be
+always helpful so example if you know
+cryptographic and if I'm talking about
+some cryptographic concepts then you
+will feel comfortable and that's why the
+pier equals it's our cryptography and
+distributed computing and here's we have
+some more topics as well an example game
+theory yes you can learn them by
+yourself just go to Google today and
+start learning about them start
+searching about cryptograph they start
+searching about YouTube you to computing
+and also game theory the good news for
+us
+even before touching the blocks and
+technology we will be focusing on these
+basic concepts okay so the next video we
+are going to implement will be on the
+prerequisites so if you don't know
+anything that's fine you can start from
+today or you can wait for the next video
+where we start with the actual
+prerequisites and then we will be
+touching
+blockchain so I hope you are excited so
+blockchain anyone can learn it and it's
+a new technology right we don't have
+many people in the industry it's booming
+like anything right as far as search in
+next year we'll be having more vacancies
+for blocks in developer than any other
+field so yes it is booming so you can be
+a part of faith and we will learn
+blockchain together so I hope you're
+excited I'm excited to meet you in the
+next video
+in this video we will talk about
+cryptography the blockchain works on
+peer-to-peer network which simply means
+you have multiple nodes and we don't
+need a central server whatever we do
+nowadays is based on some server by the
+example if you are working on Facebook
+and if you want to communicate with your
+friend we have a Facebook some in
+between same goes for transaction if you
+want to send money to someone read a
+bank in between on the other hand we
+talk about peer-to-peer we don't need a
+central server this is not something
+which is very new it's there from a long
+time if you remember Napster it was
+built on peer-to-peer network which
+simply means you have multiple nodes or
+people they want to share music for free
+of course the parted one and they can do
+it using peer-to-peer example let's say
+if you have four people here are four
+nodes a B C and D and if a and B they
+have a music album with them the same
+music album and if C want the same album
+he can download from a and B at the same
+time so maybe half album from a half
+album from B and then at the same time C
+can also upload the album so that D can
+download it and that's how peer-to-peer
+works we don't need a central server in
+between torrent also works on
+peer-to-peer network if you have ever
+used torrent you know what I'm talking
+about right we have seeds we have peers
+service b2b is awesome but it doesn't
+matter whatever network you work with we
+have four big concerns the first concern
+is confidentiality the second one is
+integrity third one is non repudiation
+and the fourth one is authentication so
+let's talk about the first one which is
+confidentiality so let's say if you are
+working on this peer-to-peer network and
+if you have let's say a and B we also
+have C and D let's talk about them later
+so we have a and B say a want to send a
+message to B now this message can be
+anything it can be a simple message
+let's say hi hello all its it can be
+very confidential let's say your bank
+details and if you are sharing those
+details on the network and it is open it
+can be accessed by anyone but let's say
+we have seen between IC say is hey a is
+sending a message to B and C can
+actually read it that's something which
+we don't want right we want our data to
+be confidential it can be a simple data
+or a varies
+but everything should be confidential so
+that's one thing we want to achieve the
+next thing we want to achieve is
+integrity
+so let's say if a is sending a message
+to B and of course we don't want anyone
+to see that message but let's save serve
+a simple message and the message is hey
+let's meet at 6 p.m. now if someone else
+is able to see that message that's fine
+with me but let's say C comes in between
+I'd say hey I have read the message ok
+but then I also want to modify it C
+modifies the data by saying hey let's
+meet at 5 p.m. that's what the vellum
+starts right someone in between is
+changing my data so the data which is
+received by B is different from what a
+is sending and that's where we have an
+issue of integrity we don't want our
+data up to be modified all that work the
+third one is non-repudiation which
+simply means no one should say that you
+have not done that I have not done that
+example let's say if a sends a message
+to B as by saying hey let's meet at 6
+p.m. and let's say if B showed up and is
+not there after some time we will say
+hey I have not sent you any of that
+message so we don't want that if a is
+sending a message to be there should be
+a prove that a has actually sent the
+message that's about not a variation the
+fourth one is authentication so let's
+say B has received a packet and the
+packet with all the message is let's
+meet at 6 p.m. and the message is sent
+by a what is it guarantee that a has
+actually sent a message it can be C as
+well so maybe C has sent the message in
+the name of a or maybe some other
+identity and that's what it all starts
+right we don't want anyone else to send
+a message on someone else behalf and
+that's why we have an issue of
+authentication so how do you solve this
+for problem and that's where we have a
+concept of cryptography now if you talk
+about this term cryptography it's
+basically had two terms the first one is
+crypt and second one is grothy so
+goodness basically means hidden or
+secret and graph is basically writing so
+that means when you send a message you
+have to convert your message in such a
+way that someone else will not be able
+to read it now when I send someone else
+it should be readable only by the
+receiver but not by anyone else what do
+we do that so what we do basically here
+is we use a concept of encryption
+and decryption now what it means so
+let's say if you have a and B if a want
+to send a message so that message will
+be first encrypted and we will get
+something new known as a ciphertext now
+ciphertext is basically unreadable
+format and then this under table format
+ciphertext will go to the receiver end
+let's say B now B will be able to see
+that but unfortunately the moment you
+encrypt a message you can read it only
+when you are decrypting it that means if
+you won't read the message you have to
+decrypt it how we'll do that the only
+way to encrypt and decrypt something is
+with the help of a key so if a and B has
+a key they can encrypt and then decrypt
+no one else can do that because it did
+would have a key with them so based on
+these keys we have two different types
+of cryptography
+the first one is symmetric key
+cryptography the second one is a
+symmetric key cryptography and what are
+those that we'll discuss in the next
+video
+in this video we'll talk about types of
+cryptography so basically there are two
+types the first one is symmetric key
+cryptography the second one is all
+symmetric key cryptography now as names
+such as the first one should be having
+symmetric key and second one will have
+two different keys right so let's talk
+the first one so let's say assume we
+have a and B now a want to send a
+message to B what a will do Abel simply
+encrypt the message using a key so let's
+say that key is K 1 so using a key K 1 a
+will encrypt a message that message will
+go to be the in fact even B cannot read
+that message because it is encrypted
+format so B has to decrypt it now which
+key B will be using of course the same
+key right we just gave one so a and B
+both will have the same key which is k1
+that's a different question
+how will they share this key with each
+other of course not a network right at
+the end we want them to have the same
+key which is k1 so now let's say we have
+one more we have a and C so of course we
+have be there so if I want to send a
+message to see now what above key a
+should use should a use k1 of course not
+right because b has k1 so if a want to
+send a message to C or we should not be
+interpreted by anyone else it will use a
+different key now and let's say we will
+leave that as k2 so between a and B we
+have k1 between a and C we have k2 let's
+say B and C won't attract what key they
+will use will they use k1 of course not
+will they use k2 of course not
+they will need a different key which is
+k3 whatever says as the number of user
+increases we have to increase the number
+of keys and it will be difficult to
+manage one example in my pocket I have
+to carry hundred keys because if I want
+to interact with hundred people I have
+to manage all the keys we don't want
+that so that's one of the topic of
+symmetric let's move towards asymmetric
+asymmetric cryptography also known as
+public key cryptography so basically we
+use two different keys here one is
+private key and one is public key so
+what is this public key and private key
+as names
+just everyone will have two kids let's
+say a want to send a message to BB send
+a message to C's so on this network we
+have multiple nodes each node will have
+two keys the private key and a public
+key so a will have its own private can
+public key B will have its own time we
+can public key C will have its own
+private can public key if you want to
+encrypt and decrypt the message you have
+to use both the case not one so to
+encrypt a message you can use public key
+but to decrypt the message you have to
+use private key if you are using a
+private key to encrypt the message then
+you have to use a public key to decrypt
+a message so you have to use both decay
+the same time you can't simply say I
+will link it with public and equate
+public key that's not possible so we
+have to use both so if you are
+encrypting with private you have to
+decrypt with public yeah if you are
+encrypting with public every ticket with
+private how do you achieve security here
+so let's say if a want to send a message
+to B as we know the public key of B is
+known to everyone public right so of
+course a will also know the public key
+of B so what I will do a will encrypt
+the message with B's public key and then
+that message goes to B of course
+everyone else on the network can see
+that message the encrypted message but
+no one can decrypt it you know why
+because that message will be decrypted
+only with B's private key and who has
+B's private key of course only be the
+private right so you will know your
+private key and everyone else will know
+your public key so that's how you do it
+so how do I achieve security and click
+the message with public key and to give
+the message with private key let's do it
+again so let's say C want to send a
+message to D so which public key si will
+use so C will use a public key of D so C
+will encrypt the message with this
+public key and D will decrypt the
+message with its own private key so
+that's how this
+cryptography works but now the question
+is what is that key is is it a number is
+it the text that we'll discuss in a
+separate video
+in this video we'll talk about digital
+signature why do we need it so let's go
+back to the previous video where we have
+talked about four problems on the
+network the first one was
+confidentiality second one was integrity
+third one was non repudiation and fourth
+one is authentication so we have talked
+about confidentiality right how do we
+achieve that with the elf of
+cryptography of course what we do is we
+use a receivers public key to encrypt
+the message and then the moment this
+message received at the receiver end the
+receiver will decrypt the message with
+the help of his own private key and
+that's how it works and no one else can
+actually decrypt the message because no
+one has the receivers private key so
+that works right we have achieved
+confidentiality
+what about authentication how do we
+achieve that and that's where we have a
+concept of digital signature so let's
+imagine we have multiple nodes on this
+network and one of them is a and the
+other one is B and B has received a
+packet or the message by saying let's
+meet at 6 p.m. and packet claims that
+this is coming from node and a and this
+sort of starts you know how can you be
+sure that this packet has came from node
+a and how node a can say hey I have sent
+that message so to solve this problem
+you know in real world as well what we
+do when we write a letter
+we also sign the letters like that's
+your signature which specifies that this
+letter has been sent by you or written
+by you how can we do that in the virtual
+world of course we cannot use a pen well
+right and that's why we have to use a
+digital signature how can we do that so
+let's imagine we have two keys right so
+everyone will have two key a private key
+and a public key if I want to send a
+message so let's say a want to send a
+message to B and the messages let's meet
+at 6:00 p.m. now before sending that
+message what if a will encrypt the
+message with the help of a private key
+and then this message goes to the b and
+b is able if you decrypt it with a is
+public key but then hold on a brick key
+will be available to everyone right
+that's the case we are not trying to
+achieve confidentiality here we are
+trying to achieve signature the moment a
+is able to sign the message by his own
+private key
+decrypted by a public key on the B's and
+now be sure that this message is coming
+from a because this message was able to
+decrypt with the help of a spa breeki
+and the only way you can do that is by
+if this message has been encrypted by a
+private key and now we have achieved
+authentication right but then we are
+losing confidentiality right how can we
+achieve that so what we normally do is
+from the azar itself
+so before sending the message a first
+will encrypt the message using a s
+private key and then the same packet
+will be again encrypted with the help of
+B is public key so we have double
+encryption using B's public key and then
+a's private key well be received that
+package it will first decrypt the
+message with the help of B's private key
+and then it will again to give the
+message using is public key and that's
+done right now we got a message so we
+have achieved two things here
+confidentiality and second one is
+authentication and that's how it works
+so even if you have seen between C
+cannot decrypt the message because it is
+encrypted with the help of it B is
+public key right that's how we achieve
+signature
+in this video we'll talk about nodes and
+the blockchain system we have a concept
+of nodes now you can imagine a computer
+or mobile phone or network is known as
+nodal in fact the Internet which we are
+using now the devices which we use are
+nodes right example it can be router it
+can be desktop anything so in the same
+way in the blockchain network also we
+have a concept of nodes
+now this nodes can be again a computer
+or a mobile phone
+now what this node does now based on the
+type of node you have it perform
+different operations now first of all we
+have two different types of nodes the
+first one is full node or you can call
+them as fully right ated node the second
+type of node we have is partial node or
+you can say light nodes so let's talk
+about full node first now full node is
+basically a computer which will have the
+entire blockchain so the current size of
+blockchain is 188 GP I'm talking about
+today's date which is 28th October 2018
+so it is 188 GB and every date is
+increasing so all this data will be
+stored on full node this full node has
+one more task of verifying the node so
+first it will store the entire
+blockchain second it will verify the
+blocks which is getting added so every
+time the connected note says hey we got
+new block now so this full node will
+verify the entire blockchain and once it
+verifies then only it will store it you
+know something like let's say if the
+beard node says hey node we got a new
+block for you but this full node will
+check ok so you are giving me a new
+block let me first verify it after
+verifying it then only it will add that
+block in the full node now induction we
+have one more table which is - now - I
+basically mined the blocks now again how
+that works that we discussed later we
+have a concept of transactions the
+transaction goes into a block a - will
+mine it we talk about that later a full
+node can also be a miner basically if a
+full rotor computer runs a mining
+software then we can call them as mine
+as well it's not compulsion that a full
+node should be miner as well okay so we
+have two different things a full node
+and then we can have a full node with a
+miner now only thing is we talk about
+full node we only need a huge amount of
+storage which is approximately 188 GBS /
+now what
+you want to be a miner that's where you
+need a huge computing power now when I
+say huge computing power I'm talking
+about stack of CPUs and huge amount of
+GPUs so - they use CPUs and GPUs as well
+you can try those things with your
+laptop but then you can never mind
+with your laptop because it has a very
+low power you need a huge amount of
+power and to run that machine you need
+electricity as well so that's a huge
+investment so for the full note you
+don't need a huge investment you can use
+your normal computer provided you have
+200 GB free now but then if you want to
+be a miner you need a huge amount of CPU
+and GPU power basically you need an
+entire Center with CPUs and GPUs
+investment right
+but then as a miner you earn incentives
+as well so basically we have incentive
+model so every time you mind a new block
+you do on the transaction fee and then
+some bitcoins as well again that's only
+specific to Bitcoin but again we'll talk
+about that later but full node as a full
+node you don't earn but then you can be
+a miner to earn because they're
+investing a lot of money on the other
+hand we have a concept of partial nodes
+or light nodes example let's say if you
+want to use Bitcoin if you want to use
+any ballot and if you want to do that on
+your mobile phone of course your mobile
+phones need to have that software now of
+course this will also be a node now the
+moment you install software
+this becomes a node but then this will
+be a partial node because I cannot
+simply download the entire blocks on
+this phone so this will have somewhat of
+blockchain so that it can't run so that
+it can you know send money to someone
+else that's your light node or against a
+partial node so we have a concept of
+full node who will verify the
+transactions we will store the entire
+blockchain and then we have partial
+nodes who can only they use it for valid
+purpose so that's about no talking we'll
+talk about in detail how exactly miner
+works how exactly the gate blocks just
+to get the idea of nodes this is what
+nodes are
+and let's continue this series on
+blockchain and we are talking about the
+prerequisites for blockchain and one of
+them is hashing so in this video we'll
+talk about those terms like hashing hash
+function hash value so let's get started
+so basically hash function is a
+mathematical function which takes
+arbitrary length of numerical data and
+convert that into a fixed length
+numerical data as I mentioned the input
+will be of any length it can be a
+smaller value it can be a bigger length
+value but the output will be of fixed
+size now based on the algorithm which we
+are using to do that the output length
+will change example we have a concept of
+message digests we have a concept of sha
+so based on what type of algorithm we
+use we'll be getting a different set or
+different lengths of hash value but your
+input can be of any type it can range
+from one bit to thousands of millions of
+bits and that's the amazing part you
+know so even if you're passing a huge
+chunk of data let's say 5 GB of data as
+an input you will get a fixed line size
+example let's say if you take my name
+there so my name is now in 26 if I type
+that text you will get h value it's
+going in a function and that function
+returns you this value the amazing thing
+is if I use a certain algorithm let's
+say if I'm using sha-256
+and if I type my name then if I say -
+that means ID doesn't matter at what
+point I do that it doesn't matter how
+many times I do that I will get the same
+hash value that means for the same input
+we will be getting the same hash value
+every time the next amazing thing we
+have is even if you have a small change
+in your text it will change your hash
+value in a very different way you can
+see even if I change my reddy from small
+r to capital all you can see the change
+now it is changing the entire hash value
+it's not that someone can guess now
+right it's a very different thing
+the third amazing thing is you cannot
+get the actual input from the hash value
+that means that it was is not possible
+of course we convert the given data into
+hash which is very easy to do but it is
+very difficult in fact it's almost
+impossible to go back and just to remind
+you hashing is not encryption because in
+the encryption we can get it up back
+using decryption
+but that's not the case with hash
+because in hash once you get the hash
+value you cannot get the data
+back of course right how would it get it
+because when you do hashing you will
+lose lot of data let's say even if you
+have your input as in jeebies the output
+will be in bits right just of course you
+are losing a lot of your data so it's
+impossible to get your data back what my
+important thing is for two different
+messages you will be having two
+different hash values you will never get
+the same hash value if that happens we
+will call them as collision now you
+might be asking ok this is a theory
+right how do we implement that now first
+of all in block shall we use them okay
+so anyway implement blockchain we will
+be using different algorithms we will
+not be writing those algorithm by
+ourselves if you want to know more about
+the algorithm you can just check out
+some other videos or I will try to make
+a separate video on explaining how
+exactly to create that algorithm but as
+of now what we are doing is we are
+taking the input and we are getting the
+output we will be using this output will
+be using this hash value in the
+blockchain so there are different
+algorithms are believable you can try
+them out so one of them is MD which is
+message digest and there are different
+versions of it we have M t2 and t3 and
+then they just watchin b6 there's also
+md5 but fevers back there was a tack on
+md5 and it was compromised so that's why
+people are not using md5 now so now they
+are moving towards sha which is secure
+hash algorithm which is built by NSA so
+again that we have different versions
+for it we have sha 0 sha-1 sha-2 and now
+we have this 53 in block shouldn't we
+normally use
+sha 2 in sha - as Ville is a family
+actually and we have different versions
+of it the popular - popular version we
+have is sha-256 and sha-512 this numbers
+actually represent the output bit values
+example if I say sha 256 it will be
+having output as 256 bits now if you say
+5 and 2 if of course it will be having
+output as a 5 and 2 bits but how exactly
+you will be using hash and blocks and
+and just a different concept so once we
+start with blockchain you understand how
+exactly we can use hash there but again
+hashing is basically a very important
+concept so let's take another example
+for hashing which is not weighted -
+blockchain so let's say if you want to
+download Ubuntu now of course you can
+just go to Google search for the one -
+sound load and you can get it so it will
+take you to the official website of it
+and from where you can download the file
+of around 1 GB and it will work right
+you will get the file
+but what if you
+download it from torrent because it
+gives you that feature right it gives
+you multiple peers you can download it
+from multiple places so of course it
+when I prefer to download it from
+utorrent instead of going to the
+official website but there's one race
+what if this set up which you are
+downloading from torrent it can be
+malicious right so someone else have
+uploaded that set up and you're
+downloading it and which will be having
+some viruses or some malware right so
+how do you verify the set of which we
+are downloading is official so what we
+can do is it on the official website
+they have a set up plus they also have a
+hash value of course we are not
+downloading the set up from the official
+website but we can get the hash value
+even copied now once you get this set up
+from the torrent you can generate the
+hash value for the particular setup so
+let's say the set up is of 1gb you can
+use on a surface which will give you the
+hash value of that set up and then you
+can compare if the hash value of the
+generated one and the hash value from
+the website is same that means the set
+up is official because even if some
+hacker has changed to one or two bits
+it will change the entire hash value
+right so of course that's how you can
+verify so yes we can use hash value in
+multiple places of course in terms of
+security but then we can use that
+induction as well again how to use it
+that we'll see in data
+in this video we talk about
+three the way it comes to blockchain we
+have got up blocks and then this blocks
+will be connected with the help of hash
+value again how exactly that was a
+that's a different thing
+every block will have transactions now
+this can be one transaction or thousands
+of transactions and then we also want to
+find a hash of the block right so what
+do you think will you just combine the
+entire block and find one hash or will
+you find the hash of each transaction
+now if you want to find the hash of each
+transaction you have to store all the
+hashes right so one block will not have
+one hash one block will have thousands
+of hash we don't want that we want to
+get only one hash one of the way to
+implement that is with the help of local
+tree now first of all we'll try to
+create a tree here now when you look at
+a tree a tree will have a root tree will
+have leaves and a tree will have nodes
+so the end nodes they are normally
+called as leaves the nodes which has
+this leaf nodes or the nodes in between
+they will be called branches and then we
+on the top we have root so how do you
+build this tree so let's imagine in one
+block we have ten transactions now if
+you will start gathering the hash of
+each transaction so let's say for ten
+transaction you got then hash value now
+what you will do so you will find the
+hash value of first and second then you
+will find the hash value of third and
+fourth and the list goes on so you will
+find the hash of all this now once
+you've got the hash of what I'm - you've
+got the edge of three and four you got
+the hash of five and six and this goes
+on again you will combine the hash of
+one two and three four right you will
+get the hash of one two three four and
+then at the end you will combine
+everything to get a hash of one to ten
+that's how we do it that's how you build
+this tree so in this example you can see
+the end is of even-numbered right you've
+got to end transactions but what if you
+have odd number because normally we talk
+about Merkle tree it's actually a bunny
+tree so in binary it you need to have
+even numbers of nodes so at the end if
+you have let's say nine transactions you
+will at the end you will just repeat the
+transaction so you will say nine nine
+repeated right that's what you do so at
+the end when you combine all these
+things on the top you will get hash
+that's a hash of the merkel root and
+that's how you find a one hash of the
+entire block that is very useful when it
+comes to
+saying again going to start adoption you
+will see how that works so that's the
+basic idea about model 3
+and in this video we'll talk about
+blockchain architecture so we have
+talked about the basics of it right we
+have talked about hashing we have talked
+about mobile tree now we know the P R
+equals it's for block change in this
+video let's focus on the architecture of
+it now unless the architecture I'm
+talking about what exactly blockchain
+means and what is that inside each block
+so let's start with it now blockchain is
+simply a database right of course none
+of people have a lot of expectations on
+blockchain they feel blockchain can
+solve all the issues but not exactly
+blocks will solve issue based on data
+right so this issue nowadays we have is
+we can manipulate data and plus we also
+want to make sure it is distributed and
+that's what we can achieve with
+blockchain when you say a block in block
+chain you have data so now what I did
+I'm talking about
+now as blockchain type changes you know
+we have different types of block change
+which we'll talk about that later in
+detail but I want me to talk about
+different blocks change they will have
+different set of data now one of the
+blocks will which is very famous it's
+public blockchain in which the example
+is Bitcoin right the first locks an
+implementation now the Bitcoin block
+will have what now we use Bitcoin to
+send money right so of course it will
+have from it will have to and the money
+as well now that is the data which you
+save in a block now with this data you
+have one more thing which is known as
+the block header now why do we need a
+block header the thing is you will be
+having out of blocks right so how can
+you fail between each block and how
+can you create that chain which I'm
+talking about and that's where the blog
+header comes to the picture so what this
+block etre will have first thing we need
+is every block need a timestamp right
+that's that's important right if you
+don't have a times time how would you
+know at what point on when this block
+was created so we need a timestamp the
+second thing we need is a version right
+now we have different versions of
+blockchain or the protocol which we use
+so that's one thing we'll be able to
+have so you will have a timestamp you
+will have a version and then we will
+also have a muckle tree now a ribbon but
+we have talked about mockery right so in
+one particular blog we'll be having a
+lot of transactions and then you need
+only one hash of it and that's why we
+will need a merkel root so we need the x
+time we need a version a number called
+road now what else now we need two more
+things now I'm going to talk about
+public blockchain one of the algorithm
+which is very famous
+is proof-of-work again we'll talk about
+that later but then we want to modify
+the block we have to use P Oh W which is
+proof of work and to make it work we
+need two more fields first one is the
+difficulty target and second one is
+nouns so we'll talk about that later
+once we talk about the proof of work but
+as of now we need these two fields as
+well now we have talked about five
+fields so in a block you'll be having
+this fight but we have one mole and that
+is your previous hash now what a hash
+I'm talking about every block will have
+a hash right how will you create this
+chain every block will have the hash of
+the previous block so example let's say
+if you have five blocks now the second
+block will have the hash of the first
+block the third block will have the hash
+of second block the fourth block will
+have the hash of third block and that's
+how you create a chain right
+you can track backwards right so let's
+say if you are on fifty-fifth the block
+now if you want to know the previous
+block of course you have to follow that
+chain right you have the hash of
+previous blocks with you now the
+question is what is the advantage of it
+if you remember when we talked about
+blocks and we talked about immutability
+right which simply means once you create
+a block in a block chain no one can
+change it
+okay but I said no one can change it is
+it password predicted or something what
+if I say blocks is open anyone can
+manipulate data from blockchain okay but
+why people say it is secure so let's
+think about it now they talk about hash
+every time you change a data it will
+change the hash value as well so example
+let's say if you have this five blocks
+and then the hash of fourth block is any
+fifth block right the hash of third
+block is the end fourth block the moment
+you change any block let's say I want to
+change the second block here in that
+case what will happen is the moment you
+change the data of the second block it
+will change the hash as well right now
+the hash is changing right now it will
+affect the third block because you have
+changed the hash value and that's what
+all of starts because if you change
+second one it will change the hash and
+then it will affect third one and now
+again you have to regenerate the hash
+for third one to make it work right and
+that's where it will affect the fourth
+one again you have to do the same thing
+for fourth and it will affect the fifth
+one now the number of blocks which we
+have in block is huge so of course if
+you change any one block you have to
+change all of those is it difficult
+of course not right we
+devoid of supercomputer so what we can
+do we can collect thousands of devices
+with us and you can change the hash of
+each block it's not that impossible
+but then how can you make it secure now
+that's where the concept of P or W comes
+in the picture so every time you change
+something in a blockchain or if you want
+to add a new block it has to be
+validated I'm talking about the public
+blocks in now so without validation you
+cannot add a block that means you have
+to do some processing to add a block and
+that's where we have a concept of PW
+which which says it will take at least
+ten minutes for anyone to add a block in
+a blockchain now when you say you even
+if you change one block and if you have
+five blocks you have to wait for 15
+minutes to change the entire block okay
+that's one thing it will take a lot of
+time second your block chain will not be
+stored in one machine but it will be
+there if it 21 people anyone can be a
+part of blockchain network this is not
+just a central server so example let's
+say in this network if you have ten
+people everyone will have their own copy
+of blockchain of course it is a full
+node we have talked about that before so
+if you have ten people when you add a
+new block in a blockchain it has to be
+verified by everyone right so everyone
+will come in consensus to add that block
+in a blockchain and that's why we have a
+concept of consensus algorithm to add
+data in a blockchain and that's where
+you are making your blocks insecure so
+first of all you need a supercomputer to
+change the block and you have to weigh a
+lot of time plus even if you want to do
+that you need a 50% majority in the
+blockchain Network which is almost
+impossible to achieve right because to
+process that P or W you need a huge
+amount of GPUs and CPUs you can't be
+that rich to have the hold of 50% of the
+doctor network in the world right and
+that's how you make blockchain secure
+now there's one more question
+every block will have the hash of
+previous blocks so fifth block will have
+the hash of fourth fourth will have a
+hash of third what about the first block
+now the first block is known as a
+Genesis block now Genesis block previous
+hashed value will be zero right because
+we don't have any block before that in
+terms of Bitcoin it was created by
+Satoshi Nakamoto the Genesis block and
+then
+on that blog we got new blogs so that's
+something to remember so that's it
+that's about the block structure in the
+blockchain architecture
+and this video will talk about types of
+blockchain no chain came into existence
+for the Bitcoin right so they wanted to
+implement Bitcoin and they wanted to
+make it secure and that's where we have
+blockchain right on the other hand the
+industries they looked at blockchain and
+they thought we can implement this
+technology in our areas so whatever
+column we are facing can be used locked
+in there so initially when you talk
+about blockchain was majorly for crypto
+currencies we had Bitcoin and then we
+came up with a theorem and then they a
+lot of coins available right so we have
+altered coins as well and some well they
+were very happy with rock chain but what
+about finance industry what if you talk
+about education industry how they can
+use blockchain now what are the issues
+with the auction is some people say it's
+not secure because all the transactions
+are open yes they are anonymous we don't
+know who is sending what money to which
+address but still you can see this stuff
+online because all the data of Bitcoin
+blockchain is available openly that's
+why this name has the public blockchain
+it is open plus anyone can be a part of
+this network so let's say we have ten
+nodes which is working on blockchain and
+now if you want to be a part of it you
+can do that you can have your own node
+and you can be a part of that open
+blockchain of course it can be a miner
+or you can just be a local node but then
+you are able to join that public network
+so that's the issue which other company
+don't want they want to have that old
+blockchain is it possible and yes that's
+why we have the next type of block sure
+which is private so private blockchain
+is specially for one company let's say
+if I feel hey this is my finance
+industry or this is my company which
+works with client data or money I don't
+want this data to be shared with anyone
+else I want to have my private
+blockchain I don't want anyone else to
+contribute so the number of nodes who
+will be validating my blockchain and the
+number of nodes who will be adding the
+blocks in my blockchain will be
+controlled and will be knowing about
+everyone and that's where we have this
+private blockchain the next one we have
+is federated blockchain
+now this is where you'll be having group
+of people or group of companies they'll
+be coming together to create a separate
+blockchain and of course there will be
+someone who will be leading it and but
+then it will be group of people and you
+will
+knowing everyone empty group so let's
+say if you want to add a new block you
+will be the known entity it's not like a
+public ledger of public blockchain where
+anyone can be a part of that network
+right so basically we have three we have
+public which is open to the entire world
+you can be a part of the network second
+we have private which is only limited to
+one company or they might want to add
+the transactions privately but it will
+be having only right axis maybe you can
+allow public to read the data but then
+the right thing will be restricted on
+the other hand we have federated when
+you have group of companies working
+together again we have on one more which
+is permissions or permission less blocks
+and we'll talk about that later but
+these are the three types now the
+question is which is the best one is in
+public private or Federation of course
+right public is best because anyone can
+be a part of it
+now since we are using proof of work
+which takes ten minutes for each block
+so it is slow on the other hand we talk
+about private or federated is fast
+because we don't have to use P or W
+because all the entities here are known
+there is one concept which is very
+famous in the production world consensus
+so what is consensus so let's say we
+have five mining nodes here now all
+these nodes will be having a copy of a
+blockchain and all the copy will be of
+same state so they are the exact copies
+here now what if you got a new block so
+yeah we have done some transactions and
+you got a new block here now this block
+is supposed to be added in a blockchain
+but then which mining node will do it of
+course if you say hey let's give it to
+the latest mining node later I'm a
+mining node five and notify will add
+that in its own blockchain and with the
+help of the protocol we can just
+replicate in all the block chains here
+in different nodes but is the problem
+here what if note 5 is malicious so how
+you make sure that all the nodes come to
+the consensus and they will have the
+same copy of it and that's where we have
+to follow some consensus algorithm now
+in the blockchain word we have so many
+constants algorithms so using which you
+can actually agree on one particular
+state of a blockchain so if the new
+block is added in a blockchain who will
+add it that can be defined with the help
+of consensus now based on it is
+permission less or permission blockchain
+we have different consensus algorithm
+available the first one which is proof
+of work which is very famous thanks to
+Bitcoin so Bitcoin uses P or W to
+achieve the consensus right now what is
+P or W in short let's say we have all
+the nodes here now all this node will
+spend some computing power doing some
+calculation and whoever wins the
+calculation or whoever win the puzzle
+they will add this block in a blockchain
+yes they will receive some bitcoins and
+that's a different concept right but in
+P or W we have to make sure that the
+node before adding the data in a
+blockchain is doing some computation and
+that's how we can understand yes they
+have spent some computing power so we
+can trust them
+that's dpow part we have some more in
+fact we have POS in the etherium world
+now POS stands for proof of stake but
+why we need POS when you have P or W
+that there is one issue with P o W we
+have to spend huge amount of computing
+power do
+you think we all that we are already
+short of resources available and you're
+spending huge amount of resources the
+power resources on the blockchain same
+proof of stake you don't actually do a
+lot of computation it's more about stake
+so let's say if you are a minor and if
+you want to add that block in a
+blockchain of course in a Bitcoin
+network we didn't network you will
+receive some bitcoins or some currency
+when you win it right but then before
+applying for that or before going into
+that blockchain you will be putting some
+stake in that blockchain now when you
+say you have a stake in that let's say
+I'm spending let's say five
+cryptocurrency of some type may be
+bitcoins or some other points so I'm
+saying I'll be investing five coins
+there but you might be thinking okay
+what's a big issue
+anyone can invest no if you if I
+malicious I will not do that right
+because if a malicious if I do something
+wrong they will kick me out of the
+blockchain right and I'm secure now so
+when I say I'm spending five bitcoins or
+five coins that means you can trust me
+so whoever has the highest stake they
+will win the puzzle or they will win the
+block there likewise we have so many
+other algorithms as well we have Bo
+eighty which is proof of elapsed time
+built by Intel then we have P or D which
+is proof of deposit so it's almost say
+mistake but here you are depositing
+amount before entering to the blockchain
+then we also have P or C not the proof
+of concept but proof of capacity now
+here you're not actually going for the
+computing power which is CPU which which
+consumes a lot of electricity power but
+here you are consuming the hard drive
+space so whoever has the huge capacity
+they might win the block there so that's
+the general concept of consensus so the
+idea is using consensus algorithm we can
+actually agree on one particular state
+of a blockchain in the entire network
+and in this video we talk about
+proof-of-work POWs if women were in the
+last year we have talked about consensus
+or and who and why do we need consensus
+in blockchain now when it comes to proof
+of work
+it's an consensus algorithm just like
+POS and then we have POC as well this is
+one of them but this is famous because
+of one thing Bitcoin now first of all
+why do we need a P or W nothing about
+this when you have a blockchain and of
+course in this blockchain network you'll
+be having multiple nodes and all this
+node will be having the same state of a
+blockchain but now let's say you have a
+new block now who is responsible to add
+this new block in a blockchain first of
+all we have to verify all the
+transaction which is quite easy but who
+will add this block in a blockchain it's
+important for us that that no it should
+not be a malicious node because it can
+manipulate data we don't want that every
+node who is competing to add that block
+in a blockchain has to do some computing
+work now what kind of computing work so
+this is normally we say they will be
+given a mathematical calculation and
+whoever solves that calculation will win
+also any when you say they will win they
+can add the block in a blockchain and
+they will receive some points or some
+rewards now in Bitcoin network they will
+receive bitcoins in some other network
+they will have their own rules but the
+important thing is they will win and
+they will add this block in a blockchain
+but then why do we need it is because if
+you are spending huge amount of
+computing power so this chances goes
+down that you will be a malicious
+software but you will be a malicious
+node the second thing is let's say in a
+blockchain if you have 30 blocks and if
+you want to change twenty fifth block it
+will affect the hash of all the
+remaining blocks right so I can
+recalculate right I can recalculate the
+hash of all the blocks it is easy right
+I should know because every time you
+make a change every time you add a block
+in a blockchain you have to P or W which
+will take some amount of time
+Samant of computing power if you are
+that rich and if you have so much of
+time you can do that but hold on the
+moments you are doing that some other
+nodes or some other block will be
+generated which will be added in a
+blockchain so it makes your attack
+useless but we have
+one question here what is that
+mathematical calculation so of course
+every node in a blockchain or every
+miner who want to compete will be
+solving that mathematical problem
+so from video one to this video we have
+the same question what is that
+mathematical problem now first of all
+the complexity of that puzzle depend
+upon the network the size of the network
+how many users are active and what's a
+blockchain size and all the other
+factors now this can be easy example
+let's say if I give you a number let's
+say five twenty five you have to find
+the factors of that number maybe I will
+give you some extra logic as well you
+know these two numbers should have a
+difference of maybe at least fifty
+something like that okay now you will be
+spending your computing power to
+calculate that now this is easy it can
+be done in seconds but let's say if I
+make it difficult if I talk about hash
+functions
+so just to recap about hash if you give
+input to hash function it can be any
+length input it will give you fixed size
+length and the other thing part is if I
+give you Naveen it will give you our
+unique hash but if I change something
+from the mean if I change that capital a
+to small it will give you a very
+different hash value so you can't even
+guess okay so you have to generate so if
+I give you in fact if I give you the
+output of a hash and you have to guess
+the input and that's what you will be
+doing lot of calculations right maybe I
+will say there's a five digit number and
+you have to find the input for this
+particular output now maybe if I give
+you there's a name of ten letters from
+the dictionary you have to find it so
+something like that so they have to do
+this computational power by Bruce forty
+because you can't apply logic here it's
+all Bruce force right so if you have
+huge computing power you can do it
+easily but if you don't have that you
+may lose and that's the mathematical
+equation which they do so do we have any
+drawbacks of this yes we have drawbacks
+don't you think we are wasting so much
+of energy here we are doing so much of
+computation which is useless so that's
+one problem second one is the 51% attack
+so what if I have a network of 10 nodes
+so let's say there is a blocked a
+network of 10 nodes and out of those 10
+over 6 nodes
+are malicious in this case you have more
+than 51% of the network in your hand so
+of course this can be hacked that can
+you can hack the introduction it work
+now so that's two issues we have but
+then that can dissolve with some
+advanced things that's powr it is proof
+of work for you
+so what is etherium now let's go back to
+Bitcoin so when we talked about Bitcoin
+we said okay Bitcoin is a technology
+which is based on blockchain same goes
+for aetherium but why do we need a
+Tyrian when you have Bitcoin now think
+about this when you say blockchain
+doctrine will make internet
+decentralized again okay when you say it
+was centralized because of all these big
+companies whatever you do online goes
+through this big companies right we have
+Google Amazon Facebook they are managing
+the entire internet now so we want to
+make a decent rise and we said okay
+let's use blockchain but the only thing
+which we know about the options was
+Bitcoin but if we talk about Bitcoin
+Bitcoin is only a peer-to-peer
+electronic cash system so that's good so
+if you want to do transactions online we
+can use Bitcoin so when you say a
+Bitcoin blockchain every block will be
+having data right so all the transaction
+data but what about software's think
+about the current internet world what we
+do we write apps right we create
+websites we have enterprise applications
+so all these applications are running on
+internet which is centralized if you
+want to make it decentralized we need a
+network which can run applications which
+are decentralized and that's where we
+got aetherium so thanks to Vitalik
+between who is the inventor of aetherium
+so in a theorem we have this amazing
+concept known as a VM which is aetherium
+virtual machine ok so if you are coming
+from a Java or.net background you know
+what I'm talking about right so to run
+any application to run the software in
+Java you need JVM to run which is Java
+Virtual Machine in the same way in the
+Athenian boil if you want to write
+software's and if you want to run them
+on the ATM network you need that virtual
+machine ok so that means we have two
+different concepts right we have Bitcoin
+business mode for cryptocurrencies and
+then we have etherium which is mode for
+decentralized applications in fact in
+short you can call them as gaps ok but
+there is one question what about the
+cryptocurrency in this platform because
+on this side we have Bitcoin so in the
+Atheneum platform first of all this is
+not a sector currency it's a platform in
+this platform if you want to use a
+currency we have ether because if you
+want to run this decentralized
+application we do need the
+cryptocurrency there and that is eaten
+here so we also have a concept of gas
+which we'll talk about later but as of
+now we have a theorem which is a
+platform basically it's a open software
+platform so you can build an own
+application on a theorem it is damaged
+to start with so we have a special
+language which we using which you can
+build applications there but then it's
+quite easy so once you are familiar with
+Python or JavaScript learning that
+language will be easier so once you know
+that language you can simply go to
+eternal network and you can build your
+own application you can use the existing
+applications or you can build your own
+you might be thinking it would be
+difficult of course not is that easy to
+start with yes if you want to make
+complex projects that's where you have
+to apply some logic it will take some
+time but starting with it is damn easy
+so just to recap a theorem is a platform
+where you can create a decentralized
+applications which is DAB's in this case
+so it also has its own cryptocurrency
+which is ether so that's the basics on a
+theorem
+and in this video we talk about
+contracts now if remember in the last
+video we have talked about it here iam
+saying it is and it's a blockchain
+basically where you can write codes you
+can write programming codes now if that
+programming code it represents any type
+of contract we will call them as smart
+contracts okay I know it's confusing
+right so just to keep it simple let's
+take an example now if you talk about
+lot of online websites which are the
+e-commerce websites so most of the
+website we don't trust or an example if
+I want to buy something online I have
+some specific website in mind example in
+India Amazon tip card Snapdeal are quite
+famous but I don't even try other
+websites example let's say there's a
+website named as abc.com
+where you can buy stuff online maybe I
+will not buy from them for one reason I
+don't trust them second reason maybe
+it's not secured so how do you build a
+trust and how do you make it secure so
+when you say I don't trust them what's
+wrong with them so let's say if I order
+something on abc.com as a prepaid order
+but I'm paying the amount before getting
+the product so what if the product is
+not delivered so there's a trust
+resource on my side but what if abc.com
+is a trusted company but not the
+delivery service so let's say XYZ is
+responsible to take that product from
+ABC and delay it to me what if they are
+doing some fraud and so ABC will also
+pay them right so when I pay let's say
+100 dollars for the product out of which
+maybe there will be some Commission
+which this people will be getting right
+the delivery company so there's a trust
+issue between two different parties
+right from my side to ABC from ABC to
+XYZ ok excited should trust me right
+because I belong here so to solve that
+problem we can use smart contracts here
+so what if the entire payment system
+will be automated example I will buy
+something from a be calm which will be
+prepaid but then ABC will not receive
+that money they will receive the money
+only when I receive the product so it is
+that it's something like if-then right
+so in programming we do that so if you
+can implement that programming in that
+system in that supply chain management
+that is smart contracts so I am paying
+but then it is not received by ABC it
+will be received only when I get de
+product XY z-- it will receive the
+commission from ABC only when they do
+the product right so that's the smart
+contracts in fact we can use this not
+just for supply chain management but
+also for let's say if you buy a car we
+have lot of middle person right so we
+have a dealer we have a finance company
+in between who will give you a my
+options so we can automate those stuff
+as well a lot of legal stuff going on so
+smart contracts is efficient when it
+comes to all this process making it fast
+so there are certain benefits of this
+which is fast it is secure because
+they're using blockchain here and it
+builds trust which is very important so
+not just Amazon flip card but all these
+companies all this ecommerce company if
+they can implement smart contracts
+people will trust them right because
+trust is the issue here so that's the
+smart contracts in simple terms smart
+contracts are plan of codes which you
+run on a theorem network but basically
+they are built for contracts
+what's wrong with blockchain if you'll
+see from the first video we are talking
+about good things about blockchain not
+just on this channel if you go on
+youtube search for any blockchain video
+they will talk about amazing stuff you
+can do with dog chain but as with every
+technology blockchain has some drawbacks
+yes there at least up Dom X we can go
+for and in fact some people focus more
+on those drawbacks and stop focusing on
+the things it provides but in this video
+let's try to focus on four drawbacks
+which is there in dog chain welcome back
+everyone my name is ivan vendee and
+let's get started now when you say
+blockchain the auction has multiple
+types out of which the famous one is
+public blockchain and private blockchain
+so the drawbacks which we are going to
+talk about is more for public blocks and
+then private blockchain again till this
+point we have not talked about travitt
+blockchain and how that works we are
+only focusing on public now when you say
+public we have some examples right we
+have Bitcoin we have one of the famous
+one which is a theorem we have us so the
+first drawback is the option is complex
+may not be the technology but the terms
+itself so the moment you start learning
+yes it is exciting it's amazing to start
+when you try to understand those terms
+we have consensus we have changed we
+have nodes - you know so all these
+things actually create a lot of
+confusion initially yes the moment you
+start working on them it will make the
+concept clear but initially it is
+complex the technology itself is damn
+complex right because you don't have a
+central server you have multiple
+machines you have to provide
+coordination there are different
+algorithms available so in general the
+concept of blockchain is complex but
+when you start working on it you know a
+lot of things will get clearer the
+second drawback now when you talk about
+public blobs an example Bitcoin we have
+a theorem the problem is this technology
+promises that they will replace banks
+they will replace all the great cards
+and debit cards now think about this
+when you talk about visa these are can
+handle thousands of transactions per
+second okay
+and that's amazing right every one of us
+use Visa card and we know how far it is
+on the other hand we talk about Bitcoin
+Bitcoin uses proof-of-work as the
+algorithm for consensus
+kento says around seven to ten
+transactions per second now think about
+this if you say Bitcoin technology will
+replace the grade card you have to wait
+so the moment you use Bitcoin there you
+have to wait for some time right because
+we have millions of people doing
+transactions every day so we have to
+handle that right so Bitcoin cannot
+handle that speed so the second drawback
+is slow okay I'm not talking about drive
+adoption here I'm focusing on public so
+public blockchain is slow now the third
+one now this is its only focus on
+Bitcoin and it didn't because a theorem
+still use this proof of work now they're
+going to talk about Bitcoin and a
+theorem they are using proof of work
+right and we all know how much energy it
+consumed to solve a given puzzle because
+not only one node will be doing it right
+we have thousands of miners and everyone
+is solving a given problem and the
+person is of waste of time right because
+the main thing is transaction we have to
+add the block of transaction in a
+blockchain but for that we have to do 10
+minutes of work which will consume huge
+amount of resources we don't want that
+we don't want to waste resources so
+that's the third drawback of blockchain
+let's go over the fourth one the fourth
+one is security or you can say privacy
+now think about this when we talk about
+Bitcoin which is a public blockchain the
+moment you say public it means the
+blockchain is available for everyone
+anyone can see the blockchain data oh
+that's scary so let's imagine Naveen is
+sending ten bitcoins to Rahul now in
+this case everyone knows that nobody is
+sending ten bitcoins to Rahul because
+that data is available in public
+blockchain see if we have the advantage
+that the data will be there in the
+blockchain so no one can change it but
+everyone knows how much Bitcoin I have
+sent to Rahul but Bitcoin says hey you
+don't have to worry about that because
+we will not distorting Naveen and Rahul
+in the blockchain yes the ten bitcoins
+will be dead but then Naveen and Rahul
+will be having a different address and
+that address will be anonymous so no one
+knows who is exactly sending data to who
+right but they know that some address is
+sending data or some address and I know
+that some address is me and the whole
+knows that some address is this guy so
+that's how it works right so it is still
+but the data is there on the blockchain
+maybe if you have a company data which
+is confidential it will be available in
+public blockchain everyone can see that
+maybe who has sent it to whom is not
+dealt but the data is there in the
+blockchain right so that's one issue
+with the public blockchain ok and the
+fifth one which is very very important
+now it is also a part of security now
+everyone sees right doctrine is
+immutable no one can change it and we
+are safe now we are saying it is safe
+because let's say if you have a
+blockchain and if you have 10 - now this
+10 - are responsible to handle the
+blockchain right they will maintain the
+state of fate we'll be using different
+consensus algorithm here but what if we
+have one malicious node ok the moment
+you say you have one malicious node the
+limiting 9 will say hey get out from the
+network right because they have the
+power they are the majority but what if
+you have 6 nodes which are malicious
+that's where the law starts because
+majority wins right and that's the one
+of the issue we have in the blockchain
+that is 51% attack so if you have more
+than 51% of the nodes which are
+malicious and if you have the power to
+it they can attack blockchain and here's
+blockchain can be hacked if you have 51%
+strand so these are the drawbacks of
+blockchain yes we have to focus on the
+benefits but it's good to know the
+drawbacks as well right and it will be
+useful when you debate with some people
+because there are people in the world
+who are saying blockchain is worse
+because of this drawbacks you can focus
+on benefits and they will focus on
+drawbacks doesn't matter so what's
+important is blockchain is awesome
+limiting keeping this thing aside but
+don't worry the drawbacks which we have
+talked about is for public blockchain
+right on the other hand we also have a
+private blockchain and that will solve
+this issue
+and this video will talk about - later
+now in the Gosselin's world we have
+heard so many concepts right we have
+talked about Bitcoin
+we know the concept of a theorem and
+then now we have something new which is
+hyper later in fact the amazing thing is
+between only three years and is so
+famous all the big companies maybe Intel
+IBM they are putting their heart in this
+project so what is hyper nature now as
+per definition on the official website
+it says hybrid ledger is open source
+collaborative effort created to advance
+cross industry blockchain technologies
+it's a global collaboration hosted by
+Linux Foundation including leaders in
+finance banking Internet of Things
+supply chain manufacturing and
+technology now that's a big definition
+right so to understand it better you
+have to understand what hyper ledger is
+not first of all hyper ledger is not a
+blockchain it's not a company it's not a
+cryptocurrency as well now hyper ledger
+is a project so what happened you know
+when you talk about public blockchain we
+have Bitcoin and we have a theorem now
+this works because of it is public and
+then we use a cryptocurrency concept as
+well yes is a big debate should we use
+Bitcoin or not but the thing is
+blockchain technology is solid right
+everyone want to use it so till this
+point everyone was thinking about we can
+use blockchain or we can use
+cryptocurrency to change the market but
+they were talking about b2c which is
+business to consumer but what about b2b
+what about enterprise market and of
+course right even enterprise market you
+want to use blockchain how they will use
+a theorem the problem is the moment you
+talk about your theorem all Bitcoin
+their public blockchain not secure the
+transaction is low so there's so many
+issues with public blockchain to solve
+that problem we got this project which
+is hyper ledger and this is hosted by
+Linux Foundation now if you don't know
+about Linux Foundation I would recommend
+you to go to Google and search about it
+there's so many technologies which are
+part of in us for nation and just
+because of them we are using all this
+amazing technologies including hyper
+laser now so hyper laser is new but then
+in just three years hyper laser got so
+many members from different field may be
+banking technology aviation
+now all these companies came together
+and they are working on open source
+projects so you can imagine hyper
+Ledger's umbrella on a greenhouse for
+blockchain open source products now
+since we have talked about projects
+hyper ledger
+literally has multiple projects now they
+can you can divide into do parts we have
+some frameworks and some tools now if
+you talk about frameworks we have this
+number of frameworks available and the
+most famous out of this is two in fact
+one from Intel sawtooth and the second
+one is fabric fabric is one of the
+popular hyper ledger framework not just
+framework we also have tools available
+so you can use these frameworks and
+tools to make your block chain now
+specifically this can be used to make a
+position to block channel you can say
+private blockchain but then you can also
+views them for public blockchain so
+that's the introduction of hyper ledger
+so let me repeat hyper ledger is not a
+blockchain is not a cryptocurrency it is
+something different a project in which
+you have different frameworks using
+which you can build block chains
+and in this video we'll talk about smart
+contracts in fact we'll be writing our
+first smart contract so we will be doing
+this in two videos the first video we
+will try to set up the environment of
+course like if you want to write your
+smart contracts you need a network not a
+normal network but it didn't network so
+we have to connect our machine with
+detail network that means you have to
+create this machine as a full node oh
+that will be a difficult task right so
+anyway we have to connect with the
+ethier network or maybe a test network I
+can will discuss why do we need a test
+network there so we'll do that first
+then in the second video we will write
+our first smart point lag not a
+difficult one a simple one because you
+have to understand how do you write a
+smart contract so let's get started so
+the first thing that we do is we have to
+set up this machine so that you can
+connect with the etherium Network now in
+youth in immense well if you want to
+connect with a 10 Network and if you
+want to do transactions you have to pay
+some gas fee ok now it is gas fee so
+whenever you do a transaction of course
+the miners want to get rewarded so you
+have to pay our transition fee and
+normally we can call them as gas okay so
+that means before doing any transaction
+only here network you need ethers you
+have to buy ethers and then that damn
+cost you to buy now so what to do we
+don't want to buy anything because we
+are learning what is not contract so in
+this case what you can do is you can
+work on test networks so on the test
+network it is not a main network so you
+can you can use you can use a test
+network here and the advantages you
+don't have to pay to do the transaction
+because we are learning so of course if
+you want to do real transaction you have
+to move to the Ethernet work not on the
+test network now what a test network
+option we have but before that you have
+to understand how do you connect this
+machine to the network it does not
+matter is it a main network or a test
+network now first of all we have a
+browser here right and browser
+normally works with the centralized
+systems which we have but what if you
+want to connect your browser what if you
+want to run make your browser as a
+distributed app in this case you have to
+use a extension so you can see we have a
+browser here which is Firefox you can
+use any browser if you want Chrome or
+opera or
+folks you have to add a plug-in now
+which plug-in I'm talking about this one
+so we have to add a meta mask plug-in
+for the extension okay so you can see
+this is me Tomas this that this is the
+official website and it says bring it
+into your browser and that's what take
+nice tagline so we can add add on on
+firefox or on probe auto para in fact we
+have this amazing new browser which is
+brave browser which i'm trying out now
+i'm using it from quite some time now
+this is good you can also try this and
+this is this is there some information
+we have so it's a meta box is a page
+that allows you to visit the distributed
+web of tomorrow in your browser today so
+that's not amazing lines they have but
+the idea is you can build e apps and you
+can deploy them with the help of this ok
+but we do how do we add the plug-in so
+as everyone knows you can simply go to
+here and you can search for add-ons so
+we have to go to extensions and we have
+to search for meta masks it will take
+you to the or it will search for the all
+the thing and you can see we got I'm a
+dumbass plug-in here or the extension
+just you have to click on add to Firefox
+it will take some time and then you have
+to click on this add so it will add the
+extension to your browser and you can
+see we got meta mask here so it says
+welcome to my Tomas so let's continue
+with this process let's say get started
+now this is amazing it says new to meta
+mask and the answer is yes so for us we
+are new to meta mask yes I have a meta
+mass account as well but let's do it
+fresh so you can see on the left inside
+it says no I already have a seat for
+phrase you can import your wallet so I
+have a meta mask on the other machine I
+can simply import the ethers which I
+have on that machine so you can click on
+import here if you have a meta masks
+account initially if you have it it will
+give it will ask you for 12 words seed
+phrase which you have to click so they
+will give you option you have to click
+on that since we don't have it so we
+click we click on create wallet so it
+says help us improve the meta mas we
+don't want to do that now you can you
+can say I agree let's do that here you
+can still say no thanks but let's let's
+do that now I'm going to ask you for the
+password let's keep it simple
+I will use my password here then we have
+to click on create let's just save the
+password for me and you can see this is
+very important this is a secret backup
+phrase now this phrase
+very important because we don't have a
+concept of it's a to verification so
+password plus the phrase you can use
+this too if you want to import the
+wallet or something now I will not be
+clicking on this for you so I will be
+pausing this video but you will get a
+text okay so you might you might get 12
+words you just have to remember the
+sequence of those words okay so I got
+those words here and then you can see
+below we got this words so those are
+blurred because I don't want to show you
+my phrase because it is different for
+everyone you know you have to choose
+those things in a sequence format so you
+that's what easy thing right so let me
+just say that means do that quickly and
+then once you are done with this again
+simply click on current form and that's
+it you got your meta mask account click
+all done and you can see we are
+connected with the main Network so
+that's that's done right we are this
+machine is connected with the e theorem
+main network how you confirm that you
+can see we have it here it says main
+theorem Network and this is your account
+details so this is your public address
+we simply copy this that's what it was
+basically you can also click on details
+this is your QR code Vista gave you the
+amazing thing is we have this amazing
+website which is a task and dot IO where
+you can track all your activities by
+using your address or some other details
+let's click on this we account on it'll
+scan and you can see this is a fresh new
+account we don't have any transactions
+so that's great so this is the current
+price of ether I guess so let's go back
+here we don't want to do that now how
+will you get some money because we want
+some heat all right you can see we got 0
+ethos here so you have to buy it if we
+don't want to do any investment now so
+what you do is ensure of working on the
+main Network we can actually work on
+this test networks out of all this let's
+go for incubate test Network let's click
+on this and still I got a zero ether
+that's bad we don't have anything here
+so how do you get ethers ear it's very
+simple actually you can see we have an
+option of deposit when you click on this
+it will say I want to go for test faucet
+let's use it for tests obvious again
+ether okay do you have to pay not
+exactly so you can see it will show you
+it will could take to take you to the
+website or it has some data here we
+don't want this let's click on this
+crypto faucet so this is how you will
+get your free ethers basically so it
+says if you want to get the eighth
+you have to share your address on the
+social network it can be Twitter Google+
+or Facebook I guess Google+ is not
+running anymore so it is Twitter and
+Facebook so let's use that so I use
+Facebook a lot so let's do that okay so
+what you do is you just have to copy
+your network address and you can see for
+me it's here so copy that's my address
+and then I have to go to Facebook so so
+that's what Facebook account what I will
+do is I will say I need some it'll you
+can type anything you want okay they
+don't get about your text what the kid
+is about your address so let's do that
+in fact I will keep this post for use
+you can just go to my Facebook and you
+can check if I have that post there so
+that's my address and I will click on
+share so I'm sharing this on Facebook
+let me just get the address of it one
+way I know about this is how you can get
+the pols address so you can see we got
+the address on the bar so that's the
+address let me just copy it go back to
+your thing be and this is where you have
+to paste it so let's paste it and click
+on give me a third so I want let's say
+80 ethers for three days click on that
+now it's time for capture it looks like
+I got my ether then just go back to my
+doing this link be refresh something is
+not working here because yesterday
+itself I got some it''s on my different
+account so maybe on one account they
+provide you it was only for that little
+bit days so I've asked for three days
+either there so I it is not working here
+so what I'm going to do is once this
+video gets over I will import that here
+but then this will work so you try it
+out you will get some eaters here this
+is how you set up your meta mask and you
+will be getting some it as well here
+we're getting at approximately 88 Oz or
+you can use that so you can you can try
+it only Network here you can use R in
+link be or lob stone so you can just try
+it out now once you got yourself once
+you got meta mask
+the next thing is how will you write
+your code of course we want to write our
+code somewhere so there is missing
+website you can use here which is so
+research for remix etherium this is the
+website you have to go to is a solidity
+IDE which we want we want to write our
+soy decode right and you can say this
+will give you a code here which we don't
+want in fact in the next video we will
+write our first mat contract and we will
+be plating our first excel file which is
+solid ad programming
+so this is where you can add new files
+you can see they have two files here we
+will delete we will delete this and
+we'll create our own so that's how you
+do a setup you have you need a meta mask
+because you need ethers you need a way
+to connect with a turn Network and the
+second thing you'll need IDE so we are
+using remix the online IDE for salty
+in this video was like all forth
+my contract in the earlier video we have
+talked about how can you do the setup
+for me Tomas and then how do you get
+that those eaters now there was some
+issue with the eaters we have not
+received on this machine but if you have
+tried the same steps you will receive
+some eaters the problem was two days
+back I have asked for the eaters with
+the same Facebook account
+maybe that's the issue so now I did with
+Twitter so I got three eaters I guess if
+I go to my Thomas you can see we got
+three eaters and tagged to entrain B
+Network so that's great let's use that
+okay so let's go to the remix IDE and
+you can see the font is not that visible
+first of all I will delete these two
+things we don't want their code we want
+to get our oh one so let's do that and
+you can see the it's clean so we got a
+clean slate it's just that how do we
+increase the font size for this but
+there's a way here you can see we can
+see plus sign and you can now another
+think it is visible let's create our
+first file but then what we will be
+doing in this let's make a bank balance
+on bank account so what you doing bank
+account is you add money and you
+withdraw money that's what we want to do
+a simple task so we'll be having a bank
+account where you'll be having a balance
+and then we might add a balance of a we
+might withdraw the balance so we can say
+deposit or withdraw let's do that so
+let's create our first file so we'll
+click on plus here and we'll give them
+name as let's say Bank dot s o L so I
+saw is for Sol for sorry D let's click
+on OK and you can see we call our file
+here we can type a code now okay so what
+to do now first of all we have to set up
+compiler levels
+now this compiled level here as we get
+new updates possibility the syntax might
+change we might get some new features
+but let's stick to the older version of
+compiler which always works and then how
+do you decide that so the way you can do
+that is by saying drag drag mouth and
+then you have to mention the language
+name which is we are using solidity and
+then if you have to mention the version
+number if I go back here you can see we
+have a list of compiler we can use from
+we have five point zero point seven all
+this thing will work but let's stick to
+those things which everyone uses
+nowadays which is zero point four point
+two five or so let's mention that 0.4
+point two five okay so we have defining
+the compile level now the next thing is
+we have to
+our contract that's what you want to do
+right but then what witness syntax of it
+now first of all solidity is derived
+from JavaScript so if you know
+JavaScript well this is damn easy even
+if you know Java it's almost same as
+getting a class so let's go with that
+those steps so let's create our first
+contract so let's say if you want to say
+contract you have to say contract then
+we have to mention the name of the
+contract so in this case I will stick
+with bank let's create a contract for
+bank or we can say bank transaction
+there is no need to have a same name as
+your file name here we can have any name
+doesn't matter ok now we need a variable
+now why do we need a variable so when a
+name is the place where you can hold a
+data now first of all if you say bank we
+will be having an account there and
+every account will have a balance so
+let's say ain't bad or we can say
+balanced state is a datatype so the
+balance of balances of time 8 we can
+also go for it double if you have it if
+you can if you want that let's stick to
+Inc here now once we got a contract once
+we got a variable ain't now if you go
+from job background or JavaScript
+background sorry I mean I'm assuming
+that you know at least one
+object-oriented programming language it
+can be too sharp JavaScript Java PHP
+Python that's your choice
+so here what do I do is I'm going to
+create a punch structure again not
+compulsory but let's do that so we'll do
+is I would say constructor now how do we
+create a constructor in Java and in
+other language what we do is we use a
+class thing but here we have to say
+constructor and then you have to give a
+package we have to also mention the
+specifier or the access level of this so
+when you say public it is accessible
+from anywhere and that's real because
+Java in Java we write it on left-hand
+side and that makes much more sense
+right you will get used to it and let me
+just set the balance necessary to let's
+say 1 so I want everyone to have a
+balance at least off one dollar or one
+rupee whatever ok so once you get a
+constructor we need to get a method
+nothing about this when you say a
+balance of course we get an option of
+depositing the money we draw the money
+all we want to check the balance right
+so let's create those functions now if
+you want to perform those operations we
+have to get functions okay so three
+functions right let's create done if you
+want to be the function you have to say
+function ok but what should use function
+name
+initially I want to get the balance so
+let's do that so we'll say get balance
+I'm just using canvassing rules here
+because I'm confirm job
+let's save the function name and this
+function will get down balance it look
+like a normal programming language right
+we have done this before so we can
+simply save returns ballad written
+balanced that's one method we have our
+function we have let's get one more
+function which is for we draw so I will
+say withdraw now when you say we draw of
+course we have to also pass the amount
+like how much amount you want to
+withdraw so in this case I would say H
+amount that's my variable name and here
+as well we'll say balance is equal to
+balance we have to be able to analyze
+that we have to remove the money so it's
+a balance equal to balance - amount but
+are we missing something yes every
+method or every function need to have a
+specify so it's a public and here as
+well I will say public that's done now
+here we have to create one more method
+which is for depositing money so I will
+say function deposit again if you have
+to specify the amount because how much I
+money when you put deposit let's mention
+public there which is this specifier and
+here I will say balance is equal to
+balance because when you say deposit
+you're adding the money right so we'll
+say balance plus amount a very simple
+one right
+but will this work there are certain
+changes the first one is when you say
+these two methods withdraw and deposit
+they are changing the value of your
+object now maybe when you look at these
+two function which is withdraw and
+deposit they are changing the value of
+your balance that means they are doing
+some operations there but what about
+this get balance so this get balance is
+not changing any value right so in this
+case what you can do is you can mention
+this as of view so when you say view it
+means this is only for fetching value
+this will not be mind updating the data
+so we can save you and then since it
+also returns the value what you can do
+here is we can say returns we have to
+also mention the type what it return so
+we're to say turns Inc
+and that's done nothing mode here this
+one over here which says we have to
+change it to pragma zero zero point four
+point so it said let's change the
+compile number here and we'll set zero
+point four point two five so tournesol
+that was the issue with the new version
+so you can see the older version we have
+zero point four point two five in fact
+we will also use the newer versions in
+the later videos but here this one works
+you can see there is no compile time
+error now once you have done with the
+code it's time to come by
+that's how you convert your according to
+a bite good on our opcode this opcode
+will work on your virtual machine or on
+the attend Network so whatever we do is
+I will say start to compile and this
+will come bad it I don't think there is
+a issue here
+I may be able simply use auto compile
+this should work I guess it is compile
+there is no issue now how do you run
+this code put on this code we have to
+click on this run tab and you can see
+the moment you click on run tab we have
+an option here so you can see
+environment the first environment here
+is JavaScript via now at this VM so this
+VM will work run on your browser itself
+and that's what we said you know you can
+use meta mas to create environment in
+your machine itself so you can see
+whatever code you are I think here will
+run on the same machine now once you
+select your VM you have to also select
+the file you're working with so you can
+see we are working with bank you might
+have multiple files here and then click
+you have to click on deploy the moment
+you click on deploy here you can see we
+got some options here when you grows
+when you scroll up it will mention
+everything the hash value from to then
+the gas it requires for the transaction
+and everything so you can see we've got
+all the tails here
+okay that means your app is deployed but
+we have to run this right how do you
+learn this so you can see we have an
+option here of deployed contracts let's
+expand it and you can see we got three
+buttons out of which this two has a same
+color because they are changing the
+value of balance and this one is not
+changing the value that's why it is a
+different color first of all let me
+click on get balance and you can see the
+balance is one o y1 because the default
+value we are given is 1 that's great
+let's deposit some money before we're
+drawing let me deposit 100 click on
+deposit I don't know if it is done or
+not let's look let's click on balance
+and you can see we call it the balance
+that is 1 0 1 that's great let me just
+redraw some amount let me withdraw 80
+click ok first you have to click on
+withdraw we do not done get balance 21
+and if you can see everything is
+happening so fast because everything is
+happening in your machine not on the
+main Network the moment you do that may
+not work it will take some time okay so
+here you can see every time you face the
+balance it will do some transaction and
+one more thing every time you do some
+calculations here example if I add 400
+if I say deposit it is consuming some
+gas ok it is it is charging some gas
+in your machine it is your environment
+you're the boss that's what is
+everything is working
+in this video we'll continue from where
+we left in the last video so the last
+way we have talked about the smart
+contract right in fact we have written
+our first smart contract and then it was
+running on the local JavaScript virtual
+machine so if you look at the
+environment we have Java JavaScript
+virtual machine and then if you are
+getting some addresses we will record
+some five address and then we can use
+any of it to deploy the application and
+once you deploy it you can just test it
+by depositing money or by withdrawing
+money but how about if you want to run
+the same thing on the test network so I
+don't want to run this on the JavaScript
+VM because that's a local we want to run
+that on a test network or maybe on the
+main network so if you want to achieve
+that we have to use injected web 3 the
+moment you select that you can see the
+default option which I've got here is
+ring B why is because in the meta mask
+these accounts are actually getting
+fetched from the meta mask right so if
+you expand this meta mask you can see we
+have link bit text network here let me
+switch the account so you can see this
+is winged bit test network and I have
+three ethers here I can use this for the
+transactions in fact you can also move
+from ring B to main network the moment
+you do that you can see it will ask you
+for the reloading of the page so let's
+reload the page and here against done
+let's go back to run and you can see in
+the web 3 if we select in jQuery you got
+one address because this is your main
+network now so that's how you can switch
+so you just have to switch from it amass
+that's the only option you have so go
+back here we don't want to work on main
+it work because we don't have the
+currency so let's switch to language
+Network let's reload it yeah that's the
+inject web 3 and they say they account
+so you've got only one address because I
+only have one Accord I guess I have two
+accounts but you can say which one you
+want ok now I want to deploy this on a
+link be test network so if you want to
+achieve that you have to select the code
+we are working with we are working with
+bank let's click on deploy the moment
+you deploy it it will be done on the
+test network right which is running or
+as a actual network so of course you
+have to spend it's some ethers
+okay you are not buying those eaters by
+the way we are using the theatres if you
+remember so we had to spend those ethers
+even for deployment so when you deploy
+it you have to pay the eaters but then
+every time someone else is using your
+network they will pay for the ethers if
+every time they do transactions with
+your application they will be paying for
+the gas fee
+so here the moment you do that it will
+pop up the meta meta mass notification
+we will say okay I confirm this let's
+click on confirm and you can see it will
+get deployed on this address so let's
+click on this address here it will take
+you to it as scan dot IO and you can see
+this is a test network so you can set up
+a way to do that it was it still says it
+is pending because it takes some time
+for it to get mind I guess it is done
+let me just refresh this page you can
+see these success now so it was
+initially it was pending now it is
+success is you god this is the address
+from - you will see all the it will see
+that's a block number anything else this
+is your hash let's go back to the mix
+and you can see it is deployed so this
+is your deploy point right so let's go
+back here
+and we can perform operation get
+balanced will not not charge you
+anything so you can see balance is one
+that's what we have done in the code let
+me just zoom a code a so it is
+that's one that's your balance but if I
+want to deposit some money let's say I
+want to deposit 300 the moment I click
+on deposit here again it will charge you
+right because you are doing that
+transaction which will change values so
+you have to pay the gas phase so you
+have to click on confirm so this is
+important right it will give you a
+notification but in case if you have
+notifications blocked in your browser
+sometime it happens with me as well so
+you have to just go here and it will
+show to confirm or not but since it is
+working on my machine I will do that so
+I was a deposit I was a confirm and it
+should be done again it takes some time
+you can see if I say get balance now
+still the balance is 1 because it takes
+some time to deploy so you can see we
+got the consumption now so let's click
+on get balance and you can see this 3 0
+1 now you can also do a bit draw let's
+say I want to be draw 1 0 1 let's click
+on fit draw again as you can guess if
+you have to pay for the gas fee let's do
+that ok again it will take some time
+let's verify if it is still pending or
+done so you can sit is it says it is
+pending you will get this link in the
+console just
+on that and you will see this page in
+fact your browser will also give you
+notification once it is confirmed so
+let's wait okay so when you click on get
+- now we got 200 so that's how it works
+that's how you can use your test network
+the only thing is we will not we don't
+want to spend money on the main network
+and that's why we are using ring B but
+the same thing will work on the main
+Network if you consider that so just go
+back to meta mask switch back to main
+network buy some meters and you're good
+to go and if you can see initially we
+will having around 3 this and now we
+have 2 point 9 9 9 8 eaters so yes we
+have spent some ether 0 so that's what
+we can use ring B Network to test the
+application so I hope you got some idea
+in this video how do you work with ring
+be with your remix in the next video
+we'll do something amazing in fact in
+the next video we'll try to connect the
+front end with this blockchain so when
+you say front end the normal web page
+may be a simple web page which will
+connect with this blockchain
+and this video is trying to connect the
+smart contract which we have done before
+with the front end so when you say
+trying 10 it can be a normal search page
+or it can be a Android application but
+as of now just to keep it simple because
+it isn't supports that let's stick to
+the webpage development so if we will
+create a simple web page and we'll try
+to connect that to a smart contract but
+why nothing about this thing when you
+say blockchain we'll be replacing a lot
+of different technologies right
+companies are moving from this
+centralized system to distributed
+systems so yes it is changing a lot in
+terms of enterprise network it is
+changing in terms of currency market but
+what about normal companies so let's
+talk about Facebook so if you think
+about Facebook Facebook has a server
+right as AI user what we do we we access
+those pages so on our laptop we see a
+screen which is maybe a login page or
+the messages page or the feeds and then
+those data is actually coming from the
+actual server so what our processing is
+happening is on this server right but
+the amazing thing is as a user we don't
+even know what technology they are using
+in the backend are they using node.js
+we are not sure are they using PHP Java
+ISP we don't care what we care is as a
+user we are able to access of a data now
+even if in future Facebook is changing
+that technology the centralized
+application to a distributed system will
+it affect us that's the question because
+the moment you change the server's the
+moment you talk about you know all the
+first thing will be done on smart
+contracts on blockchain
+so as a user do we get the same page or
+the different page and that's the
+question I was having in my mind from a
+long time and the answer is you will get
+the same page because the front-end will
+not change the only the backend part is
+changing so in this example I will try
+to prove that so whatever we are doing
+here so if you see this cost pot
+contract what we are doing is we are
+trying to withdraw the money we are
+trying to deposit the money we are
+trying to get the balance but then we
+are able to access this functionality
+with this buttons right but think about
+a normal application as a user you want
+to access a web page where you will do
+all this operation not on this type of
+screen where you can see the code as
+well
+so I want to be just a fit page where I
+can see this let's get started
+so the first thing you need is you have
+to understand certain terms the first
+one is if you go to compile we have a
+concept of API here and if you click on
+details you can see we have ABI and this
+a B highs it has certain jason codes if
+you can see that this is a basic
+adjacent code when you expand it so we
+will need this thing when you want to
+connect your webpage with the with the
+smart contract so we require two things
+the first one we need is API and the
+second thing we'll need is if you go to
+run this address I have deployed in and
+ring B so if you have nots in the
+previous video I would suggest do that
+because we have created your smart
+contract if we have connected with this
+during the test network so we got decide
+to assign so this is important so we
+need two things the API and this
+particular address now once you have
+that let's get started but before that
+we have we need one more thing in fact
+we need some certain things we need a
+good IDE so you can use any HTML ID you
+want you can use Visual Studio code you
+can use Act item you can use sublime
+that's your choice I'll be using we just
+rodeo here so let me open vs so that's
+my visual studio goal so if you don't
+have this idea in your machine in fact
+you can use any idea you boy you can
+also use eclipse netbeans if you have
+you also need a server because we will
+be running the page like so we got a
+visual studio code if you don't have it
+you can simply go to google and search
+for visual studio code download and this
+is where you will get the setup this
+doesn't matter as it Mac Linux or
+Windows have it has all the options but
+not difficult just say next next next
+will here work will return so once this
+is done the next thing you need is NPM
+because see this when you type the code
+you also want to run it right so you
+want to run your HTML which will be also
+having jQuery so if you want to run that
+you need a simple server where you can
+host it you can also have a web server
+on the web server or the actual web
+server or you can also have that on your
+local machine so you can use different
+servers available we have light so we
+have HTTP server so you can install HTTP
+server here but then for that I'll be
+using NPM so
+install NPM so you can just go here and
+search for NPM download and you can just
+go here you can
+it depend upon which you have again and
+easy setup nothing - nothing to worry
+about the only thing is once you have
+downloaded it just go to Program Files
+go to that software NPM our node copy
+the path and go back to environment
+variables and set the path I hope you
+know how to do that it's very simple
+actually you can just google it now once
+you have your visual studio and NPM
+ready let's install the HTTP server so
+go back to visual studio now how do we
+install this server so we can use NPM
+right and then I have also set the path
+make sure that after it after setting
+the path restart your vision studio
+so just click on terminal click on new
+terminal and this is where you will see
+the terminal area now based on what OS
+you are using if you're using Mac on the
+next you will see terminal actual
+terminal this is a command prompt which
+we are they calling terminal doesn't
+matter
+in fact Oh before opening terminal make
+sure you create a folder so in your on
+your desktop or on the in documents make
+sure you have a folder where you will
+put this file so I do have a folder i've
+created a folder which is Bank web app a
+blank folder empty folder so you can see
+I have a folder which is web a bank web
+app just like that you can see it's
+empty now once I got this folder in this
+folder I want to create a page right so
+we'll do that but then you can see we
+got a terminal so I wanted that path
+here so I don't want to go there go
+there manually so we got a path we got a
+folder this is where you will write a
+code right this is where I want to
+install HTTP server so I will say npm
+install so i want to make it globally
+and the software name is actually pasaba
+let's say click now the amazing thing is
+I do have this set up so it will take
+less time for you it make it might take
+more time once we go out here and
+actually PC server the next step is you
+have to start it so the way you do that
+is by saying HTTP server the moment you
+say enter it will take some time and you
+can see your server has started and it
+is started on this URL which is
+localhost colon 8080 so in order to
+access that just go to your browser I
+will say localhost colon 8080
+ok you can see the server is running
+that's your node server but I want to
+replace this with my page so let's go
+back here and let's create a simple file
+click on this and
+I want to find them to be index dot HTML
+you can have any phylum doesn't matter
+actually and let's get started the first
+thing you need is HTML tags the type of
+UI we need is we need a text field where
+you can enter the amount and then you
+will be getting Witten's like withdraw
+or deposit i had this code with me so
+just pasted it here just to save time so
+you can see we got an input text field
+and then we got three tank where you can
+show the balance and then we got two
+buttons deposit and we draw now once you
+have this body with you it's time to
+perform operations so let's see this is
+coming as a normal text so if you live
+fish now you can see we got a different
+UI in fact the balance is empty that's
+what you can't see anything but you can
+enter some values and you can click on
+deposit nothing will happen because we
+have not put it right so we will click
+deposit
+it should be deposited in the actual
+smart contract which we are running this
+one and then we can be dropped from that
+so let's do that but then we will be
+performing operations on the buttons
+right so that's why we need to you walk
+with jQuery so that's one thing second
+thing is how will you connect your web
+application or your web page with the
+epin of blockchain and that's where we
+got this amazing library named as web 3
+so if you can just go to google and
+search for web 3 so this is the web play
+github link and they have the notes as
+well so you can see it's an API between
+the atheneum blockchain and your
+application so we can use it in fact you
+can also install this on your machine
+using NPM odd we can use it as your
+JavaScript library so in this example I
+will use the JavaScript library which
+they provide in order to do that what
+you can do is you can say download web
+3.0 so when you click on download you
+can it will take you to the link you can
+download it from there or in fact this
+is also issue with the proper version
+you know if you have to cover 1.0 or we
+will be going for developer version so
+that's one thing otherwise what you can
+do is I will provide you the link Sirian
+for the web 3 you can use that because
+that is working I don't know this was
+not working when I tried it the download
+maybe there were some works you have to
+you know maybe when you are trying it it
+will work because they are always doing
+some updates and there might be some bug
+when I tried it you can try mining which
+is working
+those two script one for jQuery and one
+for web three so that's done I have to
+add a to script here one for you can see
+one is for web three and second is for
+the jQuery now once we have done that we
+need to perform certain operations now
+the first one we need is the moment you
+load this page I want to show the
+balance whatever balance is there in the
+blockchain right in fact it gives check
+once what is the balance I have there so
+if you can go here and if I say get
+balance so the current balance is 200 I
+want to fetch this so how do we do it
+the first thing you need is a script tag
+so I will say script and inside this
+prepped now if you want to connect with
+a contractor smart contract let's create
+an object which will hold it so I will
+say contract and then I'm going to fetch
+the contract details only when the page
+is loaded and the way you do that is by
+saying dollar document ready so anyway
+it is ready let's perform the function
+let's perform the operations here so
+what we need whenever the function
+whenever your page is ready I want to
+first create the object all I have to
+initialize the object of web click OK
+but then from where you will get this so
+in the insert the syntax is very simple
+its web 3 is equal to we have to say new
+web 3 because that's how you instantiate
+the objects and in bracket we have to
+specify the current provider because we
+are using my Tomas which is connected
+with the ring B so that's all provided
+right so let's use that so I will say
+web 3.1 provider it depends what you are
+using here so if you are using injected
+provider you can use this in fact if you
+see we have other options as well so if
+you click on this you can see we have
+one more option of web 3 provider that's
+where you you can use Ganesh as a CLI
+but as of now let's stick to current
+provider now this object which is web
+tree here you know that's a confusion
+part right we have object initialization
+here and then we are creating the object
+so this Web is actually coming from the
+library which we have used about ok now
+once we have done this the next thing we
+need to issue eyes is the contract right
+we have also be able to do using
+contract here so we have to initialize
+this particular object and the way you
+do that is by saying new we have the
+object which is web 3 in this you can
+simply say it which is theorem and then
+dot you have to say contract that's how
+you create the object so contract is a
+class of which are getting object here
+but unfortunately or D fortunately this
+contract will ask you for two parameters
+remember we have talked about this
+before you need a bi and you need the
+address of course I'd which smart want
+to get talking about so this particular
+application will work with our smart
+ right so if they specify two things
+the ABI and the address so what I will
+do here is I will create two variables
+first variable I will say address but
+from value we get this address so I will
+be getting this address from here so go
+back to a smart contract just pop it you
+can see we have an option of copy go
+back here and say paste so that's what
+address
+the next thing we need is a bi and from
+where you will get the ABI so you will
+get it from here so go back to compile
+details and you can simply click on copy
+here you don't have to exactly expand
+this and copy say copy go back here and
+paste before the semicolon and I guess
+our job is done no I should be
+minimizing it so that it will not waste
+one of lines so yeah you can see we have
+address and we got ABI and we just have
+to pass it here so the first thing you
+have to pass is ABI and the second thing
+have to pass is address done so we have
+done two things though ABI is done
+address is done now what next see once
+we got the contact object now we have to
+fetch the balance in the contract how
+will you do that so in order to do that
+we will be saying contract dot now this
+contract will have such methods right we
+have three methods actually so let's say
+methods dot so if you want to fetch data
+the method which we have used here if I
+go back to code so if the method name is
+get balance where you have to call this
+method so I will go back to methods I
+will say get balance
+now this get balance if you want to call
+it there's a method which is named as
+called because you're calling it right
+and you're expecting a value so you will
+say call and then here actually this
+this call will to return you a promise
+and if you want to fetch the value if
+you have to set then and then whatever
+value it is returning it will go into a
+function this is basically a JavaScript
+code so I'm not here to explain it
+outside if you want to know more about
+JavaScript just go to this channel we
+have a JavaScript ladies just watch that
+but here the idea is this will give you
+a promise and if you want to face data
+you have to set then and in this
+function you have to say you can use any
+variable I will say balance whatever
+whatever variable name you can use okay
+so in this I'll be fetching the balance
+right so once we've got the bag
+we will assign that to this particular
+idea which is balanced right so if you
+want to do that you will just come here
+and and say dollar let's fetch that
+particular ID and the way to do that is
+by saying hash balance dot HTML and in
+this you will pass the balance that's it
+that's the only thing you have to do
+once your page is loaded you just want
+to face the balance right that's what we
+wanted just save this I hope this will
+work otherwise we have to debug the
+application that's what we do always
+let's refresh this page and something is
+happening okay so that we got 200 right
+that's an amazing thing right let's say
+inspect element let's go to console and
+let's see what is happening there so
+I'll go back here I will say refresh you
+can see there is no error and you got
+your 200 so that's great
+this value is actually coming from the
+blob chain or the this mark point right
+so this is working but what about
+depositing and withdrawal so let's say
+if I say 300 if I click on deposit I
+want this 20 to go to the smart contract
+save the data add a block in the
+blockchain and then the value here it
+should be 500 how do you do that that
+you will say in the next video
+let's complete the code which we have
+started earlier so till this point what
+we have done is if you go back here you
+can see many would you try to reference
+this page it will fetch the balance from
+the blockchain so we have a smart
+contract here and the current value if
+you can see if I say get balance it is
+200 but what I want here is if I go back
+and if I say hey I want to add another
+300 so I want to deposit that money it
+should work right so if I go back here
+and if I say hey get me the balance it
+should say 500 but how do you do that so
+you know how to achieve that we have to
+go back here in fact in the smart
+contract we have a method which is
+deposit so the thing is whenever you
+click that button on the front end so
+when you click on this button I want to
+call this particular method here or
+function here so in order to achieve
+that we have to make that particular
+button work so the button name here is
+the button ID here is deposit so we want
+to perform the operation when you click
+on this one and in jaskate if you want
+to achieve that it's very simple you
+just have to say dollar and the idea
+here is deposit so we are clicking all
+that rent so we said click and then when
+you click on this it will perform or
+function it will call the function so we
+say function and in this function let's
+do that operation so whenever you click
+on this button deposit it will call this
+particular function now in this function
+what we want is first of all we want to
+fetch the value which is entered in a
+text field right if you remember we have
+a text field here which is our text box
+here which is amount I want to fetch
+data from that and of course we have to
+save it somewhere so let's save it in
+amount initially the amount will be 0
+now before fetching the value in fact we
+can fetch the value you say amount equal
+to so we'll say Pass inch and in bracket
+we have to pass that particular ID so
+we'll say dollar hash amount and here
+you will say Val that's how you face the
+value we have to also convert that into
+integer and that's why we are saying
+percent so once we got the value once we
+have converted into a amount so we got
+amount right but now I want to call a
+particular function now even before
+calling a function we to get B hold on
+the accounts of course right when you
+say we draw when you say deposit you
+read the whole on the account in order
+to do that we'll simply say web dot of a
+please web 3.0 say eth dot so the method
+name is get account now this get
+accounts will give you the accounts but
+that will be a promise and if you want
+to face the value you will say then and
+then you will create a function we want
+anonymous function and this function
+will it get all the accounts so let's
+say if you have five icons it will get
+all the accounts but we don't want all
+the accounts so why do we want only one
+so let's fetch that one so out of all
+the accounts it will provide you we want
+to get the first account and the way you
+do that is by saying where let's get
+account ACC equal to and the way you
+French that is by saying accounts we
+want the first one so we can use an
+adder because normally this accounts
+will be having an array so we want the
+first account here now once we got the
+account we just need to call our method
+which is deposit okay so it's very
+simple in fact the thing is this is a
+callback function so we have to say
+return contract as the object we have
+contract dots and we have done this
+before right so if you want to call this
+methods we have to say contract dot
+methods dot the method name which we are
+working with is deposit let's use that
+and in this deposit we have to pass the
+amount remember we have this amount
+variable here 50 pass it here and then
+instead of saying all we have to say
+send and in this send you have to also
+mention the account from which account
+you want to send and so within the
+country packets you will say from : and
+you will say account because that's
+important right the account number and I
+guess it is done so yeah so this one
+this one will give you the accounts and
+from that account you are sending it but
+what will happen when you send it there
+should be some response right it should
+return you something so it will return
+you a promise so if you want to face the
+value from that you will say in fact in
+that promise you will be having two
+things either it will be success or it
+will be a failure right I mean errors so
+in the success case we'll say then
+function of course we will get something
+so I will say we got some data will be a
+transition heater service ATX so once we
+got this function now what we want we
+want to print whatever transition
+happens in the console so we can say
+console dot log and here we'll say TX so
+I just want to log it
+whatever happened now once that is done
+I also want to go for the worst case
+scenario which is sketch what if what if
+something goes wrong in this case also
+will write a function T X and this will
+say console dot log and this will be T X
+that's it so we are sending the request
+here we are sending that method we are
+sending the amount as well and then we
+are and we are accepting the value we
+are accepting errors so that's great
+let's save this code I think it's done
+that's now deposit works let's go back
+to the browser
+and here let's say refresh and you can
+see that's the balance is the balance is
+200 let's say 3 or 300 I want to deposit
+that amount and that's great something
+is working you can see it is asking you
+for the permission that means the
+deposit button is working but will it
+get success on this server that's
+important to know you can see nothing is
+happening everything is hanged okay the
+thing is when you do this the the
+transaction is in in the pending state
+right it will go there it will get the
+block it will it will get mined by the
+miner so it will take some time so we
+just have to wait for it and of course
+we will get your result in the console
+and you can see that we got it here so
+we got the block hash block number we
+got all the digits which we wanted and
+now if i refresh this page look at the
+balance we got 500 in fact you can
+verify by going to solid e and you can
+say get balance and that's 504 you it's
+quite simple white now what about
+withdraw we want to make it make that
+one work as well so I want to make this
+with your work so when I say hundred and
+if I say we draw it should remove that
+amount in order to do that we can simply
+copy paste this because that's where we
+are expert off so let's copy and paste
+it and this is where you will say hey
+this is not deposit this is for withdraw
+the amount thing will be same we need to
+get the accounts we need to pause the
+account the method name will be withdraw
+of course and I guess job is done so
+that was the deposit and this is
+withdraw almost same code right let's
+save this and go back to the server and
+click on maybe just have to refresh it
+once and click on 100 click on withdraw
+ok so you're asking for the permission
+that is meta master
+vacation which we love click on confirm
+problem solved I guess yes it is it is
+it went to this server I mean the
+blockchain or the server that's a long
+term here it went to the blockchain
+Network which is ringman Network and
+then record the recording mind block and
+that's the new block which you got ok
+but the question is do have you got the
+updated value let's refresh and yes we
+got 400 that's so easy right we just
+have we're just we have a smart contract
+here and we created this front-end with
+two buttons deposit and withdraw and we
+are able to perform that and that's the
+beauty right as a client we don't even
+know that what is happening behind the
+scene is it Facebook or something we're
+not we don't care about it so that's how
+you work with this smart contract with a
+front-end so I hope you are enjoying
+this is written in the comment section
+and do subscribe for other videos

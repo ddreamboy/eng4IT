@@ -1,0 +1,335 @@
+if you're looking to get your first
+cyber security certificate I know that
+it's a lot of research and work to try
+and make sense of all these different
+certificates are available so don't
+worry this video I got you I have been
+doing my research on what are the best
+cyber security related certificates to
+do in when and who should take him
+depending on where you are in your cyber
+security Journey but before we do that I
+got to quickly give a shout out to our
+sponsor corera for making this video
+happen let me introduce you to the
+Google cyber security Prof professional
+certificate on course era and not only
+it gives you the foundation that you
+need but they also show you how to
+manage security risks the basics of
+network security as well as all the
+basic tools that you need to succeed and
+it doesn't just stop at showing you
+everything you need to break into cyber
+security they also help you with your
+resume interview prep and help plan your
+career with their job search and guess
+what it is 100% online and you can learn
+at your own pace and you can complete
+this program in under 6 months if you
+dedicate only 7 hours a week so click
+that link down below and get a 7-Day
+trial try it out and let me know in the
+comments what do you think but all right
+let's jump into the video itself and
+talk about these different security
+certificates the first one we want to
+talk about is the Cisco CCNA this is one
+of the most popular ones and I still get
+questions about is CCNA still relevant
+to get and honestly I think it is very
+relevant because of the fact that Cisco
+is wildly used and a lot of times I see
+people that I've br broken into cyber
+security by doing CCNA and honestly if
+you don't want to do CCNA it's too much
+it's too expensive you do have the compa
+options but also just want to keep that
+in mind that CCNA itself is really
+relevant because of how big Cisco is in
+the networking field what you can expect
+out of this certification is just the
+basics of networking this isn't
+specifically to break you into cyber
+security but if you're coming from a
+background where you don't have any
+experience in it and you don't have
+anything in cyber security and you want
+to break into getting a job in this
+field then getting something your your
+CCNA or something similar to it is
+always the first step to getting in
+there not really relevant to cyber
+security but I know a lot of folks have
+gotten this and then later moved on to
+the next CT and having it on the resume
+has been super helpful I just want to
+quickly talk about CCNA because I know
+there's going to be a lot of questions
+about it coming up but I also want to
+talk about com's option because you have
+more options you at have CompTIA
+certificates like the A+ you have your
+network plus Security Plus and pent Test
+Plus those are all the four that I know
+a lot of people have gone after starting
+with the A+ because A+ is going to give
+you the basics of it so if you're coming
+from a background where you don't have
+any solid foundation of it maybe you
+didn't go study a computers and you want
+to get a change in career then A+ is a
+really good place to start and if we
+look at their website really quickly
+right here you can see it is going to
+teach you things like operating systems
+software troubleshooting it's going to
+give you some understanding of security
+it's going to talk about virtualization
+and cloud computing mobile devices and
+obviously networking at a high level but
+then you want to jump into your network
+plus your Network plus is going to be
+where you learn more of the foundations
+for networking and it's going to help
+you prepare for jobs like a junior
+network administrator maybe a computer
+technician a network support specialist
+a systems engineer again not cyber
+security but the networking Community
+has always been one of the strongest
+communities that's been helping people
+to break into cyber security itself
+those are just the three that we talked
+about the CCNA the A+ and network plus
+they are not really a prerequisite but
+they are a really good place to get
+started again if you're not coming from
+a solid cybercity background or just
+general it so keep those in mind not
+really cyber security related but it is
+going to get you past HR especially if
+you're just doing a change of careers
+now let's talk about Security Plus
+Security Plus it is very very popular
+I'm actually going to bring up a
+LinkedIn search here in just a bit to
+see how many of them are going to have
+Security Plus as a requirement but this
+is going to be what is going to get you
+past the HR in a number of different
+ways and it is going to teach you things
+like General Security Concepts threats
+and vulnerabilities how how to fix them
+security architecture security
+operations and then obviously you're
+going to see things like security
+program management and oversight and it
+is also going to prepare you for cloud
+pentesting jobs a junior pentester job
+network security analyst we pentester
+and also security architect so there's a
+lot of big jobs you can see here but I
+want to kind of prove how popular
+Security Plus is and now if we take a
+look at these searches on LinkedIn you
+can see the first job right here that is
+a senior information security specialist
+so now let's look at another job right
+here we're going to look at this senior
+cyber security and we going to look for
+CompTIA and you can see again all of
+these different jobs that we're looking
+for to have a requirement or desire for
+somebody with Security Plus obviously
+you're going to have your G and some of
+these other ones like OSP and say SSP
+that are also going to be in there but I
+kind of wanted to show how often it is
+that you're going to see something like
+Security Plus being one of the security
+certificates that is required or desired
+by people that are employing for these
+positions but so far we have talked
+about the prequest quits like the
+network plus A+ those are things that
+you want to learn before we jump into
+cyber security we talked about Security
+Plus that is going to kind of show you
+the basics of security but now I'm going
+to talk about the red versus blue sides
+of things if you want to be on the blue
+side of things when you're working on
+the defensive side of cyber security you
+want to take some sort of a certificate
+that is going to focus more on the
+defensive side so for example here we
+have the cyber security analyst plus
+this one is going to get you ready for a
+security analyst role if R liability
+management analyst maybe you want to be
+on a stock team security engineer or
+threat Hunter but you also have your
+pentest plus which here is going to
+focus mostly on the offensive side of
+things this one is going to talk about
+planning scoping out a pentest
+information gathering vulnerability
+scanning how do you attack and exploit
+how to write a good report and
+communicate with your customer or your
+clients of course you're going to have
+your tools in code analysis this one is
+great if you want to become a web pent
+tester a cloud pentester network
+security operations but keep that in
+mind you are on the offensive side with
+pentest Plus versus the other another
+one with your cyber security analyst
+plus you are on the blue side which is
+on the defensive side of cyber security
+so please keep that in mind if you're
+looking to jump into cyber security you
+don't know what you like you may want to
+play some ctfs go on one of these
+platforms and see if you are wanting to
+do more on the defensive side versus
+offensive side which one is more
+interesting to you before you start a
+branch off and pick one of those to
+itself me personally I like to be on the
+offensive side this video is going to be
+mostly on the offensive side of things
+but I want to make sure I make that
+available to you so you do understand
+understand that you also have that
+option to be a Defender and not be on
+the red team or on the attacking side of
+things so keep that in mind but let's
+move on and talk about your pentests
+these are going to be probably the most
+popular ones on LinkedIn when you look
+for jobs that are very focused on
+attacking and breaking into things
+starting with CH and if you're watching
+this and you're not a fan of CH I
+understand this certificate itself gets
+a lot of flock online from a lot of
+people because most of this content
+that's available for CH you can learn on
+your own you can go on webs Academy for
+example or sign up for one of these CTF
+platforms and learn them for free but
+honestly CH is going to be a good place
+if you have no web application pen
+testing background and if we look at the
+course outline online you can see right
+here that it is going to teach you
+everything you need to know for ethical
+hacking for example from vul analysis to
+system hacking to sniffing social
+engineering dos hacking web servers SQL
+injection iot hacking Cloud cryptography
+and so on and if we look up CH or
+certified ethical hacker you're going to
+see 7,000 or more jobs that are just
+specifically looking for security folks
+with a CH background so keep that in
+mind I know it gets a lot of crap
+getting your CH and it is really really
+expensive but it is one of those
+certificates that it's going to be
+getting you through HR and helping you
+with your resume but it doesn't just
+stop there there are other certificates
+you can do that are more reputable at
+least from the hacker side of things
+starting with OSP which is your
+offensive security certified
+professional ocp or anything by
+offensive security is probably one of
+the most most respected certificates out
+there and you can see right here on
+their syllabus directly from their
+website they're going to teach you a lot
+of different things in starting with
+getting you into a Cali VM setting it up
+and then all the way down to security
+strategies looking for methodologies
+case studies tactics the test for this
+it is absolutely hard I think you have
+24 hours to break into a bunch of
+different machines and write a report it
+is probably one of the most stressful
+and hardest certificates to get through
+but honestly if we go back to our
+LinkedIn search and look up ocp there is
+going to be a lot of different jobs for
+example this pentest job with blue of
+California that is also going to require
+your OSP I think if you have something
+like a network plus A+ or you've even
+done your pentest plus and you want to
+go a step further OSP is definitely way
+to go I just understand that this is
+very expensive there are also cheaper
+options that you can get for example TCM
+SEC has a great option for the pnppt I
+think is what they call it there's an
+alternative route to go whether you do
+your ostp or PNP that all just comes
+down to which one is going to get you
+has HR but honestly OSP has probably
+been one of the most successful ones and
+I know a lot of folks that go and get
+their ocp as just a strategy to break
+into cyber security and get a job on an
+offensive security team I think it's a
+really good stopping point for us I
+didn't even get to talk about Sands or G
+certs if you want to hear more about
+those certificates drop me a comment I'd
+love to cover them but I don't want to
+make this too long I just want to
+quickly make a video and answer a lot of
+the questions around certificates where
+should I start what should I get in
+short if you're looking to break into
+cyber security do an A+ and network plus
+together will get you the basics of it
+and also make you understand networking
+if you don't want to do compa you also
+have the CCNA on the other hand if you
+already understand it and you know cyber
+security at the basic levels you
+understand security and you want to get
+a job with a blue teamer for example do
+something like your cisa Plus or you can
+jump into the offensive side with a pent
+test plus if you've already done those
+and you're ready to go to the next level
+I would personally recommend just
+skipping CH but I do understand there's
+very very possible so if you have the
+money or a scholarship get your CH or
+just jump over through ocp get ocp and
+start applying for jobs and honestly the
+other best thing that you can always do
+is go through Linkedin look at all these
+different job listings see what are the
+requirements to get these jobs how many
+of these certificates or the ones that I
+haven't covered show up in each of these
+different jobs and just go after them
+and learn them on your own all right
+that's it I know that was a lot of
+information thrown at you I hope this
+gives you an idea for the best cyber
+security certificates for beginners
+especially if you don't have a
+background with it and if it does do me
+a favor hit that like button subscribe
+to the channel I will see you all in the
+next video
+[Music]
+peace

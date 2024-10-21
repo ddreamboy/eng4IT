@@ -1,0 +1,128 @@
+I'm Mike Chappell and in this shirt Mike
+explains video we're going to talk about
+the cyber security framework published
+by the National Institute of Standards
+and technology or nist
+nist publishes a cyber security
+framework that's free for anyone to use
+and it's very popular among cyber
+Security Professionals
+the goal for the framework is to provide
+a common language for understanding
+managing and describing cyber security
+risks
+with this common language organizations
+can have more productive conversations
+among themselves and with external
+Partners such as Auditors and government
+agencies
+the framework is also designed to help
+organizations identify and prioritize
+the actions that they might take to
+reduce cyber security risk and to manage
+any risk that remains
+having a framework also helps
+organizations align their security
+actions across control types now that
+said the framework May mean different
+things to different people and that's
+okay
+some organizations May undertake the
+exercise of mapping all of their
+controls to the framework and building
+their next Generation security program
+with the framework in mind
+Others May simply use the framework as a
+reference to help identify whether they
+miss any critical security controls
+you can find the nist cyber security
+framework on the web it's a free
+download from nist's website
+let's go ahead and take a look at some
+of the details of the nist cyber
+security framework
+here's a high level look at the
+framework it consists of five different
+functions identify protect detect
+respond and recover
+now these are in very very broad terms
+the things that we all do in information
+security
+the framework then divides those
+functions into categories now those
+categories aren't shown on the screen
+yet we'll take a look at them in a
+moment
+each one of those categories is divided
+into subcategories and then the
+framework provides references that have
+detail about each one of those
+subcategories
+as you can see it's really just a
+framework where you can start plugging
+in the things that you're going to do to
+achieve each of these core cyber
+security functions
+here's a look at a little more detail
+about the framework we're now taking the
+functions and expanding them into
+categories so we have five functions and
+then 23 total categories
+for example for the identify function
+the cyber security framework gives six
+categories Asset Management the business
+environment governance risk assessment a
+risk management strategy and supply
+chain risk management
+each of these categories is divided into
+subcategories that have much more detail
+before I explain those I just want to
+take a moment to invite you to visit my
+website at certmike.com
+on that site I have free study plans put
+together to help you earn your next
+cyber security certification
+the plans tied together the content that
+you'll find in study guides video
+courses and practice tests to help you
+prepare for your next certification exam
+and pass that test on the first try
+also if you're enjoying this cert mic
+explains video please take a moment to
+click the like button below to help
+other people discover it if you
+subscribe to my channel you'll be among
+the first to see my new cyber security
+videos as they come out the framework
+then goes into a much higher level of
+detail when you start breaking out the
+subcategories so in the asset management
+category of the identify function we
+have six sub-categories and they talk
+about things like the inventory of
+physical devices and systems the
+inventory of software platforms and
+applications how we map organizational
+communication and data flows and so on
+as you can see we're getting into the
+real details of security here and there
+are quite a few references to other
+standards for each one of these
+subcategories for people who are looking
+for more detail on how you might go
+about achieving these goals
+now remember what you're looking at here
+is the detail for one category of one
+function
+remember there are five different
+functions and 23 total categories so
+this cyber security framework winds up
+being a very lengthy document
+security control Frameworks play an
+important role in information security
+While most organizations don't follow
+them letter for letter these Frameworks
+do provide a useful tool for Designing
+the appropriate controls for any
+organization
+[Music]

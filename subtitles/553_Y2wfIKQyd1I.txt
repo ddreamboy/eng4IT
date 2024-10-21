@@ -1,0 +1,435 @@
+So far in our deep learning tutorial
+series we looked at
+Artificial Neural Network and
+Convolutional Neural Network which is
+mainly used for image processing.
+In this video we will talk about
+Recurrent Neural Network which is used
+mainly for
+natural language processing tasks so if
+you think about deep learning overall,
+CNNs are mainly for images, RNNs are
+mainly for
+NLP. There are other use cases as well so
+we'll understand
+how Recurrent Neural Network works and
+we'll look at different
+applications of RNN in the field of NLP
+as well as some other domains.
+We will be looking at some real-life use
+cases where
+sequence models are useful. You must have
+used
+Google mail-Gmail. Here, when you type in
+a sentence it will auto complete it. So
+just see,
+when I type "not interested at this time"
+is something it auto completed.
+So google has this RRN or Recurrent
+Neural Network
+embedded into it where, when you type in
+a sentence "not interested at"
+it will auto complete with "this time". If
+you say "we'll let you know if it changes"
+it will also say "in the future" so this
+saves you time.
+It will write the sentence for you.
+Another use case is translation.
+You must have used Google Translate
+where you can translate
+sentence from one to another language
+easily.
+Third use case is Named Entity
+Recognization
+where in the X you know you give Neural
+Network a statement
+and in the Y Neural Network will tell
+you the person name
+the company and time. Rudolph Smith must
+be a millionaire with Tesla's
+prices skyrocketing.
+So these are various use cases where
+using sequence models or
+RNN-Recurrent Neural Network helps.
+The fourth use case is Sentiment
+Analysis where you have a paragraph and
+it will tell you
+the sentiment whether this product
+review is One star, Two star
+and so on. Now you would think - 
+Why can't we use a simple Neural Network
+to solve this problem? See all these
+problems
+they are called Sequence Modeling
+problem
+because the sequence is important. When
+it comes to human language
+sequence is very important. For example
+when you say, "how are you?" versus
+"you are how" doesn't make sense,
+right? So the sequence is important here
+and you would
+think - Why don't we use simple neural
+network for that? Well,
+let's try it. So for language translation
+how about we build this kind of neural
+network
+we know where input is the English
+statement and the output could be Hindi
+statement
+Once I build this network, what if my
+sentence size changes? So i might be
+inputting
+different sentence size and with a fixed
+neural network architecture it's not
+going to work
+because you have to decide how many
+neurons are there in the input and
+output layer.
+So with language translation, number of
+neurons
+becomes a problem. Like what do you
+decide as a size of neurons?
+Now one would argue okay I would decide
+let's say a
+huge size let's say 100 neurons and
+remaining
+if I am saying, did you eat biryani? So it
+will occupy 4 neuron.
+Remaining 96 I will just say 0
+or you know blank statement. That might
+work
+but still it's not ideal. The second
+issue is too much computation.
+You all know neural networks work
+on numbers, they don't work on string.
+So you have to convert your word into
+a vector. So one of the ways of
+converting that into a vector
+is -l et's say there are 25000 words
+in your vocabulary and you will do one
+hot encoding
+where you know "how" let's say is at 46th
+position
+"are" is let's say second position "you" is
+let's say
+at 17000th position. So at that position
+you put 1,
+remaining position you put 0 and that's
+called
+one hot encoding. You have to do similar
+thing for output as well.
+But you realize this will increase too
+much computation.
+Each of the word when you convert it to
+a vector
+you know how many neurons you need in
+the input layer itself.
+Its humongous. The third issue
+is this - Sometimes when you translate
+language
+you for let's say two different English
+statements you might have a
+Hindi statement. So in this case
+when I say "On sunday I ate golgappa"
+let's say
+I train this network based on this
+statement
+and then for 'On Sunday' let's say it will
+adjust the weights of
+all these edges which I have highlighted
+in yellow color.
+Same statement I can say differently. I
+can say "I
+ate golgappa on Sunday". So now on Sunday
+the meaning of on Sunday
+is same but here neural network has to
+learn different set of edges you see all
+these edges are in yellow color.
+So the parameters are not shared.
+We looked at in our Convolutional Neural
+Network tutorial as well that by
+using convolution operation we can share
+the parameters.
+Here, the use of
+ANN or Artificial Neural Network doesn't
+allow you to
+do that okay. Also
+the most important part in all this
+discussion is the sequence.
+See when you have structured data, for
+example you're trying to figure out
+if the transaction is fraud or not and
+let's say
+your features are transaction amount,
+whether the transaction was made out of
+country
+or whether the SSN that customer
+provided is correct or not.
+Now here if you change the order of this
+features, let's say 'ssn correct?' I supply
+you know
+my first neuron
+it's not going to affect anything
+you know because 
+the sequence in which you supply the
+input doesn't matter.
+Whereas if you have
+English to Hindi
+translation
+and instead of saying "I ate golgappa
+on sunday'
+and if I say
+181
+00:06:25,360 --> 00:06:31,600
+"I ate Sunday on golgappa" the meaning
+becomes totally different. So now you
+cannot say that
+the Hindi translation is 'ravivar ko mene golgappe khaye"
+because it becomes invalid so sequence
+is very very important that's why
+Artificial Neural Network doesn't work
+in this case.
+Just to summarize these are the three
+major problems
+with using ANN for sequence problems.
+Let's once again talk about Named Entity
+Recognition.
+Let's say 'Dhaval loves baby yoda'
+I love my baby grogu. I love Mandalorian
+series and
+we have got this nice baby grogu at
+our home
+which actually talks with us. In this
+statement
+Dhaval and baby yoda are person names,
+okay.
+So the whole purpose of Named Entity
+Recognization is
+to find out the
+entity you know like 'Dhaval' as an entity
+is a person 'baby yoda'
+as an entity as a person so that's the
+whole
+goal of NER.
+Now you can represent this as ones and
+zero. So if the
+word is person's name you would mark it as
+one
+and if it is not a person's name 
+you would mark it as zero.
+so let's see how RNN works here. RNN is also called Recurrent Neural Network.
+so first of all you have to convert Dhaval into some vector. 
+It doesn't matter how you convert
+216
+00:07:57,199 --> 00:08:01,680
+it you can take a vocabulary and use one
+hot encoding and there are other ways
+of
+vectorizing a word. Then
+you have a layer of neurons. So these are
+all individual neurons.
+Let's say this is one layer. It's a
+hidden layer
+you supply that and you get one output
+okay.
+So each neuron all you know has a sigma
+function
+and activation function. So now while
+processing the statement 'Dhaval loves
+baby yoda'
+now I will process it word by word.
+So I supply 'Dhaval', get the output and
+then I
+go back again. Now I supply
+'loves' converted into vector and the
+previous output which I
+got which was y Dhaval I now supply
+that as an input to this
+layer. So you see
+the input of the layer is not only the
+next word but the previous
+output because
+the language makes sense. Language needs
+to carry the context
+if I have just a word loss and if I
+don't have Dhaval in front of it
+it might mean a different thing. So there
+is a context that you need
+and this kind of architecture provides
+your context or a memory.
+In the third word again you supply 'baby'
+to the same network right. So our network
+has only one layer.
+it has only one layer, so there is input
+layer output layer and the hidden layer
+is just one
+and it has bunch of neurons. In that we
+are repeatedly processing word
+one by one okay
+and you keep on doing this. Now the
+benefit of this is
+when i'm processing 'baby' when i get why
+loves
+that 'why loves' carries the state, the
+previous state or previous memory
+of 'Dhaval loves' you know the whole
+statement.
+Now i'm presenting this in a different
+way make sure
+these are not four different hidden
+layers.
+This is a time travel
+okay so actual hidden layer is only one.
+I am just doing a time travel. So first
+when I supplied word 'Dhaval'
+i got this output and output was nothing
+but the activation function which I am
+denoting with a1
+and you need some previous activation a0
+as well.
+Let's say it's a vector of all zeros
+then you supply second word
+'loves' and use the previous output which
+was yDhaval
+so yDhaval and a1 they are
+both same here
+and then you get another output a2
+where
+that you supply along with the third
+word 'baby'
+to the same network. So these four
+neurons it's the same
+single layer. I am just showing
+the status of it at different times okay.
+So you have to be very clear on this
+that these are not four different layers.
+It's just one layer just because I am
+showing different time steps that's why
+I'm showing you almost a time travel
+here
+and once the network is trained
+of course it will output like 'Dhaval' is
+one 'loves' is zero 'baby' is one and so on
+okay. So you get your NER output
+individually here. One other way of
+representing the same network
+okay because just to avoid confusion and
+to
+make presentation little more clear. Many
+times
+in literature you will see presentation
+like this - 
+Where each word which is an input comes
+from the bottom
+and there is activation. So again this
+and these two diagrams are exactly same
+okay
+I'm just putting this word at the bottom.
+Generic Representation of RNN is this.
+So this is the real representation. You have
+only one layer
+and you are you are kind of almost in a
+loop. You are
+supplying the output of previous
+word as an input to the second word.
+So now let's talk about training. So
+again
+the problem we are talking about is NER
+where these are my training samples okay
+x and y.  'x' is a statement 'y' is whether
+a given word is person name or not
+so we are processing first training
+sample 'Dhaval loves baby yoda'
+so this one I will first
+initialize my neural network weights
+with some random values,
+then I supply each word, then I calculate
+y hat which is predicted
+y, then I compare with the real y so real
+y here
+is 1 0 1 1 so I compare that with here
+so 1
+0 1 1 I compare that with y hat
+and I find out the loss okay
+and then I sum the loss.
+So that will be my total loss. You all
+know about grade and descent right. So we
+compute the loss then we back propagate
+the loss
+and we adjust the weights. So now I take
+the second statement
+'Iron man punched on hulk's face'
+he was very angry with hulk. Again i
+calculate all the losses
+then I find total loss and
+then I do grid and decent to reduce the
+loss.
+So i keep on doing this for all my
+training samples. Let's I have 100 training
+samples.
+Passing all hundred training samples
+through this network will be one epoch.
+We might do let's say 20 epochs and at
+the end of the 20 epoch
+my loss might become very minimum. At
+that point we can say my neural network
+is trained.
+Let's take a look at language
+translation. So in language translation
+what happens is
+you supply first word to your
+network then you get the output
+then again same network you supply
+second word and the output from previous
+step
+as an input and of course when you
+supply first where you have to
+pass in some activation values let's say
+all
+a vector of all zeros.
+Then you supply third word for fourth
+word and so on
+and when you're done with all the words
+that's when the network starts to
+translate it because
+you cannot translate one word by one,
+because after
+the statement I can push maybe one more
+word and that will just totally change
+my translation.
+That's why for language translation you
+have to supply all the words and only
+then
+the network can translate for you.
+So the network will translate it like
+this
+and the first part is called encoder
+the second part is called decoder.
+We will go
+more in depth into all this but I want
+to quickly demonstrate how
+the neural network looks in the case of
+language translation.
+Now this layer doesn't have to be just
+single layer. It can be a deep RNN as
+well
+where the actual network might have
+multiple hidden layers
+okay. So I hope that clarifies
+the architecture behind RNN and you
+understand why you can't use simple
+neural network here and you have to use
+specialized
+neural network called RNN which can
+memorize for you, which can
+remember previous state because language
+is
+all about sequence. If you change the
+sequence the meaning changes
+so if you like this video please give
+it a thumbs up
+and we'll be having more Recurrent
+Neural Network and NLP type
+tutorials in the future videos
+Thank you.

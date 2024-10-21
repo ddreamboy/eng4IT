@@ -1,0 +1,146 @@
+hi today we're going to talk about data
+governance now i know some of you are
+thinking this is really either boring or
+super complex
+but we're going to use an analogy today
+to help drive home some of the key
+concepts around data governance after
+all data governance is foundational and
+critical to helping you take advantage
+of your data in the ai world
+now recently i had the task of cleaning
+out a house as i prepared for a major
+modernization and renovation
+this just wasn't any ordinary house
+though it's a house i bought from my
+parents who lived there for over 30
+years and let's just say
+my mom wasn't real good about throwing
+away things
+so the first thing i had to do was
+understand what i had so i started in
+the basement and had to go through
+and discover
+all of the different items clothing bins
+photographs family heirlooms
+everything that was down there
+that process in the data world is called
+discovery
+discovery is a process of understanding
+all of the different data assets you
+have across your repositories which may
+be in the cloud on-prem or even from
+some sas applications
+now the easy part is discovering the
+data that you know about the hard part
+is discovering the data that you don't
+know about
+for me
+that was discovering all the different
+things
+in my
+attic
+now once i had the opportunity to go
+through each
+different part of my house i had to
+start classifying the items
+i had to understand if it was something
+that was
+a family heirloom whether it was a
+picture or a photograph set of
+photographs
+or even toys financial records all kinds
+of different stuff
+in the data world the process of
+classification is assigning data to
+different categories
+whether it's customer data product data
+financial data
+and providing that that label or that
+classification to it
+now after that this is where it gets
+really fun in my world i had to go
+through and decide what to keep
+for me i had my wife set forth some
+policies about what we were keeping what
+we were donating
+and what we were just throwing in the
+garbage
+let's take toys for example my mom loved
+to keep a lot of toys from when i was
+growing up
+in certain toys there were missing parts
+the policy was
+if they were missing parts we would
+donate them hoping that somebody may be
+able to use it if it was broken we would
+throw it away
+now
+we started applying these rules
+rules are ways to help you enforce your
+data policies and again policies are
+about setting guidelines and standards
+about what to do with your data in the
+data world one policy that is very
+common yet critical is around personally
+identifiable data
+personally identifiable data such as a
+social security number must be masked
+the rules help you enforce that if it is
+a social security number you must mask
+it
+and that helps you enforce the policy
+now for me
+as i went through the process
+of
+enforcing my policies i decided what i
+loved
+what i was throwing away
+and
+what i was donating
+to charity
+in the data world
+you must go through the same process
+and as i did so in my world the things
+that i was keeping
+i repackaged
+in bins and i labeled the different bins
+describing what was in each of them
+now this is a little bit like metadata
+metadata in the data world helps
+describe what that data asset is
+simply put it's like a card catalog at a
+library that describes a book it
+provides the author the subject the
+copyright
+in the data world it does much of the
+same thing it tells you where the data
+came from what it is
+so that when you want to use it it's
+easier to find and easier to use when
+the time comes
+now what was cool in my world was i
+found a few things
+that helped me
+generate some money
+there were a couple of family heirlooms
+that i didn't necessarily need anymore
+but i was able to sell
+wouldn't that be cool like if you were
+able to monetize your data
+by understanding what it is and helping
+your organization
+that's the importance of data governance
+that's the value that it brings to your
+organization
+for me
+the one thing i wish i could do
+was automate that process
+the great news for you
+in the data world you can automate it
+thanks for watching if you have any
+questions please leave them in the
+comments below also please remember to
+like this video and subscribe to our
+channel so we can continue to bring
+content that matters to you

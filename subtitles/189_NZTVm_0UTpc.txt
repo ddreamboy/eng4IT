@@ -1,0 +1,74 @@
+[Music]
+hi I'm an automatic translation system
+now my head used to be full to bursting
+with vocabulary lists and grammar rules
+and my progress was slow and all of
+those rules and exceptions gave me a
+headache
+I couldn't translate new words and my
+sentence structure wasn't always right
+and this caused problems translated
+messages were often misunderstood and
+users became unsure about their
+interactions with me
+but now I use a neural network which
+means I learn from lots of examples I
+learned from novels and their
+translations translated subtitles
+multilingual websites and so on and I
+don't like to brag but I can process
+more text than anyone could read in an
+entire lifetime
+with this mass of information my neural
+network can learn how to translate and
+as with all computer systems the
+information must first be converted into
+number sequences also known as word
+vectors
+a word Vector places each word on
+different axes in a multi-dimensional
+space
+words that are somehow related to each
+other are closer together in that space
+than words that are unrelated
+I can easily work with a space of up to
+a thousand Dimensions now try getting
+your head around that all those numbers
+represent different aspects of meaning
+which in an abstract way allows me to
+understand the meaning of words before I
+start translating I study the whole
+Source sentence because of all the
+information I gathered about words I
+know how they connect with each other
+and this means that I make fewer and
+fewer grammatical mistakes
+sometimes I don't have enough
+information about particular words in a
+sentence to work out the correct meaning
+when that happens I use the most
+frequent translation which is useful but
+by no means foolproof
+but if you give me a sentence with more
+context I usually manage to provide an
+accurate translation
+I also find it easier if two languages
+are similar so I can do a better job of
+translating from Italian into Dutch than
+from say Chinese into English all the
+information I process helps me to become
+the best version of myself
+and the better I become the more I can
+help all of you to communicate with each
+other as effectively as possible but to
+become even better I need a lot more
+information I know about 200 languages
+so far but there are almost 7 000 in the
+world and on top of that I'm not as good
+as I'd like to be at translating
+creative language for this and other
+difficult tasks I prefer to work with
+language professionals would you like to
+know more then have a look at the
+following website
+[Music]

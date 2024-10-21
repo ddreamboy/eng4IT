@@ -1,0 +1,252 @@
+hi and welcome to biostat squid the
+topic of this video is principal
+component analysis and how to use it to
+interpret biological data let's Dive In
+so imagine you want to study aging and
+you want to find out what factors
+contribute to a longer or shorter
+lifespan
+start with a data set that looks like
+this let's say you have data from 20
+people and the age when they passed away
+and we have many factors like their
+height weight sex if they smoked or not
+about their diets anyway we have 200
+factors
+so in order to understand the data we
+need to visualize it first but we cannot
+visualize so many dimensions all at once
+we could for example pick two factors
+and plot them for example we might think
+smoking and cholesterol levels in blood
+might be high contributors to your life
+expectancy
+but we're losing some possible valuable
+information contained in other factors
+of the data such as weight or Diet
+is there a way of taking into account
+all factors
+an amazing solution is principal
+component analysis or PCA for short
+CA takes all of the factors combines
+them in a smart way and produces new
+factors these new factors are called
+principal components
+and it does that in such a way that if
+you focus on just the first few
+components you will keep most of the
+information from the data set
+going back to our example imagine we
+computed principal components analysis
+on our data set and reduced our 200
+Dimensions to five principal components
+this is amazing we were able to simplify
+the data much more and what's important
+we didn't lose much information
+okay but we cannot represent five
+dimensions in a 2d plot the nice thing
+about PCA is that principal components
+are ranked from most important to least
+important so let's just plot pc1 and PC2
+this is our PCA plot and each point is a
+person from our data set
+what if we colored the points by age
+we can see that our samples already
+clustered together really nicely by age
+those people who live longer seem to be
+grouped together those who live shorter
+tend to be grouped together
+so PCA took into account all our
+biological factors transformed them into
+a new variables called principal
+components and if we just take the first
+two we actually already see some
+interesting Trends in our data
+but what about the other PCS how do we
+know if the first two principal
+components are enough to capture most of
+the information or variance in the data
+set
+well the solution to this is a screen
+plot screen plot tells you how much
+variance of the data set basically how
+much information is explained with each
+principal component in this case the
+first principal component explains 50
+percent of the variance in our data set
+This Is Amazing by the way with actual
+real life data sets if you get close to
+40 percent you might as well throw a
+party anyways what this says is that 50
+of the variation of a person's lifespan
+can be explained by principal component
+1. if you add principal component 2
+that's another 35 percent which makes 85
+percent of course it depends on your
+objectives but explaining 85 percent of
+variance in life expectancy sounds quite
+nice to me ideally we want to get around
+90 variance with just two to three
+components so that enough information is
+retained while we can still visualize
+our data um on a plot okay but what is
+exactly principle component One what
+does it mean as a biologist who's
+interpreting biological data you are
+interested in knowing which variables or
+biological factors are responsible for
+the patterns you see among the
+observations or the people
+we would like to know which variables
+are influential and also how the
+variables are correlated this is given
+by the principal component loadings
+basically each variable gets a loading
+or weight for each principal component
+which tells you how much it contributes
+to that PC
+we can also plot the loadings to see the
+relationship between our 200 variables
+let's just plot some of them
+for example for pc1 which again is the
+most important PC we might expect to see
+variables like greasy diet obesity heart
+rate or frequent exercise to have really
+large weights because they contribute a
+lot and maybe variables like how many
+times you brush your teeth a day have a
+lower weight so each of our 200
+variables gets a loading score or weight
+for each principal component
+you might have noticed that variables
+contributing similar information are
+grouped together
+this is part of the magic of PCA
+variables that are positively correlated
+for example greasy diets obesity are
+grouped together
+correlated just means that when the
+numerical variable of 1 increases or
+decreases the numerical value of the
+other variable has a tendency to change
+in the same way
+on the other hand when variables are
+negatively or inversely correlated they
+are positioned on opposite sides of the
+plot origin in diagonally opposed
+quadrants for example your resting heart
+rate and height are inversely correlated
+meaning that taller people tend to have
+lower resting rates compared to Shorter
+people
+moreover the distance to the origin also
+gives you information the further away a
+variable is from the origin the stronger
+the impact it has on the model for
+example here obesity blood pressure and
+average heart rate seem to be good
+variables to separate longer lifespans
+from shorter life spans
+so this loading plot is a great way of
+seeing the relationship between our 200
+variables at the same time it lets you
+know what variables are influential and
+also how the variables are correlated
+okay so back to our PCA plot how do we
+use this to draw conclusions from our
+data set
+let's have a look at this other example
+we have data from the gene expression
+profile of 50 different patients with
+lung cancer and for each patient we
+measured the expression of 30 000 genes
+we could plot the expression of genes
+individually across all patients but we
+cannot visualize the expression of all
+genes across all patients all at once or
+can we to get a general overview of our
+data a good place to start is with PCA
+so this is our PCA each point is one of
+our patients patients with similar gene
+expression profiles are now clustered
+together just glancing at this plot we
+can see that there are three clusters of
+patients
+this means that overall we have three
+distinct gene expression profiles and
+this is very interesting because it
+might mean that this group of patients
+will respond better to drug X and this
+other group of patients will respond
+better to radiotherapy
+now the orange and green clusters are
+different based on pc1
+so the differences in gene expression
+profiles are probably due to genes that
+have heavy influences on pc1 remember
+that the loadings tell us which genes
+have heavier weights on the principal
+component
+the pink and green clusters are
+different based on principle component
+2. so the genes that influence PC2 are
+more likely to be responsible for this
+but remember principal components are
+actually ranked by how much they
+describe the data pc1 is more important
+than PC2 so actually differences between
+clusters along pc1 axis are larger than
+the similar looking distances along PC2
+axis so here clusters green and orange
+are more different amongst each other
+than clusters green and pink
+wait but there are two principal
+components enough to represent all our
+30 000 genes
+perhaps you remember how to check this
+that's right we need to take a look at
+the screen plot in this case the first
+two principal components cover most of
+the variation in our data set so they're
+good enough
+and this is one of the first steps of
+analysis as you can see PCA is a great
+way of representing large data sets to
+observe Trends jumps clusters and
+outliers from here we would of course
+Trace back to find out which genes make
+the Clusters different from one another
+so to sum up PCA is a great way of
+summarizing large data sets with many
+dimensions into less Dimensions while
+retaining as much information as
+possible
+it captures the essence of the data into
+a few principal components
+usually it's enough to keep just the
+first two or three principal components
+if they explain enough percent of the
+data set
+to check how much variance or
+information the first few principal
+components hold you should look at a
+screen plot how do we read a BCA
+observations with similar overall
+profiles are clustered together pc1
+captures the most information from our
+data set followed by PC2 and then PC3
+and so on this means that clusters
+separated along the x-axis are more
+different than clusters separated along
+the y-axis by a similar distance
+if you're interested in understanding
+how PCA actually works so how it is able
+to understand and summarize the data
+leave me a comment down below I will try
+my best to explain it with zero math so
+you can get an idea of how it does it
+if you like this video let me know and
+if you don't want to miss another video
+from biostat squid don't forget to
+subscribe and that is all for today see
+you in the next one

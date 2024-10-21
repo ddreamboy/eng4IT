@@ -1,0 +1,112 @@
+[Music]
+hi my name is Doug Chase I'm the
+director of training for Coral cyber
+security and I thank you for joining me
+today
+so I've been asked to talk about uh
+cyber security best practices uh which
+is a it's a very big topic it means a
+lot to different organizations for small
+businesses medium businesses and
+Enterprises all of which means something
+different you also have best practices
+for specific verticals such as
+Healthcare manufacturing Financial
+organizations educational institutions
+you know so it's a very big topic it can
+actually get very confusing to unravel
+some of that confusion an organization
+called the nist the National Institution
+for standards and technology which is a
+government organization under the
+Department of Commerce put together
+Frameworks that allow you to be able to
+do press best practices across basically
+anything that's complex and important
+and cyber security is one of those
+Frameworks so the framework itself for
+nist is uh you know kind of hinges on
+Five Pillars which is identify you know
+the ability to be able to identify what
+in your organ organization you want to
+protect who you want to protect the
+ability to protect it right so so what
+information do you want to protect and
+how do you how do you envision yourself
+protecting this really valuable
+information
+being able to detect but how do we know
+if something if a cyber security event
+is occurring then it hinges up upon your
+ability to be able to respond to it so
+when an event occurs how are you as an
+organization going to respond and deal
+with it and then finally being able to
+recover from it right do you have a
+business continuity or Disaster Recovery
+placement plan in case of a worst case
+scenario so this framework identify
+protect detect respond and recover form
+the basis of many many uh different uh
+categories within each of them so once
+you've gone through that exercise in
+terms of the identifying protecting
+detecting responding recovering then you
+look at your own organization when you
+dig a little bit deeper nist uh you know
+actually has four tiers of where they
+consider organizations to be in terms of
+their cyber security Readiness uh the
+first one is partial which is basically
+you don't have much in place at all
+except maybe some of the technologies
+that are already built in to uh the
+products that you're currently using so
+uh you know essentially you're just
+leaving it up to chance and you'll deal
+with whatever comes when it comes then
+you have risk informed which is where an
+organization has awareness of what the
+risks that are out there they understand
+fishing and they understand malware and
+ransomware and things like that but for
+whatever you know their own reasons they
+don't have the tools or the resources in
+place to be able to implement any of
+that but at least they're aware of it
+and then you have repeatable and
+repeatable is where you have some of
+these tools in place and you can be
+proactive to a degree in terms of being
+able to get out ahead of some of these
+threats and then finally adaptive is the
+last year and adaptive is the most
+intelligent which means that you've put
+tools in place that are able to adapt to
+changing needs from a cyber security
+risk perspective adaptive is where you
+want to be because that's where your
+best cyber Security Bank for your buck
+is going to be the ability to be able to
+adapt to new threats coming in and the
+ability to be able to adapt not only to
+new threats but also the ways that
+attacks are occurring such as you know
+within you know the data itself The
+Insider threats email Cloud application
+security endpoint protection right these
+are things that constantly need to be
+monitored constantly need to be updated
+and frankly most organizations
+particularly small and medium-sized
+businesses don't have either the
+resources in-house or the budget you
+know to go best to breed across the
+board that's why Coral was invented
+specifically was to be able to allow
+small and medium-sized businesses to
+have an Enterprise like implement
+rotation tier at a budget frankly that
+is
+incredible you know for the value that
+it brings

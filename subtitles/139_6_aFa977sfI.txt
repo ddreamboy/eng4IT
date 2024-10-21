@@ -1,0 +1,494 @@
+if you use microsoft excel to analyze
+data at work
+you use piv tables and charts and things
+like that but you
+need more power you are interested in
+answering
+more complicated more impactful business
+questions with data then this is the
+video for you
+in this video i'm going to go through my
+top four data mining techniques using
+microsoft excel and what's so awesome
+about data mining with excel is that any
+professional can do it
+and i mean any professional i don't care
+if you work in hr
+or finance marketing supply chain i.t
+product management
+whatever these techniques are useful for
+any professional that wants to have more
+impact at work with data analytics
+so what i will do is i will go through
+my top four techniques for data mining
+with excel in this video
+just so you know i have tutorials
+in-depth tutorials for all four of these
+techniques on my channel
+so i'm not going to go into too much
+detail in this video but what i will do
+is reference the appropriate video that
+i have on my channel at that particular
+point in time just in case you're
+interested
+in diving deeper and learning more about
+the techniques
+so let's go ahead and get started with
+number one on the list and that is
+exploratory data analysis so here i am
+in excel and i want to show you what i
+mean when i talk about exploratory data
+analysis
+typically what this means is grabbing a
+data set
+and formulating some sort of very
+interesting or potentially
+impactful business question and to
+really exemplify this what i've got here
+is a famous data set this happens to be
+a machine learning data set by the way
+just so you know
+around titanic passengers and the
+question
+the relevant and impactful business
+question with this data is hey
+are there any patterns in the data that
+are highly associated or highly
+predictive
+of survival even though this is a
+titanic machine learning data set
+don't think of it that way just think of
+it as a proxy for customer data
+and let's say the example question you
+have is hey is a customer going to
+convert to paying
+is a customer going to buy more is a
+customer going to churn and leave us for
+a competitor
+these are the types of awesome questions
+that you can answer using excel
+and exploratory data analysis techniques
+and i'm just going to briefly show you
+some examples of what i'm talking about
+so i've got the data here and
+the business question that we're trying
+to answer is hey what
+types of patterns in the data are highly
+predictive
+highly associated with survival one of
+the first things that you can do
+is create what's known as a histogram
+which is a particular kind of data
+visualization and you can see an out of
+the box
+histogram right here and these are
+useful but what's even better
+is when you actually use a pivot chart
+as a histogram and what you get is a
+much much more powerful data
+visualization to help you answer
+questions now
+check this out so you can see here i've
+got the ages of the passengers on the
+titanic
+and the colored bars here in the
+histogram tell you the orange
+or the survival rates and the blue are
+for the folks unfortunately that didn't
+make it
+but here's the thing check it out you
+can use these slicers and you can say
+look i'm interested in only
+females or males and only males let's
+say females in
+first class i mean look at that look how
+it just changes and it shows you that
+wow
+females and first class overwhelmingly
+survive
+this is the kind of exploratory data
+analysis that isn't commonly
+done by most excel users but is totally
+easy to do in excel
+and super super powerful but there's
+more so for example there's another type
+of data visualization
+known as a box plot what this shows you
+essentially is is what is the range of
+age values in the data set
+based on whether someone didn't make it
+they perished or they survived
+powerful stuff right because what you
+can see here is
+okay generally speaking those that
+survived they kind of skewed to be
+younger
+imagine that and then lastly and this is
+just one more example
+is a scatter plot which is you know just
+these dots but notice what i've done
+here
+is i've color coded these dots here
+to represent whether or not someone
+survived or perished and what you can
+see is
+the age on one axis in the family size
+how many people
+were traveling together on the titanic
+and what you can see here clearly
+is that it's kind of a mixed bag right
+it's like okay if your family size is
+big and your
+age is young maybe you have a tendency
+to perish
+which might make some sense based on the
+nature of the data but all that to say
+exploratory data analysis is the
+fundamental thing if you want to uplevel
+your data analytics game
+and in excel it is wildly easy and as i
+mentioned i have a whole
+series of tutorials on exploratory data
+analysis i'll put the playlist up here
+this is number one on the list if you're
+only going to do one thing out of the
+four in this video
+this is the thing to do exploratory data
+analysis
+so after exploratory data analysis with
+excel which is super awesome
+the next thing on the list number two on
+the list
+is market basket analysis and
+if you're not familiar market basket
+analysis is a quintessential data
+analysis technique
+used in the grocery store and retail
+industries however
+it is super powerful you can do all
+kinds of things with it so let's pop
+over to excel and let me show you what i
+mean
+here i am in excel and once again i'm
+going to be using
+the titanic data set here as the frame
+of reference
+and that's only to cement this idea that
+you can use market basket analysis
+in excel to mine all kinds of data and
+generate
+new and powerful insights so once again
+in this particular case what we're
+interested in
+is trying to find out what
+characteristics of individual
+titanic passengers were highly
+associated with survival
+and once again just think of this like
+customer data and the number of
+questions you can
+answer with market basket analysis is
+immense
+i'm going to go ahead and ignore most of
+this because
+i have a tutorial on my channel which i
+will put
+right up here for you to take a look at
+and what you can see here is an example
+of market basket analysis
+in action and what i've asked excel to
+do for me
+in this market basket analysis is to say
+look it survived all right i want you to
+hold that steady i want you to find out
+everything else to the left of this
+particular
+cell that is highly associated with the
+thing in the cell
+and survival in this case market basket
+analysis is super powerful
+what you can see here is i'm only asking
+excel to find the top two things that
+are highly associated with survival
+but i don't have to only have two i
+could have three or four or five this is
+where market basket analysis becomes
+really really super powerful
+and what happens in this particular
+analysis is that excel said okay dave
+i will find the top two things based on
+the data that we saw
+in the table that are highly associated
+with
+survival and they are being an adult
+female
+and what this tells me over here at this
+point here
+the lift this this is what this is
+what's so awesome about market basket
+analysis
+what this tells me is based on the data
+that i have
+that if you're an adult female you are
+1.99
+basically two times twice as likely to
+survive
+this is the power of market basket
+analysis in action
+and it doesn't have to be titanic
+passengers right it could be anything so
+for example if you work in product
+management
+you could list the features in your
+software application and say okay
+of all these different combinations of
+software features which ones are most
+highly associated with people
+not only signing up for our software
+service but also stick around and pay us
+month after month after month for a long
+period of time
+there are scenarios in hr and
+manufacturing
+in logistics you name it market basket
+analysis is a
+wildly wildly useful tools so that's why
+it's number two on the list
+and not surprisingly once again i've got
+a tutorial for this up here if you're
+interested in learning more about market
+basket analysis but this is the thing
+you should tackle
+next after exploratory data analysis
+after market basket analysis number
+three on the list the third thing that
+you might find
+super super useful as a professional
+looking to have more
+impact at work with data is cluster
+analysis
+and in particular the k-means algorithm
+for cluster analysis
+is easily implemented in excel and is
+quite powerful
+and to kind of give you some sort of
+idea of what goes on with cluster
+analysis let me flip over to powerpoint
+for a quick intro this is a contrived
+example to be sure
+but it illustrates the idea of cluster
+analysis
+the idea is that you have a pile of data
+and what you want to do is you want to
+say look
+are there any patterns in the data are
+there any associations are there any
+groupings in that data
+that maybe i'm not aware of that might
+be potentially useful
+a quintessential example of using
+cluster analysis
+is what is known as customer
+segmentation so for example you have a
+big pile of customer data
+and what you want to do is group them
+into groups and then take a look at
+those groups and say
+what are the characteristics of this
+group that makes it different from this
+group and
+is this group more likely to buy or more
+likely to do xyz
+that sort of thing so cluster analysis
+is super useful but it goes way beyond
+just customer segmentation
+for example in supply chain using
+cluster analysis
+in logistics is an awesome awesome
+technique
+so this is a contrived example and what
+you can see here obviously
+are clusters right two obvious clusters
+one right here
+one right here but what's super
+interesting in cluster analysis
+is actually situations like this this
+data point right here
+and just just be clear this is a very
+very contrived example because
+notice that i'm only using two
+dimensions here an x-axis
+and a y-axis two dimensions but in a
+real-world cluster analysis scenario
+you might use four dimensions or five
+dimensions
+or seven dimensions and by the way just
+think of a dimension as a column of data
+in an excel table the more columns that
+you're using the more dimensions you
+have and then of course obviously it
+gets more and more complicated to find
+these groupings effectively so we're
+just going to use two dimensions here
+because
+that's basically all powerpoint can
+handle
+so what's going to happen is that we
+would run a k-means
+clustering algorithm on this data and
+obviously it's going to find this
+cluster in this cluster but the question
+is what's going to happen to that data
+point right here
+what's gonna happen to the data point
+and if you run the k-means
+algorithm you see here that it decides
+that eventually it becomes
+an orange dot so it becomes part of this
+cluster right here which is colored
+orange and you've got this one
+down here just in case you're curious
+this
+big orange dot and this big green dot
+they're cluster centers
+i go into detail in the video up here on
+k-means cluster analysis with excel to
+explain what these mean in more detail
+for our purposes right now we don't care
+what happens is that k-means
+iterates through the data over and over
+and over again until it finds all the
+data and assigns it to all the clusters
+that you specify
+this is a super super useful algorithm
+k-means is very easy to implement in
+excel
+all you need is basic functions tables
+of data and just a little bit of power
+query
+and like i said i've got a video up here
+this tutorial goes into how you can do
+this
+in depth cluster analysis is a wildly
+useful skill to have and which is why
+it's number three
+on the list k-means clustering wildly
+useful that's why it's number three on
+the list
+the last and final technique number four
+on the list is naive bayes
+classification now if you're not
+familiar with classification
+just think of it as a way of analyzing
+your data
+to create a predictive model that allows
+you to decide
+whether something's good or bad yes no
+approve
+deny that sort of thing and in this
+particular case what i'm going to show
+you is
+a naive base classifier that allows you
+to predict whether or not an sms
+text message is ham a legitimate text
+message from one of your friends or
+family members
+or it's spam something bad
+right hey buy this or whatever it might
+be so let's flip over to excel and let
+me show you a naive bayes classifier in
+action
+all right here i am in excel where i've
+implemented a naive bayes classifier
+and as with all of these techniques
+here's my tutorial video up
+here in case you want to learn more
+about naive bayes
+now all we're going to look at is this
+particular table of data right here
+which says okay i've taken my existing
+data
+i've used excel to build a naive bayes
+classifier to determine whether or not a
+text message is ham or spam
+ham being good spam being bad and what
+this
+table shows you is hey if a new text
+message comes in
+with this particular words in it or if
+this message came
+in with those particular words in it
+whether or not it is ham or spam and
+what you can see here
+are the predictions based on the text
+messages that came in so for example
+call claim you get home that is based on
+the data that we had to build this
+classifier we are going to predict that
+that's ham that that's legit
+however if we get a message like this
+text call free claim mobile you can get
+love home
+no the video the tutorial will go into
+more detail this is a contrived example
+but just just roll with me on this
+so if you got this particular text
+message based on the data that we had
+to build this classifier we would
+predict that that's actually a spam
+message
+and by the way just so you know this is
+the same type of tools and techniques
+that are used for email as well to
+determine whether or not you're giving
+junk or spam email
+and put it automatically in your junk
+spam folder
+even though a spam filter this is what
+this is called by the way a spam filter
+is a classic use case for naive bayes
+classifiers
+it can be anything it doesn't have to be
+this it could be
+for example uh is a customer going to
+churn
+is a customer going to leave us for a
+competitor yes or no
+you can use a naive bayes classifier to
+predict that sort of thing
+this thing is wildly useful the number
+of business scenarios that boil down
+to a yes no approved deny
+legitimate fraudulent kind of scenario
+it's immense
+and it's across everything hr hr it's a
+great example so in hr
+you could say for example i want to
+create a naive bayes classifier
+that predicts whether or not a good
+employee
+is going to quit and go to work for one
+of our competitors which is kind of like
+a custom return scenario if you think
+about it
+that's the kind of thing that you can do
+with your data in excel
+with this technique naive bayes is
+awesome that's why it's number four on
+the list of cool data mining techniques
+that are wildly useful
+for any professional okay i'm going to
+put up a couple more of my videos right
+here just in case you're interested in
+learning more about what's
+possible in terms of more advanced
+analytics with excel there you have it
+my top four data mining techniques in
+excel for any professional if you want
+to
+up level your data analysis game these
+are the things to focus on
+i hope you enjoyed the video i hope you
+found this useful until next time
+please stay healthy and i wish you very
+happy day to sleuthing

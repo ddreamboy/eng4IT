@@ -1,0 +1,134 @@
+right from the start software
+development comprise two different
+departments the development team that
+develops the plan designs and builds the
+system from scratch and the operation
+team for testing and implementation of
+whatever is developed the operations
+team gave the development team feedback
+on any bugs that needed fixing and any
+rework required invariably the
+development team would be idle awaiting
+feedback from the operations team
+this undoubtedly extended timelines and
+delayed the entire software development
+cycle there would be instances where the
+development team moves on to the next
+project while the operations team
+continues to provide feedback for the
+previous code
+this meant weeks or even months for the
+project to be closed and final code to
+be developed now what if the two
+departments came together and worked in
+collaboration with each other what if
+the wall of confusion was broken
+and this is called the devops approach
+the devops symbol resembles an infinity
+sign suggesting that it is a continuous
+process of improving efficiency and
+constant activity the devops approach
+makes companies adapt faster to updates
+and development changes the teams can
+now deliver quickly and the deployments
+are more consistent and smooth though
+there may be communication challenges
+devops manages a streamlined flow
+between the teams and makes the software
+development process successful the
+devops culture is implemented in several
+phases with the help of several tools
+let's have a look at these phases
+the first phase is the planning phase
+where the development team puts down a
+plan keeping in mind the application
+objectives that are to be delivered to
+the customer
+once the plan is made the coding begins
+the development team works on the same
+code and different versions of the code
+are stored into a repository with the
+help of tools like get and merged when
+required this process is called version
+control the code is then made executable
+with tools like maven and gradle in the
+build stage
+after the code is successfully built it
+is then tested for any bugs or errors
+the most popular tool for automation
+testing is selenium
+once the code has passed several manual
+and automated tests we can say that it
+is ready for deployment and is sent to
+the operations team
+the operations team now deploys the code
+to the working environment the most
+prominent tools used to automate these
+phases are ansible docker and kubernetes
+after the deployment the product is
+continuously monitored and nagios is one
+of the top tools used to automate this
+phase
+the feedback received after this phase
+is sent back to the planning phase and
+this is what forms the core of the
+devops life cycle that is the
+integration phase
+jenkins is the tool that sends the code
+for building and testing if the code
+passes the test it is sent for
+deployment and this is referred to as
+continuous integration
+there are many tech giants and
+organizations that have opted for the
+devops approach for example amazon
+netflix walmart facebook and adobe
+netflix introduced its online streaming
+service in 2007.
+in 2014 it was estimated that a downtime
+for about an hour would cost netflix 200
+000
+however now netflix can cope with such
+issues they opted for devops in the most
+fantastic way
+netflix developed a tool called the
+simeon army that continuously created
+bugs in the environment without
+affecting the users
+this chaos motivated the developers to
+build a system that does not fall apart
+when any such thing happens
+so on this note here is a quiz for you
+match the devops tool with the phase it
+is used in
+a
+b
+c
+[Music]
+d
+none of the above
+today more and more companies lean
+towards automation with the aim of
+reducing its delivery time and the gap
+between its development and operations
+teams to attain all of these there's
+just one gateway
+devops
+and if you're also looking forward to
+doing the same and excel in devops check
+out simply learn's post-graduate program
+in devops design and collaboration with
+caltech ctme
+the program can help you master several
+in-demand devops skills and tools like
+continuous integration and delivery
+devops on cloud kubernetes docker and
+much more we hope you enjoyed this video
+if you did a thumbs up would be really
+appreciated here's your reminder to
+subscribe to our channel and to click on
+the bell icon for more on the latest
+technologies and trends thank you for
+watching and stay tuned for more from
+simplylearn
+you

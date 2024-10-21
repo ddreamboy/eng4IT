@@ -1,0 +1,805 @@
+[Music]
+hello everyone this is waseem from
+edureka and i welcome you all to the
+session in which i am going to perform
+predictive analysis
+so let's take a look at the agenda for
+this session first of all i'm going to
+begin with the basic introduction to
+predictive analysis
+followed by a few applications moving
+further i will discuss the steps
+involved in predictive analysis
+and finally i will perform predictive
+analysis on a data set
+using python i hope you guys are clear
+with the agenda
+also don't forget to subscribe to
+edureka for more exciting tutorials
+and press the bell icon to get the
+latest updates on edureka
+and to check out edireca's machine
+learning certification program
+the link is given in the description box
+below now without any further ado
+let us understand what exactly
+predictive analysis is
+so what is predictive analysis
+predictive analytics or analysis
+encompasses a variety of statistical
+techniques from data mining
+predictive modeling and machine learning
+that actually analyze the current and
+historical facts
+to make predictions about future or
+otherwise unknown events
+so this is the basic definition from
+wikipedia so we basically use the
+previously collected data
+to predict an outcome or an event so
+typically
+historical data is used to build a
+mathematical model
+in our case we can call it a classifier
+or a predictive model or a regressor
+which actually captures the important
+trends and then the current
+data is used on that model to predict
+what will happen next
+or to suggest actions to take optimal
+outcomes
+so let us take a look at various
+applications where we can actually use
+predictive analysis
+so we can use predictive analysis for a
+lot of things
+first of all we have campaign management
+so let's say we have a campaign we have
+to figure out what kind of
+audience will be there or what kind of
+our target audience is
+so we can analyze the previous data of
+our previous campaigns
+that we might have managed previously
+and according to that we can
+figure out some suggestions or you know
+the course of action that we have to
+take
+but this is one campaign management that
+we can do using the predictive analysis
+or for recent examples let's say an
+election campaign you know a lot of
+people
+are gathering a lot of data of previous
+elections like how it
+happened and what are the major factors
+that led to the winning of some so and
+so person
+so this is how we can use predictive
+analysis in campaign management
+then there is customer accusation so we
+can analyze the whole business
+and we can figure out different points
+to you know figure out what kind of
+tasks or events we can actually produce
+in order to
+make our business better so that we'll
+be able to make customer acquisition
+better
+and then we have budgeting and
+forecasting as well similarly you know
+taking a look at previous data we can
+finalize some budget and forecast
+few uh related pointers for example we
+have stock prediction
+using python or any other language such
+as r also
+and then we have fraud detection so we
+can you know manage a lot of data
+like for credit card companies they make
+use of hundreds and hundreds of users
+and they analyze the data to predict or
+you know detect the fraudulent
+transactions in their data
+and then there is promotions as well so
+we can analyze you know the target
+audience
+we can uh follow the trends like they
+are following you know the types of
+content they're actually going for and
+then similarly you can make promotions
+according to that
+and there is pricing also like you can
+figure out let's say you have a
+supermarket somewhat like you know what
+walmart does
+so you have all the pricing and
+everything so what you can do is
+figure out the price of a product after
+several time based on the recent
+purchases
+and also the recent scenario or the
+previous historical data
+upon which the price has been
+distributed accordingly
+and you can also plan for the demand as
+well using the predictive analysis
+so these are a few applications that i
+can think of right now and
+these are only a few applications where
+you can use predictive analysis
+to predict the for example i'll talk
+about football guys
+so let's say if you have a favorite
+player and in the next season you want
+to see how much price
+he might go for in certain other clubs
+so you can make use of the data at your
+bay
+and depending on the purchases that
+happen in previous seasons
+or the windows you can actually figure
+out somewhat around what kind of price
+your favorite player is gonna go for so
+that is one example i can think of right
+now so these are a few applications of
+predictive analysis
+now let's move on to the next topic of
+the session guys which is
+steps involved in predictive analysis so
+this is a very important concept in this
+session guys
+so you have to fully understand what
+kind of steps that goes in while you're
+doing a predictive analysis
+so the first step has to be a data
+exploration so what you have to do is
+gather data
+uploaded into your program then you have
+to take a look at your data in
+a perspective which will clear certain
+things for you like you have to
+figure out what kind of data you're
+dealing with what are the columns what
+are the features that you have inside
+your data
+what kind of data it is how many
+numerical values are there what kind of
+data types are there inside your data
+is it a csv file or not so on so you
+have to figure out a lot
+of things while data exploration and
+after that you can
+figure out how to clean your data by
+cleaning i mean
+you have to figure out the redundancies
+that might hinder your model so for that
+you have to check for
+null values you have to check for
+missing values and then you have to
+figure out what kind of
+columns will be actually better if you
+put them inside your model
+and what are the redundant variables
+like what kind of columns that you can
+actually remove and will not make a
+difference in your mod
+so that covers the data cleaning part
+and then there is modeling where you
+have to model your
+or you have to select your predictive
+model guys so
+there are a lot of models that you can
+go for but in this session i'm going to
+use the linear regression model because
+it's the very simple or the basic one
+so that the beginners also will be able
+to learn it properly
+after modeling you have to check for the
+evaluation or you have to check for the
+accuracy you know how your model is
+actually performing
+so let's talk about these steps in a
+little more detailed way
+so we'll talk about data exploration
+first of all as i've already told you
+data exploration is
+gathering your data and then taking a
+look at your data
+in a perspective that will clear a lot
+of things for example you will be able
+to see
+the number of columns number of rows you
+will have
+a description of all the data types what
+kind of variables are there you will
+have the mean values the average values
+minimum values
+and you can also check for unique values
+in your columns as well
+so this all comes in data exploration
+and after this
+the second step is data cleaning and
+i've already told you guys data cleaning
+is basically getting rid of
+redundancies in your data which includes
+the missing values which may hinder
+and you have to make sure that your
+model is not going to cause overfitting
+or underfitting
+due to the noise and noise is basically
+irrelevant data that
+may be in the form of null values so you
+have to make sure you get rid of them or
+replace them with average values in the
+column
+and then there is redundancies like
+outliers which are not necessarily
+required in your model so you can remove
+them as well so this is all about data
+cleaning
+and then we have the third step which is
+modeling so for data modeling first of
+all you have to understand the
+relationship between the variables in
+your model so that
+you will figure out what kind of model
+you are going to go for
+so for example if let's say if you have
+a target variable in our case which will
+be a price of
+certain goods so let's say you have to
+figure out the relationship between
+variables so if you're going for linear
+regression you have to make sure
+the relationship is continuous and let's
+say if you are
+going for logistic regression it is
+important that you go for
+continuous variables the target variable
+although has to be
+dichotomous or you know what you call it
+categorical which is like let's say
+if i'm trying to predict something using
+the logistic regression the answer would
+probably be yes
+or no will be 1 or 0 something like that
+but in case of linear regression we have
+to make sure that there is some
+continuous relationship between the
+variables which is my target variable
+and my independent variables taking a
+look at the fourth part
+or the fourth step and the final step is
+performance analysis
+so after you're done making a model so
+you have to perform certain analysis
+which is you know checking the accuracy
+of the model
+and making sure that it's above 70. i
+mean if you are a beginner
+and if you are trying to make your first
+prediction model anything above
+70 accuracy score is very good guys
+but i would suggest that if you are
+working on a good model
+and if you want your model to be good
+the accuracy should be ranging around
+0.9 which is like more than 90
+and if you get it the first time it's
+well and good
+but it surely depends on your data and
+the kind of model selection that you do
+so let's take a look at the next topic
+in our session guys so this is basically
+where i'm going to perform predictive
+analysis using python on a data set
+so i have a problem statement in which i
+have a data set which has
+certain values or certain variables
+which has columns like
+you know how many bedrooms does our
+house have and what kind of
+square feet it is uh grabbing and all
+these things that i'll show you in the
+data and
+using that data i am going to predict
+the house of a price
+so let's take it up to jupiter notebook
+guys and i'll show you what i'm going to
+do over there
+so i have a jupyter notebook over here
+guys and if you are not familiar with
+jupyter notebook guys
+i suggest you to check out our tutorial
+on youtube we have a
+jupyter notebook tutorial you will be
+able to learn it properly i mean there's
+not really so much to learn in jupiter
+network it's quite easy that is why i'm
+using also
+and we have a cheat sheet as well so you
+can go for that so first of all i'm
+going to import some
+dependencies so for the first step that
+is
+data exploration i have to get the data
+so for that i'm going to use the
+pandas library and i'll import a few
+other libraries as well
+like i'm going to use the c bond to
+check the relationship between the
+variables
+basically for eda exploratory data
+analysis
+and if you guys don't know what eda is i
+suggest you to check out another
+tutorial
+which is exploratory data analysis that
+we have on our youtube channel
+and then i'm going to import numpy as
+well just in case
+all right and you can see guys i have to
+just press
+shift and enter and this is why i'm
+using a jupyter notebook because
+the implementation is very easy and i
+can segregate my
+data or the code in different cells so
+i'm importing this saw and i can just
+make it okay i'll make it a little
+bigger so that it's visible to you
+everyone
+what i can do is i can comment our part
+let's say
+installing
+dependencies
+and it is in a separate cell so that
+makes it
+quite descriptive when you're coding and
+when you are trying to figure out what's
+wrong in your code it helps actually
+so after this what you have to do is
+i'll check i have to import the data for
+that i'm going to use the read csv
+module which is basically going to go to
+the file and read my data guys
+the name of the file is house.csv
+we have a truncated error all right so
+guys i have to
+show you something so usually when you
+do this you when you copy the file
+location you get that
+unicode error but let's see if i
+change these backslashes to forward
+black backslashes
+what happens do i still get the error or
+not
+okay we have a all right so i was doing
+something over here
+so this is one exercise for you guys
+like earlier when i was
+using the backward backslashes i was
+getting a unicode error but when i
+change it to the forward backslashes
+i'm not getting that error so this is
+one question for you guys tell me why
+you think it happened
+in the comment sections below now moving
+on i'll take the first look at my data
+guys so i'll just
+use the head method to get my first data
+so these are the first five rows in my
+data guys so we i have id
+we have date the price is there bedrooms
+we have bathrooms square feet living
+and square feet lot we have floors as
+well waterfront is
+zero okay it has to be zero and one i
+guess
+there is view then grade square feet
+above so these are the
+columns that i have inside my data guys
+so i'll check the last five rows as well
+for that i'm using the tail method
+so as you can see you can get the first
+look of your data using the data dot
+head and data dot tail method
+after that i check the
+columns of my data and let's check the
+shape as well guys
+so that we'll know what we're dealing
+with okay it's not callable
+all right so we have 21 613 entries with
+21 columns
+okay it's a quite big data set and let
+me tell you guys this is
+one data set that i found on kaggle and
+it's very easy to found the house data
+set and i am using this example of house
+data set because
+it's very common and to find this data
+set is very easy you go on to kegel
+and you just look for house prediction
+data sets
+and it will show you a lot of data sites
+that you can download there from
+okay so you can find the data side on
+kaggle guys
+now we have checked the shape as well
+okay i'll use one more
+method that is data or describe all
+right this callable all right
+so we have all these numerical values
+and
+using the describe method we can get the
+50 minimum
+maximum and the standard deviation we
+can get the mean value and the count as
+well
+so let's say for bedrooms the mean value
+is three uh the most common
+entry in the bedroom section is
+a three bedroom house and then for
+bathrooms also is a two bathroom house
+square feet is almost two zero seven
+nine square feet and then for maximum
+values we have even a 33
+bedroom house as well and we have a
+house with eight bathrooms
+and the square feet is thirteen thousand
+five forty
+all right so minimum value is we have a
+zero bedroom house okay
+that's gonna be something else and
+square feet two ninety
+so this this is how you use the describe
+method and
+this is the first step guys i'm trying
+to do the data exploration
+now after this i think i'm pretty sure
+about what kind of data i'm dealing with
+now what i'm going to do i'm going to
+move on to the next step that is
+checking for the
+relationship between these variables so
+for that i'm going to use the data
+visualization
+and i'm going to use a few i'm going to
+use a few plot points
+using the cbon library and if you don't
+know about
+c bond we have a youtube uh tutorial on
+cbon library as well so you can find out
+different
+kinds of plots that you can use for data
+visualization
+and data visualization is nothing but
+it's a process where you can visualize
+your data
+and you can try to figure out the
+relationship between the variables
+before that i want to check for null
+values or missing values
+because i don't want to get any
+hindrance in my
+data set where i'm modeling so first of
+all you have to do
+check for null values
+and let's get a sum as well so we have
+zero almost okay so we have no null
+values in this data set
+so usually if you find a null value and
+if it's a big data set
+and let's say if all these values are
+let's say 2 000 and if you have 10
+missing values you can just remove those
+10 values but if there are more null
+values
+it's just you to replace them with the
+mean value
+and to find out the mean value you can
+just go over here let's say if you have
+uh let's say if you're checking for
+bedrooms how many null values are there
+and let's say
+there are 500 out of 21 000. so you can
+just uh replace
+the zero with this value which is three
+and similarly for any other column you
+can do the same using the mean value
+so since there are no null values inside
+this data set because it's a very
+uh clean data set that i downloaded it
+from kaggle so we're gonna move on to
+the next
+step which is visualization
+and mind you guys this is the step in my
+data exploration part
+and the data cleaning part not the other
+steps that we use for predictive
+analysis
+all right so i have no null values but
+there are a few redundancies that i want
+to get rid of
+i'll talk about that later guys first of
+all i'm gonna use
+a relation plot x i'll use
+okay so i want to check or my basic
+aim is to predict the price of the house
+all right
+so for x i'll just take
+price and let's check the relationship
+between these variables so i'll check
+for bedroom
+all right kind is equal to
+okay we'll not use kind data is equal to
+data okay
+all right so i think
+we can like almost there are so many i
+mean
+so this is one uh relationship that i'm
+getting over here
+price is not very clear but we are
+getting the relationship of the bedrooms
+or the most common bedroom so which is
+around
+over here that is zero to five
+and similarly i can check for other
+variables as well like bathrooms
+see guys so the price is actually
+increasing with the number of bathrooms
+but it's not necessarily uh same for
+everything
+so there has to be some other
+dependencies as well because as you can
+see since the bathroom surprising price
+is not actually
+rising that much okay i'll just copy
+this
+for bedrooms
+the price is actually increasing pretty
+much with each
+bedroom i mean not really if
+we take a look at 10 bedrooms also the
+price is pretty much the same
+so this is not one decisive factor i can
+think of for this
+all right so we'll check for some other
+as well so we'll check for square read
+square feet living
+so this is one linear relationship that
+i'm seeing over here
+so with each square feet rising
+most of the prices actually in this area
+only
+like from 0 to 400 000 or 40 million
+actually
+but we can see that it's a linear
+relationship with each increasing um
+square
+feet the price is actually rising so
+this is one thing that has to be there
+in
+inside our train set i'll tell you what
+a train set actually is
+then there is floor as well we can check
+for floors
+all right okay so floors is actually a
+pretty
+descriptive over here so for most of the
+values are in the two floors area and
+then we can check for waterfront as well
+okay we can do one thing i'll tell you
+one trick
+so we'll add the hue over here
+this is going to be water front
+so with the houses which actually has a
+waterfront are in oranges
+and the other ones are in blue so you
+can see
+the relationship between them and
+similarly i can use
+other okay so let's say latitude and
+longitude so
+you can figure out the relationship
+between the variables using uh the
+visualization so for me
+i think in this data set to get the
+price out
+we're gonna have to use bedrooms
+bathroom there has to be square feet
+a lot of square feet has to be there
+floors also we can
+get and then what view front view we'll
+use
+square feet how we have to use and your
+build and you're renovated we can leave
+it out from the train set
+and zip code also we don't actually need
+latitude and longitude are also not
+decisive in
+prediction because we can use it for uh
+visualization and we can actually get
+the picture over there and square feet
+living is actually important so
+these are the redundancies that i was
+talking about inside your model
+so now we'll move on to the modeling
+part guys
+so what i'll do now is i'll import a few
+dependencies guys
+so from sk learn so first of all i have
+to import
+the linear regression from linear models
+i'm going to import
+linear regression all right so i'll
+import the
+model selection import
+data split all right so first thing that
+i have to do is i have to segregate my
+data into a training set and a
+test set so i'll do one thing guys
+right so i'll get my data in this
+cell
+so two things that i don't actually need
+inside my data are date because uh
+i'll get the training data or i'll write
+it as
+train so which is going to be
+data and i'm going to drop a few columns
+so i'll have
+to drop so i have to drop a
+few columns so first of all i have to
+drop price because it cannot be in my
+training set since i'm gonna predict it
+and then there has to be id we don't
+actually need it
+and then i'm going to drop date as well
+does not really
+prove a lot of things over here so for
+now i'll just remove all these columns
+and for our test set or the dependent
+variable let's say
+i'm going to take the variable as a
+test let's say and for this i'm going to
+use
+data dot or we need actually just one
+column
+that is price right method objects
+is not subscriptable i'm sorry i made a
+syntax error over here guys
+i have to add the axis as well
+now it's fine guys so now what i will do
+is i'll use
+i'm going to segregate my data into x
+train
+x test y train
+and y test and now i'm going to use the
+train test split method so first we have
+train then we have test
+we have test
+size which is let's say 0.3
+and we have the random state is equal to
+let's say 2 right so we have
+made our x train and extend method now
+i'll use one variable let's say
+our egr regressor and now i'm going to
+call my linear regression
+model it's made guys so now i'm going to
+use the
+fit method to fit my xtrain and x y
+train
+data guys the training data have to fit
+right we have no errors here guys
+after this i can just uh okay i'll take
+one variable let's say predict
+and gr dot
+predict x
+test and y test
+all right wait a second guys i'm sorry
+so now the modeling part is done guys so
+i'll explain what i've done over here
+i took the linear model which is linear
+regression
+and then for segregating my data into
+training and testing set i'm using the
+train test split
+before that i segregated the data for my
+model inside which i'm using the
+training
+set which has all the values from the
+data set except price
+id and date so i have removed these
+three columns because i thought these
+are redundant for my model right now
+and the variable that i'm going to
+predict over here is
+the price so i'm taking that alone so
+after that i use the train test split
+method to actually
+separate the data into training and test
+set
+and then i call the linear regression
+model over here
+using the regression model i'm fitting
+the training data
+and after that i am using it to predict
+the value
+so now comes the part where we have to
+check the efficiency of the model
+so for regression models it is very easy
+guys
+you can just check the score for this
+you have to
+write a few values x test and y test
+and we have the accuracy of 0.70 which
+is
+not bad guys if you're using the model
+or the data set this big it is quite
+predictable
+get this kind of accuracy but you can do
+something else to improve the
+accuracy i mean you can look at the data
+and remove all the values that you
+find will help you into improving your
+accuracy
+like you can remove latitude longitude
+you can remove zip code
+you're renovated your built that you can
+actually
+remove water front and view as well or
+keep only a few values that you actually
+need which is
+bedrooms bathrooms i think and
+everything related to square feet
+that if you keep in your training set
+then it's going to be a
+higher accuracy for you guys all right
+so now that we are done with the section
+guys i want to give you a
+exercise sort of which you can do for
+practicing this
+so i have used the linear regression
+model over here so i want you to do one
+thing guys
+check out other classifiers and
+regressive models that you can use to
+predict the value i mean we have a
+tutorial on
+all of them on our youtube channel and
+see if you can use the same data to make
+a
+prediction model using other classifiers
+like a random forest classifier
+then we have a decision tree then you
+can use the logistic regression
+for this as well i mean if you have
+continuous data
+then you can go for linear regression
+but if you find a categorical data
+let's say we have waterfront or not so
+you can check for that as well
+so now that we are done with the session
+guys don't forget to subscribe to
+edureka for more exciting tutorials and
+press the bell icon to get the latest
+updates on edureka
+and check out eddie rick's machine
+learning certification program
+the link is given in the description box
+below and if you have any questions you
+can mention them in the comment section
+below
+thank you i hope you have enjoyed
+listening to this video
+please be kind enough to like it and you
+can comment
+any of your doubts and queries and we
+will reply them
+at the earliest do look out for more
+videos in our playlist
+and subscribe to edureka channel to
+learn more
+happy learning
+you

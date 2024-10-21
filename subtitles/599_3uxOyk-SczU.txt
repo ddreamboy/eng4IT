@@ -1,0 +1,110 @@
+Let's talk about
+Dimensionality Reduction.
+So, here,
+I've got a bunch of points, okay?
+And these points are in 2D, all right?
+It's called kind of green and
+red, but that's sort of a joke.
+We're not going to worry too
+much about why it was done that.
+What you should notice is
+that in the middle here
+are these orangeish yellowish points.
+Do you see why it's R and G?
+Red plus green makes sort of yellowish,
+or so, so
+along that diagonal
+it'll be kind of yellow.
+I don't know who did this originally,
+but it's kind of cool.
+All right,
+if you think about these orange points,
+let's think about how
+they're distributed, okay?
+So, they have a have a mean sit
+somewhere, and they've got a.
+Set of eigenvectors, right?
+They've got a co-variants
+matrix that describes them.
+They have a axis of least inertia and
+then the next axis.
+So here you're seeing the points,
+the orange points are x, x bar here
+is supposed to be their, their mean.
+And then we've got the big eigenvector
+v1 and then the smaller one v2.
+And the idea is.
+We can represent those orange points
+by only their v1 coordinates,
+plus the mean.
+And what that would mean is haha.
+Essentially that we're going to
+think of all the orange points
+as just being on that line.
+And all I'm going to tell you
+is where on the line they are.
+And we're going to essentially ignore
+the amount that they're off that line.
+So we've just reduced
+the dimensions from how many?
+Two.
+To how many?
+One.
+Okay, that doesn't sound like
+that big a deal, nor is it.
+But in higher dimensions,
+this could be a huge deal.
+Imagine you've got something in
+10,000-dimensional space, and yes,
+in just a minute, we're going to
+do a 10,000-dimensional space.
+If you said, well, I'm going to
+represent them by one number, or
+even 30, that would be a huge reduction.
+So if I say, well,
+what direction does it vary the most in?
+And I just give you that value.
+If that's good enough for
+what we want to do, you've reduced
+the description from being a lot of
+numbers to being a much smaller number.
+In fact, we can sort of express that
+here algebraically in terms of just,
+thinking about it,
+whatever dimension x happens to be in.
+So if I've got a whole bunch of data
+points in some N-dimensional space,
+what I want to know is
+the direction of projection.
+And we'll just say it's v.
+All right,
+that if I projected those points,
+after subtracting out the mean,
+that I'd have the greatest amount.
+Right, the greatest variation.
+And that's what that says here, right?
+So take x, subtract out the mean,
+dotted with the v,
+summed over all the x's, take the norm.
+Take the square.
+Well that can be written as
+an expression like this of just v
+transpose Av,
+where A is just this outer product.
+Okay, that's the co-variants matrix
+that we're, we're familiar with before.
+And as we said before.
+The eigenvector with
+the largest eigenvalue lambda
+is going to be the one that
+captures that greatest variation.
+In a minute I'll give you a little
+argument about why it's the largest
+eigenvector with the largest eigenvalue.
+Or you can just take my word for it.
+And, in fact, the smallest eigenvalue
+would be the least amount of dimension,
+so basically, what we're
+going to have to do at some point
+is take the eigenvectors
+of this co-variance matrix.

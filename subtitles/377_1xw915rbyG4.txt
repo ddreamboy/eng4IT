@@ -1,0 +1,380 @@
+[Music]
+hello everyone this is the scene from
+our Eureka and I welcome you all to this
+session in which I am going to talk
+about selecting the correct predictive
+modeling technique so let's take a look
+at the agenda for this session first of
+all I will give a brief introduction to
+what is predictive analysis and then I
+will talk about various predictive
+analysis techniques that we have moving
+further I will discuss how you can
+choose the correct technique and finally
+to sum up this session I will discuss a
+few predictive analysis models as well
+so I hope you are clear with the agenda
+also don't forget to subscribe to your
+rekha for more exciting tutorials and
+press the bell icon to get the latest
+updates on a tear a curve and do check
+out Eddy records machine learning
+certification program the link is given
+in the description box below so without
+any further ado let us begin our session
+so what exactly is predictive analysis
+predictive analysis is the branch of
+data analysis which is mainly used to
+predict future events or outcomes it is
+solely based on data driven approaches
+and techniques to reach to conclusions
+or solutions the analysis mainly makes
+use of analytical techniques and
+predictive modeling in order to find
+relevant patterns in large data sets in
+turn these patterns can be used to make
+various opportunities in the businesses
+by identifying risk and benefit points
+etc predictive analysis is an
+anticipatory technique for
+forward-looking solutions and insights
+to assess any situation most of the
+processes in the predictive analysis
+incorporates the machine learning
+terminologies and algorithms for model
+building especially to train the models
+so it is significantly important to
+understand how to choose these
+predictive techniques for model building
+and as a beginner it can help you a lot
+along the way so let us quickly take a
+look at why we do predictive analysis
+and I'm sure most of us are aware of the
+significant increase in the generation
+of data all around us it has seemingly
+become quite clear since we are seeing a
+lot of data driven approaches but human
+has been storing data since a very long
+time documenting every detail has been a
+prevalent practice with the digital age
+it has become to process the data a lot
+more easier as well but it has also
+opened a lot of opportunities for the
+years and years of long and unprocessed
+data to understand the relationship
+between various aspects of the data and
+make use of it in real life as well if
+we can use this data for you know
+various purposes we have like risk and
+fraud detection then there is market
+analysis operational movements
+operational improvements campaigning etc
+and one simple example is to use the
+weather data to study the patterns and
+use predictive analysis based on the
+insights to predict the future events so
+let's take a look at a few predictive
+analysis techniques as well
+first of all we have regression guys so
+the main role of regression is the
+construction of an efficient model to
+predict the dependent attributes from a
+bunch of attribute variables a
+regression problem is when the output
+variable is either real or a continuous
+variable that can be weighed or area or
+salary etc we can also define regression
+as a statistical means that is used in
+applications like housing investing etc
+it is basically used to predict the
+relationship between a dependent
+variable and a bunch of independent
+variables and simple linear regression
+is a regression technique in which the
+independent variable has a linear
+relationship with the dependent variable
+it is basically a technique to analyze
+data set which has a dependent variable
+and one or more independent variables to
+predict the outcome in a binary variable
+meaning it will have only two outcomes
+and the dependent variable is
+categorical in nature dependent variable
+is also referred as target variable and
+the independent variables are called as
+the predictors logistic regression is
+basically a special case of linear
+regression where we only predict the
+outcome in a categorical variable it
+predicts the probability of the event
+using the log function next up we have
+classification guys so classification is
+a process of categorizing a given set of
+data in two classes and it can be
+performed on both structured or
+unstructured data
+the process starts with predicting the
+class of given data points and classes
+are often referred to as target label or
+categories the classification predictive
+modeling is the task of approximating
+the mapping function from input
+variables to discrete output variables
+and the main goal is to identify which
+class or the category the new data will
+fit into now let us try to understand
+this with a simple example gaze so a
+heart disease detection can be
+identified as a classification problem
+and it's a binary classification since
+there can only be two classes which is
+basically has a heart disease or does
+not have a heart disease so the
+classifier in this case needs training
+data to understand how the given input
+variables are related to the class and
+once the classifier is trained
+accurately it can be used to detect
+whether heart disease is there or not
+for a particular patient since
+classification is also a type of
+supervised learning even the targets are
+also provided with the input data and
+then we have clustering guys so
+clustering is basically you know
+dividing data points into homogeneous
+classes or clusters so the points in the
+same group are as similar as possible
+and then the points in different groups
+are as dissimilar as possible so when a
+collection of objects is given we put
+the objects into group based on
+similarity so that is what clustering is
+all about and then we have another
+technique which is time series guys so
+the time series model comprises a
+sequence of data points captured using
+time as the input parameter it uses the
+last year of data or you know the
+previous data to develop a numerical
+metric and predicts the data using that
+metric is basically a means of
+understanding a singular metric is
+developing over time with a level of
+accuracy beyond simple averages so it
+also takes account a seasons of the year
+or events that could impact the metric
+as well and next up we have forecasting
+so forecasting is nothing but using the
+historical data to make predictions or
+numeric predictions on a new data based
+on the learning from the previous data
+now that we know what these various
+techniques are let us understand how to
+choose which one would be the best one
+for us while working on any data
+so there are a few factors that you
+should consider while choosing a model
+but before that before talking about
+good siding factors let us go through
+the processes before a predictive
+analysis before you start building the
+model first we have the problem
+statement I so problem statement tells a
+lot of things about the project on how
+you should approach it if we were
+looking at the problem statement you'll
+be able to know what kind of or target
+you are looking at so in a heart disease
+condition let's say for an example we
+have a problem statement to decide or to
+analyze or predict if a patient has a
+heart condition or not so with that said
+we have already figured out the target
+variable which is gonna be categorical
+in nature which means it basically will
+have only two values that is one has a
+heart disease or does not have a heart
+disease so it becomes quite clear to us
+in the problem statement only they're
+going to use the classification
+technique in this particular example but
+then there are a few problems where you
+will not be able to figure out which
+kind of target variable you will be
+choosing on what are all independent
+factors will be involved in your
+analysis so you move on to the next one
+which is extraction and loading and you
+basically analyze all your data you know
+and transform it and try to make use of
+for all the information that you get
+from visualization and all these
+processes to understand what kind of
+variables you are looking at and then
+comes the factors to consider before
+going for the model which is what is the
+target variable so if the target
+variable is continuous you should go for
+the regression analysis and if the
+target variable is categorical you can
+go for the classification analysis and
+if you are not able to find a target
+variable don't worry guys you can
+probably go for a clustering analysis so
+you'll know which points are similar
+which points are not similar making it a
+class if you know making clusters and
+then you can perform classification on
+those clusters as well the next question
+you should be asking is is your data
+linearly separable and there is no
+direct way to actually determine it so
+we can go ahead by choosing different
+models I mean you can compare different
+models to see if your data is actually
+linearly separable or not then the next
+factor would be the size of the data you
+have to look for a factors like the size
+of data to determine the possibility of
+overfitting and underfitting the model
+also some models may not work
+efficiently with small
+so these are some deciding factors for
+choosing a model before you train the
+model with the training data and let us
+take a look at a few machine learning
+models so that we can use for predictive
+analysis the first one is linear
+regression so linear regression is to be
+used when the target variable is
+continuous and the dependent variable or
+variables is continuous or a mixture of
+continuous and categorical and the
+relationship between the independent
+variable and the dependent variable has
+to be linear so that is when you know
+when you can use a linear regression
+after that we have logistic regression
+so logistic regression does not require
+a linear relationship between the target
+variable and the dependent variables the
+target variable is binary assuming value
+of either 1 or 0 or maybe you know true
+or false something or dichotomous as
+well
+then we have the k-means clustering
+model guys so k-means involves placing
+unlabeled data points in separate groups
+based on similarities and this algorithm
+is used for the clustering model as well
+after that we have neural networks so
+neural networks help to understand or
+help to cluster and classify the data
+guys so these algorithms are modeled
+loosely after the human brain and are
+designed to recognize patterns then we
+have decision tree so a decision tree is
+a map of the possible outcomes of a
+series of related choices it allows an
+individual or organization to weigh
+possible actions against one another
+based on their costs probabilities and
+benefits as the name goes it uses a tree
+like model of decisions and they can be
+used either to drive informal discussion
+or to map out an algorithm that predicts
+the best choice mathematical after that
+we have time series guys so the time
+series aggression analysis is a method
+for predicting future responses based on
+response history and the data for a time
+series should be a set of observations
+on the values that a variable takes at
+different points in time so these are a
+few models that we have for predictive
+analysis and these are only a few models
+and there are other models also that we
+can use for predictive analysis and with
+that said let's also see a few
+applications of predictive analysis so
+we can use it for finance guys
+so predictive analysis in finance can
+help in identifying the risk detection
+or the risk detection model to identify
+any fraudulent transactions or loans
+that you can detect using the predictive
+analysis then there is stock prediction
+as well you can gather a lot of data in
+time and forecast a prediction that can
+be taken into account for different
+stocks and there goes a lot of process
+behind this but for as far as the
+application goes stock prediction is a
+pretty good application of predictive
+analysis in finance then we have
+government's guys so governments are
+using predictive analysis for
+campaigning using it for better
+detection weather prediction that is
+disaster management they're using
+predictive analysis for you know
+predicting the impact of policies
+different policies that you're making
+and they're making surveys etc we can
+use the addictive analysis in healthcare
+for early detection of diseases such as
+cancer any heart ailments that may or
+may not be a part of your life several
+years later so it helps in predicting
+all those diseases or you know
+conditions at an early stage and we can
+also use predictive analysis in
+manufacturing we can actually identify a
+production failures and walk on it using
+the prediction analysis then there is
+poor franchisees using our predictive
+analysis - you know predict the outcome
+of certain events in the leagues or
+something like that they're trying to
+make sense of what kind of match they
+have the best probability or the best
+prediction of winning the chances of
+winning there or if they don't have any
+winning chances what about you know the
+basic points or basic insights that
+they're getting from the data that they
+should work on to win that particular
+game or a match or only and then they
+have telecom industries using predictive
+analysis for customer support you know
+they're trying to segregate or segment
+the customers into groups that they are
+able to work on them based on their
+prediction and now that we have come to
+the end of the session guys I hope you
+are clear with the concept discussed in
+this session and two more about the
+techniques and models discussed in this
+session
+check out the various tutorials we have
+in the machine learning series on our
+YouTube channel and don't forget to
+subscribe to a dirac off for more
+exciting tutorials and press the bell
+icon to get the lead
+just updates on Eddie raker and also
+check out Eddie Records machine learning
+certification program the link is given
+in the description box below and if you
+have any questions mention them in the
+comment section and we will get back to
+you as soon as possible
+thank you I hope you have enjoyed
+listening to this video please be kind
+enough to like it and you can comment
+any of your doubts and queries and we
+will reply them at the earliest do look
+out for more videos in our playlist and
+subscribe to Eddie Rica channel to learn
+more happy learning

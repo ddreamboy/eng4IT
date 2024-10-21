@@ -1,0 +1,38 @@
+unsupervised learning is a technique
+used in the field of artificial
+intelligence it allows computers to find
+patterns in information without anyone
+telling it what to look for in
+supervised learning the computer needs
+to be told what to do and given
+information to work with but with
+unsupervised learning it has to figure
+it out all on its own it uses something
+called clustering algorithms to group
+things that are similar this can reveal
+patterns that that we might not see
+right away the computer groups things
+creating clusters that reveal hidden
+patterns and insights for example if a
+store wants to know what its customers
+like to buy unsupervised learning can
+help by tracking and grouping their
+spending patterns the store can use this
+information to make better ads or create
+more appealing sale offers unsupervised
+learning is even being used in outer
+space it helps scientists analyze
+information collect Ed by telescopes
+this is helping them uncover new
+patterns and structures in the universe
+this revolutionary technique in AI can
+help us to make new discoveries and see
+things in new ways it allows us to find
+hidden patterns and new relationships
+that can improve our understanding of
+the world and Beyond to learn more about
+AI check out our website at GCF
+global.org
+[Music]
+GCF Global creating opportunities for a
+better life

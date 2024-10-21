@@ -1,0 +1,646 @@
+hi my name is vic and today we are going to 
+build a live speech recognition system that  
+works with your microphone so you're going to 
+be able to press a button and record some audio  
+and then have that audio be automatically 
+converted into a text transcript and the  
+amazing thing is it's all going to run on your 
+local machine and it's going to use your cpu  
+so you're not going to need a fancy computer 
+or a gpu to make this work so we'll start out  
+building a jupiter widget that lets you press a 
+button to start and stop recording audio and then  
+we'll build a voice recognition pipeline that 
+can take that audio and convert it into a text  
+transcript let's get started we'll end up with a 
+jupiter notebook that has two interactive buttons  
+one that says record and one that says stop 
+when we click the record button like i just did  
+the system will actually start recording your 
+microphone and transcribing it live and as you  
+can see the transcript has appeared and as i keep 
+talking it will continue to add to the transcript  
+and when i'm done talking i can just go ahead and 
+hit stop and the live transcription will stop so  
+this system can be used for almost anything where 
+you want to record your microphone so you can use  
+it for live events you can use it for meeting 
+notes or you can use it to record interviews
+and to create the system we're going to do three 
+things first we're going to create jupiter widgets  
+like i mentioned interactive buttons and an output 
+area then we're going to install a library called  
+pi audio that we can use to actually 
+record our microphone in the background  
+then we're going to install a library called 
+vosk that will be able to do speech recognition  
+for us and we'll add in the output of speech 
+recognition to our jupiter widget and these  
+three components together will give us the 
+system that i just showed you to generate live  
+transcripts of your microphone audio so 
+enough setup let's go ahead and dive in
+i've gone ahead and created a fresh jupiter 
+notebook inside of jupiter lab to actually  
+code this you can use jupyter notebook or jupyter 
+lab or any other id that lets you create notebooks  
+you can't unfortunately run this on google collab 
+or anywhere in the cloud since it does need access  
+to your local microphone the first thing we're 
+going to do is we're going to do pip install  
+ipi widgets so these are the interactive widgets 
+that actually create the buttons for us so i'll  
+go ahead and run that you can see i've already 
+installed it so i'll go ahead and delete this cell  
+then we can go ahead and import it so we'll say 
+import ipi widgets as widgets then what we'll do  
+is we'll create our first button so we'll say 
+record button equals widgets dot button and  
+description will be the text that appears on 
+the button so this text is going to be record  
+we'll say disabled equals false since we want the 
+button to be enabled and then we'll say button  
+style equals success and this determines the 
+color of the button oh this will make it green  
+and then we'll add a little icon to 
+the button that looks like a microphone  
+then what we need to do is import a function that 
+will actually display this widget for us so from  
+ipython.display we can import display and then 
+what we do is we call the display function and  
+pass in our widget and this will actually render 
+the widget for us so we now have a record button  
+and we can click it but it doesn't do anything 
+yet because we didn't wire up anything to run  
+when we click on it we will do that in a little 
+bit but first let's set up our other widgets  
+the next widget we need to set 
+up is actually our stop button  
+so we're actually going to set that up in a very 
+similar way so i'll copy and paste this code  
+i'll rename this to stop button and 
+then i will just change the description  
+so we'll call it a stop button instead of a 
+success style we're going to have a warning  
+style which is going to give it that orange 
+color and then the icon will be a stop icon
+then we can go ahead and pass this in as well to 
+render it and if we run this cell again we now  
+see both buttons we also need an output widget so 
+this is the widget that's actually going to show  
+the transcript as it is generated and this widget 
+we will create by calling widgets.output and that  
+will create an instance of an output widget and 
+we can pass that into the display function as well  
+so you can't really see the output widget 
+there's no text in it right now but it's  
+right below the stop button so we now have all of 
+the widgets we need they just don't do anything  
+and the fun part of this project is actually 
+making them do something so we need to write two  
+functions one that will run when we click record 
+and another that will run when we stop recording  
+so we'll call this start recording and we're 
+going to have a data argument to this function  
+when you click on record and you call a function 
+ipython jupiter automatically passes in this data  
+parameter so that's why we have it in the function 
+and i'll just say pass and then we'll have stop  
+recording data and we'll pass on that too and 
+then we'll wire up these widgets to actually call  
+those functions when we click on so record button 
+dot on click we'll call start recording so when  
+we click on the record button it will call this 
+function and then when we click on the stop button
+we'll call stop recording all right so i'll go 
+ahead and run this and if you click record it now  
+calls this function although the function 
+doesn't do anything so nothing happens  
+and when you click on stop it will call 
+this stop recording function now we need to  
+make these functions actually do something so 
+what we're going to do is in a normal program  
+in a normal python program where let's say you're 
+assigning a value to x and then you're printing x  
+each line of code is executed sequentially 
+so you'll run this line of code then  
+this line of code and then the program is 
+finished after those two lines of code run  
+so that's the typical way we execute programs 
+now for this we actually need to listen to the  
+microphone in the background and transcribe in 
+the background so we actually need to perform two  
+tasks at the same time one task to continuously 
+record the microphone and another task to actually  
+transcribe the audio into text so to do this we 
+actually need to create threads so threads are a  
+python concept they're essentially functions that 
+run in the background so they don't interrupt your  
+main function but they can just do something like 
+record audio continuously so in order to use them  
+we're going to import from threading we're going 
+to import thread which will let us create a thread  
+in the background we're also going to need to 
+pass some messages to the threads so when we want  
+the thread to stop we're going to need to send a 
+message to it and then the thread that's recording  
+the microphone is going to need to pass the data 
+it records to the thread that's actually doing  
+the transcription so we need to import something 
+else called a queue so we'll say from q import q  
+and a q will let us actually pass messages between 
+threads and we'll create two cues to actually  
+pass the messages so we'll create one queue called 
+messages which will basically tell the thread  
+when to stop when to stop recording and when to 
+stop transcribing and we'll create another one  
+called recordings and this will actually store the 
+audio data that we record from the microphone and  
+pass it to the transcription now we can actually 
+write some code in the start recording function  
+so we'll say messages dot put true so this will 
+just tell we're going to write the thread logic in  
+a second but this will basically tell the thread 
+to keep running and keep recording the microphone  
+and then we'll say with output so using this 
+context manager enables us to write print data  
+directly into that output widget that we created 
+so we'll say display starting and that will  
+display starting into the output widget then 
+what we'll do is we'll say record equals thread  
+target equals record microphone we have not 
+written this function yet we need to write it  
+but basically what this is doing is it's 
+creating a thread that will record the microphone  
+and then we'll say record dot start that 
+will start the thread and have it run in  
+the background so we'll continuously listen to the 
+microphone and record it then we'll create another  
+thread called transcribe and this one is going 
+to have its target as a function called speech  
+recognition we have not written this function 
+yet so this code won't work but i we need to just  
+write the code before we write the function 
+just so you can see how it works so we'll  
+write transcribe.start so what this function 
+is going to do is it is going to put a message  
+on this messages queue and that message is going 
+to tell these threads to keep running and if you  
+if that's not super clear yet don't worry about 
+it when we actually write the code for these  
+record microphone and speech recognition functions 
+you'll see what this messages queue is doing then  
+we're going to create two threads and run them in 
+the background one to record our microphone audio  
+and another to actually transcribe the audio 
+into text then for stop recording what we're  
+going to do is we're going to say with output 
+again and we're going to say messages.get  
+this will actually take the message off the queue 
+so this puts a message on the queue called true  
+and this just takes the message off the queue 
+and then what we'll say is display stopped
+all right let me comment these 
+lines out and you can see  
+how this code actually works so i'll hit run and 
+then when we hit record we'll see starting when  
+we hit stop we'll see stopped and basically when 
+we're clicking record we're running this function  
+and when we're clicking stop we're running this 
+function all right so that is basically everything  
+we have to do to get the jupiter widgets to work 
+and now our goal is to do the next two pieces  
+which is to write this record microphone function 
+and to write the speech recognition function  
+so let me go ahead and run this and next we 
+will go on and write our microphone functions
+to do this we're going to need 
+to use a library called pi  
+audio and let me show you that library real quick  
+so this library lets you actually interact with 
+system audio devices like your speaker or your  
+microphone so if you wanted to play a sound on 
+your computer speaker or record your microphone  
+which is what we want to do then pi audio will 
+help you do it and the installation is a little  
+bit different depending on which os you're using i 
+use mac so for me i follow these instructions here  
+if you're using windows they're instructions if 
+you're using linux they're instructions as well  
+so just keep in mind that it'll be a little 
+bit different based on what os you're using
+so for me on mac what i'm going to do is i'm going 
+to hit exclamation mark which means run a command  
+in the terminal and i'm going to type brew install 
+port audio i've already installed this so i'm not  
+going to run it and then after i do that i will 
+type pip install pi audio which will go ahead  
+and install the pi audio package after i do this 
+we need to actually figure out which of our sound  
+devices is the microphone that we want so in order 
+to to do this we need to first import pi audio  
+then we need to initialize our pi audio interface
+miss the capital so this will actually 
+initialize our pi audio connection to our system  
+sound devices then what we want to do is we 
+want to loop through all of the sound devices  
+on our system and print out the info for them 
+so we'll say 4i in range p.get device count  
+so get device count is just going to show how 
+many audio devices are connected to our system  
+and we're going to print out get 
+device info by index for each of those  
+and when we're finished we're going to run 
+p.terminate this just terminates our pi audio  
+connection to all of our audio devices so let's 
+go ahead and run this and we can see i have all  
+of these audio devices connected to my computer 
+the first is my monitor which has speakers  
+the second is my cam link which i use to connect 
+to my webcam then i have my microphone so this  
+is the microphone that i want to use to record 
+and the index is two so just remember the index  
+that you want and ignore some of the other devices 
+that you don't need just get grab the microphone  
+that you want to record from and remember 
+the index we'll be using that in a second
+now we can actually go ahead and write the 
+function that will record our microphone before  
+we actually do there's a couple of constants we 
+need to define so these just define how our audio  
+is going to be recorded and all of these are just 
+values that are optimal for speech recognition so  
+audio can be recorded in multiple channels if you 
+listen to headphones you might notice your left  
+headphone sounds a little bit different from your 
+right headphone because they're different audio  
+channels but speech recognition works best with 
+one channel audio so i'm going to set channels  
+to one and then frame rate determines how high 
+quality the recording is it's how quickly your  
+audio signal is sampled i'm going to set frame 
+rate to 16 000 again that's a good default for  
+speech recognition then i'm going to set something 
+called record seconds so this is how many seconds  
+we want to record audio for before we send 
+it off for transcription so every 20 seconds  
+we will generate a transcript and i will talk a 
+little bit about how you can get this closer to  
+exactly live there's going to be a little bit 
+of a delay now between you saying something and  
+it being transcribed but if you want it to be 
+totally live there's a couple things you can do  
+to fix that and i'll talk about that at the end 
+and then we're going to define the audio format  
+so this is the format that we're 
+going to record our audio in  
+and i'm just going to use this pi audio dot 
+pan16 which is again what we're going to use  
+with our speech recognition engine 
+and then we will define sample size  
+and then we can go ahead and write our function to 
+record from our microphone and we're going to pass  
+in a parameter called chunk which just defines 
+how often we're going to read from the microphone
+all right so we're going to 
+again initialize pi audio
+then what we're going to do is we're going to 
+create a stream and this is going to connect  
+to our microphone and record so we're 
+going to say format equals audio format  
+channels equals channels rate equals frame 
+rate this is just specifying all the options  
+for how we want to record we're going to pass 
+a parameter called input equals true which just  
+specifies we're recording from a microphone and 
+then our input device index so you should use the  
+index of your microphone so my microphone 
+was at index 2 so you should use whatever  
+index is there for your microphone and then 
+we're going to say frames per buffer equals chunk  
+so that just determines how often we're going to 
+read data from our microphone so read our audio  
+then we're going to create a list called frames 
+and this is actually going to store all of our  
+audio that's recorded from our microphone and 
+what we'll say is while not messages dot empty  
+and what this is doing is you'll recall earlier 
+when we started and stopped recording we actually  
+put data onto this messages queue and took 
+data off so what this function is going to  
+do is as long as there is a message in the 
+messages queue we're going to keep recording  
+but once the message comes off the queue we'll 
+stop recording so what this stop recording  
+button is doing is it's taking the message 
+off the queue which means recording will stop  
+communicating between threads is tough which 
+is why we kind of have to use the cue to do it  
+so what we'll do is we'll say stream.read chunk 
+so we're going to read 1024 audio frames at a time  
+from our microphone and then we'll add that to 
+our frames list and then what we're going to  
+say is we're going to say if the length of the 
+frames is greater than or equal to frame rate  
+so this is the number of frames you record per 
+second times record seconds divided by chunk
+then add
+then add our audio data to our recordings queue 
+and then we're going to say frames equals is empty  
+all right let me just talk through and 
+explain what this is doing so this is  
+saying if we've recorded more than 20 
+seconds of audio so you'll remember  
+we want to send our audio out to be transcribed 
+every 20 seconds so if we've recorded more than  
+20 seconds of audio then we're going to 
+add our audio data to this recordings queue  
+and it'll be picked up from that cube by our other 
+thread and we're going to put a copy of frames on  
+that queue and then we are going to empty out 
+our frames list so basically every 20 seconds  
+we are going to pass our audio data that we've 
+recorded to our transcription engine and then  
+start recording another 20 seconds of audio as 
+long as we haven't told it to stop recording  
+and then once we have told it to stop recording 
+we're going to say stream dot stop stream  
+stream dot close and then p dot terminate 
+it's really important to add these three  
+lines because pi audio actually opens 
+up a connection to your microphone  
+and if you don't close that connection it can 
+cause some weird system issues that are hard to  
+debug so just make sure you write these lines 
+and then we can go ahead and run this and we  
+now have a function to record our microphone 
+audio so when we click record this thread will  
+actually run that function in the background 
+it'll run the record microphone function
+now all we have to do is write the transcribe 
+function and that function will actually turn  
+the audio into text let's go ahead and 
+do that and in order to do that we'll be  
+using a couple of libraries so let me talk 
+you through what we will be doing we're  
+going to use a python library called vosk in 
+order to actually do our speech recognition  
+and vosk has pre-trained models that support 
+20-plus languages and dialects we're going to  
+be using english language models because 
+we're going to be recording english audio  
+but feel free to use a different model if if 
+you if you'd like the amazing thing about vosk  
+is it works offline so all the speech recognition 
+will happen on your own computer and you can run  
+it even on devices that don't have a gpu so it 
+can even run on a raspberry pi or an android phone  
+in this case we'll be running it on a 
+computer but you don't need a really fancy  
+machine or a gpu to actually run this and it 
+installs pretty easily with just pip install vosk  
+so looking at ma vosk models you can see 
+there's a several different models for  
+every language for english there's three models 
+we're going to be using this model in the video  
+it is a it is a really big model so if you 
+don't feel like downloading a 1.8 gigabyte file  
+you can feel free to use this model and i'll 
+show you how to use it when we get to that code  
+the unfortunate thing about vosk is it outputs 
+transcripts without any punctuation with no  
+capitalization no periods or anything so we 
+need to use another model to actually add in  
+the punctuation so if you scroll down on this 
+models page and you go to punctuation you can  
+see that there is this vosk recase punk model so 
+if you want to add punctuation you'll also need to  
+download this it's not necessary right if you're 
+okay with the transcript without punctuation  
+you don't need to do this but i'm i'm going to 
+show you how to do it and i recommend doing it  
+so that's just you'll have to 
+click right here to download that  
+okay let's head back over to our notebook and 
+we will actually install all of the packages  
+and actually run our speech recognition so 
+the first thing you'll need to do is pip  
+install vosk which i've already done then 
+you'll need to run pip install transformers  
+which this is needed for that recase punk that 
+adds the punctuation back into the transcript  
+and then you'll need to install pi torch using pip 
+install torch and this is a requirement for that  
+recase punk model so those are the 
+three things you'll have to install  
+and then we're going to go ahead and import a 
+few packages so import sub process we're going  
+to use this to call our punctuation model it's 
+basically a python package that creates a separate  
+process that lets you call commands on the command 
+line we're going to import json and then we're  
+going to import from vosk we're going to import 
+model and call the recognizer and then what we  
+can say is we can say model equals model model 
+name equals and i'll just copy and paste this in
+vosk model en us so this is that 1.8 
+gigabyte model but if you want to use  
+a smaller one you just use the name of 
+the smaller one instead of this name  
+so there was that small 40 megabyte model 
+you can definitely use the name of that model  
+instead and for me on mac with the latest version 
+of vosk as of now it will automatically download  
+the model when i pass in model name if 
+it doesn't automatically download the  
+model for you you may have to actually go 
+back to that models page and download it  
+so let's go ahead and do that and then what we'll 
+need to do is create a recognizer so this will use  
+the model to actually do the speech recognition 
+so we'll pass in our model and we'll pass in the  
+frame rate of our audio which was 16 000 hertz 
+and then we're going to say rec.set words true  
+so this will give us confidence levels for each 
+individual word so for example if i say a word and  
+the system is not confident that i actually said 
+the word that it thinks i said it'll give you a  
+probability that it's the transcription is correct 
+now we can write our speech recognition function  
+and this function is going to take in the output 
+widget that we created earlier if you remember  
+we created it up here and this widget is is what 
+we're going to use to display that transcript live
+so what we'll say is while not messages dot empty
+frames equals recordings dot get so messages dot 
+empty this is just making sure that we have not  
+clicked stop recording once we click stop 
+recording that messages queue will be empty  
+and this will not run and recordings.get so 
+you'll remember in this record microphone function  
+we are putting our audio data into this 
+recordings queue so this is essentially  
+pulling the data out of the queue so it's grabbing 
+our microphone audio from the other function  
+so we can use it in our speech recognition engine 
+then we're going to say rec.accept waveform  
+and our frames are going to be several different 
+chunks you'll remember we're reading 1024 frames  
+at a time from a microphone so this is just 
+joining all of the chunks together into one single  
+binary string so we're passing that in and then 
+we're going to say result equals rec.result  
+and then we'll say text equals json.loadsresult
+text for whatever reason vosk actually 
+returns its results in a json format so  
+we need to use the json library to load the 
+result and get the text key the next thing we  
+need to do is actually add punctuation into our 
+transcript so i'm going to open up my files here  
+so earlier you saw that i showed you that recase 
+punk model on the vosk models page i extracted it  
+into the recase punk folder and you can see the 
+notebook i'm working from is called microphone 2  
+and the recase punk folder is here so make sure 
+it's in the same directory as your notebook  
+and when i click in i should see at least this 
+checkpoint file which is the actual model we're  
+going to be using to add in punctuation and this 
+recase punk dot py file which is what we're going  
+to be calling to actually run it run the model 
+for us so make sure you see these two files  
+and this is optional if you don't 
+feel like downloading it just  
+ignore the next couple of lines of code so 
+what we'll say is case equals subprocess  
+dot check output and what we'll say is 
+python recase punk recase punk dot py  
+and then we'll pass in our checkpoint which 
+is the trained model recase punk checkpoint
+and we're gonna we're gonna run it in the shell 
+so we'll say shell equals true we're running it  
+in the user shell we're going to say text 
+equals true which means i'm going to pass  
+in some text as input and then my input will 
+be the actual transcript so this text variable  
+so this will go ahead and take our transcript with 
+no punctuation and add punctuation so the reason  
+i'm using subprocess dot check output is because 
+i don't want to write a lot of code to actually do  
+the re-casing and this file has already been 
+created to do it so if you call this file on the  
+command line it will do the re-casing but if we 
+click into recase punk on the left and you click  
+on recasepunk.py you can see that it's a python 
+file so if you wanted to make this code that we're  
+writing a little bit more efficient you could 
+actually import the same modules as that file and  
+actually preload the model so we're not loading 
+and running it every time because right now every  
+time we do our 20 seconds of speech recognition 
+we're actually reloading the model reinitializing  
+everything and that's that's not super efficient 
+so if you if you actually instead of calling this  
+as a command line command if you actually just 
+wrote the python to do the recasing it would be a  
+lot faster and you could you could reduce this uh 
+record settings second setting you could probably  
+get it closer to three two or three which would 
+feel a lot more live in terms of the transcription
+okay so we're going to add in our casing and 
+then what we'll do is we'll say output dot append  
+std out cased and what this is doing is it's 
+it's adding our transcript into our output widget
+all right so that is actually all the code we 
+need so i'm going to go ahead and run these two  
+functions and what this is doing is it's just vast 
+loading the pre-trained speech recognition models
+and i can go back up here run this again
+and now when i hit record it should say starting 
+and as i talk it will start actually transcribing  
+what i'm saying live which is really really cool 
+so let's let's go ahead and see that starting  
+while we're waiting let me go ahead 
+and just explain all of this code again  
+what we started out doing was we started 
+out creating jupiter widgets so widgets  
+are just interactive elements that we can add to 
+notebooks in this case we created a record button  
+that we can click to actually start our recording 
+a stop button that we can click to stop recording  
+and an output widget that will show our live 
+transcription we then wrote a function called  
+start recording that actually initializes two 
+background threads one to record our microphone  
+continuously and the other to actually transcribe 
+the audio from our microphone into text and  
+these two need to be threads because they both 
+need to run at the same time in the background  
+and then we created this messages queue 
+that we added a value to so when we  
+put a value onto the queue that means that we 
+want our recording and our transcription to run  
+when we click stop we actually take the value 
+out of the queue which signals to these two  
+threads to stop running then we hooked up our 
+our widgets properly so when you click on them  
+they start recording and stop recording 
+and you can see our transcript is actually  
+showing up as i'm talking which is really 
+cool and it's actually pretty accurate  
+also very cool then what we did is we used pi 
+audio to actually find the microphone that we need  
+to record from in my case it was index two then 
+we wrote a function called record microphone that  
+opened up a stream to our microphone and records 
+audio frames from a microphone until we click  
+stop recording it reads at 1024 frames at 
+a time once we have 20 seconds of audio it  
+uh it passes our recording over to the next 
+function which does the speech recognition  
+then we used vosk to actually do the speech 
+recognition so again while our cue is not empty  
+we are continuously grabbing our recordings from 
+the queue then we're passing them into our speech  
+recognition engine and we're adding them to 
+our output widget using this output.appendstdl
+alright so there's a lot you can do 
+with this if you want to continue  
+extending it and adding to it the first thing you 
+can do is make it more efficient so it's not quite  
+real time now and a big reason for that is because 
+this command has to reload the model every time  
+so i mentioned how you can make this more 
+efficient you could also just leave this out  
+if you want to to not worry about adding in 
+casing and it would run a lot faster in that case
+another thing you could do is you could aim to do 
+some sort of live translation so you could add in  
+a translation model here to translate from 
+english into another language or vice versa  
+and we installed a library 
+called transformers earlier  
+and you can actually use that library to do 
+translation as well so if we jump over here  
+to hugging face hub this is connected 
+to the transformers python library  
+you can see that they have a lot of different 
+models that do translation and one of those models  
+is t5 base so you could use a model like this to 
+actually translate between different languages  
+so if you click translation here you can see a 
+lot of different translation models you can try  
+so you could actually build a live translation 
+system in a previous video i also showed you  
+how you can do live summarization so one extension 
+you could do is you could actually summarize what  
+people are saying in in real time which is 
+very cool so if you if you're listening to  
+a long lecture and you want to catch up on what 
+happened earlier or you're you're listening to  
+a long interview it gives you something 
+quick you can scan and get a summary  
+so there's a lot you can do with this 
+and i hope this was a good overview that  
+showed you everything that you need 
+to actually get started and run this

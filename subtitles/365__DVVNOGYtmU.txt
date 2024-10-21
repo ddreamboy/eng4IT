@@ -1,0 +1,1742 @@
+Hello—and welcome to the Google Career
+Certificate focused on cybersecurity!
+I’m so excited that you’re here!
+My name is Toni and I am a Security
+Engineering Manager at Google.
+I’ll be your instructor for the first course
+of this certificate program.
+By starting this course, you've already
+taken a big step toward building new skills
+that will help you in your career.
+Cybersecurity may seem daunting at first, but
+you'd be surprised by the different
+backgrounds many of us have.
+I worked as an intelligence analyst before I
+got my first job in the security industry,
+and I'm excited to be your instructor as you
+begin YOUR journey into security.
+The Demand for security professionals is
+growing at an incredible rate.
+By 2030, the U.S.
+Bureau of Labor Statistics expects security
+roles to grow by more than 30%, which is
+higher than the average growth rate for
+other occupations.
+Global access to the Internet is expanding.
+Every day more people and organizations are
+adopting new digital technologies.
+Having a diverse community of security
+professionals with unique backgrounds,
+perspectives and experiences is essential
+for protecting and serving different markets.
+Working in security has allowed me to work
+with people from all around the world.
+Working with people who have diverse
+backgrounds ensures that our teams get to ask
+lots of questions and come up with more
+creative solutions.
+The main objective in security is to protect
+organizations AND people.
+This line of work allows you to support and
+interact with people across the globe.
+There are many openings for entry-level
+security analysts, and employers are
+struggling to find enough candidates with
+the right expertise.
+This program is designed to give YOU the
+knowledge and skills you need to start or
+advance in the security profession.
+No matter your current skill level, by the
+time you finish this certificate program,
+you'll be prepared to find a
+security-related job or expand your career in
+security! You may be wondering, what do
+security professionals actually DO?
+Have you ever had to update your password
+online to include a number or a special
+symbol? If so, then you’re already familiar
+with basic security measures, like password
+management. And, if you've ever received a
+notification from a service provider about
+stolen data or a software hack, then you
+have first-hand experience with the impact of
+a security breach.
+If you’ve ever asked yourself how
+organizations safeguard data, then you
+already have two important traits that are
+necessary to thrive in this industry:
+curiosity and excitement.
+Security analysts help minimize risks to
+organizations and people.
+Analysts work to proactively guard against
+incidents while continuously monitoring
+systems and networks.
+And, if an incident does occur, they
+investigate and report their findings.
+They are always asking questions and looking
+for solutions.
+One of the best things about the security
+industry is the many paths and career options
+it exposes you to! Each option involves a
+unique set of skills and responsibilities.
+No matter what your background is, you’ll
+probably find that you already have some
+relevant experience.
+If you enjoy collaborating with and helping
+others, solving puzzles, and are motivated by
+challenges, then this is the career for you!
+For example, my background as an intelligence
+analyst had nothing to do with cybersecurity.
+However, having strong critical thinking
+skills and communication skills provided a
+solid foundation for my success when I
+decided to pursue a career in security.
+If you’re not sure what direction you want to
+take in the security industry, that’s okay.
+This program will give you an overview of
+many different types of available jobs.
+It will also let you explore certain
+specialized skill sets to help you figure out
+where you want to take your career.
+The Google Career Certificates are designed
+by industry professionals with decades of
+experience here at Google.
+You’ll have a different expert from Google
+guide you through each course in the
+certificate. We’ll share our knowledge in
+videos, provide practice opportunities with
+hands-on activities, and take you through
+real scenarios that you might encounter on
+the job. Throughout this program, you’ll
+gain hands-on practice with detecting and
+responding to attacks, monitoring and
+protecting networks, investigating incidents,
+and writing code to automate tasks.
+The program is made up of several courses
+that are designed to help you land an
+entry-level job! You’ll learn about topics
+like: core security concepts; security
+domains; network security; computing basics
+- including Linux and SQL; along with
+understanding assets, threats, and
+vulnerabilities.
+Our goal is to help you reach YOUR goal of
+joining the security industry.
+You’ll learn about incident detection and
+response, as well as how to use programming
+languages, like Python, to accomplish common
+security tasks.
+You’ll also gain valuable job search
+strategies that will benefit you as you begin
+to find and apply for jobs in the security
+profession.
+Completing this Google Career Certificate
+will help you develop skills and learn how to
+use tools to prepare you for a job in a
+fast-growing, high-demand field.
+The certificate is designed to prepare you
+for a job in three to six months, if you work
+on the certificate part-time.
+And once you graduate, you can connect with
+over 200 employers who are interested in
+hiring Google Career Certificate graduates,
+like you.
+Whether you're looking to switch jobs, start
+a new career, or level-up your skills, this
+Google Career Certificate can open doors to
+new job opportunities.
+You don’t need prior experience or knowledge
+in the security field because this
+certificate program will begin with the
+basics.
+I’ll be by your side throughout this first
+course, making sure that you’re learning the
+foundational knowledge needed to succeed in
+the field.
+This program is also flexible.
+You can complete all of the courses in this
+certificate on your own terms and at your own
+pace, online.
+We’ve gathered some amazing instructors to
+support you on your journey—and they’d like
+to introduce themselves now:
+Hi! My name is Ashley, and I'm a Customer
+Engineering Enablement Lead for Security
+Operation Sales at Google.
+I'll take you through security domains,
+frameworks and controls, as well as common
+security threats, risks, and
+vulnerabilities.
+You’ll also be introduced to common tools
+used by security analysts.
+I can't wait to get started!
+Hi there! My name is Chris, and I'm the Chief
+Information Security Officer for Google
+Fiber. I’m excited to talk to you about the
+structure of a network, network protocols,
+common network attacks, and how to secure a
+network.
+Hi there! My name is Kim, and I'm a Technical
+Program Manager at Google.
+I will guide you through foundational
+computing skills that support the work of a
+security analyst.
+We'll also learn about operating systems,
+the Linux command line, and SQL.
+Hi! My name is Da’Queshia, and I'm a Security
+Engineer at Google.
+Together we'll explore protecting
+organizational assets through a variety of
+security controls and develop a deeper
+understanding of risks and vulnerabilities.
+Hi! My name is Dave, and I'm a Principal
+Security Strategist at Google.
+In our time together, we'll learn about
+detecting and responding to security
+incidents. You’ll also have the chance to
+monitor and analyze network activity using
+powerful security tools.
+Hello, I’m Ángel, and I'm a Security Engineer
+at Google.
+We’ll explore foundational Python
+programming concepts to help you automate
+common security tasks.
+Hello, I’m Dion, I’m a Program Manager at
+Google.
+I’m your instructor for the first portion of
+the final course of the program.
+There, we’ll discuss how to escalate
+incidents and communicate with stakeholders.
+And my name is Emily. I'm a Program Manager
+at Google.
+I'll guide you through the final portion of
+the program and share ways that you can
+engage with the security community and
+prepare for your upcoming job search.
+And, as you already know, I’ll guide you
+through the first course of this program.
+This is such a great time to grow your
+career in the field of security.
+Sound exciting? Let’s get started!
+Hi again! Now that you have some idea of what
+to expect from the program as a whole, let's
+discuss more about what you'll learn in THIS
+course.
+This course will introduce you to the world
+of security and how it’s used to protect
+business operations, users, and devices so
+you can contribute to the creation of a safer
+internet for all.
+In this section we’ll cover foundational
+security concepts.
+First, we’ll define security.
+Then, we’ll explore common job
+responsibilities of security analysts.
+Building on that, we’ll cover core skills a
+security analyst may have.
+Finally, we’ll discuss the value of security
+for protecting organizations and people.
+Later on, we’ll cover eight security domains.
+Then, we’ll cover common security frameworks
+and controls.
+Finally, we’ll wrap up the course by
+discussing common tools and programming
+languages that entry-level security analysts
+may use.
+Coming up, we’ll go over some resources that
+will allow you to get the most out of this
+program. I’m really excited for you to start
+this journey—let’s begin!
+Imagine that you’re preparing for a storm.
+You’ve received notification that a storm is
+coming.
+You prepare by gathering the tools and
+materials you’ll need to stay safe.
+You make sure your windows and doors are
+secure.
+You assemble a first aid kit, tools, food,
+and water.
+You’re prepared! The storm hits, and there
+are powerful winds and heavy rain.
+The storm is using its force to try and
+breach your home.
+You notice some water leaks and begin
+patching them quickly in order to minimize
+any risk or potential damage.
+Handling a security incident is no different.
+Organizations must prepare for the storm by
+ensuring they have the tools to mitigate and
+quickly respond to outside threats.
+The objective is to minimize risk and
+potential damage.
+As a security analyst, you’ll work to protect
+your organization and the people it serves,
+from a variety of risks and outside threats.
+And if a threat does get through, you and
+your team will provide a solution to remedy
+the situation. To help you better understand
+what this means, we’ll define security and
+discuss the roles of security professionals
+in organizations.
+Let’s start with some definitions:
+Cybersecurity, or security, is the practice
+of ensuring confidentiality, integrity, and
+availability of information by protecting
+networks, devices, people, and data from
+unauthorized access or criminal exploitation.
+For example, requiring complex passwords to
+access sites and services improves
+confidentiality by making it much more
+difficult for a threat actor to compromise
+them. A threat actor is any person or group
+who presents a security risk.
+Now that you know the definition of security,
+let’s discuss what security teams do for an
+organization. Security protects against
+external and internal threats.
+An external threat is someone outside of the
+organization trying to gain access to private
+information, networks, or devices.
+An internal threat comes from current or
+former employees, external vendors, or
+trusted partners.
+Often these internal threats are accidental,
+such as an employee clicking on a compromised
+link in an email. Other times, the internal
+actor INTENTIONALLY engages in activities
+such as unauthorized data access or abusing
+systems for personal use.
+Experienced security professionals will help
+organizations mitigate - or reduce the impact
+of - threats like these.
+Security teams also ensure an organization
+meets regulatory compliance, or laws and
+guidelines, that require the implementation
+of specific security standards.
+Ensuring that organizations are in compliance
+may allow them to avoid fines and audits,
+while also upholding their ethical
+obligation to protect users.
+Security teams also maintain and improve
+business productivity.
+By establishing a plan for business
+continuity, security teams allow people to do
+their jobs even in the case of something
+like a data breach.
+Being security conscious can also reduce
+expenses associated with risk, such as
+recovering from data loss or operational
+downtime, and potentially avoiding fines.
+The last benefit of security that we'll
+discuss is maintaining brand trust.
+If services or customer data are
+compromised, this can lower trust in the
+organization, damage the brand, and hurt the
+business in the long term.
+Loss of customer trust may also lead to less
+revenue for the business.
+Now, let’s go over some common security-based
+roles.
+After completing this certificate program,
+here are some job titles you may want to
+search for: Security analyst or specialist,
+Cybersecurity analyst or specialist,
+Security operations center or SOC analyst,
+And Information security analyst.
+You'll also learn more about the responsibilities
+associated with some of these job titles
+later in the program.
+As you may now realize, the field of security
+includes many topics and concepts.
+And every activity you complete in this
+program moves you one step closer to a new
+job! Let's keep learning together!
+Technology is rapidly changing, and so are
+the tactics and techniques that attackers
+use. As digital infrastructure evolves,
+security professionals are expected to
+continually grow their skills in order to
+protect and secure sensitive information.
+In this video, we’ll discuss some job
+responsibilities of an entry-level security
+analyst. So, what do security analysts do?
+Security analysts are responsible for
+monitoring and protecting information and
+systems. Now, we'll discuss three primary
+responsibilities of a security analyst,
+starting with protecting computer and
+network systems.
+Protecting computer and network systems
+requires an analyst to monitor an
+organization's internal network.
+If a threat is detected, then an analyst is
+generally the first to respond.
+Analysts also often take part in exercises to
+search for weaknesses in an organization's
+own systems. For example, a security analyst
+may contribute to penetration testing or
+ethical hacking. The goal is to penetrate -
+or hack - their own organization's internal
+network to identify vulnerabilities and
+suggest ways to strengthen their security
+measures. Think of it like this.
+After you lock your car, you check the door
+handles to make sure no one can access any
+valuables you keep inside.
+Security analysts also proactively work to
+PREVENT threats from happening in the first
+place. One way they do this is by working
+with information technology - or I-T - teams
+to install prevention software for the
+purposes of identifying risks and
+vulnerabilities. Analysts may also be
+involved in software and hardware
+development. They’ll often work with
+development teams to support product security
+by setting up appropriate processes and
+systems to meet the organization’s data
+protection needs. The last task we’ll
+discuss is conducting periodic security
+audits. A security audit is a review of an
+organization’s security records, activities,
+and other related documents.
+For example, an analyst may examine in-house
+security issues such as making sure that
+confidential information, like individual
+computer passwords, isn't available to ALL
+employees. Phew, that was a lot to cover!
+But hopefully you have a general idea of
+what entry-level security analysts do on a
+day-to-day basis.
+Security analysts are an important part of
+any organization.
+Their daily tasks protect small businesses,
+large companies, non-profit organizations,
+and government agencies.
+They also help to ensure that the people
+served by those organizations remain safe.
+For any job, you need certain skills to be
+successful, and many of these core skills are
+transferable from one role to the next.
+No matter what job you currently have, you
+likely have many core skills already.
+Having a diverse background enhances your
+core skills, which means your personal
+experiences and perspectives are especially
+valuable!
+In this video, we’ll discuss both
+transferable and technical skills that are
+particularly useful for a security analyst.
+Transferable skills are skills from other
+areas that can apply to different careers.
+Technical skills may apply to several
+professions as well, however at times they
+may require knowledge of specific tools,
+procedures, and policies.
+Let’s discuss some core transferable skills
+you may already have that will benefit you in
+a career as a security analyst.
+Communication is a transferable skill for a
+security analyst.
+They will often need to describe certain
+threats, risks or vulnerabilities to people
+who may not have a technical background.
+For example, security analysts may be tasked
+with interpreting and communicating policies
+and procedures to other employees.
+Or analysts may be asked to report findings
+to their supervisors, so the appropriate
+actions can be taken to secure the
+organization.
+Another transferable skill is collaboration.
+Security analysts often work in teams with
+engineers, digital forensic investigators,
+and program managers.
+For example, if you are working to roll out a
+new security feature, you will likely have a
+project manager, an engineer, and an ethical
+hacker on your team.
+Security analysts also need to be able to
+analyze complex scenarios that they may
+encounter. For example, a security analyst
+may need to make recommendations about how
+different tools can support efficiency and
+safeguard an organization’s internal network.
+The last transferable skill that we'll
+discuss is problem solving.
+Identifying a security problem and then
+diagnosing it and providing solutions is a
+necessary skill to keep business operations
+safe.
+Understanding threat actors and identifying
+trends can provide insight on how to handle
+future threats. Okay, now that we've covered
+some important transferable skills, let's
+discuss some technical skills that security
+analysts need to develop.
+A basic understanding of programming
+languages is an important skill to develop
+because security analysts can use
+programming to automate tasks and identify
+error messages. Like learning any other
+language, learning a programming language may
+seem challenging at first.
+However, this certificate program assumes no
+prior programming experience, so we'll start
+at the very beginning and provide several
+opportunities for hands-on practice with
+languages like Python and SQL!
+Another important technical skill is knowing
+how to use security information and event
+management, or SIEM, tools.
+Security professionals use SIEM tools to
+identify and analyze security threats, risks,
+and vulnerabilities.
+For example, a SIEM tool may alert you that
+an unknown user has accessed the system.
+In the event of an unknown user accessing
+the system you may use computer forensics to
+investigate the incident.
+Now, let’s discuss computer forensics.
+Similar to an investigator and a forensic
+scientist working in the criminal justice
+system, digital forensic investigators will
+attempt to identify, analyze, and preserve
+criminal evidence within networks,
+computers, and electronic devices.
+Keep in mind that you may already have some
+of the core skills we’ve discussed.
+And if you don’t have the technical skills,
+that’s okay!
+This program is designed to support you in
+learning those skills.
+For example, over the past seven years
+working in cybersecurity I've learned that
+security analysts need to have intellectual
+curiosity and the motivation to keep learning
+in order to succeed. Personally, I dedicate
+time on a regular basis towards learning more
+Python and SQL skills in order to meet the
+demands of the projects I'm working on.
+You'll get to learn about Python and SQL
+later in this program.
+As you continue this journey, you’ll build
+the knowledge and skills you need to enter
+the security field! As we've discussed,
+security professionals protect many physical
+and digital assets.
+These skills are desired by organizations
+and government entities because risk needs to
+be managed. Let’s continue to discuss why
+security matters.
+Security is essential for ensuring an
+organization's business continuity and
+ethical standing. There are both legal
+implications and moral considerations to
+maintaining an organization’s security.
+A data breach, for example, affects everyone
+that is associated with the organization.
+This is because data losses or leaks can
+affect an organization's reputation as well
+as the lives and reputations of their users,
+clients, and customers.
+By maintaining strong security measures,
+organizations can increase user trust.
+This may lead to financial growth and
+ongoing business referrals.
+As previously mentioned, organizations are
+not the only ones that suffer during a data
+breach. Maintaining and securing user,
+customer, and vendor data is an important
+part of preventing incidents that may expose
+people’s personally identifiable information.
+Personally identifiable information, known as
+P-I-I, is any information used to infer an
+individual’s identity.
+PII includes someone’s full name, date of
+birth, physical address, phone number, email
+address, Internet Protocol, or I-P, address
+and similar information.
+Sensitive personally identifiable
+information, known as S-P-I-I, is a specific
+type of P-I-I that falls under stricter
+handling guidelines and may include social
+security numbers, medical or financial
+information, and biometric data, such as
+facial recognition. If S-P-I-I is stolen,
+this has the potential to be significantly
+more damaging to an individual than if P-I-I
+is stolen.
+P-I-I and S-P-I-I data are key assets that a
+threat actor will look for if an organization
+experiences a breach.
+When a person’s identifiable information is
+compromised, leaked, or stolen, identity
+theft is the primary concern.
+Identity theft is the act of stealing
+personal information to commit fraud while
+impersonating a victim.
+And the primary objective of identity theft
+is financial gain.
+We’ve explored several reasons why security
+matters.
+Employers need security analysts, like you,
+to fill the current and future demand to
+protect data, products, and people while
+ensuring confidentiality, integrity, and safe
+access to information.
+This is why the U.S.
+Bureau of Labor Statistics expects the
+demand for security professionals to grow by
+more than 30% by the year 2030.
+So keep learning, and eventually you’ll be
+able to do your part to create a safer and
+more secure environment for organizations
+and people alike!
+Congratulations on completing the first
+section of this course!
+Let’s quickly review what we’ve covered so
+far, before moving on.
+We defined security and introduced the
+benefits of implementing security in an
+organization. Then, we discussed different
+job responsibilities, such as managing
+threats and installing prevention software.
+We also introduced some important core
+skills, like collaboration and computer
+forensics. We finished by discussing the
+value of security and how it supports
+critical business functions.
+I hope you've gained a greater understanding
+of security.
+If you feel like you need a refresher before
+moving on, you can always go back and review
+any content you’re unsure about.
+By learning the basics, you’re laying the
+foundation for the rest of your security
+career. Coming up, we'll explore some
+well-known attacks that shaped the security
+industry. I'm excited to continue this
+journey with you!
+Welcome back! When it comes to security,
+there is so much to learn, and I'm thrilled
+to be part of your career journey.
+This is such an exciting time to be learning
+about security!
+When I learned about international hacks
+that impacted both private companies and
+government organizations, I was inspired to
+want to work in security because I realized
+how dynamic and important this field is.
+One reason there are so many jobs in the
+security field today is because of attacks
+that happened in the 1980s and 1990s.
+Decades later, security professionals are
+still actively working to protect
+organizations and people from variations of
+these early computer attacks.
+In this section of the course, we’ll discuss
+viruses and malware, and introduce the
+concept of social engineering.
+Then, we'll discuss how the digital age
+ushered in a new era of threat actors.
+Knowing the evolution of each attack is key
+to protecting against future attacks.
+Lastly, we’ll provide an overview of eight
+security domains.
+I hope you are as eager as I am to learn
+more!
+Next up, we’ll travel back in time to explore
+some of the viruses, data breaches, and
+malware attacks that have helped shape the
+industry as we know it today.
+The security industry is constantly evolving,
+but many present-day attacks are not entirely
+new. Attackers often alter or enhance
+previous methods.
+Understanding past attacks can provide
+direction for how to handle or investigate
+incidents in your job as a security analyst.
+First, let’s go over a couple of key terms
+that will support your understanding of the
+attacks we’ll discuss.
+A computer virus is malicious code written to
+interfere with computer operations and cause
+damage to data and software.
+The virus attaches itself to programs, or
+documents, on a computer.
+Then spreads and infects one or more
+computers in a network.
+A worm is a type of computer virus that can
+duplicate and spread on its own without human
+involvement. Today, viruses are more
+commonly referred to as malware, which is
+software designed to harm devices or
+networks.
+Two examples of early malware attacks that
+we’ll cover are the Brain virus and the
+Morris worm. They were created by malware
+developers to accomplish specific tasks.
+However, the developers underestimated the
+impact their malware would have and the
+amount of “infected” computers there would
+be.
+Let’s take a closer look at these attacks and
+discuss how they helped shape security as we
+know it today. In 1986, the Alvi brothers
+created the Brain virus.
+Although the intention of the virus was to
+track illegal copies of medical software and
+prevent pirated licenses, what the virus
+actually did was unexpected.
+Once a person used a pirated copy of the
+software, the virus infected that computer.
+Then, any disk that was inserted into the
+computer was also infected.
+The virus spread to a new computer every
+time someone used one of the infected disks.
+Undetected, the virus spread globally within
+a couple of months.
+Although the intention was not to destroy
+data or hardware, the virus slowed down
+productivity and significantly impacted
+business operations.
+The Brain virus fundamentally altered the
+computing industry, emphasizing the need for
+a plan to maintain security and
+productivity.
+As a security analyst, you will follow and
+maintain strategies put in place to ensure
+your organization has a plan to keep their
+data and people safe.
+Another influential computer attack was the
+Morris worm.
+In 1988, Robert Morris developed a program
+to assess the size of the internet.
+The program crawled the web and installed
+itself onto other computers to tally the
+number of computers that were connected to
+the internet.
+Sounds simple, right?
+The program, however, failed to keep track of
+the computers it had already compromised and
+continued to reinstall itself, until the
+computers ran out of memory and crashed.
+About 6,000 computers were affected,
+representing 10% of the internet at the time.
+This attack cost millions of dollars in
+damages, due to business disruptions and the
+efforts required to remove the worm.
+After the Morris worm, Computer Emergency
+Response Teams, known as CERTs®, were
+established to respond to computer security
+incidents.
+CERTs® still exists today, but their place
+in the security industry has expanded to
+include more responsibilities.
+Later in this program you'll learn more about
+the core functions of these security teams
+and gain hands-on practice with detection
+and response tools.
+Early attacks played a key role in shaping
+the current security industry.
+And coming up, we’ll discuss how attacks
+evolved in the digital age!
+With the expansion of reliable high-speed
+internet, the number of computers connected
+to the internet increased dramatically.
+Because malware could spread through the
+internet, threat actors no longer needed to
+use physical disks to spread viruses.
+To better understand attacks in the digital
+age, we’ll discuss two notable attacks that
+relied on the internet: The LoveLetter
+attack and the Equifax breach.
+In the year 2000, Onel de Guzman created the
+LoveLetter malware to steal internet login
+credentials. This attack spread rapidly and
+took advantage of people who had not
+developed a healthy suspicion for
+unsolicited emails.
+Users received an email with the subject line
+“I Love You.” Each email contained an
+attachment labeled, “Love Letter For You.”
+When the attachment was opened, the malware
+scanned a user’s address book.
+Then, it automatically sent itself to each
+person on the list and installed a program to
+collect user information and passwords.
+Recipients would think they were receiving an
+email from a friend, but it was actually
+malware. The LoveLetter ended up infecting
+45 million computers globally and is believed
+to have caused over $10 billion in damages.
+The LoveLetter attack is the first example of
+social engineering.
+Social engineering is a manipulation
+technique that exploits human error to gain
+private information, access, or valuables.
+After the LoveLetter, attackers understood
+the power of social engineering.
+The number of social engineering attacks is
+increasing with every new social media
+application that allows public access to
+people's data.
+Many people are now prioritizing convenience
+over privacy.
+The trade off of this evolving shift is that
+these tools may lead to increased
+vulnerability, if people do not use them
+appropriately.
+As a security professional, your role is to
+identify and manage inappropriate use of
+technology that may place your organization
+and all the people associated with it at
+risk. One way to safeguard your organization
+is to conduct regular internal trainings,
+which you as a future security analyst may
+be asked to lead or participate in.
+Today, it’s common for employees to receive
+training on how to identify social
+engineering attacks.
+Specifically, phishing through the emails
+they receive.
+Phishing is the use of digital
+communications to trick people into revealing
+sensitive data or deploying malicious
+software.
+Now let's discuss the Equifax breach.
+In 2017, attackers successfully infiltrated
+the credit reporting agency, Equifax.
+This resulted in one of the largest known
+data breaches of sensitive information.
+Over 143 million customer records were
+stolen, and the breach affected approximately
+40% of all Americans.
+The records included personally identifiable
+information, including social security
+numbers, birth dates, driver’s license
+numbers, home addresses and credit card
+numbers. From a security standpoint, the
+breach occurred due to multiple failures on
+Equifax's part. It wasn’t just one
+vulnerability that the attackers took
+advantage of, there were several.
+The company failed to take the actions
+needed to fix multiple known vulnerabilities
+in the months leading up to the data breach.
+In the end, Equifax settled with the U.S.
+government and paid over $575 million to
+resolve customer complaints and cover
+required fines.
+While there have been other data breaches
+before and after the Equifax breach, the
+large settlement with the U.S.
+government alerted companies to the
+financial impact of a breach and the need to
+implement preventative measures.
+These are just a couple of well-known
+incidents that have shaped the security
+industry. Knowing about them will help you
+in your security career.
+Understanding different types of malware and
+social engineering attacks will allow you to
+communicate about security risks during
+future job interviews.
+As a future security professional, constantly
+adapting and educating yourself on threat
+actors’ tactics and techniques will be a
+part of your job.
+By noticing similar trends, patterns, and
+methodologies, you may be able to identify a
+potential breach and limit future damage.
+Finally, understanding how security affects
+people's lives is a good reminder of why the
+work you will do is so important!
+As the tactics of threat actors evolve, so do
+the roles of security professionals.
+Having a solid understanding of core
+security concepts will support your growth in
+this field. One way to better understand
+these core concepts is by organizing them
+into categories, called security domains.
+As of 2022, C-I-S-S-P has defined eight
+domains to organize the work of security
+professionals. It’s important to understand
+that these domains are related and that gaps
+in one domain can result in negative
+consequences to an entire organization.
+It’s also important to understand the domains
+because it may help you better understand
+your career goals and your role within an
+organization.
+As you learn more about the elements of each
+domain, the work involved in one may appeal
+to you more than the others.
+This domain may become a career path for you
+to explore further.
+C-I-S-S-P defines eight domains in total, and
+we'll discuss all eight between this video
+and the next. In this video, we’re going to
+cover the first four: Security and risk
+management, asset security, security
+architecture and engineering, and
+communication and network engineering.
+Let’s start with the first domain.
+Security and risk management focuses on
+defining security goals and objectives, risk
+mitigation, compliance, business continuity,
+and the law.
+For example, security analysts may need to
+update company policies related to private
+health information if a change is made to a
+federal compliance regulation such as the
+Health Insurance Portability and
+Accountability Act - also known as HIPPA.
+The second domain is asset security.
+This domain focuses on securing digital and
+physical assets.
+It’s also related to the storage,
+maintenance, retention, and destruction of
+data. When working with this domain,
+security analysts may be tasked with making
+sure that old equipment is properly disposed
+of and destroyed, including any type of
+confidential information.
+The third domain is security architecture and
+engineering.
+This domain focuses on optimizing data
+security by ensuring effective tools,
+systems, and processes are in place.
+As a security analyst, you may be tasked with
+configuring a firewall.
+A firewall is a device used to monitor and
+filter incoming and outgoing computer network
+traffic. Setting up a firewall correctly
+helps prevent attacks that could affect
+productivity. The fourth security domain is
+communication and network engineering.
+This domain focuses on managing and securing
+physical networks and wireless
+communications. As a security analyst, you
+may be asked to analyze user behavior within
+your organization. Imagine discovering that
+users are connecting to unsecured wireless
+hotspots. This could leave the organization
+and its employees vulnerable to attacks.
+To ensure communications are secure, you
+would create a network policy to prevent and
+mitigate exposure. Maintaining an
+organization’s security is a team effort, and
+there are many moving parts.
+As an entry-level analyst, you will continue
+to develop your skills by learning how to
+mitigate risks, to keep people and data
+safe.
+You don’t need to be an expert in all
+domains.
+But, having a basic understanding of them
+will aid you in your journey as a security
+professional. You’re doing great!
+We have just introduced the first four
+security domains, and in the next video we’ll
+discuss four more! See you soon!
+Welcome back. In the last video we introduced
+you to the first four security domains.
+In this video, we’ll introduce you to the
+next four security domains: identity and
+access management, security assessment and
+testing, security operations, and software
+development security.
+Familiarizing yourself with these domains
+will allow you to navigate the complex world
+of security. The domains outline and
+organize how a team of security professionals
+work together. Depending on the
+organization, analyst roles may sit at the
+intersection of multiple domains or focus on
+one specific domain.
+Knowing where a particular role fits within
+the security landscape will help you prepare
+for job interviews and work as part of a
+full security team.
+Let’s move into the fifth domain.
+Identity and access management focuses on
+keeping data secure, by ensuring users follow
+established policies to control and manage
+physical assets, like office spaces, and
+logical assets, such as networks and
+applications.
+Validating the identities of employees and
+documenting access roles are essential to
+maintaining the organization’s physical and
+digital security.
+For example, as a security analyst, you may
+be tasked with setting up employees'
+keycard-access to buildings.
+The sixth domain is security assessment and
+testing.
+This domain focuses on conducting security
+control testing, collecting and analyzing
+data, and conducting security audits to
+monitor for risks, threats, and
+vulnerabilities. Security analysts may
+conduct regular audits of user permissions,
+to make sure that users have the correct
+level of access.
+For example, access to payroll information
+is often limited to certain employees, so
+analysts may be asked to regularly audit
+permissions to ensure that no unauthorized
+person can view employee salaries.
+The seventh domain is security operations.
+This domain focuses on conducting
+investigations and implementing preventative
+measures. Imagine that you, as a security
+analyst, receive an alert that an unknown
+device has been connected to your internal
+network.
+You would need to follow the organization's
+policies and procedures to quickly stop the
+potential threat. The final, eighth domain
+is software development security.
+This domain focuses on using secure coding
+practices - which are a set of recommended
+guidelines that are used to create secure
+applications and services.
+A security analyst may work with software
+development teams to ensure security
+practices are incorporated into the software
+development lifecycle.
+If, for example, one of your partner teams
+is creating a new mobile app, then you may be
+asked to advise on the password policies or
+ensure that any user data is properly secured
+and managed. That ends our introduction to
+C-I-S-S-P’s eight security domains.
+Challenge yourself to better understand each
+of these domains and how they affect the
+overall security of an organization.
+While they may still be a bit unclear to you
+this early in the program, these domains will
+be discussed in greater detail in the next
+course.
+See you there! This concludes our brief
+introduction to some of the most influential
+security attacks throughout history and
+C-I-S-S-P’s eight security domains!
+Let’s review what we’ve discussed.
+First we covered viruses, including the Brain
+virus and the Morris worm, and discussed how
+these early forms of malware shaped the
+security industry.
+We also discussed how many attacks today are
+variants of these early examples.
+Understanding previous attacks is critical
+for security professionals who are working to
+protect organizations and people from
+possible future variants.
+We also discussed social engineering and
+threat actor motives by learning about the
+LoveLetter attack and the Equifax data
+breach.
+These incidents showed the widespread impacts
+and associated costs of more recent security
+breaches in the digital age.
+Finally, we introduced C-I-S-S-P’s eight
+security domains and how they can be used to
+categorize different areas of focus within
+the security profession.
+I hope you are feeling confident about your
+foundational security knowledge!
+Learning the history of security can allow
+you to better understand the current
+industry. C-I-S-S-P’s eight security domains
+provide a way to organize the work of
+security professionals.
+Remember, every security professional is
+essential.
+Your unique point of view, professional
+background, and knowledge are valuable.
+So, the diversity you bring to the field
+will further improve the security industry as
+you work to keep organizations and people
+safe.
+Hi there—glad to have you back!
+You’re half way done with the first course,
+so you’re making great progress.
+In this section, we’ll discuss how
+organizations protect themselves from
+threats, risks, and vulnerabilities by
+covering key principles such as: frameworks,
+controls, and ethics.
+To help you better understand how this
+relates to the role of a security analyst,
+we’ll use an analogy.
+Imagine you want to plant a garden.
+You research, plan, prepare and purchase
+materials while considering all the things
+that could potentially present a risk to
+your garden.
+You establish a plan to pull weeds, spray for
+bugs, and water your plants regularly to
+prevent issues or incidents.
+But as the days go by, unexpected problems
+arise.
+The weather has been unpredictable, and
+pests have been aggressively trying to
+infiltrate your garden. You start
+implementing better ways to safeguard your
+garden by installing a surveillance camera,
+building a fence, and covering your plants
+with a canopy to keep your garden healthy
+and growing.
+Now that you have a better idea about the
+threats to your garden and how to keep your
+plants safe, you establish better policies
+and procedures to continuously monitor and
+safeguard your garden.
+In this way, security resembles a garden.
+It’s an evolving industry that will
+challenge you to make continuous improvements
+to policies and procedures that help protect
+your organization and the people it serves.
+To that end, we’ll introduce security
+frameworks and controls and explain why
+they’re important. We’ll also cover core
+components and specific examples of
+frameworks and controls, including the
+Confidentiality, Integrity, and Availability
+Triad, or C-I-A Triad.
+We’ll end with a discussion about the ethics
+of security, and share a few notable ethical
+concerns in the security field.
+Evolving security practices may seem a little
+abstract, but many of us use them every day.
+For example, I use security keys, which are a
+type of security control, as a second form of
+authentication to access my accounts.
+The keys ensure that only I can access my
+accounts, even if a password has been
+compromised. By improving confidentiality,
+they also assure me that the integrity of my
+accounts is intact.
+Having processes and procedures in place to
+organize security efforts and make informed
+decisions is important for any organization.
+I’m so excited to get started—and I hope you
+are too!
+Imagine you’re working as a security analyst
+and receive multiple alerts about suspicious
+activity on the network.
+You realize that you’ll need to implement
+additional security measures to keep these
+alerts from becoming serious incidents.
+But where do you start? As an analyst,
+you’ll start by identifying your
+organization’s critical assets and risks.
+Then, you’ll implement the necessary
+frameworks and controls.
+In this video, we’ll discuss how security
+professionals use frameworks to continuously
+identify and manage risk.
+We'll also cover how to use security
+controls to manage or reduce specific risks.
+Security frameworks are guidelines used for
+building plans to help mitigate risk and
+threats to data and privacy.
+Security frameworks provide a structured
+approach to implementing a security
+lifecycle. The security lifecycle is a
+constantly evolving set of policies and
+standards that define how an organization
+manages risks, follows established
+guidelines, and meets regulatory compliance
+- or laws.
+There are several security frameworks that
+may be used to manage different types of
+organizational and regulatory compliance
+risks.
+The purpose of security frameworks includes
+protecting personally identifiable
+information - known as P-I-I - securing
+financial information, identifying security
+weaknesses, managing organizational risks,
+and aligning security with business goals.
+Frameworks have four core components and
+understanding them will allow you to better
+manage potential risks.
+The first core component is identifying and
+documenting security goals.
+For example, an organization may have a goal
+to align with the E.U.'s General Data
+Protection Regulation law, also known as
+G-D-P-R.
+G-D-P-R is a data protection law established
+to grant European citizens more control over
+their personal data. A security analyst may
+be asked to identify and document areas where
+an organization is out of compliance with
+G-D-P-R.
+The second core component is setting
+guidelines to achieve security goals.
+For example, when implementing guidelines to
+achieve G-D-P-R compliance, your organization
+may need to develop new policies for how to
+handle data requests from individual users.
+The third core component of security
+frameworks is implementing strong security
+processes. In the case of G-D-P-R, a
+security analyst working for a social media
+company may help design procedures to ensure
+the organization complies with verified user
+data requests.
+An example of this type of request is when a
+user attempts to update or delete their
+profile information.
+The last core component of security
+frameworks is monitoring and communicating
+results. As an example, you may monitor your
+organization's internal network, and report a
+potential security issue affecting G-D-P-R
+to your manager or regulatory compliance
+officer. Now that we’ve introduced the four
+core components of security frameworks, let’s
+tie them all together. Frameworks allow
+analysts to work alongside other members of a
+security team to document, implement, and
+use the policies and procedures that have
+been created. It’s essential for an
+entry-level analyst to understand this
+process because it directly affects the work
+they do and how they collaborate with others.
+Next, we’ll discuss security controls.
+Security Controls are safeguards designed to
+reduce SPECIFIC security risks.
+For example, your company may have a
+guideline that requires all employees to
+complete a privacy training to reduce the
+risk of data breaches.
+As a security analyst, you may use a
+software tool to automatically assign and
+track which employees have completed this
+training.
+Security frameworks and controls are vital to
+managing security for all types of
+organizations and ensuring that everyone is
+doing their part to maintain a low level of
+risk. Understanding their purpose and how
+they are used allows analysts to support an
+organization’s security goals and protect
+the people it serves.
+In the following videos, we’ll discuss some
+well-known frameworks and principles that
+analysts need to be aware of to minimize
+risk, and protect data and users.
+Hi, welcome back!
+Previously, we discussed frameworks and
+controls in general.
+In this video, you'll learn about SPECIFIC
+frameworks and controls that organizations
+can voluntarily use to minimize risks to
+their data and to protect users.
+Let’s get started! The C-I-A triad is a
+foundational model that helps inform how
+organizations consider risk when setting up
+systems and security policies.
+C-I-A stands for confidentiality, integrity,
+and availability.
+Confidentiality means that only authorized
+users can access specific assets or data.
+For example, strict access controls that
+define who should and should not have access
+to data must be put in place to ensure
+confidential data remains safe.
+Integrity means the data is correct,
+authentic, and reliable.
+To maintain integrity, security professionals
+can use a form of data protection like
+encryption to safeguard data from being
+tampered with.
+Availability means data is accessible to
+those who are authorized to access it.
+As an example, a director may have more
+access to certain data than a department
+manager because directors usually oversee
+more employees.
+Let’s define a term that came up during our
+discussion of the C-I-A triad: asset.
+An asset is an item perceived as having value
+to an organization.
+And value is determined by the cost
+associated with the asset in question.
+For example, an application that stores
+sensitive data, such as social security
+numbers or bank accounts, is a valuable
+asset to an organization.
+It carries more risk and therefore requires
+tighter security controls in comparison to a
+website that shares publicly available news
+content.
+As you may remember, earlier in the course we
+discussed frameworks and controls in general.
+Now, we’ll discuss a specific framework
+developed by the U.S.-based National
+Institute of Standards and Technology: the
+Cybersecurity Framework, also referred to as
+the NIST C-S-F.
+The NIST Cybersecurity Framework is a
+voluntary framework that consists of
+standards, guidelines, and best practices to
+manage cybersecurity risk.
+It’s important to become familiar with this
+framework because security teams use it as a
+baseline to manage short and long-term risk.
+Managing and mitigating risks AND protecting
+an organization's assets from threat actors
+are key goals for security professionals.
+Understanding the different motives a threat
+actor may have, alongside identifying your
+organization’s most valuable assets is
+important.
+Some of the most dangerous threat actors to
+consider are disgruntled employees.
+They’re the MOST dangerous because they
+often have access to sensitive information
+and know where to find it.
+In order to reduce this type of risk,
+security professionals would use the
+principle of availability, as well as
+organizational guidelines based on
+frameworks, to ensure staff members can only
+access the data they need to perform their
+jobs. Threat actors originate from all
+across the globe, and a diverse workforce of
+security professionals helps organizations
+identify attackers' intentions.
+A variety of perspectives can assist
+organizations in understanding and mitigating
+the impact of malicious activity.
+That concludes our introduction to the CIA
+triad and NIST CSF framework, which are used
+to develop processes to secure organizations
+and the people they serve!
+You may be asked in an interview if you know
+about security frameworks and principles.
+Or you may be asked to explain how they’re
+used to secure organizational assets.
+In either case, throughout this program
+you’ll have multiple opportunities to learn
+more about them and apply what we’ve
+discussed to real-world situations.
+Coming up, we’ll discuss the ethics of
+security.
+See you soon! In security, new technologies
+present new challenges.
+For every new security incident or risk, the
+right or wrong decision isn’t always clear.
+For example, imagine that you’re working as
+an entry-level security analyst and you have
+received a high risk alert.
+You investigate the alert and discover data
+has been transferred without authorization.
+You work diligently to identify who made the
+transfer and discover it is one of your
+friends from work. What do you do?
+Ethically, as a security professional your
+job is to remain unbiased and maintain
+security and confidentiality.
+While it’s normal to want to protect a
+friend, regardless of who the user in
+question may be, your responsibility and
+obligation is to adhere to the policies and
+protocols you’ve been trained to follow.
+In many cases, security teams are entrusted
+with greater access to data and information
+than other employees.
+Security professionals must respect that
+privilege and act ethically at all times.
+Security ethics are guidelines for making
+appropriate decisions as a security
+professional. As another example, if you as
+an analyst have the ability to grant yourself
+access to payroll data and can give yourself
+a raise, just because you have access to do
+so, does that mean you should?
+The answer is no. You should never abuse the
+access you’ve been granted and entrusted
+with. Let’s discuss ethical principles that
+may raise questions as you navigate solutions
+for mitigating risks.
+These are confidentiality, privacy
+protections, and laws.
+Let’s begin with the first ethical principle,
+confidentiality.
+Earlier we discussed confidentiality as part
+of the C-I-A triad; now let's discuss how
+confidentiality can be applied to ethics.
+As a security professional, you’ll encounter
+proprietary or private information, such as
+P-I-I. It’s your ethical duty to keep that
+information confidential and safe.
+For example, you may want to help out a
+coworker by providing computer system access
+outside of properly documented channels.
+However, this ethical violation can result
+in serious consequences including reprimands,
+the loss of your professional reputation,
+and legal repercussions for both you and your
+friend. The second ethical principle to
+consider is privacy protections.
+Privacy protection means safeguarding
+personal information from unauthorized use.
+For example, imagine you receive a personal
+email after hours from your manager
+requesting a colleague’s home phone number.
+Your manager explains that they can’t access
+the employee database at the moment, but they
+need to discuss an urgent matter with that
+person.
+As a security analyst, your role is to follow
+the policies and procedures of your company,
+which in this example, state that employee
+information is stored in a secure database
+and should NEVER be accessed or shared in
+any other format.
+So, accessing and sharing the employee’s
+personal information would be unethical.
+In situations like this, it can be difficult
+to know what to do.
+So, the best response is to adhere to the
+policies and procedures set by your
+organization. A third important ethical
+principle we must discuss is the law.
+Laws are rules that are recognized by a
+community and enforced by a governing entity.
+For example, consider a staff member at a
+hospital who has been trained to handle
+P-I-I, and S-P-I-I for compliance.
+The staff member has files with confidential
+data that should never be left unsupervised,
+but the staff member is late for a meeting.
+Instead of locking the files in a designated
+area, the files are left on the staff
+member’s desk, unsupervised.
+Upon the employee’s return, the files are
+missing.
+The staff member has just violated multiple
+compliance regulations, and their actions
+were unethical and illegal since their
+negligence has likely resulted in the loss of
+private patient and hospital data.
+As you enter the security field, remember
+that technology is constantly evolving and so
+are attacker's tactics and techniques.
+Because of this, security professionals must
+continue to think critically about how to
+respond to attacks.
+Having a strong sense of ethics can guide
+your decisions to ensure that the proper
+processes and procedures are followed to
+mitigate these continually evolving risks.
+You are now better prepared to understand and
+help make decisions regarding assessing and
+managing risk. Let’s review what we’ve
+covered.
+We discussed security frameworks and controls
+and how they’re used to develop processes and
+procedures that protect organizations and
+the people they serve.
+We also discussed core components of
+frameworks, such as identifying security
+goals and establishing guidelines to achieve
+those goals.
+Then, we introduced specific frameworks and
+controls, including the C-I-A triad and the
+NIST C-S-F, and how they are used to manage
+risk.
+And finally, we discussed security ethics,
+including common ethical issues to consider,
+such as confidentiality, privacy
+protections, and laws.
+You’re almost there, only one more section to
+go in this course!
+Coming up, you’ll learn about common tools
+and programming languages used by security
+analysts to protect organizational
+operations.
+Hope you’re as excited as I am to keep going!
+Welcome to the final section of this course!
+Here, we’ll be introducing tools and
+programming languages that are commonly used
+in the security field.
+They are essential for monitoring security
+in an organization because they enhance
+efficiency by automating tasks.
+Although we’re only introducing these
+concepts and tools at this point, later in
+the program you’ll have opportunities to use
+them in a variety of hands-on activities.
+In the following videos, you’ll learn about
+security incident and event management, or
+SIEM, tools.
+You’ll also be introduced to other tools
+such as playbooks and network protocol
+analyzers. Then, you’ll learn about the
+Linux operating system and security related
+tasks that are initiated through programming
+languages such as SQL, and Python.
+For me, SQL is one of the most useful tools.
+It allows me to explore all the different
+data sources we collect, and it allows my
+team to analyze the data for trends.
+Take your time going through the videos and
+if you need to, rewatch them.
+Also know that these tools will be discussed
+in much more detail, and you will be able to
+practice them firsthand, later in the
+certificate program.
+While every organization has their own set of
+tools and training materials that you’ll
+learn to use on the job, this program will
+provide you with foundational knowledge that
+will help you succeed in the security
+industry.
+Let’s get started! As mentioned earlier,
+security is like preparing for a storm.
+If you identify a leak, the color or shape
+of the bucket you use to catch the water
+doesn’t matter. What IS important is
+mitigating the risks and threats to your
+home, by using the tools available to you.
+As an entry-level security analyst, you’ll
+have a lot of tools in your toolkit that you
+can use to mitigate potential risks.
+In this video, we'll discuss the primary
+purposes and functions of some commonly used
+security tools. And later in the program,
+you’ll have hands-on opportunities to
+practice using them. Before discussing tools
+further, let's briefly discuss logs, which
+are the source of data that the tools we’ll
+cover are designed to organize.
+A log is a record of events that occur within
+an organization’s systems.
+Examples of security related logs include
+records of employees signing into their
+computers or accessing web-based services.
+Logs help security professionals identify
+vulnerabilities and potential security
+breaches. The first tools we’ll discuss are
+Security Information and Event Management
+tools, or SIEM tools.
+A SIEM tool is an application that collects
+and analyzes log data to monitor critical
+activities in an organization.
+The acronym S-I-E-M may be pronounced as sim
+or seem, but we'll use sim throughout this
+program. SIEM tools collect real-time - or
+instant - information and allow security
+analysts to identify potential breaches as
+they happen.
+Imagine having to read pages and pages of
+logs to determine if there are any security
+threats. Depending on the amount of data, it
+could take hours or days.
+SIEM tools reduce the amount of data an
+analyst must review by providing alerts for
+specific types of risks and threats.
+Next, let’s go over examples of commonly used
+SIEM tools: Splunk and Chronicle.
+Splunk is a data analysis platform, and
+Splunk Enterprise provides SIEM solutions.
+Splunk Enterprise is a self-hosted tool used
+to retain, analyze, and search an
+organization's log data.
+Another SIEM tool is Google’s Chronicle.
+Chronicle is a cloud-native SIEM tool that
+stores security data for search and analysis.
+Cloud-native means that Chronicle allows for
+fast delivery of new features.
+Both of these SIEM tools, and SIEMs in
+general, collect data from multiple places,
+then analyze and filter that data to allow
+security teams to prevent and quickly react
+to potential security threats.
+As a security analyst, you may find yourself
+using SIEM tools to analyze filtered events
+and patterns, perform incident analysis, or
+proactively search for threats.
+Depending on your organization's SIEM setup
+and risk focus, the tools and how they
+function may differ, but ultimately they are
+ALL used to mitigate risk.
+Other key tools that you will use in your
+role as a security analyst - AND that you’ll
+have hands-on opportunities to use later in
+the program - are playbooks and network
+protocol analyzers.
+A playbook is a manual that provides details
+about any operational action, such as how to
+respond to an incident.
+Playbooks, which vary from one organization
+to the next, guide analysts in how to handle
+a security incident before, during, and
+after it has occurred.
+Playbooks can pertain to security or
+compliance reviews, access management, and
+many other organizational tasks that require
+a documented process from beginning to end.
+Another tool you may use as a security
+analyst is a network protocol analyzer, also
+called packet sniffer.
+A packet sniffer is a tool designed to
+capture and analyze data traffic within a
+network. Common network protocol analyzers
+include t-c-p-dump and Wireshark.
+As an entry-level analyst, you don’t have to
+be an expert in these tools.
+As you continue through this certificate
+program and get more hands-on practice,
+you’ll continuously build your understanding
+of how to use these tools to identify,
+assess, and mitigate risks.
+As we discussed previously, organizations use
+a variety of tools - such as SIEMs,
+playbooks, and packet sniffers - to better
+manage, monitor, and analyze security
+threats. But those aren’t the only tools in
+an analyst’s tool kit.
+Analysts also use programming languages and
+operating systems to accomplish essential
+tasks. In this video, we’ll introduce you to
+Python and SQL programming, and the Linux
+operating system. All of which you’ll have
+an opportunity to practice using later in the
+certificate program. Organizations can use
+programming to create a specific set of
+instructions for a computer to execute
+tasks.
+Programming allows analysts to complete
+repetitive tasks and processes with a high
+degree of accuracy and efficiency.
+It also helps reduce the risk of human
+error, and can save hours or days compared to
+performing the work manually.
+Now that you’re aware of what programming
+languages are used for, let’s discuss a
+specific and related operating system called
+Linux, and two programming languages: SQL and
+Python. Linux is an open-source - or
+publicly available - operating system.
+Unlike other operating systems you may be
+familiar with, for example macOS or Windows,
+Linux relies on a command line as the
+primary user interface.
+Linux itself is not a programming language,
+but it does allow for the use of text-based
+commands between the user and the operating
+system.
+You’ll learn more about Linux later in the
+program.
+A common use of Linux for entry-level
+security analysts is examining logs to better
+understand what’s occurring in a system.
+For example, you might find yourself using
+commands to review an error log when
+investigating uncommonly high network
+traffic.
+Next, let’s discuss SQL.
+S-Q-L stands for structured query language.
+SQL is a programming language used to create,
+interact with, and request information from a
+database. A database is an organized
+collection of information or data.
+There may be millions of data points in a
+database.
+So an entry-level security analyst would use
+SQL to filter through the data points to
+retrieve specific information.
+The last programming language we’ll introduce
+is Python.
+Security professionals can use Python to
+perform tasks that are repetitive and
+time-consuming, and that require a high
+level of detail and accuracy.
+As a future analyst, it's important to
+understand that every organization's tool kit
+may be somewhat different, based on their
+security needs.
+The main point is that you're familiar with
+some industry standard tools because that
+will show employers that you have the
+ability to learn how to use THEIR tools to
+protect the organization and the people it
+serves.
+You're doing great! Later in the course
+you'll learn more about Linux and programming
+languages, and you'll practice using these
+tools in security-related scenarios.
+That completes the introduction to security
+tools and programming languages!
+In this section of the course, we covered
+SIEM tools such as Splunk and Chronicle.
+We also discussed how SIEM tools are used by
+security analysts to complete different
+tasks. Then, we discussed other tools such
+as playbooks and network protocol analyzers,
+also called packet sniffers.
+Finally, we introduced the Linux operating
+system and the programming languages SQL and
+Python. Remember, the tools we discussed
+take time to understand completely.
+But having a basic understanding of these
+tools can help you get a job in the security
+field and progress in your career!
+Congratulations on completing the first
+course!
+We’ve come so far and covered so much about
+a really exciting industry.
+I find cybersecurity to be exciting because
+it's dynamic, there are always new puzzles to
+solve, and the work of protecting our users
+is worthwhile.
+Before we move on, let’s take a moment to
+celebrate and reflect on what we’ve covered:
+First, we introduced core security concepts,
+including what security is and why it
+matters. We also discussed what an
+entry-level security analyst does, and some
+skills related to the role.
+Then, we transitioned to eight security
+domains, which include security and risk
+management, asset security, and security
+operations.
+Next, we highlighted security frameworks and
+controls.
+Specifically, the CIA triad model and the
+NIST Cybersecurity Framework.
+Finally, we explored common tools and
+programming languages used by security
+analysts, such as SIEMs, playbooks, SQL, and
+Python.
+I hope you’re proud of the work you’ve done
+so far.
+No matter what direction you take in the
+security industry, everything you’ve learned
+lays the foundation for the next phase of
+your career.
+And, as you move through this program,
+you’ll have the chance to develop your skills
+further. In the next course, my colleague
+will provide more details about several of
+the topics introduced in this course.
+Hi! I'm Ashley and I will be guiding you
+through the next course of this certificate
+program. We’ll discuss security domains and
+business operations in greater detail.
+I’m so glad I was able to be here for the
+beginning of your journey.
+You’re off to a great start.
+I'm excited for you to reach your goal of
+joining the security industry!

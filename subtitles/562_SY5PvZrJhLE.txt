@@ -1,0 +1,1370 @@
+hello there today we're looking at
+language models are few shot learners by
+Tom B brown Benjamin man Nick Ryder and
+Melanie sabaha and a whole of authors
+all slew of authors from OPI this paper
+also called GPT three just came out
+recently so GPT three is a model that is
+a language model and it comes out of a
+succession of language models of open e
+I this paper is basically an
+investigation into what you can do with
+giant language models now this language
+model is an order of magnitude larger
+than anyone has ever built a language
+model and it can do some absolutely
+crazy things so we'll basically go over
+the architecture over what the model
+does and over the experimental results
+it turns out that if you train a
+language model on enough data it is able
+to solve NLP tasks that it has never
+seen just out of the box and we're gonna
+look into this very cool kind of
+formulation of the problem as you can
+see here the paper is 40 pages long
+without the appendix it needs its own
+table of contents which is crazy so
+we're going to skip a fair bit of things
+so first of all what is a language model
+for those of you don't know I've done a
+bunch of videos and you can see those in
+my natural language processing playlist
+about language models and specifically
+about transformer language models so a
+language model let's just take an
+example this sentence right here just
+the sentence as such like third humans
+do not require to do not require large
+supervised data sets to learn most
+language tasks right this is an English
+sentence and a language model would be a
+model that if you cross out a portion
+from the end here like this right here
+it would be able to tell you what comes
+next so in a language model you would
+input this part right here and it will
+tell you the next word is data sets so
+that's basically all the language model
+does and once you've trained one you can
+be
+basically generate word after word after
+word from it or you can ask it a
+question like which word is most likely
+to come next or more likely so a
+language model is nothing but a model
+that can kind of generate language in a
+probabilistic way and the cool thing
+about language models is that you can
+train it on any sort of text data and
+that's what they do here so they train a
+language model on giant amounts of data
+specifically right here they go into the
+data sets they use they use this let's
+skip down they use this common crawl
+data set which they filter down for
+quality and this is basically a crawl of
+the entire Internet if you will together
+with these books data sets and the web
+text data set and the Wikipedia data set
+so if they throw all of this text that
+they scrape from the internet together
+and then train a language model on that
+now the the the the language model right
+here is called GPT three and they train
+various sizes of it and we'll get into
+how it's built in a second but just
+compare this to a language model like
+Burt Burt required this much flops to
+Train and these this is a log scale so
+this is right here this is several
+orders of magnitude larger and bigger
+model and is trained for way longer on
+this text so naturally it is going to be
+a lot better at language modeling you
+can see right here the size of these
+models that they trained on remember the
+previous largest language model the
+Turing nlg of Microsoft had something
+like 17 billion parameters so it would
+be comparable to this right here whereas
+GPT 3 has 175 billion parameters which
+this is absolutely crazy is an order of
+magnitude higher than anything that ever
+existed and if you look at the last GPT
+the GPT
+to model that if you remember I've made
+a video about it is too dangerous to be
+released well now it has been released
+but was too dangerous to be released it
+clocked in at about 1.5 billion
+parameters so compared to this GPT three
+Excel model right here they trained
+these multiple models to basically
+estimate the effect of the model size
+and you can see here the largest model
+has ninety-six attention layers it each
+layer has 96 attention heads and each
+head is 128 dimensional and it trains on
+batches of size 3.2 million this is the
+batch size absolutely crazy so they
+train this on a giant distributed
+cluster that apparently is provided by
+Microsoft and yes crazy crazy things so
+how does this model look this model is a
+transformer model and right here we
+don't even have like a description of a
+transformer model let's just assume you
+know what that is I have made several
+videos on transformer models and
+especially things like attention is all
+you need or Burt or something like this
+but for those who don't know if I have a
+transformer model and I want to build a
+language model from it let's take this
+sentence right here
+I would input a what's called a context
+which is the thing I already have right
+I would input that into a transformer
+model and a transformer model is just
+several layers of attention mechanism
+now an attention mechanism is basically
+a way where information is routed in
+between the different tokens right here
+and as it goes up the layer basically
+the the information is routed around and
+the model can make various inferences
+and at the end the model is supposed to
+come up with the next word that you're
+going to put here specifically in this
+paper they use sub words like word piece
+tokens like it is common in NLP right
+now but essentially this is an auto
+regressive language model so it's not
+like Bert it's not by direction
+it is autoregressive it goes from left
+to right always produces the next word
+it is like GPT - they even say this they
+say we use the same model and
+architecture as GPT - they just have
+more layers and wider layers and more
+data to train it on so how do they train
+it
+okaythat's we already said they train it
+in simply in simply a language modeling
+way just next word prediction that's it
+okay it's so it's not even something
+fancy like Bert the interesting part is
+when you do the now the single tasks so
+what you usually did with something like
+Bert so with something like Bert you
+would do first pre train so there you
+would this is the language modeling
+right here this pre training phase where
+you teach Bert about the English
+language by just feeding it a lot of
+data and then second you had a step
+called fine tuning fine I can't even
+write tuning so on the second one you'd
+have something like the task you're
+actually interested in and let's say the
+task you're actually interested in is
+sentiment classification so in sentiment
+classification you have like a sentence
+like blah blah blah and you want to know
+is that a positive sentiment like is a
+happy sentence or is it a sad sentence
+and you would have a database of labeled
+instances of that so in this database
+you'd have a bunch of sentences and for
+each one you would know is it good is it
+is it positive or is it negative and
+then you'd have like a smaller test set
+right here and you would you would train
+you would basically take this pre
+trained model train it on this dataset
+in a supervised machine learning way and
+then test it on this test set right here
+this is called fine tuning that's what
+they display here so in fine tuning the
+model is trained via repeated gradient
+updates using a large corpus of example
+tasks
+right so the example task right here
+could be translating to French so in
+your training database of the
+translation task would be this would be
+C order is called Lu treadmill and in
+and and then you'd actually change your
+model you'd do a gradient update I mean
+if if you're in the NLP world this seems
+very natural but they are going to argue
+in a second that this isn't the only way
+that you can teach a model a task right
+so this this seems very natural right
+you don't change your model you take
+your pre trained model and you're going
+to fine-tune it on this task and if you
+have a different task right if you have
+now question answering tasks you're
+going to have a different data set right
+here with a train and test data set and
+you're going to take the pre trained
+model and then fine-tune it on that data
+set and evaluate it on that test set so
+this gives you basically with as many
+models as you have tasks Andy for each
+one you need a big big training data set
+in order to perform well sometimes we
+have this sometimes we don't what they
+are interested in is basically to take
+the pre trained model and directly go
+and evaluate it on the test data set in
+a sort of a zero shot fashion now it is
+not zero shot as they will argue so what
+are they doing in a true zero shot
+fashion you would just take your your
+language model that you pre trained and
+you just input the following text you
+input what they call a task description
+and a prompt so this is the input and
+you were simply asked the model as a
+language model to predict the next word
+it's just what comes here now what
+you're counting on is basically that in
+the training data the model has seen a
+structure like this enough to understand
+what's going on
+so that in the training data somewhere
+in the internet there was the structure
+of translate something to something and
+then there would be a word here of
+something and you know it kind of has to
+realize that this goes here like
+the next word so basically what you're
+asking it is if you were to find this
+text on a website or on Wikipedia or in
+any of the books data set if you were to
+find this piece of text what would be
+the next word in that piece of text and
+you kind of hope that this this is
+enough if you've trained a good language
+model that this is enough to to to
+actually produce the French translation
+here now before I realize I've said the
+language modeling is to teach the model
+the English language actually not true
+in this common crawl corpus you also
+have many foreign languages so you
+basically teach you the general model of
+the internet now they translate they
+contrast this to what they call one-shot
+learning so in one-shot learning you not
+only do you have the task description
+right here and this is this is a string
+right you don't specifically tell the
+model that this is now a translation
+task you simply input this as a string
+so not only do you have the task
+description and the prompt right here
+but you also have one example and the
+example and this is where they this is
+where they bring in the where they say
+it's not exactly zero shot where's my
+little drawing here so the example is
+going to come from the training data set
+of the task that you're interested in
+but the important part is you never
+train on it
+you never explicitly train on that
+example you simply put it in the context
+so you simply put this string so
+translate English to French newline C
+order lute is Lu to the mere newline
+cheese is what you simply input that
+string into the model as a language
+model and you ask it what's the next
+word right here okay so I hope I hope
+this is clear this is what they call
+kind of one-shot generalization and by
+one-shot they basically mean you simply
+provide this thing in the
+texts of the model as a language model
+now the the advantage here is
+immediately clear that you only have to
+train one model then and then basically
+at inference time you can just input the
+task description and the sort of
+training data for the task into its its
+evaluation context and the task itself
+and it will if if it is if it really
+does what they claim it does it would be
+able to sort of understand the prompt
+here understand what it means to
+translate from English to French it
+would look at this example and say oh
+that's what you want me to do okay and
+then it would be able to generalize to
+this input right here to say ah okay
+from the task description and the
+example I saw I get I get what you want
+me to do I will the next word here is
+cheese what's cheese in French I don't
+remember homage homage now the way the
+language model is going to interpret
+that is slightly different as we said
+before the way the language model is
+going to interpret is if you were to
+find the following text on a website
+somewhere the text is called translate
+English to French new line C order goes
+to Luton a new line cheese goes to what
+would be the next word on that website
+so that's what the model sees right you
+have to differentiate between what the
+human wants and what the model sees the
+model is just a language model that is
+going to take the next that it's just
+going to determine if I were to see this
+text somewhere what will be the most
+likely next word so you have to phrase
+your tasks in a way that makes sense in
+that thing and they also have this few
+short thing where you not only provide
+one context but you provide a bunch of
+context to basically tell the model more
+of what it what it should do now this
+doesn't only work in a free mode where
+you basically say what's the next word
+here what you can also do if you have
+such a language hold with the exact same
+model you can give it basically a
+a couple of possibilities so you can
+give it it's you can say like it's
+either shop or its format or its hotel I
+think that has like this so you can you
+can basically restrict it to only
+produce one of these three things
+so in translation it might not be you
+know the way to go but in if you have
+like yes/no answers questions you can
+restrict it to that so in a lot of these
+NLP tasks you have some options given
+for a given question and you can also
+restrict it so don't you know you always
+have to go with the task at hand but
+this is in essence what the model does
+and this is I think this is the new well
+not the new per se but this is one of
+the core ideas of this paper if you take
+anything from it there's no new
+architecture right here there's no new
+wisdom in training they train in a
+standard way in a standard language
+modeling fashion a standard transformer
+architecture this just happens to be
+ginormous okay this right here this
+thing where they say most of these
+things would fine tune and then
+basically end up with one model per task
+and you need a big data set per task but
+we simply can do this since we have such
+a large language model it is basically
+already basically already knows how to
+do this tasks as long as we formulate
+them in a language model way we can have
+the model perform these tasks and they
+will show that this works surprisingly
+well throughout this paper now we get
+into the experimental results right here
+and the experimental results first of
+all on language modeling as you can see
+here they basically say as you go up
+with the parameters you see the Moriya
+ones are the parameters you go into your
+validation loss goes down and down and
+down and down and I believe this is sort
+of a log scale as well so this is the
+log probability so the the perplexity
+and that the this basically follows a
+trend
+this is a log scale this this is a log
+scale it follows a trend where as you
+scale up the model and as you scale up
+the compute that the model gets and we
+know for these big language models we
+basically know you have to scale up
+model size compute time and dataset size
+in the same fashion for them to make
+these gains but if you do that it
+follows like a a power law where as you
+scale up these things the model
+basically gets better and better and
+better and the question of course is you
+know how far how far can we go with this
+but for now it seems to hold quite well
+that you can just make improvements by
+scaling up your model on language
+modeling at least so where do we where
+do we basically go from here so before
+we dive into the actual results of the
+individual task so now they're going to
+formulate these individual tasks so they
+have like pure language modeling tasks
+right here like Alice was friends with
+Bob Alice went to visit her friend and
+then it's like what's the next word okay
+it's Bob and George bought some baseball
+equipment a ball a glove and a what's
+the next word and I guess this should be
+hat that's re bat right here but we're
+going to go into the into the tasks and
+one of them is for example question
+answering
+so in question answering you simply get
+either you get just a pure question or a
+context and a question and they do the
+fact that they test where a situation
+where you just get the question so you
+just get I don't know who is the Queen
+of England or something like this and
+the model is simply to produce either
+the results direct or to choose from a
+bunch of answers which one is the most
+likely as a language model and as you
+can see as you scale up the language
+model the zero shot one shot and few
+shot predictions so in few shot you give
+64 different examples from the training
+set in the context so you always have so
+your context is going to look something
+like this and they have examples at the
+bottom and I haven't looked at the QA
+task but the the example is going to be
+something like this you have a task
+description like answer the following
+questions answer the question and then
+you have your example so in zero shot
+that's zero and one shot it's one that's
+what I like and then you say how tall
+who sorry who I don't know who climbed
+Everest the first the rest the first and
+then you say Hillary I think it was
+Hillary no I don't remember and then you
+say I don't know how how tall is the
+Empire State Building and then you have
+like some number here and at the end you
+say what was was it was a question from
+before I don't know who is the queen of
+England yeah who is the queen of England
+and then you ask the model to predict
+the next word right here okay and you do
+this in a closed book setting which
+means you have no access to Wikipedia or
+whatever like usually these systems they
+can go and query Wikipedia but this
+system doesn't so you just you just want
+to know what has the model learned about
+the world by simply absorbing giant
+amounts of text so if somewhere in the
+training data the fact that the Queen of
+England is Elizabeth the second is
+present it should complete this right
+here and it performs surprisingly well
+as you can see here so it manages to
+outperform a fine-tuned state-of-the-art
+model that is that is fine-tuned on
+question answering right this has it has
+been built for question answering and
+this model outperforms it by simply
+having a lot of of language so this here
+is the results on on these open domain
+QA tasks and you you see right here
+it ad this this few shot it outperforms
+this open domain that open domain means
+that the model can go and look at some
+Wikipedia page and yeah so so this is
+pretty cool but there are other things
+like the natural questions where it
+under performs compared to this open
+domain thing and they say this is mainly
+due to the natural questions being like
+it's very much about factual Wikipedia
+knowledge and so on maybe like the
+question we just made maybe is more of a
+natural question type of thing and since
+and the model is apparently not as good
+at that but it's still impressive that
+the model is able to do this out of the
+box okay so before I said something like
+before we go into the experiments I want
+the following so I have like some sort
+of hypothesis it's not it's an it's not
+an uncommon hypothesis that basically
+these things these giant language models
+right they they're just these
+transformers layer after layer after
+layer with their connections in here
+what I think is happening is they are
+simply storing the training data right
+they're simply storing the training data
+in these connections right here
+so usually you think of storing the
+training data in some form of maybe we
+have like some module right here some
+database module in the neural network
+and it learns to query the module but
+ultimately if you train a neural network
+what you have is data and you train a
+function with parameters on that data
+and ultimately what you're doing is
+you're distilling the data into these
+parameters and you you kind of hope to
+learn some regularities from it but
+ultimately the information about your
+training data influences or determines
+your final parameters of your function
+now I can imagine that if you have
+such a giant neural network with so many
+weights like 17
+sorry 170 billion weights that you can
+pretty efficiently actually store the
+training data in that model and when you
+ask this model now to do something what
+it basically does is what these people
+sort of argue is that it has learned
+these language tasks has learned to
+reason over language and so on what I
+think is happening much more is it will
+simply go to the training data since it
+has stored the entire training data in
+its weights and it will sort of pull out
+the five to ten 250 training examples
+that are most relevant to what you put
+in and it was sort of intercalate right
+it could go to the training data and it
+will pull out a bunch of training
+samples that are relevant to the context
+you put in right now and then it will
+sort of integrate those into the next
+word that's going to come out right here
+and I think if you look at this paper in
+terms of this so you always write you
+input a context and the context is split
+into a task description and then it is
+split into K different examples and then
+it is it is it has a prompt sorry the
+series is the prompt so the task
+description is please translate from
+English to French and the K different
+things are K different translations and
+then the prompt is you know what what
+you should do so it's like half of AK a
+half of one of these boxes right here so
+these boxes are have blah blah blah
+turns to blah blah blah and then the
+prompt is simply without the deal at the
+right side I think what it does is it
+will simply take all of this and it will
+go to its own training data which it has
+stored in its weights and it will filter
+the training data and basically take out
+the the things that sort of pattern
+match sort of greg x match in a fuzzy
+way to this context and then it will
+kind of interpolate these training
+examples in order to come up with the
+answer I don't think there
+his reasoning happening here and I'm
+we're going to if you go through the
+paper with this view then you can a lot
+of things actually make sense and I
+actually I think that we need we need
+what we need when think people think of
+like explainable machine learning they
+often think that if I'm going to input
+something like I'm going to input an
+image into a classifier da da da da and
+it comes out a certain class car I like
+the explained ability should be a which
+part of this image was it the wheels was
+it the the hood which part of the image
+which part of the input image is
+responsible for making that
+determination what I think in especially
+in these language models what we should
+do is if the model predicts something
+right here the next word I think we
+should somehow have a method of
+determining which of the training
+examples that the model used to
+interpolate given this context because
+I'm pretty sure these training is you
+will find so if you'll find that for
+example this weight and this weight and
+this weight was very responsible for
+making this prediction happen I'm pretty
+sure you can somehow during training
+build an index of which of the which
+five training examples had most
+influence on that particular weight or
+on this combination of weights and then
+you can sort of go backwards and say you
+made this decision right here model
+please tell me which of the training
+data samples were responsible for making
+that decision actually pretty sure that
+already exists like I'm never the first
+one to think of these things though if I
+am site may like the channel now but
+just an interesting way to think about
+this model and an interesting way to
+think about kind of what does what would
+explain ability even mean in a model
+like this and my argument is since it
+interpolates the training data the
+interpretability should come from the
+fact of which training samples does it
+interpolate okay let's go to Tran
+halation so in translation as we said
+they simply input the like the task and
+then the few examples and then and then
+at the output okay and you can see right
+here what you can see is that again as
+the model goes up in parameters the
+performance generally increases and also
+you can see that the performance is
+pretty good every time that this model
+goes to English so it goes if it if the
+target language is English which sort of
+makes sense because like a large part of
+the corpus they trained on is English so
+being an English language model it
+should be pretty good if it is asked to
+produce English and it's not as good if
+it is asked to go into a different
+direction now what you also see is that
+it is not really a difference whether
+you translate from from which language
+you translate but if you go to English
+but it very much matters to which
+language you go if it is from English so
+this sort of makes sense in that it is
+just trained on a lot of English data
+and right here sometimes they are on par
+with the with the state-of-the-art
+supervised methods and also other times
+they outperform these methods right here
+and these methods are unsupervised but
+are specifically so they don't have a
+supervised training data set that goes
+let's say from English to French but
+they are built with this in mind that
+they need to translate later so they are
+sort of task specific but don't have a
+supervised training set and this model
+right here it just learns whatever it
+learns and it it just it just does it
+just does this this language model
+learning and at the end just because it
+has seen some websites where language of
+both things appear it can now translate
+reasonably well okay now
+yeah so the results here are a bit noisy
+but it is still interesting to see that
+it sometimes even gets close to the
+supervised thing though they say that
+they are not familiar with the
+literature and are not sure that these
+model that these numbers are you know
+good okay okay the next thing is these
+um Winograd schemes where you do have
+where is the text here is a classic NLP
+task that involves determining which
+word a pronoun refers to when the
+pronoun is grammatically ambiguous but
+semantically unambiguous to a human so
+these are sort of human produced
+sentences where it's kind of program
+could refer to multiple things
+I don't have a example present but where
+do we have the right here you can see
+that this model will out produce a
+fine-tuned Bert large but will not out
+produce a fine-tuned roberta large so it
+is going to it is going to come it is
+competing at least with the fine-tuned
+models that were made specifically for
+that task right again this is pretty
+pretty interesting and you also see that
+the larger models here it starts to make
+a difference whether or not you give it
+one zero or one or more examples okay so
+we'll get into we'll get into the more
+interesting things right here in this
+thing right here where is it yes this is
+the kind of a physical physical question
+physical QA where it is a bit of common
+sense reasoning so you're asked to I
+don't
+yeah these are like science questions
+multiple choice questions collected from
+a third to ninth grade exams and the
+physical QA is physical QA asks
+common-sense question about how the
+physical word work world works and is
+intended as a probe of grounded
+understanding of the world
+so it has questions as I understand it
+it has questions like if a drop a ball
+will it fall on the ground or where will
+it fall or something like this and they
+say that they can outperform a
+fine-tuned state-of-the-art model on
+this if they go just high enough and you
+can also see that there isn't much of a
+difference between zero one and few
+short the methods of this model right
+here
+even those zero shot is even higher than
+one shot so this is probably just noise
+but then you find out that they have an
+asterisks here and this means that this
+this is potentially a contaminated data
+set so they have potential contamination
+issues so what they found was there was
+a significant overlap between the data
+set this data set and their training
+data set and they even they only
+realized this too late because there was
+a bug in their deduplication code and
+then they couldn't change it anymore
+like I because this model is so large
+that they couldn't restart the training
+because they've already spent like so
+much money and energy on it and this is
+crazy I think these language models are
+getting so large that we should building
+them
+we should more think of it like we built
+the the International Space Station or
+something like this where it's a project
+where humanity sort of collaborates or
+there's a big effort and you build it
+once and whatever you have you have
+right so these these good numbers here
+are simply or not simply or
+because or could be influenced by this
+contamination and I think that's what's
+happening right here even though they
+will make the case that this
+contamination isn't really an issue I
+can probably show you that it may be it
+may be actually is an issue because on
+the other data sets at the the
+fine-tuned state-of-the-art model
+outperform the GPT three quite a bit so
+and also the the fact that the you know
+if you provide a demonstration or many
+demonstrations it doesn't actually
+change that much it kind of tells me
+that the model sort of already knows
+what the answer is and doesn't really
+need demonstrations because it doesn't
+help if you have the training data
+stored or the the test data you don't
+really have to get demonstrations right
+so they have a few other a few other
+things right here we're on this cocoa
+tasks they perform pretty poorly
+compared to others or poorly let's say
+they perform well but not particularly
+more well than a state of the art and
+they perform especially poorly on the
+reading comprehension sorry that's the
+that's the cocoa so in reading
+comprehension what you have to do is
+abstractive multiple choice and span
+based answer formats in both dialogue
+and single question settings so
+basically if you read a piece of text
+like this and then answer a question
+about the piece of text now this is
+something where I think you cannot
+really interpolate the training data
+super well and therefore so you can't
+really just pattern match and interpret
+because you have to do actual reasoning
+and I think that's why the model
+performs poorly here they do measure
+this on on super glue which is a NLP
+benchmark and
+also here you can see it doesn't
+outperform a fine-tuned state-of-the-art
+model on these tasks but it does
+outperform a fine-tuned berthed model
+slightly the word model is fine-tuned on
+these things whereas gt3 isn't but
+notice the tasks in which it does well
+and in which it doesn't do well compared
+to the state-of-the-art model so for
+example in the book you it doesn't do
+particularly well right the state of
+your is 91 it only has 76 that's quite a
+large difference and actually have the
+glue benchmark open here and you can see
+this is the bull queue so an example
+here would be is France the same time
+zone as the UK and then there is like a
+passage and you need to reason about
+from this passage about whether or not
+this answer is true or false
+okay this this is very much not language
+modeling this is reasoning and that's
+why the model is doing poorly here
+whereas in another thing you see these
+for example is Coppa right here the
+model is doing almost as good as a
+fine-tuned state of the art and I have
+to stress this model has never actually
+learned this task in a supervised duay
+it's simply a language model and I have
+this COPO task right here and these are
+the examples so one example is the
+premise the man broke his toe what was
+the cause of this and you have two
+different things that it could be either
+he got a hole in his sock or he dropped
+a hammer on his foot and the way you
+phrase it in this model is he would give
+the premise as the context and then you
+simply ask the model since it's a
+language model which of these two things
+is more probable to come and of course
+it is going to select the thing that can
+have happened more often in the training
+data and you know broke his toe the
+cause of breaking his toe that is the
+hammer this is entirely conceivable that
+a language
+would know this and with enough training
+data could sort of pull from the
+training data examples where hammer on
+foot and broke toe appear a bunch of
+times and hole in sock would be rather
+unrelated so as long as these questions
+are not to adversarial constructed
+specifically that a language model can't
+solve them there the model is going to
+perform pretty well right here right so
+it's very interesting to see that if you
+view this as interpolating the training
+data it's only makes sense where it's
+good and where it isn't good so this was
+the super glue and and nli it is
+performing particularly poorly on nli
+which is the ability to understand the
+relationship between two sentences right
+so where the model classifies whether
+the second sentence logically follows
+from the first contradicts the first or
+is possibly true neutral okay so this is
+the reasoning part of this model is not
+given
+it is simply recalling the training data
+and doing language modeling now they say
+oh we can test this we can test this
+with synthetic and qualitative tasks so
+they invent some own task sinks you know
+now it's pretty easy since you don't
+have to fine-tune the model you don't
+have to turn to generate an actual
+training set for it tasks so you can
+focus on generating a test set and and
+you know that's what they do so they do
+something like arithmetic so they say
+okay can we come up with a bunch of
+arithmetic tasks for example two digit
+digit addition so what the model would
+see would that this is an example and
+what the model would see is simply this
+as a context right here for the prompt
+and if you give it examples so if this
+is like one-shot learning you would
+input add the following numbers
+the following numbers as a string right
+then a new line and then you would give
+it one example like what is 11 plus 12
+and with the answer together with the
+answer answer is I don't know 23 and
+then you the prompt goes here so what is
+48 plus 76 and then you ask what is the
+next word right here what is the next
+string tok and the comes here now the
+the inference here is that if the model
+manages to do this it can't simply
+because these are all strings the model
+basically has no clue how to do math
+these are numbers to the model these are
+just tokens or strings and the inference
+is if the model can do this it must have
+learned you know some kind of reasoning
+ability it must have learned to like
+perform some logic inside so they go
+into two-digit addition three digit
+addition four digit addition five digit
+addition and even multiplication and
+subtraction and the results are right
+here so as you can see the lower
+parameter models they perform pretty
+poorly but as you go up the parameters
+the big model is performing really well
+in the two-digit range is performing
+also really well so accuracy of look
+that accuracy 8090 percent in three
+digit addition and subtraction but then
+if as soon as you get into the four
+digit or the two digit multiplication
+and so on the performance drops now they
+say that's because multiplication is
+harder and if you know it is logically
+very computationally you know but the
+two digit addition and so on model has
+learned something about the world I
+disagree because so here's the because
+what you will do is you will simply and
+this you simply recall the training data
+so look at the two digit addition with
+zero shot you already get seventies
+% but with one shot you get 99% and with
+few shot you get a hundred percent so if
+you interpret this model is simply
+filtering the training data to pattern
+match then it makes a lot of sense that
+the one shot would like the examples
+here will give you a much improvement
+because if you have a bunch of examples
+where please add right at and then oh I
+erased our example again so you have
+like 48 plus 72 equals blah blah blah
+you have these of this if you give more
+and more example all of a sudden this
+looks like a table and they say we made
+sure that the strings here these
+particular strings were not in our
+training data right so these strings
+never appeared but I just have an issue
+with this deduplication stuff because
+what can appear actually is not the what
+can appear is a table and in table often
+you have columns and then another column
+will be the some of these columns on the
+left and if you are asked to pattern
+match you'll naturally find websites
+right if you have a few of these
+examples you'll find websites where the
+columns exactly refer to these things
+and then you'll find the sum here and if
+you filter for websites that appear to
+match your scheme in the examples you
+will find all the website with a table
+on them where the the column 1 column is
+an addition of the others and I can
+actually do that so I went and I typed
+in just a bunch of these things so 98
+plus 45 is 143 18 plus 55 is 70 I
+believe at least and I can find now
+Google makes it hard because they
+localize and everything but you can
+still find what you're going to find our
+tables and tables and tables and tables
+and now I actually went to dr. go to
+basically say
+you know they they don't you know really
+personalize it to me and what's the
+first thing I find when I type in just
+these numbers is math skip counting
+missing sequence number and a website
+where basically the answers are already
+given look at that so all the model has
+to do is recall this particular training
+example from the samples it already has
+right and it will it will basically be
+able in quotes to perform addition like
+this is financial data and another one
+where you have to subtract stuff right
+so I'm pretty sure all the model is
+doing here is interpolating the training
+data and that's also why it performs
+worse if if you up the digits because
+longer digit numbers are simply less
+frequent in the in in the training data
+multiplication is first of all less
+frequent and second of all it also
+results in larger numbers which are less
+frequent right so it explains a lot so I
+yeah I have my issues with people saying
+yeah this this shows some reasoning I
+don't think it does the same thing here
+with word scramble so in word scramble
+they have different things you see okay
+they they they look whether or not only
+17 matches 0.8% of the math things are
+in their training data is like no you
+haven't searched well enough and the
+rest of their deduplication by the way
+is also pretty weak I would say because
+they just look for like 13 gram overlaps
+between the training data and the inde
+and their their test data so they have
+these words scrambling tasks where they
+basically scramble words and they asked
+the model to unscramble it for example
+this word is inevitably scrambled so
+they always you know they give like
+anagrams and they give random insertion
+into the world like this word right here
+or they reverse the word
+and they say so this I think this is the
+thing at the very beginning but if you
+can see right here also as the model
+goes up then this this improves and they
+also say well this means maybe some kind
+of reasoning but I think this is just
+it's learning the language and it's
+learning that you know the the words in
+in sorry that the letters make up a word
+and the letters correspond to word
+pieces Laura are associated with word
+pieces and it always learns to English a
+good tasks to check this would actually
+be to scramble words so if you
+unscramble words you always end up with
+an English word
+so all it has to do is basically check
+which word has the highest overlap in
+word pieces but you could do something
+like please scramble this word and then
+always count it correctly when any of
+the scrambling of the words so instead
+of going from this to this which you can
+simply solve by knowing the English
+language but you would have basically no
+clue what the task is that you don't
+have to understand that as a model you
+could ask it to go from this to this
+given a few examples right then it would
+really need to understand what the task
+is that it's supposed to actually
+scramble a word and would would need to
+learn that from its context given
+examples but they as far as I see they
+don't do that and again I think it's
+recalling the the training data the this
+is Sat analogies so the SAT or this test
+that in the US high schoolers take to
+get into college and the this if they
+say a typical example this is dying on
+me now it scrolled okay a typical
+example is the following this I find I
+find pretty hilarious audacious is to
+boldness as sanctimonious is to
+hypocrisy anonymous is to identity
+remorseful still missed
+deleterious is to result or
+impressionable is to temptation this is
+a as as a okay I'm not a native speaker
+but this is a hard question right and
+you have to you know see that these
+these high-schoolers they're stressed
+like this is very much a time-based test
+so you need to make a decision quickly
+well the model of course is basically
+able to sift through its entire training
+data in the time it takes to GPUs to
+perform inference but it's still funny
+that gt3 achieves fifty sixty five
+percent in the few shots setting and
+fifty-nine percent in one shot setting
+fifty three percent is zero short
+setting whereas the average score among
+college applicants was fifty seven
+percent so it outperforms the average
+college applicant it's pretty funny but
+you would expect the language model to
+have a pretty good grasp of these kind
+of synonyms and relations between words
+because these are just absolutely
+statistical associations between words
+so yeah this I found this to be pretty
+pretty funny and the last thing and this
+is what everyone's freaking out over is
+this news article generation where
+basically they give it the beginning of
+a few of a news article and then they
+let humans decide whether or not the
+news article is written by a machine or
+by a human and they say here by contrast
+mean human accuracy at detecting
+articles that were produced by the one
+hundred seventy five billion parameter
+model it was barely above chance at
+fifty two percent human abilities to
+detect model generated text appear to
+decrease as model size increases there
+appears to be a trend towards chance
+accuracy with model size and human
+detection of g PT three is close to
+chance okay
+so what they do is they give indeed they
+have some examples right here
+they give the model the following input
+the title the subtitle of an article and
+then this word article the model is
+supposed to complete
+the rest of the article right here and
+you can also you know give do this in a
+few shots setting such that the model
+basically knows that it's if you give it
+a few a few examples the model knows it
+is supposed to produce a news article
+right okay so there are two two ways
+that you can think of this first way the
+model has learned the language so well
+and it writes code it has learned to
+write coherent language and so on is
+learn to reason keep context and blah
+blah blah okay
+second way the model sees this thing
+right here it sees the few you know K
+few shot examples that it has before in
+the context it will take them filter the
+training data to in this case it just
+sees news articles so do just news
+articles it will take this thing filter
+the training data even more to just the
+news articles that pertain largely to
+topics or words that appear in here and
+then lastly will interpolate the few
+training examples to produce this thing
+now they argue that this isn't really
+possible because they have actually
+checked that this news article is not in
+the training data but I have simply gone
+and taken a you I've really taken a
+random substring here I've taken this
+substring voted to strengthen a ban on
+the ordination of just this substring
+and I've put it into Google and Bob Reba
+I find a book with voted to strengthen
+prohibitions to ban LGBTQ people from
+being ordained and ministers so it's you
+know I find this it's not the same
+article but it's talking about the same
+incident the article talks about and it
+is using the same language probably read
+the article and the author is like I
+can't really you know copy paste that
+would be you know not really cool so
+I'll just kind of you know write it in
+my own words but largely the same thing
+The Associated Press here also a
+different article you know see
+title than this one right here but about
+the same thing and also with the same
+language right here voted Tuesday to
+strengthen the faiths divisive bans on
+same-sex marriage and ordination of LGBT
+clergy and generally so the argument
+this article wasn't in the training data
+is just not really something I buy in
+this in this case so I think it the
+article as such wasn't there but many
+articles about this topics were and I
+think this will just interpolate these
+now they say this was the hardest
+article for the humans to decide and
+this here was the easiest so it's it
+says I don't know star talks promise
+draws Megyn Kelly's sarcasm and says a
+year ago joke in Phoenix made headlines
+when he appeared on the red carpet at
+Golden Globes wearing a tuxedo with a
+paper bag over his head that read I'm a
+shapeshifter above you you would guess
+that joke in Phoenix would do something
+like this but they say they're human
+raiders were US based right and you see
+right here it says men Kelly was not
+impressed and she let him have it on The
+Tonight Show
+another Tonight Show is not when megyn
+kelly is and us-based people would I
+guess know something like this and would
+immediately feel like this is wrong so I
+think this thing is interpolated from is
+interpolated from a bunch of different
+news articles about this and the
+interpolation just let it like made it
+teach that this person is on this show
+which that they aren't and the humans
+noticed right well it doesn't change the
+fact that it probably just went to the
+training data filtered a bunch of
+articles about these words and then
+interpolated like mash them together it
+is a good language model right it can
+grammar it's very good at grammar so we
+can interpolate different passages of
+text and I feel that the the really
+really useful application of this will
+be sort of as a search engine as a fuzzy
+search engine so now
+can like input for example my my machine
+learning research ideas and what will
+output will be sort of an abstract of a
+paper that is kind of a merge together
+of other papers on the same thing and
+that that you know you can think of many
+applications I don't think we have built
+something really intelligent here and
+what this is this is though is pretty
+cool
+they they give examples like this here
+where they make up a world and then ask
+the model to use the word in a sentence
+so to skree is something sorry to
+screech something is to swing a sword at
+it an example of a sentence that uses
+the word scree is and of course the
+model what's the models going to do is
+it's going to take this it's going to
+filter the training data for all of the
+instances we're sort of this
+construction appears like an example of
+using the word which is mostly so
+dictionaries then it's going to not know
+that word but it can interpolate from
+interpolate it from all this data right
+here and the cool thing is it actually
+conjugates the where we screed at each
+other for several minutes and then we
+went outside and ate ice cream so you
+can see how this comes to be but I think
+it would really be fun to have a model
+that tells us which training data
+samples were used here it can also
+correct English grammar which is pretty
+obvious though again it can never
+correct so the the input always here is
+poor English good English poor English
+good image poor good poor English and
+then good English and that's what the
+model is asked to to output and I'm
+actually not sure pretty sure this here
+shouldn't be bold I'm fairly sure this
+shouldn't be bold this is given to the
+model the model is only asked to produce
+this otherwise I'd be I'd be actually
+impressed but yes
+nothing task-specific is provided aside
+from the examples from few example as
+conditioning and
+poor English input good English output
+framing so the good English output thing
+here should not be in boldface authors
+if you're listening this should not be
+bold thank you okay but again it is
+always as you can see it's too good
+English it's always the target is good
+English whereas if the model really
+understood the task it should also be
+able to do the inverse it should be able
+to to produce something poor from
+something good because then you
+eliminate the fact that it's just a good
+English language model right because it
+can basically produce something like
+this without having a clue what the task
+is it will simply you condition on this
+input and it will simply output this
+sentence because it's very likely
+because it's already here almost here
+and it will output it in better English
+because it's a good language model right
+it's it's a good English language model
+so yeah that so they measure this
+overfitting the degree to which they're
+training to which their test data is in
+this common crawl thing and they say
+they have a conservative bound on how
+many percent of the data in the data set
+are clean and as you can see here they
+measure then how much the performance
+differs to - up or down if you only
+evaluate on the clean portion of this
+data set but again their deduplication
+is so weak they do like Engram
+deduplication whereas I think you should
+really like in the news articles you
+should really do much more fuzzy
+deduplication much more of a meaning
+deduplication if you then want to argue
+that the model has learned to reason
+like if you simply want to argue that
+the model is a good language model fine
+right but yeah and also look at this
+like I would expect of a dataset a test
+dataset if you know if you have like a
+natural questions dataset it is
+constructed from Wikipedia pages and you
+have the Wikipedia page in there you can
+either either the entire thing is clean
+or none of it is clean and also these
+Winograd dataset if this dataset somehow
+leaked into the common crawl corpus
+either the entire thing is clean or none
+of it is clean I just have kind of
+problems with the fact that there are so
+many in-between things right here and
+yeah so I'm not I'm not convinced here
+that this deduplication I still think
+it's a cool thing but I don't I think
+it's mostly a training data filter and
+interpolator rather than actual
+reasoning and they go through some of
+the limitations here and the broader in
+this broader impact statements like five
+pages long and yeah okay you can do you
+can you know bad people take the model
+to do bad things okay and that's pretty
+much it so what I appreciate here is at
+the bottom they have basically all the
+results but also a lot of tasks
+descriptions like how they framed each
+tasks or outputs and they gave more
+outputs on their website rightly so you
+can see here how each of the tasks was
+framed where you always have this is
+what this here is what the model sees
+and then this is what it's asked to
+produce right so you have this for for
+all many of these things and so on squad
+you have this context and the question
+okay so the the context is actually in
+there I've didn't know that but you have
+the context and the question and the
+model is asked to complete something
+right here so you can look at how the
+model sees tasks and maybe you can
+evaluate for yourself how you think how
+difficult you think these tasks or
+alright I hope this was informative it
+is a long paper therefore it is a long
+video if you're still here and haven't
+subscribed yet maybe if you like this if
+you want more de leave it a like tell me
+in the comments what you think of it
+whether you think it's actually
+IGI or not and I'll see you next time
+bye-bye

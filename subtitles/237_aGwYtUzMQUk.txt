@@ -1,0 +1,120 @@
+I want to start off with talking to you about 
+three things that keep me up at night, right? 
+ 
+Three things: the first, and it may be, you 
+know, very common for you too, is climate change.  
+Climate change absolutely keeps me up at night. The second thing that keeps me up at night  
+is that people may have no idea that an artificial intelligence is making a decision that directly  
+impacts their lives - what percentage interest 
+rate you get on your loan, whether you get that  
+job that you applied for, whether your kid gets 
+into that college that they really want to go to. 
+Today AI is making decisions 
+that directly impact you.
+The third thing that keeps me up at night 
+is: even when people know that an AI  
+is making a decision about them, they may assume 
+that because it's not a fallible human with bias,  
+that somehow the AI is going to make a decision that's morally or ethically squeaky clean,  
+and that could not be farther from the truth. 
+ 
+So, if you think about organizations 
+and what happens over 80% of the time  
+proof of concepts associated with artificial 
+intelligence actually gets stalled in testing  
+and more often than not it is because people do not trust the results from that AI model.
+So, we're going to talk a lot about trust,  
+and when thinking about trust (I’m going to 
+switch colors here) there's actually five pillars.
+OK, when you're thinking about what does it 
+take to earn trust in an artificial intelligence  
+that's being made by your organization or being procured by your organization: five pillars. 
+ 
+The first thing to be thinking about 
+is fairness. How can you ensure  
+that the AI model is fair towards everybody in particular historically underrepresented groups. 
+ 
+OK, the second is explainable is your AI model explainable such that you'd be able to tell  
+somebody, an end user, what data sets were being 
+used in order to curate that model, what methods,  
+what expertise was the data lineage in provenance 
+associated with, how that model was trained. 
+ 
+The third: robustness. Can you assure end users 
+that nobody can hack such an AI model such that  
+a person could disadvantage 
+willfully other people and or  
+make the results of that model benefit 
+one particular person over another?
+ 
+The fourth is transparency. Are you telling 
+people, right off the bat, that the AI model  
+is indeed being used to make 
+that decision and are you giving  
+people access to a fact sheet or metadata so 
+that they can learn more about that model? 
+	
+ 
+And the fifth one is: are you 
+assuring people's data privacy? 
+So, those are the five pillars. OK, now 
+IBM has come up with three principles  
+when thinking about AI in an organization. The first being that the purpose of artificial  
+intelligence is really meant to be to augment 
+human intelligence not to replace it.
+ 
+The second is that data and the insights from 
+those data belong to the creator alone
+	
+ 
+OK, and the third is that AI systems, and I would 
+opine the entire AI life cycle, really should be  
+transparent and explainable, right? 
+ 
+So, so, those are the five pillars.  
+Now, the next thing I want you to remember as 
+you're thinking about this space of earning  
+trust and artificial intelligence is that this is 
+not a technological challenge. It can't be solved  
+with just throwing tools and tech over some kind 
+of fence. This is a socio-technological challenge.  
+"Social" meaning people, people, people. 
+Socio-technological challenges because  
+it's a socio-technological challenge it 
+must be addressed holistically, okay? 
+ 
+"Holistically" meaning there's three major things 
+that you should think about. I mentioned people,  
+people the culture of your organization, right? 
+Thinking about the diversity of your teams,  
+you know, your data science team. Who is curating 
+that data to train that model? How many women are  
+on that team? How many minorities are on that 
+team, right? Think about diversity. I don't  
+know if you've ever heard of the the "wisdom of 
+crowds". That's actually a proven mathematical  
+theory: the more diverse your group of people, 
+the less chance for error, and that is absolutely  
+true in the realm of artificial intelligence. 
+ 
+The second thing is process or governance, right? 
+What is it that use your organization 
+what are you going to promise your  
+both your employees as well as the market with 
+respect to what standards you're going to stand by  
+for your AI model in terms of things like fairness 
+and explainability accountability, etc., right?
+ 
+And the third area is tooling, right? What are 
+the tools, AI engineering methods, frameworks  
+that you can use in order to ensure these 
+things, ensure those five pillars, and we're  
+gonna do a deep dive into that as well, but the 
+next show that I’m going to be running with you  
+we're actually going to be talking about this 
+one. About people and culture. So, stay tuned. 
+ 
+If you like this video and series, please 
+comment below stay tuned for more videos  
+that are part of this series and to 
+get updates please like and subscribe.

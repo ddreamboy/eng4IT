@@ -1,0 +1,251 @@
+what's going on guys John elder here for
+Kota me.com and in this video I want to
+talk about modules with Python
+or in the last video we looked at
+functions in this video I want to look
+at modules but before we get started if
+you like this video I want to see more
+like it be sure to smash the like button
+below subscribe to the channel and check
+out coda me calm or I've dozens of
+courses with hundreds of videos that
+teach you to code use coupon code
+youtube to get $22 off membership that's
+all my courses videos and books for a
+one-time fee just $27 which is insanely
+cheap ok modules now this is sort of a
+basic concept but it can also be more
+advanced and we've been using modules
+throughout this whole series you didn't
+even realize it probably at the very
+beginning we added this OS module we
+imported it and then we use it to clear
+the screen so that's a module that's how
+you use them or they're very easy in
+this video I want to go in a little bit
+deeper and show you how to create your
+own modules and how to use those some of
+the things you can do and I also want to
+look at some of the built-in modules
+that come with Python so let's go ahead
+and do that first real quick you just
+pull up a web browser and type in I
+don't know Python 3 module index you get
+this right over the top it's this is the
+Python documentation it's the Python
+module index for Python 3 point seven
+point three if it's a different version
+number by the time you watch this video
+python is always updating and stuff so
+it's no big deal whatever it is just
+take a look at the the latest one and
+here we have this my module index and
+this just lists all the modules that
+come with Python and you can I mean that
+means you can use them without
+installing them like we did let's see
+earlier here we just referenced them at
+the top we imported it and we can use it
+so let's take a quick look at some of
+these if you scroll down here for
+instance if we go down to o we can see
+here's that OS one that we've been using
+and what have we been doing with it
+we've just been using OS dot system so
+if I want to copy this and just search
+for that I can see boom right here is OS
+dot system if we click on it we can read
+all about it what it does and all the
+good stuff and you can see there's a lot
+of stuff on this page right some of
+these have a lot of information a lot of
+things they can do some of them are very
+shorten and small and there's not a
+whole lot there to learn but they're all
+kind of cool and I really recommend that
+you sort of just spend some time going
+through here and just looking just
+seeing first off just kind of browse
+through and see if anything grabs your
+eye it's something you're interested in
+if you need to use a calendar well
+there's a calendar module maybe you want
+to read about it you know let's see we
+just kinda I'm just eyeballing this
+there's a JSON if you're gonna be using
+JSON JavaScript object notation just
+mailbox
+Pikul I've no idea what that is if you
+want to use random numbers there's the
+random module does all kinds of stuff
+that helps you create random numbers
+very cool
+secrets for generating more secure
+random numbers for SSH keys and things
+like that I think SMTP this is an email
+server I'll learn how to use that
+statistics stat if you're into math
+stuff very cool check out the statistics
+and you see this statistics has mean
+median I can get standard deviation and
+variance very easily very very cool and
+we already know how to use all of these
+things you know to use for instance
+statistics you just would come over to
+your thing here and you would go import
+statistics right and that's it now you
+can start using it as per the
+instructions on that screen so very
+powerful stuff and very easy to use so
+spend some time going through there read
+through some of them and I recommend you
+really find something that you're
+interested in there and learn all about
+it
+everything there is if you're interested
+in random numbers learn everything you
+can on that page about random numbers
+and start playing with it and that's you
+know how we learn these things and very
+very cool so those are the built in
+modules like I said we can create our
+own modules and it's actually really
+really easy so I'm gonna just come up
+here and create a new file
+and let's create that name er we do a
+namer what do we call it name it I will
+do a name or create a name or module and
+right off the bat I'm going to save this
+as and we want to save this in the same
+directory where our other file is we're
+in this Python stuff directory and I'm
+just going to call this name er dot PI
+make sure this is Python
+okay
+looks like it did not get saved as
+Python let's try it again file save as
+delete this one name or dot I just type
+it in alright there we go the colors
+changed and now I know we did return
+before but I'm just gonna print out
+hello their name and of course we need
+to pass in name alright so I'm just
+gonna save this now this is just a
+Python script we've just created right
+just a regular Python file and it has
+this function the name or function and
+you know what I'm gonna change this to
+name it
+yeah name it
+damnit I don't know save this now to use
+this we can import this just like we've
+imported everything all our other
+modules import and we call namer the
+name of the file right now we can call
+from namer dot name it
+then we can pass in John alright so from
+namer which is the name of the file name
+or dot pi we want to reference the name
+it function just this right here and you
+notice we've just put a period a dot
+this is a very object-oriented type of
+thing to do that you can do with Python
+when you want to use something inside of
+something else you just dot and then put
+the name of the thing so if we save this
+come back over to our command line and
+run this it says hello there John and we
+could you know change this to Bob save
+it run it again hello there Bob now
+that's one way to do it and that's
+definitely a way to do it but this can
+get a little confusing from namer
+name it we can actually change this
+around up here we can go from namer
+import name it and then get rid of this
+we don't need that so from this line
+we're doing the same thing we're
+importing but here we're importing
+something specific in our case this name
+it function or importing name it from
+namer and now from now on we can just
+reference it by referencing the function
+name like we would always write so if we
+save this actually let's change this to
+Mary save it
+run it hello there Mary very cool I'm
+very easy now there's lots of different
+ways you can bring in code from other
+programs treating them as a module and
+just importing them like that it's
+probably the easiest in my mind and very
+cool so you know
+it's a good idea to break apart your
+code so if you've got a big function
+that's you know a lot of code you might
+break that off into another file and
+then just import it like you would any
+module and it helps keep your code
+cleaner you know and it's it's obvious
+what we're doing here we're from namer
+which is in this directory just
+importing this name it function here
+there's a placeholder variable we're
+passing Mary in to that placeholder
+variable and then running the function
+and it returns this print
+escape so pretty simple but very very
+powerful and it's just sort of a way to
+extend things and you know like I said
+break up your code or you can use
+pythons built-in functions or modules I
+should say from that page we looked at
+and be sure to take a look at that it's
+at
+this URL right here I'll put a link to
+this in the video below or just go to
+google and type in Python 3 module index
+and you'll get this thing up a check it
+out there's a lot of stuff in here and
+some of its boring some of its stupid
+most of it you'll never need but
+helpless from manipulating HTML HTML
+status codes very cool very interesting
+stuff all kinds of cool stuff and like I
+said read through these and something
+might catch your eye something you're
+interested in right look up pickle tools
+see what the what in the world bad it's
+let's see Hugh random that's a good one
+running PI locate and run Python modules
+without importing the first that's kind
+of interesting
+uh flex socket socket server sequel i3
+is a database will probably look at that
+later on that's it it's a basic database
+that comes built in with Python it's
+amazing it's not good for like big
+projects but small to medium projects
+where you need just a lightweight
+database fantasticks built right in
+right into Python really easy to use a
+tkinter for creating graphical user
+interfaces I've got a whole other course
+on that look at my two youtube channel
+you can check that out very cool turtle
+demo wave web browser
+easy-to-use controller for web browsers
+that's probably pretty interesting hey
+all kinds of cool stuff so those are
+modules so that's all for this video if
+you liked it be sure to smash the like
+button below subscribe to the channel
+check out Kodi me comm or you can use
+coupon code youtube to get $22 offer
+membership you so you pay just $27 to
+access all my courses hundreds of videos
+and the PDFs of all my best-selling
+coding books join over 50,000 students
+learning to code my name is john elder
+from cody me calm and we'll see in the
+next video

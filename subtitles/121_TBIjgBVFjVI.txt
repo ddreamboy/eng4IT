@@ -1,0 +1,118 @@
+the worst part about being a front-end
+developer is developing uis which also
+happens to be 100% of the job web
+developers have tried to make things
+easier with countless UI libraries like
+bootstrap material and so on but
+recently Shad Cen the hottest UI
+framework in the front-end World
+recently released a major update that
+makes it way overpowered and it's
+nothing like you've ever seen before the
+only way I can think to describe it is
+like if Ruby on Rails and Skynet had a
+baby who grew up and got jacked on
+steroids and then got into front-end web
+development when I started this channel
+back in 2017 my goal was to make
+tutorials like this Facebook style Emoji
+reaction thing the code for that video
+took the better part of a day but now I
+can build an even better one in like 30
+seconds in today's video you'll learn
+how to build a custom front-end website
+faster than ever but with great power
+comes great trade-offs and we'll also
+look at the drawbacks of this approach
+it is September 5th 2024 and you're
+watching the code report last week I ran
+a pull about for sale and thousands of
+people agree that it's the best for an
+incloud this video is not sponsored by
+them nor have they sponsored any of my
+past videos and that's why I can tell
+you that yesterday versell took a pretty
+big L when it was revealed that chat GPT
+switch from nextjs to remix despite that
+versell did make a really good move by
+hiring the developer behind Shad CN and
+now as we'll see it's tightly integrated
+into the versel ecosystem the Shaden is
+a component or UI library but it's a lot
+different than most other libraries like
+bootstrap instead of installing a
+massive library of components into your
+node modules and importing them you copy
+and paste the code for each individual
+component into your own project which
+allows you to use things all a cart and
+makes it easier to customize the code it
+sounds chaotic but it's based on
+Primitives like radex and Tailwind which
+keep things looking consistent pretty
+cool but it's killer new feature landed
+in the CLI in the form of a component
+registry like you can run Shad Cen ad
+data table or Shaden ad Carousel to
+easily add those components to your
+project and it works with all the major
+Frameworks but here's where things get
+really crazy versell also runs this
+service called vzer which is an AI chat
+bot for building UI like all you do is
+ask for a button and it'll return
+something that looks just as good as any
+a16z funded startup with a $100 million
+valuation if we look at the code though
+what you'll notice it's doing is relying
+on the existing Shad CN button it then
+AI generates some extra Tailwind slot
+and the end result is pretty nice that's
+not the crazy part though if we click on
+this install button up here we'll have a
+command to Shad CN add this to our
+project it'll automatically copy that
+code into our project and bring in any
+necessary dependencies and now we have a
+cool custom button we can use anywhere
+and not just that but these URL can also
+be made public to be shared with anyone
+and you could even build up your own
+standard library of Shad Cen components
+if you drink the Shaden Kool-Aid and
+then combine it with other AI tools like
+co-pilot or cursor you can build uis 10
+times faster than you could just a few
+months ago and they actually look
+halfway decent the end result might look
+exactly the same as all your friend side
+projects but at least it didn't take you
+6 months to build but the AI haters out
+there will tell you to never touch any
+of these tools they'll make your
+programming skills go flaccid and their
+garbage code will eventually backfire on
+you the but the reality is that just a
+few years ago you'd have to solve many
+of these problems by going dumpster
+diving for code on blogs or humiliate
+yourself with a stack Overflow question
+but nowadays you have people building
+to-do apps in their Teslas in the Ikea
+parking lot the AI performance gains are
+real but they have to be used carefully
+and deliberately to avoid unnecessary
+complexity I don't think Tech like this
+will replace actual front-end developers
+but here's my prediction in the near
+future I think developers will care less
+about the ergonomics of a framework like
+the syntax differences between angular
+react View and spell and care about how
+quickly and reliably they can generate
+stuff like I wouldn't be surprised if we
+see a prompt-based UI framework oh wait
+a minute it actually looks like someone
+already built that this has been the
+code report thanks for watching and I
+will see you in the next one

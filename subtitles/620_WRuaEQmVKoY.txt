@@ -1,0 +1,213 @@
+i'm going to explain the concept of
+transform learning in the context of
+computer vision quickly and precisely
+now the reason we're doing transfer
+learning is so that we can learn some
+function f which is going to be a
+convolutional neural network
+which takes in a picture and it's going
+to output
+the class of that picture okay so we
+have
+a no number of classes where it's say
+three maybe for our problem
+we're trying to learn how to map a
+picture as
+input into the output of either apple
+banana or cucumber
+okay so we have three classes
+and we are trying to given whatever
+picture it is maybe it has
+maybe a picture look something like this
+where it has an apple
+in the top right and we want that to be
+categorized
+so f of that thing this is the same as
+above just in picture form
+f of that is say one okay and because
+this is corresponding to apple
+banana and cucumber whatever it is it's
+just a
+a distinguishing thing this is that
+image
+okay this is that class of that image
+now we could do this by
+making our own convolutional neural
+network by scratch or copying an
+architecture of an existing one
+but the easiest thing to do is to copy
+the architecture of an existing one
+and use almost all of its parameters
+that it's already learned
+on a different task but transfer it to
+your task so it's transfer learning
+because we are learning how to transfer
+this knowledge from the other neural
+network into yours
+okay we're transferring the learning
+that hap that it had
+into our own learning for our problem so
+how can we do that well we need some
+neural network
+that is already existent and trained so
+we'll call it vgg
+this is a no neural network and say that
+it was trained
+and it has been it's this is existing it
+is trained
+on imagenet which is a huge repository
+of images
+that is similar to your problem but not
+exactly the same
+so maybe it's actually going to be more
+complex than your problem because
+this neural network its job is to it can
+learn a vast number of pictures
+so maybe vgg was already trained on
+taking an image same as yours same type
+of image except now what it can do
+is output say a thousand different
+classes
+so maybe it knows actually how to do
+a monkey so maybe i can transfer it
+maybe it can take an
+image and recognize if it's a monkey or
+whether it's a zebra
+or all the way up until a thousand
+things say that it's
+a thousand classes and say this last one
+is just
+an ape is what came to mind from reading
+the monkey okay
+so say that this is existent already and
+it is
+that vgg has learned how to do this now
+when we say trained on imagenet
+we mean it has learned a ton
+of parameters okay it has learned
+a ton of parameters on how to do this
+well it has seen the training set
+people have done it with the validation
+set and how to
+accurately get a good score on a test
+set of information by learning
+parameters
+knowing how to generalize the pattern
+between a picture and what
+that class is for its specific output so
+it's able to do this but what's
+fascinating is that we were able to
+transfer almost all of these trained
+learned parameters
+and the model architecture and what i
+mean architecture i mean
+so vgg is something like this where it
+takes in an image
+and then we'll just say that it looks
+like this where we have a bunch of
+convolutional layers yes people often
+draw a convolutional layer
+like this because it's a 3d thing but it
+doesn't really matter
+the point is that we do a bunch of stuff
+in the middle and maybe there's pooling
+maybe there is batch normalization at
+some point we're going to make it look
+like a feed forward neural network
+and wherever there is parameters to be
+learned here and there is millions of
+them
+we can actually borrow all of those
+except
+that last layer now that last layer is
+going to be a thousand
+dimensional because its job is to do a
+thousand classes where this one
+is the probability of the picture being
+a monkey
+and this one is the probability of it
+being a zebra
+and the last one would be the
+probability of being an ape and whatever
+everything in the middle
+it's going to sum to 1 because it's some
+probability distribution
+now the only thing that's wrong is this
+last thing
+we're happy with this existent model
+architecture because
+this is all for learning pictures it's
+fascinating that
+the only thing we have to change is this
+next thing over here
+so let me just zoom in on this again i'm
+going to make a big
+big scene of this because this is the
+important part of transforming
+say that we have this image i'm just
+drawing the same things before
+this is in a neural network called vgg
+and it doesn't really matter what neural
+network it is
+we take an image and so it's going to do
+a bunch of stuff in the middle
+and it's going to be feed forward neural
+network just normal dense layers
+and then it's going to have say it a
+thousand things
+okay so this is a thousand wide
+except what we do in transfer learning
+is we keep
+all of these parameters we so-called
+freeze them
+okay if i write freeze that's meaning
+do not train these neural network layers
+we still are going to use them in a
+calculation
+but the point of training is to learn
+parameters we are not going to touch
+those parameters it's the same thing as
+like linear regression
+where in linear regression you learn how
+to
+fit the beta 1 that's the slope and the
+beta naught so the beta 1 is
+the the beta 1 is this slope and the
+beta naught is this lift
+here okay so how high we lift it it's
+the same thing here we are learning all
+of these parameters
+we freeze all of these parameters and
+what we do
+is we chop this off so i'm just going to
+erase this
+we i'm going to erase that a little
+bigger okay
+so instead the very last layer or its
+job is to get
+a thousand different classes we want
+that
+to be for our problem and for ours in
+this example
+it's gonna be different for your example
+but we wanted to learn
+three different things for apple banana
+or cucumber so that this is probability
+of apple
+this is probability of banana
+writing that for short and probability
+of cucumber writing that for short as
+well
+all we have to do is learn the
+parameters that are involved
+in this middle piece here keeping
+everything else the same
+and then this is probably not guaranteed
+but will probably do
+very well on the task of recognizing
+apples
+bananas and cucumbers thank you for
+watching
+[Music]
+[Music]
+you

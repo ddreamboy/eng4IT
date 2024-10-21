@@ -1,0 +1,611 @@
+hello data scientist welcome to skill
+gate
+in this course we will build a sentiment
+classification model using neural
+networks
+we will use the popular imdb movie
+reviews data set and train three
+separate neural networks namely a simple
+neural net a convolutional neural net or
+cnn and lastly a long short term memory
+or lstm neural net
+lstm networks are actually considered to
+be quite suitable for handling nlp
+problems and by the end of this video
+you will understand why
+just to give you a quick glimpse the
+sentiment classification lstm model we
+shall be training as part of this
+tutorial is so good that it not only
+predicts the user sentiment as positive
+negative it also does a fabulous job in
+predicting the imdb rating itself
+corresponding to these reviews
+with quite good accuracy as you can see
+here
+during the course of the next 20 minutes
+or so we shall discuss the mighty word
+embeddings which is a very powerful
+feature extraction technique
+intuition on various neural network
+approaches
+the concept of overfitting that happens
+when a model memorizes training data
+rather than understanding general
+distribution
+and of course our high level solution
+architecture for training our sentiment
+classification model
+so without further ado let's get started
+introductions we are skillgate and we're
+on a mission to bring you application
+based machine learning education
+we launch new machine learning projects
+every week so make sure to subscribe to
+our channel and also hit that bell icon
+so you get notified of all our new ml
+projects
+really seek your support here guys as
+this keeps us motivated and helps us in
+reaching out to more learners like you
+and yes let's talk machine learning
+people in case you need any ml project
+related help or want to discuss your
+crazy ideas you can go ahead and book a
+free one-on-one online session with us
+by visiting our website skillkate.com
+and filling out this one-on-one
+mentoring session registration form
+or you may write to us over email
+whatsapp as well
+all right coming to the topic of
+discussion for today which is sentiment
+classification using neural networks
+let me start off with our solution
+architecture and a brief on the basics
+this is our high level solution
+architecture
+as a first step here we are using the
+imdb movie reviews data set that has 50
+000 reviews along with positive negative
+sentiment labels
+this is how our data set looks like we
+have these
+movie reviews in the first column mapped
+with their sentiment labels positive
+negative
+this bar chart depicts the distribution
+of our data across sentiment labels and
+it seemed to be fairly uniform
+okay back to the architecture as a
+second step we do certain pre-processing
+operations on our review text
+this is one of the movie reviews i
+randomly picked from our data set
+over here you may see we have these
+punctuation marks
+special characters uh html tags and
+numbers
+all of these add little to no value in
+telling whether a review is positive or
+negative
+so we shall drop them all as part of
+this pre-processing step
+i'll give you more insights on this when
+we get into the coding part
+moving on our third step is word
+embedding where we provision for
+converting our textual data to a numeric
+form using a very powerful feature
+extraction technique called word
+embedding
+to use
+text data as input to a neural network
+model we need to convert text to numbers
+first
+there are popular techniques like one
+hotend coding which do a fair job in
+getting this done
+however unlike machine learning models
+passing sparse vectors of huge sizes can
+greatly affect neural network models
+therefore we need to convert our text to
+small dense vectors and this is where
+word embedding comes in
+in the case of word embeddings every
+word is represented as a n-dimensional
+dense vector
+and the beauty of word embeddings is in
+the way it manages to retain the
+semantic relationship among words as
+every token has n-dimensional parameters
+explaining its characteristics for
+example here we have these four tokens
+man women king and queen along with
+their seven dimensional vector
+representation depicting semantic
+relevance on a scale of negative one and
+one
+and these dimensions are nothing but a
+mathematical way to capture semantic
+relations among these tokens
+like this first dimension
+we could have is living being
+as all of these four tokens correspond
+to human beings so we have these weights
+touching uh almost one for all of these
+tokens and likewise for these remaining
+parameters as well
+just for visualization word weddings are
+like this huge nexus of words that have
+semantically similar words forming
+clusters
+built with the help of a complex
+algorithm that establishes semantic
+relationships among words based on their
+usage in millions of sentences
+so here we may see clusters of words
+that depict cities
+uh travel
+food etc and of course the words in each
+of these clusters shall have similar
+n-dimensional vectors in our case we
+shall use the pre-trained globe e word
+embedding with 100 dimensional vector
+for text to numeric transformation of
+our training data
+all right coming back to our solution
+architecture
+this next modal training step is what
+sits at the heart of this entire
+exercise where we shall train three
+separate neural network models namely a
+simple neural net a convolutional neural
+net and a lstm neural net which are
+essentially three very popular but
+different approaches
+now let me give you a quick refresher on
+neural networks as well before we jump
+into the coding part of our project to
+execute this solution architecture we
+have been discussing
+as one advances into the field of
+machine learning and neural networks
+you would start appreciating more and
+more of how the human brain works
+it's so intriguing how humans may learn
+new skills within a matter of days or
+months and be prohibited one day
+neural networks attempt to mimic the
+computation capabilities of our human
+brain
+and that's the reason why these are
+quite suited to recognize numerical
+patterns contained in feature
+representations of real world
+unstructured data like images
+sound text time series etc
+having said that feature representations
+hold the key to train a powerful neural
+network for image data input pixels form
+the
+basis of derivation of these features
+for sound it's the
+time amplitude and frequency of the
+audio file and in our specific use case
+which is text data it is the word tokens
+that form the user review sentences
+forming the basis for derivation of
+features
+after future representation the next
+important thing is to choose the neural
+network approach we may want to apply on
+our specific problem statement
+here we have prepared this crisp
+comparison chart for you to have a
+holistic idea on these different
+approaches
+you may post this video here if you wish
+to go through this detail sheet at this
+point
+if you may have any queries post them in
+the comment section below and i'll be
+more than happy answering all of them
+i'll use this moment to also introduce
+you to the problem of overfitting
+remember as a child many of us would
+cram up or memorize answers to complex
+mathematical problems and speed it out
+in the exam sheet
+neural networks also have a tendency to
+do so
+it happens when the networks do not
+learn the general distribution of
+training data points
+and rather memorize the expected
+outcomes like this
+overfitting happens when the model
+returns high testing error as against a
+low training error
+and if
+both error values are
+appropriately low and in close proximity
+we have a well fitting model
+we shall observe this phenomena of
+overfitting during modal training in our
+project
+all right now it's time for us to jump
+into the coding part of our project and
+train our sentiment classification
+neural network models
+so
+let's get coding
+this is our skill kit do it yourself
+tool kit for you
+it has all these model related files
+including this training data set
+pre-trained glovy word embeddings this
+csv with fresh imdb reviews
+along with their movie name and
+real imdb rating
+as you may see
+then this jupiter notebook code file and
+lastly this pre-trained lstm model that
+we created previously
+let's open this jupyter code file now to
+do a quick code walkthrough
+in fact i already have it open
+let's switch the tabs
+now we are here in collab we have
+segmented our entire code into these
+sections we see on the left side here
+first one here we have is plan of action
+which is pretty much self explanatory by
+now
+let's move on to the second section
+which is setting the environment
+by the way i ran this entire code file
+prior to recording this video to save on
+time
+will take you through all the outputs
+anyway
+here first up we are mounting google
+drive to collab
+then we are setting our working
+directory to our project toolkit folder
+within google drive
+post that we are importing all essential
+libraries and functions with this next
+code cell
+and that's it for setting up the
+environment
+next up we have loading the data set
+over here first up we are importing our
+imdb movies dataset
+then for exploring our data set we are
+first checking for the shape
+then we are using this head function to
+actually see how
+our data set looks
+as you may see we have two columns here
+review and sentiment
+as a good data science practice we also
+check for null values
+and we see there are none over here
+then we also check for data skewness
+across our data labels and again we see
+there's no issues there as well
+next section is data preprocessing
+here in this first code cell we are
+printing a review from our data set
+as you may see we have punctuation marks
+numbers
+html tags etc over here
+as part of preprocessing we shall filter
+all of these out
+then we are defining this function
+called remove tags to actually replace
+html tags from the given reviews with
+white spaces
+next up we are downloading the
+stopwords from nltk
+and then we are defining this mighty
+pre-process text function that performs
+a series of operations on the input
+review
+first one is this conversion of review
+text to lower case
+then replacement of html tags
+punctuation marks and numbers with white
+spaces
+these
+single characters and multi spaces
+are byproducts of operations conducted
+so far
+so these are also dropped and replaced
+with white spaces
+and finally we drop stopwords as well
+and then the pre-processed review is
+returned as output of our function
+pre-process text
+in this next cell we are calling this
+pre-process text function on our reviews
+one at a time
+then we may have a look at the process
+review in this next cell
+in the next cell we are converting our
+labels positive negative to ones and
+zeros and in the subsequent cell we are
+splitting our data set into 80 20
+training test
+with this train test split function
+in the next section we are preparing our
+embedding layer
+as a first step to this we are using
+tokenizer class from the keras
+pre-processing text module
+to create a word to index dictionary
+in the word to index dictionary each
+word in the corpus is used as a key
+while a corresponding unique index is
+used as the value of the key
+then we compute the vocabulary size
+which is 92 394.
+what it essentially means is that our
+corpus has 92 394 unique words
+then next up we are performing padding
+to set the length of all reviews to
+exactly 100 words
+you can also try a different size
+the list with size greater than 100 will
+be truncated 200 for the list that have
+less than 100 we add zeros at the end of
+the list until it reaches the maximum
+length which is 100 again
+post this
+we are using glow v embeddings to create
+our feature matrix for this we first
+load the glovy word embeddings and
+create a dictionary that will contain
+words as keys and their corresponding
+embeddings list as values
+and finally we create an embedding
+matrix where each row number will
+correspond to the index of the word in
+the corpus the matrix will have hundred
+columns where each column will contain
+the glowy word embedding for the words
+in our corpus
+calling this shape function on the
+embedding matrix we may also check for
+its shape
+as expected we have exactly ninety two
+thousand three ninety four rows
+which is our vocabulary size and hundred
+columns which are the hundred glowy
+dimensions
+all right now we are at the model
+training step first up we are training a
+simple neural network
+over here we create a sequential model
+then we create our embedding layer the
+embedding layer will have an input of
+100
+which is the max length
+the output vector dimension will also be
+100
+the vocabulary size is 92394
+as we know by now
+and since we are not training our own
+embeddings
+and using the pre-trained glovy
+embedding we set trainable
+parameter to false
+and in the weights attribute we pass our
+own embedding matrix that we generated
+previously
+the embedding layer is then added to our
+model
+next since we are directly connecting
+our embedding layer to a densely
+connected layer we flatten the embedding
+layer
+and then we add a dense layer with
+sigmoid activation function
+post that we
+compile our model and then we start
+training
+once the training gets complete then we
+compute predictions on the test set
+post that we print model performance
+parameters
+and finally we plot modal performance
+charts using this code snippet
+as you may see we get a test accuracy of
+74.98
+our training accuracy
+was
+84.35 percent
+this means that our model is over
+feeding on the training set overfitting
+occurs when the model performs better on
+the training set than the test set
+ideally the performance difference
+between training and test sets should be
+minimum
+next up we move to training a cnn model
+cnn is a type of network that is
+primarily used for 2d
+data classification
+such as images
+a convolutional network tries to find
+specific features in an image in the
+first layer
+in the next layers the initially
+detected features are joined together to
+form bigger features in this way the
+whole image is detected
+convolutional neural networks have been
+found to do a fair job with text data as
+well
+though text data is one dimensional we
+can use
+1d cnns to extract features from our
+data
+talking about modal architecture
+here we are creating a simple cnn with
+one convolutional layer
+and one pooling layer
+code up to the creation of the embedding
+layer
+is the same
+as we have been using
+then we compile the model and start
+training
+once the training is over
+we compute predictions on the test set
+print model performance and plot the
+charts
+avi methi our accuracy here is a good
+85.79
+which is much better than the simple
+neural network results
+however our cnn model is still
+overfitting as there is a vast
+difference between the training
+and test accuracy
+and finally we come to the lstm model
+training step
+recurrent neural network is a type of
+neural network that is proven to work
+well with sequence data
+and since text is actually a sequence of
+words a recurrent neural network is an
+automatic choice to solve text related
+problems
+in this section we are using lstm which
+is a variant of rnn
+talking about modal architecture here
+after the same embedding layer that we
+have been using
+we are creating an lstm layer with 128
+neurons you can play around with the
+number of neurons by the way
+and rest of the code remains the same as
+is
+then we compile
+the model
+we then we train it and once the
+training is over we print model
+performance and plot charts the same way
+here we get the highest test accuracy of
+86.43
+which is in very close proximity to the
+training accuracy of 87.12
+even the charts show that the difference
+between the accuracy values for training
+and test sets is much smaller compared
+to the other two models
+so with this we may conclude that for
+our problem rnn based lstm is the most
+suited
+approach for training a neural network
+guys congratulations to you for making
+it to this point and training your own
+sentiment classification model using
+neural networks
+you are the best
+now to finish things up here we have
+this last section left where we make
+predictions on the fresh imdb reviews
+for which we kept a test file in our
+toolkit
+over here we are first loading this uh
+test reviews csv
+as you may see it looks like this here
+we have the review text and the real
+imdb rating
+captured in the csv file
+then as usual we pre-process our reviews
+text followed by tokenization and
+padding
+and then we call our lstm model on these
+reviews for predictions
+output of lstm model is a number between
+0 and 1 where 1 is positive sentiment
+with this next cell we are representing
+modal results vis-a-vis our
+test
+file data
+we are multiplying our model results
+with 10 so as to bring them on a scale
+of 0 to 10
+and as you may see here not only does
+our model predicts positive reviews as
+positive and negative reviews likewise
+it also gives an insanely accurate
+prediction on the imdb rating itself
+which is mind blowing really
+i would really encourage you to prepare
+your own such test file and run
+predictions using your trained lstm
+model
+just to
+further appreciate how cool this model
+is that we just trained
+people in case you have any questions on
+this project we discussed today or you
+are preparing for a job interview or
+just need some career guidance in
+general do set up a free one-on-one
+mentoring session with us by visiting
+our website skillca.com
+to better your chances of getting hired
+with our expert advice you may also
+write to us over email and whatsapp
+i hope you liked our work
+please subscribe to our channel now if
+you haven't so far
+by the way we have done a couple more
+sentiment analysis
+projects previously this first one is a
+basic sentiment analysis project where
+we use the traditional
+bag of words representation for feature
+extraction and naive bayes estimator for
+binary classification if you are just
+beginning your ml journey i'll strongly
+recommend you to go through this project
+as well
+the second project is built with
+scikit-learn pipeline using tf idf
+tokenizer for feature extraction and
+support vector machine for
+classification
+sql and pipeline by the way is a low
+code magical way of building able models
+so do check this out as well if you are
+curious already
+and this third project is on how to
+deploy a sentiment analysis project in a
+live environment and performing uh live
+queries
+this for sure is the coolest among the
+three projects we have here
+link to all of these is in the
+description part below
+i would highly recommend you to go
+through these projects as well to
+further strengthen your understanding of
+sentiment classification problem and
+having a complete end-to-end visibility
+of solving a machine learning project we
+launch new machine learning projects
+every week so to get
+regular updates on our ml projects do
+subscribe to our channel and recommend
+us to your friends as well so they may
+also benefit from our work
+thanks for all your support
+keep learning
+bye

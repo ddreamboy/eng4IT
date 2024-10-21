@@ -1,0 +1,257 @@
+I just watched a video of a wedding
+photographer explaining how these SD
+card holders corrupted all of her
+wedding photos so let's talk about how
+to safely store all the photos that you
+shoot now to be clear it wasn't exactly
+this case these cases that I'm using are
+actually rubber lined they come with
+different inserts so you can swap them
+out like right now I've got CF Express B
+I've got SD cards and micro SD cards and
+I've got a few of them depending on what
+I've shot like these ones I think have
+some data on them still that I haven't
+erased these guys should be fresh but
+you you might realize I don't actually
+have a lot of memory cards I've got two
+of these cases maybe you knowbe maybe a
+dozen two dozen memory cards at most but
+the one that she was talking about in
+her video was actually one of these
+really big ones that holds like 50 SD
+cards and it's foam lined and it has a
+cover and the problem that she had was
+that when you put the SD cards in and
+out of to the foam because of the
+material that the foam is made of it
+would cause a static discharge to build
+up and then it would zap the memory
+cards and she would lose all of her data
+now this actually happened to me many
+years ago when I was still just a single
+memory card shooter and at the time I
+was using I was using Lexar memory cards
+in fact I think this was one of the ones
+that I was using that that got corrupted
+which is one of the reasons why I don't
+really use Lexar memory cards anymore
+nothing particularly bad about them but
+I just it gives me anxiety thinking
+about me losing my data but another
+thing she said in the video was that she
+won't erase the data on her SD cards
+until she's fully edited and delivered a
+project now I know there are
+photographers out there who do this who
+literally have 30 40 50 memory cards
+will double shoot meaning you know if
+you have a camera that has two SD card
+slots you're using that as your for of
+backup but but the problem is that SD
+cards aren't really a longterm storage
+solution so I'm going to grab a a pen
+and paper
+here so we've got pen and paper and a
+ton of hard drives and and I'm going to
+illustrate what my data storage solution
+is and what I think the best option for
+you is if you're looking to offload your
+cards but have a backup and then have an
+extra backup because we all need
+redundancies in case things
+fail step one when I bring my camera
+home I will take the SD card one of the
+SD cards out of my camera and load that
+onto either a solid state drive that is
+attached externally or in my case I have
+an internal solid state drive that is a
+4 GB drive you can kind of think of it
+as my everyday working drive but the
+other SD card stays into my camera until
+that process until all of those photos
+are
+transferred step two for me is is an
+automatic process so as much as possible
+I don't want to be copying and pasting
+things manually I want processes to run
+in the background so what I have is I
+have a very large regular hard drive so
+a spinning disc drive that I have vhm
+which is like a backup software utility
+that will run daily backups of that
+solid state drive so the the hard drive
+itself is 16 terabytes whereas the solid
+state drive is 4 TBT and what that
+allows me to do is have backuped like
+versioned backups of my solid state
+drive so one problem you can encounter
+is is data corruption so you need
+backups that you can go back and grab
+things but also if you accidentally
+delete something and you don't realize
+you delete something the versioned
+backups that are on that daily backup
+hard drive means I can go back for a
+week or 2 weeks or however long and and
+recover things in case I accidentally
+delete something that I didn't mean to
+delete step three this is where it gets
+complicated might need a separate color
+for this hold
+on step three is where it gets
+interesting it's also automated but I
+have cloud backup of both of these
+drives I know I used red for a cloud it
+doesn't make sense but I actually use a
+service that's called back Blaze and I
+and I think it's one flat I can't
+remember exactly how much it is but it's
+like $10 or $15 a month editor Anthony
+here it is $9 a month and I actually
+found out I have a referral link so not
+not affiliated in any way but if you use
+it you'll get the first month for free
+so I'll put that down in the description
+for you to check
+out it's basically like having another
+subscription service but what allows you
+to do is automatically back up any hard
+drives that are directly attached to
+your computer so we would call that
+direct attached storage as opposed to
+NAS which is network attached storage
+which we'll get there we'll get there in
+just a second actually hold on my uh my
+doorbell just rang let me uh let me grab
+[Music]
+it I uh I actually don't know what's in
+this package but uh we're about to find
+out I uh oh okay we got uh this is
+exciting it's photography
+related
+nope so that's some uh K KN andf ND
+filters cuz there's a a solar eclipse
+coming up in uh solar eclipse lunar
+eclipse there's a a solar eclipse and
+we're going to maybe capture some of it
+maybe we'll see ND 10 m 10 million what
+is that ND 100,000 so like basically the
+darkest ND filter you've ever seen in
+your life oh my gosh it is so dark okay
+for reference I I'm pointing it at my
+light and no light is coming through ND
+100,000 that is insane play with these
+later okay where were we so at this
+point we have one solid state drive that
+we're editing off of that is a you know
+a fast solid state drive so that
+Lightroom runs fast that is being backed
+up to a physical hard drive which is
+slower bigger less expensive on a per
+terabyte or per gigabyte basis and then
+both of these are being backed up to an
+offline backup solution so that's a 1 2
+3 backup if that's all you had you would
+be perfect but because I have a lot of
+data I have a lot of video files I have
+a lot of photo files sometimes these run
+out so sometimes I have multiple ssds
+kind of at this 0.1 position and that is
+where all of these come in so these are
+various Brands I have some of these
+Western Digital ones which people tend
+to not like but the Samsung ones the t7
+drives in the ruggedized form and the
+more the thinner aluminum form these are
+what I put working projects on so if I
+have a big video project that's maybe
+bigger than 4 GB or maybe I don't want
+it filling up my main Drive these I will
+use just for a project so a wedding a
+big YouTube thing maybe I have multiple
+photos that I I want to organize but
+this is not long-term storage these I
+will still back up to something else
+which if I need more storage I will back
+up to my network storage and this is
+where everyone loses their mind because
+this is where it it all becomes pretty
+complicated where's my marker so how do
+I how do I say this this is like step
+three so that the cloud cloud is step
+three okay I think I think this makes
+sense but this is effectively where my
+Nas lives so when this gets full the
+Overflow makes it into here but the
+problem that I mentioned is that back
+Blaze only backs up local storage unless
+changing colors to different marker
+unless you get back Blaze B2 which is
+like their their business their
+Enterprise solution that unfortunately
+does charge you a per gigabyte fee so in
+my case because I have a lot of video
+files that wouldn't fit on a single hard
+drive I have the nas which is set up in
+raid so there's redundancy there in
+terms of a hard drive failure but then
+this is backed up to back blade so in
+this case I have two copies I don't have
+three copies anything that goes onto my
+Nas is stuff that I probably don't need
+anymore so archived projects photos that
+are older than 3 years old University
+projects all that is going to be on my
+Nas so my recommendation if you're
+looking for a simple stupid solution is
+to just implement the top half of this
+where either you have a solid state
+drive for all your working stuff and
+then another solid state drive so if you
+wanted to you could have like a like an
+offline disconnected copy of the the
+same thing but then have a virtual
+off-site third copy in the cloud
+honestly back Blaze not sponsored not
+affiliated with them in any way one of
+my old co-workers told me about it he
+was using it for all his like his photos
+and his videos and honestly it is it is
+a solution that if you don't want to buy
+hundreds and hundreds of of SD cards and
+have one of these massive like SD cards
+are expensive most people don't realize
+that on a per gigabyte basis which is
+the number you should be comparing your
+storage solutions by is that SD cards
+especially the super fast ones or the CF
+Express cards like the one I showed you
+earlier like this prograde one which is
+absolutely awesome super fast but also
+this is like a $1,000 $1,200 memory card
+and you don't want to be using these as
+long-term storage you're going to be
+much better off you know for the same
+capacity actually for more capacity
+buying one of these Samsung drives and
+being able to store or multiple projects
+on it and probably have this one be
+faster well maybe not faster not faster
+than the CF Express card but probably a
+little bit more reliable since it's got
+that waterproofing ruggedized look you
+can take this throw this on your
+shelf and not worry about it but I'll
+link to all that stuff to the memory
+cards to the drives that I use to the
+nas stuff that I recommend down in the
+description if you found any of this
+helpful and you'd like me to go further
+into memory cards and hard drives and
+all that sort of stuff for storing your
+phone and your video files let me know
+down in the comments if you like this
+video give it a thumbs up and until the
+next one go shoot
+photos

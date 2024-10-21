@@ -1,0 +1,516 @@
+i'm going to start this video with two
+assertions assertion number one any
+excel data analyst that wants to
+differentiate themselves in the job
+market needs to acquire predictive
+analytic skills
+assertion number two acquiring those
+predictive analytics skills is probably
+far easier than you might think this
+video is a short guide for any excel
+data analyst to start the journey of
+acquiring predictive analytic skills
+that can be used in a broad range of
+business scenarios and only requires
+basic excel skills just in case you're
+wondering i want to be crystal clear on
+this point to use the techniques i'll be
+talking about in this guide you do not
+need advanced math skills you don't need
+to write super complicated formulas and
+you don't need to write any vba code the
+tools and techniques that i will be
+covering in this guide are accessible to
+any motivated excel data analyst
+regardless of role and background so
+let's go ahead and get started what i'm
+going to do is i'm going to flip over to
+powerpoint and we're going to talk about
+the first idea that we need which is
+what are the two families the two
+general types of predictive analytics
+that we can implement using trustee old
+excel
+so the first thing that you need to know
+when you get started with predictive
+analytics is that there are two general
+types or two general families of
+predictive analytics techniques the
+first of which is called regression and
+regression is pretty simple essentially
+it is a predictive model a predictive
+analytics technique where the thing that
+you're trying to predict is a number
+it's a measurement so think of anything
+with a decimal point in it height weight
+sales
+you name it anything that you can
+measure in the business world that is a
+regression predictive analytics problem
+and not surprisingly there are many many
+scenarios where regression is useful for
+example revenue forecasting
+that revenue has a decimal point in it
+this is a regression problem marketing
+mix so how much should we spend on
+digital advertising versus television
+versus radio advertising marketing makes
+also decimal points right money has a
+decimal point in it progression problem
+price and cost modeling
+customer lifetime value regression is
+wildly useful and arguably
+regression techniques are some of the
+most common if not the most common
+predictive analytics techniques
+in use
+and that includes by the way not just in
+the business world but also in the realm
+of science now in the business world you
+actually see that regression is useful
+don't get me wrong it's absolutely
+useful however what you tend to see is
+the next family has more prominence than
+you see in science and that is
+classification classification is a
+predictive analytics technique where
+instead of trying to predict a number
+what you're trying to do is predict a
+label so for example male or female as a
+label bronze silver or gold as a label
+another way to think about this is that
+classification
+is all about predicting a state your
+state of being are you male or female
+the state of your
+olympic medal bronze silver or gold as
+opposed to predicting a measurement as
+opposed to predicting a number like you
+in regression now in the science world
+classification isn't nearly as prominent
+as in the business world because as you
+might imagine the number of scenarios
+where you're trying to predict a state
+in business analytics is extremely
+common some scenarios where this is
+typically done is for example fraud
+detection let's say you work for a
+credit card company what is the
+predicted state of this authorization is
+it good is it a legitimate transaction
+or is it fraudulent churn prevention
+we're trying to figure out the future
+state predict the future state of a
+customer are they going to leave our
+company for somebody else that's known
+as churn conversion modeling is somebody
+coming to our website what is our
+prediction for their future state are
+they going to be a customer are they
+going to spend money with us or are they
+going to abandon their shopping cart on
+our website and lastly warranty claims
+as well often these are a fraud scenario
+is this a legitimate warranty claim or
+not that sort of thing so not surprising
+classification is super super useful
+these are the two general families of
+predictive analytics regression
+and classification and in the next slide
+i will be covering techniques for both
+regression and classification that you
+can use inside of excel and once again
+like i said previously but it bears
+repeating the techniques that i'll be
+talking about are very easily
+implemented now there's a couple things
+i should mention before i move on to the
+next slide and they are
+one time series forecasting is out of
+scope and if you don't know what time
+series forecasting is don't worry about
+it because obviously it doesn't matter
+however if you're familiar with time
+series forecasting that is a very
+specialized form of regression and it's
+not covered in this particular video
+however you can do time series
+forecasting in excel using
+out-of-the-box functionality if you're
+interested in having me maybe create a
+video about that just let me know in the
+comments below the video and next up i'm
+going to be
+a little heretical with this two-family
+framework here of regression and
+classification i'm going to talk about
+two techniques that i would argue are in
+the regression family well actually i'm
+going to talk about one technique that's
+in the regression family and then one
+technique that's in the classification
+family and some people might disagree
+with me on that and that's totally cool
+this is my video so i'm going to be a
+bit heretical so i'm going to talk about
+five techniques in this video two
+techniques in regression three
+techniques in classification and to kind
+of put these in some sort of context for
+you as you begin your predictive
+analytics journey i'm going to use a
+scale i'm going to use a spectrum of
+quote-unquote easy and quote-unquote
+difficult and just so you know this is
+not a hard and fast spectrum it's very
+qualitative and it's just something i
+made up for the purposes of this video
+so that you get some sort of sense of
+the five techniques which ones are the
+most easy to use generally speaking and
+which are more difficult to use so the
+things to consider along the spectrum of
+easy to difficult are three items that
+you want you want to keep these in mind
+so first up is the implementation in
+excel as i've said everything in here
+can be implemented using like tables of
+data common functions
+and out of the box excel functionality
+so overall all of the implementations
+for these five techniques in excel are
+easy however
+some are a little bit more involved than
+others and i will talk about that next
+up is the conceptual requirements for
+you
+now as i said you're not going to need
+to learn any complicated math you're not
+going to need to learn any coding to do
+these things however to use the
+techniques effectively you have to learn
+them and some of the techniques have
+more things to learn than others any
+professional can do it because i've
+taught all these techniques to people
+before anybody can do it and then lastly
+and maybe most importantly is this idea
+that
+if you use a predictive analytics
+technique and you find something
+interesting in the business and you want
+to communicate it to decision makers
+what are the conceptual requirements on
+them
+the decision makers to understand what
+you have done that's also another thing
+to consider in fact arguably it might be
+the most important thing to consider
+overall so all three of these things are
+going to be wrapped up together along
+this spectrum as they talk about each
+individual technique so first up let's
+talk about regression and this is where
+i'm getting a bit heretical with the
+framework here because i'm putting
+process behavior charts in the
+regression bucket and a lot of people
+might disagree with me on that and
+that's okay but let me explain to you
+what these things are these are
+very powerful graphical techniques for
+looking at numeric data over time for
+example maybe your sales figures or call
+volume in your call center and then it
+allows you to create predictions based
+on the historical data in a very
+specific kind of way and let me give you
+an example let's say that you're you
+create a process behavior chart around
+inbound calls to your customer service
+center and let's say you've got
+12 weeks of data and each week is
+essentially one data point which is the
+total volume of calls coming in each
+week
+the chart would allow you to create
+based on the historical data an estimate
+of the range of values for calls that
+you would see roughly
+eighty percent of the time and that
+would give you a range let's say on
+average over the 12 weeks you got a
+thousand calls a week and the process
+behavior chart tells you 80 of the time
+you're going to get between 900 and 1100
+calls per week since that is a
+prediction that is also a number that's
+why it's in the regression camp now the
+reason why this thing is so cool is that
+it is
+super super easy to implement in excel
+no fancy calculations really at all you
+get a chart as the end result and then
+you interpret the chart the conceptual
+requirements on you to use process
+behavior charts is exceedingly simple it
+is so so easy to use these charts and
+not surprisingly as well using the
+charts to communicate with your decision
+makers is also extremely easy this is
+one of my favorite
+favorite predictive analytics
+and business analytics techniques bar
+none next up the second technique that
+we're going to talk about in the
+regression space
+is linear regression
+this right here if you're not familiar
+is probably the single most used
+predictive analytics technique in the
+world bar none
+that includes both the business world
+and the science world so linear
+regression can be done in excel
+using the analysis tool toolpak add-in
+and it provides you a
+user interface that allows you to click
+things around and set everything up and
+it runs the linear regression for you so
+that part is easy the reason why linear
+regression is sitting right here in this
+qualitative spectrum is because it is
+more difficult for you to use as a data
+analyst and it's also more difficult to
+communicate the findings to your
+business stakeholders as compared to
+process behavior charts now once again
+you don't need to know any complicated
+math excel does all the math for you
+however you have to learn how to
+interpret the models and you need to
+learn how to evaluate whether the models
+are legitimate and once you've done
+those two things you then have to then
+communicate properly the findings of the
+model to the decision makers and those
+are all more complex more complicated
+than process behavior charts now the
+upside is linear regression is also
+arguably more powerful than process
+behavior charts because if no other
+reason process behavior charts only work
+with a single type of data for example
+your calls coming into your call center
+whereas linear regression can work with
+multiple pieces of data at the same time
+so here are two very powerful predictive
+analytics techniques these are awesome
+techniques easily implemented in excel
+and any professional can do it sorry to
+interrupt the slideshow i know you're
+probably really disappointed about that
+but i did want to mention that if you're
+interested in learning more about the
+techniques that i'm talking about in
+this video check out the description
+below the video there'll be links to
+other youtube videos where you can learn
+more about these techniques also if
+you're liking the content if you think
+it's useful if you wouldn't mind helping
+me out with the youtube algorithm and
+just smash that like button that would
+be awesome that just tells the youtube
+algorithm that this is good content and
+that other professionals like yourself
+might benefit from watching the video
+let's go ahead and get back to the
+slideshow and talk about classification
+as promised there are three techniques
+that i'm going to talk about in the
+classification space and the first one
+is market basket analysis also known as
+association rule mining this is
+wickedly powerful stuff now once again
+this is a bit heretical there would be
+many folks who would argue that market
+basket analysis is not a
+classification technique doesn't matter
+let me tell you what you can do with
+market basket analysis market basket
+analysis allows you to take a table of
+data and you can take one of the columns
+on your table of data and you can tell
+market basket analysis hey i want you to
+determine
+everything else using all the other
+columns of data which combinations
+of these columns of data over here are
+highly associated with this thing that
+i'm holding steady over here what i'm
+holding between these two fingers right
+so for example let's say that you work
+in the grocery store industry and you're
+highly interested in knowing what other
+products in the grocery store when
+purchased are highly associated with
+mayonnaise let's say
+i'm just totally making this up right
+mayonnaise so not surprisingly probably
+things like bread and cheese and mustard
+and all the things in the united states
+that we use to make sandwiches because
+mayonnaise is a very common thing we put
+on sandwiches but notice it doesn't have
+to be a grocery store product this could
+be whether or not a customer is going to
+convert to paying yes or no it could be
+whether or not a particular feature and
+a software product is going to be used
+yes or no so you'll notice that that
+becomes a state prediction a label
+prediction exercise so market basket
+analysis is awesome the great news is
+that it is really super simple to
+implement in excel using the solver
+which is an ad in excel that so the
+implementation is quite easy the
+conceptual requirements for you as the
+data analyst are also quite easy and
+most importantly once again
+the findings that come out of market
+basket analysis are wildly easy for
+decision makers to figure out to
+understand and let me give you an
+example so let's say that you use market
+basket analysis
+and the thing that you are
+holding over here the thing that you're
+trying to predict let's say you're in
+the hr space is whether or not an
+employee is going to quit and then what
+you do is use all the other columns of
+data and say which of these behaviors of
+employees are most highly associated
+with an employee acquitting and what you
+get back is a metric called lift and
+what it tells you is how many more times
+likely is this particular employee to
+quit based on the other characteristics
+so let's say for example 2.3 times more
+likely to quit think about that for a
+second how easy is that for anybody to
+understand if employee xyz has these
+three characteristics over
+here they're 2.3 times more likely to
+quit than somebody else
+super super easy this is powerful stuff
+i use market basket analysis all the
+time and i know how to use more
+sophisticated predictive analytics
+techniques however i tend to use market
+basket analysis mainly because one it's
+super easy it's very effective and i can
+communicate findings to stakeholders
+very very easily next up is something
+called naive bayes and i don't expect
+you to understand or know what naive
+bayes is don't worry about it this is
+something that will resonate with you
+i'm pretty sure naive bayes is a classic
+classification technique for
+implementing spam filters
+right so an email comes in to your
+hotmail or your yahoo or your gmail
+account whatever it might be and
+automatically gets sent to your junk
+folder or your spam folder that is
+usually some form of naive bayes or
+maybe something a little bit more
+sophisticated but in the old days they
+were definitely based on this naive
+bayes classification technique so
+there's another way to predict state yes
+or no is this piece of email
+ham quality email good stuff legitimate
+email or spam stuff i don't want in my
+inbox so naive bayes is also very easily
+implemented not as easily implemented as
+market basket analysis so it's a little
+bit more difficult it requires a little
+bit more
+knowledge on your part to use it
+correctly and then communicating the
+findings is also a little bit more
+complicated to stakeholders however
+you'll notice that conceptually in this
+framework here of difficulty it is still
+easier than linear regression and then
+lastly we have another
+super super common predictive analytics
+technique
+which is known as logistic regression
+notice they both have regression here
+however the thing to remember is that
+logistic regression is designed to
+predict yes no
+states positive negative broad legit
+legit fraud excuse me a statistician
+might argue with me and say dave
+logistic regression isn't a
+classification technique but it's okay
+for our purposes this allows you to
+predict states now out of all five of
+these this one is the most difficult
+because you have to implement logistic
+regression yourself
+using the solver for whatever reason
+microsoft has decided not to put
+logistic regression in the analysis
+toolpak unlike logistic or linear
+regression which is in the analysis
+toolpak so you have to implement it
+yourself it's not super difficult but it
+is most the most difficult thing out of
+all of these five to implement with
+using out of the box excel it also has
+the most difficult conceptual
+requirements on you
+because of the way the model works
+and because you also have to implement
+the things yourself the calculations
+yourself and then lastly
+interpreting a logistic regression model
+for business stakeholders
+is the most difficult of these five
+techniques and i won't go into the
+reasons why that's they're a little bit
+mathy it doesn't really matter for this
+video however all five of these
+are eminently approachable to any
+motivated excel data analyst
+just maybe start with these two up here
+and then move down
+as you need process behavior charts gets
+gets what you need done great use that
+if market basket analysis gets what you
+need done great and then maybe you move
+to linear regression if you need
+something a little bit more powerful in
+process behavior charts and it might be
+that you don't need anything more
+powerful than market basket analysis in
+the classification space so if you're
+still watching the video right now i'm
+assuming that you're interested in
+learning more about how you can apply
+predictive analytics in your work using
+excel so i'll put up a couple of my
+tutorial videos right here and here and
+you can learn how easy it is to
+implement predictive analytics in excel
+and up your data analysis game that's it
+for this video until next time please
+stay healthy and i wish you very happy
+data smoothing

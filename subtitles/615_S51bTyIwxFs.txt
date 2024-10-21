@@ -1,0 +1,448 @@
+welcome to this lecture about the
+mathematical details behind the
+principal component analysis
+in the previous video we covered the
+basics of pca
+in this video we'll see how we can
+perform a pca analysis
+by using simple linear algebra in order
+to understand the math behind pca
+i will here show the math based on the
+eigen decomposition of the covariance
+matrix
+however note that there are other
+methods such as the singular
+value decomposition to compute the pca
+which will not be discussed here
+to explain how the pca works we will use
+the following example data
+we'll use pca to combine the two blood
+pressure variables
+into just one variable based on data
+from six
+individuals for example person number
+one has diastolic blood pressure of 78
+and it sees total blood pressure of 126
+whereas spouse number two has the
+historic blood pressure of 80 and its
+historical blood pressure
+128 and so on
+for this data set it seems to be a
+strong positive correlation
+between the two variables
+to compute a pca we can perform the
+following steps
+where we first center our data
+then we calculate the covariance matrix
+on our center data
+next we compute the eigenvalues and
+eigenvectors of the covariance matrix
+finally we order the eigenvectors and
+calculate the principal components
+which is our combine or transform data
+set
+usually one starch to center or
+standardize the data
+in the first step of the pca analyzes
+in this case we will only center the
+data
+which means that we subtract all the
+values of each variable
+by its corresponding mean
+we therefore subtract the means historic
+blood pressure
+from the individual observations
+centering the systolic blood pressure
+results in the following values which
+tell how far away
+the original values are from the mean
+we then do the same calculations for the
+diastolic blood pressure
+which has a mean value of 82. we can
+summarize the center data in the
+following table
+when we center the data it means that we
+center the data points
+around the origin centering the data
+around the origin
+will help us later when we rotate the
+data
+after we have centered the data we'll
+have the following values
+which can be plotted like this where the
+x-axis now represents the
+center-sisterly blood pressure
+whereas the y-axis represents the
+centered diastolic blood pressure
+next we calculate the covariance matrix
+based on the center data
+note that we have got the same values in
+the covariance matrix
+if instead would have used original data
+since the variance does not change when
+we center the data
+remember that the main diagonal of the
+covariance matrix
+includes the variance of each variable
+the sample variance of the centered
+systolic blood pressure
+is calculated like this
+when we calculate the variance of the
+centered data the calculations
+become a bit simpler since the mean of
+the centered data
+is always equal to zero
+to calculate the sample variance of the
+centered data
+we therefore simply sum the squared
+values
+and divide by the sample size -1
+then we calculate the variance of the
+diastolic blood pressure by using the
+same equation
+finally we calculate the covariance
+which is the measure
+of how much the two variables spread
+together
+the sample covariance is calculated by
+multiplying the centered values
+of the two variables
+for example we multiply the centered
+values for person number one
+and add that to the product of the
+centered values for person number two
+and so on
+finally we divide the sum of the
+products by the sample size minus one
+we see that the spread in the dystolic
+blood pressure
+is a bit higher compared to the spread
+in the systolic blood pressure
+the covariance is somewhere between
+these two values
+next we calculate the eigenvalues of the
+covariance matrix
+for more details watch the lecture about
+eigenvalues and eigenvectors
+we substitute a by the covariance matrix
+and this term by lambda times the
+identity matrix
+which has the same number of rows and
+columns as the covariance matrix
+subtracting these two matrices results
+in the following matrix
+next we calculate the determinant of
+this matrix
+which is the product of this diagonal
+minus the product of this diagonal
+after some simplifications we have the
+following quadratic equation
+quadratic equations like this can be
+solved in different ways
+which will not be discussed here
+however if you plot how the left hand
+side changes
+as a function of different values of
+lambda we see that the left-hand side
+is equal to zero when lambda is equal to
+either
+about 0.32 or
+12.08
+this means that if we set lambda to
+either 0.32
+or 12.08 the left-hand side of this
+equation will become equal to zero
+or close to zero due to running effects
+in this example
+these two values represent our
+eigenvalues
+of the covariance matrix
+next we calculate the corresponding
+eigenvectors
+to these two eigenvalues
+we'll start by calculating the
+eigenvector of the covariance matrix
+with the corresponding eigenvalue 12.08
+to calculate the eigenvectors of the
+covariance matrix
+we use the following equation that we
+have discussed in the previous video
+about eigenvectors
+we plug in the covariance matrix
+and one of the two eigenvalues
+if you multiply the covariance matrix by
+this column vector
+and multiply the eigenvalue by the same
+vector
+we'll get the following system of
+equations
+we now move these two terms to the right
+hand side
+after some simplifications we have the
+following system of equations
+solving for y in the two equations
+results
+in that y is equal to 1.37 x
+for example if we set x equal to 1
+y is equal to 1.37
+this vector is therefore an eigenvector
+of the covariance matrix
+we can illustrate this vector in the
+plot like this
+by drawing an error from the origin to
+the coordinates
+1 and 1.37
+we'll now normalize this vector to unit
+length
+which means that it should have a length
+of 1.
+watch the lecture about the eigenvectors
+and eigenvalues to see
+how one can normalize the eigenvector to
+unit length
+after normalization this vector
+represents one
+out of two eigenvectors of the
+covariance matrix
+to find the second eigenvector we do the
+same calculations as before
+based on the second eigenvalue
+after some calculations this vector
+represents our second eigenvector
+with unit length
+since the covariance matrix is a
+symmetric matrix
+the eigenvectors will be orthogonal
+which means that the angle between them
+is 90 degrees
+next we order the eigenvectors based on
+their corresponding eigenvalues
+where the eigenvector with the largest
+eigenvalue
+becomes our first eigenvector
+since this eigenvector has the largest
+eigenvalue
+it will represent our first eigenvector
+we therefore rename this vector so it is
+called v1
+instead of v2
+let's put these two eigenvectors
+together into a matrix that we called v
+where the first column represents the
+first eigenvector
+with the highest eigenvalue and the
+second column
+represents our second eigenvector
+we'll now use this matrix to transform
+our original
+center data so that the two variables
+are completely uncorrelated
+we define a matrix d which includes our
+centered data
+next we multiply our data matrix d
+by matrix v which includes our
+eigenvectors as columns
+then we get the new matrix with the
+transformed data
+this transformed data is called
+principal component scores
+or just scores which represent the
+original center data
+in the principal component space
+when we go from our original data matrix
+to the transformed data
+this can be seen like we rotate the data
+clockwise
+until the two eigenvectors point in the
+same direction
+as the x and y axis of the plot
+the rotated data now looks like this
+note that the labels of the axis have
+now been changed
+to principal component 1 and 2.
+let's call the two columns of the
+transform data pc1
+and pc2 if we plot this data
+where we label the x-axis as pc1 and the
+y-axis as pc2
+we will get the following plot which
+represents the arrhythmia plot after the
+rotation
+since we plot the principal component
+scores this kind of plot is called a
+score plot
+let's compare the center data
+with the transform data
+the variance of the sistorial blood
+pressure is 4.4
+whereas the variance of the diastolic
+blood pressure is 8.
+this is the covariance matrix of the
+data
+we see that the covariance is 5.6
+which tells us that there is a positive
+correlation between the two variables
+when transformed the data using pca the
+first variable
+called pc1 has a variance of 12.08
+whereas pc2 has only a variance of 0.32
+this means that almost all variance is
+kept in the first principal component
+if we divide the variance of the first
+principal component
+by the total variance
+we see that the first principal
+component captures 97.4 percent
+of the total variance
+note that the variances of the principal
+components
+correspond to the two eigenvalues we
+calculated earlier
+thus the eigenvalues of the covariance
+matrix represent
+the variances of the principal
+components
+when we started the covariance matrix of
+our transformed data
+we see that the covariance between pc1
+and pc2
+is equal to 0 which means that pc1 and
+pc2
+are completely uncorrelated
+we also see that the variance of pc1 and
+pc2
+correspond to the eigenvalues associated
+to the first
+and the second eigenvector
+note that the total variance of pc1 and
+pc2 is about 12.4
+which corresponds to the total variance
+of the original variables
+remember that when we multiplied our
+center data
+by the matrix that includes the
+eigenvectors as columns
+we got the transformed data
+this is the same as using the following
+equation to calculate the principal
+components
+that we saw in the previous video
+where the weights for the first
+principal component comes from the first
+eigenvector
+for the highest eigenvalue
+whereas the weights for the second
+principal component comes from the
+second eigenvector
+for example if we calculate the
+corresponding score for person number
+six
+we multiply the centered blood pressure
+values of person number six
+by the corresponding weights
+by adding these products we would get
+the principal component
+score of 5.
+note that we can also use the following
+equation to calculate for example the
+first principal component
+where we replace the variable for the
+center data by the variable of the
+original data minus
+its corresponding mean
+for example if we would use the original
+blood pressure values for person number
+six
+we would subtract the mean from the
+corresponding systolic and the historic
+blood pressures
+which would give us the same values as
+for the center data note that the
+general aim
+of using pca is to reduce the
+dimensionality in the data
+in other words we like to reduce the
+number of variables we have
+however so far we have not reduced
+number of variables
+since we have the same number of
+principal components
+as the number of variables we started
+with
+since the first principal component
+captures almost all variants
+which can be interpreted as distorts
+almost all information about the two
+variables
+we can simply delete the second
+principal component
+because it includes almost no
+information
+as we have seen previously by using the
+following equation
+we can combine the two variables into
+just one variable
+in a way that maximize the variance of
+the linear combination
+the weights can be interpreted as how
+much each variable
+contributes to the principal component
+since the absolute value of the weight
+for the diastolic blood pressure
+is higher than that for the systolic
+blood pressure
+pca put more weight on the diastolic
+blood pressure
+when the two variables are combined
+before we end this lecture we'll see why
+the first eigenvector
+points in the same direction as the data
+this is our previous eigenvector and if
+we extend it by multiplying by
+for example 6
+we can draw this vector note that this
+is also an eigenvector of the covariance
+matrix
+since it has the same direction as the
+eigenvector with the unit length
+this is our covariance matrix
+let's take an arbitrary vector with the
+coordinates negative two
+and three if we multiply the covariance
+matrix by this vector
+we will get a new vector that has
+changed direction
+we see the covariance matrix transform
+the vector
+so it now moves in the direction closer
+to the eigenvector
+note that we here do not plot the full
+length of the vector since it cannot fit
+the screen
+the importance is its direction
+if we multiply the covariance matrix by
+this new vector
+we'll get a new vector again this new
+vector will have more or less the same
+direction
+as the eigenvector
+let's take another example vector with
+the coordinates 4
+and 1.
+multiplying the covariance matrix by
+this arbitrary vector
+will result in the following vector
+we see that the covariance matrix will
+again rotate this vector
+so that it has a similar direction as
+the eigenvector
+we can therefore conclude that the
+values in the covariance matrix
+rotate vectors towards the eigenvector
+which points in a direction where the
+data has a maximal variance
+this was the end of this video about the
+fundamental math behind pca
+in the next video we'll focus on how to
+interpret the output from the principal
+component analysis

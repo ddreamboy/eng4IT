@@ -1,0 +1,1206 @@
+welcome to the new video in this video
+we are going to see how to do the
+pre-processing of data before building
+machine learning model so before we fit
+the data to the machine learning model
+we need to pre-process the data in order
+to see whether there is any missing
+value whether there's any outliers
+whether there is any duplicates value
+present in the data or either there is
+any garbage values are present in the
+data so we need to understand the data
+first before building any machine
+learning model we need to check for the
+relationship between the data how the
+data is related to each other then only
+we can build a best machine learning
+model so for that purpose we need to do
+the pre-processing of data so in this
+video we're going to see step by step
+how to pre-process the data before
+fitting the data into machine learning
+model so in this video we are going to
+cover the topics like the steps of
+pre-processing of data so we start from
+importing necessary libraries and then
+read the data set then we do the sanity
+check of the data and after that we do
+the exploratory data analysis to
+understand the data better after that we
+will do the missing value treatments of
+data and after that we'll do outli
+treatments then check for the duplicates
+and garbage value then do the treatment
+of the duplicates and garbage value
+after that let's see what's the
+normalization how to do normalization of
+data and why needed then after that at
+last encoding of categorical data to fit
+in the model so then let's see how to do
+pre-processing of data step by step
+first I will import all the necessary
+Library so I will
+import pandas as PD then import numpy
+Library as in
+P after that visualization libraries
+like cbor
+and math plot
+Li
+[Music]
+input math plot
+CP
+plts sorry math plotly P
+plot and as
+PLT so first I will import all the
+libraries yeah my libraries have been
+imported then after that in step two I
+will read the data to the data frame
+so so PD
+do
+read so my data is in CSV so read CSV
+after that I will copy the name of the
+data so this this is data set is about
+life expectancy data so I will read that
+and I will store it in a variable called
+DF so so I have read the data to DF as a
+data frames so if I check for the head
+of the data so DF do
+head so DF do head it will show the top
+five so it have the information like
+country year status life expectancy
+adult mod ity infant alcohol percentage
+of expenditure htis pness portfolio like
+that many columns are there in this data
+set so this is basically data set of the
+life
+expectancy by having all those column we
+have to predict the life expectancy of
+the data so in this video we are
+covering the topic only the
+pre-processing of data before building
+the model what the step we need to be
+taken so after that we will fit this
+data to the model so I have read the
+head then if I check for the tail that
+shows the
+to bottom five so DF
+dot so DF
+sorry so DF do tail it will show the
+bottom five record so this is bottom
+five record so this is how after that I
+will do as a step three we have to do
+the s check in step three we will do the
+sanity check of the data so sanity check
+means we will do the sanity check like
+identifying the missing value identify
+the outliers is there any garbage values
+in the data is there any duplicates
+values in the data set so we will start
+the S check by checking the shape of the
+data shape means how many rows and
+columns we have so it's very simple DF
+do shape if I do DF do shape it will
+give the shape of data so this is my
+shape it means 2009 38 rows and 22
+Columns of data we have in my data data
+frame I have
+2938 rows and 22 columns I have so if I
+check for the information so DF do info
+if I give DF do info it will give the
+information like data types the column
+information it will give the overall
+information like the entries so here we
+can see that it has
+2938 whatever You' seen in the shape
+same information get by the information
+it has a
+2938 entries indexing from 0 to
+2937 so in total it has 22 columns so
+all the column information is there in
+respect of the not null values and D
+types so here we can see that it has
+the columns in total
+20 1 22 columns each this represent the
+not null counts of the data so here we
+can see that in total we have 2938 row
+so all here from here to here it have
+the full values but in this part we can
+observe some missing values are there so
+it also show the data types of each
+column so the countryes in the data type
+of object and here is in the int form so
+that like that all the column
+information is present so it will Al
+also show here that in my data frame I
+have the 16 column with the float data
+type and four column with the int data
+type and two columns is the object data
+type that is object of country and the
+second one is the status so this is how
+I can do some sanity check then after
+that in sanity check I will find the
+missing value of my data frame I will
+find is there any missing value so for
+finding the missing value I need to
+check for DF do
+eal so DF do eal do sum so before
+fitting into model I should mention I
+should make sure that
+my data is clean it should not have any
+missing value so I need to pre-process
+the data in that pre-processing I need
+to check for is there any missing value
+so if I do isal or sum it will give the
+counts of missing value of each column
+so here I can find that in country year
+and status I don't have any missing
+value but in life expectancy and adult
+modality we can find that the there is
+10 10 like that in the alcohol it have
+194 missing value and hepatitis B it
+have 550 three missing value like that
+we can find the count of missing value
+of each column if I want the percentage
+of missing value so while doing the
+missing value treatment we need to
+decide whether to do the missing value
+treatment or to delete the column or to
+delete the rows with missing value so we
+need to decide based on many criteria
+based on the number of missing value if
+the number of missing value is very huge
+in any column we decided to delete that
+column unless the Imp in or the filling
+with the other value so first I need to
+find
+the uh the percentage of missing value
+so by the percentage I can get easy
+inferences so that I can decide whether
+to do missing value treatment or not so
+let's I will do the percentage in the
+different cell so I will first copy this
+so finding percentage is very easy crl C
+if I do this then crl V I will divide it
+by the the DF of shape I want one number
+DF dot shape in that the first so this
+will give the counts of the overall
+value so I will multiply this to
+100 so it will give the percentage of
+missing value so so here I can get that
+in this part it have zero this part it
+have 3% of overall data compared to
+overall data it have the 3% missing
+value in this uh hyptis P it have 18%
+missing value compared to overall data
+in the GDP the 15% so it's in the
+minority side don't have any 50% missing
+value If the percentage of the missing
+value is above 50% we decide to delete
+that column so here is no problem there
+is no any missing value with the more
+than 50% of the overall count so this is
+how we can do the understand the missing
+value so after checking for missing
+value so we will do the treatment of
+missing value after in the treatment of
+missing Val in this sanity Che we will
+just understand whether we have the
+missing value or not so I will do step
+by step don't do the missing value
+treatment here because it will create
+some confusion so after that after
+checking for missing value I will check
+for the duplicates is there any
+duplicates in my data set so while
+checking for duplicate we need to have
+the unique value so if we have the
+unique value in my data set then only I
+can check for the duplicate otherwise
+the duplicate checking is useless
+because
+some besides unique
+value if I have the duplicates it may be
+possible if I had the unique value and
+then also I have the duplicate that's
+the problem so first I will check for
+the your purpose so DF do
+duplicated if I do this DF do duplicated
+do
+sum it will give the counts of duplicate
+so here we can see that is give that
+zero that means I have zero duplicates
+Valu so this
+is the done with we are done with the
+missing value number of missing value
+and also done with the number of
+duplicates after that we will check for
+the garbage value we will find is there
+any garbage value in our data set so the
+one thing about garbage value is if if
+the garbage value in the present in the
+any of the column it is always be in the
+form of object data type so if uh for
+example if if it is the ear if it is in
+the form of int so is there any garbage
+Val if the garbage Val is present is
+there any special character within this
+column the data type will show it as
+object is there any single garbage value
+it will show it as object so garbage
+value is always in the form of object so
+we will check the garbage value in the
+column where there is the data type of
+object so we will do one for Loop
+for count the unique values in the
+object column then we will find whether
+there is a garbage value or not so I
+will use for Loop for I in DF dot
+select D
+types I include only the object include
+is equal to objects because the garbage
+value will be in the object object
+column so object do
+columns so I want this column after that
+I will do the value count of that so DF
+do
+I the value
+count value counts of this so I will
+print
+this so it will give the count of unique
+value so if there is any garbage value
+it will find that garbage value as a
+unique and it will print so I will def
+defer
+the result so I will print
+like the separator I want it like 10
+times so if I print this let's see what
+will we get so we get the garbage the
+values like for the country it have the
+we will find here the Afghanistan Peru
+it don't have any garbage value so after
+the status we have developing and so we
+will find it over here that there is no
+garbage value in this data set if there
+is any garbage value it will find it
+will show it over here whether it's a
+star or any special character it will
+show it to here and it will give the
+count so here I can found no garbage
+values so I need not to worry about the
+garbage values so this is how we can
+check the garbage value we can check it
+by the value count as well as the unique
+value anyhow if to find find any garbage
+value we have to do impute or the we
+have to change that garbage value to the
+any median mode anything you want so
+make sure that our data set is free of
+garbage value so after s it check we
+will do data exploration data analysis
+to understand the data set the data in
+my data set so to understand the data we
+will do exploratory data analysis so how
+to do that so first start with the
+descriptive statistics so in order to
+get the descriptive statistics of the
+numerical column I just use DF to
+describe so if I use this code it will
+give the descriptive statistics if I
+want to
+transpose I have to give T it will give
+the information like this it give the
+counts mean standard devation minimum 25
+percentile 50 percentile 75 percentile
+and maximum by this we understand about
+the
+number how the data is distributed what
+is the standard deviation of the data
+like that we will have the many
+information if you read all this we will
+get to know about how the data is
+presented how that is
+distributed how the skilless of data
+every information you will get you will
+get the basic understanding of the data
+how it is
+so this is about descriptive of the
+numerical column if I want the
+descriptive statistics of
+the the object column so I will use DF
+do
+describe within bracket I have to use
+include object so if I use include
+object it will give the descriptive
+statistics of
+the sorry
+describe dis DH DF sorry DF do describe
+and it will give the descriptive
+statistic but in the different not as
+the numerical column information it will
+give the counts the number of values and
+the unique values so in country column I
+have the 193 unique value means in total
+I have 193 countries information in
+status I have only two
+two values like developing and developer
+so this is how we can inference from the
+descriptive statistics of the object
+column so after that I will do some
+explor data analysis by understanding
+the distribution of data to understand
+the distribution of data visually we
+will use histogram so I can use a his
+histogram so for drawing histogram for
+the each numerical column I will use
+obviously the for Loop for each column
+in DF dot select I will select only so
+this is a simple code to select only
+data types with
+the sorry D
+types
+include is equal to sorry include number
+so I just want the column of the
+numerical data type so include the
+number so if I use column over
+here so column and after that I
+will I want to print SNS that is cboard
+Library I use the flot the histogram CBO
+history
+flot CBO history flot within that data
+is my data frame and I will give the
+xaxis as each I means each column of
+numerical data type and I will use PLT
+do show to show
+every chart so if I run this code it
+will give the result like this so if I
+don't want this red
+color warning I just use
+import
+warnings import warnings after that
+warnings
+warnings. filter
+warnings within that just use
+ignore so by this I don't get that red
+color warning so this is how I can get
+the histogram for each numerical column
+for the year I can see to that that is
+constantly distributed here I can see
+the left skilless of the data in life
+expectancy of adult modity right
+skewness after that in the infant de
+there is very minimal there is zero most
+of the values are zero after that in the
+alcohol like that for each numerical
+column I have the
+distribution chart so this is how I can
+get the distribution by this I can
+understand how the data is distributed
+in my data set so this is how I can get
+the histogram so this is visually
+explorating the data so
+in exploratory data analysis we will do
+histogram to understand the distribution
+of data and we will also do the Box FL
+to identify the outlier in the datas to
+identify whether there is any outlier in
+the datas we will do the histogram the
+the Box blot so I will copy the same
+code and change a little bit so for the
+filter so D types and here I use the Box
+flot just use the box flot for this and
+I want to show that so just use box flot
+so I get the box flot for each numerical
+column so in the year column I don't
+have any box plot so in the life
+expectancy I have the box
+uh outliers in the lower side and in the
+adult mortality I have the outliers in
+the upper side of the data so in the
+infant I have the major outliers and in
+the alcohol also I have the outliers
+then
+the percentage expenditure and many
+column I have outlier I can see it by
+the boxlot information so this is the
+use of box blot by this way we can
+understand about the data I can
+understand about the distribution and I
+can understand about the outlier of the
+data so after that in order to I will do
+the scatter flot so scatter flot is
+basically for by analysis is it is used
+to get whether there is any relationship
+between the data or not is there any
+relationship between the target variable
+and the independent variable so by
+fitting the model
+so we will cover it in the next video
+and I will explain just simply or here
+so in order to build the model there
+should be relationship between the
+target variable and independent variable
+so here we in the explor data anal we
+will just check whether there is any
+positive relationship or negative
+relationship between the data so in this
+data
+set for example in this data set here
+the life expectancy is the dependent
+factor all the other columns are the
+independent Factor by using all the
+other Factor we will fit the model to
+predict the life expectance so here we
+have to check the relationship between
+that so I have to use a scatter flot to
+check the relationship so first I will
+get the column for the columns so
+columns so so I want to get the
+numerical column first so D
+types DF do
+select D types
+include is equal to number so this will
+give this will give the column of the
+numerical column only so I want to get
+The Columns of that so I will use this
+The Columns so I will get the columns of
+that so by using this I will flot a
+scatter plot so for scatter plot I have
+to use
+this like SNS so before that I have to
+use a for Loop for getting the scatter
+flot for every column so for each
+element
+in so I have to use a column so I will
+first select all the column then paste
+it over here then like life expectancy
+is my target variable so I will remove
+this
+okay I will remove this and after that I
+put it over here then for each column in
+my
+data I want SNS means scatter
+flot so from cbor library scatter
+flot scatter Flo data is my data frame
+then the X I will choose the each column
+then as y I will use a
+fixed column that is my life expectancy
+that is my target variable so it will
+create a scatter flot for this
+combination like year and the life
+expectancy adult mortality and life
+expectancy infant deaths and life expect
+like that it will create a scatter flot
+for
+each combination so PLT do
+show so let's see we will get the result
+or not yeah we get a scatter flot for
+the each combination like life
+expectancy and the year then we have the
+life expectancy and the adult mortality
+it have the negative relationship then
+this also showing some relationship over
+here then it have the relationship like
+this by this way we can find the
+relationship we have to check the
+relationship before before and after
+outl treatment so if we find the
+relationship is better after the outl
+treatment we will do the outl treatment
+otherwise we don't do the outl treatment
+we will do fit the model first before
+the outl treatment then we will check
+for the result of the model then we do
+the outl treatment then again we build
+the model like that the process will go
+on so in this just see about the
+relationship to understand the data so
+showing some relationship so this is how
+the interpret the scatter flot after
+that correlation hit maps to understand
+the correlation between the dat we will
+use
+the HTE M so DF
+dot if I use DF do
+core that will give
+the correlation Matrix
+so so here I have good string yeah I
+have
+the
+that so I will select only the numeric
+column do
+c so if I use this that here control V
+and Dot
+core so let's see yeah we got the
+correlation Matrix of the numerical
+column so it will give the correlation
+here we can see the correlation between
+the data by it ranges from 0 to 1 the
+above 50 show the strong correlation of
+less than left than 50 show the some
+correlation between data so if I want to
+flot this in a chart I will use the heat
+map to flot that so I will use SNS
+do heat
+map data so I will select this I will
+first store it in any variable so I will
+store it in yes then I will give the
+data as my yes then if I flot this let's
+see what will we
+get yeah we got a heat map so if I want
+the values in the hit map I have to use
+a
+not is equal to true if I use
+that I will get the values in the hit
+map so if I want to increase the size of
+that I have to use the PIP plot.
+figure fig
+size figure size is equal to let's
+give 15 comma
+15 so what the
+[Music]
+wrong lt. figure fix size sorry we have
+to give it in a
+bracket so if I give it in a bracket
+let's
+see yeah we got a heat map with the
+proper size in this I can understand the
+correlation between in this data set I
+have the many column so it have the many
+information so by this I can get the
+correlation means here this color
+represent the high
+correlation and here we can find the
+correlation between each
+data so here in this part it have the 8%
+correlation then the minus 24%
+correlation minus 12% correlation
+between alcohol and the infant death so
+this is how I can get the inferences of
+the correlation means the relationship
+between the data so we can go through
+the each column information like this
+color I can find the correlation between
+the data so if the correlation is good I
+can assume that I can predict that my
+model will be the will give the better
+result because there is a relationship
+between the data so this is the use of
+the correlation matrix by using hit Maps
+so this is about exploratory data
+analysis so till now we have covered
+like the S Check in the sity check we
+will do the shape we will check the
+shape of the data we will get the
+information of the data to understand
+the columns information the data types
+and all we will get we will also check
+for the missing value is there any
+missing value by using DF do e null of
+sum then we will we will find the
+percentage of missing value then we'll
+find the duplicates then we we saw about
+the is there in garbage value by using
+the value count after that we will do we
+did exploratory data analysis by
+describe data by descriptive statistics
+of the numerical and
+the object columns then we flot the data
+to understand the distribution we use
+histogram then we understand the outlier
+in the data we will use box flot then to
+get the Rel relationship between that we
+use scatter flot and the heat M heat map
+with
+the correlation Matrix so this is about
+the sanity check and explorat data anal
+then we
+will come to the step five that is
+missing value treatment in the sanity
+check we find there is a missing value
+in the data so in this step we
+will treat the missing value we will
+trat the missing value in the sense we
+will fill it with the median mode or the
+we will use some algorithm to fit it
+like a imputer to fill the missing value
+so by this way we will get the data set
+without missing value so that is the
+necessity before fitting the data into
+model we need
+to give the model without any missing
+value so that's why we will do the
+missing values the decision of the
+missing values depend on various Factor
+so let's figure out what it
+is then let's see how to do the missing
+value treatment so for missing value
+treatment we have the option like we can
+fill it with the median mean or the mode
+of the data column also we have another
+option that is on module we have that is
+K imputer to fill the missing value so
+it work only for the numerical column so
+for the categorical column we used to
+fill it with the mode so we have we can
+use both we can use this median mode or
+mean method to inut the data or we can
+use the K and inputter for the fill the
+missing value of the numerical column so
+I will explain both in this video so
+first if I want to impute the missing so
+first I want to check for the missing
+value column so DF
+do Isn Su we already check in the sanity
+check the missing value the count of
+missing value so I will get it here
+itself so have some I have the missing
+value in the life expectancy and adult
+mortality so life expectancy and adult
+mortality have the missing value so life
+expectance and mortality these column
+are like uh numerical but a discrete
+column like life expectance is the full
+value if it is in
+the continuous data we can fill it with
+the
+median or the mean if it is in the
+discrete variable we have to put fill it
+with the mode if it is a categorical
+column with a missing value we have to
+fill it with the
+mode so let's see how to fill the
+missing value so for that I need to get
+the column so I will get the life
+expectancy adult mortality so in this
+for life expectancy we don't do the
+missing value treatment because it's a
+Target variable so while fitting the
+model while building the machine
+learning model model for Target variable
+we don't do any treatment like missing
+value treatment or the outl treatment we
+don't do that because it's a Target
+variable so it will become the
+artificial data if you do the any
+treatment on the target variable so we
+will skip this life expectancy for
+remaining all the columns we we will do
+the outl treatment so while doing outl
+treatment we have to decide whether to
+fill it with the median or the more so
+for the categorical or the discrete
+values we need to fill it with the mode
+and for the numerical column we can fill
+it with the median or the mode that is
+we need to decide based on the data the
+type of data that's depends on defers to
+data to data so that's a individual
+choice so here I have to use first I
+will show it in median mode mq2 then I
+will use this can imputer to fill the
+missing value so for some column I will
+do the medium on mode so so I will need
+I need to select the column first so I
+have to select the adult mortality first
+so I will write the for Loop so
+for each column for each element in this
+so I have to create the list of column
+so first I will select this adult
+morality so first I will select the
+numerical column which which I have to
+fill it with the Medan so I will use the
+the not infant the percentage ofte B the
+L the BMI so I can use the BMI body mass
+index control C then I will use it over
+here then I can use
+the PO the number of Po let's check for
+the let's check for it the type so for
+polio we have discrete or numeric so for
+polio I can see here it's
+a yeah it's
+numerical so I can fill it with the me
+or mode Medan Med or
+mean
+so then I will choose the income
+composition so this column contrl C and
+and here I fill
+with so I have these three columns so I
+will impute this with the
+median so resources I will import UT
+this with the median
+so DF
+dot that
+column DF of I means that
+column and I will use the fill end to
+fill the value I have we have to will
+use use the fill na so I will use the
+fill NA means is there any to fill it
+with the we have to give the parameter
+as the which value we want to fill so I
+want to fill it with the median of
+that so I will use DF of I median so
+this will give the median of this column
+so median and I want to make this change
+in the actual data so I will use in
+place is equal to true so if I run this
+code let's let let's see what will we
+get so if if now I check for the missing
+value in the life in
+the which column we did BMI and Vol like
+that if I do now we can see it over here
+in the income composition we have Zer
+null value we just imputed and in BMI
+also we have Zer null value we just
+imported imputed then in the polio like
+over here the polio we have zero Val we
+just imputed so so by this we impute the
+data with the median for the numerical
+so if I want to impute the categorical
+data so here I have the category only to
+country and the status I have zero null
+value no need to impute if I want to
+impute if there is any missing value in
+this category letter I have to includ
+with the mode just in the place of the
+median first select the column in the
+place of the median we have to use a
+mode and the first mode because the
+column can have the more than one mode
+value so we have to use a mode of the
+column then use the zero index so it
+will impute the missing value with the
+mode of that column so that's how I can
+impute with the missing Val
+so I have another
+one this module I have to imput the
+missing value that is from SK scalar if
+I use that I can do the missing value
+treatment very easily without any
+confusion and so first I need to import
+that from Escalon from Escalon
+do from escalar do
+impute from escaler do impute
+import k nni
+i means
+imputer so after that I have to
+initialize to
+inut so inut is equal to K n n i sorry
+iuter so if I initialize this so after
+that I got one error imputer
+sorry
+yeah so after that I will use this to
+fill the missing value so after that
+just need to use the column so I will
+use all the column so
+for I
+in so I will use all the columns like
+for I in DF
+of do
+select D
+types include all the numerical column
+so I will use include
+number so include number and I want the
+column of this so I will use
+column so so after
+that inut I have just imported inut so
+DF of I means that column is equal
+to
+inut dot we have to use
+fit
+transform fit transform that column DF
+of I so so let's see what will we get
+for R this I got one error the
+impute fit transform DF of I I need to
+give it in a
+tble braet so if I give
+this fit
+transform so fit transform that column
+so here we need to give it in a double
+square bracket so DF of I so if I impute
+this let's see yeah that is imputed all
+the numerical column with the so now I
+check for the null value I don't have
+any null value because I just imputed
+that by using K NN imputer so how this
+work is it will take the average of the
+nearest neighbor so K NN means the
+nearest neighbor it it will impute it
+will take the average of the nearest the
+value and it will fill it that missing
+value with the nearest average of that
+nearest values so this is how the K
+imputer works so this is Al algorithm
+for the filling the missing value so
+it's the best in the industry to fill
+the missing value of the numerical
+column so we can use this to fill the
+missing value or if if the number of
+missing value is less we can use also
+use the median or the mode method we can
+also use the K imputer from the escalar
+so anything is okay
+so so this is how we can deal with the
+missing value so now I check for the
+missing value of my data it will have no
+missing value we imputed all the missing
+value of the categorical and numerical
+variable so the missing value treatment
+is done after the missing value
+treatment we have the step six of the
+outlier treatment so what is outlier so
+outlier is the any extreme value whether
+it's an upper side or lower side of the
+r that's called as outl so if it is if
+outlier is present in the data that's
+that's not useful for the building a
+model so with outlier the model will
+will won't give the best result so we
+will do the outlier treatment we will
+cap the outliers with the whiskers or
+any values based on our decision so we
+will fit the
+model after doing the outl treatment so
+in the pre-processing of data we need to
+do the outlier treatment so for outlier
+treatment we need need to decide based
+on the our data we need to decide
+whether to do outl treatment or not to
+do outl treatment it's ented up to us to
+while building
+the model so here in this video I will
+show how to do the outl treatment so for
+outl treatment we first need to need to
+First need to Define one function to get
+the wiers so after that so in the Box
+slot we analyzed that there is a outlier
+in the data so here we can see that like
+in the here we can see that there is a
+outl in the population there is the
+outliers in the thinness many column we
+have the outliers in the above side and
+the Lower Side so we can cap this outl
+to the upper whisker so this is our
+upper whisker so we can cap this all
+this value to this upper whisker and if
+there is any values below this lower
+whisker we can cap that to the lower
+whisker means we we replace these values
+with the upper whisker value so if it is
+20 is more than upper whisker we fill it
+with the like 70 like that we will do
+the outlier treatment so let's see how
+to do the outlier treatment for the data
+so and while doing the outlier treatment
+we need
+to keep it in mind that the outl
+treatment is done only for the
+continuous numerical data it won't we
+don't the outl treatment for the Target
+variable we don't do the outl treatment
+for the categorical and discrete
+variable so we need to First figure it
+out which are the columns are the
+numerical continuous numerical data for
+that column we we will do the outl
+treatment so for in this in this data
+for example for the GDP it's a
+continuous data we can do the outl
+treatment for the GDP then here we have
+the more outl treatment so we can decide
+to not to do the outl
+treatment like that we have to decide
+whether to do the outl treatment or not
+so so for this video I will show how to
+do the outl treatment so for total
+expenditure I will do the outl treatment
+for the polio I don't do the outlier
+treatment as it is discrete show the
+discrete so for the BMI you don't have
+any outliers for
+the isless it have the many outlier so I
+don't do the outlier treatment for for
+this like that I have to decide whether
+to do the outl treatment or not to do
+the outl treatment but the outl
+treatment is done only for the
+continuous numerical column so I will do
+the outl treatment for the GDP and the
+schooling I don't do the outlet
+treatment then for the income
+composition resource it have only one
+Outlet so no need to do the outl
+treatment for that so for thinness 5 to
+9 years so first need to check for the
+how the data is present in that column
+so for thinness it have the yeah
+fractional data so I can do the outl
+treatment for thinness of 5 to 9 and
+like that so I will select the three
+column for do outl treatment so just to
+show how to do the outl treatment so for
+outline treatment I have to first get
+the upper RAR and lower rare for that I
+have to Define
+one function that is whisker function I
+can give the name as whisker so in that
+I will will give the input input as
+column so first I need to get the
+quartile so in order to find the upper
+scare lower whare I need to First need
+to get the quel so I will use the q1
+and Q3 that is 25 percentile and the 75
+percentile of the data so is equal to NP
+dot NP do percentile so this is a
+function percen function of
+that Nary so np. percentile that column
+then I want to get the 25 percentile and
+the 75 percentile of this column so
+whatever the column I give to
+this function it will give the it will
+calculate first the 25 percentile and
+75% and asign it to this after that I
+will found the inter qual range so inter
+qual range means Q3 means 75
+percentile that is my Q3 minus q1 Q3
+minus q1 after that by after getting the
+IQR I can find the lower whare so the
+lower Vare is equal
+to Q
+q1 minus
+1.5
+into
+IQR 1.5 into
+IQR then the upper
+Vare the upper V sare is equal to
+Q3
+plus
+1.5
+into IQR so after calculating this I
+want to return this so return
+return so return
+lower risker first
+then upper whisker so let's check
+whether this execute oh sorry here I
+need to give it that so
+return so if I check for the whisker
+whether I get the upper whisker lowerer
+whisker so whisker all first I need to
+get the column information DF
+off so I will get the columns of
+each columns
+so yeah I have the column so I will give
+the GDP where is my GDP yeah this column
+if I give this
+column so DF of this
+column let's see what will we get we got
+an
+error course model number have the new
+percentage so sorry percent okay okay
+okay percent n is missing here so I need
+to yeah it it will give the lower
+whisker and the upper whisker of this
+GDP column so this is how I can get the
+lower whisker and the upper whisker of
+this so after the lower RAR upper RAR I
+need
+to fill it with that so this is I just
+use it to check that whether it is
+working or not so after after that I
+will fill the lower RAR upper RAR of
+this three column whichever I selected
+so for I in that column so first I will
+select that
+GDP first one is
+GDP so control
+V then the total
+expenditure contrl C and contrl V then I
+will do the outlet treatment for
+this
+thinness and this this column so contrl
+C and control V
+so let's take it over here so I have
+this 1 2 3 four columns to do the
+outlier treatment so after that here I
+first need to get the lower whisker
+that lower whisker comma upper whisker
+of that column so for getting lower
+whare upper I already defined that
+visker function so I will use that
+visker function over here that and I
+will use the DF
+of I over
+here means that column then after that I
+will use the fill that
+so I will use T of
+of I is equal
+to NP dot means nump dot I will use
+where to fill it so NP dot sorry NP do
+where NP do where DF of I means that
+column check DF of I is lesser than low
+lower whisker fill it with lower whisker
+otherwise keep it as it is so this code
+tells like that so if DF
+do DF do
+I is equal to NP dot
+where DF of
+I is greater than upper
+whisker fill it with upper whisker
+otherwise keep it as it is so this is
+about this code so if I run this code
+yeah
+the lower whisker and upper whisker is
+kep the outl is capped with the lower
+and upper whisker so if I now check for
+that box flot again so let's check for
+the box flot so I will use this
+columns to check the box slot so control
+V so then
+SNS sorry
+SNS do
+boxplot I will directly use that DF
+of I then PLT
+dot
+show pl. show let's see what will we get
+yeah we got a box slot with no outlier
+before we had the outliers now we don't
+have outl because we did just did the
+outl treatment for this four column so
+this is how we can do the outl treatment
+so the outl treatment decision is based
+on the data it defers to data to data we
+need to decide whether to do the outl
+treatment or not so if I want to do the
+outl treatment we need to decide whether
+to cap to the upper whisker lower
+whisker or we need to select in specific
+value to forfill that so it's based on
+the data it depends to data to data so
+this is how we can do the ideally do the
+outlier treatment by using that upper
+RAR and lower RAR so this is about
+outlier treatment so then we have the
+duplicates and garbage value so we
+already find find in the S check we
+don't have any duplicates value so we
+don't have any garbage value also so we
+do we skip this if I have any duplicate
+value we need to delete that column by
+using drop duplicates to drop the
+duplicates value we have to use DF dot
+so here DF
+dot
+drop
+duplicates DF do drop duplicates if any
+duplicates is there that will be deleted
+so in this data struct data frame we
+don't have any duplicates so no need to
+worry about duplicates if you have the
+any garbage value we have to change it
+to the Medan or mode of that column so
+that's how we will do the duplicat
+treatment and the garbage treatment
+garbage value treatment so so at last
+let's see how to do encoding of data so
+encoding means for fitting the model
+fitting the data into model we need all
+the columns in the form of numerical so
+in my data in my data we have some
+columns
+like like here country and the status it
+is in the object data form so we need to
+convert that object data into numerical
+that is called as encoding so converting
+the object into
+numerical that is called as encoding so
+we can do encoding of data in two ways
+that is one hot encoding and label
+encoding one hard means we will create a
+dummies for the each category and we
+will do tamies and we will also use the
+label encoding for some categorical data
+which can be the categorical variable
+which can be ordinal we can use the
+label encoding otherwise we will use
+the tamies one H encoding so for
+creating D is we have the easy technique
+using the pandas pd. get Dumis we can
+use
+the use that module to create a Dumis so
+I have to use the pd. get to create a
+tmy variable so I will use like PD
+dot get
+damis so pd. get damis within the
+parenthesis I have to give the data the
+data is my data frame then I have to
+give the column for which I need to
+create adamy the column is I have two
+column like the country the first one is
+country then the second column is the
+status so
+status status then I have to use
+drop
+first is equal
+to true it will delete or drop the first
+level so it will it won't give the any
+multicolinearity problem if I drop the
+first level of the data so by using pd.
+get D of this data and I have to give
+the column for which I need to create
+dumy in my present data I need to create
+a dummies for the country and the status
+because that only
+two columns with the categorical
+features so if I run this I have one
+problem that is
+Callum sorry I'm missing columns so if I
+give it has has created a dummy for each
+country like country ugu country like
+that it will create a dummies for all
+the country so this is how I can create
+a dummy in a one single code that is pd.
+get tamies and I have to give the tamies
+so if I use the categorical ordinal
+column I have to use the replace
+function to replace that the true or
+false we can use the label encoding by
+using replace function I can give the
+label like 1 2 3 4 like that so in this
+data I don't have any columns which can
+I do label encoding so I just did
+a one hot encoding of this data by using
+pd. G so this is how and I have to store
+it in a dumy another data so this will
+give the the new data that is dummy so
+if I now check check for this dumy it
+will give all the information in the
+form of numerical so I don't have any
+categorical feature here so now my data
+is ready to fit in the model after this
+stage I can fit this data
+into model whether it's regression model
+by using a scalar or stats model I can
+use this data to fil the model so this
+is about this video in this video we
+learned about many things like
+pre-processing of data we learned about
+how to import necessary libraries how to
+read a data set and how to do a sanity
+check to find missing value outlier
+garbage value and how to do explorat
+data analysis to understand the data
+better like uh descriptive statistics
+and we will also visualize the data for
+histogram box flot scatter flot to
+understand the relationship and after
+that we did the missing value treatment
+by mean media mode method and K nni
+imputer method then we did the outlier
+treatment by upper risk and lower risk
+impute then we did the duplicates and
+garbage value treatment then we did the
+encoding of data so this is about this
+video in this video we learned about the
+pre-processing of data so thank you for
+watching stay tuned for the next
+video

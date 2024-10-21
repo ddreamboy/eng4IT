@@ -1,0 +1,298 @@
+Cyril communication is always handy when
+you need to send digital data using few
+connections there are a lot of serial
+communication protocols but a few are
+more popular than the other especially
+when using basic microcontrollers such
+as the peak or the Arduino today we will
+see what is a civil communication
+protocol and we will see three main
+examples what communication I Square C
+and spi I will tell you the main
+characteristics of each one of these
+show you how they work and why you use
+one and not the other and also show you
+a small example using the Arduino we
+should also see the signals on the
+oscilloscope in order to get a better
+view and by that understand more so
+let's see how the word I square C and
+SPI work but before make sure you
+subscribe and activate a notification
+bell and also thanks to all my patrons
+for the support so let's get started the
+sponsor of this video is JAL CPCB thanks
+to all users feedback they are improving
+their services every day even this is
+your first time ordering pcbs is very
+easy and all you have to do is to upload
+the Gerber files to genesee PCB dot-com
+select the settings that you want and
+you could get five PCBs of any color for
+only $2 what's up my friends welcome
+back so what is a serial communication
+protocol well it's a way of transmitting
+data in a line one data after the other
+and in this case we are talking about
+digital data imagine that you want to
+send the number 198 which in binary
+which are just ones and zeros will be 1
+1 0 0 0 1 1 0 you could connect a wire
+for each bit and send the height digital
+poles for once and the low value for
+zeros and do that at the same time so in
+just one moment you can send all the
+bits at the same time this is called a
+Perl communication the downside of this
+kind of communication is that we have to
+use 8 connections plus the ground
+reference so a total of 9 cable
+but this is for 8-bits imagine that you
+want to send a 16-bit data in that case
+who will need 17 cables and usually we
+want fewer connections so instead of
+sending the data each bit at the same
+time what we will do is to place the
+bits in series and then we send each one
+one after the other
+using just one cable but you could
+already see the downside of this type of
+communication if we send 16 bits in
+parallel we need only one clock post to
+send all the data if we send the same
+data using serial communication we'll
+need 16 clock pulses to save the same
+amount of data so this will be 16 times
+slower so that's the main disadvantage
+of using serial communication as
+examples for Silla communication we have
+the S bus the PPM the JTAG connection
+word I square C the can SPI
+MIDI usb RS 233 and more and even the
+Morse code could be a serial
+communication okay guys so we have
+mentioned that clock pulses before
+depending on this clock co communication
+could be synchronous or asynchronous and
+the main difference is that one uses the
+clock to send the data at a specific
+speed and time and the asynchronous
+doesn't have a clock so how do you know
+where one bit will end and where the
+next bit will start if you don't have
+any clock to understand that we start
+with the most basic a synchronous i/o
+communication what or universal a
+synchronous receiver transmitter this
+type of communication uses only one
+cable to send the data plus the ground
+reference the transmitter cable will be
+named TX and the receiver will be rx the
+transmitter starts sending bits whenever
+it wants so how does the receiver know
+when the incoming data starts where it
+ends when we have a bit or the other and
+so on for that what communication will
+need to play some common configuration
+between the transmitter and receiver
+before making the connections you need
+to make sure that both the X and the Rx
+will work with the same settings three
+of these settings are the transmission
+speed in both per second the data length
+in bits and how is the start and the
+stop bit so let's see what are these
+imagine that you want to send the number
+before 198 the representation in digital
+process of this will be this one so with
+this data we already know that we will
+send 8 bits so now we know the data
+length the transmitter and receiver must
+have the same configuration but if we
+analyze the word signal we won't see
+only these 8 bits we will see something
+like this that's because word needs a
+start bit and an end bit usually the
+word signal is always high and the start
+bit will be represented by a low pause
+so that makes very easy for the receiver
+to detect when the data starts each time
+we detect a low pause we know that we
+need to start reading the input data and
+now here comes the third configuration
+the speed of transmission without
+knowing the speed the receiver won't be
+able to know when one bit will end and
+the other one will start and by that it
+will ring the wrong value for that we
+need to set the speed in bouts per
+second a very common word speed is 9600
+dots per second that means that the
+length of the bit will be 1 divided by
+9600 and that equals to 104 microseconds
+so now all the receiver has to do after
+detecting the start bit is to count time
+we count 104 microseconds and then we
+are at the beginning of the first input
+bit but we don't usually save the value
+here because the data is unstable so we
+will go in the middle of the bit so we
+count 52 microseconds more and now we
+save the first bit and then we count 104
+microseconds more and save the second
+bit and so on once the receiver has Oh 8
+bits
+we'll wait for the stop bit which is
+represented by high posts and then we
+can send the receive data from the
+buffer to the rest of the system this
+exact same setup could be made with
+different speeds or different amount of
+bits for the same data usually the start
+and stop bits are always like this so
+that's how the word communication works
+another version of the word
+communication is the rs-232 that is used
+by all computers the arduino for example
+uses the word communication to upload
+the codes or send the data to the serial
+monitor
+this right here is a wired chip and you
+also see that it has a DTR pin and
+sometimes you will see a CTS pin these
+pins are used to notify that the data
+terminal is ready and that the receiver
+is clear to receive so in this way we
+won't have flow problems I connect the
+Arduino and here have the word signal on
+the oscilloscope and right now I'm
+sending the number before 198 as you can
+see we have exactly the representation
+before the start beat the data and the
+stop beat and the rest of the time the
+signal is high usually devices will have
+body TX and the rx pins so they could
+boot send and receive data with the same
+protocol okay guys next we need to take
+a look at the first synchronous serial
+communication and this is the ice-crazy
+or the inter integrated circuit this
+protocol was developed by Philips
+and in this case we need two connections
+plus the ground reference one wire will
+send the data and this will have the
+name of SDA and the second wire is the
+clock because this is a synchronous
+communication and it will have the name
+of SCL once again we need to specify the
+amount of bits that we will send and
+also to note the cut frequency for both
+the transmitter and receiver usually I
+square C could work with speed up to 400
+kilobits per second and it will send
+data of 15 or 16 bits in this case at
+the same time that we send the data we
+also create a clock post with the same
+frequency as the bit of the data so the
+receiver will know exactly when one bit
+will end and the next one will start so
+this can go faster since we don't need
+to count the time as in the word
+communication also using I square C the
+transmitter will send all kind of data
+but only certain receiver will be able
+to save the values we do that with the
+use of the slave address each receiver
+will have a different slave address so
+the transmitter will first send the
+address which for example could be 68
+then it will send the data so only the
+receiver with the 68 slave address will
+store the data into its buffer so the
+word communication is a one-to-one
+communication but the I square C could
+be used with multiple receivers for
+example this ampule 6050 module uses
+head classic communication
+I connect my oscilloscope to the data
+and Clark pins and now we can see the
+signal on the oscilloscope as you can
+see we have a square signal as a clock
+and then we have the same data each time
+we send a new value we also enable the
+clock signal and also send the slave
+address before sending the new data okay
+guys so that was ice crazy finally let's
+take a look at another synchronous
+serial communication SPI
+or Cir peripheral interface in this case
+we still have the clock connection but
+we also need three more wires
+mossie which is the master output slave
+input Mesa which is master input slave
+output and the chip select wire plus the
+ground reference so using a total of
+five connections we could send the data
+once again we have a master transmitter
+and the slate that could receive the
+data the most wire will send the data to
+the slaves but the master device could
+also receive data from the slaves using
+the miso wires in this case we don't use
+a slave address as for the I square C
+instead of that we have the chip select
+to start a new transmission
+the Master will put a chip select pin to
+low and then we send the clock and the
+data signals so if you want more slave
+devices connected you will need a chip
+select connection for each one the
+advantages of this type of communication
+is that it's full duplex in a full
+duplex mode both devices can transmit
+the signal at the same time so we could
+both send and receive we can do that
+with I square C because that is a
+simplest communication also at the same
+time the speed of transmission for the
+SPI is way higher than the I square C or
+what communication and at the same time
+the power consumption is also lower we
+can set the amount of bits that we want
+to send in the code but unfortunately
+this communication can send the data for
+long ranges as we can do with the rs-232
+or the can bus also these communications
+have no acknowledged pins so the master
+could send the data even if you don't
+have a slave connected and the data
+won't be receive by any device in case
+of the word communication we could have
+the DTR or CTR pins to do that now this
+other f24 radio module uses SPI
+communication I connect it to the
+Arduino and I hook up the oscilloscope
+we can see four signals for clock MOSI
+miso and chip select as you can see when
+we want to
+the data chief selectees low then we
+have the clock signal and the master or
+the slave we'll send the data so that
+was SPI now you should know more or less
+how art I Square C&S pay communications
+work leave a comment below if you want
+to see other protocols such as the JTAG
+the kent communication USB and so on
+i've made this video with these three
+because these are the most common used
+with everyday microcontrollers as you
+could see the arduino has all these
+types of communication on the same board
+so i hope that you learn something new
+if so give a like to this video and if
+you are not subscribed consider
+subscribing for more videos also
+remember to activate the notification
+bell so thanks again and see you later
+guys
+[Music]

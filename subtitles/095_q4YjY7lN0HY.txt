@@ -1,0 +1,47 @@
+here is a basic example of how machine
+learning can be used for predictive
+maintenance
+let's say that I have an electric motor
+and I have installed two vibration
+sensors on this motor now let's say that
+at a random point in time I see that the
+value for sensor a is 2 and the value
+for sensor b is 3. then a few minutes
+later I see that the value for sensor a
+is 3 and the value for sensor b is four
+a bit higher but still kinda in the same
+rate right I repeat this measurement a
+few more times to get a few extra values
+or data points using these data points I
+can see some sort of a model for
+vibration of the motor in normal
+operation mode
+now if I see a value outside of this
+area I can easily say that there is
+something wrong with the motor
+this is how I can use a simple machine
+learning technique to predict if the
+motor requires any maintenance
+speaking of machine learning I have some
+exciting news for you realparts has
+recently formed a partnership with Edge
+impulse which is one of the best
+in-class machine learning Platforms in
+the world and based on this new
+partnership real parse and Edge impulse
+are going to team up to create new
+courses and videos on new machine
+learning Technologies for all of you
+engineers and technicians active in the
+world of Industrial Automation so stay
+tuned for all those new courses and
+videos soon and if you want to learn
+more about Edge impulse you can head on
+over to their website over at
+edgeimpulse.com We'll add a link to
+their website in the video description
+as well and that's all thank you very
+much for watching this video and I'll
+see you in the next video
+[Music]
+thank you

@@ -1,0 +1,577 @@
+feature selection in machine learning my
+name is Richard kersner with the
+simplylearn team that's www.s simply
+learn.com get certified get ahead today
+we're going to look at what's in it for
+you the need for feature selection what
+is feature selection feature selection
+methods feature selection statistics
+so the need for feature selection to
+train a model we collect huge quantities
+of data to help the machine learn better
+consider a table which contains
+information on old cars the model
+decides which cars must be crushed for
+spare parts and when we talk about huge
+quantities of data they they save
+everything from people's favorite cat
+pictures to and you can imagine there's
+so much data out there even in a company
+they'll save all these little pieces of
+information about people and companies
+and corporations you need some way to
+sort through because if you try to run
+your models on all of it you'll end up
+with these very clunky models and they
+might have uh issues which we'll talk
+about later but in this case we're
+talking about cars and crushing but not
+all this data will be useful to us some
+classes or part of the data may not
+contribute much to our model and could
+be dropped and you can see right here we
+have uh who was the owner of the car um
+in our data a car will not be crushed
+based on its previous owner um so you
+know that's kind of a clear cut you can
+see see that why would I care who owned
+the car before once it's in the junkyard
+and we're crushing the cars we're not
+going to really care about that so here
+we have dropped the owner column as it
+does not contribute to the model having
+too much unnecessary data can cause the
+model to be slow the model may also
+learn from this irrevelant data and be
+inaccurate so feature selection is a
+process of reducing the input variable
+to your model by using only relevant
+data and getting rid of the noise in the
+data consider the database given below a
+library wants to donate some old books
+to make place in their shelves for new
+books we want to train a model to
+automate this task in this case the
+color of the book does not matter and
+keeping it can cause a model to learn to
+donate books based on color we can
+remove this as a feature using feature
+selection we can optimize our model in
+several ways and so the number one is to
+prevent learning from noise and
+overfitting uh that's actually the huge
+one because we we don't want it to give
+us the wrong prediction and that means
+also improved accuracy uh so instead of
+giving us a wrong prediction we also
+want it to be as close to the right
+answer as we can get and we want to
+reduce the training time it's an
+exponential growth in some of these
+models so that each feature you add in
+increases that much more training time
+we talk about feature selection methods
+uh we put together a ni little flowchart
+that shows the various methods used for
+feature
+selection and you have your basic
+feature selection and then there is
+supervised and
+unsupervised under supervised there's
+intrinsic wrapper method filter method
+so we talk about unsupervised feature
+selection refers to the method which
+does not need the output label class for
+feature selection and that was uh you
+can see here under super unsupervised we
+don't havean that's really a growing
+market right now um supervised learning
+and so feature selection is the same
+thing supervised feature selection
+refers to the method which uses the
+output label class for the feature
+selection and if you remember we looked
+at uh three different we have intrinsic
+wrapper and filter method so we're going
+to start with the filter method on this
+now remember we know what the output is
+so we're going to be looking at that
+output to see how well it's doing versus
+the features in this method features are
+dropped based on their relation to the
+output how they are correlating to the
+output and you can see here we have a
+set of features selecting best feature
+learning algorithm and then performance
+and so we want to find out which feature
+correlates to the performance on the
+output consider the example of book
+classifier here we dro the color column
+based on simple deduction and that kind
+of sums it up in the in a nutshell is we
+want to filter out things that clearly
+do not go with what we're looking for we
+look at the wrapper method uh in the
+wrapper method we split our data into
+subsets and train a model using this
+based on the output of the model we add
+and subtract features and train the
+model again and you can see here in the
+wrapper method where we have a set of
+features uh we generate a subset we run
+it through the algorithm and we see how
+each one of those subset of features
+performs consider the book data set by
+using the wrapper method we would use a
+subset of different features to train
+the machine and adjust a subset
+according to the output and so you can
+see here let's say we take uh name and
+number of times red and we run just
+those and we look at the output and if
+we looked at them with all four inputs
+and look at the output we'd see quite a
+different variation in there and we
+might say you know what condition of the
+book and color really doesn't uh affect
+what we're looking for and you can see
+here we've rented on uh condition of the
+book and
+color depending on the output of the
+model we will choose our final set of
+features these features will give us the
+best result for our model
+and I might come up that the name number
+of times red is probably pretty
+important the intrinsic method uh this
+method combines the qualities of both
+filter and wrapper method to create the
+best subset the model will train and
+check the accuracy of different subsets
+and select the best among them we kind
+of looked at a little overview of some
+of the stuff um some of the common
+feature selection algorithms based on
+which method they belong to are given
+below and you'll see it's primarily
+under supervised there's not like I said
+a lot of unsupervised methods and the
+ones that are usually used these methods
+and finds a way to create a supervised
+um connection between the data when we
+talk about supervised uh methods we have
+our filter method which we talked about
+uh and it uses like the Pearson's
+coefficient uh CH squared a Nova
+coefficient those are all under the
+filter method and in the wrapper method
+recursive feature elimination so
+remember we're choosing a subset and we
+want to go through there and look at
+each on so you're just doing a lot of
+Loops or recursive um calculations to
+see which one works best and which ones
+don't have an impact on the output and
+there's a lot of genetic algorithms to
+go with us too on the wrapper method and
+how they evaluate it and with the
+intrinsic method uh there's the two main
+ones we're looking at is the lasso
+regularization the lasso algorithms are
+basically your standard um regression
+model so it's finding out how these
+different methods fit together and which
+ones have the best um add together to
+have the least amount of error the other
+one used in the intrinsic method is a
+decision tree it says hey if this one is
+uh this one produces this result this
+one produces this result yes no which
+way do we go based on the input and the
+output variables we can choose our
+feature selection model so you have your
+numeric input coming in you have your
+numeric output if you use the Pearson's
+correlation coefficient or spearman's
+rank coefficient uh you can then select
+cect what features you're going to feed
+into that specific model and you maybe
+have a numerical input and a categorical
+input so we're going to be looking more
+at a Nova correlation coefficient or
+Kindle's rank coefficient and if you had
+a core categorical input and a numerical
+output we might be looking at a Nova
+correlation coefficient in Kindle's rank
+coefficient So based on the input and
+the output variables we can choose our
+feature selection model and you can see
+we have categorical to categorical we
+might be looking at the the um chai
+squared test um contingency tables and
+mutual information let's go a and take a
+look and see uh in the python code what
+we're talking about here and I'm going
+to go ahead and use for my IDE the
+Jupiter notebook in the and I always
+launch it out of anaconda here and we'll
+go ahead and go up here and create a new
+Python 3
+module and we'll call it
+uh
+feature select
+and since we're in Python we're going to
+be working mainly with your numpy your
+pandas your map plot Library so we have
+our number array our data frame setup
+which goes with the number array the
+numpy the Panda's data frame and then we
+want to go ahead and graph everything so
+we're going to import these three
+modules and then we put down other some
+uh data um we're going to read this in
+it's uh Kobe Bryant I guess he's a b
+basketball player our guys in the back
+uh we have a number of them guys it's
+both we have a lot of men and women so
+it's probably a misnomer our team in the
+back um they have a some of them have a
+liking for basketball and they know who
+Kobe Bryant is and they want to learn a
+little bit more about Kobe Bryant and
+what's going in for what whatever is
+going on with his game in basketball so
+we're going to take a look at him uh and
+once we import the data we can see what
+columns are available uh original
+features count so we can see how many
+features are um the length of it and
+we'll actually have a list of them and
+then print just a uh the data head the
+top five
+rows and so when we do this we can see
+from this CSV file uh we have 25
+original features our original features
+are your action type combined shot type
+game event ID and so forth there's a lot
+of features in here that they're
+recorded on all of his shots this is
+what we talk about like a massive amount
+of data I mean people are sitting there
+and they they record all this stuff and
+they import this stuff for different
+reasons but depending on what we want to
+look at do we really want all those
+features maybe the question we're going
+to ask is uh what's the chance of him
+making any one specific
+shot um in right from the beginning we
+can look at the some of these things and
+say team name uh team name probably I
+don't know maybe it does matter because
+the other team might be really good at
+defense uh game date maybe we don't
+really want to look look at the game
+date team ID definitely not of
+importance in any of this uh so when we
+look at this we have 25 features and
+some of these features just really don't
+matter to us we also have location X
+location y latitude and longitude I'm
+guessing that's the same data we've
+actually imported the the very similar
+data maybe they're slightly zoned
+differently but as far as our program we
+don't want to repeat data some of the
+models when you repeat data into them
+and this is true for post models create
+a huge bias they weigh that data over
+other data so just at a glance these are
+the things we're looking at we want to
+find out well how do we get this these
+features down and get rid of this bias
+and all these um extraneous features
+that we don't really want to spend time
+running our models on and programming
+on and as I pointed out there's a
+location x a location y latitude and
+longitude
+uh let's just take a look at that and
+see what we're looking at here uh we'll
+go ahead and create a plot of these and
+we'll just plot uh we'll do a scatter
+plot of location X and location Y and
+then we'll do a um a scatter plot of um
+data lawn data lat which is probably
+longitude and latitude and the scatter
+plot just going actually put a little
+Title Here location and Scatter on there
+we'll just go ahead and plot these and
+when you look at
+this uh coming in
+in these two graphs are pretty identical
+except they're flipped and so when we
+look at the location from which they're
+shooting from they're probably the same
+and at this point we can say okay we can
+get rid of one of these sets of datas we
+don't need both X and Y and latitude and
+longitude because it's the same data
+coming in and as we look at this
+particular data the latitude longitude
+uh we might also ask does it really make
+a difference which side of the Court
+you're on uh whether you're on the left
+side or the right side and so we might
+go ahead and explore um instead of
+looking at this
+as XY we might look at it as a distance
+and an angle and we can easily compute
+that and you can see we can create our
+data distance equals location X um plus
+a location y^2 standard uh ukian
+geometry or triangular
+geometry hypotenuse squared equals the
+each side
+squared and then once we've done
+that uh we can also compute the angle uh
+so the data angle is based on the arc
+tangent uh and so forth on here so this
+is all this is is we're just going to
+compute the angle here and then set that
+up uh pi over two to get our
+angle and we'll go ahead and run
+that and you'll see some errors Run come
+up and that's because when we took
+slices over here we took a slice of a
+slice um there's ways to fix that but
+it's really not important for this
+example uh so if you do see that you
+want to start looking up here for um
+instead of data location X of uh not
+location x0 this would be like um I
+believe the term is I do iocation uh if
+this was yeah this is in pandas uh so
+there's different things in there but
+for this it doesn't really matter uh
+these are just warnings that's all they
+are and then let's combine our remaining
+minutes and seconds column into one uh
+there's another one so if you remember
+up here we're trying to get rid of these
+columns do we really need let me see if
+I can find it on here there we go
+there's our minutes
+remaining um and then they had what was
+it it was uh minutes remaining and
+seconds column so there's also a seconds
+column on here uh let me see if I can
+find that one this is where it really
+gets kind of crazy because here's our
+seconds remaining so you can see that
+and here's our minutes remaining this
+gets crazy when you're looking at
+hundreds of these features uh and you
+can see that if if I'm going to say um
+write a model that's going to predict a
+lot of this and I want it to run in this
+case it's a basketball and how good his
+shots are as the data comes in let's say
+I want to have it run on your phone if
+I'm running it across hundreds of
+features it's going to just hang up on
+your phone where if I can get it down to
+just a handful um we'll actually be able
+to come in here and run it on a smaller
+device and not use up as much memory or
+processing power uh so we'll go ahead
+and take data remaining time
+here um and data minutes remaining times
+60 plus data seconds remaining so we're
+just going to combine those and we'll go
+ahead and reprint our data so we can see
+what we
+got um coming across we have our action
+type combined and this is we do this a
+lot uh we want to take a look at o I got
+it so so zoomed in let me see if I can
+zoom out just a little bit there we go
+boom all right so we come up here you
+can see that we now have our distance
+our angle remaining time which is now
+just a number uh that computes both the
+minutes and seconds
+together and we still have we we've been
+adding columns I thought you said we're
+supposed to subtract columns right um
+we're going to delete the obsolete
+columns when we get to them uh so we're
+just filtering out and this is a filter
+method we're just filtering through the
+things uh that we really don't need and
+next let's go ahead and explore team ID
+and team name let me just go ahead and
+run that and if you look at this uh we
+have Los Angeles Lakers and then they
+have the team ID here and they're unique
+uh there's not that's not really
+anything that's going to come up uh
+because that's this particular
+athletes works for that team so it's the
+same on every line so there's another
+thing we can filter out on there team ID
+and te name is just useless uh the whole
+column contains only one value each and
+it's pretty much useless let's go ahead
+and take a look at matchup and opponent
+that's an interesting one and we see
+here that uh we have the L versus p and
+the opponent is p and I
+IND again here's a lot of duplicate
+information uh so this basically
+contains the same information on here
+again we're filtering all this stuff out
+and this is because we're only looking
+at one athlete this might change if
+you're looking at multiple athletes that
+kind of thing now these are easy to see
+we might have something that looks more
+like this um we might have something
+where we're looking at the distance
+which we computed and the shot distance
+are they the same thing and what we can
+do is we can plot that and plot them
+against each other on here and we see it
+just draws a nice straight line uh and
+so again we're looking at the same
+information so again we're repeating
+stuff and we really don't want to be
+running our model on uh repeat
+information on here so again it contains
+the same information so now let's look
+at the shot Zone area shot Zone basic
+shot Zone
+range so now we're looking at the zones
+and what does that mean and we'll go
+ahead and and do this also in a scatter
+plot um in this case we're going to just
+create three of these side by side so
+we're going to create um our plot figure
+side 20 by10
+and then we're going to Define our
+scatter plot by category feature and
+we're going to do each one uh set up on
+here give it it slightly different color
+and so our shot Zone area is going to be
+plot uh subplot 131 scatter 131 is how
+that's read by the way uh meaning that
+it's number
+one um we have three
+across and this is the first one down so
+one one one our scatter plot by category
+is going to be the shot Zone area we're
+going to plot that and then we're going
+to do the shot Zone basic and then the
+shot Zone range and each just push them
+through our definition so each of those
+areas go through and you'll see 13 1 132
+133 again it's a 1x3 um setup and then
+it's just a place on each one and so
+when we look at this we can see that
+these shots uh they map out the same so
+it's very again redundant information
+that should be intuitive um when looking
+at this in these color
+graphs it kind of helps and you start
+looking at something you it's very
+intuitive like this is and you start to
+realize that some of this stuff um
+you'll be looking for in data you might
+not understand and you'll see these
+circular patterns where they match or
+they mostly match and you start to
+realize um when you're looking at these
+that they're repetitive data and then
+you want to explore them more closely
+depending on what domain you're working
+in so we we look at these and we look at
+them and they look just like the regions
+of the Court uh but we already have
+stored this information in angle and
+distance columns so we've seen this
+image before we go back up here and
+here's our the similar
+image and repeating that image is down
+here and so let's go ahead and drop some
+of this in this stuff uh so now let's
+drop all the useless columns and we can
+drop the shot ID team ID team name shot
+Zone area shot Zone range shot Zone
+basic uh the matchup
+uh the longitude and latitude we're
+putting that into distance seconds
+remaining minutes remaining because we
+combine that into one column shot
+distance because we have just distance
+on there location X location y the game
+event ID game ID all this stuff is just
+being dropped on here and we'll just go
+ahead and loop through our drops and
+this is a nice way of doing this because
+as you're playing with this um this kind
+of data putting your list into one setup
+helps uh because then you're just
+running it through an
+iteration and you can come back and
+change it uh you might be playing with
+different models and do this with models
+you might be looking at all kinds of
+different things that you can drop and
+add in as you test these out and again
+we're working in the filter method so
+this is a lot of human interaction with
+the data and it takes a lot of critical
+thinking to look at this stuff and say
+what matches and what doesn't and so
+when we look at the remaining features
+uh let me go ahe and just run this
+uh the original to the new count we had
+25 features now we have 11 features you
+can see that right there we just circle
+that there's our 25 and there's uh old
+new now we're down to 11 so we've cut it
+down to less than half uh and you can
+just see the actual different
+information on here and the remaining
+time at this point we filtered it
+through and then we'd move into the next
+process which would be to run our model
+on this and maybe we would draw
+um some of the features and see if it
+runs better or worse and what
+happens uh that's kind of would be the
+next step on there versus is the filter
+setup and that would be one of the other
+setups depending on which algorithm you
+use so that wraps up our demo on uh
+filter the feature selection and going
+through and seeing how these different
+features are being repeated in this
+particular in a basketball uh setup
+there's like I said there's a lot of
+other me methods on there but the filter
+one is really good because that's where
+you usually start you want to have your
+own Visual and try to understand how it
+works thank you for joining us for
+simplylearn that's www.s simplylearn
+[Music]
+docomomo post information on the YouTube
+below and we will reply to that uh if
+you want a copy of the data we use for
+this you can also request that from
+there hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

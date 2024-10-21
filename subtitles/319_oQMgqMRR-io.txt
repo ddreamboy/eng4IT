@@ -1,0 +1,481 @@
+[MUSIC PLAYING]
+POLONG LIN: Hi, I'm Polong.
+ZACK AKIL: And I'm Zack.
+POLONG LIN: And we're
+going to show you
+10 ways of using machine
+learning with Google Cloud.
+ZACK AKIL: We're going to
+cover beginner, intermediate,
+and advanced ways of
+doing machine learning.
+POLONG LIN: Beginner is
+perfect for those brand
+new to machine learning
+and who want to use it
+without the expertise.
+ZACK AKIL: And
+intermediate is for those
+that have some knowledge
+of machine learning
+but may want to
+customize their models.
+POLONG LIN: Advanced is
+for the ML engineer who
+wants to take their
+skills or knowledge
+to the next level with
+full customizability
+and at the enterprise
+grade scale.
+ZACK AKIL: And we're
+going to give you
+links for each of these tools
+where you can learn more.
+Let's get started.
+POLONG LIN: Hey, Zack.
+I'm trying to build a
+prototype to classify images,
+specifically for identifying
+flower species based
+on some photos I have.
+I don't have a
+lot of photos yet.
+But I really just
+want the fastest way
+to get a quick proof of
+concept out the door.
+What could I use?
+ZACK AKIL: That sounds
+like a perfect use
+case for Teachable Machine.
+It's a browser-based tool that
+lets you build image or audio
+classifiers in just
+a couple of minutes.
+And what's really
+great about it is
+that you can capture training
+data directly from your webcam
+or microphone right away.
+You can see here we're
+uploading our flower images
+and training a brand new
+model right in the browser.
+And once the model
+is trained, we
+can make predictions right in
+the browser to test it out.
+Also, by the end of this, we'll
+have a full machine learning
+model that we can export.
+And this model is a
+TensorFlow Lite model,
+which means we can deploy it
+anywhere, like mobile, web,
+or even in the Cloud.
+So that's Teachable
+Machine, the perfect tool
+for your prototypes.
+POLONG LIN: All right, Zack.
+I'm trying to build an
+enterprise grade image
+classification model.
+But I don't really
+have the expertise.
+And my model needs to be
+really accurate and scale well.
+I'm not a data scientist
+or ML engineer.
+But I already have a label
+data set ready to go.
+What can I use?
+ZACK AKIL: Ah, now that
+sounds like a perfect use case
+for AutoML in Vertex AI.
+It's a machine-learning tool for
+developers on Google Cloud that
+allows you to train custom
+enterprise grade models based
+on your own data.
+You can use it to
+build models to predict
+on your images, video,
+text, or even tabular data.
+And because it's
+part of Vertex AI,
+you can easily deploy your
+models for large scale batch
+and real time predictions.
+POLONG LIN: Hey, Mr.
+Zack, I'm a developer.
+And I have an app where I
+want to add some ML powered
+capabilities without
+needing to build or deploy
+any models myself--
+specific tasks like
+image-labeling,
+sentiment analysis, or
+text classification.
+What can I use that just
+works out of the box?
+ZACK AKIL: Ah,
+excellent question.
+I think some of the pre-trained
+ML APIs would be perfect.
+These are powerful
+pre-trained models
+that allow you to embed machine
+learning capabilities directly
+into your applications with
+just a single API call.
+You can see here how there
+are great common tasks
+like sentiment analysis
+in text, object and person
+detection in video, and
+even some really cool things
+like landmark
+detection in photos.
+And there's loads
+of other features
+that I haven't even mentioned.
+So definitely check out
+the ML APIs in Vertex AI.
+POLONG LIN: Hey, Zack.
+I want to generate
+images and text.
+Where can I begin?
+ZACK AKIL: Now that
+sounds like a perfect use
+case for Generative AI Studio.
+It is a managed
+environment in Vertex AI
+that makes it easy to
+deploy, interact with,
+and tune generative
+models to production.
+It's got a simple interface
+for prompt design, tuning,
+and deployment for
+developers to get
+started building
+with generative AI.
+Let's walk through an example.
+Let's say I have some blog
+content around healthy granola
+bars.
+And I want to generate a
+multimedia marketing campaign
+around this.
+Using just the
+blog content, I can
+write a prompt and Generative
+AI Studio will generate a blog
+title, headline, and Instagram
+caption with hashtags
+for a marketing campaign.
+And there you have a blog
+headline, a blog post,
+and an Instagram content
+for our campaign.
+No ML expertise required.
+And you can also view the
+API code to use Generative AI
+Studio programmatically.
+We can also use Vertex's
+generative vision AI
+capabilities.
+With our image
+generation model, I
+can use the simple text
+prompts to generate
+images that go along with
+my marketing campaign.
+You can see here a
+prompt being used
+to generate multiple images of a
+granola bar on a kitchen table.
+And then we can then
+use these images
+in our marketing campaign.
+And that's just one
+example of how you
+can use Generative AI Studio.
+But note, you can also tune
+the foundation model as well.
+Hey, Polong, I'm looking
+for a single place
+where I can search,
+discover, and use
+models that might be available
+to me on Google Cloud.
+Where can I go for this?
+POLONG LIN: Ah,
+for that use case,
+you might really like
+Vertex AI Model Garden.
+It provides a single
+environment to search, discover,
+and interact with curated
+models both from Google
+and open source.
+For Model Garden, you can kick
+off a variety of workflows,
+including using the
+model directly as an API,
+tuning the model in
+Generative AI Studio,
+or deploying the model
+directly to a data science
+notebook in Vertex AI.
+We've also just
+launched four new APIs
+that will be available
+in the Model Garden.
+We've announced our code
+generation and completion
+models, which can help
+with software development.
+We've also announced an
+image generation model,
+which includes the ability
+to edit and iterate over
+images you've generated.
+We've also announced
+our universal speech
+model, which is the next
+generation of speech to text.
+And then we've also
+announced an embedding model,
+which lets you
+extract embeddings
+from unstructured data.
+ZACK AKIL: Hey, Polong.
+I wish I had a way to tune
+my models to understand
+my preferences in the way
+that they respond to me.
+What should I do?
+POLONG LIN: Well, I heard
+that GCP is coming out
+with a new capability
+called reinforcement
+learning from human
+feedback, or RLHF for short.
+With RLHF, you can
+tune your models
+to learn directly from
+positive or negative feedback
+and use that to optimize the
+performance of your models.
+Be on the lookout for more news
+about this exciting capability
+later this year.
+ZACK AKIL: Hey, Polong.
+I've already got a lot
+of data in BigQuery.
+And ideally, I'd like to
+use this data to train
+my own machine learning models.
+But I'm not quite
+sure where to begin.
+POLONG LIN: Well, that
+sounds like a perfect use
+case for BigQuery ML.
+Using just SQL, you can train,
+evaluate, make predictions,
+all within BigQuery without
+needing to move your data out
+of your data warehouse.
+So in this example, you can
+create a classification model
+in SQL with a create
+model statement,
+then make predictions
+using an ML.predict query.
+You can even use
+BigQuery ML directly
+on your unstructured data via an
+exciting new capability called
+BigQuery ML inference engine.
+So say you have
+unstructured data
+like image files stored
+in Google Cloud Storage,
+but your primary workflow
+is all through BigQuery,
+so now using BigQuery
+ML inference engine,
+you can run inference directly
+on data stored in Cloud Storage
+through BigQuery.
+Your models could be
+imported TensorFlow models,
+XG boost models, ONNX models,
+or even a custom Vertex AI
+endpoint that you have deployed.
+And if you don't
+have a model at hand,
+you can use the
+pre-trained ML APIs
+like the vision, natural
+language, and translate APIs.
+Check out the BigQuery ML
+link for more information.
+ZACK AKIL: Yo, Polong, I
+want to get my hands dirty
+and play around with machine
+learning libraries in Python.
+How do I get started
+as quick as possible?
+POLONG LIN: As
+quick as possible?
+That sounds like a perfect
+use case for Colab.
+In seconds, you can
+create a Colab notebook
+and start using Python
+directly in the browser.
+You can import or install
+your favorite libraries.
+And you can even load notebooks
+or code that you found online
+or check out some of
+these sample notebooks.
+You can also use Colab
+with Google Cloud
+like reading data from BigQuery.
+So check out Colab
+in the link below.
+ZACK AKIL: All right, Polong.
+I've played around with Colab,
+and I'm loving the notebook
+environment.
+But I'm an enterprise developer.
+And now I want to think
+about production workloads.
+And I also want to
+think about integrations
+with the rest of Google Cloud.
+What can I do?
+POLONG LIN: That's
+a great question.
+And it sounds like you
+might get a kick out
+of Vertex AI Workbench.
+You can create and customize
+JupyterLab instances
+on Google Cloud.
+So here you can
+see some instances
+with just Python and others
+with TensorFlow or PyTorch
+pre-installed with
+GPUs attached.
+And as you open
+an instance, it's
+the familiar Jupyter
+Notebook interface.
+You can create new instances
+and customize things
+like the size of your machine
+and location and permissions.
+And it's got great integrations
+with the rest of Google Cloud
+because it's part
+of Google Cloud.
+ZACK AKIL: I'm a
+machiner and engineer.
+And I need an enterprise grade
+way to train my custom models
+at scale.
+What can I use?
+POLONG LIN: Well,
+Zack, might I say
+that is a perfect use case
+for Vertex AI custom training.
+You can bring your ML
+code and run it in a Cloud
+with Vertex AI.
+You can keep track of
+your model experiments,
+use automated
+hyperparameter tuning,
+and leverage ML op's
+capabilities of Vertex AI
+like orchestrating your
+model training and deployment
+workflows with
+Vertex AI pipelines.
+So imagine that I
+have a model that I've
+been training in a
+notebook environment
+for experimentation.
+And maybe once I'm
+closer to production,
+or if I have really
+heavy training workloads,
+then I might just
+train directly using
+Vertex AI custom training.
+So I containerized my
+code, then submit it
+to Vertex AI custom training
+to run it for me in a managed
+and repeatable way.
+So find out more about
+Vertex AI custom training
+in the link on the screen.
+Hey, Zack.
+I'm an enterprise developer.
+And I want to build
+a fast AI powered
+search based on unstructured
+data, using embeddings.
+What can I use?
+ZACK AKIL: Ah, embeddings, that
+sounds like a perfect use case
+for Vertex AI matching engine.
+It's our highly optimized vector
+database that stores and does
+fast lookups of embeddings.
+But what does this mean?
+Well, in this example, we have
+two million random images.
+And we want to search for
+the images that look the most
+similar to this yellow car.
+So the matching engine will
+do an extremely fast lookup
+by finding the nearest
+embeddings to the embedding
+of this yellow car.
+And then it's going to return
+the results in milliseconds.
+Because it's embeddings, we
+can use a variety of data types
+like text, images, video,
+audio, or anything else
+that you can convert
+into embeddings.
+Vertex AI matching engine even
+supports real time updates
+so that you can make
+new data immediately
+searchable without needing to
+reindex the entire database.
+POLONG LIN: Awesome.
+So that was the final
+item on our list
+of 10 ways of doing machine
+learning with Google Cloud.
+Check out the links to learn
+more about each of the 10 ways.
+ZACK AKIL: Thank you
+so much for watching.
+And enjoy the rest
+of Google I/O.
+[MUSIC PLAYING]

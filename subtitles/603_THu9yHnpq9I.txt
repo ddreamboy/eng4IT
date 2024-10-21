@@ -1,0 +1,51 @@
+Hello and welcome to dimensionality reduction.
+My name is Alex Cayco Gajic. I'm a junior professor at the group for neural theory at ENS in Paris,
+and I'm interested in how the cerebellum contributes to motor control especially using techniques from population coding and statistical learning.
+Before jumping in to the lectures,
+I want to give a brief overview of the tutorials that you'll encounter today. In the first tutorial,
+You'll learn to conceptualize multivariate data from a geometric point of view.
+This is going to be very useful for understanding how principal component analysis works, which is the topic of the second tutorial.
+Both of these are going to use toy data that is two-dimensional and that's really going to be very useful for building your intuition.
+In the third tutorial, you will use PCA for dimensionality reduction in high dimensional data.
+And then in the final tutorial, you will learn a nonlinear dimensionality reduction technique called t-SNE.
+But let's jump right into a geometric view of data.
+Multivariate means many variables and as scientist when we perform an experiment and make many observations,
+essentially what we're doing is collecting samples of many variables that we're observing through the experiment.
+I'm going to keep returning to the example of a neural recording. So in this case, each Xi
+represents the firing rate of a particular neuron,
+from the whole population of neurons that you're recording from.
+You could also imagine that each Xi could represent a behavioral variable for a particular behavioral task.
+So at each time point in the experiment,
+you will collect a new vector corresponding to the firing rates of all of these neurons. And,
+how do you represent all this data? One way is to just stack all of the vectors together into the data matrix X.
+In this matrix, each row
+Corresponds to a single sample of all of the variables. So all of the firing rates of all neurons at a single time point.
+And each column
+corresponds to all of the samples of a single variable so X3 would be the
+firing rates for neuron 3 at all time points in your experiment.
+Another way to represent this data is as a point in a high dimensional vector space.
+This can be described by the coordinate axes each of which represents the firing rates for a different neuron.
+I'm going to focus on the 2-dimensional case for the sake of visualization.
+When you collect multiple samples from your experiment,
+then you will get multiple data points, which will lie on different locations in this
+vector space and that's because there is typically a lot of variability in neural data. But there's different flavors of variability, and
+one possibility is you may see data that looks like this so this is an example of uncorrelated
+data, where the variability of neuron 1 is pretty much the same as the variability of neuron 2.
+On the other hand, you might see uncorrelated data where one neuron has much higher variability than the other neuron.
+so in this case, you can see that the
+direction of most of the variance of the data is
+along the axis corresponding to neuron 1.
+On the other hand, you might see that your data is very correlated. And in this case notice that the direction
+corresponding to most of the variance in the data is
+aligned neither with neuron 1's coordinate axis nor with axis of neuron 2.
+Essentially the goal of PCA is to find this direction.
+So to give you the really big picture view of the message for today:
+Typically in neural data, even when we're recording from very large numbers of neurons. We don't observe
+that the neural activity patterns
+are
+uniformly distributed across
+the entire vector space of possible activity patterns.
+Usually we see that they are constrained to lie on a lower dimensional subspace,
+and the goal of PCA is to find this low dimensional subspace by looking for directions of
+maximum variance in the data. But before we can
+understand how this really works, we'll work on developing our intuition for a geometric view of data.

@@ -1,0 +1,194 @@
+welcome to the cloud computing tutorial
+for beginners
+in this guide we'll introduce
+you to the fundamental concepts of cloud
+computing and help you understand how it
+works
+let's get started
+table of contents
+one what is cloud computing
+two benefits of cloud computing
+three cloud service models
+infrastructure as a service is
+platform as a service pass
+software as a service says
+4. Cloud deployment models
+public cloud
+private Cloud hybrid cloud
+Community cloud
+5. popular Cloud providers
+6. Asic Cloud terminology
+virtualization
+scalability
+elasticity
+redundancy
+load balancing
+7. security and privacy in cloud
+computing
+8. cloud computing use cases
+web hosting
+storage and backup
+development and testing
+big data analytics
+Internet of Things iot applications
+9. getting started with cloud services
+signing up for an account
+creating virtual machines
+deploying applications
+managing data and Storage
+10. challenges and considerations in
+cloud computing cost management
+data security and compliance
+vendor lock-in
+performance and downtime
+data transfer and bandwidth costs
+11. future Trends in cloud computing one
+what is cloud computing
+cloud computing refers to the delivery
+of Computing Services
+including servers storage databases
+networking software and more over the
+internet
+the cloud
+instead of owning and maintaining
+physical servers or data centers cloud
+computing allows you to
+access and use resources as needed on
+the pay-as-you-go basis
+two benefits of cloud computing
+some of the key advantages of cloud
+computing are
+cost savings
+pay for what you use
+avoiding The Upfront cost of hardware
+and infrastructure
+scalability
+easily scale resources up or down based
+on demand
+accessibility
+access your applications and data from
+anywhere with an internet connection
+flexibility
+choose from a variety of cloud service
+models
+to suit your specific needs
+reliability
+leaving Cloud providers
+offer high uptime and redundancy to
+ensure continuous availability
+three cloud service models
+there are three primary cloud service
+models
+infrastructure as a service is
+provides virtualized Computing resources
+over the internet
+users can rent virtual machines storage
+and networking components to build their
+own I.T infrastructure
+platform as a service bus
+a platform allowing customers to develop
+run
+and manage applications without the
+complexity of building and maintaining
+the underlying infrastructure
+software as a service says
+delivers software applications
+over the internet on a subscription
+basis users can access the software
+through a web browser without needing to
+install or manage it locally
+4. Cloud deployment models
+cloud computing can be deployed in
+different ways
+public cloud
+services are offered over
+the public internet and shared among
+multiple customers
+it's managed by a third-party cloud
+provider
+private cloud
+infrastructure is dedicated
+to a single organization and can be
+managed internally or by a third-party
+provider
+hybrid cloud
+combines public and private clouds
+allowing data and applications to be
+shared between them
+Community cloud
+shared by several organizations with
+similar requirements
+such as Regulatory Compliance
+5. popular Cloud providers
+some of the major cloud service
+providers are
+Amazon web services else
+Microsoft azure
+Google Cloud platform gcp
+IBM cloud
+Oracle cloud
+6. Asic Cloud terminology
+versions of computing resources
+such as servers storage and networks
+scalability
+the ability to handle increased or
+decrease Demand by adjusting resources
+elasticity
+automatically scaling resources based on
+workload fluctuations
+redundancy
+duplicating critical components to
+ensure High availability
+and reliability
+load balancing
+Distributing incoming Network traffic
+across
+multiple resources to optimize
+performance
+7. security and privacy in cloud
+computing
+Cloud providers Implement various
+security measures
+but customers must also take steps to
+protect their data
+encryption access controls and regular
+audits are
+some common practices
+8 cloud computing use cases
+cloud computing is used for various
+purposes including
+web hosting
+host websites and web applications on
+the cloud
+data storage and backup
+store and backup data securely in the
+cloud
+development and testing
+create development and testing
+environments quickly
+big data analytics
+process and analyze large volumes of
+data efficiently
+iot applications
+Support internet of things devices and
+applications
+9. getting started with cloud services
+sign up for an account with a cloud
+provider and explore their service
+offerings
+you can create virtual machines deploy
+applications
+and use various cloud services
+10. challenges and considerations in
+cloud computing
+address issues such as cost management
+data security
+vendor lock-in and performance when
+using cloud services
+11. future Trends in cloud computing
+stay updated on the latest developments
+in cloud computing such as Edge
+Computing serverless architectures and
+advances in a integration
+thanks for watching
+to watch more subscribe

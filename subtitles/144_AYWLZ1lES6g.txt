@@ -1,0 +1,234 @@
+from the day i started messing around with 
+some data in Excel it took me about three  
+years to land a data analyst job at Heineken and 
+another two years to land a job as a freelance  
+data analyst at a big bank in Europe and another 
+two years to quit that job and travel the world  
+full-time but more on that later can you become 
+a data analyst way faster? 100% i've wasted too  
+many hours watching youtube tutorials and i've 
+spent money on Udemy courses that didn't add  
+any value so i often ask myself if i could start 
+over with data analysis knowing what i know today  
+how would i go about it? and that's exactly what 
+this video is about i'll remove all the fluff and  
+give you the fastest path to go from zero to 
+a full-time data analyst and throughout this  
+video i will share the three major mistakes almost 
+every data analyst makes so stay tuned for those  
+the first thing every beginner data analyst needs 
+to pick is a tool or programming language for data  
+analysis i personally started off with Excel is 
+that the best tool there is for data analysis no  
+if i could go back in time would have started 
+with something else also no because apparently  
+getting good at Excel was enough for my first 
+data analysis job and i personally recommend  
+every single data analyst to start off with 
+Excel it's easy to learn used in almost every  
+company and it has a wide range of applications 
+for data analysis but this is also it's pitfall  
+although you can do a lot of different things 
+in Excel it's not designed specifically for  
+data analysis meaning it has its limitations 
+you want to work with a very large data set  
+well good luck not punching through your computer 
+screen after Excel crashes for the 27th time  
+Excel is perfect for starting out but once 
+you've mastered excel it's time to move on  
+to the more serious tools and the most logical 
+tool to learn next is SQL next to Excel it is  
+apparently the second most requested skill in data 
+analyst job openings huge thanks to Luke Barousse  
+for actually scraping a lot of Linkedin 
+job openings to come up with these facts  
+you're a legend man thank you what up that nerds 
+and the reason SQL is so in demand is because  
+it doesn't have the same limitations as Excel 
+why is my accent suddenly changing to southern  
+i don't know what with SQL you can extract 
+transform and load very large data sets but  
+the best thing about it is that SQL has its own 
+very easy to use programming language it's a great  
+tool to add to your skill set as a data analyst 
+while also being a great stepping stone to some  
+more serious programming but before we get to 
+that every data analyst needs a visualization  
+tool there are dozens of BI tools out there but 
+having worked for multiple companies and projects  
+and having looked at probably hundreds of data 
+analyst job openings i've come to realize that  
+the majority of companies are looking for people 
+with experience with Tableau Power BI and Qlikview  
+here's the pros and cons of each so you can decide 
+which suits you best Power BI is part of the  
+Microsoft stack so it works smoothly with Excel 
+and Sharepoint besides that it has a free version  
+and even the paid versions are relatively budget 
+friendly compared to the other BI tools next up is  
+Tableau Tableau is a BI tool with more extensive 
+data visualization capabilities than Power BI  
+it seems to be just a bit more in demand in 
+the job market than Power BI it comes with  
+a much higher price tag though making it harder 
+to learn if you're starting out by yourself and  
+then there's Qlikview using in-memory technology 
+making it a super fast and responsive way of doing  
+business intelligence but also a pretty high price 
+tag and also it's less in demand than Tableau and  
+Power BI i personally picked Power BI as my BI 
+tool although it might not be the fastest BI tool  
+out there or the one with the most extensive 
+capabilities in my opinion it can give you  
+the most bang for buck when it comes to becoming a 
+full-time data analyst before we move on to how to  
+actually get good at data analysis and land that 
+first job there's one more thing we need to do  
+as a data analyst after you've mastered a BI tool 
+it's time to get into the more advanced analytics  
+i'm talking about which programming language 
+to use when it comes to data analysis or data  
+science software developers and programmers get to 
+choose between java javascript ruby c-sharp python  
+r c c++ and many more luckily for us data analysts 
+we only have to choose between two programming  
+languages r and python so which one should you 
+pick i chose python but if i could go back in  
+time i would choose python why well even though 
+they're actually very similar r is a programming  
+language focused more on statistical analysis 
+well python is a more general purpose programming  
+language that also happens to be very good for 
+data analysis and although r might be a little  
+bit easier to learn i would still go for python as 
+it's the probably probably probably the number one  
+programming language in the world meaning if you 
+get good at python for data analysis it might also  
+open the door to a lot of different job 
+opportunities so the path i took is Excel  
+SQL Power BI and Python this is the path i would 
+recommend as it worked out great for me but you  
+can start off with any language or tool that 
+suits you best because whatever you pick your  
+first language or tool will definitely not be your 
+last so now that you know which tools to learn  
+let's talk about how to actually learn it and 
+this is where beginners make the first major  
+mistake the mistake most beginners make is that 
+they try to learn by watching others this is how  
+most people learn data analysis some people go to 
+Udemy and watch multiple 20 plus hour courses and  
+probably not even finish all of them or they watch 
+youtube videos watching other people analyze data  
+but without actually writing code or analyzing 
+data themselves they give themselves a false  
+sense of progress because analyzing data in your 
+head is very different than from actually doing it
+data analysis in your head is very different 
+from actually analyzing data stumbling upon  
+faulty data and debugging for hours so what is 
+the right way to do it? the answer is very simple:  
+learn by doing you just need to get the 
+reps in and start coding and analyzing  
+data by yourself for Excel i would recommend 
+a website called www.excel-practice-online.com  
+a free website where you learn to use Excel 
+by doing from the basics to the most advanced  
+functionalities for SQL i would recommend the 
+website www.w3schools.com/sql for Power BI i  
+would recommend Datacamp there's free courses 
+and also paid ones for python you can go to  
+this free website called learnpython.org whether 
+you're practicing every day at your current job  
+so you can make that switch to a data analysis 
+career or whether you're still studying you need  
+to practice every single day only this way will 
+you experience what it's actually like working as  
+a data analyst analysis working as a data analyst 
+only then will you learn what it's like to debug  
+your own code or formulas because to be honest 
+that's what you will spend the most time on  
+debugging faulty code or correcting faulty data 
+being a data analyst is awesome but this is also  
+the second major mistake most beginners make they 
+try to solve every problem themselves the fact is  
+that error you just got in Power BI there's a very 
+big chance someone already has experienced exactly  
+the same error as you and that's good news for you 
+because now you don't have to look for the cause  
+of the error you just have to copy part of the 
+error message in google and you probably end up on  
+some stack overflow website where someone explains 
+exactly how to solve this error let's be honest  
+copying code from stack overflow is like 80% 
+of any developer programmer or data analyst job  
+data analyst is awesome okay now that you know 
+what tool and programming language to pick  
+and how to actually learn it it's time to build 
+your portfolio and this will help you build  
+out an attractive CV for recruiters on Linkedin 
+recruiters i always talk like a bit this i know  
+programmer so strange programming language 
+and recruiters talk to me every day now if  
+you have a job where you can apply data analytics 
+already then do so right away if you don't really  
+do anything data analytics related like sales for 
+example then try to build a report or a dashboard  
+showing some key metrics or KPI's that you 
+can show to your manager he will appreciate  
+it and you will get to learn your data analysis 
+skills and if you can't apply to your current job  
+or if you're still studying then start a project 
+on your own at home because in the end it's about  
+getting that data analyst job and the best way 
+to do that is as follows pimp up your Linkedin  
+profile i've made a video before where i give 
+my top five Linkedin profile tips to attract  
+recruiters on Linkedin and i'll summarize it here 
+for you make sure you put data analysts in as many  
+places as you can in your profile Linkedin is a 
+search engine and if recruiters search for data  
+analysts you want to be found you want to be on 
+top of that list so make sure your header contains  
+the word data analyst in your work experience 
+if you've done something data analyst related  
+put in the keyword data analyst once your Linkedin 
+profile is set up there's two things you can do  
+start applying to every single data analyst 
+job you can find on Linkedin or any other job  
+platform or the second way which i prefer is if 
+you've set up your Linkedin profile correctly  
+then recruiters will soon start hunting you they 
+will invite you to job interviews for data analyst  
+positions which brings me to major mistake number 
+three don't quit well do quit let me explain you  
+see the second best decision i have ever made 
+in my life was becoming a data analyst and to  
+become one yourself the only thing you have to do 
+is don't quit whether it will take you one week  
+one month or one year if you keep applying if you 
+keep improving your skills updating your CV you  
+will land that job eventually and trust me once 
+you do land that first data analyst job a world  
+of opportunities will open up for you you can grow 
+your skills into a senior data analyst or become  
+a freelance data analyst or what i eventually 
+did quit my job as a data analyst the single  
+best decision in my life was quitting my job 
+as a data analyst you see becoming a freelance  
+data analyst gave me the resources to quit my 
+job and pursue a completely different career  
+creating my own brand while traveling the world 
+do not subscribe to my youtube channel i'm 100%  
+serious if you're looking for advice and tips on 
+how to become a data analyst and how to build a  
+data analyst career for the rest of your life then 
+i would recommend subscribing to Luke Barousse  
+what up nerds as he makes way better videos than 
+me but if you view being a data analyst as a  
+stepping stone to creating a life you want your 
+dream life whatever that might be for you then  
+you might want to subscribe as i share my personal 
+lessons on this journey from a 9-5 to a dream life  
+watch this video next to learn what made me 
+quit my six-figure job to start youtube cheers

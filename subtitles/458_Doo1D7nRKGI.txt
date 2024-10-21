@@ -1,0 +1,1740 @@
+hello and good afternoon thanks everyone
+for being here uh welcome to AWS on air
+you're here in joining myself and Todd
+for our show today talking about new and
+upcoming AWS services so I uh my name is
+Fiona I am a Solutions architect at AWS
+I work in the public sector specifically
+with nonprofits and I do a lot of
+responsible AI stuff and excited to be
+here with
+Todd hi Fiona thanks for hosting with me
+this is our first time hosting de no it
+is have you been excited for it I've
+been excited for it I am twice as
+nervous as I normally am this going to
+be know I'm pretty scared I've heard
+that hey everybody I'm Todd Fortier I'm
+a Senior Solutions architect here at AWS
+where I focus on developing Solutions
+and what we call the AWS Solutions
+Library if you've never heard of that go
+to aws.amazon.com
+Solutions you can see all the kind of
+cool stuff that I get to work on every
+single day uh but yeah I'm excited uh
+for today's episode I am we're going to
+be talking about something that I talk a
+lot about in
+conversations yeah this idea of zero ETL
+and what is that how is does it mean how
+can we make it better for people how can
+we make the process simpler I think we
+might learn a thing or two about that
+today this isn't our only show though so
+this is AWS on air it's the flagship
+show where we talk about AWS um overall
+that we do have some other shows Todd do
+you have a specific favorite show that
+we that we do yeah I usually say a the
+AWS on Air Sports show with our producer
+Nick is my favorite I'm a sports guy not
+all sports some sports I like show when
+we talk about the NHL and some of the
+Nerds and the stats that we're throwing
+at different sports uh but I'm starting
+to think maybe I should get into uh the
+startup show if you're a startup you're
+starting a company want to know how to
+use cloud services at AWS to to do that
+um we have a show with Jillian who hosts
+that what other show yeah I mean it's
+funny you said that your favorite was
+Sports I was gonna say my favorite is
+anything you know but the sports show
+that's just because it's it's Nick
+hosting I have a special place in my
+heart for game day am's show um step up
+your game day that was my first show
+that I ever got to guest on but you know
+it's hard to compare them all it's like
+apples to oranges so I think they all
+have their own their own benefits yeah
+game day kind of stands unique in the
+sense that like I had never heard of
+what what a game day is is some sort of
+what what I think it's described as a
+danger room but like a digital danger oh
+like an escape room yeah like an escape
+room where you have to sort of get your
+way out or earn points by different
+missions and different things and in the
+in the process you learn how to use AWS
+I like it's a super cool idea yeah it is
+pretty fun and they're all like unicorn
+themed which I think is pretty funny
+it's funny I actually just did my first
+ever actual like non AWS escape room
+yesterday but for a team bonding
+exercise with my AWS team we had to
+escape a tomb it was it was hard for us
+my te get out or did I mean obviously
+you got out you're here
+today well it was actually virtual so my
+team is all over the place so it was
+like some online site that does virtual
+um Escape rooms that's pretty neat hey
+well uh this is not going to be that
+today you can uh if you're tuning in you
+are allowed to leave but we may ask you
+we actually want to
+know you have yeah we want to know where
+you're uh where you're calling from
+that's not a thing we're on Twitch you
+calling from where you're listening in
+from uh have you done a game day before
+if you have what did you think of that
+uh let us know we're going to be
+monitoring the chat we want to know what
+questions you have for our guests as
+they come on um I think should have a
+good amount of people from Germany
+Canada and the UK today um shout out to
+the UK specifically I'm a UK citizen
+good day no that's Australia I was gonna
+say good day mates but that's the wrong
+country
+hello yeah there it is
+better this this is going off the rails
+I think we've got to get to our first
+segment here I think this is the to
+bring in our our first guest and uh talk
+uh zero eail so Nick why don't you go
+ahead and bring him
+up hello hello welcome ainov and Shaz if
+you want to go ahead and introduce
+yourselves to everyone that would be
+great hello hello hello my name is Abad
+hun and I am a product management lead
+on the Amazon Aurora team
+hey my name is Shaz Faro and I am a
+product manager on Dynamo
+DB nice hey welcome to the show uh cool
+excited to have you so today we're going
+to be talking about uh what are we gonna
+be talking about today zero ETL what you
+were just confused about a few minutes
+back okay so so alleviate our confusion
+here what do we mean when we say Zer ETL
+here at AWS so zero ETL is a strategic
+Vision which AWS is working on across
+the board and it essentially takes away
+the overhead for some of our data
+management folks on the call by removing
+the need for building and maintaining
+complex data pipelines and it helps you
+do uh personalizations so if Fiona loves
+a certain color of car you could have
+that data stored in one database but
+then you could analyze it in one of the
+data LS to say hey Fiona loves red
+colored car and that helps very easy or
+that makes it very easy for all the data
+management folks yeah so we so ET just
+to break this down a little bit even
+more uh extract transform and load these
+are things that you typically do uh with
+data to get it from one source to a
+different def destination and it needs
+to be reflected in a certain format in
+that destination so how do you change it
+and move it along and you're saying at
+AWS we want to get to a place where we
+don't have to do that it's so easy to
+move data from one place to the other
+that you don't need ETL processes
+anymore hence zero ETL you got it go
+Todd I've been paying
+attention hey looks like we have a
+comment saying it's an interesting topic
+I love to hear that everyone else is
+just as excited about it as we are I
+think it'll be pretty great and so we
+have two different um locations that
+we're grabbing data from today as we're
+loading them into red shift so maybe do
+you guys want to kind of tell us a
+little bit about each of your specific
+origin
+locations yes so I work on auto
+postgress which is a fully compatible
+postgress engine and we are able to send
+data from your operational oltp workload
+which is a structured data set and get
+it into red shift and we have several
+exciting capabilities which we talk
+about in few minutes awesome yeah and uh
+you know I work on Dynam DB so dynb is
+uh no SQL uh database primarily targeted
+for building applications at scale with
+very low lat see so you you're talking
+about internet scale applications some
+of these streams that are actually also
+running on Dynamo DB today um so the the
+idea is that a lot of data actually
+lives in Dynamo DB but doing analytics
+is not uh primarily the Forte of that
+service so you would want to have an
+easy way of doing analytics by these
+easy to setup Integrations nobody wants
+to manage pipelines so you know we kind
+of take care of all of that work behind
+the scenes to move your data from Dynamo
+DB in into a more structured analytics
+optimized format in red shift so you can
+do your analysis run machine learning
+models Etc okay got it so it's so we've
+got three different places that data
+might be sitting as we're talking about
+today we have Aurora which um is going
+to be you know structured data that
+postest data that you'll be talking
+about we have Dynamo DB which you
+mentioned is kind of Internet scale data
+and then we're going to be showing two
+different ways to feed that data into
+red shift which is more um large scale
+and for data
+analytics than yeah that's going to be
+my question so why would I want to do
+that why would I not just run analytics
+off my source databases why would I want
+to move that data to Red shift because
+it takes a lot of your compute overhead
+so imagine if you are serving Peak if
+you were Netflix and you were serving
+shows at the peak of evening what and
+you wanted to also know hey like Todd is
+watching Netflix but I also want to know
+what else can I recommend to him you
+don't want to bombard your database
+which which is storing that data to know
+hey like what is my personalization for
+to right and at the same time mapping
+this or doing this in a olp database
+such as Aurora or Dynam it is not
+optimized for analytical purposes like
+Shaz was mentioning so you need to have
+certain machine learning model certain
+uh Integrations around data masking or
+creating uh materialized view which
+helps you do this better in a analytics
+system such as red shift another one is
+we are only talking about two we have
+multiple Integrations so we also support
+this for Aurora MySQL and RD is for
+MySQL so imagine if you had like 15
+different sources you can't individually
+run it in those sources you need to get
+it in a central data Lake type setting I
+see so like why as you explaining that I
+was thinking like well architected this
+is how I get closer to a well
+architected workloads where I am not I
+can think about the operational
+efficiency and the performance and the
+scalability of my data uh so that I'm
+not just overkilling my services or
+degrading some experience and some other
+aspect of what I'm delivering that's
+really cool so you're going to show us
+today what exactly you going to show us
+today you're going to show us how easy
+this is to do we will show you both of
+us will show you how in few clicks you
+can take away the overhead of doing
+something similar in days or sometime in
+months and we'll try to see how quickly
+both of us can do it okay yeah so we've
+got before we get into it I've got we
+got some people coming in we're live
+we're going to take some try to feel
+some questions we have a question coming
+into the chat right now I'm just
+noticing it Judy Levi I think is the
+name a great addition to Aurora
+postgress squel do you support Json B
+data type to Red shift super data type
+so it looks like some data type
+conversion question yes so in general we
+are able to map your data types
+automatically from aora postest into red
+shift jsonb is one of the things which
+we are working on support for and it
+should be available in the next uh
+release Okay cool so I think you guys we
+say demo time we need to have like a
+song that plays every time we're like
+demo time demo time okay let's bring
+that demo no pressure no
+pressure so we see all right so you'll
+get us started yes so we'll start with
+the Aurora post integration so I'm I
+just have another screen Fiona and Todd
+I still have your full attention so I'm
+just going to show you where we are
+starting so we are starting on a very
+familiar RDS console page right and for
+you to create any integration you just
+go to this pane on the left side which
+says zero ETL integration and this
+essentially shows you step by step the
+three main steps don't get overwhelmed
+we will handle it for you it essentially
+is trying to get your Aurora postest
+database ready first then it is letting
+you select your red shift data warehouse
+and finally you just click a create
+button and your integration is created
+so let's yeah sorry so let's try to
+create an integration so because this is
+an AWS on air show we will try to create
+an AWS on a demo
+and we will try to move on with a quick
+description and here now we are going to
+select a RDS database which is an aurora
+postgress so I have kind of data do you
+have in this database yes so we have
+some ticket reservation data in this so
+this already holds like some data around
+users events uh some date and that we
+will see how it shows up in the r side
+so I already have an Aurora post
+database engine here and it is running
+on version 16.4 so remember 16.4 you
+need to be on there and then 16.4 so
+then we selected a uh I'm seeing a fixed
+parameter values pop up here yes so good
+catch I thought you would skip it so is
+is like I said you need to get your
+database ready to send data and for that
+you need to set up some parameter groups
+mainly around what we call as enhanced
+logical replication which is our
+Innovation uh to Todd's question why
+don't you want to do it on ltp side we
+make it faster by having a dedicated
+storage layer so all of those settings
+would be set up for you and all I need
+to do is just do this fix it for me
+button and this will require your reboot
+so Todd don't do it when you are
+watching Netflix shows do it when the
+database is got busy then we just are
+going to cherry pick certain databases
+and schema and how I do this is I'm just
+going to specify a filter here so what
+I'm doing here is for the postest users
+here is I'm selecting a database and
+then I'm doing while cards which
+essentially will pick every schema and
+every table within the database and then
+for the second database I'm going to
+just pick schema one and all the tables
+for schema one right but then that is
+for including right but what if I also
+also want to exclude certain things
+right you don't want to say send out
+your personal data or a social security
+data so I'm just going to add like a
+table here which is date next I go to it
+is going to ask for my permission so I'm
+just going to confirm that I'm okay to
+reboot my cluster now it asks me for my
+red shift data warehouse so let's select
+one here I this is where we're sending
+it to yes this is the point a and this
+is the point B so we did the point a now
+we are talking about point B I see
+another popup
+yes
+F see Pop Up clearly like Hawke eyes so
+what you're seeing here is that it is
+asking us for permission that we don't
+have the required direct shift principle
+setup on that database house and then we
+also don't have the case sensitivity
+setup right don't worry no sweat we will
+just again select fix it for me when in
+doubt Fiona just CLI fix it for me and
+we'll figure it out then we just again
+give a acceptance it will show you a
+summary of what we are changing a quick
+summary if you want to add optional tag
+and encryption settings uh by the way
+everything is end to end encrypted all
+the time so we have end to end
+encryption both in transit as well as
+rest but this is if you want to provide
+your own key because some of our
+customers do do that and finally we get
+to this fancy screen which shows you a
+summary that this is the integration we
+are creating this is the source which we
+selected these are the fins which we set
+up and then these are the parameter
+changes which the integration will make
+for you the four which we need to and
+then finally we have the target here
+which is the point B and then we have
+the parameter settings around case
+sensitivity and then I need to just
+clict on this create zal integration all
+right and so how long does it take to
+get from Aurora tread shift so it will
+take depending on your data set side it
+can take anywhere from few minutes to
+like maybe like an half an hour in
+general uh but we don't have half an
+hour so I thought ahead we do have
+something already set up so let's see a
+already set up integration so we will go
+to my dashboard and this is a
+integration which is already set up
+similar to before and you can see those
+same filters Fiona if you remember
+Hawkeye so this is the same filter 16.4
+I remember that yes yes so we have that
+so let's see how this shows up in red
+shift right so let's go to a red shift
+console now and we go to the Zer ATL
+integration tab similar to before and
+then we click on this tab real quick and
+this shows up here and let's just
+quickly run a query here so if you
+remember what we sent here I'm just
+going to show it so you have a demo here
+your schema one showed up here right so
+you have your seven tables and then
+let's look at demo db2 so we only sent
+schema one here so if you remember there
+should be six tables and then one table
+is excluded now let's just quickly show
+how we can pull the data so this is a
+very similar simple query which you can
+see
+here but Fiona you might be wondering AB
+so how quickly does this happen how how
+much exact how did you know that's what
+I was wondering that was exactly what I
+was wondering how much time do you think
+it will take if I made a change on the
+Aurora side for it to show up here just
+a guess um let's say an
+hour okay let's challenge that one hour
+well we don't have an hour so I have a
+challenge for you why don't you take out
+your phone with a timer on and when I
+say go you go okay yes all right right
+so just a quick check we have ra John
+here staying in San Francisco which is
+in California so what we are going to do
+is relocate John from San Francisco to
+New York okay I simple I also show you
+to start I'll tell you I'll tell you so
+right now in AO right showing in San
+Francisco let's send him to New York and
+when I say go you go okay I'm locked in
+and 1 2 3 go okay so I have executed the
+query now let's go to Red shift it still
+shows a San
+Francisco and let's refresh and how much
+time
+stop it was under it was under 9ine when
+I said stop I was looking okay okay I
+was a little
+delayed know hey so wait time out time
+out let me recap cut something here real
+quick we started with data in postgress
+yes and we set up an ETL from postgress
+to Red shift you're now querying in red
+shift and what you're suggesting is from
+the time you changed it in Aurora over
+here the source the time it zero eted
+into the destination less than 10
+seconds yes and what better we do this
+for 24 million operations within 10
+seconds that's amazing so we are able to
+do something similar and just to prove
+what I was saying this is our end to end
+replication lag and it was two seconds
+so the time which you saw is 10 was more
+around just me swi between Windows so
+it's actually 2 seconds which it took
+for it to replicate but I know Shaz also
+wants to show us some fun so Shaz why
+don't you show us the Dynamo DB site
+like two PS in a pod we are up next on
+Dynamo DB let's bring it Shaz let's see
+what you
+got yeah uh so I'm going to I'm going to
+quickly walk through the Dynamo side of
+the demo uh so similar to what abinav
+was talking about the idea of zero ETL
+setup is very similar like we want to
+make sure it's a few clicks so
+uh I'm in the dynamodb dashboard I have
+a table um I've already imported some
+data uh from the stock market it's easy
+to understand so um on the dyo console
+we have a new integration section so uh
+similar concept you know we will prepare
+the data the data is going to be sent to
+the Target service and then you can just
+do the querying on the target service um
+so I go to the create integration
+section and then I click on red shift by
+the way Dynamo DB has another
+integration which is open search which
+has been out for for a while so this is
+a new uh offering that we just launched
+recently so when I click on uh create a
+red shift integration uh you would see a
+very similar um walkth through of how to
+create an integration so I'm going to
+call this AWS on air uh any
+description any you want to bet that
+underscore is going to give you a
+problem oh
+you guys are paying
+attention all right so um and then I'm
+going to browse the Dynamo DB table so
+I'm going to click on the stocks import
+table and then click next and then I see
+a call out there you go so this morning
+my vision's incredible we need to have a
+fix it for me button across all of AWS
+that's amazing just I like that I I like
+this new pattern as well um so basically
+one of the things that we do on the dyb
+site differently is that we actually
+want want to make sure that it has no
+impact on your production tables so we
+use exports which are always isolated
+from your uh production traffic so you
+know if you're running large internet
+scale applications this process is going
+to have no impact on that um so for that
+you need to enable point in time
+recovery uh which is another feature of
+Dynam DB and we apply some permissions
+on the resource policy directly for you
+so uh you click fix it for me um and
+then you go to the next page where
+you're selecting your Target warehouse
+so um I've been using serverless uh so
+red shift you can use either a provision
+cluster or serverless uh it depends on
+you know what you uh what fits your use
+case uh serverless is just easier for me
+to set up so I I select uh the
+serverless U red shift cluster uh again
+we have some optional optional
+parameters that you can put in there you
+can tag it uh and also it's always end
+to end encrypted but if you want to
+change the encryption you have the
+option to do that here going to click
+next and then it'll give you a
+confirmation screen of just reviewing
+your details one thing that is different
+from uh Aurora is that in Dynam DB you
+don't have a concept of databases it's
+just tables so you just have tables and
+we're replicating one table into red
+shift so I'm going to click on create
+the dynb integration um and because the
+initial setup uh does a full export of
+Dynamo DB it depends on how large your
+table is it can take between like you
+know depending on your uh the size of
+the table it may take a few hours to a
+few minutes um so I already have another
+integration setup which I I'll show you
+what uh how that looks like so once you
+have that setup um you can go to the
+Integrations Details page you will see
+the status as active and you will see
+the database State as active as well I
+just want to quickly call out that we
+had a hilarious comment from Robert
+tables that said tables you
+say that was funny great okay sorry
+continue yeah um yeah um what one more
+step that I actually wanted to show uh
+so when you're creating the integration
+you also have to attach a red shift
+database uh so when as you're going
+through the step we actually walk you
+through it uh it's as simple as just
+clicking here I'm going to put this as
+AWS on
+air um click create
+database and then it'll
+start yep you you'll see the database
+State as creating so give this a few
+minutes uh we'll let that one run but
+I'll come back back to the one that I
+created earlier uh your database state
+is active uh in on this page you you you
+can see some statistics so on the
+dynamodb side because we're using
+exports uh the lag is not as flashy as
+what abina was showing us so we're
+talking about around 15 to 30 minutes so
+uh the use cases that we want to serve
+on this side are more of like you know
+aggregated analytics or business
+intelligence use cases we're not uh
+primarily targeting operational
+analytics so uh within 15 to 30 minutes
+you'll see the data as it shows up in
+Dynamo DB probably not gonna time that
+one right
+now do we have minutes left as so I want
+to make sure you get to everything you
+want to get to yep absolutely okay so
+now the fun part so I think once your
+data lands in uh your red shift cluster
+uh I've already set up some queries just
+to kind of show you what it looks like
+uh oops my connection is closed let me
+just quickly happens real time you got
+to refresh that connection
+I just want to confirm something we had
+a comment in here that I wanted us to
+confirm that this this concept works for
+red shift serverless as well and I think
+that's what you were showing right you
+spun up a serverless red shift uh
+instance and that's where you were
+moving data to and that's what we're
+querying now that is correct yes you can
+uh you can do it on a provision cluster
+as well but serverless is the new uh I
+would say it's easier to set up for sure
+um so so the way that the data shows up
+because Dynam DB is semi- structured uh
+we have a partition key as one column
+your second column is a sort key and
+your third column is a Json super column
+type right so it has all the other data
+uh uh that is sitting in Dynamo DB so uh
+the way you want to query this is so I I
+created a query where I I'm looking at
+all the highs for the different stock
+takers for a day uh got to refresh this
+again there you go there we go so this
+returns all of the uh it it's parsing
+through the Json super column type and
+it's returning all of the highs for each
+individual stock for a particular day so
+it's very suitable for you to do ad hoc
+querying uh you know you don't have to
+rely on Dynamo DB Dynamo DB can take
+care of your operational uh application
+workload and then on the side you can
+enable your data Engineers or you know
+all the analysts to just go at it uh
+without impacting your Dynam VP workflow
+yeah so you mentioned something so
+there's a little bit of uh like you have
+to go from semistructured to structured
+and then understand differences in
+querying I know with Dynamo DB we're
+talking sort keys and partition keys and
+then over here or yeah we're and then
+here we're talking something different
+so but what you just saw what I want to
+call out is like how much how fast you
+can query this data especially when you
+have large amounts of dat is coming in
+here how fast red shift's going to
+perform in these types of aggregate or
+complex periods it's pretty cool yeah
+yeah red shift is primarily built for
+these type of workloads right so you you
+can Leverage The Power of uh you know
+red shifts querying capabilities to do
+Advanced analytics and you know machine
+learning so you you you would offload
+all of those workloads on red shift and
+you know make sure that you're enabling
+that side of your business without uh
+impacting anything on your operational
+side on Dynam we got we got some
+questions coming in here this is some
+good um audience inter another question
+from our audience uh Loren I think it's
+how you say this Loren with a three um
+want to know if you support sap Hannah
+as a source
+yes so I can take this so essentially uh
+we are also working on several third
+party sources as well and we are looking
+at some of the third party sources as
+well uh I can't confirm yet but we are
+looking at several key uh platforms
+which company uh people might be using
+so answer is stay tuned stay tuned watch
+the space there's a lot more coming keep
+watching AWS on air maybe they'll be
+back and have a fix me fix it for me
+button when
+I cool hey well is I want to make sure
+if there's anything else you guys want
+to show us if not like we can our
+audience go to learn more about zero ETL
+about red shift and these features uh
+what what should they do next we have
+dedicated Pages uh on the AWS website
+and we also published several blogs this
+week so both these Integrations went
+live uh on 15th which is 3 days back so
+all of those resources would be
+available to folks please check out and
+give us all your Valu feedback
+especially to Hawkeye Fiona and
+to yeah hey thanks for coming on the
+show abav and shab and Fiona I'm
+impressed with your ability to catch
+those uh those red flags in you it's
+what I'm here for that's the only reason
+they bring me on and she's she's cool as
+a
+cucumber oh thank that's that's too
+nicey we'll see you thank
+you all right so before we head into the
+commercial break I do want want to give
+a quick shout out for our survey today
+is going to be a very important day for
+the survey for those of us who've been
+coming along and watching AWS on air the
+past couple weeks you know that we're
+going to have our producer Nick doing
+some pretty cooky stuff at um reinvent
+this December which hopefully you're
+gonna be coming and joining us at um but
+in this survey you all get to vote what
+Nick is going to have to do there are
+some options in there what were the
+options T I think one of them was a wing
+eating contest one was a dance B
+maybe something about him dressing up
+like a pirate or him oh yeah there was
+that one there was that one with buckets
+the S3 mascot it could be it could get
+weird oh there it is that's the one
+that's the one this is a new segment we
+have on ad onir anytime we say Nick
+pirate pirate here comes
+up respond first s respondents get $19
+in credits it is a really important
+thing we do appreciate the feedback we
+knowing uh what you think and what you
+think we should be talking about what
+segments what you like about the show
+what you don't like about the show um
+all really important stuff and we love
+making our producer Nick spend his
+weekends uh reading survey responses uh
+better to do so claim your $19 and get
+Nick to do weird stuff at
+reinvent cool so uh what else we got for
+the show F I think we've got our
+sponsored segment Nvidia has been
+sponsoring us all year our friend and
+awesome co- host Jasmine I think is
+going to be talking to I believe so yes
+I think she is today should we roll the
+segment Jasmine it's all yours let's
+hand it over to
+her hey thanks for the intro hi guys
+welcome to the show how are you hey
+Jasmine I'm good how are you
+J how's it going all is good I'm excited
+to talk with you today so la s tell me
+about what it is that you're doing and
+what fun things we have today yes sure
+Jasmine so thank you very much my name
+isri I work on the Nidia team and today
+we are so excited to work with with sa
+and the sash maker team on bringing
+names names names to customers so we
+will discuss about names we will discuss
+about the Nvidia software offerings and
+how you can use it on
+S all right so Rob your turn we need to
+know what Nims are so elu has already
+given us a little preview what's going
+on yeah uh SAR Pi I'm product manager
+for S maker entrance and I drive
+partnership with ilot and team here and
+excited to discuss furthermore about
+sagemaker integration with Nims awesome
+so what is NVIDIA and Nims and you know
+talk about how we're on sag maker what
+sets it apart yep absolutely Jasmine so
+Nidia NS we have been working on
+optimizing inference so that's all we do
+is is making sure that not you you can
+get the best performance the best uh
+latency the best throughput the best
+accuracy for your models running on AWS
+H maker on AWS GPU platforms so the way
+we have been doing is making sure that
+that the software plays an important
+part of the role it's not just the GPU
+it's how you combine the re the right
+GPU with the the right techniques and
+the right libraries and the right
+software and that is exactly what NES
+come come into play uh but before that I
+want to just show the screen if if you
+may because either way uh we will help
+we will be helping any Enterprise
+customer or any AI startup to make sure
+they can get optimized they can get the
+best performance wherever they are in
+their AI Journey so if they are using
+optimizing or INF or or gen War loads
+will be helping across the entire
+Journey from data acquisition data
+curation pre-training model
+customization information retrieval
+inference and GS so wherever you are in
+the journey there is a tool from invia
+that will be helping out of that
+performance so for all of the steps for
+all of these steps there will be a piece
+of software including uh Nemo and
+including NES that are the one that we
+are going to talk about today so let's
+go about NS Nims is a a container that
+include the state of the art performance
+so you bring your model could be llama
+or could be uh Nvidia biion Nemo or
+could be any other model that you have
+available so you bring this model and
+you wonder yourself uh how you can run
+the best performance the best inference
+for that model so instead of going
+techniques by techniques or or doing
+like a pretty heavy job in terms of
+understanding what technique apply if
+it's bad size or or you know sparsity or
+latency or accuracy whatever technique
+you are you were trying to achieve you
+just bring the container with the state
+of the art you deploy it and it's like
+at wrong time so this is this is the
+start the State ofth art for performance
+and we are excited to bring it to a s
+maker so I want to just let SRA uh talk
+about H how we can do it on on sagemaker
+why for sagemaker is important to run
+names and then we can proceed with the
+with the app sounds good thanks
+iot and U yeah so Jasmine just for
+context right like sagemaker is AWS is
+fully managed capability for customers
+to build train and deploy machine
+learning models I specifically focus on
+infrance and within Insurance like we
+have a suite of option that we give our
+customers to run their models ranging
+for Real Time realtime Insurance
+asynchronous entrance and serous
+entrance uh so with Nims that OT just
+spoke about what our customers would be
+able to do is like kind of pick one of
+the nyss that's being offered from
+Nvidia and deployed on S maker in any of
+these options uh to get the best price
+performance when when when doing
+inference with with with
+J nice so it's kind of you just pick it
+up and run it in Sag maker so we know
+that that saves time and it creates
+efficiency but what strategies are used
+to monitor like performance and manage
+costs in there is that built in as well
+yeah so we say maker inference we have
+something called as model monitoring
+right like so for any model that's
+running on sagemaker inference like
+customers would be able to kind of set
+up model monitoring jobs monit to the
+performance of those models and kind of
+retrain the models if needed if they've
+kind of drifted and things like that
+right like so U with with Nims like what
+what customers get as Nvidia software
+for uh deploying these models and and
+and with when they're running this on S
+maker inference like we kind of optimize
+multiple layers of stock right like we
+give faster Auto scaling we give you
+price performance by running multiple
+model on the same endpoint and then we
+have a broad Suite of options uh in
+terms of the number of instances that
+you can choose to deploy these models
+yeah nice I love hearing about all of
+the features that are happening here as
+well as the optimizations that customers
+get to make and they they kind of have
+this you know at their fingertips but I
+would love to see a demo yeah let's have
+uh am on who's going to drive the demo
+and Alo thanks for joining and uh um we
+can probably bring up onone on stage
+thanks
+El hey hey Jasmine welcome to the stage
+thank you thank you excited to be here
+let me quickly introduce myself so I'm
+Alman I'm a specialist J essay on the
+machine learning training and framework
+uh machine learning framework training
+and inflence team um yeah super I've
+been playing around with Nims for a
+while Sage maker on eks I super excited
+to show you all the demo let me quickly
+bring up my screen here
+awesome so um today I'm going to show
+you how to deploy a envidia Nim for the
+405b model which is the the biggest
+llama model available right now so
+that's a llama
+3.1 and um
+essentially um I'm going to run you
+through a a sage maker notebook that um
+and you can find this notebook on the
+awesome inference GitHub repository that
+we have and that we maintain actively so
+your first step essentially is to um
+have an NGC CLI API key and the way you
+do that like elth mentioned is you have
+an Enterprise account on NGC Hub and you
+create that NGC CLI API key and you pass
+it in to your notebook as an environment
+variable and then once you do that you
+can um set your IM am
+policies so um at the bare minimum you
+need uh all of the IM policies that are
+listed here all of these pertain to uh
+pulling the relevant images from ECR and
+I'll talk a little bit more about that
+in a second and then building those
+images uh when you do do something like
+this in production please keep the uh
+principle of lease privilege in mind uh
+especially while def defining new um IM
+am policies and
+roles um now when it comes to setup um
+other than the roles You' need to
+install a few packages uh to be able to
+use sagemaker appropriately first you
+install B of 3 and any other
+dependencies um so that you can set up
+correctly
+now um in this notebook we walk you
+through how to uh set up the B three
+session and client for uh so that you
+can make the relevant python API calls
+uh and then also your user and role
+configuration along with region and then
+your sagemaker session
+obviously and then um lastly for setup
+we set these environment variables um
+and so this includes your CL API key
+like I mentioned before but it also
+includes the model name that you want to
+pull from the um NGC
+Hub uh and then also the sagemaker model
+name that you want to give so at a very
+high level um you would use something
+called sagemaker endpoints to deploy
+your name onto your required hardware
+configuration now in this example we
+deploy the like I said we deploy the
+405b Nim onto a single P5 48x large
+instance um now remember sagemaker
+endpoints are fully managed so the
+infrastructure site is fully taken care
+of as long as you specify it while
+configuring your deployment
+now um your first step is to pull the
+image from the ECR repo uh as you can
+see on your screen right now we have um
+a or we've defined a bash script that
+you can run uh and all of this this bash
+script all it does is it takes care of
+the model pulling for
+you and uh once the model image is
+pulled you would then need to push it
+onto your own private ECR repository so
+that it is referenceable from the rest
+of your notebook and from the rest of
+your code now now uh one thing to note
+here is to make sure that your image is
+named correctly you can check out
+nvidia's name page to check out um all
+of the supported names that are that
+Nvidia is made available and
+additionally you can also check um our
+ECR repository for the ride
+nomenclature and of course you can print
+the M image as well if you want to and
+then the last step is to actually deploy
+your sagemaker endpoint now in addition
+to um the Nim definition itself there's
+a couple of things that you need to
+change uh mainly because the 405b model
+is ginormous and it actually requires
+some additional memory and additional
+time to get loaded into
+memory um so the first thing you change
+is the n timeout value again you don't
+need to change this for any of the other
+models but since the 45b model takes
+some extra time to get loaded into
+memory um we can increase the um time
+out to 3600 seconds and then you can
+also increase um the max
+tokens um which is number of output
+doents yeah and then of course you can
+use the sage maker. create model API
+Call to um actually create that model
+and then once that um model is created
+you can then create your actual endpoint
+or you can go on to actually um
+configuring your endpoint and this is
+where you actually specify your
+deployment parameters so specifically
+you define your uh instance type the
+number of instances that you want to
+deploy your model onto um and of course
+any other parameters like the sage maker
+timeout so that you're not constrained
+by
+timeouts uh We've like I said we've
+noticed that the last two steps together
+take around 40 minutes to run uh again
+this is probably because of the size of
+the model but one more thing I'd like to
+talk about is how Nims is actually
+configur to run on your specific
+Hardware so what happens behind the
+scenes is there's something called
+sweeps that that get run and depending
+on your Hardware nyss chooses which
+configuration to run and configuration
+is just a in my opinion a very fancy
+term for um flags that you pass into
+tens llm uh since tens llm is the back
+end that's running for
+NS so NS automatically chooses the most
+um efficient and the most optimized um
+image to run in the back end for
+you and then um once complete you can
+see uh two things first you see that the
+sagemaker model is created and second
+you see the uh sagemaker endpoint is
+created uh
+um also here uh that once the endpoint
+is ready right like the infrastructure
+behind the endpoint is fully managed by
+sagemaker and then the model itself the
+model weights as well as the model
+container is something that that you get
+from Nims already optimized spedia so
+with this like to run the model like
+customers would get the kind of the best
+price performance on the infrastructure
+side coming from sag maker and then an
+optimal uh performance coming from from
+Nvidia uh because these nms are already
+optimized for a given
+model yeah and um to that point let me
+just quickly show you the model that's
+created and also if if you go to your
+Sage maker console you can see the model
+which I just showed and you can also see
+the um endpoint configuration that's
+created yeah so that means that
+customers are getting to deploy the
+state-of-the-art llms in minutes and not
+just not days right it doesn't take days
+to get something spun up
+exactly so like like I said the 405
+model takes around 40 minutes and um
+that includes choosing the best
+configuration for you as well that's
+just for the the infrastructure to get
+set up right like but Jasmine customers
+do save time in terms of the you know
+trying to figure out things trying to
+figure out where the model is which is
+the best
+parameter where like setting up the
+infrastructure right like on in terms of
+how do you club together a bunch of ec2
+create a service that's able to host a
+model
+uh so so customers won't have to do that
+it's just like few few steps that they
+need to follow and they'll get an
+inference end point to to get running
+with it nice and as we're moving through
+this demo here what are the types of
+customers that are using this for like
+what are they
+building yeah so um like Nims is kind of
+a broad Suite of options in terms of the
+uh the models that they've curated right
+uh they have models from ranging from
+llama to some of the biotech models to
+some of the Dr Discovery models so yeah
+I mean we've seen like customer interest
+across like all the spectrum that uh
+that of of Nims that Nvidia offers and
+uh as as am on is sharing like we have
+uh an ECR repository where Nvidia is
+kind of putting the containers uh for
+AWS customers to quickly use that ECR
+repository to deploy the models on
+sagemaker with with keys from uh NGC oh
+nice so a variety of you cases are
+already supported and there's some
+documentation in there if you need to
+get a project idea of oh can I do this
+and someone might have already started
+on it yeah so we have like a launch blog
+and and a and a technical blog that
+we've kind of published about how this
+can work into to end for for customers
+who are already familiar with sagemaker
+or not familiar with sagemaker as well
+as the same goes with lims uh you can
+just follow along the blog step by step
+and it also has the notebook that that
+Aman is mentioning here and you can uh
+yeah you know kind of pick any of the
+NIMS that's offered and and deployed on
+sagemaker okay awesome on anything to
+leave us with we're gonna come back and
+come to a close here yeah and I just
+wanted to say the beauty of Nims and by
+by extension that these notebooks is
+that you all you need to do is
+essentially just change the uh model
+name that you import or the image name
+that you pull and um the infrastructure
+that you want to run on and you should
+be able to run all of these out of the
+box sizes nice I really like that being
+able to give customers something out of
+the box and say hey keep going awesome
+all right thanks Aman that was great
+sounds good thanks we'll have El youth
+come
+back yeah thank you everyone uh just a
+close call to option is uh let's make
+sure that you can use names on sagemaker
+that they can uh get to m.com and and
+use it there or come to sagemaker and
+use NES uh we'll be happy to help and
+we'll face uh the the the blogs and the
+documentation on this integration in the
+chat yeah they'll be here in the chat
+and then let us know if you have more
+questions for Invidia along the way um
+Ellie youth I heard that you're in the
+AWS Marketplace for the Nvidia AI
+Enterprise so that's one of my favorite
+places to send customers so we'll have
+those links all up for you and where to
+go next to get started so Rob Aman Leu
+thank you this has been so fun I learned
+a lot um let's see how we're using
+Nvidia Nims on sag maker
+sounds good thanks thanks Jessman
+thanks all right welcome back Todd
+welcome back to the show so that's
+Nvidia ons hey if you're just joining us
+I see some people some new folks in the
+chat some new names uh this is AWS on
+air we are a live stream every Friday
+where we go over the latest and greatest
+things that are happening at AWS brought
+to you by the people who help to develop
+them so we do demos and we do different
+conversations we kind of showcase what's
+new here at AWS so thanks for tuning in
+uh Fiona I think Nick needs to get those
+celery sticks ready it looks like he's
+gonna be eating some hot wings at
+reinvent this year is what it does seems
+so I know we had some people that were
+you know reviewing or going through the
+survey and coming up with what he's
+going to have to do at reinvent it looks
+like uh a hotwing competition might be
+in the lead right now so if you're
+feeling like you're Pro song I know we
+had a couple people here in the chat
+that wanted him to be singing some song
+lyrics and you if you haven't
+participated in the survey yet make sure
+to go fill it out that would make my
+reinvent to see Nick sing Katy Perry
+reinvent I would like that I would like
+that very much but hey uh thanks for
+filling out the survey uh we've got a
+few folks that have already responded to
+the survey so we appreciate that uh if
+you haven't yet please do go to uh the
+survey first 10 response get $19 in AWS
+credits let us know what you think about
+the show there's an opportunity to vote
+for what our producer Nick will have to
+do at reinvent here coming
+up uh let's see what else do we got on
+the show here today F I mean I think
+that we may have the honor of Jeff bar
+joining us to talk about some other
+upcoming announcements for AWS do you
+think we should bring him on yeah
+speaking of yeah this is the cream of
+the crop the creme de creme as they call
+it the person who knows the most about
+what's new at AWS has been doing it for
+a long time I'm always I always learn
+something new from Jeff uh whether or
+not it's through Linkedin and his uh his
+uh bites uh on AWS but yeah let's do it
+let's bring him in let's bring
+him hey Fiona hey Todd hey Jeff welcome
+to the show how you doing good let me
+just mute my phone here
+okay pador things are good I'm here in a
+beautiful vashan island just outside
+Seattle and uh it's a little little
+cloudy but still wonderful day got lots
+of day in front of me so still I was
+going to say is it raining what's a fun
+fact about what do vason Island where
+where where is this is just outside of
+Seattle it's just a tiny bit um west of
+Seattle it's a 20 minute ride on on what
+we call the water taxi from the Seattle
+waterfront to the island and uh when
+people hear water taxi they kind of
+think um some little like little robot
+but it's actually it holds a couple
+hundred people so it's not like tiny
+little how many people live on Bashan
+Island it's about
+10,000 um about 10,000 I'm one of the
+younger ones believe it or not
+so all those fruits and vegetables that
+that keep you looking young J yeah not
+quite a senior citizen's home but it's
+it's got kind of got an aging population
+so eating a spinach he's staying strong
+but a really cool place and not not
+super welln one of the most awesome
+things actually is if you time the ride
+leaving Seattle just right you can show
+up just as little tiny bit after sunrise
+and you get the most beautiful view of
+the city it's like absolutely great way
+to start the day did you say after
+Sunrise that's early oh yeah well what
+time do you wake up in the morning
+Jeff uh off in five
+something yeah I'm right I'm sound
+asleep at that time it's kind of a curse
+I I I've often found myself up Ear that
+early in the morning uh and it's a great
+time to get work done really no nobody's
+making nobody's pinging on slack
+nobody's uh asking for the status of
+whatever uh you just focus and guess at
+least for me that's how I get most of my
+stuff done yeah exactly so what what do
+you what do you got for us this week
+Jeff we got what's a new at AWS what are
+some of your top I've got a couple
+really cool things and what I like about
+all these is these actually all build on
+on services and features that we already
+have um the first one is called the
+conversational builders for Bedrock
+agents so this is kind kind of kind of
+NE there's there's a lot of moving Parts
+here so let's take it apart uh kind of
+piece by piece so we we've talked about
+Bedrock a bunch right it gives our our
+customers access to a whole bunch of
+different Foundation models um it's
+fully managed service helps our
+customers to build gen apps that are
+secure and private and scalable and
+responsible um not new we launched it
+last year and we've added a ton of
+foundation models to it since then and
+continue to do so um but also not new is
+something called the Bedrock agents so
+the Bedrock agents basically are they
+they kind of sit between the foundation
+model and the outside world and
+basically kind of mediate interaction
+between the foundation model and data
+sources and applications and user
+conversations and so forth and the cool
+thing about these agents is they can
+actually give extra power to the model
+and to the Gen apps in in a way because
+you can automate tasks you can use them
+to answer specific questions they can
+like ask the user from extra information
+to complete the the task but they can
+also do things like making API calls to
+your company systems they can call
+Lambda functions they can help to
+decompose big requests into smaller
+pieces the agents are super super
+powerful um and you can even attach them
+to knowledge bases so so this is not new
+either so we got two big we got Bedrock
+the foundation models the agents none of
+this is new but what what is cool is we
+launched this really cool thing called a
+conversation Builder that is uh it's
+kind of like AI for AI in a sense um we
+shouldn't call that gen gen AI probably
+not would be kind of
+awful yeah it but it's kind of AI for AI
+so you you basically get this
+interactive assistant where you you chat
+with the assistant and it helps you to
+build the agents so you can you can like
+set up the name in the description you
+can get a summary of what the agent can
+do um you can manage the knowledge base
+and the cool thing is you can even just
+ask this conversational agent to
+literally create for you an agent so let
+me let me just pull up a another screen
+here for a sec um so I I follow one of
+the examples and I L I opened up the the
+agent console and I said build a travel
+booking agent for business travel in my
+company and it thought for a little bit
+and behind the scenes it uses Claude
+Sonet um and so it creates a little
+agent you can then flip into test mode
+and in addition to be being it it
+because it's it's mostly like a
+programmatic agent that's kind of
+sitting there doing stuff but you can
+actually interact with it which is kind
+of cool so I asked the agent I asked it
+what can you do and it came up with this
+cool thing it said hello as a travel
+booking agent I'm here to assist you
+with arranging business travel plans for
+employees and it shows me what what it
+can help me with so so this agent is
+essentially giving extra power to the
+foundation model and to the apps that
+are built with the foundation model so
+the generic Foundation model doesn't
+understand how to do business travel but
+by using this agent it
+can understand how to do this so so
+there there's actually a prompt that
+gets added in behind the scenes So when
+you say build me a particular agent it's
+actually making a a very detailed very
+specific specialized kind of a prompt um
+there there's a lot of indirection here
+that we're we're kind of talking through
+to make this happen but but I think it's
+super super
+cool so that's the first neat
+thing bedrock and then there's the agent
+that is doing a task onto bedrock and
+then this conversational agent is a
+agent on top of that agent that tells
+you what that agent can do exactly okay
+this is the old thing about solving any
+problem in computer science with another
+level of indirection and this this is
+exactly what's going on there of things
+that talk to things and agents that help
+you to build agents and then talking to
+the agent about what it can do and it
+it's it's it's really cool there's some
+great docks and there's there's actually
+a lot of good um samples and some good
+blog post as well to explain what I've
+described as the next kind of thing in
+the generative AI space this agent based
+generative Ai and so there's going to be
+agents that do different things so I
+think it's gonna it's GNA be a really
+important feature uh as we move but this
+is also where the AI crawls out of the
+computer and can can then do stuff in
+the real world so like when when the AI
+decides to like take over the world and
+like unplug all of
+the security system I've been waiting
+that fure we're talking agents like you
+mean agent like agent Smith from the
+Matrix right like this is the precursor
+to agent Smith if you have the right
+Hardware
+yeah if you have a robot right so so so
+in theory actually like you could have a
+Lambda function that does some iot stuff
+and controls a robot somewhere so the
+agent could could like go out and do
+something I guess if we do have that
+you're gonna hear about it first here on
+AWS yeah that' be an awesome demo
+wouldn't it that be cool demo yeah work
+for that
+anyway let's see other cool thing um
+this one next one is much more
+pedestrian so we we've got Amazon
+elastic file system or or EFS which
+we've had for a long time um I I like
+EFS because it's super super simple you
+create the file system you mount it to
+your Linux or your your windows instance
+and then you've got this infinitely
+scalable file system you just keep
+throwing files at it it's just going to
+scale up to give you just as much um
+storage as you want and in addition to
+mounting it to instances you can mount
+it to Lambda functions and actually you
+can also mount it to your on premises um
+compute power so you can have this
+scalable elastic file system in the
+cloud that that can be shared across
+both your your Cloud compute and your
+serverless compute and your on- premises
+compute if you'd like so so that's CFS
+that's that's not new I I wrote about
+that a long time ago but what's really
+cool is we actually boosted the amount
+of read through put you can get you can
+now get up to 60 gigabytes per second of
+read through put from EFS file systems
+which is
+a huge amount it's probably a lot more
+than any customer needs right now I I
+might think but the to me the cool thing
+about these gigantic limits is when
+you're designing some system you're kind
+of thinking to the way out into the
+future where you're think I want to have
+gazillions of users and I want to be the
+most successful service anywhere in the
+world you've got all that scale and all
+that Headroom so that you don't have to
+think okay if I do get successful I'm
+going to hit some some scaling limit so
+so being able to get up to this 60
+gigabytes per second is like wow a ton
+of awesome read throughput you know off
+the top of your head what the throughput
+was previously the um it was actually
+half of that it was it was 30 gigabytes
+per second sheesh okay big Improvement
+so so there there's a there is a little
+bit of a footnote on this um we we it's
+available in seven regions where you can
+get up to the to 60 in there but there's
+there's another set of regions where the
+limit used to be three and we've moved
+that one up to 10 so so it is kind of
+scaling um in different regions at
+different points I I have to guess
+that's kind of based on the the growth
+of our customers and the use cases in
+those different regions is is how the
+team decides when they need to push
+those numbers up and do whatever magic
+they have to do to make it support more
+throughput but but it's there it's cool
+um we'll we'll drop a link to the what's
+new in that very cool and the other one
+do we have time for one more one more
+yeah let's do it one more okay so um ec2
+dedicated hosts these have been around
+for a long time I think I wrote about
+them in 2015 so like nine plus years ago
+at this point so dedicated hosts are
+basically physical servers that are as
+the name says they're dedicated for
+customer use and the idea of these is
+it's really good for licensed software
+we're kind of old school licensed
+software like often database engines and
+servers you're to stay within the
+license you have to actually run it on
+some physical piece of Hardware that's
+devot to that that database server and
+you're you can't move it from place to
+place willy-nilly like just by like
+changing instances so so and and also
+different kinds of compliance make make
+these uh make the dedicated host super
+super cool so there there's two levels
+of use when you do a dedicated host so
+the the dedicated host is basically like
+the the physical piece of hardware and
+for most ec2 instance sizes the
+dedicated host is got enough capacity
+that you run a bunch of instances on
+that individual host so what you do is
+you you launch the host and then you
+launch instances within that host so you
+might like allocate one host and run
+depending on the size of the host and
+instances you might run six eight 10 12
+different uh instances on there so
+you've got all those on there and so
+none of this is new this has all been
+around for for quite some time but what
+we have now that's I think really a good
+addition to our for our customers is
+automatic live migration so so the host
+is real Hardware real Hardware wears out
+but breaks and explodes and leaks all
+that kind of stuff sometimes at the
+point where we start to to detect behind
+the scenes that things are starting to
+to fail in that Hardware we'll do an
+automatic transparent live migration off
+to a fresh piece of Hardware the
+instances stay running the customer
+doesn't know anything has
+happened so it it is a physical piece of
+Hardware but if if things start to go
+wrong with that physical piece of
+Hardware we'll just push it off to
+another physical piece of Hardware
+that's also dedicated it just happens to
+be a different kind of long-term piece
+of Hardware so um totally transparent no
+stopping no rebooting I don't even think
+there's like an indication that it
+happened it just magically keeps your
+Hardware running for you behind the
+scenes which I I think is pretty cool
+that's
+incredible that happens uh this is the
+the huge value of managed service right
+like imagine having to do that yourself
+like anticipate the degradation of some
+hardware and then switch it without
+losing availability doing it live like
+first having metrics inside to know that
+it's going wrong and then and then
+saying oh this is a problem and thinking
+oh do we have any spares of this
+particular one or not and then so so
+what's running on it there there's a lot
+of interesting challenges just happen
+magically and for free really that I
+it's one of those things that is so cool
+about the cloud and AWS is a lot of
+stuff that like in the generations past
+we had to worry wor about is now it just
+it just does it for you and not only
+does it do it for you it does it with
+with systems that have been tested at
+scale a bunch of times like back well
+decades ago at this point I I used to
+like run MySQL on my own hardware and
+like you run it on one server you think
+you know I I better actually make sure I
+can fail over to a different piece of
+Hardware if it breaks actually scripting
+and testing that failover there there's
+always another way it can fail that you
+don't know about Until It Breaks that
+you didn't detect and but the scale we
+do things we know that we know all those
+failure modes way ahead of any customer
+and no super helpful red box that says
+fix this for me is gonna pop up I missed
+the red box yeah so is the migration is
+it um going to be enabled by default or
+is it something that customers opt into
+um this this happens automatically and
+be by default now there is a list of
+instance types it works with it's a long
+but is a specific list of of general
+purpose and compute and memory optimized
+instances I I think we have to actually
+test very specifically on every instance
+type there's probably Hardware nuances
+that make this as as seamless as it
+imagine I imagine that list will grow
+over time as we work out they always do
+yeah yeah well very cool but they grow
+they grow over time partly in response
+to customers coming to us and saying you
+know I I want to run a dedicated host of
+this particular type make sure you have
+that on on your your backlog and so it
+is it is is a little bit on our
+customers to make sure that their needs
+are expressed to us in some
+way yeah and that's the that's why we
+solicit for surveys and feedback because
+we want to do what's going to be most
+helpful for the people using it for sure
+yeah so so apparently I'm Nick is being
+voted to do wings at reinvent and I I
+hereby volunteer to eat wings with Nick
+at reinvent so yeah that's why I was
+telling Nick get your celery ready it's
+gonna get it's gonna get hot at reinvent
+this so speaking of Nick should we uh
+should we bring on our our producer and
+talk to sure we should yeah you know I
+think Jeff that is a legally
+contractually set thing now we set it on
+air got an audience of a couple thousand
+here Jeff bar and I having a hotwing
+eating cont I would never turn down hot
+wings perfect also I'm really glad I
+just need to point this out for the
+first time ever folks everybody on the
+on air team is wearing the same colored
+shirt so it looks very coordinated today
+tody kind of ruins the by having some
+graphics on it but we'll roll with it
+hey this is my replay shirt from last
+year's reinvent I'm trying to get in the
+mindset this year I'm ready for for
+reinvent we'll allow it then we'll allow
+it but yeah guys guys take the survey
+let first off I need something to read
+tonight I'm a lonely person I get you
+know my social interaction from reading
+people's surveys plus let's be honest
+who doesn't love taking a multiple
+choice test I know I did and I was the
+cool kid in school clearly so get your
+multiple choice kick hearken back to the
+days of taking the SATs and standardized
+testing in grade school good old days
+want to take a survey think that's
+G doing the opposite yeah right now the
+two leading ones are almost tied is me
+having to do this hot we eting contest
+with Jeff and me having to work song
+lyrics into every single uh interview
+that I do a roaming segment so well let
+us know what you want let's do those
+wings regardless of of popular opinion
+yeah let's be honest we're definitely
+doing the hot wing let's just do those I
+want some I want some free hot wings
+yeah guys let us know with the comments
+today the AWS as a service that's great
+I mean I think that would sell that'd be
+our best seller if I could have a
+managed chicken wing production at home
+just put the chicken wings in front of
+me and the the rule Jeff the first one
+to show any sort of pain during the hot
+wings loses I think that's is a pepper a
+fruit or a vegetable
+though I knower a pepper's a wasn't like
+a fruit the fruit is the seed and a
+vegetable houses the seeds or something
+oh you got a better education than I did
+something like that I'm gonna guess
+vegetabl according to our datab it's a
+berry all right I didn't know
+that but yeah guys and the other thing
+is we'll drop a link to get registered
+for reinvent in the chat here uh
+definitely encourage everybody to do so
+besides getting to watch Jeff and I eat
+outrageously hot foods uh you can also
+stop by our booth we'll have some cool
+swag there maybe you can say hi to us
+walking by say hi to your mom on camera
+who doesn't love that uh there are so
+many cool things at uh on the Expo floor
+that you can do a lot of the demos uh
+that we come up with like you can
+actually live interact with them last
+year I was able to fly a drone I used
+the F1 race simulator which was pretty
+sweet got to do an NFL passing thing
+which was kind of cool I even played
+beer pong against a robot so lots of
+cool things to do at reinvent uh
+everybody should definitely come check
+it out and if you're wondering where we
+are just look for the mass crowd
+gathering with people crying tears of
+joy and you'll probably see the on
+people come all the way to Vegas just to
+see us in person they do actually
+basically it's like uh the magician
+what's it the Chris Angel and then it's
+like us we're like we right there just
+about on some scale he's the Mind Freak
+we're the cloud freak you know it's just
+hand in Tina's reminding you can also
+get a tattoo I learned this last year I
+was at reinvent saw people getting
+tattoos at a at reinvent which is
+incredible I was told I'm not allowed
+does it have to be a logo I was totally
+ready I was down I was committing I was
+gonna get a Amazon smiley face like on
+my neck or something but uh they said it
+wasn't it was for customers
+only I'm sure your wife was probably
+appreciative of that Ro
+all right guys well I know we're at time
+so we got to wrap here uh but yeah
+everybody take survey register for
+reinvent let us know your thoughts on
+the show and uh who's gonna take us out
+today I think it's Todd's
+turn sure what am I doing gotta take us
+out man what's the CL hey I'll take us
+out uh you want me to sing a song or
+something oh yes well
+now absolutely we want you to sing a
+song Hey I'm gonna see you at reinvent I
+will be there I'm super excited thanks
+for watching Everybody we'll see you
+next week uh on AWS on
+air see you all

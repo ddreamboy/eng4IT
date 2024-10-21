@@ -1,0 +1,381 @@
+In our previous video, we showed 
+you how we hacked the TP-Link router  
+and got a win in the Pwn2Own competition..
+One of the most frequent 
+questions we got asked was:  
+how did we get initial access 
+to the device to perform recon?
+Today, we will show you the exact techniques 
+we used and how you can do the same  
+to get a root shell in many IoT devices.
+So sit back and enjoy the ride!
+Hey guys this is Pedro from the Flashback Team.
+And I am Radek.
+And today we are here to show you  
+what is UART and what you can do with 
+it from a hacker's point of view.
+So have fun and if you enjoy the video please 
+like, please subscribe but more importantly  
+please share with friends colleagues 
+or whoever might be interested in it.
+So let's get going.
+UART is an extremely important 
+protocol that is used in many devices.
+It allows components to speak 
+to each other and you'll find  
+almost any embedded device like 
+routers, cameras, phones or even cars.
+But for us we are the mostly interested 
+in UART as a debug interface.
+What can we do with UART?
+Most embedded devices will  
+have a serial console which is used for various 
+purposes during manufacturing, for debugging, etc.
+And if we're lucky when we 
+connect to it we get a root shell.
+This will help us do recon on 
+the device, debug exploits etc. 
+We can also use it to explore the file 
+system, to dump the firmware and in some  
+cases even perform attacks such as attacking 
+the bootloader, accessing encrypted memory, etc.
+Of course not all that glitters is gold.
+Sometimes, device manufacturers disable the 
+UART serial console before shipping a device.
+Sometimes we can bypass restrictions 
+,there's a certain secret key combination  
+we have to enter at boot to activate the 
+console, they also might have a login.
+This login might have an easy to guess password 
+or a very hard randomised per device password.
+We might also land in a sort of restricted shell 
+that allows us to run some commands but not many,  
+and then we have to find a way to bypass it.
+Or in some cases we only get a read-only console.
+This is just showing a bootlog 
+showing what's happening,  
+and there's nothing we can do, 
+we cannot interact with it.
+The good news is that we're hackers right?
+We can always find a way.
+We can use command injection or other tricks  
+to bypass some shell restrictions 
+and execute the command we want.
+We can also try to guess the login password either 
+by cracking it or by inspecting the firmware.
+In some cases we can even dump the firmware 
+over an UART restricted serial shell.
+We can also try to interrupt the bootloader 
+and use some other tricks to get a root shell.
+And the thing is even if you just 
+get a read-only console and there's  
+no way to bypass it, it can still be very useful.
+For example we can use the bootlog to see what's 
+happening on device, what services are being  
+started, what components are there in the board, 
+where is the memory, where's the file system  
+and in some cases, we've seen this 
+in the past, we have passwords echoed  
+into this bootlog which we can use to 
+enter ssh or some services like that.
+But also very importantly, we have crash 
+logs from our exploitation attempts.
+Let's say you only have read-only access 
+to a console, you can only see what's  
+happening but you know there's a 
+service and you're attacking it.
+You're fuzzing it or you're sending network 
+packets, and if there's a crash, it is very  
+likely that this boot log will contain the 
+crash dump, showing you what's on the registers,  
+what's happening at crash time, etc, which 
+can be very useful to debug an exploit.
+OK, good intro Pedro.
+Let's continue and try to understand 
+how UART communication works.
+We know that UART is a serial 
+communication protocol between two devices.
+In this case a device A which wants 
+to speak to device B (our target).
+We use the connection from our transmission 
+line (TX) to a receiver line on target (RX).
+And the same goes in the opposite 
+direction, the target will send data  
+on its TX line and the data will 
+end up on our end on the RX line.
+And both devices have to be grounded.
+But how do we really find a physical 
+UART interface on the target?
+Well in most of the cases we'll be 
+looking for a sequence of paths or pins.
+We know that we need three pins 
+to connect to: RX, TX and Ground.
+We can ignore the VCC (power) 
+pin which is usually also there.
+It is where the power line from 
+the target device is routed,  
+but we don't really need for our purpose.
+If we additionally find a mark for the 
+pin number one, then it's even better,  
+as it might confirm that we're 
+looking on some sort of interface.
+But remember: the mark only informs us which 
+side of the pins should be referenced from. 
+But the UART interface does 
+not always look the same.
+You will need some experience to 
+quickly narrow down your candidates.
+Let's take a quick look at some examples.
+Here we have a NETGEAR router.
+The UART interface is marked with a red square.
+In this case we are super lucky, the 
+pins are already soldered and labelled.
+It could not be easier than this.
+On this device the UART interface is a row of 
+four pins, with a triangle marking pin number one.
+We might have to solder our own pin header 
+and identify the RX, TX and the Ground.
+And here we don't have the pin 
+headers but the pins are labelled.
+Not too bad, still saves us some time.
+Oh that's a good one, it's a security camera.
+You can see it has an interface 
+that is so called edge connector.
+The vendor most likely has 
+a special connector for it,  
+but you can do without. Just find the 
+RX, TX and Ground and you're good to go.
+Another camera example but this time 
+there are no through holes but a pad.
+Notice the very tiny marks of RX and TX.
+If you want to connect to this one,  
+the best will be to use articulated arms 
+that I have showed you in a previous video.
+Or just solder wires into it.
+And the last example: it's a Tesla 
+ecu with a card edge connector.
+So now you can see that there are many variations  
+how the UART interface could 
+be implemented on a device.
+But this is not a complete list. In some cases 
+the pins might be hidden or removed completely.
+As we now know how to find a 
+candidate for the UART interface,  
+let's go to the next step: how to find 
+out the purpose of each of the pins.
+I would start off with the 
+multi meter and the Ground pin.
+Simply switch the multi 
+meter into continuity mode,  
+find a grounded element on the 
+router and move the probe one by one.
+When you hear the beep sound that is your ground.
+Now you are ready to find TX and RX.
+You could use a logic analyser for 
+that or continue with the multi meter.
+With the router powered on, 
+test the remaining pins.
+A pin with constant 3.3 volt  
+is most likely a power pin.
+You don't need it now.
+A pin with 0 volts is probably a RX, 
+as it would expect data from you.
+A pin that has a floating voltage is a TX, as 
+that's the data that the router is sending.
+As we have found out the purpose of each pin, 
+we can try to communicate with the router.
+For this we need a device that 
+can speak UART, like this one.
+I connect it to my computer via the USB 
+port and wire it up with the target.
+Remember the RX goes to TX and TX goes to RX.
+Ground goes to Ground.
+OK, everything wired up.
+Now we need software that can use the UART 
+device and actually speak with the target.
+I like to use the screen Linux tool 
+but let's use the minicom this time  
+as probably more people are familiar 
+with it for serial communication.
+Power up the target... oh snap!
+What is that?
+Well I must have messed up something in the 
+settings, let's take a quick look into that.
+Damn... that's a lot of things that can go wrong.
+OK it's time to dig more into 
+the UART protocol itself.
+UART sends data in well-defined frames.
+The frame always starts with a "start bit" 
+to indicate the beginning of the frame.
+Then the data follows.
+In most of the cases it will be 8 bits of data but 
+the protocol specifies it can be from 5 to 9 bits.
+After that a parity comes.
+The purpose of the parity bit is to indicate 
+potential errors in the transmission.
+Depending on the mode it 
+counts the number of ones,  
+and by adding or not adding a parity 
+bit it tries to make them odd or even.
+But the parity bit is really an optional 
+field and actually it is very rarely used.
+The frame end is indicated with a stop 
+bit, it can be one, one and a half or two  
+bits in size. But again in most of the 
+cases it will be just one bit in size.
+Let's assume we would like to send the 
+data with the letter A, which is 0x41. 
+We have the high line that indicates a 
+positive voltage, for example 3.3 volt,  
+and the low line at zero volts.
+By default the line idles in high so that means if 
+you want to start the transmission of our frame,  
+we have to pull it down to zero volts to 
+indicate to the target we are sending a zero.
+Now the data comes in. 
+It is sent with the least significant bit first, 
+as in, you know, in 0x41 the first bit is one.
+The voltage has to rise to indicate it.
+Then a bunch of zeros comes, then a 
+one and the most significant bit zero,  
+and that's the end of the data part.
+In this example I have also included a 
+parity bit but for completeness only.  
+As said before it is rarely used in our targets.
+The frame is closed with a stop bit.
+And the last thing that you 
+need to know is the baud rate.
+The baud indicates how fast the 
+data will be sent over the wire  
+so it is crucial that the receiver and the 
+transmitter have set the same baud rate.
+There are a few defined rates 
+in the protocol, but most common  
+are 9,600 for some older or less powerful 
+devices and 115,200 bits per second.
+OK, now with all that information we 
+can simply try to see what happened,  
+our target didn't want to speak properly with us.
+Let's look into the wire and see what UART 
+frames have been transmitted and we'll find out.
+We can use a logic analyser such as this one.
+It's Saleae - it is a 4 channel version which  
+means I can intercept traffic 
+on 4 wires at the same time.
+It will help us to understand how 
+the voltage changes on the wire  
+,which we can interpret as logical one or zero.
+On the reverse you can see it pin out.
+G stands for Ground and the channels.
+So I use the pin headers to hook the logic  
+analyser to the Ground and 
+the TX pin on the router.
+Now connect the logic analyser to the computer 
+and wait for it to be discovered by the software.
+Power up the router and let's 
+find out what is sent on the wire.
+This is an interface for the Saleae.
+We'll see what is happening on the wire of 
+channel 0 for both digital and analog inputs.
+Let's hit that play button and intercept the data.
+Oh yes baby something is 
+coming up, let's dig into it!
+When I zoom in you can see 
+individual changes in the voltage.
+That will represent logical data of course.
+As we assume we are looking at the UART 
+let's find some more occurring waves  
+to calculate the baud rate or, you know, 
+how fast the bits are sent on the wire.
+If we measure the width of the logical one 
+wave we can use the calculator to get the rate.
+It's quite easy: you just take 
+one and divide the one by the  
+width of the bit and we adjust for the units as 
+we are working with seconds and microseconds.
+Now we know we need to use 115,200 baud rate.
+Let's add the analyser of the async 
+serial and confirm our assumption.
+Input channel 0... now we know the bit rate...
+8 bits of data per frame, 1 stop bit, 
+no priority bit, basically all standard.
+OK, let's quickly look at the 
+beginning of the communication.
+We can see the idle which is pulled 
+down, that would indicate the start bit.
+Then 8 bits of data, and the stop bit.
+So far so good.
+Let's change the data according to ASCII.
+Oh that looks like proper data!
+I think I have figured out the baud right now.
+Let's confirm with minicom again but I have 
+a good feeling we're gonna win this one.
+minicom here we come.
+Let's pop that help window.
+I'm interested in configuring 
+minicom so I press O.
+Now press E so I can set the speed of the device.
+And again E so we set it to 115,200.
+Notice the remaining settings: we say 8 
+bits of data, no parity and 1 stop bit.
+Power up the target...
+Finally! This is the boot 
+lock of the router! We win!
+Let's stop that auto boot.
+Why it doesn't react?
+Ah yes! Do you remember from the 
+previous video, we had to use that super  
+neat hack to connect the RX line of the router?
+Let me quickly explain you how 
+we could deal with that problem.
+I took a picture of the 
+target and loaded it to GIMP.
+I am sorry it might look small but I didn't 
+find a way to increase the font in GIMP.
+On the picture we see the main CPU 
+and a lot of traces that go from it.
+And some of the traces are going 
+to the area of the UART interface,  
+that is usually a really good sign.
+So this is our busted RX pin. 
+Notice a connection to that R24 pad.
+Maybe it was a resistor that TP-Link decided 
+to remove to disable the UART; I don't know.
+But then I measured it and I knew there is no  
+connection between the pin 
+and the rest of the line.
+And if you would be tracing the line, you 
+would notice that it disappears at some point.
+It's because the PCB are multi-layered which 
+means that trace is run on various levels.
+However for a simpler PCB we can try to 
+visually connect them, let me show you how.
+I coloured both traces: the 
+TX with pink and RX with red.
+Then if i use the settings 
+for the transparent level  
+and align pictures of front and back, 
+you can trace them kind of end to end.
+We can even remove the green colour 
+which could help us visualise it better.
+So now we can see that both RX and 
+TX do terminate in the main CPU.
+You could try to find a datasheet for that chip 
+and confirm it, but I will skip it for now.
+To recap: we know that our RX line is broken.
+That's why we can't send data to it.
+So all we have to do is to reconnect it again, 
+and we did it by placing that paperclip bridge.
+So now the line is connected, and we have a very 
+high probability that we can send data over it  
+and eventually get root shells via UART.
+Please share this video and 
+subscribe to the channel.
+If you haven't seen our previous video where we 
+present a complete walk through how to gain remote  
+code execution on this router, please check it 
+out you'll be able to understand this much better.
+Make sure to visit our website, flashback.sh,  
+where we upload more technical 
+documents and security advisories.
+Take care.

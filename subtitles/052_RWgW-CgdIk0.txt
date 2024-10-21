@@ -1,0 +1,619 @@
+hi there welcome to this brand new
+learning video called cloud computing
+tutorial i'm samuel a multi-platform
+cloud architect and trainer working for
+simply learn let's dive deep into the
+topics we're going to discuss here why
+we needed cloud computing to begin with
+and what is cloud computing and
+different types of cloud computings
+available at the moment and we also are
+going to talk about a dominant cloud
+providers available in the market at the
+moment and we will touch a few topics or
+scenarios on life cycle of a cloud
+computing solution and we will be
+talking about how cloud computing is
+implemented in aws and there is nothing
+like visually seeing how things work in
+the cloud right so we're going to end it
+with a demo and we're going to talk
+about products or we're actually going
+to use products like ec2 and s3 ec2
+being a virtual computer in the cloud
+and s3 being an object storage in the
+cloud let's understand about why cloud
+computing was needed what was the
+problem that we had that cloud computing
+solved and since then it took over the
+market let's understand that first and
+that will solve a lot of unanswered
+questions about cloud computing or
+services that you might have here on the
+left we have an owner of a business and
+he wants to set up an dc or have an i.t
+infrastructure for his company so he
+called paul an i.t educated person in
+his company and consulted him about how
+to go about setting up an id
+infrastructure now paul is the kind of
+guy who keeps himself updated about
+what's happening in the iit industry and
+he frequently goes through learnings
+about the reason technology so without
+missing a beat paul suggested why not
+set up the environment in the cloud but
+his manager was not sure about what is
+cloud and and more than trying to
+understand what cloud is he was curious
+about the benefits of cloud over having
+and dc locally so paul started to
+explain the very same thing i'm going to
+explain to you now let's start with the
+expenditure or the billing model with
+cloud the billing model is pay as you go
+type meaning we use less and pay less
+and we use more and we pay less per unit
+on the other hand in on premises we
+can't expect that we pay everything
+upfront and there is an additional
+operating cost and it never lets us to
+dynamically scale in premises a lot of
+space is required for seating the
+servers but in the cloud not such space
+requirement is needed for the
+organization in on-premises we also need
+a dedicated team to manage the hardware
+and software but in the cloud no such
+dedicated team is needed for most of the
+services they all get managed by the
+provider and even if we need to manage
+them the provider gives us options to
+manage them through the console which is
+lot lot simpler than managing directly
+from the device in the on premises we
+need to admit the fact that data
+security is poor due to the cost
+involved in procuring the hardware and
+software to provide the security but in
+the cloud the security standards are
+high due to the investments the
+providers have done to secure the data
+and to meet the compliance in
+traditional dc there will generally be
+less focus on data recovery and we kind
+of settle for less when it comes to data
+recovery due to the cost involved and
+you know the effort involved in
+replicating the data and even if we set
+up a high performing data replication a
+lot more can be done in the cloud for
+the same cost the on-premises
+environment lacks the flexibility needed
+today like if i need to restructure the
+it for the new age business needs then
+the on-premises is not so friendly for
+such changes but in the cloud i can
+easily undo or tear down an environment
+or migrate to the new environment and
+tear down the old environment in few
+button clicks now looking at the number
+and the frequency of the releases that
+happen scheduling updates would be an
+full-time job but with cloud the updates
+happen automatically in on-premises if
+i'm working with the team that is spread
+across the globe working with them in
+unison and sharing the data is a tedious
+work but with the cloud there are a lot
+of tools and technologies put together
+that makes it easy to share the data
+with other members in the team or with
+the new prospective customer in on
+premises if i'm working with the team
+that is spread across the globe working
+with them in unison and sharing the data
+is a tedious work but with a cloud there
+are a lot of tools and technologies put
+together that makes it easy to share the
+data with other members in the team or
+with a new prospect customer i will be
+working with who is present across the
+other side of the globe in on premises
+the data will be present inside the dc
+or inside the on-premises dc and even a
+valid user trying to access the data
+from outside the organization is a tough
+task but with a cloud as long as someone
+has internet providing the person access
+is just a few mouse clicks away talk
+about implementation building an
+on-premises dc takes time i was working
+on a project few years back and the goal
+to make a dc go live at that time was
+after two years from the date we were
+speaking about it but with the cloud we
+can bring our dc in the cloud within
+weeks after all this explanation and
+comparisons and talking about benefits
+paul's manager was fully enlightened and
+wants to have his iet environment in the
+cloud but our paul is not done yet and
+he took his manager through another
+level of discussion about the cloud just
+like i'm going to take you now so let's
+talk about what is cloud computing now
+cloud computing is the ability to
+deliver on-demand computing service over
+the internet and that too on a
+pay-as-you-go basis now you might think
+well what does that mean let me explain
+now with cloud rather than managing
+files on local storage devices cloud
+computing makes it possible to save them
+over the internet and access them from
+the internet so i can be a mobile person
+and i'm moving from place to place but i
+can access the storage from the internet
+because it's in the internet and if i
+want to give access to somebody else
+again it's easy for me to give access to
+them as long as they have internet
+connection available with them now let's
+move further and talk about or get
+understanding on the types of cloud
+computing we can categorize the
+different types of cloud computing based
+on two wide categories one being a
+deployment model and the other one being
+service model let's talk about the
+deployment model first deployment model
+is categorized into three types first
+one is public and then private and then
+hybrid cloud in other words public cloud
+private cloud and hybrid cloud it'll be
+easy for me to explain and also it'll be
+easy for you to understand if i walk you
+through this example consider the
+different types of vehicles we use to
+commute from one place to another for
+example if i want to travel i can pick a
+bus which is accessible to anyone i get
+in and i pay for the seat that i occupy
+and i pay for the time that i will be
+traveling in it and i'm done cost is
+very less here a similar kind of thing
+happens in the public cloud i pay only
+for the resource that i use and i pay
+for how long i use it if i use less i
+pay less if i use more i pay more for
+that month simple on the other hand
+private cloud is like buying your own
+car and using it for commuting purpose
+here i pay a huge amount upfront and it
+is all owned only by me i do not pay for
+it in an hourly fashion but completely
+and all up front the cost here is very
+huge and thirdly if i want the best of
+both types like the comfort of the own
+car and still don't want to pay all
+upfront otherwise one only to pay for
+the time that i use the service i can
+rent a car similarly i can have it in a
+hybrid environment meaning if i already
+have a dc i can integrate it with the
+cloud and use both the dc's and that
+would become an hybrid environment all
+right so that was good often
+learning let's summarize the types of
+cloud based on deployment models and as
+we know now about the public cloud
+public cloud is an cloud infrastructure
+that's made available to the general
+public over the internet and it is owned
+by the cloud provider some of the major
+players as cloud providers are aws
+microsoft azure ibm's blue cloud and sun
+cloud and private cloud now this cloud
+infrastructure is exclusively operated
+by a single organization it can be
+managed by organizations or third party
+and may exist on premises or
+off-premises doesn't matter but the
+point here is this is exclusively
+operated for a single organization and
+some companies that provide private
+cloud are aws and vmware and hybrid
+cloud gives the best of both public and
+the private cloud for example the
+federal agencies they opt for private
+clouds for storing and developing
+personal data and they use public cloud
+to share the non-sensitive data with the
+general public or with other government
+departments now let's talk about
+different clouds based on the service
+model if we need to categorize them
+broadly we can categorize them as
+infrastructure as a service ias or
+platform as a service paas or software
+as a service sas they sometimes are
+referred to as i as pass and says now at
+this moment you could be like this guy
+thinking sam i thought you're done
+categorizing the cloud now you're going
+to talk about three more categories
+which one should i pick well let me
+explain if all that you want is just in
+vm and you have all the expertise to
+install the software on top of it and
+make it work then go for is if you only
+want a platform or an interface to
+program or an interface to upload a
+program and make it run then pick pass
+or if all that you want is a finished
+product hosted in the cloud and be able
+to access it through the internet then
+go for sas here you get a username and
+password for an application and you can
+begin to customize the application based
+on your needs all right let's talk about
+is in a bit more detail is it gives
+basic computing infra it's based on pay
+for what you use model and some of the
+cloud providers who are big players are
+aws azure and google and here the users
+generally will be id admins in pass the
+provider gives you a platform or a
+runtime environment for developing
+testing and managing application it's
+platform ready you buy the platform you
+upload your code and you start working
+on it and it allows the software
+developers to deploy applications
+without running the underlying
+infrastructure and as you might have
+guessed by now the interesting
+candidates who would use paz is software
+developers and in sas everything is
+managed by the vendor be it the hardware
+or the software it's managed by the
+vendor and we pay for the service and we
+pay for it through a pay as you go
+subscription model and as you might have
+guessed the end users here would be end
+customer itself all right let's put
+together everything in the same page and
+compare and contrast the different types
+of service models in this chart it
+explains the difference between the four
+models starting from on-premises to i as
+and then pass and says it is
+self-explanatory that the resources
+managed by us are huge in on-premises
+and little less in is and further less
+or reduced in pass and nothing to manage
+when it comes to sas let me also explain
+the different types of cloud services
+through an example like this let's say
+that you have a crush on cake and you're
+planning to bake one yourself now let's
+look at the options you can have you can
+make all the ingredients yourself be the
+floor butter and you know put together
+and bake the whole thing yourself using
+your own oven pan you know the needed
+water and the rest you get idea right
+everything is yours and that's on
+premises all that you use is owned by
+you and nothing is managed by the vendor
+the other options you can have is buy
+the ingredients and
+mix and bake the cake yourself now this
+would be like is here the infra is
+managed by the provider and we get to
+use it and customize it the way we want
+it here the cloud service is in shared
+responsibility the other options you
+still have on hand is simply pick a
+phone and order a cake now this is a lot
+simpler than the rest we discussed so
+far you know it's simply picking the
+phone and ordering the cake and pay for
+it when it arrives simple and when it
+reaches home you will have to arrange
+the table garnish the cake if that's
+needed and then enjoy the cake it's the
+same way with pass just get the platform
+in which you would run your code and
+upload your code and start running your
+application here you and the vendor
+still share the responsibility you still
+have one more option left that is simply
+go out and dine this is a lot lot
+simpler that it requires no effort from
+us at all you buy the fully finished and
+garnished cake and pay for it and walk
+out no responsibility on making the cake
+it's the same way with sas we buy the
+finished product and pay for the
+finished application as next thing let's
+talk about the different cloud providers
+amazon web services aws is a cloud
+computing service provided by amazon it
+provides a mix of infrastructure as a
+service is platform as a service pass
+and package software as a service called
+sas offerings microsoft azure formerly
+known as windows assure is a cloud
+computing service by microsoft and it
+sort of specializes in using cloud for
+building testing deploying and managing
+the applications through the servers
+throughout the global network that
+microsoft manages it also provides
+software as a service platform as a
+service infrastructure as a service and
+it supports lots of different
+programming languages and tools and
+frameworks including both microsoft and
+third-party software and systems ibm
+cloud is a cloud computing service
+offered by ibm ibm cloud includes
+infrastructure as a service software as
+a service platform as a service now the
+difference is here it offers through
+public private and hybrid cloud delivery
+models vmware on the other hand is an
+subsidiary of dell technologies and
+provides cloud computing and platform
+virtualization software and services it
+was the first commercially successful
+company to virtualize the x86
+architecture google cloud platform on
+the other hand is offered by google it's
+a suit of cloud computing services that
+run on the same infrastructure that
+google uses internally for its end user
+products such as the google search and
+the youtube you're familiar with
+alongside a set of managed tools it also
+provides cloud services including
+computing services data storage services
+data analytics and machine learning
+services digitalocean on the other hand
+is headquartered in new york city with
+data centers worldwide digitalocean
+provides developers cloud services that
+help to deploy and scale applications
+that run simultaneously on multiple
+computers as of january 2018
+digitalocean was the third largest
+hosting company in the world in terms of
+web phasing computers let's talk about
+cloud computing in aws amazon web
+services aws is an cloud computing
+service provided by amazon and these
+services are accessible over the
+internet and because aws provides
+infrastructure as a service it's a
+flagship offering we can create and
+deploy any type of application in the
+cloud on top of the is that amazon
+provides and you know the best part here
+is the subscriptions are pay as you go
+type you use less and pay less and only
+for what you have used you use more pay
+more but still less per unit for the
+service used attractive isn't it now
+let's talk about the life cycle of the
+cloud computing solution the very first
+thing in the life cycle of a solution or
+a cloud solution is to get a proper
+understanding of the requirement i
+didn't say get the requirement but said
+get a proper understanding of the
+requirement it is very vital because
+only then we will be able to properly
+pick the right service offered by the
+provider getting a sound understanding
+the next thing would be to define the
+hardware meaning choose the compute
+servers that will provide the right
+support where you can resize the compute
+capacity in the cloud to run application
+programs getting a sound understanding
+of the requirement helps in picking the
+right hardware one size does not fit all
+there are different services and
+hardwares for different needs you might
+have like ec2 if you're looking for is
+and lambda if you're looking for
+serverless computing and ecs that
+provides containerized service so there
+are a lot of hardware's available pick
+the right hardware that suits your
+requirement the third thing is to define
+the storage choose the appropriate
+storage service where you can backup
+your data and a separate storage service
+where you can archive your data locally
+within the cloud or from the internet
+and choose the appropriate storage there
+is one separately for backup called s3
+and there is one separately for archival
+that's for glaciers so you know you
+knowing the difference between them
+really helps in picking the right
+service for the right kind of need
+define the network define the network
+that securely delivers data video and
+applications define and identify the
+network services properly for example
+vpc for network route 53 for dns and
+direct connection for private p2p line
+from your office to the aws data center
+set up the right security services im
+for authentication and authorization and
+kms for data encryption at rest so there
+are variety of security products
+available we got to pick the right one
+that suits our need and there are a
+variety of deployment and automation and
+monitoring tools that you can pick from
+for example cloud watch is for
+monitoring auto scaling is for being
+elastic and cloud formation is define
+the management process and tools you can
+have complete control of your cloud
+environment if you define the management
+tools which monitors your aws resources
+and are the custom applications running
+on aws platform there are variety of
+deployment automation and monitoring
+tools you can pick from like cloud watch
+for monitoring auto scaling for
+automation and the cloud formation for a
+deployment so knowing them will help you
+in defining the life cycle of the cloud
+computing solution properly and
+similarly there are a lot of tools for
+testing a process like code star and
+code build and code pipeline these are
+tools with which you can build test and
+deploy your code quickly and finally
+once everything is set and done pick the
+analytic service for analyzing and
+visualizing the data using the analytics
+services where we can start querying the
+data instantly and get a result now if
+you want to visually view the happenings
+in your environment you can pick antenna
+and other tools for analytics are emr
+and which is elastic mapreduce and cloud
+search all right enough of theory and
+let's have a quick look at how two
+services in aws ec2 and s3 work together
+and benefits us here are two id
+professionals talking to each other one
+says i have an application which takes a
+lot of storage and works only on linux
+system which i do not have at the moment
+and the other one is a smart guy and he
+immediately replies that he could use s3
+to store data and the tribe data and use
+ec2 for all his compute needs and then
+the curious conversation builds up and
+the first person wants to know what is
+easy to ns3 and the second guy starts to
+explain that aws ec2 is a web service
+that provides a secure and resizable
+compute capacity in the cloud and ec2 it
+can also be used to launch as many
+virtual servers as we need and about s3
+he explains aws s3 is a simple storage
+service provided by aws and about s3 he
+explains further saying that using
+amazon s3 we can store android drive any
+amount of data at any time on the web
+all right so the very first thing is to
+have an aws account so create an aws
+account and second thing is to create an
+aws s3 bucket and upload the files there
+you know the files that ec2 server is
+going to pull from will get stored in s3
+as first thing all right so the first
+thing is to create an s3 bucket so let's
+create an s3 bucket and let's call it as
+website bucket and these names will have
+to be unique so let's see if this bucket
+name is available says bucket name
+already taken or already exist so let me
+top it up with sl meaning simply learn
+alright so we were able to create a
+bucket and in that bucket let me upload
+a content that basically is going to be
+my index file that's going to go and sit
+in my web server so let me also make it
+public and view it all right so this is
+the content that i have stored in my s3
+and this is the content i'm going to
+push to my ec2 server right second step
+create an aws s3 bucket and upload files
+we're done with that third is to create
+an ec2 instance that's in other words
+create an virtual machine in the cloud
+let's go and create it all right the
+third thing is to create an ec2 instance
+so let's create an ec2 instance it's
+plain and it's very simple i'm going to
+keep everything as defaults here all
+right so i've launched an ec2 instance
+as you see it's running i also have an
+ip address public ip address here with
+that i have logged into this ec2
+instance and i'm in the folder slash war
+slash www.html
+and as you see there is nothing in there
+at the moment and this server also has
+apache installed in it as you can see
+you know i browse to the ip address of
+the ec2 instance and it's showing a page
+which is the default apache page all
+right if i had any files in this folder
+and that would get shown as the web page
+insert off the default page our task is
+to save files in s3 and move them to the
+ec2 instance so s3 is going to act as a
+storage or a repository or a source code
+control in this example all right so
+let's do that all right the third step
+is to create your ec2 instance and
+that's what we have done and the ec2
+instance has no files in it and the
+fourth step is to synchronize the source
+code bucket with the ec2 instance let's
+do that the actual command to do that
+would be aws s3 sync and then the name
+of the bucket from which we're going to
+pull the code and the folder in which
+we're going to put the code or the data
+all right so it has downloaded something
+look at that and now if we go back to
+the test page and do a refresh there you
+go it's showing the page that it pulled
+from s3 so here i can use s3 as the
+source code control bucket and
+any information that i put in there will
+get reflected in ec2 instance once i do
+a sync every day and that's how i use s3
+as my storage for ec2 right finally we
+were able to synchronize s3 bucket and
+the ec2 instance and we were also able
+to view the results in the web browser
+of the ec2 instance the data was copied
+from s3 to the ec2 instance and that we
+were able to view from the web browser
+all right so what did we learn we
+learned about what is cloud computing
+understood the basics of cloud computing
+we understood about the types of cloud
+computing based on deployment models and
+service model and then we understood how
+cloud computing is with aws you know how
+aws is a cloud computing service
+provider and the benefits of using aws
+over other providers we also looked at
+life cycle of the cloud computing
+solution and finally we did a demo on
+aws ec2 and s3 and we saw how ec2 is
+dependent on s3 or how we can use s3 to
+be dependent on ec2 and sort of act as
+in storage for the computer instance i
+really hope you enjoy this video i'll
+meet you in the next video thank you
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

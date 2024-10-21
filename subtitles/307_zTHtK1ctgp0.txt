@@ -1,0 +1,428 @@
+hello everyone welcome to this session
+of blockchain wallet my name is saurav
+and i'm part of the simply learn team so
+let's get started and let's see what's
+in store for us today so what's in it
+for you today we're gonna understand why
+do we need blockchain wallet what is a
+blockchain wallet how do these wallet
+work what are the different types of
+blockchain wallets their comparisons and
+demo on the usage of these blockchain
+wallets and we will try to do certain
+transactions using these wallets now
+before these blockchain wallets came
+into existence what were the means in
+order for us to do the transactions and
+what were the drawbacks in the old days
+the transactions with whatever medium
+and channels we had the problems were
+that the transactions were slow and
+banks were the central point of failure
+basically any transaction which has to
+go through has to go through some
+intermediary channels and has to pass
+through certain intermediaries like bank
+which makes them a single point of
+failure also there are issues in keeping
+track of all accounts and balances data
+get jeopardized manipulated or even get
+corrupted across
+multiple systems where the accounts and
+balances are maintained now here comes
+into existence what is called as
+blockchain wallet now what is blockchain
+wallet a blockchain wallet is a
+cryptocurrency wallet that allows users
+to manage different kind of
+cryptocurrencies for example bitcoin
+ethereum etc now a blockchain wallet
+helps exchanging of funds easily
+transactions are secure as they are
+cryptographically signed the wallet is
+accessible from web or mobile devices
+and the privacy and identity of the user
+is maintained so therefore a blockchain
+wallet provides all the features which
+are necessary for a safe and secure
+transfer and exchange of funds between
+different parties a blockchain wallet is
+a typical cryptocurrency wallet that
+allows users to manage cryptocurrencies
+it is very similar to the process of
+sending or receiving money through
+paypal or any other gateway which you
+use today but now you can use
+cryptocurrency instead similar to paypal
+which you're using for making
+transactions with your fiat currency now
+let's take a look at the ecosystem of
+blockchain wallets here are certain
+examples like electrum blockchain.info
+jaxx mycelium samurai and bitcoin paper
+wallet these are just to name a few
+blockchain wallets which are existing in
+the market but there are many more based
+on the requirement you have based on the
+security you require and based on the
+kind of wallet which suffices your need
+so we will see what are the
+categorizations of these kind of wallets
+are now how do blockchain wallets work
+let's take a look so before we move on
+to how blockchain wallets work let's
+understand what a private and a public
+key is and how are these keys related to
+a blockchain wallet now whenever you
+create a blockchain wallet you are also
+provided a private and a public key
+which is associated with your wallet now
+let's take an example in order to
+understand this imagine a person knowing
+your email address is sending you an
+email so in our regular day-to-day
+activity if we want to receive an email
+from someone we give him or her our
+email id and expect an email from them
+now what if an unknown person is able to
+send emails through my account so i am
+giving my email address for receiving
+email but when i am disclosing my email
+id i am not assuming that someone will
+be able to send emails through my
+account because then for that he has to
+be aware of my email account password so
+knowing your email address will not give
+a person the ability to send an email
+from your account you are not giving
+your password to the person to send an
+email you are just giving the email
+address to send an email from a
+particular email address an individual
+has to be aware of the password
+associated with it now blockchain wallet
+follows a similar process using public
+key and private key both together public
+key is similar to your email address so
+basically whenever your wallet is
+generated a public key is generated you
+can share that public key with anyone in
+order to receive funds private key is
+top secret it's similar to your password
+it should not get hacked or you should
+not disclose it to anyone and you use
+this private key to spend your funds so
+now instead of sending an email imagine
+you want to transfer money to your
+friend this transfer process is done
+through your blockchain wallet with
+blockchain wallets you can now send and
+receive cryptocurrencies so as i said a
+blockchain wallet has two keys a public
+key and a private key public key is
+shared with everyone just like an email
+address private key is just like your
+password which should be kept secret
+with the sender so with blockchain
+wallet no one will be able to send
+crypto coins just like emails through
+your public key until they know your
+private key but if someone gets access
+to your private key there is a high
+possibility that your account is hacked
+and you might end up losing all the
+cryptocurrency deposits in your account
+now let's take a look what are the
+typical features of a blockchain wallet
+it's easy to use it's just like any
+other software or a wallet which you use
+for your day-to-day transactions it is
+highly secure it is just a matter of you
+securing your private key and it allows
+instant transactions across geographies
+barrier-free without intermediaries and
+also these transactions charges you low
+cost fee and these wallets help you do
+transactions across multiple
+cryptocurrencies so you can make
+payments across cryptocurrencies which
+helps you do easy currency conversions
+now let's talk about what are the
+different type of blockchain wallets now
+basically there are two types of
+blockchain wallets based on the private
+keys one is hot wallet and another is
+the cold wallet hot wallets are like
+normal wallets which we carry for
+day-to-day transactions and these
+wallets are user-friendly cold wallets
+cold wallets are similar to a vault
+where cryptocurrencies are stored with a
+high level of security now let's take a
+look at the differences hot wallets are
+online wallets through which
+cryptocurrencies can be transferred
+quickly they are available online on
+internet example coinbase
+blockchain.info cold wallets they are
+digital offline wallets where the
+transactions are signed offline and then
+later disclosed online so they are not
+maintained on the cloud on the internet
+they are maintained offline to have high
+security and the examples of cold wallet
+are trezor and ledger now in case of hot
+wallets private keys are stored in the
+cloud for faster transfer in case of
+cold wallets private keys are stored in
+a separate hardware which are
+disconnected from the internet or the
+cloud or are stored in a paper-based
+document hot wallet they are easy to
+access available online 24 7. it can be
+accessed through desktop or mobile but
+has a risk of unrecoverable theft when
+hacked cold wallets this method of
+transaction helps in protecting the
+wallet from unauthorized access from
+hacking and other online vulnerabilities
+now the wallet can be further
+distinguished on these criterias there
+can be software wallets they can be
+hardware wallets which are like kind of
+usb driven and you plug into your usb
+drive and your hardware wallet can be
+used or they are a typical paper based
+wallet where you print your public key
+and a private key on a paper and keep it
+in a secure place let's talk about
+software wallet a software wallet is an
+application that is downloaded on a
+device either it could be a desktop or a
+mobile or it could be a web-based wallet
+which can be accessed online now here
+are certain examples dax bread wallet
+and copay are the popular software
+wallets so software wallet can be
+further categorized into desktop wallet
+online or we can call it web wallets or
+mobile wallets now desktop wallets are
+like cold wallets in which the private
+keys are stored in cold servers
+basically the desktop wallets the
+private keys are stored in your desktop
+you can unplug it from the internet do
+some offline transactions and then bring
+it back online now in case the main
+server is lost then a cold server
+basically a desktop is used as a backup
+server these wallets can be downloaded
+on any computer but can only be accessed
+from the system they are installed on so
+you make sure the desktop or the machine
+on which you i have downloaded the
+desktop wallet is safe has a backup
+you're maintaining the hardware you're
+not letting the machine go anywhere and
+it is on a secure location now these
+wallets are definitely cost efficient
+and one of the examples is electrum and
+is one of the most popular desktop
+wallet online wallets are the other kind
+of hot wallets that run on the cloud
+that are available on the internet now
+here users have the benefit of accessing
+these wallets across any device it could
+be tablet desktop or you can use it from
+your mobile browser the private keys are
+stored online and are managed by a third
+party you have to be dependent on a
+third party service now for example
+green address is a bitcoin wallet which
+is available on the web has an android
+app is available on a desktop and also
+is available on ios apple mobile wallets
+mobile wallets are like similar to
+online wallets except that they are
+built only for mobile phone usage and
+accessibility these wallets are also
+user-friendly and they have a
+user-friendly interface for which helps
+you in doing transactions easily the
+example is mycelium which is the best
+available mobile wallet hardware wallet
+hardware wallet is a type of cold
+storage device typically like a usb
+which stores the user's private key in a
+protected hardware device these wallets
+are similar to portable devices that can
+be connected to the computer can be
+plugged in as i said earlier it is less
+prone to malware attacks malicious
+attacks and it is hack proof examples
+are nanoledger trezor and kiki are the
+top hardware wallets available in the
+market to make a transaction from your
+hardware wallet you have to ensure the
+hardware wallet is plugged into your
+computer system before you can do a
+transaction from your hardware wallet
+paper wallet a paper wallet is an
+offline process for storing
+cryptocurrencies this wallet is a
+printed paper consisting of both your
+private key and a public key which are
+accessed using a qr code now since these
+wallets are safe they are widely used
+for storing large amount of
+cryptocurrencies now for example our
+bitcoin paper wallet and myetherwallet
+are one of the widely used paper wallets
+but the question arises how do i add
+cryptocurrency in my paper wallet in
+order to make a transaction with your
+paper wallet paper wallet works with
+your software wallets the online wallets
+to transfer funds from your software
+wallet to the public address shown on
+your paper wallet so basically first you
+park your funds in a software wallet
+then you transfer the funds from your
+software wallet to the public address
+printed on your paper wallet now let's
+do the comparison blocked in info
+blockchain info is a cryptocurrency
+wallet which supports bitcoin and
+ethereum it is easy to use and has a low
+transaction fee it has its apis exposed
+you can easily use them to order to make
+your own custom wallets also ledger nano
+ledger nano is a hardware wallet which
+offers a high security to your account
+it is available for bitcoin ethereum and
+litecoin users it is also possible to
+maintain multiple accounts and access
+them anytime bitcoin paper wallet paper
+wallet helps you to print your own
+tamper resistant bitcoin wallet it
+minimizes the threat of hacking jacks
+jax is a software wallet which enables a
+user to exchange currencies within the
+wallet it is available for bitcoin
+ethereum litecoin and many other
+cryptocurrencies with jax a user can
+view his updated balance as soon as the
+processing is complete now let's take a
+look at certain demos for the different
+kind of wallets we have talked about so
+let's first take an example of paper
+wallet so bit address dot org provides
+you a paper wallet it uses the
+client-side javascript in order to
+generate a random hash for your wallet
+so you keep moving your mouse and it
+will generate a hash public and private
+key it is recommended that when you are
+doing this process you should be
+disconnected from the internet and once
+these keys are generated you can print
+it and keep it secure and clear the
+cache of your browser so as you can see
+on the screen this is my public key for
+receiving my bitcoins and this is the
+private key for me to spend it i can
+print it and keep it handy with me but
+of course the safety of these physical
+documents cannot be entirely guaranteed
+if a hacker discovers the location of
+your paper wallet and physically steals
+it then they can access your bitcoin
+holdings so basically it is of high
+importance that you keep the paper
+wallet in a very very secure location
+some users hide or disguise the paper
+wallet it should be protected from
+physical damage if the keys fade or can
+no longer be scanned then the user will
+never again be able to access the
+bitcoin which are parked in that address
+also take care if you are using an
+incorrect type of printer that also may
+damage the paper wallet
+now let's take a look for our second
+example of online wallet here we are
+taking an example of bitpay so you can
+download bitpay online and create your
+account over here
+you can create a personal wallet you can
+create a shared wallet or a joint share
+wallet once you create a wallet like if
+you see the example over here this is my
+personal wallet and i have 3.645
+test bitcoins over here
+now in order to receive test bitcoins in
+my account you can receive these test
+bitcoins from testnet dot coin faucet
+dot eu's hyphen in
+now in order to receive it you just need
+to
+copy
+your bitcoin address
+in the testnet address
+so the test net has given me 0.87
+bitcoin so now my balance has increased
+from 3.5 to 3.64 and i can see this
+transaction
+see three minutes ago i just received
+0.872287 bitcoin the transaction is
+still in process but in a while as this
+transaction is getting mined on the test
+net i will receive it now as i have
+received it i can even make a
+transaction and send it to someone
+so from my personal account i can send
+bitcoin to
+someone whose bitcoin address i have and
+i have to just paste it over here
+transfer to bitcoin wallet either i can
+select one of my own wallets or i can
+search for any other bitcoin address
+which someone has shared with me and i
+can send it to that particular address
+now let's take an example of our
+hardware wallet how does hardware wallet
+works with the online wallets so here we
+have metamask which has a feature of
+connecting with hardware wallet so once
+you have metamask installed you will see
+this option of connect hardware wallet
+now metamask has provided support for
+trezor so now once you connect your
+hardware wallet the usb with your
+computer you can select an account you
+want to view on that particular hardware
+wallet and you can only choose one at a
+time and then you can start using that
+particular wallet for your decentralized
+apps so basically once you have your
+hardware connected it is integrated with
+your metamask and then you can start
+running your decentralized apps so that
+they can start using the tokens or the
+currency in the particular hardware
+wallet so use your hardware account like
+you would with any ethereum account
+login to dapps and send ethereums buy
+and store erc20 tokens and non-fungible
+tokens like cryptokitties so if you
+click connect to trezor over here
+metamask will start looking out for the
+connected trezor device so i hope you
+all had a great learning session and
+i'll meet you in my next session thank
+you very much
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

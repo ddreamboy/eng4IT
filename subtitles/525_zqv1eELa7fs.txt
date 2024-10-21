@@ -1,0 +1,154 @@
+let's unpack the concept of Federated
+learning a method for training AI models
+that is all about keeping your sensitive
+data right where it should be with you
+now ai applications like chat Bots
+recommendation systems and spam filters
+they're all very data hungry and they
+have been fed tons of examples
+mountains of information which they use
+to learn their specific tasks to build
+an AI model
+now normally in machine learning We
+Gather all of this data from different
+sources and bring it to one place all of
+this will reside
+in a central server and that's where the
+actual training of the model takes place
+Federated learning turns this process on
+its head instead of bringing the data to
+the model we take the model to the data
+so here's how it works think every
+device like a smartphone or a laptop or
+a server it has its own local version of
+a model
+so each of these are reporting into
+their own model and this model learns
+from the data right there on the device
+itself now after the model has learned
+from the local data it sends only the
+model updates back to the central server
+not the actual raw data so this all goes
+here
+to the central server and then that
+server Aggregates all of these updates
+from all the devices to create what is
+called the global
+model
+now why bother with this level of
+decentralization well this concept was
+first introduced by Google in 2016 at a
+time when Global attention was focused
+on the use and misuse of personal data
+concerns about data privacy and security
+prompted the search for alternatives to
+traditional centralized AI training
+methods giving birth to Federated
+learning so let's imagine a scenario
+involving a group of companies that want
+to collaborate on building a model to
+predict market trends but each company
+has sensitive sales data they want to
+keep private so each company has access
+to an initial Baseline predictive Global
+model here's our Global model up here
+and this resides in a central
+server
+now in their individual environments
+each company trains the instances of the
+model using their own sensitive sales
+data so we have the global model here
+and then these individual models with
+each company and here is their sensitive
+sales data along the bottom and they're
+tweaking and refining their model based
+on their unique data so the companies do
+not share their sensitive sales data
+instead they only share the updates they
+made to the model now these updates they
+don't contain any raw sales data but
+they do reflect the insights gained from
+the data the model updates are then sent
+back
+to the central server
+and here they're integrated into the
+global model now this iterative process
+continues with each company refining the
+model based on their private data and
+sharing only the model updates over time
+this model becomes increasingly accurate
+at predicting market trends even though
+no company had to share their sensitive
+data each Company benefits from the
+collective intelligence of the group
+while maintaining their data privacy
+that is the essence of Federated
+learning allowing for Collaborative
+Learning from shared model updates while
+keeping the actual data distributed and
+private
+now we can think of Federated learning
+as coming in three flavors so there's
+horizontal and horizontal Federated
+learning describes the forecasting model
+example we've just discussed where the
+data sets were all similar in this case
+the similarity was this was all sales
+data
+now another one is
+called
+vertical Federated learning so instead
+of using similar data sets we're dealing
+with complementary data using movie and
+book reviews for example to predict
+someone's music preferences
+and then the Third Kind is called
+Federated
+transfer learning here we start with a
+model that's already been trained to do
+one task and then adapt it to do
+something slightly different like like
+how a pre-trained foundation model
+designed to perform a task like
+detecting cars is trained on another
+data set to do something else entirely
+like identify cats now the use cases for
+Federated learning are far-reaching and
+impactful just consider the healthcare
+industry where Federated learning allows
+medical institutions to collaboratively
+train their models on their sensitive
+data without sharing the actual medical
+records or how financial institutions
+can improve their fraud detection
+mechanisms and credit scoring systems
+without compromising on customer privacy
+however Federated learning is not
+without its challenges there is the risk
+of inference attacks where adversaries
+may try to extract information about the
+data from the shared model updates when
+we put them up there now to counter this
+researchers are looking into strategies
+like secure multi-party computation to
+ensure privacy by encrypting model
+updates or by adding a degree of noise
+to the data to mislead potential
+attackers other challenges include
+computational efficiency because we do
+have all of this work going on locally
+here and maintaining transparency in
+model training and creating incentives
+for truthful participation look in the
+end Federated learning offers a
+promising path towards a new generation
+of AI applications by addressing privacy
+concerns and leveraging the power of
+distributed computing
+Federated learning holds the potential
+to revolutionize how AI models are
+trained
+if you have any questions please drop us
+a line below and if you want to see more
+videos like this in the future please
+like And subscribe thanks for watching

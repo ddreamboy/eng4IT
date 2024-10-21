@@ -1,0 +1,129 @@
+hello and welcome back to data science
+Wednesday my name is Tessa Jones and I'm
+a data scientist with decisive data and
+today we're going to talk about
+predictive analytics and what it can do
+for you
+predictive analytics fits into the
+spectrum of analytics that we've talked
+about before starting with descriptive
+which is the most basic of the analytics
+it is basically just cleaning relating
+summarizing and visualizing your data
+really getting to the questions about
+what's happening in my business and then
+there's diagnostic which is really
+getting down to why things are happening
+what's causing my revenue to decline or
+to increase how are things related
+things like that so if you've got a good
+base in both of these then we're ready
+to move into predictive analytics which
+is gonna dive into what's gonna happen
+in the future which is super powerful if
+you're a business person and you want to
+be able to make good business questions
+if you have at least an idea of what
+might happen in the future your your
+answers are already gonna be a little
+bit better so let's dive in so let's go
+with an example cuz that just makes it
+easier to kind of flow through what's
+actually happening here so let's pretend
+that we are grocery store owners and if
+we're already talking about predictive
+analytics you should have a pretty good
+grasp on descriptive and predictive and
+diagnostic analytics so you probably
+already have a decent dashboard that
+really tells you what's happening in
+your business right now so something
+like this where you have you know
+something here that tells you revenue by
+different departments like foods meats
+or foods and pastry or how your sales
+changes by product or overtime things
+like that so you have an idea of what's
+happening in your business but now you
+really want to know what's going to
+happen in my business so one really
+common question is how many of a given
+product am I going to sell for every
+store because this can really give you
+quite answer questions around how you're
+going to support supply chain processes
+or how you're going to manage the
+profits that you're going to have things
+like that so the first thing we need to
+do is talk about what happened
+past we really can't do anything or
+predict very easily unless we know or at
+least have an idea of what's happened in
+the past so here we have three lines in
+black that represent basically
+historical data each line here is one
+year worth of sales for a given product
+and then the green line here is the
+current year and here's today and if we
+build a predictive model it's going to
+tell us what's going to happen for the
+rest of the year so if this is all set
+up and we build a model basically we mix
+this information with all the data
+that's really clean and well-organized
+we mash it together with a bunch of
+mathematics and coding and basically we
+pop out some results and it shows up in
+a visual like this where you have these
+are the cells that we have had and these
+are the cells that we think we're going
+to have so a business person can look at
+this chart and say wow we need to put a
+lot more products to this store because
+I see sales are going to increase or our
+profit margins are going to be way
+higher than we thought so we can start a
+new program things like that you can
+really start to get innovative with your
+business decisions so let's pretend
+we've built this model and it's been
+running for a year and now we want to
+know how well is this model actually
+performing so down here we have a chart
+that shows in black what we actually
+sold and then in green what we thought
+we were going to sell and we see that
+there's some a couple of pretty big
+misses right here we sold way more than
+we thought we would which leaves risk to
+you know missing out on inventory or
+here we predicted we would sell more way
+more than we did so both of these are
+kind of misses and so we need to go back
+and look at the data and understand what
+assumptions we we applied that we're
+maybe a little bit wrong or applied
+incorrectly or look at the data maybe we
+weren't accounting for something and we
+kind of reorganize that and incorporate
+it into the model and then we redeploy
+it and then the then we have a better
+model this cycle can you know happen a
+couple times or it can happen many
+it really depends on the data it really
+depends on the objective it depends on a
+lot of different things but we do try to
+minimize the number of times that we're
+having to iterate through this before we
+can have a really sound predictive model
+so that's predictive analytics in a
+nutshell basically once you have a solid
+foundation of descriptive and diagnostic
+analytics we can really start pushing
+forward with predictive analytics and
+then next week we're going to start
+talking about prescriptive analytics
+which really gets to the questions of
+okay now that we know what's happening
+in the future what do we do about it I'm
+Tessa Jones and that's a reindeer

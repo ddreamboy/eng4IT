@@ -1,0 +1,380 @@
+so you're working with some data in
+python and you want to make some
+visualizations
+well i've got news for you there's a lot
+of data visualization packages out there
+i mean
+a lot
+it can be a little overwhelming but no
+need to worry i'm gonna step through
+every single package known to man okay
+just the main packages used for plotting
+in python and by the end of this video
+you should have idea of what each of
+them do and how you can use them all
+right let's start checking out packages
+that doesn't sound right
+and
+here we are in our data vis kaggle
+notebook
+up first is the og of plotting in python
+yeah you know it matplotlib
+this package was initially released in
+2003.
+were you born in 2003
+because it's so old a lot of other
+things are built on it
+and there's a ton you can do
+first the imports
+import matplotlib import pi plot as plt
+this is just how you do it
+let's say we want to plot a line plot
+looks pretty nice
+kind of boring but nice
+wanna up the stakes why not your
+standard scatter plot just a few lines
+of code and we have colored dots ooh
+run
+border if you say rob i hate circles
+i got the solution for you
+matplotlib has tons of functionality you
+can change the
+points of the plot you could do a ton of
+stuff but rob i want to do some
+statistics
+well built into matplotlib you can make
+a histogram super easy look at these
+aardvark lengths
+oh wait no it's fake data
+[Music]
+but this is just the surface of what
+matplotlib can do it's basically a pen
+and paper for plotting
+you can make almost anything check out
+this awesome heat mat mesh grid
+[Music]
+not impressed with matplotlib
+i created this function
+that creates an entire football field if
+you're not impressed i don't know what
+will impress you
+so to summarize
+matplotlib one of the oldest libraries
+in python customization out the wazoo
+tons of other packages are built off of
+it but the downsides are it's hard to
+learn at first complex plots are going
+to be code heavy and
+even though it has the functionality
+it's not really meant for interactive
+plots
+next up we have seaborne
+little known fact did you know that
+seabourn was named after the character
+from west wing
+samuel norman seabourn that's why we
+import it as sns
+seabourn is great if you want to make
+some plots out of the box for
+statistical analysis
+stats major
+and what's the distribution you're just
+p hacking here we can use the seaborne
+rel plot function to show the difference
+between two groups in our data set
+wow not as much code as in matplotlib
+switch the style type to line and we
+have a beautiful line plot are those
+confidence intervals i see
+one of the great things about seaborn is
+you can look at the difference between
+different categories in your data
+without having to actually change the
+data itself time saver check out this
+swarm plot each stop represents an
+observation in our group and it split
+between different days of the week
+nifty
+and what about a violin plot
+well a violin plot's a great way to see
+the distribution compared between groups
+and even split within a group
+interested in just a normal old bar plot
+we got you covered seabourn can make
+those too
+with confidence intervals
+want to go beyond just a normal boring
+scatter plot seaborn can do a joint plot
+you can see distributions on the x and y
+axis of each different grouping
+and them colored in between
+that's pretty cool and one of my
+personal favorites is the pair plot have
+a bunch of numeric features that you
+want to compare
+you have
+kde plots on the diagonals scatter plots
+everywhere else what more could you ask
+for oh coloring by the different groups
+it's got that too and it may not seem
+like a big deal but in seabourn one of
+the features i love is that you can use
+the hue variable to add color to your
+plots
+so to summarize seaborne
+standard plots for statistical analysis
+easy to use out of the box it is built
+on matplotlib so it's really just a
+fancy matte plot lib there's much less
+ability to customize
+next up
+[Music]
+bouquet
+or boca is it bokeh or boca tell me what
+you think in the comments below i'm just
+gonna call it bouquet when we import
+bokeh
+we can set it up to work in a notebook
+just like that
+super simple bouquet specializes in
+interactive plots
+your standard line plot here
+but wait
+i can select things i can move it around
+this is amazing
+one line not enough for you how about
+multiple lines
+very cool
+okay let's pick it up a notch with
+bouquet layouts we could put multiple
+plots side by side
+but it goes even deeper
+we can plot two things at the same time
+linked
+look with this code if i select here it
+also selects it on the other side
+a lot of cool stuff you can do with
+these linked plots with a little bit
+more work you can make some pretty
+amazing plots in this plot we've added a
+bunch of circles
+but the size of the circles and the
+color are based on features in our data
+but wait there's more
+interactive plots are just the start
+with bokeh you can actually interact
+with the data live by adding things like
+a range slider check out this code
+a bunch of dots
+but
+we can filter based on this slider
+want to change the
+circle size on the fly
+why not
+the world's your oyster
+and of course the standard bar plot is
+always there if you need it
+we create a figure and use the bar to
+make something beautiful um
+looking at this plot makes me hungry
+once you become a pro with bouquet you
+can write really long plots like this
+that show unemployment numbers
+throughout the years
+i'm not gonna lie
+this heat map is pretty beautiful
+and you can even use bokeh to display
+those awesome network x graphs that
+you've been creating whoa when you hover
+over a circle you can actually see what
+it's linked to awesome
+so to summarize
+bouquet
+interactive plots
+almost infinite ways you can customize
+bokeh plots
+for me bokeh reminds me of the map plot
+lib equivalent but for interactive plots
+the downside though is it's like
+matplotlib so it requires a lot of code
+and the time has come
+we're gonna talk about plotly express i
+know you've been holding your breath so
+just let it go now you can breathe i'm
+really actually surprised plotly express
+only has 657 github stars
+go and give it a star
+importing plotly express is as simple as
+import as px plotley express like bokeh
+allows you to create interactive plots
+but the difference is
+they're a lot easier to create using
+plotly express scatter we can create a
+scatter plot with just a few lines of
+code
+oh look at these petal widths
+but i want a grid of plots you say well
+look no further just provide a facet
+column and facet row variable and you've
+got yourself a grid of scatter plots
+what about line plots we got you covered
+uh check out australia and new zealand
+oh australia is winning all this in just
+one line of code
+sign me up and it wouldn't be complete
+without some bar plots just like bokeh
+it's fully interactive so we can turn
+things off if we don't like it
+oh but i can't turn them both off
+because i kind of don't want to see this
+plot at all
+remember seaborne's pair plot
+well plotly express has the scatter plot
+matrix
+not a lot of code here
+and we see the comparison
+so this has the upside of being
+interactive but i tend to prefer seaborn
+for this type of plot
+there are also a handful of custom plots
+that are just gorgeous check out this
+parallel coordinates plot
+and one of my personal favorites
+the parallel
+categories plot
+huh different groupings and how they
+link oh you can hover over it
+amazing
+i'm sold i'm sold i'm sold
+i'm sold i'm sold here's a perfect
+example of using plotly express to make
+a scatter plot
+colors
+sizes
+all of them depending on the data
+whoa
+let's only look at oceania australia and
+new zealand again
+and for those of you who prefer pie
+charts
+the sunburst plot is
+sort of like a pie chart kind of
+just
+don't make pie charts just like seabourn
+again plotly express can do different
+comparison between categories
+check out these violin plots
+not too much code here to create it too
+and something you might not always use
+but if you ever have a data set with
+latitude and longitude
+the scatter map box function can make
+some beautiful maps
+two dimensions not enough for you
+well
+we can go 3d with the scattered 3d plot
+with plotly express
+i feel like i'm in the matrix
+so to summarize
+plotly express two thumbs up for
+interactive plots
+it's kind of like seaborne but
+interactive and those maps
+i mean
+i don't know what else to say if you're
+not impressed by that map just close the
+video right now just close it i don't
+want you here also similar to seabourn
+it's going to be hard to customize your
+plots there is the plotly back end
+and dash
+but that's for another video
+the next two libraries are slightly
+lesser known
+so let's talk about plot nine if you've
+used r before you probably know gg plot
+two it can make some gorgeous charts so
+plot nine is basically gg plot and
+python
+the way you write the plots is different
+than anything else that i've seen but
+it's very similar to what you would do
+in r so if you're familiar with r this
+might be the package for you we got
+scatter plots with regression lines
+and standard error
+can't be beat
+one thing i gotta say is the default
+colors in plot9 and ggplot are really
+nice
+with these few lines of code you can
+make this bar plot with some lines
+hey check out want to do some analysis
+of greek letters
+you can make a pretty bar plot
+just a few lines of code
+i like it
+so to summarize plot nine basically gg
+plot two positives the plots are pretty
+the syntax is a little unique but if
+you're used to r you might like it
+downside is if you're not used to it it
+takes a little bit of work to understand
+and i gotta say the docks aren't that
+great so if you're looking to do
+anything custom
+you might be up creek without a paddle
+let's talk about alteir to be honest i
+haven't used altair that much and i
+don't really understand why it's
+different but it is different
+and
+maybe if you understand it you can
+explain it to me so the positives are
+the positives are that it has
+declarative visualization
+and the negatives are that it has
+declarative visualization
+and last up we have pandas you didn't
+think i would get through a video
+without talking about pandas did you
+that's right pandas can do plots
+just take your data frame
+use the plot method and you can make it
+make a cool visualization like this in
+milliseconds
+but rob you say this is just matplotlib
+i know but it saves you time because
+it's already in pandas
+show me a scatter plot there it is
+pandas can even do box plots
+these leave something
+to be desired
+area plots are actually pretty cool and
+i use these a lot
+it's basically a line plot
+filled in underneath
+so there you have it as quickly and
+hopefully entertainingly as i could i
+showed you every python package commonly
+used for visualization if i missed one
+please let me know in the comments below
+we talked about matplotlib seaborn
+bokeh
+plotly express plot
+altair
+and pandas
+everything you would ever ask for for
+plotting with python
+my name is rob i'm a data scientist and
+kaggle grandmaster if you enjoyed this
+video
+please pretty please
+subscribe
+and like the video too
+oh also you can find me on twitch where
+i stream time to time okay that's it see
+ya bye
+using plotly expl
+using pr plotly exploit
+using plot leaks

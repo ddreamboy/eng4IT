@@ -1,0 +1,157 @@
+welcome back to my channel in this video
+I'm going to discuss the cuts of
+dimensionality so the cuts of
+dimensionality is a problem if you're
+building a machine learning model and
+you want to add more Dimensions or
+features into your uh data you might
+think that adding more dimensions and
+features into your data will increase
+the performance of your model but
+paradoxically adding more Dimensions to
+your data will make your model less
+effective this is because of the problem
+called the cuts of dimensionality so in
+this video I will discuss about the
+local versus global model how locality
+loses its meaning in higher Dimension
+the boundary problems because of higher
+dimensional data sets data sparcity
+problem and practical implications and
+some mitigation tools let's get started
+local versus global problem so first
+let's understand how different model
+perceive data local models like KNN K
+nearest neighbors make predictions based
+on nearby data point
+they focus on the local structure of the
+data so let's see how KNN Works let's
+assume that you have two classes two
+cluster Class A and class P and you have
+a new data point depending on the
+neighboring points in this case k is
+equal to 5 you look at how many
+neighboring points belongs to uh class P
+and a in this scenario you can see three
+data points belongs to class B and two
+belongs to class A so you classified the
+new point uh should goes into class B
+and this this is why KNN is a local
+model because it's making predictions
+based on nearby
+[Music]
+points so this is how KNN Works let's
+see how linear regression works unlike
+KNN linear regression is a global model
+because it considers the full set of
+data points in order to come up with the
+best fit line and once you have the best
+fit line you can do use it to do
+inference so given a new data point you
+can use the best fit line to find the
+value of y so this way linear regression
+is considered as a global model because
+it's making the predictions based on the
+contributions from all the data
+[Music]
+points The Mirage of local in higher
+dimension in higher Dimensions our
+intuitive sense of local becomes
+distorted look at this formula this
+formula shows you this distance from
+Center to capture the fraction of volume
+in the space r is the fraction of volume
+and P is the number of
+Dimensions imagine working in a 10
+dimensional space so to capture just 1%
+of the data using let's say KNN you
+would need to include about 63% of each
+Dimensions
+range to capture 10% of the data you
+will need to include 80% of each
+Dimensions what was once a small
+neighborhood now spans almost the entire
+space so the third point is why the
+boundary problems become important in
+higher Dimensions let's have a look in
+higher Dimension spaces data points tend
+to be near to the edges rather than the
+center for example if you have a 10
+dimensional sphere with 500 uniformly
+distributed points the closest point to
+the center is more than halfway to the
+boundary this presents a challenge
+because the K&N model needs to extract
+aate rather than interpolate in order to
+make the predictions and what about the
+global models like linear regression
+models well the face something called
+the H biases as the bulk of the data is
+cured towards the boundary let's talk
+about the data sparcity problem in
+higher Dimensions the sampling density
+of data sets is represented by n^ 1 / P
+assuming you're building a prediction
+model with one dimensions and you have
+100 data points and now you add more
+dimension and and and you want to build
+a model with 10 features so 10
+dimensional model to make a prediction
+in order to achieve the same density of
+data points compared to like one 1D
+problem you would need 100 to the power
+10 data points that means one followed
+by 20 zeros that's a lot of data points
+if you add more dimensions and do not
+increase the data points then the data
+will become more and more sparse in
+higher Dimensions making your model less
+effective so how do you deal with this
+problem well to deal with this problem
+there are some methods you can apply the
+first thing you need to do is understand
+your problem understand your data and
+understand the features of your model
+feature selection is very important do
+not just add more features in order to
+make a complex model but think about it
+and choose the features which make more
+sense another solution is the feature
+engineering you can build more like less
+number of features with the given set of
+features to reduce the dimensionality
+another way is to use techniques uh such
+as PCA principal component analysis or
+TSN these methods are mostly used for
+dimensionality reduction and so they
+very useful for visualization
+visualizing higher dimensional data into
+lower Dimensions but they can also be
+used to reduce the dimensions of the
+data of course you you um lose some
+information when you project the data
+set from higher Dimension to lower
+Dimension but that's a trade of uh
+losing a little bit of information with
+uh with with reducing Dimensions so
+these are the the the methods to
+mitigate the problem of cuts of time
+dimensionality so in a sense while
+adding more dimensions and features into
+your model is tempting because you might
+think that you're adding more
+information
+paradoxically it makes your model less
+effective due to the data sparcity
+problem and the data and the boundary
+problem that we disc that we have
+discussed in this video so next time if
+you're building a machine learning model
+make sure you choose the right features
+and you use techniques like
+dimensionality reduction to reduce a
+number of Dimensions if you like this
+video don't forget to like And subscribe
+and share your thoughts in the comments
+down below um until next time take care
+bye

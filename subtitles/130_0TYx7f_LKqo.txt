@@ -1,0 +1,374 @@
+1. malware software designed to harm or
+exploit a computer system this can
+include viruses worms Trojans ransomware
+and other forms of malicious software
+2. fishing the practice of tricking
+people into giving away personal
+information or login credentials by
+posing as a trustworthy entity through
+email phone or text message
+3. ransomware malware that encrypts a
+victim's files and demands payment to
+restore access this can be in the form
+of a digital currency such as Bitcoin
+4. botnet a network of infected
+computers controlled by a single entity
+often used to launch distributed denial
+of service DDOS attacks or send spam
+emails
+5. firewall a network security system
+that monitors and controls incoming and
+outgoing Network traffic and is used to
+prevent unauthorized access to a private
+Network
+6. two-factor authentication a security
+process that requires an additional form
+of verification such as a codes into a
+phone in addition to a password this
+helps to prevent unauthorized access to
+an account
+7. VPN a virtual private Network that
+encrypts internet traffic and allows
+users to securely access a private
+Network remotely
+8. DDOS a distributed denial of service
+attack that floods a website or network
+with traffic to make it unavailable
+9. man in the middle mitm attack an
+attack in which an attacker intercepts
+and modifies communication between two
+parties often to steal sensitive
+information
+SQL injection a type of attack that
+exploits vulnerabilities in a website's
+database to gain unauthorized access
+11. social engineering the use of
+manipulation or deception to trick
+people into divulging sensitive
+information
+12. antivirus software that detects and
+removes malware from a computer system
+13. rootkit malware that hides its
+presence on a computer and grants an
+attacker control over the system
+14. zero-day exploit a type of attack
+that takes advantage of a previously
+unknown vulnerability before it has been
+discovered and patched by the software
+vendor
+15. spam unwanted or unsolicited
+electronic messages often used for
+fishing or spreading malware
+16. advanced persistent threat apt a
+targeted Cyber attack Often by a
+nation-state that gains unauthorized
+access to a network and remains
+undetected for an extended period of
+time
+17. keylogger a type of malware that
+records every keystroke made on a
+computer to steal personal information
+such as login credentials
+18. brute force a type of attack that
+uses automated software to guess a
+password or encryption key by trying
+every possible combination
+19. vulnerability a weakness in a
+computer system or software that can be
+exploited by an attacker
+20. password cracking the process of
+guessing or recovering lost or forgotten
+passwords
+21. encryption the process of converting
+plain text into a coded message that can
+only be deciphered with a secret key
+22 token a physical or digital object
+that grants access to a computer system
+or Network
+23. Honeypot a decoy computer system or
+network set up to attract and detect
+cyber attacks
+24. cyber Espionage the use of digital
+means to gather sensitive information
+from other countries or organizations
+25 cyber warfare the use of cyber
+attacks to disrupt or destroy critical
+infrastructure or military operations
+26. cybercrime a criminal act committed
+using the internet or digital technology
+27. cyberbullying the use of electronic
+means to harass or threaten someone
+28. data breach an unauthorized access
+or release of sensitive information this
+can include personal information such as
+Social Security numbers credit card
+information and login credentials
+29. cloud computing the delivery of
+computing services including storage and
+processing power over the internet
+30. end-to-end encryption a method of
+encryption that ensures that only the
+sender and intended recipient can read
+the message
+31. cyber hygiene the practice of
+maintaining good security practices and
+keeping software and systems up to date
+32. incident response the process of
+identifying containing and recovering
+from a Cyber attack
+33. cyber physical systems
+computer-controlled physical systems
+such as industrial control systems or
+medical devices
+34. mobile device management the
+practice of securing and managing mobile
+devices such as smartphones and tablets
+in an organization
+35. identity and access management I am
+the process of controlling access to
+computer systems and networks based on a
+user's identity
+36. sandbox a secure environment used to
+test and run untrusted code or software
+37. backup a copy of data or files that
+can be used to restore the original in
+case of loss or damage
+38. denial of service dos an attack that
+makes a computer resource or network
+unavailable to its intended users
+39. penetration testing the practice of
+simulating a Cyber attack on a computer
+system to identify vulnerabilities
+40. Network segmentation the process of
+dividing a network into smaller sub
+networks for security and management
+41. endpoint security the practice of
+securing all devices that connect to a
+network including laptops smartphones
+and servers
+42 intrusion detection system IDs a
+security system that monitors Network
+traffic and alerts administrators of
+potential attacks
+43. intrusion prevention system IPS a
+security system that monitors Network
+traffic and automatically blocks
+suspicious activity
+44. security information and event
+management sim a security system that
+collects and analyzes log data from
+multiple sources to detect and respond
+to security threats
+45. Advanced encryption standard as a
+widely used symmetric encryption
+algorithm
+46. public key infrastructure pki a
+system for creating managing and
+distributing digital certificates and
+public-private key pairs
+47 digital signature a method of
+verifying the authenticity and integrity
+of electronic data using a digital
+certificate
+48 digital certificate a digital
+document that binds a public key to an
+identity
+49. secure sockets layer SSL a protocol
+for securely transmitting data over the
+internet
+50. transport layer security TLS a
+security protocol that replaces SSL for
+securely transmitting data over the
+internet
+51. hypertext transfer protocol secure
+https a protocol for securely
+transmitting data over the Internet used
+for online shopping and banking
+52. secure shell SSH a protocol for
+securely accessing and managing remote
+computer systems
+53 remote access Trojan rat malware that
+allows an attacker to remotely control
+an infected computer
+54. Trojan Horse malware that disguises
+itself as legitimate software
+55. worm a self-replicating type of
+malware that spreads itself to other
+computers
+56. adware software that displays
+unwanted advertisements
+57. spyware software that collects
+personal information or tracks a user's
+online activity without their knowledge
+58. phylus malware malware that resides
+in memory and does not leave any trace
+on the hard drive
+59.
+script Kitty an unskilled individual who
+uses pre-written scripts or tools to
+launch cyber attacks
+60. advanced persistent threat apt a
+targeted Cyber attack Often by a
+nation-state that gains unauthorized
+access to a network and remains
+undetected for an extended period of
+time
+61. root access the highest level of
+access to a computer system or network
+allowing full control over the system
+62. distributed denial of service DDOS a
+type of attack that floods a website or
+network with traffic to make it
+unavailable
+63. cross-site scripting xss a type of
+attack that injects malicious code into
+a website to steal user data
+64. cross-site request forgery csrf a
+type of attack that tricks a user into
+performing actions on a website without
+their knowledge
+65. Internet of Things iot the
+interconnectedness of everyday devices
+such as smart home devices and cars
+through the internet
+66 artificial intelligence AI the
+ability of a computer system to mimic
+human intelligence and perform tasks
+such as learning and problem solving
+67 machine learning ml a type of AI that
+allows computer systems to learn and
+improve performance without being
+explicitly programmed
+68. Cloud security the practice of
+securing data applications and
+infrastructure in cloud computing
+environments
+69 Cloud access security broker csb a
+security solution that sits between a
+company's on-premises infrastructure and
+cloud services to provide visibility and
+control over Cloud usage
+70.
+software-defined networking sdn a
+network architecture that allows the
+control plane of a network to be
+programmatically configured
+71 identity and access management I am
+the process of managing user identities
+and access rights to resources and
+applications
+72 data loss prevention DLP the practice
+of identifying and blocking sensitive
+data from leaving an organization
+73 Cloud identity and access management
+cim the practice of managing user
+identities and access rights to
+cloud-based resources and applications
+74. identity and access governance ieg
+the practice of ensuring that only
+authorized users have access to
+sensitive data and systems
+75 encryption key management the process
+of creating storing protecting and
+managing encryption keys
+76
+multi-factor authentication MFA a
+security process that requires more than
+one method of authentication such as a
+password and fingerprint or security
+token
+77 cyber threat intelligence CTI the
+process of collecting analyzing and
+disseminating information about cyber
+threats to protect against them
+78 cyber resilience the ability to
+prepare for withstand and recover from
+cyber attacks
+79 cyber security operations center SOC
+a centralized unit responsible for
+monitoring and analyzing security
+related data from various sources to
+detect and respond to cyber threats
+80. risk management the process of
+identifying assessing and prioritizing
+potential risks to an organization's
+assets and implementing controls to
+mitigate or accept those risks
+81 compliance the adherence to laws
+regulations standards and policies that
+govern an organizations information
+security practices
+82. supply chain security the practice
+of securing the flow of information and
+materials throughout the supply chain
+from supplier to customer
+83 digital forensics the process of
+collecting and analyzing digital
+evidence in support of criminal
+investigations
+84. incident response IR the process of
+identifying containing and recovering
+from a Cyber attack
+85 mobile device management MDM the
+practice of securing and managing mobile
+devices such as smartphones and tablets
+in an organization
+86 network security the practice of
+protecting a computer network from
+unauthorized access use disclosure
+disruption modification or destruction
+87 email security the practice of
+protecting email systems from spam
+phishing and other types of cyber
+attacks
+88 cyber insurance insurance coverage
+for losses resulting from cyber attacks
+89. Internet of Things iot security the
+practice of securing the interconnected
+devices and systems that make up the
+Internet of Things
+90. physical security the practice of
+protecting a building and its assets
+from unauthorized access and damage
+91. artificial intelligence AI security
+the practice of protecting a systems
+from cyber attacks and other forms of
+misuse
+92 access control the practice of
+limiting access to resources and systems
+based on user identity and other factors
+93 authentication the process of
+verifying a user's identity
+94. authorization the process of
+granting or denying access to resources
+and systems based on user identity and
+other factors
+95. security information and event
+management sim a security system that
+collects and analyzes log data from
+multiple sources to detect and respond
+to security threats
+96 web application firewall Waf a
+security system that monitors and
+controls incoming and outgoing web
+traffic
+97 internet service provider ISB a
+company that provides internet access to
+customers
+98. Network address translation in at a
+technique used to change the IP address
+of a device on a network to make it
+accessible to other devices on the
+internet
+99 zero trust security a security model
+that assumes that all devices networks
+and users are potentially compromised
+and therefore requires continuous
+verification and authentication before
+granting access
+100 dark web a part of the internet that
+is not indexed by search engines and can
+only be accessed using special software
+it is often used for illegal activities
+such as buying and selling illegal Goods
+or stolen data

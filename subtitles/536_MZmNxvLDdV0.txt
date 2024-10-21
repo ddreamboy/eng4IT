@@ -1,0 +1,278 @@
+hi everyone
+welcome to this video tutorial by simply
+learn in this video we will learn about
+an important popular deep learning
+neural network called generative
+adversarial networks
+yan lacoon one of the pioneers in the
+field of machine learning and deep
+learning described it as the most
+interesting idea in the last 10 years in
+machine learning in this video you will
+learn about what are generative
+adversarial networks and look in brief
+at generator and discriminator
+then we'll understand how gans work and
+the different types of gans finally
+we'll look at some of the applications
+of gans so let's begin
+so what are generative adversarial
+networks
+generative adversarial networks or gans
+introduced in 2014 by ian j good fellow
+and co-authors became very popular in
+the field of machine learning
+gan is an unsupervised learning task in
+machine learning it consists of two
+models that automatically discover and
+learn the patterns in input data
+the two models called generator and
+discriminator compete with each other to
+analyze capture and copy the variations
+within a data set
+gans can be used to generate new
+examples that possibly could have been
+drawn from the original data set
+in the image below you can see that
+there is a database that has real
+hundred rupee nodes the generator which
+is basically a neural network generates
+fake hundred rupees notes the
+discriminator network will identify if
+the nodes are real or fake let us now
+understand in brief
+about what is a generator
+a generator in gans is a neural network
+that creates fake data to be trained on
+the discriminator
+it learns to generate plausible data the
+generated instances become negative
+training examples for the discriminator
+it takes a fixed length random vector
+carrying noise as input and generates a
+sample now the main aim of the generator
+is to make the discriminator classify
+its output as real
+the portion of the gan that trains a
+generator includes
+a noisy input vector
+the generator network which transforms
+the random input into a data instance
+a discriminator network which classifies
+the generated data and a generator loss
+which penalizes the generator for
+failing to dalt the discriminator
+the back propagation method is used to
+adjust each weight in the right
+direction by calculating the weight's
+impact on the output
+the back propagation method is used to
+obtain gradients and these gradients can
+help change the generator weights now
+let us understand in brief what a
+discriminator is a discriminator is a
+neural network model that identifies
+real data from the fake data generated
+by the generator the discriminator's
+training data
+comes from two sources
+the real data instances such as real
+pictures of birds humans currency notes
+etc are used by the discriminator as
+positive samples during the training
+the fake data instances created by the
+generator are used as negative examples
+during the training process while
+training the discriminator it connects
+with two loss functions during
+discriminator training the discriminator
+ignores the generator loss and just uses
+the discriminator laws
+in the process of training the
+discriminator the discriminator
+classifies both real data and fake data
+from the generator the discriminator
+loss penalizes the discriminator for
+misclassifying a real data instance as
+fake or a fake data instance as real now
+moving ahead
+let's understand how gans work now gans
+consists of two networks a generator
+which is represented as g of x and a
+discriminator which is represented as d
+of x they both play an adversarial game
+where the generator tries to fool the
+discriminator by generating data similar
+to those in the training set
+the discriminator tries not to be fooled
+by identifying fake data from the real
+data
+they both work simultaneously to learn
+and train complex data like audio video
+or image files now you are aware that
+gans consists of two networks at
+generator g of x and discriminator d of
+x now the generator network takes a
+sample and generates a fake sample of
+data the generator is trained to
+increase the probability of the
+discriminator network to make mistakes
+on the other hand
+the discriminator network decides
+whether the data is generated or taken
+from the real sample using a binary
+classification problem with the help of
+a sigmoid function that gives the output
+in the range 0 and 1.
+here is an example of a generative
+adversarial network trying to identify
+if the 100 rupee nodes are real or fake
+so first a noise vector or the input
+vector is fed to the generator network
+the generator creates fake hundred rupee
+nodes
+the real images of hundred rupee notes
+stored in a database are passed to the
+discriminator along with the fake nodes
+the discriminator then identifies the
+nodes and classifies them as real or
+fake we train the model calculate the
+loss function at the end of the
+discriminator network and back propagate
+the loss into both discriminator and
+generator now the mathematical equation
+of training
+again can be represented as you can see
+here now this is the equation
+and these are the parameters here g
+represents generator
+d represents the discriminator
+now p data of x is the probability
+distribution of real data
+p of z is the distribution of generator
+x is the sample of probability data of x
+z is the sample size from p of z d of x
+is the discriminator network and g of
+said
+is the generator network now the
+discriminator focuses to maximize the
+objective function such that d of x is
+close to 1
+and z of z is close to 0.
+it simply means that the discriminator
+should identify all the images from the
+training set as real that is one
+and all the generated images as fake
+that is zero the generator wants to
+minimize the objective function such
+that
+d of z of z is one this means that the
+generator tries to generate images that
+are classified as real that is one by
+the discriminator network next
+let's see the steps for training a
+neural network so we have to first
+define the problem
+and collect the data
+then we'll choose the architecture of
+gan now depending on your problem choose
+how your gans should look like
+then we need to train the discriminator
+in real data now that will help us
+predict them as real for n number of
+times next you need to generate fake
+inputs for the generator
+after that we need to train the
+discriminator on fake data to predict
+the generator data as fake finally train
+the generator on the output of
+discriminator
+with the discriminator predictions
+available train the generator to fool
+the discriminator let us now look at the
+different types of gans so first we have
+vanilla gans
+now vanilla gans have min max
+optimization formula that we saw earlier
+where the discriminator is a binary
+classifier and is using sigmoid cross
+entropy loss during optimization
+in vanilla gans the generator and the
+discriminator are simple multi-layer
+perceptrons the algorithm tries to
+optimize the mathematical equation using
+stochastic gradient descent
+up next we have deep convolutional gans
+or dc gans
+now dc gans support convolutional neural
+networks instead of vanilla neural
+networks at both discriminator and
+generator they are more stable and
+generate higher quality images the
+generator is a set of convolutional
+layers with fractional strided
+convolutions or transpose convolutions
+so it unsamples the input image at every
+convolutional layer the discriminator is
+a set of convolutional layers with
+strided convolutions so it down samples
+the input image at every convolutional
+layer moving ahead
+the third type you have is conditional
+gans or sea gans vanilla gans can be
+extended into conditional models by
+using an extra label information to
+generate better results in c gan an
+additional parameter called y is added
+to the generator for generating the
+corresponding data
+labels are fed as input to the
+discriminator to help distinguish the
+real data from fake data generated
+finally we have super resolution gans
+now sr gans use deep neural networks
+along with adversarial neural network to
+produce higher resolution images super
+resolution gans generate a
+photorealistic high resolution image
+when given a low resolution image let's
+look at some of the important
+applications of gans
+so with the help of dc gans you can
+train images of cartoon characters for
+generating faces of anime characters and
+pokemon characters as well next
+gans can be used on the images of humans
+to generate realistic faces the faces
+that you see on your screens have been
+generated using gans and do not exist in
+reality third application we have is
+gans can be used to build realistic
+images from textual descriptions of
+objects like birds humans and other
+animals
+we input a sentence and generate
+multiple images fitting the description
+here is an example of a text-to-image
+translation using gans for a bird with a
+black head yellow body and a sort beak
+the final application we have is
+creating 3d objects
+so gans can generate 3d models using 2d
+pictures of objects from multiple
+perspectives gans are very popular in
+the gaming industry
+gans can help automate the task of
+creating 3d characters and backgrounds
+to give them a realistic feel and that
+brings us to the end of this video on
+what are gans we hope this was helpful
+and informative if you liked it then
+please subscribe to our simply learn
+channel thank you for watching and keep
+learning
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

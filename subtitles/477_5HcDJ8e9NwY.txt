@@ -1,0 +1,102 @@
+your company generates lots of data but
+the business outcomes you gain from that
+data can be largely affected by data
+quality
+to use an analogy imagine you're a chef
+and you have the highest accolades in
+the industry a highly experienced team
+but when the ingredients come in those
+are poor quality ingredients picture
+rotten tomatoes rotten onions so when
+you go and make those entrees the end
+result is poor quality and your
+restaurant's reputation suffers
+this is the same impact that poor data
+quality can have on your business
+causing your company's reputation to
+suffer as a result
+there are a lot of different factors
+that can impact data quality such as the
+number of sources or the size of your
+company but today i want to talk about
+four main qualities within data itself
+accuracy unit completeness consistency
+and uniqueness
+and i'm going to talk about them through
+the lens of a lead generation company
+starting with accuracy
+accuracy is about the current state of
+your data versus reality
+so for my lead generation company
+imagine i'm driving traffic to a website
+and all of a sudden i get a sudden spike
+in usage from bots that hit the click
+generation
+if i don't account for this spike when i
+go and pull that data at the end of the
+day it's not going to reflect reality so
+it's not going to be accurate
+next i want to talk about completeness
+which is about how you have filled out
+all the required fields
+in your data set
+so let's say i'm launching a survey
+campaign
+and i'm collecting
+names and email addresses
+but i don't require this field so when i
+go and pull that data i notice that some
+of my participants didn't put their name
+some of my participants didn't put their
+email so when i go and pull that picture
+of the client of the customer i have an
+incomplete data set and a complete
+picture
+next we talk about consistency which is
+about how uniform
+your data set is throughout different
+data sources
+so back to my lead generation example
+let's say i'm driving traffic for a drop
+shipping campaign
+and i have my procurement team
+collecting zip codes and my marketing
+team collecting zip codes but my
+procurement team is looking at them
+in a five digit format while my
+marketing team is collecting them in a
+nine digit format
+when i go tap into both of these
+databases and pull the customer profile
+it might be incomplete because those zip
+codes don't match up throughout my
+systems
+and lastly there's uniqueness which is
+largely tied to the number of duplicates
+i have in a data set
+so in my lead generation context you can
+imagine having 50 000 leads at the end
+of the year but when i actually go into
+those leads i realize that 20
+are duplicates from customers who filled
+out the information previously so now
+when i go and pull that report i
+actually have 20 percent less data and a
+lot
+less
+positive looking picture for my company
+so
+looking at these aspects it's easy to
+think wow there's a lot of manual
+inspection here how can i go through all
+of my data and understand these
+resources these
+qualities right well you can actually
+leverage machine learning and ai to
+automatically sense these key features
+as data enters your system saving you
+time and manual inspection
+if you're curious about these ai
+features check out the links below and
+if you're curious about technology
+subscribe to the channel thank you

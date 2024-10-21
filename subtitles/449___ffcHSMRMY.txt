@@ -1,0 +1,70 @@
+the iot protocol is the networking
+language used by the nodes of an iot
+system and is critical to the overall
+viability of the deployment
+the protocol defines the scope format
+and complexity of iot solution
+Communications and plays a major role in
+determining cost and functionality
+therefore it is important to choose the
+right protocol
+there are two main continuums to
+consider
+power do the sensors need to be in the
+field on battery power for days months
+or years
+how often do they need to report
+are disposable devices being considered
+or will replaceable or rechargeable
+batteries be used
+connectivity what range must the
+communication cover and how much data
+need to be sent per message
+while the cellular provider be able to
+maintain your connectivity or do you
+want to keep your network and the data
+running on it
+where the demands of iot deployments
+fall along these continuities will often
+indicate which protocols they should
+consider and what costs to expect
+the smallest and least demanding iot
+setup suitable for a connected home or
+office can operate on a common Wi-Fi
+network with all components continuously
+powered
+other options for proximity connectivity
+are zigbee Z-Wave and Bluetooth
+each technology has its advantages and
+disadvantages in terms of power range
+and cost for larger areas like Farms
+campuses or cities where small amounts
+of data transfer are needed Standalone
+low power wide area networks will pawns
+are the perfect answered lower Awan and
+sigfox are two of the most popular Pawns
+cellular protocols like nbiot or cadm
+may seem increasingly practical when
+talking about coverage areas and across
+borders
+cellular iot protocols provide a way to
+leverage iot data on a regional National
+or even transcontinental scale without
+the need for pre-established gateways to
+create coverage
+instead the provider's already existing
+base stations will transmit iot data
+this also means that your iot will have
+the same blind spots as cellular
+networks and if the network connection
+is interrupted due to maintenance
+subscription restrictions emergencies or
+other reasons your iot will also crash
+however ease of deployment and coverage
+often outweighs the costs and
+limitations of relying on cellular
+providers
+after watching this video if you have
+any questions please leave them in the
+comment Zone and we will try our best to
+answer them

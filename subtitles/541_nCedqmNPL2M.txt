@@ -1,0 +1,2259 @@
+hello and welcome everyone so this will
+be sort of a session where we'll not
+discuss the usual uh Tex stuff that we
+usually do uh so usually we discuss
+about uh the technical details and we go
+in depth so today's session is dedicated
+as I said there's a long due uh session
+where I said that I'll be talking about
+uh generative AI in general and we'll
+take llms in particular so again I'll I
+would love to start with questions if
+you people have questions so straight
+away shoot them and then we can start
+from there and then we'll go a little
+bit deeper also into these LMS this will
+be a generic session not on the
+architecture details and how do we train
+and maybe we'll touch some of the
+aspects but more or less it will be a
+generic session any questions on Genera
+air and how does it work or something
+like
+that sir yes
+[Music]
+llm
+train so what specifications we need and
+what hardware and this softwares we do
+have so we can at least not a big llm
+but even a small
+170 100 billion parameters so 100
+billion is a lot yes yes I I'll tell you
+the hardware specifications
+usually uh it depends on the parameters
+that you have okay it depends on the
+parameters okay I'll have this question
+and I'll answer this question and first
+we'll start about a bit about what
+generative AI is and then afterwards
+maybe we'll have questions but keep this
+discussion engaging ask as many
+questions as possible and uh this will
+be a generic session it might help you a
+lot because you might be using geni
+tools and then you should have a right
+context what to use them for because
+many people have this notion that they
+can be used for this this that and and
+then sometimes it gives nonsensical
+answers and then we claim that this tool
+is not working good so if I talk about
+gen okay let me just shift the screen
+because I won't write much things so if
+I talk about generate your
+AI so what is this generation doing okay
+so what are what are we generating
+basically so the point here is that uh
+humans do generate humans do generate
+data so it is
+humans okay uh who generally generate
+data let's suppose if you speak you
+generate data and other devic also
+generate data let's suppose you capture
+uh uh photos by using the cameras and
+you have sensors there are a lot there
+are a lot of tools but humans guide
+these tools and then they generate this
+data generate the
+data that's the point so but now what is
+the meaning of generate AI so we want uh
+something that can be generated without
+let's let's suppose having that
+equipment let me talk about the image if
+I if you see image okay I need a camera
+or something for that either I can do it
+by camera or I can have an artist who
+can just draw uh draw an image and maybe
+some other means can be there so what we
+want is we actually want machines to do
+that we actually want machines to
+generate those images because you know
+if you go into a little bit of detail so
+if you see an image it is just pixels
+bunch of
+pixels okay so can we somehow uh have
+those pixels arranged in a certain
+fashion which will make sense to a human
+okay if you let suppose want to generate
+image of a cat image of a dog image of
+some human being okay because the task
+now is to find the pixel values and
+arrange them in a certain way so that it
+makes sense to other humans it makes
+sense to the uh people who are seeing it
+and they should say this is a face okay
+that's the task of generation now the
+Genera AI basically it uh generates new
+content including text images audio
+video based on the pattern it learns
+from the data okay it has a data and it
+learns patterns from that data and then
+it tries to generate the data from
+what's called a same distribution okay
+we have talked about talked a bit about
+distributions so data is coming from
+some underlying distribution so what
+these gen algorithms try to do is they
+try to mimic that distribution they TR
+to find those patterns from that
+distribution if you have a data okay you
+have data and then you they analyze this
+data and they see these different
+pattern they try to figure out the
+patterns and try to come up with the
+same pattern okay try to come up with
+the same things and we'll slowly
+formulate towards it so this is in a
+broader sense what generative AI means
+that is you don't have physical
+equipments right now you don't have a
+camera by which you can take a
+photograph or you don't have a human
+speaking uh so what will happen it'll be
+machines who will now generate the data
+and each generation task is different
+generating language is different
+generating image is different generating
+audio is different so they work on
+different principles and there are a lot
+of algorithms and lot of architectures
+that came along the way by this uh in
+this Genera AI domain if you see it
+started with very basic things and then
+came up with
+generator adversarial networks and then
+we have the diffusion models and after
+we had Transformer networks and now they
+took the whole world by storm okay and
+uh there were a lot of things that the
+transform architecture can do that is a
+bit about these uh this what Genera AI
+means Genera AI is just generating new
+types of data and and I'm saying it new
+why because it should somehow mix and
+match the previous data whatever the
+pattern there were it should not just
+have the sample which already is there
+then it just sampling problem let's
+suppose you gave generate a some data
+and it is just showing up the sample
+that was already in the data that is not
+generation that is just sampling but
+generation basically means that thing
+did not exist that thing did not exist
+within your data so let me show you an
+example uh where I got interested into
+the generat give me a second I'll bring
+up that website
+up so if you see there's a website which
+is called as I think these people don't
+exist.com if I just type it uh these
+people do not exist so that is this the
+person this person does not exist.com so
+if you see this image so this person
+does not exist in the world but you can
+see the face okay and you can see pretty
+much all the details in there okay it is
+it looks a realistic picture if you see
+it okay if I just refresh this again and
+it will pop up a new
+picture and in reality these people do
+not exist it is not that it is just
+having the bunch of data and it is
+sampling from that and it is showing it
+no it is actually generating these
+samples okay maybe it has generated
+those samples and kept it somewhere now
+for the website purpose it is just
+showing them up but all these people
+they do not
+exist okay this is where I got sort of
+interested into this Genera Ai and I
+think this is based on Genera
+adversarial networks and we might maybe
+speak about their architecture and stuff
+and now we have even uh in the meta also
+in let's suppose CLA and all of these
+platforms which give services to the
+people uh they have this image
+generation part also so also they do
+generate text okay so I showed you this
+I hope that uh you guys can relate to
+and you know the problem of generation
+sometimes we get confused that
+generation sometimes basic might mean
+that it is just sampling it is not just
+sampling what is it doing is it is
+trying to come up with new samples
+rather not having the existing samples
+in the data so you will give it some
+data and it won't just sample and uh
+data point from the data rather what
+will it do is it'll try to see the
+distribution analyze the distribution
+and try to remember the distribution and
+after that it will generate a new sample
+from the distribution okay let me speak
+some things about distribution we we'll
+see that in probability also but here
+I'll for the people who don't know what
+distribution is and let's suppose if I
+take height of people okay if I take
+height of
+people so height of people you you see
+that it'll range it'll range a lot so
+you'll see that height let's suppose
+starts from 0.5
+M say this is 0.5 M and let's suppose
+some 10 million people are in the range
+of 0.5 m
+and then let's suppose 0.6 M and
+something like that let's suppose the
+max height is 1.7 m let's say okay so
+these are the different values that uh
+will be for the height let's call that H
+okay H will be uh the height of the
+person and height of person may vary
+from 0.5 M to 1.7 m okay so if this is
+the case so what it'll do is so we might
+see that if you see let's suppose if you
+have total let's suppose 1 billion of
+the people let's suppose 100 people
+we'll just maybe 100 people so you might
+see that let's say some 50 people have
+this much height I should not say 50
+let's suppose some 10 people some 12
+people have this height so we'll
+basically distribute okay we'll see uh
+how is the height distributed so how
+many people have this how much
+percentage of people have this and
+usually what comes up is like like this
+okay let's suppose this is the mean
+height okay so this is mean
+height and this is let's the least
+height 0.5 and this is the max height 1
+.7 M okay and here we have the count of
+uh the people so if you see something
+like this so you will see that most of
+the people will fall into this average
+height okay so this is one of the type
+of distribution so we call this a normal
+distribution which is symmetrical
+distribution so by distribution I mean
+that you have certain values okay so now
+how uh is the population so this is
+usually called as population statistics
+so how is the population distributed now
+so what amount of population what
+percentage of population takes this
+value this value if you look at around
+if you look for the whole population
+then if you arrange them in a certain
+order let's in here we arrange them from
+0.5 to 1.7 height okay this was the
+height so here we had on this axis we
+had the height now here we had let's
+suppose the number of people so if you
+see in in that aspect so we had uh the
+total number of the the height of the
+people and then we see how much so this
+this density basically shows that how
+much people you have there so this is
+called as a distribution similar will be
+for the words also so if you have if you
+let's suppose have English words okay so
+if I write all the English words that do
+exist in the dictionary there and then
+if I collect all the text documents so I
+have
+words okay then I'll collect Corpus so
+Corpus basically means a lot of text
+documents will be there then I can find
+the distribution of words I can say okay
+this is the word exists in let's suppose
+all the documents and this and that I
+can find the distribution I can find
+distribution from this Corpus as in the
+first example we had Heights of the
+people and then we were saying that
+we'll find the distribution of heights
+how is this height distri distributed
+okay if I take a normal person so what
+is the chance that he'll he'll be in
+that this is whole delal in probability
+and stats we'll see them in detail but I
+just wanted to give you a sort of glance
+into what what I mean by distrib when I
+say a distribution so if you take all
+the words from the English language okay
+and then if you take a lot of data lot
+of Corpus a lot of documents from the
+internet and they'll follow a specific
+distribution they'll follow some
+distribution they'll be distributed
+somehow that will let's if you only have
+100 documents so you can easily say that
+this word the exist in these many
+documents this word exists in these many
+document and then you can come up with
+the distribution okay so this is uh this
+is some sort of like uh I say minuscule
+version of what a distribution is in
+intely and we'll go in detail in while
+studying probability and stats we'll see
+what distributions actually mean so can
+I assume that now you at least have some
+clarity of what distributions
+are okay I particularly for the people
+who are in undergrad so you might not
+have heard about these terms ASF and uh
+Aran might be there bomas so you you
+people at least got an idea what
+distribution is so distribution is
+nothing but basically you have certain
+values so how are these values
+distributed okay how are these values
+taken okay as in the height the height
+is from 0.5 to Let's suppose uh 1.7 and
+it's a continuous range of values now
+how do people take these values makes it
+a distribution similarly in the context
+of natural language you have words
+basically it's called as vocabulary so
+in natural language it's called a
+vocabulary so in the vocabulary you have
+this vocabulary size and then in the
+documents what the distribution how how
+are these words distributed in the
+documents so that's called the
+distribution for these words okay so
+what I'm saying is that these uh
+whatever networks you call them or
+models you call them these they try to
+learn this distribution they try to
+learn this underlying distribution okay
+this is just for the height of the
+people so once they learn this
+distribution what will they do is now
+they'll sample a point from here so
+they'll pick a point from here and
+they'll show it to the people but this
+distribution is learned from the sample
+data whatever data you have is this
+distribution is learned and then you
+just sample the thing from the
+distribution and show it to the p and
+similarly for this image also if you see
+if you ask me what is the distribution
+so we'll see uh this basically is
+distribution of pixels
+distribution of pixels how are how are
+these pixels distributed okay now if I
+just have to create an image which is 28
+cross 28 image so that means it has 784
+pixels okay we I have to generate each
+pixel here so I have to generate this
+this this each pixel has to be generated
+and then I have to arrange them in a
+certain order also okay that makes the
+search space very huge okay how how to
+search this if you if you see it as a
+combination combinal problem so it makes
+it makes the space huge so each of these
+784 values have to be filled let's
+suppose and then if you see RGB values
+and then it has take colors so basically
+now what it tried to it tries to learn
+the distribution of each pixel it it'll
+take a pixel from a distribution which
+it has learned from data okay and then
+it will put them together basically it
+is time to learn distribution
+and giving some once it's asked to
+generate a new thing it is basically
+generating a new sample from that
+distribution okay and this distribution
+right now is 784 dimensional so in
+height the distribution was uh one
+dimensional because we're just sampling
+height so here it was 784 Dimension it
+has to basically generate
+784 in that space it has to navigate the
+space and generate a sample okay so this
+is how they do it so they this is called
+as uh because they are learning the
+distribution and in particular in these
+llms okay so this is one way of learning
+and there are other rule based learnings
+but we'll restrict our discussion on
+this why they learn distribution and by
+distribution I mean they try to find a
+pattern once they found the pattern and
+when asked to generate something new so
+they'll just have this distribution at
+the place and then they'll just uh give
+the sample from the distribution any
+questions on the distribution now we'll
+have this was the sort of heavy part
+okay because we have not covered prob
+and stuff that I try to keep my language
+very flexed so that uh uh you people do
+understand it okay and this is how
+generative air Works mostly if you see
+these gener ad networks if you see the
+variational auto encoders if you see
+diffusion models if you see the
+Transformer models mostly that's how
+they try to learn the distribution uh
+from the data from the large Corpus
+that's why they data hungry they require
+a lot a lot a lot of data in order to
+find those patterns is it is it is it
+all right can I move
+forward
+okay now we'll see what these llms are
+okay okay now coming to the core part
+what these LMS are as you know I don't
+want to Define it what these are large
+language models and whatever so people
+are now thinking that they're just
+extension of what's called as NR models
+okay NR
+models and what are these engr models so
+if I talk about the engram models okay
+let's speak about Bagram model Bagram
+model so let's suppose if I uh show you
+a lot of data so what we can do is in
+that data there will be lot of sentences
+there will be sent let's suppose uh
+cat's hat on the
+mat on the
+mat okay what these vagr models
+basically are so if I let's suppose give
+you this cat Okay and then we'll see
+which word follows this cat okay which
+word follows this cat how much
+probability is there for sat how much
+probability how much probability is
+there for on the mat and let's suppose
+we have a vocabulary size so what we
+have we'll have vocabulary and uh we'll
+have a lot of words let's call them now
+I'll generalize this thing so I'll
+generalize it so let's suppose I have
+this I have word W1 till w n words in my
+vocabulary so basically my dictionary
+contains n words let's suppose so I'm
+trying to explain what a Bagram model is
+and how does it work so I have words
+from W1 to WN so what I can do is I'll
+say if I have this word WN okay so which
+word has the highest probability of
+coming uh because I have huge carpus I
+can I can count the frequencies I can
+count the frequency of words I can say I
+can count the pairs so W1 W2 okay W1 uh
+W3 W1 W1 even okay and uh W1 W four and
+so on till W1 WN so I can count the
+frequency of all of these things I can
+count frequency by frequency I mean how
+many times do they coexist in every
+document let's suppose I have all the
+documents the world so if I somehow come
+up with if this is a W1 word okay and
+how what's the Frequency that this W1 is
+follow of W2 okay so if I have large
+corpor let's suppose this is 100 times
+okay and let's suppose this is some
+2,000 times this is some 40 times this
+is some 50 times accordingly this is
+some 10,000 times something like that so
+from this we can convert into
+probability so are you understanding
+this what I'm saying can you understand
+this so what I'm saying is if we have a
+word W1 and then uh we have the
+vocabulary also so I want to see because
+I'm restricting myself to the Bagram
+models I'm saying that what I'll do is
+I'll search the whole documents and I'll
+see how many times that this word does
+these two words occer together this W1
+W2 W1 W2 this is W1 W1 and then W1 W3
+something like that okay so I'll check
+all the frequencies and these
+frequencies can be converted into the
+probabilities so what what I can do is I
+can make a diagram like this W1 W2 till
+WN okay and then W1 W2 till
+WN and here I'll I'll have the
+probability scores so here I'll have
+probabilities if you go like this so
+I'll have probabilities so let's suppose
+this W1 W2 the the probability is 0.1
+the probability is uh 01 and the
+probability is. 5 05 something like that
+but now you know the probabilities that
+all of these should sum up to one okay
+so basically from the occurrences I will
+convert it into probability okay let's
+suppose this occurred some thousand
+times in the whole document this
+occurred some 10,000 times something
+like this and they occurred together I'm
+saying this is 10,000 this is thousand
+times I decrease the probability so if
+you see this so from this I have the
+probability now what I can do is so if I
+have word W1 so I can look into this
+probability distribution and I can say
+that okay so this word is W1 then now
+what I can do is with point1 probability
+I'll pick up this word with 0 Z on
+probability I'll pick up this word okay
+I can pick up and uh I'll pick up W1 and
+then I'll sample from this basically
+that's called as picking up from the
+distribution so I'll pick up the word
+let's suppose that came up W3 and now I
+have W3 so corresponding W3 I also again
+has the same column no sorry same row of
+probabilities so again I'll sample from
+that from W3 I let's suppose sample WK
+okay I have WK over here now so from
+this I'll have probabilities also
+mentioned over here from the
+documents and after this W1 WK and once
+I see that I'll again pick up some with
+the probability because each will have
+some probability assigned to that and
+we'll sample that thing and let's
+suppose we got some word w Dash okay
+this is how we'll generate this
+sentence is it clear is it clear how
+will how how how a Bagram model will
+work so we'll have W1 to w n words and
+what we'll do is we'll count the
+frequency of their occurrences we'll see
+how many of times they occur together
+okay once we have the count so along
+this row we can convert them into
+probability a simplest way of converting
+into probabilities is sum all of these
+together and let's suppose it was uh
+th000 here it was 10,000 so then divide
+it by the all the sums then you uh sum
+this whole thing first and then divide
+each entry so that you convert them into
+probabilities okay once you convert them
+into probabilities then randomly
+initially you will start your sentence
+you just start your sentence with
+something or maybe you have a start
+token also so you'll say this is my
+start token how many times is this word
+okay which word is is the starting word
+most of the time you can just sample
+that and after that what you can do is
+uh you can follow this you can just see
+the row corresponding row and according
+to the probabilities pick up those words
+and you can complete the sentence
+together okay I hope that this is this
+makes sense to you and this is what is
+called as a Byram model and similarly
+this can be made this can be seen for
+engrams also so we'll make an n
+basically we'll have so we'll have n
+minus one thing and then we'll predict
+the N uh token based on what is the n
+minus one and this is a simplest
+problemistic approach once we go this
+we'll code this so I'm promising you
+people that we'll Cote it okay once we
+go to the Deep larning part we'll Cote
+that I'll show you that how to basically
+we'll make this at least Bagram model we
+we'll make it and I'll show you that it
+does perform it does show you some
+results okay so I might have a notebook
+with me also where I can just show you I
+won't explain the code I'll just show
+you the notebook whatever steps I showed
+you I'll show you those let me give me a
+second or
+so okay so but I want to explain the
+code um let me just create a new
+notebook I'll write it Byram
+model so this I'll explain in detail
+once we go to deep learning part once we
+go to language model parts so we'll go
+in details so is the code window visible
+is it visible
+yeah yes yes it is visible so I'll show
+you these things so let's suppose I'll
+import this m plot lib isor yes
+everything is there so what I can do is
+I can generate a corpus so let's
+consider these
+documents okay so this is my these are
+my documents some some words a and
+Powerful a problems creative data and I
+have just created some junk data
+consider this as my Corpus so this is my
+whole list of documents okay which I was
+speaking about now there are a lot of
+words so what I need to do is I need to
+tokenize this so what is the meaning of
+tokenize I'll take each word I'll see
+how many words are there so this is what
+token I am separating out I'm separating
+out basically each of the words so that
+I tokenize the data I'll show you the
+tokenization also if you see this so
+this is tokenize data there is a word
+there is a word and Powerful AI problems
+creativity these are all the words okay
+I basically took all the sentences I did
+Word level tokenization so I separated
+out all the words and then what I can do
+is I can create byrams okay okay so I
+can create byrams so let's
+suppose I'll create Bagram so if you see
+this so a and and they exist 25 times
+together and and Powerful they exist 20
+times together powerful and AI they
+exist 10 times okay similarly you can
+see for all the value you can see that
+we have a d we have a whole dictionary
+of these values beautiful is and
+programming came eight times and future
+and a came nine times so I'm just
+keeping the
+count okay so once I have this count I
+can show you the Matrix also but it
+makes no sense
+I can also print the Matrix because in
+the code that I had written I think long
+way back so if you see this by this is
+the Matrix a and a they exist together
+eight times a and AI exist 15 times A
+and N exist 25 times so this is the
+count and this is a huge Matrix so
+usually we have here we have 32 by 32
+that is our vocabulary size is 32 we
+have only 32 words we can have more this
+is just a mockup data so now after after
+we have this so what we have to do is uh
+now we'll calculate the probabilities
+we'll convert them into probabilities
+okay so this is how to convert these
+byrams into probabilities so if I show
+you now this is the
+probability with and has probability
+like a will be followed by and has
+probability of 0.09 okay a with
+applications has probability of 0.03
+similarly a with innovation has this
+probability and similarly you can go
+through all of these I just computed the
+probability of each word corresponding
+to this now let's suppose I already
+generate function by generate I'll
+generate the sample so in there I'll
+start with a random thing so that that's
+why you see this import random okay so
+what I do here is I import random and
+generate this so once I generate and
+then I'll just pick up the choices from
+the random and I'll generate the
+sentence this will be generate sentences
+so if you see this I applications python
+beautiful I love Innovation I love I
+learning language something like that it
+looks jber but because the Corpus size
+is less okay and what is doing is it's
+seeing this I and then it has to sample
+the next word so it is sampling
+applications once application is sampled
+it will sample the next word it is
+sampling python if I run it again
+because it's random it should
+change okay so you can see this I signs
+future solution and create and this is a
+Bagram model so you saw that we got a
+corpus and the first step was we
+tokenized the data we took each the word
+step that's called as Word level
+tokenization now we have character level
+tokenization we have different types of
+tokenization how do you separate out
+these words and we have in bite level
+tokenization also and after we have that
+then in Bagram model what we usually do
+is we'll see the occurrence of these
+byrams together how let's suppose we
+have a word is it followed by some other
+word so the frequency those frequencies
+are convert into probabilities and then
+randomly generate the first word and
+after once we have that word we slowly
+generate the other words based on what
+was happening previously I hope that
+this Bagram model is clear is it
+clear okay beautiful that it and there
+is no magic there is no magic in this
+we'll see these language models so now
+language models are engram models on
+steroids okay and they have done a lot
+of architectural change this and that
+and that's how they generate these
+things and there they have attention
+they have do this do that and we'll see
+all of these and we'll start from the
+Bagram models so now what I told you is
+that if you consider this let me just uh
+hide this code
+window okay so now if you see these
+large L model just as engram model so
+they just are can be viewed as an
+extension but there AR change and there
+are different training methods and they
+are given more capabilities but
+underneath the H it is doing this it is
+basically trying to uh see what's called
+as context it is seeing let's suppose
+past tokens so they are called tokens
+usually so whatever I call as a word
+they are called tokens that's why it's
+called tokenization you break them into
+tokens so it is seeing the previous
+context it is seeing the previous
+context and based on the previous
+context it is generating the new token
+the next token and they're called as
+Auto regressive models okay Auto
+regressive usually whatever you have
+these
+chat GPT llama and Claud all of these
+are Auto regress model what do the
+meaning of Auto regressive because they
+take into consideration what happened
+previously okay let's suppose I the
+first thing it generated was C and then
+after seeing C it generate a then T okay
+then
+space whatever happened previously it
+will generate that and then space then
+set then on then then mat and then let's
+it will stop let's suppose to uh
+generate this on it'll take whole of
+this into Picture This is called as
+context okay you might have seen the in
+news articles that Chad GPD supports
+this much Contex length Contex lens
+basically means how many tokens uh can
+it attend to how many tokens Can it keep
+in let's suppose uh I should not use
+this word but how many uh tokens Can can
+it keep in the memory okay this is
+called as context so context is what
+what came before it and once it generate
+this on now the new thing became like
+this so based on this it generated this
+based on this it generated this mat as
+we saw in the Byram models okay so I
+hope this is clear is it
+clear is it clear now now they have
+these Branch okay now how do you
+generate there are different techniques
+of generation so different techniques of
+generation okay we won't go in detail
+there is something called as greedy
+approach there is something called as
+beam search there are a lot of search
+methods how do you basically because it
+does not generate only one thing now
+once you have the sample which thing to
+pick now becomes a question because if
+if I just say left
+and okay okay what is the usual
+things here let's suppose the words can
+be right left and right people usually
+use let's it has a probability of 0.1 or
+maybe I think more 0.2 left and Center
+Center also will have probability some
+probability 0 point uh let's suppose 18
+something like that and there will be a
+lot of words now which words select and
+put it here that is how do we how do we
+write different ALG like really search
+like I said mem search okay and they'll
+select this word and put it here and it
+won't happen at Word level it will
+happen basically at token level and
+token cannot be a word token may be a
+word less than a word as I said the
+different methods of tokenization are
+there so let's suppose this word is high
+probability if you take if you choose
+the highest probability word so what
+will happen is you are using greedy
+approach so whichever word has the
+highest probability once it sees this
+context and these are the vocabulary
+words and you are choosing the highest
+uh probability word that's called as
+greedy search you are becoming greedy
+and taking that and it does not let
+model get more creative okay and
+sometimes what do you have beam search
+also so it basically creates a lot of
+beams so you have left and and then
+there's a lot of possibilities which
+words to select okay so it let's suppose
+it'll have top four beams they usually n
+beams so from here it'll again have a
+lot of possibilities and from here it'll
+again have a lot of
+possibilities okay so once it has the
+possibility and then we see let's after
+two steps we're saying after two steps
+whichever branch has the maximum
+probability I'll generate those words
+okay usually this is how beam search
+works like I'm dumbing it down a lot but
+I think you got the idea so now you have
+this and and you're keeping beams alive
+you're saying these four words I'm
+taking and after that there are
+different beams again and then you're
+Computing the probability at let step
+two okay so as it becomes more creative
+this is how we uh sample from the and
+these are generation modes in which mode
+do you want to generate so I just
+explained two one is greedy and then
+there are topk sampling or there there
+are a lot of things that people do in
+this so if you see language model it's
+nothing but angram model on many people
+will disagree with me no this is not
+just Ang grammar it is not just but you
+can uh uh maybe think it is is angr
+model because you have n minus one
+tokens and you are generating nth token
+based on what is there in N minus one
+okay so that's that's how it does but as
+we did with the Bagram model it is
+totally different uh with how these
+large language models like GPT and Lama
+claw do it so they do it separately
+because they have their own uh uh what's
+called is architecture and then they use
+some people use self attention and they
+use different types of attention also
+okay is it clear so far now what's it
+good for what's it good for the question
+becomes so what is it good for the good
+it good for distribution things so
+whatever if you have a distribution okay
+let's supp language language has a
+distribution it has a clear distribution
+that's why you will never see GPT or
+these large language models they making
+a grammatical mistake why because there
+is a pattern in the language there is a
+particular distribution there is a
+pattern in the language okay it captures
+that pattern okay so the main problem
+comes with the content there is two
+there are two things content and
+style okay it captures the style in a
+great way it is great at capturing style
+okay but this content I'm not sure about
+okay how how much does can capture the
+content let's suppose if somebody has a
+somebody can speak eloquently but his
+content is totally rubbish okay that's
+what these language models should be
+seen as they are really good at
+capturing style why because capturing
+style is a distribution okay but content
+is not a distribution why do they get
+these fact facts wrong because facts at
+an instance it's not a distribution okay
+let's suppose uh we have we have
+different facts uh facts like what is
+the radius of sun what is the radius of
+Earth they don't come from a
+distribution okay they have fact they're
+called instance level things they have
+an instance let's who is the president
+of uh United States who is the prime
+minister of India if it is in data it
+probably try to replicate it but it
+sometimes may get these facts wrong if
+you see a mathematical problem that is
+not a distribution problem that is a
+factual problem rather there's a there's
+a whole procedure for that okay so what
+is it good at it is good at generating
+these distributions it's good at
+mimicking those distributions okay in
+that one thing comes is copying style so
+it it can write beautifully maybe
+whatever the content it is maybe that
+does not have an intrinsic value if you
+if you tell it if you have to tell it to
+make a mistake you have to give it
+prompt speak like an let's suppose a
+person who who speaks in broken English
+then it'll give those things otherwise
+it won't make make a grammatical mistake
+why because it has learned the pattern
+okay there a difference between a formal
+language and informal language okay if
+you see uh formal language like python
+C++ or other language so they have an
+interpreter okay The Interpreter is that
+because you can create a p tree and even
+CC they have a compiler so you can check
+these because there are these semantic
+rules and everything is there and there
+is some validity but if you see this
+formal language you you don't have an
+interpreter okay but basically the whole
+interpreter is the whole world how you
+put the things whole you can interpret
+in any any way possible okay that that's
+why it's very hard uh to come up with
+the grammar first and then with the
+language so rather what happens is
+language comes first then grammar comes
+spontaneously and in the computer
+language it's revers you come with the
+grammar first you say these are the
+rules and after that you make a language
+okay and once you give that okay now
+many people confuse it with that they
+have capability of basically reasoning a
+lot of things they ask them questions
+okay and many of many of people have
+shown that it does not possess reasoning
+capabilities not they shown it is a fact
+now it does not have because people what
+they see is when they see some
+it with a reasoning and it's very hard
+to distinguish between uh is somebody
+reasoning or is he saying something from
+the root memory let's suppose if I ask
+you a question and that's a problem with
+these exams also so when you go for
+these IIT J need coachings so what they
+basically teach you there is patterns of
+the questions they don't tell you to
+reason okay they're saying you this is
+the pattern of question this is the
+formulation to solve it you apply this
+formula you'll get this answer and fill
+fill in this thing okay so now it is
+very hard to distinguish between a
+person who actually reasoned and came up
+with the answer and the person who just
+followed the step who just did the root
+memory and just came up with the answer
+it's very hard to give uh tell the
+difference between reasoning and what
+looks like reasoning and because
+reasoning is usually from first
+principles okay you should first take a
+step and then learn a different step and
+then infer something from that infer
+something that but these language models
+do not do that okay they generate these
+things and I showed you this and after
+that uh let's suppose they they'll give
+you some things any questions till now I
+I at least getting a bigger picture of
+how language models work
+it's looking like I'm talking to myself
+only you should also ask me questions
+you you divert the conversations
+otherwise whatever comes to my head I'll
+speak
+that
+yes it will be no that's what I'm saying
+it will be novel In Style the style is
+good sty style will be good but the
+content is the problem it can generate
+any jish it can generate the things
+which may look it may give sense but the
+content is totally nonsensical okay
+sometimes it generate sentences because
+it puts them in a right way now The
+Interpreter you are not interpreter is
+there is no restriction how it can
+generate because we have no uh rules for
+these language how to interpret as I
+said that formal language they do have a
+particular procedure how to check are
+they syntactically correct are they
+semantically correct and now with the
+with the informal language the natural
+language the problem is that the whole
+world is interpreter so you want to
+interpret you can interpret it that's
+why sometimes you will see GPD a
+brilliant answer but the problem is it
+actually gave a brilliant style and the
+content came out to be brilliant but
+sometimes uh it just generates something
+rubbish and uh it gives something and we
+feel like oh probably this is this is
+factual but it's what it's trying to do
+it just mimicking the language okay so
+second second thing that you can see it
+is uh it is basically trying to simulate
+the things you can you can see it as a
+simulation machine if you see a human
+let me make a difference between this if
+you see a human who have persistent
+memory and let's suppose we are speaking
+right now whatever I spoke I also have
+those things in the head and if you can
+refer to that uh I'll let's suppose I'll
+answer accordingly and we we'll fit the
+situation but what these language models
+are you can think them let's you give
+one prompt okay and they generate the
+things right there so if you want to go
+back again probably you won't be able to
+access it okay let me let me show you a
+simple analogy so I'll go to chat GPT
+and I'll maybe
+okay let me let me go to chat GPD I I'll
+show you something amazing at least it
+should it should look amazing to many of
+you what I what I want to do is I'll
+show you how how different they do the
+work from us normal
+humans and uh let me bring up the code
+window no no sorry I should have not
+brought Chrome window is
+there
+so yes Chrome window is not Vis can you
+can you see it no yeah yes sir let's
+play a game with GPD okay so I'll
+explain you the game and then uh what I
+can do is let's suppose uh you might
+have heard about this game uh you have
+to think about some object and now I'll
+guess that object but I'll I'll I'll ask
+you a question uh let's suppose if you
+thought about uh say pen okay if you
+thought about this pen I'll say you okay
+think about an object you'll think about
+no then I'll cury you and I'll just give
+yes no answers you just give me yes no
+I'll tell you okay uh tell me uh is it
+used by humans you can say yes is it
+used by animals you can say no okay I'll
+cury you this and I'll basically
+decrease my search space till I get the
+right answer I'll say uh is it a pen so
+if it was a pen you'll say yes is it a
+let's suppose is it a dog no say is it a
+food so I'll just ask you yes no because
+now you have the thing in the mind you
+have the object that I asked you keep an
+object in your mind and then I'll ask
+you yes no questions and get the answer
+how many of you understood the game the
+game is that you'll have to think of an
+object and then you'll have to ask yes
+no questions until it basically gets the
+right answer is is the setting of The
+Game
+clear is it clear somebody speak I
+cannot see the
+screen yes sir it's CLE yes so I can say
+I can play the same game with GPT okay I
+I I'll play the same game I'll say uh
+let's play a game let us play a game in
+which
+in
+which you have
+to select an
+object and I will
+ask yes SL no questions I'll ask
+questions questions
+where you will answer no or
+yes and then
+I will accordingly guess the
+object guess the object something like
+this okay I hope that it picks
+up okay sounds fun I have picked an
+object so it has picked an object and go
+ahead ask you a question okay so I'll
+ask it the question I'll ask it uh let's
+suppose the question is uh is it used by
+humans is it used by humans I'm now
+talking about the object that it has Tau
+in the memory is it used by humans it's
+saying yes it is uh is it a living
+thing it is saying no it is not a living
+thing uh basically it means it is used
+by humans and it is a living thing is it
+edible can we eat it something like that
+I'm making spelling mistakes no it's not
+edible
+so can
+we is does it move does it move
+something like this
+okay saying no it does not move and
+let's suppose uh now I'll say okay I
+don't know please tell me the answer
+please tell me the
+answer
+okay the object I picked is chair okay
+now it show showed this okay if it was
+sort of saying the right thing so I'll
+just change this prompt so I said does
+it move it said no okay so I'll say can
+people sit on it okay can people because
+I know that it is chair can 10 people
+sit on it and I again send
+it it is saying yes
+so I again prompt it I again prompt it
+okay is it made up of wood up of
+wood yes but usually plastic chair can
+be plastic also so
+is uh I I'm right now what I'm trying to
+do is I'm trying to go outside the chair
+so that it does not generate a chair
+once I ask the response it should not
+stick with the chair I giving it a
+response so that it it changed the
+answer so is its color
+yellow something like
+this no and uh does
+it have an
+engine so does it have legs does it have
+legs it does have
+what is the object can does it have five
+legs okay
+let's does it have five
+legs no does it have four legs does it
+have four
+legs no now it deviated now it deviated
+because now chair has a chair has four
+legs okay now I I'll ask it okay what is
+the object what is the object
+now you you can see it here does it have
+four legs it said no and it said chair
+uh let me again change this
+prompt uh is it
+bigger is it bigger than
+house okay let me let me just give it a
+promp it deviates many times so that it
+Chang the object is it bigger than house
+uh is
+it bigger than a chair now I'll prompt
+it according is it bigger than a chair
+yes
+uh is
+it
+uh is it kept outside the
+house this conversion is becoming long
+just kept outside the
+house is it a
+chair no it is not a chair you can see
+this okay what is it what is the object
+the object I was thinking is a picnic
+table you see how many of you are able
+to see it now it is basically nothing
+keeping in keeping in memory it's not
+keeping in the memory so whatever prompt
+I'm giving based on previously it is
+generating the thing okay so how many of
+you understood this
+thing so the point here is what I try to
+do is I try to give it a prompt try to
+give a prompt and if it was thinking up
+front if it was it had that memory part
+okay it kept in the memory and then uh
+it basically will just keep it on chair
+it will keep chair and it'll never
+change the answer now what is it doing
+basically is once I give a prompt it is
+giving some specification so now it is
+settling the things according to the
+specification okay here I said is it a
+chair it said no it is not a chair okay
+what is the object then the object I was
+thinking of picnic table but initially
+you you saw that before some prompts it
+was saying it is a chair so now how
+humans work and the GPD work is entirely
+different okay these basically just
+generate Things based on what was
+previously done if I if I would have
+asked you you would have never changed
+the answer you would have given me
+specific is it a chair you would have
+said yes it is a chair I was thinking of
+the chair but here you saw that
+initially it said that yes I was sing of
+the chair and once I changed the prompt
+and I made it devate I made it devate
+from the chair okay it thought of some
+other object okay Bas that means that it
+is doing what is called as impr prompto
+it is just thinking at that time not
+thinking basically it is just generating
+whatever is the previous context based
+on that it is generating the the thing
+it is not keeping those things in the
+view as humans do it okay so this is one
+of the examples so where uh I showed you
+that you can just see these tree of
+thoughts what they have and then it just
+picks one of them okay as as you saw
+that initially it said chair and then
+suddenly it changed the tree and you
+should not basically ask uh such
+questions which are what is called as
+out of distribution which do not follow
+ad like the factual questions or if
+there is an algorithm let's suppose and
+it needs computation to perform should
+not ask the chat do it so what is it
+better for then I said it is better for
+copying style so if you have a style you
+can copy the style and any questions on
+this any
+questions sir
+what yes yes yes go
+ahead I think can you raise your hand so
+that I can call out
+names yes Aran go
+ahead what about logical reasoning like
+it does not do it it does not do it it
+does not reason it rather what it does
+as I showed you I from this point I try
+to tell you that it is not basically
+reasoning anything thing so it is seeing
+the previous context and based on that
+it is generating the next token okay
+same for the coding so what you
+basically do when you ask it for a
+prompt generate me a code which adds the
+number so there are a lot of
+documentations written on uh internet
+when it was web was scra so here then in
+the comments it saw that so it saw that
+uh when people write add two numbers add
+two
+numbers okay and then they put a comment
+or something and then they write the
+program Def and something like this so
+when you gave this prompt okay this was
+a prompt and it will this thing what
+followed it okay it basically is tring
+to just generate the next token it is
+not seeing your logic so that's why
+usually people say that they don't
+understand what they speak so usually it
+because on the internet there'll be lot
+of corpuses which have in the code this
+line Okay add a number so what I'll do
+is it'll pick up from the documentation
+and God knows from where so it'll
+basically take this as a prompt and
+generate next tokens as this that is
+sometime it makes so such a small
+mistake if you ask it to do something it
+makes a small sometimes misses let's
+suppose uh variable name it sometimes
+give a variable name hello and it will
+sometimes use some other hle L something
+like this it makes this minuscule
+mistake but the structure is right but
+if you see it makes these minute
+mistakes so in the code it does not
+generate the logic so rather what it
+does is whatever context you gave it
+will generate it auto regressively it
+will generate the next token and after
+next token next token without giving in
+the view that there is a logic there is
+some constraints as you said it does it
+look for the L it does not look for the
+logic so if you ask it Noel problem
+which let's suppose is
+nowhere in the internet then it should
+be able to solve that it should have
+been which it should have reasoned from
+the first principles it should have said
+okay they want me to do this so first
+step should be this then should be this
+then should be this okay but it does not
+do like that so what it basically does
+without constraints whatever is the
+previous context seeing the context and
+it generates the next word and if you
+see uh these code language are rather
+easy to replicate so if your if your
+assignment is uh if chat GPT is able to
+do an assignment that means it is no
+novel problem so if you are doing a
+novel problem that chat GPT will
+struggle because it will have no
+instance okay no instance of this so if
+I again why will it struggle so if I
+let's suppose tell you how to multiply
+how to multiply two numbers okay so I'll
+show you a generic method I'll give you
+let's suppose two digit numbers first
+two digit numbers okay then I'll show
+you okay this is all this is a generic
+technique you can apply it to three
+digit I'll say 12 into 14 if you have to
+multiply this is the mechanism take this
+four and multiply with these two so
+you'll get it like this then put a cross
+over here then write it and multiply
+this number with these two so and then
+add them together
+okay oops this will be 8 six and this
+will one and this is how it how I I
+showed you this so I showed a mechanism
+to do this but if you somehow gave this
+to chat so you'll have to tell it two
+digit thing is done like this then also
+three digit three digigit some three
+digigit product is done like this so you
+have to show it each instance it's not
+learning at all it is trying to find the
+pattern it's not trying to see The
+Logical reason Okay the reason is this
+if you multiply these things together it
+will happen like this it is not trying
+to do that it is rather find the pattern
+that's why if you ask it if you convince
+it if you say what is 9 plus 2 let's
+suppose it will give the right answer 9
+plus 2 because there will be a lot of
+Corpus on the internet where 9 9
+multiplied by two will be given as 18 so
+if you Tred no no no no my wife said it
+is 19 so it'll it will say yes it is 19
+the the question is it's basically
+conversing with it is not rather doing
+the logical reasoning okay you see the
+difference many people have uh they put
+nonsensical prompts on this they they
+saying oh look CH GP is making a mistake
+it is not it is not
+doing that so that shows the ignorance
+that you don't know the fact that how is
+it generating the thing so if you are
+forcing it to do something it will
+because it is trained on whatever your
+context you give it is generated the
+next word based on that okay so one
+example of that is so Caesar Cipher
+people have written papers on this uh so
+if I have a CD okay if I want to do a c
+CER that means just substitute it so a
+can be replaced by let's suppose a + 2
+that means uh replace it with C okay A
+plus 2 basically means so if a to z are
+given some numbers like 1 to 26 okay so
+if I say A+ 2 this will be a scheme not
+a plus2 maybe letter plus two so okay
+whatever letter appears just go two
+forward and replace that with the letter
+so a will be replaced with c b with d
+and c with e something like this so This
+is called as substitution you substitute
+these words and these are called as
+cyper text and I hope everybody knows
+this if you are from CS background so
+you know this uh you have a plain text
+and you can substitute the other words
+and this is what is uh and you have a
+letter so you can make a foury old kid
+you can ask them okay if I have word
+hello okay if you do the sub plus two
+just make these words plus two let's
+suppose h g h i so g h i and J so H
+should be replaced with J this will be
+replaced by J uh and then e plus 2 is so
+c a b c d e and f so this will be
+replaced by F uh so JK L MN so this will
+be replaced by n and n m n o PQ this
+will be replaced by P Q so this is my C
+text this was my plain thing and now
+this is my Cipher okay if I now give
+let's suppose any kid I'll say okay I'm
+saying smart can you just make it the
+cipher text or can you let's if I give a
+cipher text the coding scheme used is
+plus two okay he can easily decode code
+and this is very because it hardly took
+me a minute or so to explain you people
+it'll hardly take me couple of minutes
+to uh teach it a four year five year kid
+and he'll be do he'll be able to
+precisely do it but when GPD was was
+given this it terribly failed okay and
+it was say okay this is how these things
+are but because it learns the
+distribution okay this actually is not
+distri and now it actually performed
+good on what's called as Road 13 if you
+get plus 13 that is A+ 13 so whatever is
+the 13th character after a pick up that
+why is it performing good on Road 13 not
+on rotation 2 rotation 5 or rotation 26
+something like that why is it not
+performing good on these but on this
+because Linux actually supports this so
+when people were writing this C Cipher
+they somehow many of the people wrote
+this rotation 13 and now they have a lot
+of data for this Road 13 okay and from
+the internet it learned the pattern and
+it was performing good on Road 13 but on
+this road two Road Three it was not
+performing good at all there are Papers
+written on this okay now this tells you
+one more thing that it learns the
+distribution rather than reasoning it
+does not reason at all okay whatever is
+the context given the next word is
+predict based on the context so now if
+you see any post given by any person and
+you ask it for a weather it'll it'll see
+a distribution it it does not give the
+factual information you see if you see
+saying 9 into 3 is somewhat let's supp
+34 all right no problem why because
+maybe there there is data and something
+happened and from all that context it
+gave this it generated this 34 because
+it's not trained to do The Logical
+calculations or do the planning part of
+the things now people came up with
+agentic Behavior now if you give it a
+task which is mathematical so it will
+invoke an agent which will perform
+mathematical calculations and if you
+give it a task specific which specific
+tools are used so LM will in internally
+invoke some other tool okay for the
+calculation it will generate it will
+invoke calculators for the let's suppose
+uh doing of image generation it'll
+invoke some other model but in turn if
+you see these things are not even
+expected because of the architecture and
+because of what we expect from language
+models and we try because it is trying
+to uh see the distribution and the
+better point is that it should be used
+for idea generation okay idea generation
+why why this because idea generation
+requires a lot of knowledge okay it
+requires a lot of birth knowledge maybe
+in-depth knowledge is a separate thing
+but if you have a lot of breadth
+knowledge and uh then you can come up
+with good ideas and but it should never
+be used as a
+verifier okay verifier it does not
+perform good why because for
+verification you need to have
+constraints of logic and reasoning so
+here you need
+constraints so let's suppose if you are
+if you want to build something just take
+idea from it because it will have a lot
+of domain know different domains and one
+way of seeing the large language models
+is compressed version of Internet so
+it's compressed
+version so people might be thinking that
+oh there are so many parameters we have
+billions of parameters you should be
+thankful that there are only billions of
+parameters think of the data data that
+is on the internet it is huge it is huge
+and then we have a basically loss lossy
+compression there is a lot of loss in
+comparation but you only got let's
+suppose 400 billion parameter model and
+it is performing really nice so what is
+trying to do is compressing all that
+knowledge together and then giving us
+the answer so it is a smaller version so
+if you if you compare it the human
+probably human will have a lot more
+parameters maybe hundreds of more in the
+power in the magnitude of 100x of
+parameters than just the state of the
+art GPT that we might have state of the
+art large language model that we have
+you can think it as a compressed version
+of whatever was the intern whatever data
+it was given it tried to compress that
+into its weights and B into those
+parameters okay and then I'm saying is
+because now it has the vast knowled it
+knows things about it does not know
+basically it uh just have the patterns
+it has patterns about biology it has
+patterns about mathematics it has
+patterns about astronomy everything so
+if you want to work on something so the
+better could be you could ask it to
+generate things the idea generation and
+then you can be a discriminator you can
+be a verifier okay this thing is wrong
+pick up this this thing is right do do
+this now people tell you it will reason
+probably some other models will re but
+this language model if you don't come up
+with with new artical chains and you
+still try to increase the parameter and
+uh expect that they will come near to
+aren intelligence or they will do
+something I don't I'm on the other party
+I'm thinking that you should come up
+with new techniques you should not
+rather rely on only attention and then
+keep on increasing the parameters keep
+on increasing data and feed them and you
+magically think that they'll be able to
+probably and many people do think that
+this is right now if you see these
+language models this is their limit so
+about that they cannot do and you have
+to come up with the new techniques so as
+to incorporate with these things so I'm
+okay with that people are saying that uh
+there will be some new techniques some
+new methods new architectures which
+probably will take us towards reasoning
+or towards planning towards these things
+but if you right now tell me that these
+language models if given more data and
+more parameters we be able to achieve
+that so I would cly disagree probably
+any
+questions I think MF you had a
+question yes sir
+right it depends on the context Contex
+window so if context now context window
+is 1 million tokens 1 million is huge
+thing
+okay let suppose you're the context it
+will miss the context it will have no
+idea about that okay but you should see
+the contest length contest length how
+much is the contest length and after
+that if you exceed that contest length
+so what will happen is it won't know
+what came before that so it will
+generate it is basically sliding window
+sort of thing so let's suppose I'll
+restrict let's suppose Contex window
+length is 10 so what will happen is so a
+b c d something like this so after this
+is after this let's suppose till here it
+was 10 now okay once it came to the 11
+token so it will shift this it will now
+take this much as context once you again
+generate it'll take this much as context
+okay it will keep on forgetting what was
+previously what was not what was
+basically in the context but now it it
+contest length was uh that was a cap
+it's contest 10 so it'll keep on sliding
+okay it won't take these two tokens into
+consideration now so after that it'll
+keep on moving that these are called as
+long form long range dependencies which
+probably because they came up after RNN
+RNN have this problem of long range
+dependencies that's why now they have at
+least 1 million is very easy people are
+now giving a lot of tokens and I don't
+know what's the current state of the art
+you might just search the internet and
+ask it how what's the largest contest L
+that a language model supports okay and
+in millions easily in millions okay but
+if you exceed that so uh the theory and
+the practice is that it won't remember
+what you what you said before that and
+it it won't generate it won't take
+basically those things in the account
+while generating the next token okay is
+it
+clear yes second
+question right
+thinking yes yes it is very hard now and
+people are trying to come up with tools
+yes and there's a good thing so if you
+know there there's a facility where
+people are keeping all these crops what
+sub so they thinking that if this whole
+civil D destructed so we should
+somewhere have this thing so that they
+can start the civilization and there
+there is that I exactly don't know the
+name I forgot the name so that is that
+thing where they keep these different
+types of crop seeds and sort of things
+and they preserve them so that if let's
+suppose some catastrophe happened if
+catastrophe happened everything got lost
+and only that facility is there and
+they're making the facility such that it
+would not be distracted by that and
+after that humans are there they should
+be able from there they should take
+these seeds and sort of thing they
+should start the thing again so same
+should be done with the internet now now
+till suppose large language models were
+there so we had all the data was from
+the humans at least more than 95% data
+was from humans and now your models were
+trained by using this data okay once
+they were trained using this data what
+happened is and now you'll mix this data
+from the humans and from this and now
+you don't actually internet should be
+snapshot there should be a snapshot of
+the internet kept uh once these models
+came and people started training them
+now each of the message emails they're
+basically written by these and co-pilot
+and code is even written so so now we
+have What's called the self referential
+problem so a student can be as good as a
+teacher if the student doesn't have the
+intelligence the same thing happens with
+the GPT because they have this self
+referential problem so whatever humans
+did they can do it best up to only that
+level okay LM cannot be better than the
+best speaker in the world it cannot be
+better it cannot be better than the best
+writer in the world why because if that
+is the best writer that is the cap
+because it's trained on human data and
+it tried to learn the human distribution
+okay as I said usually I usually say
+this that it is trying to simulate
+intelligence it is not being intelligent
+so if it was intelligent if you gave it
+things till relativity till gravitation
+so all the physics was given to
+gravitation if it was able to predict
+relativity okay if it was able to come
+up with these concept then it was
+intelligent now why I said it's just
+simulation it is not intelligent
+Behavior it is simulation so what it
+tries to do whatever knowledge it get it
+will generate just hul Spokes and
+mixture of those things and it might
+look intelligent it might look like that
+because as I said it's very hard for a
+human to differenti what is intent what
+is not okay and because it is mimicking
+those things but if you see real in real
+should lie here so if you give it uh
+suppose knowledge of physics still
+gravitation it should come up with the
+relativity but it does not do that okay
+so I hope that you got this notion at
+least that it is not being intelligent
+it is simulating intelligence okay so
+now I believe that internet should be
+snapshot it and I think that people will
+have the data set it will be pure for
+humans so because language model will be
+as good as human the best human yeah I
+think father is a
+question uh sir as you have said
+multiple times previously that the top
+scientists are working on solving this
+problem of intelligence like if large
+language models are just trying to
+simulate intelligence then how can they
+expect them to uh be self-aware and
+intelligent not with that's what I said
+in if you just heard me carefully a
+couple of minutes ago I was saying that
+the techniques are used in large English
+models they have this limitation but but
+if you have to come up with something
+you have to come with new techniques so
+if you have this concept of
+Consciousness if you want to come to
+close to AGI and things like that you
+should come up with new techniques now
+the problem many of the people are
+working in uh just increasing the
+parameters and using the same techniques
+but if they come up with new techniques
+then I have no problem of thinking this
+yes they can come closer but by using
+this what they saying is there many
+other people they're saying if we
+increase the parameters and then use the
+same architecture probably it will learn
+to reason but that's not the case if you
+come up with new techniques then maybe
+and then all better is maybe yes you
+have a followup question sir I want to
+ask is intelligence learned or it is
+present inside us right from when we are
+born like intelligence is that's what
+that's that's the issue intelligence is
+not learned so every human is
+intelligent okay now there will be
+levels of intelligence okay and it is
+very hard to Define intelligence
+altogether okay that's why we are
+struggling to tell if there was a
+specific definition of what intelligence
+is we have directly said that jgpt or
+the LM they not intelligent they're just
+simulating elligence because there is no
+definition and even that's the problem
+we are facing in education system also
+so should we now ask people to solve as
+many problems because the point is now
+you have coaching centers and this is
+very unfortunate to say that these
+people are more trained they are like
+GPT they're simulating they're not being
+intelligent and I have seen people I'll
+just give an instance I have seen I
+studied among these rankers IJ rankers
+to what happened is I'll tell you an
+example from a physics guy so and most
+of you will laugh at this
+the the physics guy so if you see this
+this is a pressure
+cooker okay and we're cooking something
+and now you know that pressure cooker
+once it boils it has a lot of pressure
+inside and if you try to open it and it
+somehow you opened it because of the
+pressure it'll go upwards and it'll
+there will be a huge blast and it'll
+create a mess so that guy knew how to
+solve the equations and because it was
+hard CED in him so he tried to open the
+pressure cooker and I was asking hey man
+you are a physics major and that to
+physics copper so don't you think that
+if you open this that blast okay that is
+where the intelligence do kicken because
+he was so trained in formal thinking he
+was so trained in give me an equation
+and this is how it should be solved and
+this is how it can be done okay that's
+the problem with these training programs
+so if you uh take these people and then
+ask them to uh do training for ID let's
+suppose for three couple of years three
+four five years and then they basically
+see the patterns usually what I say is
+it is not difficult doing assignment the
+difficult is come with an assignment
+come with new questions okay there are
+different websites which have all these
+questions uh previous questions now the
+actual task is done by the professor who
+comes up with new questions who comes up
+with new question which was not
+previously asked which was not previous
+in any pattern okay if somebody can do
+this so that is one level of
+intelligence because he has to
+understand every material okay that's
+why doing research is hard why because
+you have to first identify the problem
+itself you don't know the problem okay
+and you read all things and you see a
+problem first and coming up with this
+good problem is a huge task sometimes it
+takes years to do this and you we have
+PhD students here and they know MF will
+tell you how hard it is to come with
+actual problems this is the problem and
+this is what this is we want to solve
+okay and then people take any problem
+they okay I want to do this thing so it
+is better so coming up with a good
+problem and coming up with let's suppose
+if you have knowledge of something and
+coming up with good questions about that
+is actually a hard task so that is an
+intelligent Behavior but very this is at
+a vague level but I can't Define what
+incy if I defined them then problem
+solved I wouldn't have con yes I wanted
+to say
+something
+research resarch
+[Music]
+to humans idea I said I told you that
+idea generation is it is good for that
+because idea generation it has a lot of
+knowledge about the world it has all
+these mathematics physics to IDE but now
+you have to validate are these ideas
+good you have to validate that okay but
+if let's suppose if you ask it this is
+the physics problem okay knowledge now
+because it knows it knows this stuff and
+it can come up with the ideas but let's
+suppose if it has to find an actual
+novel thing it won't be able to do that
+okay but if you now have a human let's
+suppose take Einstein Einstein studied
+about light he had the information give
+the same information to GPT this is
+there a property of light this is the
+material about light okay what can you
+say about light it will say nothing it
+it'll basically say something but they
+won't have the content value they have
+style value but if you give a human
+because human has a think ability to
+come up with new things so they'll come
+up with these new things so they'll come
+up with because they are not simulating
+intelligence they are actually being
+intelligent but as I said idea
+generation in the longer context can be
+seen and yes and even those ideas might
+be written by somebody on internet
+because it has now a cap of this you
+think like this you are a human over
+here okay how many connections you have
+probably you are less connected you may
+ask me you may ask some friends okay
+what but chat GPT has the access to the
+entire internet's knowledge whatever
+there was it basically means it can
+contact 8 billion people okay this is
+not a Fair competition at all if you ask
+generate ideas and gener ideas to human
+because human are restricted by whatever
+their knowledge but if you give them
+time let's suppose you give ji time and
+you humans you give hum one month then
+you will humans will come up with
+something novel which basically they did
+not verify from somewhere but it was
+just out of thinking what they thought
+okay but if you give the chat GPT you
+will see that chat GP did give some idea
+Generations but they were not not as
+Noel as humans did it because it just
+tried to uh just simulate whatever was
+there whatever was on the web and just
+tried to from the context tried to
+generate whatever the knowledge it had
+and it it tried to generate those tokens
+as I said but humans actually having
+intelligence will will keep on thinking
+about it we'll keep on thinking but
+that's the problem with these language
+model you ask them they stop you train
+them they stop stop but let's suppose I
+speaking to you right now because humans
+never shut down till death okay even
+while you are sleeping you're still
+thinking about something and God knows
+what you're thinking God knows how your
+thoughts are processing but these models
+let's suppose uh if you train them and
+if you deploy them in a system and if
+you don't retrain them continuously they
+don't do anything on their own but
+humans if you see right now we're
+talking about things so what will happen
+after a while is maybe subconsciously
+you have your own brain and in the in
+the dreams also you'll think about the
+and there'll be there's a complex
+process going on and that is what uh
+seems as intelligent Behavior to me
+that's what leads to intelligent
+Behavior but I don't think the LMS do
+that okay and they don't uh process the
+information like that and then there
+should a mechanism of doing that now
+people are doing reinforcement learning
+human feedback and they're keeping these
+machines and whatever they generate and
+they should learn from it and again it
+will be a self problem because it does
+not have that I think ask a question did
+I answer your question
+buf yes sir it can give you a pro
+problem but it cannot tell you the
+feasibility of the problem yes yeah huh
+yes yes that's that's a good point so
+let's suppose if you ask it to generate
+a beautiful house it a beautiful house
+but that house because of structural
+problems won't ever exist okay it let
+suppose make a tajal it will say you can
+put to over here you can put to over
+here and then you can color this and
+that but that tajal won't you won't be
+able to make why because it's not
+feasible in the real world can because
+it did not it did no calcul but if you
+ask hum humans will think they have
+constraint okay if I put a structure
+maybe the structure is not feasible at
+all so it may generate things which are
+not feasible which are not realistic and
+they might look good that that's the
+issue they might look good and people
+might get convinced oh it looks good
+should I try it with this no because why
+it generated because the way it is it
+was trained it will generate something
+very very good looking but that won't be
+the reality yes as had a question yes
+yes you are I didn't get
+you humans are very Superior very
+Superior yes as
+I had a question how these models are
+continuously trained like sometimes
+there are new research paper or new
+research coming up how the how the
+Version Control or how these models are
+continuously trained so yes I'll tell
+you the things like uh what happens is
+usually when Transformers came they do
+what's called as architectural
+change okay AR change are done so they
+do different let's suppose if you see
+GPT architecture and if you see Lama
+architecture both of them are would
+allow to discuss with you once we go to
+language modeling part so you will see
+that the framework they designed on is
+pretty much similar but the internals
+are quite different let's suppose this
+also used embeddings it us embeddings
+okay and this use something called as it
+uses positional embeddings this use
+something called as rotational
+embeddings okay here also it uses
+attention this called as self attention
+here it uses something called as
+attention with cavic Cas group multi
+attention Okay now if you see indivual
+Parts you will see corresponding thing
+there but they have complicated a bit
+and and if you see here they use the
+simple Norm layer and here they use
+something called as RMS Norm that's one
+aspect so they do some Aral chain and
+they replace the things with this okay
+and other thing is that they come up
+with some novel algorithms to infuse
+let's suppose they'll introduce some
+other things in here they'll introduce
+some other algorithms okay that's one
+dimension the one dimension is actually
+change then you can have some other you
+can you can come with new techniques
+also come up with new techniques and do
+that and maybe there are a lot of
+improvements you can change the weight
+range you can change it the way it INF
+first you can uh try to come up with a
+lot of uh Mumbo and
+jumbo and let's there two ways to think
+about it one thing is from experiment
+point of view experimentalist will think
+that we We'll add on these things and
+we'll experiment and from a theorist
+point of view he'll see okay let me go
+with the theory so if I do this and what
+will happen to this and he'll try to
+First understand From thetical
+perspective and then try to do it now
+that AI has become like this it has
+become like
+marketing very sorry to say this but it
+has become like that if you you should
+be the first person to get it with the
+market rather science should be like
+this doesn't matter that if somebody
+else published it if I'm not convinced
+that this will give something it should
+not be published at all but now people
+are in the race whatever they find they
+do publish it okay but actually it it
+should have been verified and now the
+problem is there so somebody does a
+research and they just found one example
+that it is doing something like this and
+they publish it and people try to pick
+up that research and they cite it and it
+becomes a whole line and someday some
+guy claims the root thing was wrong okay
+this is not how it how it does whole the
+research go goes down to the gutters
+that's how it is happening right now why
+because the funds associated with it
+because of the grants and because of
+this AI people want to get the papers
+accept this and that because if you
+write something about LMS it's a there's
+a high chance that people will accept it
+okay but this is how the research
+basically should be done so it usually
+should have some oil change and they
+should have different mechanism of
+training also and maybe within within
+each component can be modified so you
+can think of modification of each
+component maybe all together you can
+scrap the whole architecture of this you
+can come up with new things all together
+okay that's how they are doing it now if
+you see these uh The major portion
+that's happening right now they're
+increasing data and increas number of
+parameters and doing a lot of
+computation so that's why Sam Alman
+recently asked some 7 trillion dollar
+dollars it's not even economy of many
+countries is less than that okay so he
+was asking because why because they want
+to get bigger gpus because they're
+thinking if you feed more data to it and
+with these AR everything and we can come
+up with this but if you see humans
+humans are ined because they want to
+mimic human brain okay I I just try to
+give you the sort of birds view what are
+the different things that people do they
+do AR change They do change in training
+and they try to come up with new
+algorithms they try to come up with new
+data and the best part is for me is the
+coming up with new techniques if you
+come up with new Techni suppose
+attention was a technique that transform
+introduced so whatever you see language
+models performing that technique was
+introduced in 2017 okay that's the paper
+is titled that attention is all that you
+need attention is all that you
+need and uh it was published by
+Google okay and then open a basically
+used it and the open a was funded by
+Microsoft and basically the rivals did
+it so they publish research and they did
+not know how much amazing this could be
+so opena used in their gpts and then
+Microsoft is basically partially funding
+opener and uh they made these and even
+Satya said that we made Google dance
+because Google had a project running so
+they had something called as Lambda okay
+and they were not anticipating that some
+somebody else would use these techniques
+and come up with the model first so
+openi basically released and there was
+no prior notice Google did not know that
+people are doing this and then in that
+wave they released that b and it was a
+disaster okay and because they were not
+ready to because they had a plan usually
+companies do have a plan okay in one
+year we'll do this in two years we'll do
+this in three years they had a plan but
+once this open a released chat GPT and
+these people Google people were forced
+and there was a code r that time every
+of my professor who was working in
+Google because I was at that time doing
+Masters so and they were asked to come
+to the office okay because they wanted
+to see because they had a threat because
+if GPT was performing and they didn't
+know what happened people were coming
+with perplex and this and then they were
+thinking because our main stream of
+income is search so if somehow GPT and
+these language models can be used for
+search then our business model is gone
+and they had the code alert and you can
+see the beauty of the research so if you
+do research on this front because they
+come with new technique I was talking
+about techniques so they came up with
+technique of attention Okay and after
+that GPT came with just one concept of
+attention or from the Transformers they
+came up with these large language models
+so if you come up with good Concepts
+good uh sort of uh things that can be
+used somewhere else and that's that's
+the way research should be conducted not
+that you just got something you want to
+publish it okay you can do oranic change
+and you can learn about a lot of stuff
+and then come up with new techniques so
+as to revolutionize a field rather than
+just seeing what is it taking and if you
+just get a result maybe we'll get some
+grants we'll get a result accepted
+that's a very wrong way to look at
+it I think fad is a question yes
+fad sir I wanted to ask this question a
+long time ago like in this lecture I
+wanted to ask that um is intelligence
+just the way the structure of our brain
+the structure of our neurons and how
+they are arrang their Arrangement is it
+what constitutes intelligence or what
+and if it is then how why can't we
+replicate it oh very hard question
+because we don't know about brain we
+don't know anything we know very little
+about brain and that's why we're trying
+to mimic so whatever we're doing in deep
+learning whatever we're trying to do in
+this uh recurrent neural networks feed
+for they're all inspired from brain okay
+but if I if you ask me uh we have have
+not understood the brain fully we have
+understood many very minuscal parts of
+that that's why people are not
+interested in biology Neuroscience they
+want to see different aspects and they
+want to do it computationally can we
+perform the computations on this so if
+you see all of these things are inspired
+from the brain but as humans the
+limitation is that we don't understand
+the brain itself and there is a huge
+research going on on the brain on brain
+of rodents and different things what
+conut intelligence how these neurons are
+connected and that's what led to the
+Curiosity and after that Deep larning
+Field came into existence and it took
+off recently by recently I mean in I
+think 2006 onwards it took off okay and
+after 2012 it became uncontrollable and
+now we are still in that bubble where
+people are learning about these things
+if many of the uh and people do contest
+against this Nobel Prize giving to the
+AI people so they're saying that they
+are stopping this Frontier research all
+of this happened because of Frontier
+research so by Frontier research I mean
+you should not see just applications
+research will find some application
+something will not but if you give a
+prize noal priz to the AI for chemistry
+you gave it to the baker lab and
+for uh physics you gave it to the Hinton
+and hfield Hinton came up with the back
+propagation and hfield came with what's
+called as hfield networks and they they
+have their links in the in the competen
+aspect they were computer scientists and
+now people are saying if you give PRI
+you sending a wrong message the message
+is that you should pursue these fields
+where there is money because of
+capitalist society and you should not
+pursue the frontier research the
+frontier research is rather that where
+you you just are curious and you you
+want to discover it because you because
+you have curiosity not that there is
+some implication direct implication a
+it's good thing to find applications but
+the frontier research is not necessary
+that you should find it so if you see
+mathematics and Mathematics is just a
+tool and people should not study
+mathematics because if you just ask okay
+why is Abra algebra probably I won't
+know why it get use and maybe someday
+somebody will use it but this should not
+be the case that people will just uh
+give the prizes and fund the things that
+just seem practically to them okay and
+regarding the human brain that's why
+people are thinking okay will they stop
+the research funding in this also so if
+some people want to study about brain
+because it does not probably see uh the
+direct implications in the real world so
+will it will it be the case that they'll
+stop the frontier research and should
+should not be the case so short answer
+is that we know very DET about the
+brains and the more we know and probably
+much techniques more techniques will
+develop and where intelligence comes
+from nobody knows it has some links with
+Consciousness and what Consciousness is
+we don't know and to to quote the
+scripture and it is said that we know
+very little about the
+rule any other
+questions Anar has not asked any
+question yes
+no I don't have any
+question okay did you at least got some
+perspec about the Genera Ai and in in
+particular language models at least some
+sort of okay what you should expect from
+these
+models yes okay you should not now if
+somebody puts a LinkedIn post hey I
+asked JG this you should laugh at that
+post so but I'm saying what we should
+talk about so
+I yes Yes actually I can stop the
+recording now

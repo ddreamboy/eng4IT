@@ -1,0 +1,1224 @@
+today in the workshop we've got our
+heads in the Arduino iot Cloud you'll
+see all the new iot Cloud features for
+2024 including a new interface and
+support for many more devices we'll also
+build a cloud project that uses triggers
+to send notifications there are clouds
+in the forecast today so welcome to the
+[Music]
+workshop
+well hello and welcome to the workshop
+and today we're going back into the
+cloud the Arduino iot Cloud now we've
+used the Arduino iot Cloud several times
+here in the dronebot workshop but it's
+been a little while and there have been
+many many changes to the iot cloud so
+many that it doesn't even look the same
+as it did before it's got a brand new
+interface there's an updated editor
+there are a number of new features in
+the cloud including something called
+triggers that will allow you to send the
+push notification or an email in
+response to specific events and there
+are many many more devices you can
+connect to the Arduino iot cloud in fact
+you can connect just about anything that
+can connect to the internet to the
+Arduino iot Cloud there are so many new
+features in the cloud in fact that I
+can't Jam them into one video so this is
+the first in a series of videos that
+I'll be doing on the Arduino iot cloud
+and the updated features for
+2024 so if you've used the cloud before
+this video will be an excellent update
+to get you back to speed with all of the
+new features and if you've never used
+the Arduino iot Cloud then this video
+will serve as your introduction so let's
+go and get our heads into the Arduino
+iot
+Cloud the Arduino iot cloud is an
+Internet of Things platform that works
+with Arduino devices non Arduino devices
+API and pretty well anything that you
+can connect to the
+internet the iot cloud is an ideal
+platform for makers and experimenters as
+it allows you to build Internet of
+Things projects without having to worry
+about all of the tedious backend and
+security stuff in order to work with the
+Arduino iot Cloud you need to understand
+a few simple Concepts and we'll go over
+those
+now the first concept is devices devices
+are essentially virtual twins of the
+Hardware that you've attached to the iot
+cloud the platform supports both Arduino
+and non Arduino boards you can also use
+lauran ethernet and cellular boards
+available from Arduino in addition to
+working with C++ you can also work with
+python micropython or JavaScript devices
+in order to attach devices to the
+Arduino iot Cloud you'll need to install
+the Arduino create agent it's a very
+simple program and it's available for
+Linux Mac and windows all new devices
+attached to the cloud will be assigned
+some secret keys and you need to save
+that Arduino provides a very simple
+method for doing
+this the next fundamental concept of the
+Arduino iot Cloud are things things
+represent connected devices and the data
+variables associated with them a thing
+is actually a container that contains
+devices the network credentials to
+attach those devices to the network work
+and Cloud
+variables when creating a thing you're
+going to require that device secret key
+that was assigned to your device when
+you connected it to the iot cloud so
+make sure you have a copy of that cloud
+variables are one of the key concepts of
+working with the Arduino iot Cloud these
+are variables that exist within the iot
+cloud you'll Define your Cloud variables
+when you define your things and Cloud
+variables are used with all of your
+devices
+any change made to a cloud variable on a
+device is passed to the
+cloud most standard variable types are
+supported by Cloud variables and in
+addition there are some specialized
+types that are unique to Cloud variables
+Cloud variables can be read right or
+readon you can update the value in your
+Cloud variables periodically or you can
+set them to update every time a value
+changes another key concept of the
+Arduino iot class is dashboards
+dashboards are your control panel for
+your Cloud applications there are
+desktop and mobile versions of dashboard
+and you can configure them
+independently dashboards are very easy
+to use they employ drag and drop widgets
+and these widgets connect to Cloud
+variables a trigger is a newer feature
+in the Arduino iot Cloud a trigger
+occurs when a cloud variable condition
+has been met you'll use triggers to
+trigger an action and this action can be
+sending out an email or a push
+notification to the Arduino iot Cloud
+mobile app currently triggers only
+support Boolean and string Cloud
+variables another update to the Arduino
+iot cloud is the iot cloud remote app
+this is available for both Android and
+iOS and there have been more changes
+made to the iot cloud editor as Arduino
+continues to bring it closer in
+functionality to the desktop editor
+and so that's the overview now let's go
+log in to the Arduino iot
+Cloud now here's the main console screen
+for the Arduino iot cloud and if you
+haven't been here for a while this is
+going to look very different than it did
+before they've pretty well Consolidated
+everything onto one screen and it's
+pretty nice now I'm going to assume that
+you already have an Arduino iot cloud
+account if you don't it's pretty easy to
+set one up now this is the homepage over
+here and it just kind of summarizes some
+files you've been working on recently
+and also has a couple of VO you can get
+started if you're brand new it's got
+documentation uh getting started wizard
+that you can go through you can
+basically build a little Cloud project
+right from here to get yourself familiar
+with everything now down the side you'll
+see all the main elements of the cloud
+so over here are the sketches that I've
+got and for every sketch that also shows
+you what it is associated with over here
+so here's the associated thing to that
+particular sketch and what device It's
+associated with as well and we'll go
+into devices we can see all the devices
+that I've added to the cloud we're going
+to be adding some more of them a little
+bit later uh here are the things that
+I've made for my cloud and here are my
+dashboards and here's a
+trigger and so all of the main elements
+for the cloud are right over here and
+very easy to get at they've also got
+some resources down here and these
+resources are things like their Forum
+their project Hub and uh a number of
+tutorials for getting started with the
+cloud there are complete courses over
+here on using the Arduino and the
+Arduino iot cloud and you can get going
+through those and you can also look at
+some templates if you're going to build
+a cloud project you don't necessarily
+need to start from scratch you can use
+one of these templates and they have a
+number of different templates over here
+you can choose from finally we've got
+Integrations these are products that
+I've integrated with the cloud in my
+case I've integrated Edge impulse so it
+appears over here and the last bit here
+is just to personal usage for the cloud
+that I have done my plan usage and so
+this is the screen again the main
+console screen for the Arduino iot cloud
+and we are going to be using this to
+build our Cloud
+project all right now that we've got all
+the fundamentals down it's time to start
+working with the Arduino iot cloud and
+so what we're going to do in today's
+video is we're going to build build a
+cloud project we're going to start off
+with an Arduino Uno R4 WiFi board
+although you could use another Arduino
+Cloud compatible board and it'll work
+just fine and we're going to build up a
+project that eventually will also
+include a second microcontroller in
+esp32 so let's see how we hook up our
+Uno R4 Wi-Fi and start working with the
+Arduino iot
+Cloud we're going to build the project
+using the Arduino iot cloud and we'll be
+using using an Arduino Uno R4 WiFi board
+as our device we'll be connecting a
+Servo motor and a push button switch to
+the Uno and then connecting it to the
+iot
+cloud after that we'll build a dashboard
+so we can interact with our device we'll
+be using the cloud editor and I'll also
+show you how you can do your editing
+using the IDE 2.0 that you're already
+familiar
+with in addition to the Arduino Uno R4
+Wi-Fi board Bo we're going to require a
+Servo motor and the standard sg90 Servo
+would be an ideal choice now some folks
+power the servo motors from the 5vt
+supply on the Arduino board but I don't
+like to do that and besides servos work
+better with 6vs anyway so we're going to
+give it a 6vt power supply this can
+simply be four ablea cells if you wish
+we'll also require a push button switch
+this is a momentary contact normally
+open push button pretty well a standard
+device that you probably already have
+we'll Begin by connecting a ground
+connection from our Arduino to the
+negative connection of the 6V DC Servo
+power supply we'll also connect that
+ground connection to the ground
+connection on the servo on most Servo
+Motors this will be a brown wire we'll
+connect the positive side of our 6vt
+power supply to the positive side of the
+servo that'll be a red wire on most
+Servo Motors and we'll connect to
+servo's control lead which is usually an
+orange a yellow wire to gpio pin 11 on
+the Arduino Uno R4 Wi-Fi board next
+we'll connect one side of our push
+button to gpio pin 5 on the Uno and
+we'll complete The Circuit by connecting
+the ground to the other side of the push
+button and so now that our circuit is
+wired up let's connect it to the Arduino
+iot
+Cloud so now that we've wired up our Uno
+R4 we'll need to add it to the Arduino
+iot cloud of of course this is a device
+so I'm in the device tab of my cloud
+console and right over here is a button
+that says add device pretty well seem
+straightforward let's click it and we
+get the setup device wizard now we have
+three selections over here we can add an
+Arduino board which of course is what we
+are going to do a third-party device and
+this is mostly ESP 32s and
+esp8266 as well as Laura Wan products
+and over here a manual sele ction and
+here we can add just about anything that
+can speak python micropython or
+JavaScript of course we have an Arduino
+board so we're going to click over
+here and I've connected my board to the
+USB port you'll need to do this of
+course now at this point it's found my
+Arduino Uno R4 and we can continue but I
+should mention that when you first do
+this you're probably going to get a
+popup saying that you need to install
+the Arduino create agent the Arduino
+create agent runs on your computer and
+it's kind of the bridge between the USB
+port and the Arduino iot Cloud website
+so you need that or this won't work uh
+if you're prompted you'll get a download
+link for it it's available for Linux for
+mac and for Windows and just download it
+and install it you'll note that it runs
+in the background all the time and
+you'll have a little Arduino symbol on
+your taskbar to let you know it's
+working so as I said I've got the agent
+and it's found my Arduino Uno R4 board
+so I'm going to go and configure that
+board now it says to give your device a
+name and it will suggest a name for the
+device but you probably want the
+different one so we're just going to
+call this one Uno
+R4 test Uno R4 test board why not okay
+and I'm actually going to copy this as
+well too and I'll show you why this is
+this a little trick of my own going to
+copy that name and I'm going to go next
+and now it's going to say that it's
+giving me a device ID and a secret key
+now this secret key is extremely
+important if you don't have this key you
+can't proceed with the further steps
+because this is part of the security
+setup so you can copy that right now to
+your clipboard or you can download a PDF
+which is what I'm going to do I'm going
+to download the PDF and this is why I
+copied the name what I'm going to do is
+I'm going to paste that over
+here and so now I know what this is the
+secret key for because it's always going
+to come up as Arduino device secret key
+PDF by pasting the name in front of it I
+know what device it is so I'm going to
+save my secret
+key and I've saved my key I can confirm
+I saved my key and I will
+continue now it's going to make the
+device iot ready and as you see here it
+says this process can take up to 5
+minutes and with the Uno R4 it often
+does Take 5 minutes so I'm going to stop
+right now cuz I don't think you want to
+watch this for 5 minutes is just going
+to spin that number three wheel and
+eventually check it off and our Uno R4
+will be added as a device in our uino
+iot
+Cloud so now that our device is complete
+the next thing we're going to do is
+build our thing and so I'm in The Things
+tab of the console and we can add a new
+thing we'll click add
+thing and we get a thing right now and
+it starts off as an Untitled thing so
+let's give our thing a title first of
+all
+and I'll let's call my Uno test board
+thing you can call it anything you want
+of
+course and you can see we've got three
+sections we've got the cloud variables
+the associated device and the network so
+let's associate our device first of
+all and this is our Uno R4 test board
+we'll associate that and now we need to
+put in our Network credentials and this
+is where you're going to need your
+secret key so we click over here and
+we'll give it our Wi-Fi
+name you need to give it your Wi-Fi
+password and you need to put in your
+Seeker key and I've got mine in my
+clipboard right now so I'm going to
+paste it and we'll hit
+save and the next thing we need to do is
+to add some Cloud variables to our thing
+we're going to add two to our thing one
+for each of the peripherals we have on
+the board so the first one we going to
+add is for the button
+so I'm going to call the variable button
+State and we're going to select the type
+for our variable now there's a number of
+different ones to choose from but the
+basic ones are down here and in the case
+of our button I want it to be a Boolean
+so we'll do that now you have the
+permissions is it read right or is it
+read only well in this case the push
+button is only going to be sending a
+value and not accepting one so it's read
+only and you have a choice as to whether
+to update it whenever the value Chang
+or periodically say once a second or so
+you get to choose the period if you
+choose that but I want it to update on
+chain so I'm going to add my
+variable and you'll note over here in
+the sketch tab I got a little one that
+means that the basic sketch that this is
+writing in the background has now been
+modified with one addition and that
+being my button variable I'm going to
+add another Cloud variable
+now I'm calling this one the servo
+position and this is going to be an
+integer so this is the number from 0 to
+180 that we will be feeding to position
+our Servo motor now we want this one to
+be read and write because we need to be
+able to write to this and we're also
+going to keep it as on change and so
+we'll add that
+variable and you'll note that we've had
+two additions to our sketch now we'll go
+over to that sketch Tab and I'll need to
+let you know something this is the basic
+editor and it actually is going to be
+going away Arduino is getting rid of
+this basic editor at the end of March
+2024 so you'll eventually just go
+directly to the full editor so we may as
+well just go directly there right
+now and this is the full editor and I'm
+just going to hide this right now
+because I don't want to do a tour now
+the full editor is becoming more and
+more like the uh IDE on your desktop but
+it's still not quite there it's got a
+few features on the side over here you
+can go to all your examples like you do
+in the regular IDE here's where you add
+libraries and over here there's a number
+of reference functions so you can look
+at all the different functions that are
+in the Arduino implementation of C++
+it's kind of nice at any case we're not
+going to look at that right now what you
+will notice is that we have four files
+let's just make it a bit bigger here uh
+this is our main sketch and this is the
+one that we're going to be working with
+the read me is something a generates and
+you can start adding your own
+information onto this like how you're
+wiring your circuit up and everything
+the properties of the thing are being
+generated automatically whenever we
+change properties in our thing panel and
+the secret tab contains all of your
+information such as your Wi-Fi
+credentials and that secret key so we're
+just going to be focusing on this one
+and this is what's already been
+generated for us it says it's added
+these automatically that integer of
+Servo position and button State those
+are into two Cloud variables otherwise
+it sets up a basic sketch that we can
+modify and at the bottom here you'll
+notice it also added the function on
+Servo position change and this is
+basically for the servo position Cloud
+variable because it's a read write
+variable this will be called every time
+that variable is changed and uh so this
+is how we're going to interact with that
+variable so now let's take a look at
+some code we can add to this to make our
+project actually
+work now in order to make this bit
+easier for you to see on the screen I've
+gone into to my settings in the Arduino
+iot cloud and I've changed my font size
+up to 24 so you should be able to see
+that a bit better now we are going to
+start adding code in fact I've added a
+few lines of code already just for the
+servo motor remember we've got a Serv
+motor and a push button switch attached
+to our board and the servo is controlled
+with the servo position Cloud variable
+so keep that in mind now the first thing
+that I did was I included the servo
+Library so that's just the standard way
+that you would do it in any Arduino
+sketch and the same as you would with
+any other sketch I've defined an object
+for the servo and I've just called mine
+my Servo you could call it anything you
+want of course then I go into setup and
+in setup I need to attach the servo to
+the pin that it's attached to and we're
+using GPO pin 11 so I did my Servo do
+attach to 11 over here and then we go
+all the way to the bottom to that
+function that they provided for us on
+Servo position change and I've added
+code to that now remember every time the
+variable Servo position changes in the
+cloud this will be called and what we
+want to do is we want to move the servo
+motor when it changes so I'm going to
+move the servo motor do a my Servo right
+and the value of Servo position the
+cloud variable that is going to contain
+the position of the servo and so that's
+all I need to do and so now I can just
+load that up to my Arduino Uno and then
+start creating a dashboard and see if
+this will work so we just do do this to
+do an
+upload and by the way the verify on the
+uh Cloud takes quite a while it's a lot
+longer than it is on the local R weo ID
+2.0 also there is a little Quirk I've
+noticed sometimes the very first time
+that you attach to a board you might get
+a failure if that's the case unplug it
+plug it back in do it again and it'll
+probably work forever and ever after
+that I'm not sure what causes that but
+just thought I'd throw that in and
+anyway we're going to verify and upload
+this to our board and then we'll move on
+to make a dashboard for this so we can
+control our
+server and so now I've navigated back to
+the dashboard screen and I'm going to
+create a new dashboard so we're going to
+hit the new
+dashboard and we can give our dashboard
+a name other than
+Untitled and that should be
+fine and now we can start adding widgets
+to our dashboard
+and we're going to look for a widget to
+control the servo motor I'm going to
+pick this value widget to start off with
+now the name of it is value but we can
+call it something
+else let's just call it
+Sero and we need to link a variable to
+it and so we're going to go down to our
+Uno test board thing and we see the two
+variables and there only is one variable
+that we can use an integer because a
+Boolean can't be linked to it so they
+got that gray out so we'll pick that
+integer and we'll link that
+variable and we're basically done with
+that and so now we have an integer over
+here that says zero let's move this to
+180 and see if it affects our Servo
+motor and it does indeed it moves the
+Sero to 180 and we can type in 90 here
+to center
+it and it does move the servo I'm going
+to add another widget over here cuz I
+want to show you something we're going
+to add another one to control the
+servo what would be
+good a slider would be great we're going
+to link that same variable so you can
+link the same variable to more than one
+widget on a board going to link that
+variable and we're going to make the
+range go up to 180 over here because
+that's
+correct and we're done and you'll notice
+it has the same value as the other one
+so if I were to go and let's say change
+this again
+manually the servo moves and you'll
+notice the other widget because it's
+linked to that value also moved as well
+so if I move it up I can move the servo
+using the
+widget and you'll notice that the two of
+them track each other so let's just take
+a look at what's going on over here
+we've got two widgets here and they're
+linked to a cloud variable that cloud
+variable is controlling the position of
+our Servo so every time we make a change
+to it the widgets both respond to that
+or they can affect the change if they're
+the one doing it and this is basically
+the principle of building a dashboard
+with the Arduino iot Cloud now there's
+also a mobile layout for your dashboard
+so you can move these around so that on
+the mobile app they're in different
+positions Etc and uh so you can do both
+a desktop and mobile dashboard so it's a
+very versatile
+system now up until this point we've
+been doing all of our editing inside the
+Arduino Cloud editor and you can
+continue to use the cloud editor it has
+a lot of good features to it and you can
+certainly write your sketches with it
+however it doesn't have as many features
+as the desktop editor and many people
+may prefer to use the desktop editor
+instead and you can do that so I'm in
+the desktop version 2.3 and I'm going to
+go over to my Sketchbook my Sketchbook
+shows me all the things I have on my
+computer but if I click over here I can
+take a look at what I've got in the
+Arduino iot Cloud now the first time you
+do this if you're not connected you're
+going to get prompted to log into the
+cloud you'll click a button it'll open a
+web browser page where you log into your
+Arduino account and after that you can
+close the browser and from that point on
+you'll always see the cloud here now all
+of these sketches that you see are still
+up in the cloud none of them are
+actually on my machine this is the one
+that we were working with today if it
+was on my machine this icon here would
+be a full cloud like this one here and
+what you need to do is you need to pull
+it down so you'll notice when I
+highlighted they get this little cloud
+with a arrow on and if I click on that I
+can pull the sketch and you see down
+here it says it's done pulling the
+sketch and now my sketch has a little
+full Cloud to it it's actually available
+for me and if I double click it I can
+open
+it and there we go and here's the sketch
+that I had up in the
+cloud and it is now local on my machine
+and I can start working with
+it and so now I've modified our sketch
+to include the push button and the code
+I've used is very simplistic it's not
+the best and it's not going to give
+operation that's completely consistent
+but it will serve for illustration
+purpose because today we're learning
+about the iot cloud not how to code push
+buttons now as you recall there's a
+Boolean Cloud variable called button
+State and when that's state is high that
+means the button is pushed and when it's
+low the button isn't pushed at least
+that's the logic I'm going for here so
+what I've done is I've added a integer
+constant for the actual button called
+button pin because we got it connected
+to pin five and then down in the setup
+I've defined the button pin as an input
+with a pull-up because we don't have a
+pull-up resistor and then I went to The
+Loop and this is where the code is kind
+of flaky now the proper way to deal with
+a push button of course would be to use
+an interrupt that would complicate the
+code and again I'm just trying to
+illustrate principles of the Arduino iot
+Cloud so what I've done is I've just put
+this line into the loop and I've got my
+button State that's the cloud variable
+and it is going to be the inverse of a
+digital read of the button pin because I
+want it to be high when the button is
+pressed when I press that button it's
+actually going to go low on the pin so I
+want the exact opposite logic and so
+that should set the state of the button
+State Cloud variable now the reason I'm
+saying this C code is going to be a bit
+flaky is because in the loop first of
+all we do this we do the Arduino Cloud
+update and we don't know how long that's
+going to take so it's entirely possible
+that we could press the button and miss
+it because we're busy doing that or we
+could release the button and not see it
+because we're doing that so bear that in
+mind when we're testing this out but
+again we're just illustrating a
+principle now you can compile and load
+this locally here in your IDE but you're
+going to have to do one thing and if I
+go into my thing properties I'll show
+you what it is in thing properties we're
+calling two libraries Arduino iot cloud
+and Arduino connection Handler neither
+of those libraries are installed by
+default in your ID if you go into this
+and go and install the Arduino iot Cloud
+by going to your library manager you can
+install that and it'll install a number
+of dependent libraries including this
+connection Handler so you're going to
+have to do that
+before you can compile this but once
+you've done this should be able to
+compile and you can actually load it
+directly onto the board from here and
+give it a try in the cloud so let's go
+and do
+that and it seems to work and another
+thing that we can do of course is that
+uh since our out we're out of sync now
+with what's in the cloud there's another
+button here to push everything back up
+so I can go and push this back up to the
+cloud it's telling me I'm going to
+overwrite what's in the cloud I'm I'm
+going to do
+that and it's pushed back up to the
+cloud so now my sketch in the cloud is
+synchronized with this and it's a good
+idea to do that because even though I
+did load this onto the Arduino from here
+I don't want the two out of sync and so
+I can work on the cloud without worrying
+that I don't have the same code as I
+have down here so let's go and see if
+this worked so now that we've added the
+code to our board the next logical thing
+would be to go to our dashboard and add
+an element to represent the push button
+we can do that in a moment but where I
+am right now is in the thing and I want
+to look at the cloud varibles so I've
+magnified my screen quite a bit so you
+can see it this is the button State
+Cloud variable and it says the last
+value on it is false watch what happens
+when I press the
+button you can see it goes to True when
+I'm pressing it and that basically is
+proving out that our code is working
+it's going true every time I hold the
+button
+down and this is a great way of testing
+and troubleshooting to see if your Cloud
+variables are working uh it gives you a
+lot of data over here the current state
+of it the last time it was updated Etc
+so if you're having problems with your
+Cloud project you might want to go into
+the thing and make sure your variables
+are operating the way that you think
+they should and now we're back in the
+dashboard I want to show you something
+in the dashboard I didn't point out
+earlier you'll notice right now I don't
+seem to have the option to add any
+widgets and that's because I'm in view
+mode the mode you would normally keep
+the dashboard in when you're using it
+and you can toggle it over here into
+edit mode by doing that and now I can
+add more widgets and move them around so
+I'm going to add a widget to this for
+the push button and uh good widget is
+probably the LED widget and the LED
+widget is basically just an indicator
+you can make a red LED a green LED or
+you can actually have two LEDs as well a
+red and a green one now now we'll link
+that of course to a cloud
+variable and the button State the
+Boolean is the only one it can link
+to and we'll say
+done now we'll see if that
+works we press it it's
+on and release it and it goes off and so
+the LED does seem to work as well uh
+it's attached to that same Cloud
+variable that we just monitored earlier
+and as you can see it's pretty easy to
+add things to the Arduino iot
+Cloud so we've examined a lot of cloud
+features with our Arduino Uno R4 device
+and now we're going to add another
+device onto our iot Network specifically
+an esp32 board now I'm just using one of
+the esp32 dev kits and you could use
+just about any
+esp32 the key concept over here is we're
+using a non Arduino board we're also
+going to examine another couple of
+Concepts one of them otaa or over theair
+Updates this is a great feature that
+allows you to update the code on your
+board without uh disconnecting it from
+the cloud and connecting it to your
+computer you can just do your updates
+directly over the cloud that's a really
+handy feature and another thing we're
+going to work with our device-to-device
+Communications where our two
+microcontroller boards will be able to
+talk to one another using Cloud
+variables over the Arduino iot Cloud so
+let's go and see how we hook up our
+second microcontroller to our
+Cloud we're going to expand our iot
+Cloud Network by bringing in another
+board and that board is going to be an
+esp32 we'll attach a potentiometer and
+an LED to our
+esp32 and then we'll attach it to the
+Arduino iot Cloud by doing this you'll
+learn how to add a non Arduino device to
+the cloud we'll also be able to
+experiment with device to device Direct
+Communications and we can can work with
+overthe a updates to update the code on
+our devices while it's connected to the
+iot
+cloud I'm using an es32 devkit module
+for this and you could pretty well use
+any esp32 that you want if you don't
+have the gpio pins that I'm using you
+could just change them in code we're
+also going to need a potentiometer and
+I'm using a 10K linear pot although any
+value above 10K would also work just
+make sure it's linear a light emitting
+dial and I'm just using a standard red
+LED and a dropping resistor for that
+diode and a 150 Ohm resistor will work
+well we'll Begin by connecting one side
+of our potentiometer to the 3.3 volt
+output on the
+esp32 the wiper of our pot will be
+connected to GPI pin 34 this is also
+analog to digital converter 1 channel 6
+and finally we'll connect the other side
+of the pot to one of the ground
+connections on our esp3 32 module we'll
+connect GPO pin 4 to one side of the
+dropping resistor and the other side of
+that dropping resistor will go to the
+anode or the long lead on our led the
+cathode or short lead on the LED will be
+connected to one of the ground
+pins and that takes care of our wiring
+now let's add our esp32 to our Arduino
+iot
+Cloud okay so of course the first thing
+we need to do with our new board the
+esp32 is to add a new device to the
+cloud so I'm in the device Setup Wizard
+again and this will be a thirdparty
+device so we'll go into here and we can
+select
+esp32 now there's a drop- down to select
+the model and there's quite a few models
+here and unfortunately this is not
+alphabetical however you can search it
+so I have a w Rover one and this will be
+the esp32 Rover kit all
+versions we'll continue give it a name
+and I'll give it a new name of of
+course it's probably a good enough name
+and again I'm going to copy
+it and download the
+PDF with that name on
+it saved my
+device and I'm all set there's nothing
+else to it when you're SE selecting a
+non Arduino device it's actually pretty
+quick and so now my esp32 has been added
+as a device and we can start the code
+for
+it so now that I've added my esp32 in as
+a device I've created the thing for it
+which I named esp32 thingy now I've got
+my Associated device that's the device
+that we just set up and I've added my
+network CHS in my secret key and I've
+also added two Cloud variables for the
+two items we have attached to it for the
+LED I have LED control and this is a
+Boolean it's got read and write
+permission because we need to be able to
+write to it to control the LED and it's
+updated on
+change the other one I added I called
+potor value and this is an integer it's
+read only because we're just going to
+read the value of the potentiometer and
+it's also updated on change threshold of
+zero means it's a minimum change you can
+set that threshold so it doesn't update
+all that often if you
+wish okay now we'll go and look at the
+sketch in the simple editor although as
+you know the simple editor is going away
+at the end of March but it'll show us
+what we need to know and so it's already
+said we've got two Cloud variables pot
+value and LED control I've added the
+code already for the pot but not the LED
+so we Define the PIN for the
+potentiometer that's on pin 34 and the
+only other code to add is in the loop
+and this is where we get the value so
+pot value is the cloud variable and it's
+going to be the value of an analog read
+of the pot pin so that's pretty simple
+so let's go back into the esp32 thingy I
+have over here we'll take a look at my
+board I've got the pot here and as I'm
+moving the pot as you can
+see the values are going up and down all
+the way at the top it's 4095 which is
+what we would expect as it's a 12bit
+analog to digital converter in the
+esp32 and the other end of its travel at
+zero and so we've already set up our
+Cloud variables and our thing for our
+new esp32
+board okay now we're back in our
+dashboard and we're going to add a
+widget to connect to that potentiometer
+so we'll look in our widgets and there's
+a number of ones we could use I decide I
+want to use a gauge a gauge is an
+interesting widget as it can display
+numbers now you'll notice the value
+range at the bottom look at the format
+of it with the decimal points watch what
+happens when I link it to a variable so
+I'm going to link it to a variable on
+esp32 thingy and that's the pot value
+the only one that'll work with it it's
+an integer so I linked the variable and
+now if you look the range has gone to
+integer ranges and not the float range
+it had before the top however at 100 is
+insufficient for this pot so I'll have
+to change
+that and then we can click
+done and now let's move the pot and see
+if that
+works and there you go all the way up to
+4095
+all the way down to zero and all kinds
+of values in between and so the gauge
+works it was a very simple B of
+connecting it to a cloud variable and
+getting it to
+go so I've gone back and modified our
+sketch to add some code for the LED now
+you remember we have a Boolean called
+LED control that's our Cloud variable
+and we're going to use it to control the
+LED on and off so I've added an integer
+to represent the pin the LEDs on it's on
+GPO pin 4 and then down in setup I've
+set the LED as an output using a pin
+mode command and then I've gone down to
+the bottom where they gave us a function
+called on LED control change and in
+there I've added the statement to do a
+digital WR to the LED pin with the value
+of LED control the cloud variable so
+that's a Boolean so if it's high the LED
+should go on and if it's low the L
+should go off now all that's pretty
+simple but I've done something a little
+differently right now that I wanted to
+show you if you take a look at my esp32
+board you'll notice it's being powered
+Now by a power bank instead of being
+connected to my computer and I'm going
+to do what's called an overthe a update
+you can see over here it says over the A
+and so what this is going to do is it's
+going to update over the cloud it's uh
+going to let me update the code without
+having to disconnect the microcontroller
+and connected to my computer and of
+course that can be very very handy when
+you've deployed a number of cloud-based
+uh microcontrollers so let's just update
+it it's going to go through the verify
+we'll open this we'll see if we can get
+some information in the
+console and it says the upload over the
+airor has succeeded and we've updated
+our code without even having the
+microcontroller attached to the
+computer so now I'm back in my dashboard
+and we're going to add something for the
+LED that we just coded for so let's just
+go into edit
+mode and we'll add a push button that
+sounds a good way to control an LED link
+it to the
+variable of LED control the only Boolean
+that we have
+here and that's about it and so what
+happens when I press the Buton
+button I'm holding it down the LED is on
+let go the LED is
+off it's pretty well the behavior that
+we
+expect and so once again you can see how
+simple it is to add items to the
+dashboard on the Arduino iot Cloud now
+the next thing that we're going to look
+at is device to device Communications we
+now have two devices the esp32 device
+and the Arduino Uno r four and we've
+already seen that we can use One
+dashboard with both devices but we can
+also make them communicate directly and
+we do that by synchronizing their
+variables now in order to do that we
+need Cloud variables that are of the
+same type so you can only synchronize a
+Boolean with a Boolean or an integer
+with an integer Etc so what I'm going to
+do is set it up so that pressing the
+push button on the Uno R4 will light the
+LED on the esp32 and I'm in the thing
+for the Uno R4 right now and I'm looking
+at the button State button and I'm going
+to edit the properties of that
+button and so this is basically the same
+screen you get when you first create the
+button and you can do this initially
+when you created if you wish you'll see
+this thing that says sync with other
+things we'll click on that and now it's
+going to show me all of the different
+booleans that I have with all the
+devices in my cloud because you can only
+sync between the same type of Vari
+Now button state is the one we're trying
+to sync and I want to sync it with LED
+control on the esp32 thingy so I'm going
+to click that one off and note that you
+can sync multiple variables if you wish
+and click synchronize
+variables and I'll save
+that and so now you'll notice there's a
+little thing over here that says the
+variable has been synchronized so let's
+go and test that out and see if it
+works okay so we're going to test out
+our synchronized variable and so as you
+can see I've got my white push button
+over here and the LED over here in the
+esp32 and press the
+button and the LED lights let go of it
+and it
+doesn't it's pretty simple and we have
+synchronized those two variables through
+the Arduino iot Cloud now of course we
+could do this the other way as well and
+I've got a little bit of a homework for
+you if you choose to go ahead and do it
+uh your if you choose to accept it is to
+take the potentiometer over here and
+have it drive the servo motor that's
+over here now both of these devices are
+using integers for their Cloud variables
+so you can synchronize them however the
+pot is giving you a value of 0 to
+4095 and we need a value of 0 to 180 for
+the servo so what you would need to do
+is you'd need to modify the esp32 code
+and add a map function into it to map
+that down to 0 to 180 and then synchron
+the two variables so give that a shot
+you should be able to control your Servo
+motor with the potentiometer on the
+other device proving out the cloud to
+Cloud variable synchronization in the
+Arduino iot Cloud triggers are a
+relatively new feature in the Arduino
+iot cloud and we haven't discussed them
+before triggers allow you to send off a
+push notification or an email in
+response to an event and you can use
+triggers for a number of different
+monitoring applic ations or you can use
+it just to send yourself a regular
+status report on something so they're
+very useful now we have a push button on
+one of our micro controllers and it
+seems to me that that would be an
+excellent device to fire off a trigger
+so let's go and see how we would set
+that
+up so here's our existing iot Cloud
+setup let's bring the mobile app in we
+can use triggers to send push
+notifications to the app this is how
+this is going to
+work one of our devices which in our
+case this is the Uno R4 WiFi board has a
+push button on it that push button state
+is maintained by a cloud variable called
+button State when the button has not
+been pressed the button state will be
+zero and nothing is going to happen
+however if we press the button the
+button state will change to one this
+will cause a trigger to be fired and
+will send a push notification out to our
+mobile app let's see how we set this
+up now in order to create our triggers
+we will go into the trigger section of
+our console and add a new trigger and
+first we'll give our trigger a name so
+let's rename the trigger to I don't know
+how about button
+trigger okay now we need to associate a
+trigger with a cloud variable and so
+we're going for one on our Uno test
+board thing and the button State
+variable which is the Boolean that will
+change state every time the push button
+is
+pressed now if you can see this here it
+says if the cloud variable button state
+from Uno test board thing is true then
+you take an action and the action we're
+going to take is to send a push
+notification to the app on my phone you
+could also send an email if you wish so
+send a push notification it's telling me
+who it's going to which is myself we'll
+give it a
+title button press and some
+text the white button was pressed now
+you can also use variables inside here
+if uh you're passing a string instead of
+a Boolean so you can use the thing name
+and the variable name inside there and
+put it inside your message if you wish
+but this is all that we need right now
+so I'll say
+done turn my trigger
+on and we should be ready to
+go okay well now it's time to test our
+trigger so we will press the push button
+and on my app I've Got a notification
+that says the button is pressed the
+white button was pressed and on the
+console if you go under the history you
+can see the triggers I've actually
+pushed it twice so here's my button
+trigger and it tells me exactly when it
+is I have pressed this so you get a
+record of all the triggers as well and
+that's a pretty handy thing too so as
+you can see triggers is a very handy
+feature in the Arduino iot
+cloud and so that wraps up our look at
+the fundamentals of the Arduino iot
+Cloud you should be able to take the
+information you learned today and start
+creating some amazing cloud-based
+applications now if you want some more
+information about what we covered today
+there is of course an article on the
+dronebot workshop.com website that
+accompanies this video and there's a
+link right below the video to that
+article now I want to let you know what
+we're going to be covering in our future
+Arduino iot cloud videos we're not going
+to do these back to back I'm going to
+slip a few other videos in but since I
+started to make shorter videos I should
+be able to make more and more of them so
+you'll be seeing a lot more dronebot
+Workshop videos including some upcoming
+cloud videos now what we're going to be
+covering in the next Cloud video is
+micro python everything we've done so
+far has been with C++ but you can also
+use micro python with the Arduino iot
+cloud and so we're going to see how that
+works and we're going to do another
+another video on using your Amazon home
+devices your alexas I don't want to say
+the word cuz there's one behind me over
+here but by connecting your Amazon home
+devices into the iot cloud you really
+open up a wealth of possibilities
+because of course these devices can
+control so many things already when you
+add them onto the cloud you can pretty
+well control your whole world so you'll
+have to take a look out for those
+episodes the best way to find out about
+the episodes of course is to subscribe
+to the YouTube channel all you need to
+do do is click that red subscribe button
+and if you click on the Bell
+notifications and if you've actually
+enabled notifications for YouTube then
+you will get notified every time I make
+a new video including videos in the
+Arduino iot Cloud now when you're on the
+website you might want to sign up for my
+newsletter it's not a salesletter just
+my way of keeping in touch with you to
+let you know what's going on in the
+workshop and also to let you know what
+the subject for future videos is going
+to be and it's free to sign up for the
+newsletter and another freebie to sign
+up for is a dronebot workshop forums if
+you want to discuss your Cloud projects
+or anything related to electronics The
+Forum is a great place to go it's free
+to sign up and there's information for
+doing that right below this video as
+well and so until we meet again please
+take care of yourself please stay safe
+out there enjoy using the Arduino iot
+cloud and I'll see you again soon here
+in the dronebot workshop goodbye for
+now
+[Music]
+a

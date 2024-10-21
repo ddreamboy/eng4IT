@@ -1,0 +1,268 @@
+- When we're talking
+about video surveillance.
+I mean, I can imagine
+why it would be appealing
+to attackers, but are
+there certain aspects of it
+that make us particularly vulnerable?
+- You have seen the movies, right?
+- Yeah. (chuckles)
+- So, what you see in the
+movies is actually not that far
+from the real world.
+So, attacking the surveillance system
+is the first thing a criminal will do.
+The surveillance systems
+are in the frontline.
+- Do you feel like you're on
+the frontline of a big threat
+or what's it like when
+you're kind of on the ground?
+- You can say that our customers
+put a huge amount of trust
+in Milestone because they use our software
+as a security control to make sure
+that they can actually
+investigate criminal behavior
+on their premises with the cameras
+and the video surveillance system.
+So yeah, I feel responsible
+for our customers' security, of course.
+- Do you feel like a movie star?
+You mentioned the movies.
+- (laughs) Maybe not so much,
+but I can't help feel responsible
+for the wellbeing and
+security of our customers.
+- So, if you were to look
+at the current landscape
+of cyber security, what do you think
+are some of the biggest threats today?
+- When I think about the top three,
+what immediately comes to my
+mind is ransomware and malware.
+I mean, we hear about it every
+single day, more or less,
+new ransomware attacks.
+And some statistics even
+say that every 14 seconds
+there is a new victim
+for ransomware attacks.
+The downtime you have in your business,
+rebuilding of all the systems et cetera,
+it has enormous financial impact.
+- What about endpoint, I
+know that's also an issue?
+- Yeah endpoint security is
+also a huge thing as I see it,
+because the way we have moved
+in the past 10, 15 years,
+where we have moved,
+a lot from our on-premise
+system, in closed networks,
+we are now, everything is on the internet.
+We are using cloud services.
+We are using remote
+workstations, we work from home.
+The attack surface has
+dramatically increased
+over the past many years.
+So I would say that is
+probably number two on my list.
+And the third is the very
+very good old phishing.
+Even though we have a lot of knowledge
+about how to deal with it,
+we train people et cetera,
+but it's still just keeps coming.
+- Just when you mentioned training.
+I mean, I imagine that's one method
+of trying to counter
+cybersecurity threats,
+but just in terms of solutions,
+what are some of the options
+that are available today?
+- Yeah, when it comes to the solution
+is really a two edged sword as I see it.
+There are two very very
+very important factors.
+First of all, it is, and
+the most important one,
+security awareness and employee training,
+though, that is the most important one.
+Then we have the second one,
+which is the security policies,
+and the technical
+controls we have in place.
+- Maybe if we're looking
+at that in practice,
+if I'm an employee, say,
+are there certain, just good practices,
+just things that I should be doing
+in order to protect the organization,
+and I guess myself and my reputation?
+- Yeah, and so you need to be aware,
+and you need to be skeptical
+when you look at contents
+of mails to determine whether
+it is a phishing mail.
+And be aware of what links you click on.
+You might be thinking
+that is that really right?
+And you need to have that
+common sense of skepticism
+to evaluate whether these
+actions you are asked to do
+are sound or not.
+- I know myself, I've, sometimes
+you get like a text message
+and it comes from your bank.
+It looks as though, like
+it's with the same messages,
+how did they do that, do we know?
+(both laughing)
+- That there are many, I don't think that
+we should go into all the
+technical details about this.
+But you're absolutely right,
+the phishing mails today
+can really look trustworthy
+when you look at them.
+But there are always a science
+that will show they are scams.
+- These things like typos or?
+- Yeah, but the typos actually,
+it's actually a very deliberate.
+You have read these weird
+spelled phishing mails.
+The reason why they put them in there
+is to lure away the
+people who can actually,
+you can say that can actually recognize
+these kinds of things immediately.
+So we have people who will
+not fall into the trap,
+because when you start a
+phishing campaign, for example,
+or we also had these scam calls,
+we have different kinds of things,
+where you are trying to
+lure people into something
+then you start up a dialogue,
+and then eventually you get
+the trust of the victim,
+and then you can start
+extorting money et cetera.
+So, the bad spells is
+actually just to lure a way
+those people who will never
+fall into the trap anyways.
+So that is very very targeted.
+It is not because those
+who are creating these
+phishing mails are bad at writing.
+So that is very deliberate.
+- Okay, all right.
+That makes me feel a little bit better
+that I might just spot them.
+You mentioned about, was
+it called spear phishing?
+This is where you're specifically...
+- This email looks like it
+comes from the CTO to the PA,
+"Please immediately transfer
+some money to some account
+because we are closing a
+big deal or we are in..."
+- It's always urgent.
+- Yes it's a very urgent,
+but this is about,
+the spear phishing part is about where
+you mention specific names
+and you make it look like specific people.
+- And I mean, how much can this escalate?
+Is it just to keep piling the pressure on,
+or do they use multiple methods
+of trying to lure someone?
+- They try new methods
+all the time, of course.
+And there are actually lying
+a lot of research behind,
+or you can say information gathering
+behind these kinds of the
+spear phishing attacks,
+where the attackers really do
+a lot of information gathering
+around the company and the people in there
+to make these phishing attacks
+as legitimate looking as possible, so.
+- Okay, so it's the
+opposite of the typos...
+- Yeah that is the opposite
+of the typos, yes, yes.
+- And we started this
+conversation talking about
+the rise in ransomware,
+you mentioned as one of
+the areas of threats.
+Just in terms of your take
+on this kind of slightly,
+maybe controversial or questionable area.
+There's always the question
+when you're under attack
+as a company, being asked to pay a ransom,
+the money is probably not
+going to be going to good use.
+What's your take on this situation?
+- The approach should be, in my opinion,
+that you invest heavily into preventing
+the situation for occurring
+in the first place,
+and making sure that if you
+are hit, when you're hit,
+that it has the minimum
+amount of damage it can do.
+And there are procedures,
+there are best practices
+in place for that.
+The problem is that of
+course it cost money.
+It cost a lot of money to have
+these kinds of plans,
+disaster recovery plans,
+business continuity plans,
+and all these kinds of how to
+react when disaster hits you.
+It cost a lot of money.
+And, it is easy to cut on that budget
+and say, ah, it probably
+works well, okay let's see,
+because you don't get immediate,
+you can say return of investment
+on money spent on security.
+You only get it when you
+are attacked, of course.
+So that would be my approach to this.
+And also because when organizations
+are not properly secured
+and do not probably have these plans
+to limit the damage done,
+and ideally prevent it,
+it is also just encouraging
+these criminal guys
+to do more ransomware attacks.
+Because when there is a market
+for criminal activities,
+of course it will continue to be there.
+So, we won't get this solved until
+companies, organizations actually make it
+a bad business to be
+a ransomware attacker.
+- Prevention is crucial.
+- Prevention is the best
+way to do this, yeah.
+- Carsten, that's all we have time for.
+Thank you very much for joining me today.
+- Okay, thank you for having
+me, it has been a pleasure.
+Thank you very much.

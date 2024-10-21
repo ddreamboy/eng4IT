@@ -1,0 +1,723 @@
+a portion of this video is sponsored by
+discover data science powered by wiley
+more on them in just a moment
+in this video i'm going to show you how
+you could build your first machine
+learning model in python and we're
+starting right now
+so we're going to build our first
+machine learning model in python and
+we're going to do that using the
+scikit-learn library and the coding
+environment that we're going to use is
+going to be google colab it's free and
+it's quite powerful and so let's fire it
+up
+so typically when i create projects on
+google codelab one of the first thing
+that i would do is i would give the
+notebook a name
+so we're going to give it a name of
+first project and the next thing is i
+like to
+add documentation or text to the
+notebook so i'll add a text cell here
+and move it up
+or you can also adjust the location of
+it by using the down button here and
+then i'll double click here and i'll
+click on this button which is the
+equivalence of a hash symbol which will
+give the text a heading one if you have
+two of it it will be a hitting two so
+the great thing about using headings is
+that it allows you to neatly organize
+your jupyter notebooks so i'll show you
+so here we're also going to make the
+text bold
+my first ml project
+and we're going to use two hash symbol
+or you could click this button twice and
+then i'll also make it bold
+so typically we're going to start the
+project by loading in a data set so
+let's find a data set to analyze
+and for that we're going to the github
+of data professor
+and if you scroll down
+one of the pinned repository will be
+called data click on it
+and then there's a lot of data sets here
+that i have compiled over the years as a
+content creator
+so a reasonably
+simple
+and unique data set that i would like to
+use here is the delani data set and i
+think it's this one let me have a look
+okay so this is a data set of the
+solubility of molecules and they are
+important in the fact that they are
+crucial for biologists and chemists in
+determining whether a molecule is
+soluble in water or solvent and whether
+they will be good drug candidates and so
+let's have a look here you can see that
+the data set here is in the format of a
+csv and essentially it is a comma
+separated value file so if you click on
+the raw link here
+you're going to see the native file let
+me zoom in
+and you're going to see that the first
+row will comprise of the names of the
+columns and each word that you see here
+is the name of the column and it
+represents a single cell and then you
+have the comma to separate it and
+therefore the first word here and the
+second word here and the third word and
+etc are separated by commas therefore
+hence they are called comma separated
+values because the comma will separate
+the values and so here how many columns
+do we have we have one two three four
+five so we have five columns and then we
+have correspondingly from lines two
+until the end of the file they represent
+our data sets
+and so typically what i like to do is i
+normally will put the y variable or the
+dependent variable or you could also
+call it the output variable or the y
+variable so there are so many names for
+it and so they are the variable that you
+want to predict as a function of the x
+variables which are the ones here that
+are highlighted so you might be familiar
+with the equation of y equals to
+f of x right
+so y is the last column here the y
+variable equals to the function of x so
+we have several x here so it is a
+multivariate analysis okay so what we
+want to do is we're going to import this
+particular data set so i'll click here
+on the raw link and then i'll click here
+in the address bar right click and click
+on copy and now we're going to read in
+the data set into the jupyter notebook
+so the python library that we're going
+to use in order to do that is called
+pandas and so we're going to import it
+as follows import pandas as pd so pd is
+sort of a alias for the pandas library
+so from here on we're going to call
+pandas as pd as mentioned here and then
+we're going to read in the data set in
+the csv format and then we're going to
+assign it to a variable called df and df
+is an acronym for a data frame so let's
+do it we're going to type in pd because
+we want to use pandas and then we're
+going to use the function from pandas
+library called read csv and then ask the
+input argument which is inside the
+parenthesis we're going to type in the
+address of the file or you could also
+type in the file name so you can see
+here that we could directly within the
+data set from the url that we had just
+copied from github and so let's do it
+and then once read in we're going to
+print it out by typing in df and i'm
+going to hit on the play button here to
+run the cell and so because it is just
+loading you're going to see that it's
+connecting so it's going to take a short
+moment it's initializing and now it's
+connected and now we're ready now you
+can see the ram and the disk that are
+assigned to this particular cloud
+computing unit that we have here in the
+notebook
+all right and so once you have run the
+cell you're going to see the output
+which is right here which you could also
+close if you don't want to see it again
+or you could play it again to display it
+again
+so we're going to see the contents of
+the csv file in the tabular format here
+you're going to see here that the first
+column here that you see is the index
+number so officially it's not a column
+so it is the index name and here you're
+going to see the columns moloch p mo
+weight num rotatable bonds aromatic
+proportion so these four variables
+represent the x variables and so when we
+build a machine learning model to
+predict the y variable or the log s and
+therefore log s is equal to the function
+of all of the x variables here so in
+other words we're going to use the four
+variables here to make a prediction on
+the log s variable okay and so the next
+thing that we want to do here now is
+that we want to split the data frame
+into the x and into the y and so let's
+do the most simplest thing is to obtain
+the y variable so let me show you i'll
+create some text cell i'll make it both
+data preparation we have here the first
+level here one hash symbol we have here
+two hash symbol this is let's make it a
+two hat symbol let's make this three
+because we want it to be a sub section
+of this one and so we're going to call
+this data split data separation or data
+separation as x and y
+okay and so we're going to create the y
+and we're going to type in df and the
+name of the last column here is log s so
+that's how we're going to get the y and
+let's see okay and these are the y log s
+and now we want to get only the x
+variables so we want to remove d log s
+so we're going to do that type in x
+equals to d f dot drop parenthesis and
+then we're going to see we want to draw
+log s and we want to have it axis equals
+to 1 because x is equal to 1 will allow
+the drop function to work with the data
+as column mode however if you use x is
+equal to 0 it will work it in the row
+mode let's see if that's correct
+it is correct you see that the log s now
+gone and that we have four columns here
+and prior to that we have five columns
+so the number of rows remain the same at
+1144
+so now we have x and y in the separated
+form so the next thing that we want to
+do is we're going to split the data set
+we're going to split it as the training
+set and the testing set so let's do it
+so remember how many
+we need we need three hash symbols here
+so we're going to add text cell click it
+three times and then type data splitting
+and we're gonna use the scikit-learn
+package for that so you want to type in
+from sklearn dot model underscore
+selection and then you want to import
+the train test split training test split
+and now we're going to type in x train x
+test y train y test equals to train test
+splits x and y and we're going to have
+the test size to be
+0.2 and let me see i want to have the
+random state to be assigned a specific
+number so that every time i run the code
+cell i will get the same data split so
+we're going to have random state equals
+to let's say 100 and now we're going to
+run it so we should now have four new
+variables here
+and let's have a look at the x screen
+and we see that we have 915 rows and
+four columns let's have a look at x test
+we have 229 rows and also four columns
+so x tests or x string will come from
+the x variable
+so we started out with 1144
+and so 80 of thousand one forty four is
+nine hundred and fifteen and twenty
+percent of one thousand one hundred
+forty four
+is two hundred and twenty nine and so
+the training set here will have eighty
+percent of the data and the x test here
+or the test set will have 20 of the data
+and i've actually written a blog post
+about this particular topic of building
+your machine learning model in python
+using scikit
+and i've drawn several illustrations
+explaining about the data split so let
+me go and let me show you and it's this
+article how to build a machine learning
+model a visual guide to learning data
+science so here we have the x and y that
+i mentioned already and i've color coded
+here as orange and pink for the x and y
+respectively scroll down and here here's
+the data split so here you have the
+initial data set and then you perform
+data splitting where eighty percent of
+your data will go into a container that
+you call the training set and then the
+remainder or the twenty percent will go
+to a container that you call it the
+testing center and the typical ratio is
+80 to 20
+for the training set and the testing set
+so typically we use the training set to
+build a model and then we want to use
+the testing set to serve as sort of a
+unknown data that you want to test
+training set for you want to evaluate
+whether the model that you have built
+using the training set whether it
+performed in a robust manner against an
+unknown data that you simulate using the
+testing set okay
+so before continuing further a quick
+word from our sponsor
+and so a short message from our sponsor
+discover data science powered by wiley
+which is the premier information hub for
+the field of data science with in-depth
+guides on careers degrees and
+industry-leading programming languages
+discover data sciences goal is to
+provide accessible resources
+and materials for prospective students
+and professionals through discover data
+science expert driven articles and
+publications you'll learn more about
+which data science degrees help
+accomplish your professional goals the
+tools and skills that are necessary for
+a successful career in the field which
+career paths appeal to your personal
+interests how to land a job in data
+science and as you know data science
+jobs are rapidly expanding on a global
+scale with a growing need for qualified
+data science professionals it's never
+been a better time to earn your degree
+and pursue a career in this rewarding
+field you can begin your data science
+journey by visiting
+discoverdatascience.org powered by wiley
+or visit the link in the description
+below alright and so let's continue with
+the tutorial okay and now we're going to
+build the model so let me add a text
+cell and i'll add here to be two hash
+we'll make it bold let's call it model
+building
+and here we're gonna add another one
+we're gonna say linear regression
+let's have it as three hash
+we have two here we have three here so
+we have it in a hierarchical form so if
+you click here you're going to see the
+table of content of your code and so the
+benefit of organizing your text cells in
+hierarchical form is that you could see
+the table of contents here and then you
+could click through the various sections
+so actually instead of making load data
+having two hash symbol i'm gonna make it
+into having one so it's gonna be the
+same as the title and then you're gonna
+see that this one moved to the left a
+bit and now we're gonna make uh data
+preparation to be one as well one hash
+we're gonna make data modeling to be one
+hash like that and now we're gonna make
+data separation to be
+two
+data splitting to b2
+linear regression to b2
+okay and now it looks good to me okay
+and now we're going to continue by
+populating the code cell underneath the
+linear regression
+so we're going to use scikit-learn from
+sklearn.linear model import linear
+regression so you're going to see here
+that scikit-learn has several functions
+that you could use not only to prepare
+your data set but also to build a
+machine learning model and here we're
+going to build a typical linear
+regression model and now that we have
+imported the function we're going to
+create a variable called lr to stand for
+linear regression we're going to type in
+linear regression function here which
+will be represented by lr and then on
+the next line we're going to run lr dot
+fits which means that we want to train
+the empty linear regression model on the
+following data set which we specify to
+be extreme comma y train and then we run
+it you could click here or what i like
+to do is i like to use the keyboard
+shift enter which is quicker for me and
+the model is built and now that the
+model is built we want to apply this
+particular model to make a prediction so
+let me add the text here so that we
+could annotate it a bit more we could
+say training the model and make it bold
+find the model to make prediction
+and we're going to call it y underscore
+lr underscore train underscore pred so
+we're going to apply the model to make a
+prediction on the training set and the
+prediction to notify that we're going to
+use spread and then to make note of the
+algorithm that we're using to train the
+model we're gonna specify to be what lr
+here and then we're gonna start with the
+y underscore so this naming convention
+will be helpful when we have several
+machine learning algorithms that we want
+to try out and also whether our
+prediction is made on the training set
+or the testing set so type in
+lr.predict and then i'm going to specify
+xtrain to be the data because we want to
+make the prediction here on the x strain
+so essentially we're going to do the
+recall it's going to be making
+prediction on the original data set that
+it has been trained on and so that will
+allow us to evaluate the performance of
+the algorithm so here we're going to
+call it y underscore lr underscore test
+underscore thread equals lr.predicts and
+as you've guessed why underscore test
+let's do it let's print out the results
+y underscore lr train thread y
+underscore lr test spread
+actually let's just make it like that
+okay so these are all of the predictions
+have a look here
+so these represents the 80 of the data
+and there you go the remainder 20
+has been predicted and
+we have the predicted value
+and the next part here is we're going to
+compare the predicted value with the
+original value or the actual value and
+we're going to call the new section here
+to be model performance
+we're going to say evaluate model
+performance
+because we want to compare x strain here
+no not not x string y train with the
+here ylr train so you're going to notice
+that they are the actual value and the
+predicted value
+okay so in just a moment i'm going to
+show you a scatter plot of these two
+values and if they lined up in a
+diagonal trend line and see whether they
+have high dispersion or low dispersion
+so if the dispersion is low we will
+expect that the performance will be good
+okay and so now that we see the data
+that we are going to use we're now going
+to actually perform the model evaluation
+let me delete it here first lead delete
+add the code cell and we're going to
+type in from
+sklearn.metric import mean underscore
+squared underscore error and we're gonna
+use the r2 score function lr underscore
+train mean squared error equals to mean
+squared error function y train
+underscore y now train thread and so
+these are the two variables that we have
+taken a look just a moment ago and now
+we're going to calculate the mean
+squared error we're going to calculate
+the squared correlation coefficient
+using the r2 score function y train and
+you guessed ylr train thread
+and so these two blocks are for the
+training set now we're going to do the
+same for the testing set mean squared
+error one test r underscore test red lr
+test number two equals r2 or and we have
+y test and the ylr test underscore print
+run it let's run values here
+okay they're reasonably similar
+performance here so we could tidy it up
+a bit by saying the lr mse and then we
+say training or to train equal or colon
+print and then we're going to have this
+one here
+we're gonna reuse it r2 that will be our
+training r2 okay here and now we're
+going to turn this to be test
+test
+this would be test this would be test
+okay
+there you go so instead of having four
+of these we're going to delete them so
+you could highlight multiple cells just
+by highlighting it and then you could
+click on either you want to move it or
+in this case i'm going to delete them
+okay so we see all of it at a glance
+here however we could tidy up this
+particular layout a bit more let me show
+you lr results and then we're going to
+create a pandas data frame we're going
+to call this linear regression lr i mean
+mse
+lr test
+mse lr test underscore r2 and then we're
+going to transpose it
+and let's have a look
+it looks like that and now we need to
+change the column names here zero one
+two three four so what we want to do
+here lr results dot columns and we're
+gonna rename it we're gonna call the
+first column to be method second column
+to be training mse
+and then we have training our square
+and then we have
+test
+mse
+and then we have test
+r square
+run it
+there you go it looks much cleaner much
+cleaner than this in a tabular form and
+so the great thing about having it in a
+pandas data frame like this is that if
+you evaluate more and more machine
+learning models like random forest
+k-nearest neighbor support machine
+neural network then you're going to have
+a data frame that will allow you to
+easily compare you could also sort by
+column the performance and that will
+help you to evaluate which one was the
+best so here you have already built a
+linear regression model and we're gonna
+try out another one which is the random
+forest
+see
+we have two
+hash symbol here
+so we're going to
+add a text cell
+add two
+and then we're going to call it random
+forest
+random forest
+and then you can see it here but notice
+that you don't see the bold text because
+it needs to be in a hash symbol which
+will give it a heading one heading two
+heading three you know like the
+hierarchical
+ordering so if you want this to appear
+here then we need to add more so this is
+two then we need to make three here add
+three and you're gonna notice it appears
+here at three
+it might be good because you could also
+you know hop around the notebook like
+this you know click on the various topic
+of your choice and then you could
+skim through your jubilee notebook and
+also the great thing is that you could
+take a look at your table of content
+without you know scrolling up and down
+to see what's the name of the cell
+because sometimes your output might be
+quite long here and it might take some
+time right but it'll be much quicker to
+just navigate by clicking on the
+particular link so we can see here that
+we have training the model here so we
+could just add section called training
+the model training the model and then
+let's just add the headings and then
+applying the model to make a prediction
+then evaluate model performance so we
+could move this up a bit so we're going
+to train the model using the random
+forest algorithm so from sklearn dots
+ensemble import random forest regressor
+so a pointy note here is that this
+particular tutorial video makes use of
+regressor because we're building
+regression models and it is because the
+y variable which is called log s let me
+show you log s right here it's a
+quantitative value so if the y variable
+is quantitative we're going to build a
+regression model whereas if it is
+categorical then we're going to build a
+classification model okay so in this
+tutorial the log f is quantitative
+therefore we built the regression model
+because random forest here has two
+versions random force regressor and
+random first classifier and here we're
+using the regressor so we're going to
+create a rf variable to house the random
+forest algorithm and we're going to
+specify some of the parameters for the
+model here maximum depth of 2 and the
+random state of what about 100 because
+in the prior random state we used 100
+and now we're going to train the model
+so we're going to type in rf fits and
+then we're going to use xtrain and y
+train and then we run it to train the
+model and the model is trained we're now
+going to make the prediction in here so
+actually we could just copy the code
+cell above here
+scroll down
+and we're going to change this to be rf
+rf lr to be rf part f and now it looks
+correct to me and we're going to run it
+okay
+and now we're going to do the model
+performance evaluation
+i'm going to copy the code here
+paste it we're going to use the mean
+squared error and we're going to use the
+r2 score and here instead of lr we're
+going to replace that to be rf okay so
+replace all of the lr to be rf and be
+mindful maybe you might type in wrong
+like me um just a moment ago to be fr so
+our f here will be r f now r here will
+be r f r f and r did i say r f just a
+moment ago i meant to say lr and now
+it's rfk let's run it and let's copy the
+code here which we use to make the table
+and we're going to change this to brf
+again and this will be random for rest
+rf
+and here r f f show the table okay and
+now we have two tables we have the
+linear regression table and we have the
+random first table so why don't we
+combine the two tables together okay let
+me create another level see what level
+is this random for us with the two hash
+so one two model comparison and now
+we're gonna compare it so we're gonna
+combine the two results table into one
+and let me see df models equal
+pd.concats
+and then i'm going to specify the name
+of lr results and rf results see do i
+have x equals to zero because i want to
+combine it in a worldwide manner let me
+try if it works all right it worked yeah
+so x is equal to zero if you want to
+combine in a row-wise manner whereas if
+you use axis one it will be in a
+column-wise manner so here we're
+stacking them on top of one another okay
+so you can see now that the two are in
+the same table but then the index number
+is a bit off so we need to reindex that
+so let me see if it's as simple as doing
+this index
+okay but it also added a new column here
+we just say draw it true oh and now it
+worked we could have also added this at
+the back of here one again and the
+number is correct okay but i'm just
+going to separate it so that it looks a
+bit more tidy and you could see it but
+you know how to make it into a wine
+liner you could just copy here and paste
+it at the end here so here you can see
+that we have already compared linear
+regression model and the random force
+model let's have a look at the
+scikit-learn okay and if you click here
+regression and so here you could find
+other regression model that you like and
+you could use it to build your own in
+the colette notebook here and then you
+could then add the resulting performance
+into the data frame here to make your
+comparison and so now we're going to
+perform data visualization to take the
+predicted value and the actual value and
+make a scatter plot let's do it let's
+say data visualization of prediction
+results and we're going to make use of
+the matplotlib library so we're going to
+import matplotlib dot pi plot as plt
+let's say plt
+scatter we're going to assign to the x
+axis y train and to the y axis be l of
+train thread and let's make plots okay
+this is our first attempt
+let's make it a bit lighter you could
+adjust the darkness of the samples that
+you see here that are represented by the
+circles using the alpha option we're
+making alpha to be 0.3 so that regions
+that are highly overlapping will be a
+bit darker whereas those that are not
+overlapping will be lighter color and
+you're going to see that the x and y
+axis is not yet labeled we're going to
+do that plt y label predicted log f f c
+f label experimental s okay now we have
+the labels here why don't we make it
+have plain width and height make fixed
+size to be five and five okay why don't
+we make the dots here to be another
+color the color option and we're going
+to use color green and what about a
+trend line let's add a trendline for
+that we're going to use numpy get the
+fidget line creating a z variable np dot
+polyfit and then the y train and then lr
+train brad p equals z
+then we're going to color to it
+60.
+okay there we go so we added this red
+line as trendline that are fitted with
+the data here
+so congratulations you built your first
+machine learning model in python using
+the scikit-learn library so you can see
+how easy it is now to build models in
+python particularly for your tabular
+data sets and so please feel free to
+build more models and you could tweak
+the learning parameters and as
+i have shown you this api documentation
+from scikit-learn you could go through
+the documentation you could click on an
+algorithm that you're interested in read
+about it and look at some of the
+parameters that it allows you to adjust
+so give it some try let me know in the
+comments down below what models that you
+are building and have fun
+thank you for watching until the end of
+the video if you reach this far
+drop a snake emoji so that i know that
+you're the real one and while you're at
+it please smash the like button
+subscribe if you haven't already make
+sure to turn on notifications to be
+notified of the next video and as always
+the best way to learn data science is to
+do data science and please enjoy the
+journey

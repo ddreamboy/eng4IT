@@ -1,0 +1,357 @@
+you know how your phone can actually
+have a bunch of different applications
+there's facebook and instagram and gmail
+and youtube they're basically all
+applications that run code that was
+created by the company so that you could
+interact with their company
+well a dapp or a decentralized
+application
+is very similar in how it works except
+instead of reporting back to facebook
+servers or tick tock servers
+this app reports back to the blockchain
+you're simply interacting with the
+blockchain through the application
+welcome the whiteboard crypto the number
+one youtube channel for crypto education
+and here we explain topics of the
+cryptocurrency world using analogies
+stories and examples so that you can
+easily understand them in this video we
+are going to explain
+exactly what a dapp or decentralized
+application is
+how they work and why they might hold
+the key to the future of the technology
+first we're going to go over some of the
+benefits of dapps and then we're going
+to cover the different types of them
+including a bunch of specific examples
+the first thing you need to know is that
+dapps can only be built
+on smart contract networks this means a
+blockchain like bitcoin
+cannot utilize dapps bitcoin was
+designed to only allow the sending of
+its native coin
+ethereum however can utilize something
+called smart contracts which is code
+that makes up a program so that it can
+be ran
+to do more complicated things you should
+check out our video on smart contracts
+so that you're not confused throughout
+this video
+but in short they allow two people to
+make an agreement written in code
+so that they don't have to trust a third
+party to follow through they can simply
+just trust the code
+another benefit is that since the code
+is out there to be run
+it is what we call open source which
+means anyone can look at the code
+this allows a lot more trust to be given
+to the application
+we can't really look at how facebook
+recommends us friends to interact with
+or how google knows what we ate for
+dinner
+but with any smart contract we can
+actually look at the code
+and see how it works this is a big
+benefit over centralized applications
+next dapps are also censorship resistant
+and this is a fancy way of saying they
+don't have to answer to governments or
+corporations or even specific people
+if the smart contract is coded to do
+something and it's triggered
+nobody can stop it naturally this is
+good and bad
+but it's really important for financial
+applications this way nobody can control
+your money
+in history governments that have done a
+lot of bad things
+have had the control of their citizens
+money there have also been cases where
+facebook or twitter can actually ban
+or censor certain people based on their
+views or opinions
+a decentralized application will not
+allow this unless it's written
+to another big benefit of decentralized
+applications is that they will
+essentially
+never go offline now there's been times
+where i've actually seen facebook or
+even youtube down
+maybe their servers have a bug or
+there's an outage or they simply just do
+not work it's
+usually for a very short period of time
+because there's a lot of money involved
+but technically the government could
+come in and just shut them down since
+dapps run
+on the blockchain they will actually
+never go down because they are run by
+hundreds of thousands of computers
+all around the world it would be
+infeasible to turn them all off if not
+it's impossible
+so now that you know what makes dapps so
+cool let's get into some examples of
+them
+first off let's start off with financial
+dapps
+there are actually many decentralized
+applications that provide a way for
+people to invest in something called
+decentralized finance decentralized
+finance
+or defy is a new monetary protocol that
+uses blockchain to allow investors to do
+new things
+and even some old things with their
+money with a ton of new benefits
+let's go over some of the ways adapt may
+use your money number one
+borrowing and lending so ave is a
+platform that allows a user to deposit
+their ethereum or matic tokens to
+certain smart contracts whenever you
+deposit these coins and tokens
+you can actually receive an interest
+rate on them allowing you to basically
+invest with them
+ave also lets you borrow tokens
+basically if you have enough collateral
+already deposited so without going too
+much in depth
+this allows you to borrow at different
+interest rates and even create
+specific margin positions if you want to
+learn more about ave we've actually
+created a specific video over this topic
+number two is providing liquidity so
+providing liquidity
+is actually a very complicated idea but
+we're going to make it simple
+in short there is not much money in the
+tokens out there to trade
+so investors can come along buy these
+tokens
+and then invest them in what is called a
+liquidity pool which allows other people
+to trade back and forth using their
+tokens
+the traders pay a small fee that allow
+the investors to earn a return for their
+investment
+it's a win-win situation and number
+three are
+exchanges now as i mentioned allowing
+traders to find a way to actually buy
+and sell their tokens is one of the
+issues in the decentralized finance
+world
+exchanges are decentralized applications
+that allow traders to take some of their
+tokens
+and trade them for another token usually
+with really low fees
+almost instantaneously and without
+needing any background checks or
+identification verification
+that was a mouthful but what it means is
+that you can sell a million dollars of
+ethereum
+without anyone blinking an eye or asking
+any questions by the way these exchanges
+are actually called dexes which stands
+for decentralized exchange
+next up on the menu we have game dapps
+now of course there's going to be games
+i mean programmers are the ones creating
+these daps so they're going to find a
+way to gamify the space
+number one is cryptokitties so
+cryptokitties is a decentralized
+application
+that allow you to buy these little cute
+kittens technically what you are buying
+is the nft data of rights to that
+certain token
+that represents the kitty however the
+fun part of this game
+is that you can actually collect a bunch
+of these kittens and even breed them to
+create more kittens
+in the community the older generation
+kittens are usually the most valuable
+and you can actually sell them for a
+profit or maybe sometimes a loss
+if you play the game long enough even
+more so you can actually rent out your
+kitten to breed with someone else's
+kitten
+as a strange form of passive income on
+the blockchain
+number two is something called zed run
+zed is technically a gambling
+application since you buy nfts that
+represent
+racing horses and then race them every
+horse has specific skills and a point
+system
+also every race is recorded on the
+blockchain so you can see
+all of the races including the races
+your horses have won or lost in
+this game actually went viral for a
+while because it combined the
+psychological pulls of gambling
+with the virality of a blockchain game
+number three
+is basically gambling so just like zed
+is technically a gambling app
+there is an absolute massive list of
+blockchain gambling websites out there
+that are technically
+decentralized applications there are
+daps that allow you to play
+games like poker slots roulette even
+simpler games like
+dice rolling or coin tossing in fact you
+can actually code these applications
+so that the house always wins even if
+it's by one percent but people love
+playing these games
+our next category is tracking apps so
+there are actually many
+applications out there that read smart
+contract data
+and information from the blockchain to
+display it to you technically these are
+decentralized applications but they're
+usually centralized and hosted on a
+single web server
+and in most cases don't require the
+blockchain specific code to work
+however they do read the data from the
+blockchain so we thought they deserved a
+spot on this list so zapify is actually
+a website that collects information
+about wallets that you have
+and the displays it all on one page not
+only will it look at all the major daps
+out there and find out how much money or
+coins you have
+it'll do it for many different networks
+as well zapperfy is one of my favorites
+because it's free to use and i can
+actually see
+a dashboard of my entire blockchain
+portfolio in one place
+now you should know there are many
+different applications like zapify but
+we thought we'd share the one that we
+use
+the next category is marketplaces number
+one
+is cryptokitties again even though we
+put cryptokitties in the game category
+it deserves its own spot in the
+marketplace category
+cryptokitties has proven themselves to
+be an asset that people went crazy over
+in the last few years the price of some
+of these cryptokitties has skyrocketed
+and their dap that allows you to buy and
+sell these nft kitties is paving the
+ground
+for mass adoption number two is wearable
+so wearable and
+air nfts are two marketplaces for other
+nfts
+that allow you to buy sell and even
+create new nft art that you specifically
+can sell
+these platforms or applications
+facilitate the process
+and allow the interaction with the
+blockchain so an everyday person can use
+it
+lastly as an example of a marketplace
+app we have bedali
+bedali is a decentralized application
+that allows you to buy things
+using your crypto one of their main
+products is basically
+gift cards which they can actually
+deliver anonymously and very quickly
+remember whenever you buy stuff with
+crypto in the united states at least
+it is currently reported as a sale and
+because of that you have to pay
+taxes although bedali does not report to
+the irs so the liability is in your
+hands
+you may see what we're saying here
+anyways before we get ourselves into
+trouble
+let's move on to the next category which
+is educational
+so this is still an early announcement
+but we are actually currently developing
+our website into a decentralized
+application where you can complete
+quizzes
+watch videos read articles and gain xp
+through your metamask wallet
+once you have enough experience you can
+then mint limited edition nfts through
+our platform if you're interested leave
+a comment if you want to be an early
+tester
+one last dap that doesn't really fit
+into any of these categories is
+something called
+ens ens stands for ethereum name
+service and we actually have an entire
+video explaining how it works
+in short ens turns those long ethereum
+addresses
+into any address that you want for
+example we actually own
+whiteboardcrypto.eth
+so if you send any of your coins or
+tokens there it'll go to
+our wallet now as we in this video you
+need to know that the categories that we
+listed are just the major ones we wanted
+to share
+this space is incredibly new and there
+are new dapps being built
+every day in fact blockchain developers
+are one of the highest paying jobs this
+year
+simply because there is so much money
+being poured into the space
+and there's a lack of people knowing how
+to code it the sky's the limit and we
+truly believe this space has a lot of
+potential
+for positive growth maybe some of the
+best developers that will ever be
+may use our videos as resources to learn
+and be inspired
+at least that's our goal thank you guys
+so much for watching this video
+we hope that you enjoyed it we really
+hope that you learned something
+and most of all as always we hope to see
+you in the next video

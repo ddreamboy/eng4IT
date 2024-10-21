@@ -1,0 +1,188 @@
+how can you practice good cyber security
+in your own life here's five tips for
+personal cyber security that you can
+implement yourself
+everything you do today leaves an
+electronic signature that's just a fact
+of modern life but there are some things
+that you can do yourself to reduce the
+risk of your own personal security
+breach and reduce the severity if it
+does happen to you number one is
+actually pretty simple consider renaming
+your phone you might actually be giving
+your name and phone model number to
+every stranger you meet cyber security
+compliments physical security allowing
+your phone's model number as its name is
+a great way of letting a street criminal
+know who to rob first and giving your
+phone your own name might give a
+criminal a couple of extra seconds of
+advantage when they call out your name
+and you wonder for a few seconds how you
+know this person so instead of calling
+your phone sarah's iphone 12 or jim's
+pixel 5 just give your phone a generic
+name my phone just says phone the second
+step is a vpn so let's take a field trip
+now this part of the video is sponsored
+by atlas vpn but this isn't one of those
+things where i'm gonna talk about how
+you can stream movies from different
+countries now a vpn or a virtual private
+network is a software tool that allows
+you to encrypt your data from your
+computer or your phone all the way up to
+the vpn provider once it gets to the vpn
+provider the vpn provider can actually
+hide your location i'm sure you've seen
+plenty of youtube commercials where they
+go on about watching streaming video
+services in different countries and such
+and that is one advantage of the vpn but
+here's another advantage okay behind me
+is a famous coffee shop and they've been
+shut down for months now so why is their
+wi-fi still on
+okay check this out
+one of my options for connecting to
+wi-fi is coffee shop free wi-fi secured
+oh how can i connect to this coffee shop
+wi-fi if the place has been shut down
+for months well that's because it's me i
+have something called a pineapple router
+in this bag right here and this
+pineapple router is sucking down
+information from people who want to
+connect to it
+and you can name it anything you want
+and that means that i'm sucking down
+data from everybody who gets off of the
+silver spring metro stop if they try
+connecting to this route so i'm sure you
+can see why you might want to encrypt
+from your device to the public internet
+so atlas vpn is offering a heck of a
+deal for subscribers to my channel if
+you click on the link in the description
+below you can actually get atlas vpn for
+three years for
+1.99 a month that's that's a heck of a
+deal it's normally like 10 bucks
+so it's pretty darn easy to trick
+someone into thinking that they have a
+valid wi-fi connection and something
+like atlas vpn creates a tunnel between
+your device
+and the public internet that way bad
+guys and hackers and the government
+can't see your data
+and if you don't use a laptop out in
+public atlas vpn is available for iphone
+and android it's even available for fire
+stick so again atlas vpn is having a
+sale click on the link in the
+description below you can get atlas vpn
+for three years for only 1.99 a month
+that's down from the normal price of 10
+bucks a month totally worth it protect
+your computer protect your phone number
+three don't reuse passwords your
+password is only as good as the least
+secure website that you signed up for so
+let's say you do all of your online
+banking at a major bank you can be
+pretty sure that bank's cyber security
+is probably pretty darn good but then
+you sign up for a mobile game or one of
+those free to play web games and you use
+the same username and password that
+you've used for your bank while the game
+might not have the same cyber security
+as the bank if hackers break into the
+game and steal your username and
+password they might try that username
+and password at the bank and now hackers
+have access to your financial data now
+you might think your passwords are all
+encrypted but they're kind of not
+they're not encrypted they're hashed now
+a hash is a one-way mathematical
+function that takes your plain text
+password and turns it into a jumbo of
+letters and numbers now once you send
+something through this mathematical hash
+you can't reverse it it's like turning a
+potato into a hash brown the hash brown
+can never again be a potato now when you
+first sign up for a website your
+password is hashed and put in the
+database and then when you log in that
+password is dynamically hashed and
+compared to the hash password that's on
+file so it's actually possible for you
+to build a table of every single
+possible word in its equivalent hash
+this is called a rainbow table this
+means that if you can steal a list of
+hashed passwords you can actually
+reverse look up those hash passwords and
+figure out what someone might use for
+their normal plain text password now
+there is a way for websites to make your
+password less obvious when it's hashed
+it's called salting but you have no idea
+whether the website you're signing up
+for is doing that or not the fourth
+thing you can do is something called two
+form factor authentication not all
+companies offer this but if they do
+offer it you should take advantage of it
+now when i log into my bank i get an
+option to generate a code that can
+either be texted to me i can get a call
+i can get a push notification on my
+bank's app i can get an email i can call
+them now having to go through that
+second factor might be a bit of a pain
+but it is totally worth it because it
+makes your access far more secure since
+that second factor is only triggered
+when someone tries to access your
+account it lets you know if someone who
+is unauthorized is trying to access your
+account and if the website lets you
+choose make sure the code is sent to an
+app instead of over text message or
+email since text message and email can
+be insecure the fifth tip is to create a
+machine of high trust this means getting
+a separate machine and a separate email
+just for financial transactions so this
+is a chromebook and i got it for like
+200 bucks off of amazon this is the only
+thing i access my bank or financial
+information on if i transfer money i do
+it on the chromebook if i trade a stock
+i do it on the chromebook if i pay a
+credit card i do it on the chromebook i
+also have a special email that i only
+use for financial institutions you can
+do the same thing just by getting a free
+gmail or yahoo mail account and calling
+it
+yourname.lastname.bank or whatever this
+helps prevent phishing attacks because
+it reduces impulsivity only a couple of
+companies have that email address and
+you only check that email on that
+physical segregated device so those are
+the five tips if you take away anything
+i want you to understand that cyber
+security is always a trade-off between
+security and convenience but a little
+bit of added inconvenience can go a long
+way to keep you secure thank you for
+watching
+[Music]

@@ -1,0 +1,61 @@
+hey everyone welcome back to the channel
+today we're going to learn something
+really useful for anyone getting started
+with JavaScript how to use the if
+statement to control the flow of your
+code it's super important and by the end
+of this video you'll have a solid
+understanding of how it works but before
+we dive in don't forget to smash that
+like button and subscribe to the channel
+for more programming tutorials and tips
+now let's get into it let's start with
+the basics the if statement in
+JavaScript allows you to check if a
+condition is true and if it is some code
+will be executed here's a simple example
+to show you what I mean in this case
+we're checking if the age variable is
+greater than or equal to 18 if that's
+true it will print you are eligible to
+vote in the console if not it will skip
+this part entirely pretty
+straightforward right now let's say you
+want to do something when the condition
+is false as well this is where the else
+statement comes in let's tweak our code
+a little here if the age is less than 18
+instead of doing nothing the else block
+will run and print you are not eligible
+to vote it's a great way to handle both
+outcomes but what if you have more than
+two conditions no problem that's where
+elseif comes into play for example let's
+grade a student's score based on
+different conditions with this structure
+it checks the first condition score
+equal 90 and if it's false it moves to
+the next one score 80 and so on if none
+of the conditions are true it runs the
+else block by default you can even nest
+if statements inside each other if you
+need more complex logic let's say we
+want to check both the age and whether
+the person has an ID before allowing
+them to enter a club here the first if
+checks the age and only if that's true
+does the second if run to check if the
+person has an ID if either condition
+fails the appropriate message is
+printed and that's it now you know how
+to use the if else and else if
+statements in JavaScript to control what
+happens in your code based on different
+conditions this is essential for making
+your programs more interactive and
+responsive if this video helped you
+don't forget to give it a thumbs up and
+subscribe to the channel so you don't
+miss out on more programming tutorials
+thanks for watching and I'll see you in
+the next video

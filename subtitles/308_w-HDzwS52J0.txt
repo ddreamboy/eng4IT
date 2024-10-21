@@ -1,0 +1,546 @@
+What are cryptocurrency wallets? ⚡ ...and how do 
+they work? 🤔 As we always discuss together on the  
+channel, it is extremely important to protect 
+our digital asset investments 🔐 by completely  
+owning and controlling them 🔗 using our own 
+cold storage hardware wallets!! 📲 🔑 However,  
+besides finally deciding to take the plunge... 
+opening up an account with a crypto exchange 🏦 and  
+buying our first cryptocurrency 🚀 many people find 
+the idea of setting up their own cryptocurrency  
+wallets 📲 🔑 and transferring their crypto to it 
+incredibly daunting!! 😱 Public keys ❌ private  
+keys ❌ wallet addresses ❌ seed phrases ❌ secret 
+phrases ❌ blockchain ❌ on chain ❌ off chain ❌ gas  
+fees ❌ transaction fees ❌ ...different 
+networks like Bitcoin ₿ versus Ethereum  
+versus Solana... 😕 This new speculative 
+tech is riddled with confusing jargon for  
+newcomers!! 😮 And although it's a great sign that 
+we are extremely early adopters of revolutionary  
+tech with likely insane upside potential 🤑 ...it 
+does take a fairly large investment of time and  
+energy to wrap our heads around how it works!! 💫 
+And lucky for us ☘️ ...by the end of this video,  
+and for some maybe after watching it a few times 
+over ⏮️ ...we will experience that "Eureka!"  
+moment ‼️ ...where we finally understand how 
+crypto wallets work!! 🤗 We're going to break down  
+some important information about cryptocurrency 
+wallet into simple and easy to understand concepts  
+together 😎 Our goal by the end of this video, 
+is that we feel more comfortable transferring  
+our cryptocurrency off of exchanges into our own 
+cryptocurrency wallets for safe keeping 🔗 ...and  
+also explore different ways we can put our 
+new knowledge into practice by doing small  
+transactions between exchanges 🏦 ➜ 📲 and wallets, 
+transferring crypto between different wallets  
+we own 📱 ➜ 📲 ...also we are more confident and 
+prepared for likely the last once in a lifetime  
+opportunity to invest as an early adopter in 
+cryptocurrency and blockchain technology 🤓 ...to  
+achieve generational wealth 💥💰 Because big 
+traditional financial players 🏦 are getting in,  
+under-the-radar 📡 The mainstream media has been 
+misinforming the public about crypto since its  
+inception 🤞 So when the tides inevitably turn 
+and tons of money starts flooding into this new,  
+small asset class 💰🤑 ...we need to make sure we 
+are in a position to reap the rewards of taking  
+the time to watch videos like this ⌚ learning 
+new complex things 🧩 practicing using new complex  
+tech, so in the end we will have truly earned the 
+potential life-changing gains over the next 18 to  
+24 months 💥 By putting in the time, being brave 
+and taking on risk 💪 and being part of something  
+bigger than us... something that will help 
+us build a better future together 🌴 Amazing,  
+so what is a cryptocurrency wallet? 🔒 When we 
+hear the word wallet, we immediately think of  
+the pocket or purse accessories that hold our 
+cash 💵, IDs, credit, and debit cards 💳 However,  
+unlike cash, digital currencies are not stored 
+in a specific location and do not exist in  
+physical form. Instead, cryptocurrencies, account 
+balances, and transactions exist on computers...  
+a network of computers 🖧 using a blockchain 
+or similar technological foundation. So what  
+is blockchain? ⛓️ Blockchain is just a fancy term 
+that describes a running ledger of transactions.  
+Without losing sight of this video, if you would 
+like to learn more about blockchain and why it was  
+developed, you can check out my video guide for 
+beginners by clicking on the link above 🖲️ ⬆ Nice,  
+back to wallets a cryptocurrency wallet has 
+software that creates and stores your private  
+and public Keys interacts with the blockchain 
+monitors your cryptocurrency balances and allows  
+you to send and receive digital assets so to send 
+receive store and monitor your cryptocurrency  
+balances and other digital assets like nfts you 
+need to use a cryptocurrency wallet and what's  
+funny is we shouldn't really use the word wallet 
+when talking about crypto because a wallet in  
+the traditional sense makes us think of our cash 
+actually physically inside of our wallet or our  
+credit cards actually inside of our wallet while 
+a cryptocurrency wallet is more accurately a key  
+to access our phones because our cryptocurrencies 
+and digital assets are not actually inside of our  
+wallets they are on the blockchain which is a 
+running Ledger of transactions distributed all  
+around the world so in reality our crypto is 
+basically assigned to our wallet's private key  
+and our wallet gives us access to the crypto and 
+the ability to view our balances send and receive  
+crypto stake it interact with smart contracts Etc 
+awesome hello I'm cryptocasian in this video we  
+are going to explore how cryptocurrency wallets 
+work the different types of cryptocurrency wallets  
+available on the market and why it's important to 
+use multiple cryptocurrency wallets to diversify  
+the risks associated with investing in new 
+speculative technology let's hit it [Music]  
+please be sure to check out our sponsors I 
+trust Capital Malwarebytes and tangent wallet  
+trade cryptocurrencies tax-free within your own 
+individual retirement account or IRA with I trust  
+Capital if you do not use any form of malware 
+protection on your computer or devices you are  
+literally insane so get a free malware scan today 
+with Malwarebytes who is also offering us a nice  
+discount for the protection products and services 
+it invests in your very own Cold Storage Hardware  
+wallet like tangent wallet it's the size of 
+a credit card multi-currency multi-chain and  
+it's by far the easiest Hardware wallet to set 
+up and use on the market right now while also  
+being the most cost effective like starting at 
+around forty four dollars using the link below  
+with a special discount for us note that since the 
+Ledger Fiasco tantrum has been swamped so orders  
+have been backed up for a few weeks so pre-order 
+one to get your spa in line for the next batch of  
+wallets scroll down and use links below to access 
+the correct and official sites as well as redeem  
+any special offers they have for us so how do 
+cryptocurrency wallets work we are going to go  
+through a very simplified analogy to help us wrap 
+our heads around around how cryptocurrency wallets  
+work together please note this is not exactly how 
+the technology works it's just an analogy so a  
+simplified way to understand how cryptocurrency 
+wallets work is to consider how your traditional  
+online banking applications work imagine your 
+bank is the blockchain your bank account number  
+is the public key your crypto wallet is your 
+online banking app and your online banking app  
+login credentials are your private key so your 
+bank records and tracks all the transactions  
+going to and from your bank account just like the 
+blockchain records and tracks all the transactions  
+going to and from your public key using your 
+online banking app you are able to check the  
+balance of your bank account and send or receive 
+transactions just like a cryptocurrency wallet  
+allows you to check your balances and send or 
+receive crypto however in order to log in to your  
+online banking app you need to first type in your 
+username and password which is like using your  
+private key to access your cryptocurrency wallet a 
+public key is similar to your bank account number  
+in that if you provide anyone with your bank 
+account number they can send you funds keep in  
+mind that public keys are also commonly known as 
+wallet addresses however having your bank account  
+number alone would not allow someone to take funds 
+from your account this is also how a public key  
+works people can send cryptocurrency to you using 
+your public key or public wallet address but they  
+cannot take funds from you using your public key 
+on the flip side giving your online banking app  
+login credentials to someone would allow them to 
+send funds from your bank account to somewhere  
+else this is similar to a private key if you give 
+someone your private key they can access your  
+cryptocurrency and send it somewhere else unlike 
+traditional banking if you give away your private  
+key and your funds go missing you will likely 
+not be able to recover them this is why it's  
+so important to keep your private key private and 
+before sending and receiving cryptocurr currency  
+you must first make sure you are sending the same 
+type of currency to a wallet address or public  
+key that supports that particular cryptocurrency 
+for example you can only send Bitcoin to bitcoin  
+addresses and you can only receive ether 
+from either addresses and the simplest way  
+to understand why Bitcoin addresses only work with 
+Bitcoin ether only works on ethereum Solana only  
+works on Solana Etc is to think of them like 
+software applications on Mac versus PC versus  
+Linux or like Apple versus Android so they are 
+just different Tech foundations using different  
+code which is why Apple apps can't be installed on 
+Android devices there has to be an Android version  
+of the app to be supported on Android cool so if 
+you have another person's public key or address  
+you can easily send them some corresponding 
+cryptocurrency and vice versa and when  
+cryptocurrencies are sent or received no actual 
+physical or digital exchange occurs between the  
+wallets remember cryptocurrency wallets interact 
+with the blockchain and the blockchain is where  
+all cryptocurrency transactions are logged and 
+it's also where balances are tracked so just to  
+recap a cryptocurrency wallet has software that 
+interacts with the blockchain stores your public  
+and private Keys monitors your cryptocurrency 
+balances and allows you to send and receive  
+cryptocurrency nice what are the different types 
+of cryptocurrency wallets there are many different  
+types of cryptocurrency wallets to choose from and 
+each of them have their own pros and cons let's  
+break down crypto wallets into two categories 
+hot and cold a hot wallet creates and stores  
+your private Keys online while cold wallets create 
+and store your private Keys offline so examples of  
+hot law include desktop or mobile app software 
+these wallets operate on your computers and cell  
+phones which are connected to the internet so 
+when you set up these wallets your private key is  
+generated on a hot device which just means it's 
+connected to the internet which could be more  
+vulnerable to being compromised especially with 
+AI scamming tactics becoming more sophisticated  
+Etc however by far the least secure way to store 
+large investments in cryptocurrency for the long  
+term is on an exchange why well first of all it's 
+online therefore hot therefore more vulnerable to  
+hacks and on top of it cryptocurrency exchanges 
+are huge targets for hackers since obviously  
+there's a ton of potential crypto that can be 
+stolen with any wallet we manage on our own  
+a hacker has no idea how much potential funds 
+there are to steal while crypto exchanges are  
+a guaranteed Gold Mine of swords and second of 
+all due to lack of transparency and regulation  
+there is an artificial supply of crypto meeting 
+real demand because exchanges lend out crypto  
+you stake infinitely between other people and 
+exchanges which basically means that one ether  
+you are looking at on your account could also be 
+the same either five other people on The Exchange  
+are looking at meaning cryptocurrency exchanges 
+don't actually have all the crypto backed one to  
+one for all of their customers so if there was a 
+massive run on exchanges where everyone wanted to  
+move their Bitcoin and ether to their own wallet 
+there would not be enough to go around like we saw  
+with FTX there are also some bad players out there 
+gambling with our funds we leave on the exchange  
+and can go bust and third of all as we see with 
+coinbase regulatory bodies like the SEC can go  
+after them sue them demonetize them by forcing 
+them to de-list a significant amount of crypto  
+which would destroy their profits which puts 
+them at risk of going under as we've discussed  
+at length on the channel exchanges need to be used 
+as a tool to exchange Fiat for crypto crypto for  
+crypto and crypto to Fiat not for storing crypto 
+Investments we need to be transferring any crypto  
+we want to exchange to them and when we are done 
+transferring our crypto back to our own wallets  
+sweet now let's learn about the safest most ideal 
+way to store significant amounts of cryptocurrency  
+for the long term cold wallets cold wallets are 
+also known as Hardware wallets Hardware wallets  
+are designed to safely create and store your 
+private key offline and when sending receiving or  
+managing funds you will need to use the hardware 
+wallet device and go through more security steps  
+in general which makes your funds less vulnerable 
+to theft by creating and storing private keys  
+with Hardware wallets your funds are safer from 
+hackers and other potential security issues that  
+hot software wallets are more likely to experience 
+so store your cryptocurrency on a hardware wallet  
+is the safest most secure way to manage your 
+funds so if you scroll down to the description  
+area below you can access the correct and official 
+site of my recommended Hardware wallets note there  
+are two important things you need to know about 
+buying a hardware wallet first only buy Hardware  
+wallets from the real manufacturer do not buy used 
+Hardware wallets and do not buy them from other  
+other companies or individuals this is because 
+hackers may buy a hardware wallet tamper with  
+the software and resell the Hacked device to steal 
+your phone and second as with all crypto related  
+activities make sure you double and triple 
+check the URL you are accessing to buy the  
+hardware wallet make sure the address is correct 
+and that it has an SSL or secure sockets layer  
+which uses the https protocol instead of HTTP 
+there are a ton of phishing scams online that  
+will pretend to be the real website you intend 
+to access and if you access a fake website you  
+may lose your funds or receive a hacked wallet so 
+again if you're interested in my recommendations  
+using the links below get you where you want to 
+go safely all while supporting the channel since  
+Ledger's announcement of their recover Services 
+software update to their devices tangent wallet  
+an alternative that never reveals our private key 
+or seed to anyone has been blowing up like I said  
+there is a wait for the next batch of wallets so 
+make sure to get your spa online earlier rather  
+than later it looks like a credit card uses 
+the highest standard of security among crypto  
+wallets known as eal 6 Plus which is a level 
+of protection used by NASA and in passports the  
+source code for tangem's mobile app is all open 
+and available for review on their GitHub which is  
+important for full transparency to ensure there 
+are no backdoors built in and that funds can be  
+accessed if the company shut down for any reason 
+instead of a seed phrase as the only way to back  
+up our crypto wallets backup copies of the wallet 
+are created and used on other tantrum cards that  
+we encrypt with our own unique access code we 
+create breach card also note the pricing for this  
+cryptocurrency Hardware device is much cheaper and 
+affordable than other ones starting at just over  
+forty dollars with free shipping using our promo 
+code this is a plus for any beginners just getting  
+started or anyone who is looking to onboard 
+friends and family into crypto with a simple  
+easy to use secure self-custody wallet so scroll 
+down and use link below to access tangents correct  
+and official site as well as redeem any special 
+offers they have for us cool and we can check out  
+the step-by-step Tanger wallet setup guide to get 
+a better idea about how tangent wallet creates and  
+protects our private Keys differently than Ledger 
+trezor and other wallets that use seed phrases by  
+clicking on the link above since the vast majority 
+of cryptocurrency wallets use seed phrases to back  
+up our wallets and access our phones at large 
+while we wait for the next batch of tangent  
+wallets or wait for whatever Hardware wallet 
+we've chosen to go with like Ledger treasure  
+BC Vault to arrive let's create our own hot wallet 
+together using a mobile app called trust wallet it  
+transfers some crypto to it get ready we are about 
+to have the Eureka moment we've all been waiting  
+for about what happens if your phone dies or if 
+your Hardware wallet breaks or if it's stolen  
+Etc when it uses a seed phrase as backups let's 
+in it how to set up your own crypto wallet in  
+this video we are going to set up the trust wallet 
+together on our mobile device step by step open  
+the app store on your phone and type in trust 
+wallet and click download and install it then  
+open the app tap on create new wallet tap to check 
+the box agreeing to the terms of service next we  
+are going to create a passcode to add an extra 
+layer of security when using the app then confirm  
+the passcode by entering it again and now we are 
+going to back up our secret phrase which is the  
+master key to your wallet and anyone that has it 
+can access your crypto so never share it which is  
+why I recommend backing it up manually versus to 
+your iCloud as it could pose more vulnerabilities  
+if your iCloud is compromised so we are going to 
+tap backup manually on the next screen the app  
+gives us more information stating this secret 
+phrase is the master key to your wallet tap on  
+all check boxes to confirm that you understand the 
+importance of your seed phrase tap the first box  
+that read if I lose my secret phrase my funds will 
+be lost forever tap the second box that reads if  
+I expose or share my secret phrase to anyone my 
+funds can get stolen and tap the third box that  
+reads trust wallet support will never reach out to 
+ask for it then tap continue and here are the 12  
+words you need to write down in order and secure 
+to protect any crypto use into it after these next  
+few steps it will become clear how our crypto is 
+on the blockchain and how private keys or recovery  
+phrases are merely keys to access our funds that 
+are on the blockchain and how anyone with these  
+words can steal all of your funds if you do not 
+properly secure these words these 12 words are  
+the keys to your wallet literally by memorizing 
+these 12 words you can carry access to hundreds  
+and thousands millions and billions of dollars 
+worth of crypto right here in your brain stay  
+tuned for the end of this video when I show you 
+how I can gain access to your funds using these  
+12 words anytime and anywhere but regardless of 
+whether you lose this particular phone or not it's  
+for this reason I do not recommend backing this 
+phrase up to iCloud which is something that could  
+also be hacked I don't recommend ever storing your 
+wallet private key on any device connected to the  
+internet password manager or similar so don't 
+take a screenshot of it or picture the best way  
+is using good old-fashioned pen and paper for now 
+securing it in multiple geographical locations in  
+case of a fire flood or similar in this video 
+we are just doing a simple short-term solution  
+for storing our own crypto together to get it off 
+of exchanges until we can get a hardware wallet  
+so for now like I said I recommend writing 
+your secret phrase down on paper and storing  
+it somewhere extremely secure like a safe or 
+inconspicuous like into your house in a book  
+on a shelf or similar cool next we need to verify 
+the secret phrase by tapping the words to put them  
+next to each other in the correct order and we 
+are done we have officially created our very own  
+self-custody crypto wallet where we can completely 
+own and control our digital assets using the trust  
+wallet we can buy crypto deposit and store nfts 
+and deposit crypto tap deposit now let's say  
+we have some ether we can send to our new trust 
+Wallet tap ethereum and from here we can scan the  
+QR code or copy the address for our first example 
+to show you how easy it is to use tangent wallet  
+we are going to send some ether from tangent 
+wallet to trustwallet so I'm going to tap the  
+copy button to copy our trust ether address then 
+I'm going to open tangem's mobile app and tap scan  
+card then using my physical tangent Hardware 
+Wallet card I'm going to tap it to my phone  
+then enter my access code then tap the card again 
+and here we are at our tangent wallet dashboard  
+I'm going to tap ethereum TAPS in paste The Ether 
+trust wallet address into the address field enter  
+100 worth of ether looks like the network fee to 
+process the transaction is about two dollars make  
+sure everything looks good and tap send to verify 
+the transaction I'm going to enter my access code  
+again tap my tantrum card to my phone and success 
+the transaction has been signed and sent to the  
+blockchain so now if we open our trust Wallet 
+app enter our passcode hear almost instantly on  
+the trust wallet dashboard we see the hundred 
+dollars worth of ether has a wrap amazing next  
+here comes the part that will probably be a 
+lot easier than you think transferring your  
+crypto from The Exchange to your new self-custody 
+mobile wallet for Simplicity I'm going to assume  
+your crypto is on coinbase in this guide however 
+no matter which exchange you use you should be  
+able to log in choose a send function and follow 
+similar steps to move your crypto on your computer  
+or phone log into your Exchange in this guide 
+I'm accessing The coinbase Exchange app on a  
+mobile device on the coinbase mobile app dashboard 
+TAPS in let's say we want to send Bitcoin from The  
+Exchange to our trust wallet so tap Bitcoin and 
+on the Trust app tap Bitcoin to see the QR code or  
+or copy the address in this video we are scanning 
+the QR code like so then tap continue enter the  
+email of Bitcoin to send I always recommend that 
+beginners and seasoned crypto investors alike  
+send a small amount to a new wallet first to make 
+sure everything goes smoothly before sending large  
+amounts in this video we are going to send 100 
+worth tax preview make sure everything looks good  
+the fee will be about 73 cents it'll take about 30 
+minutes to complete the transfer tap send now if  
+you have 2fa setup enter the six digit code from 
+your authenticator app and it's been successfully  
+sent tap done and we can see after a few minutes 
+the Bitcoin has arrived to our trust wallet  
+brilliant here we are we now are in complete 
+control of our Bitcoin and ether where it's  
+stored on the blockchain and we are the only ones 
+with keys to access it rather than it merely being  
+an amorphous pool of Bitcoin controlled by the 
+exchange so secure your secret phrase and repeat  
+these steps to transfer all of your cryptocurrency 
+currency on exchanges you're looking to hold for  
+the long term to your new mobile wallet that 
+is until your Hardware wallet arrives now for  
+the Eureka oh my God I finally get it moment as it 
+relates to secret phrases and access to our crypto  
+let's just say I come across your 12 words and 
+just your 12 words not your phone not your address  
+or passwords or anything that has any connection 
+with you to it at all if I found a piece of paper  
+in the middle of the street with these 12 words 
+and I wanted to take your crypto this is how it  
+can be done you can pretty much use almost any 
+other mobile crypto Wallet app to do this quickly  
+in this example I'm going to download another 
+crypto mobile app called Exodus next I'm going  
+to open the app but instead of choosing to create 
+a wallet I'm going to select I have a wallet and  
+on the restore wallet screen I'm going to select 
+secret phrase and start typing in the 12 words on  
+this paper I randomly found on the street note 
+that while it's like Ledger and trezor create  
+24 words and you can do the same exact thing if I 
+found your 24 word Ledger private key I can do the  
+same exact thing and take all of your funds cool 
+okay so all 12 words are entered and now I'm going  
+to tap continue and restart to restore this wallet 
+after a minute or so we've been notified that  
+the restore was successful in voila here is the 
+hundred dollars of Bitcoin and hundred dollars of  
+ether we sent to our new trust wallet but since we 
+didn't secure our 12 words I was able to download  
+another crypto Wallet app and restore access 
+to it using just the 12 words from here I can  
+easily send the funds elsewhere to another wallet 
+I control and you do not effectively stealing all  
+of your crypto and digital assets that fast and 
+that simple check it out here's the Bitcoin and  
+it's gone and here's the ether and it's also gone 
+the next time we open our trust wallet we set up  
+but did not secure properly we can see our balance 
+is zero that's why it's so important to guard your  
+private key recovery phrase 12 or 24 words 
+whatever you've got and to consider getting a  
+horror wallet that generates a private key offline 
+and stores it offline for maximum security or we  
+can also consider different wallets that do not 
+use seed phrases that can easily be stolen or  
+in some cases we can be socially engineered or 
+tricked by scammers that pretend to be Ledger  
+or similar and try to have us type in our seed 
+phrases into a big website or by having us text  
+them or email them our seed phrase then by similar 
+steps we just went through using the words to  
+drain your wallet wallets that use alternative 
+ways to secure crypto wallet private keys are  
+BC Vault and tangent wallet for example with the 
+tangip wallet the private keys are actually never  
+exposed to anyone ever so if I found your tandem 
+wallet randomly on the street and downloaded the  
+tangent Wallet app and scan the card the the 
+requirement of an access code prevents me from  
+accessing your crypto and sending it elsewhere 
+to steal it at the end of the day with this new  
+speculative technology it's important to 
+diversify where we store our crypto long  
+term by using several different types of wallets 
+so we don't experience a total loss if something  
+happened to Ledger vs trust wallet versus BC Vault 
+or tangent so be sure to scroll down and use the  
+links below to access the corrected official 
+sites for any wallet you're interested in using  
+to secure your crypto Investments awesome if 
+you would like to watch a step-by-step video  
+guide all about tangent wallet check out this 
+video if you would like to learn about more  
+tools like tangent wallet we can add to our defy 
+toolkit before Wall Street and the government  
+tries to restrict our access to crypto check out 
+this video and to get your spot in line for a  
+tangent wallet click on the link on the screen 
+like And subscribe for more be safe out there

@@ -1,0 +1,570 @@
+hey my name is Felipe and welcome to my 
+channel in this video we are going to make  
+an image classifier. Image classification involves 
+classifying an image into different categories and  
+is one of the most important fields in computer 
+vision I'm going to show you how to make an image  
+classifier which is very simple, very robust and 
+it works 100% in Python, I'm going to walk you step  
+by step through the entire process how to prepare 
+the data how to train the classifier and how to  
+test its performance so following the steps of 
+this tutorial you will be able to build a very  
+robust image classifier in only a few minutes 
+so let's get started so this is the process in  
+which we are going to be working today in today's 
+tutorial you can see that this is a four steps  
+process so training this image classifier will 
+take only four steps this will be a very easy  
+and a very straightforward process now let me 
+show you the requirements we are going to use  
+in this project we are going to use scikit learn, 
+scikit image and numpy and the image classifier  
+we're going to use comes from the library scikit 
+learn this is the library which is very popular to  
+solve machine learning related problems and 
+if you want to work with computer vision or with  
+machine learning you will definitely need to be 
+familiar with scikit learn so this will be a very  
+good example this will be a very good opportunity 
+in order to get more familiar with scikit learn  
+now let's start with this project let's start with 
+this tutorial and the first step is preparing the  
+data we are going to use in order to train this 
+image classifier and now let me show you the data  
+we are going to use in today's tutorial this 
+is the data we are going to use you can see we  
+have two different categories the categories are 
+empty or not empty this sounds very strange but  
+let me show you exactly how these two categories 
+look like or how the data in each one of these  
+categories look like and you can see from the not 
+empty category we have something that looks like  
+this so basically we have cars these are images 
+from cars and if I show you... if I show you many  
+many different pictures you can see that in all 
+of them we can see pretty much the same situation  
+it's like a car that's basically the not 
+empty category and then if I show you the empty  
+category this is pretty much an empty something 
+this is pretty much all the images containing  
+empty...ness containing a completely empty... these are 
+completely empty images in some of them there are  
+very small objects but you can see that all of the 
+images are mostly empty and these are... this is  
+how these two categories look like this 
+is how these two categories look like and this  
+data comes from one of my previous videos where 
+I showed you how to create a parking slot detector  
+and counter using python and computer vision in 
+this other video I showed you how to take a video  
+exactly like this... a video from a huge parking 
+lot like this and to make it look like this let  
+me execute the code I showed you how to build in 
+this tutorial and the idea was to go from here  
+to here the idea was to build something like this 
+where we detect absolutely all the parking slots  
+and for each one of the parking slots we classify 
+if the parking slot is empty or not and if it's  
+empty we plot it in green and if it's not empty we 
+plot it in red so this is exactly where the data  
+comes from the data we are going to use in today's 
+tutorial you can see that for the not empty category  
+this is how the data looks like these are 
+images from parking slots containing cars and from  
+the empty category we have images from parking 
+slots which are completely and absolutely empty  
+so this is the data we are going to use today 
+and the image classifier I'm going to show you  
+how to build in today's tutorial it's a very 
+robust classifier in situations like this in  
+situations where the data we have in situations 
+where the classification we want to make on our  
+data it's very easy it's very simple right where 
+the different categories we want to tell apart the  
+different categories we want to classify they are 
+visually super super super distinct they are super  
+different right in this case we have images from 
+cars and in this other category we have absolutely  
+empty images right, the image classifier I'm 
+going to show you today it's very robust and it  
+works super super well in situations like this 
+and the reason I'm saying this is because this  
+may not be a state-of-the-art image classifier 
+if you look for papers or if you look for the  
+most recent techniques obviously you are not going 
+to find the classifier we are going to make today  
+we're going to build today... and it's 
+definitely not the most robust classifier in  
+the machine learning industry but if you want to 
+solve like a very very simple problem like the one  
+we are going to solve today this image specifier 
+will be more than enough and I'm going to show  
+you exactly what's the performance we achieve 
+with this classifier but that's later on in this  
+tutorial now let's get started I already showed you 
+the data we are going to use and the first thing  
+I'm going to do is to import os which is a library 
+which we definitely need in order to work with  
+data and to read data and to load data from our 
+computer so I'm going to define a directory  
+which is input directory and in this case I'm just 
+going to hardcode where the input directory is  
+located which is here this will be something like 
+this and then I'm going to Define our categories  
+and I'm also going to hard code it and I'm going 
+to say something like this our categories are empty  
+and not empty okay and then the only thing I'm 
+going to do is to Define two lists which are  
+the lists which are going to contain our data one 
+of them will be data and then the other one will  
+be labels and I'm going to show you exactly how 
+we're going to use these two objects later on  
+this tutorial and now what we're going to do is 
+to iterate in absolutely all the images in these  
+two directories and we are going to load these 
+images we are going to read these images and we  
+are going to format these images... this data in 
+a way that fits well the classifier we're going to  
+use later today so let's start with it I'm going 
+to say something like for category in categories  
+and then for file in something 
+like os listdir input dir
+and then I'm going to define the 
+image path like os path join and then  
+input directory and category uh sorry this will 
+be os dot path dot join input dir and category  
+okay because we are walking in absolutely all 
+the files for each one of our categories right  
+something like this okay image path join input 
+dir category and then file and then we have  
+defined exactly what's the location of our images 
+now the only thing we need to do is to read our  
+images and to save our images into this list so 
+in order to read our images I am going to import  
+from scikit mage dot IO Import imread in this 
+channel in all the videos I had made so far we  
+usually used opencv as an image processing library 
+and obviously opencv it's by far the most popular  
+and the most comprehensive of all image processing 
+libraries is the one I use the most in my projects  
+but there are also other libraries which are 
+more convenient in different situations and for  
+example in this case we are going to use scikit 
+image we're going to use this image processing  
+library in order to read the images from our disk 
+from our computer so I'm going to call imread  
+from image path and this will be image okay 
+and now I'm going to resize this image and  
+for that I am going to import another 
+function from scikit image which is called  
+from scikit image dot transform import 
+resize so I'm going to call resize  
+I need to input my image and I need to input 
+the new size... which... the new size I'm going  
+to resize all my images to which is 15 x 15 
+and this will be my image so I'm walking  
+through absolutely all the images in these two 
+directories I'm taking these images I'm reading  
+these images from my computer and I'm resizing 
+these images from this size to 15 x 15 okay  
+now let's continue I have resized all of our 
+images and what I need to do now is to append this  
+data into the list I have created 
+in order to contain all my data so data.append and  
+we're not going to append the image... like the 
+image we have read and we have resized, but we are  
+going to append the flatted image we are going 
+to take our image and we are going to make it  
+into an array right because currently our image 
+is something like a matrix right it's something  
+like a matrix of size for example in this 
+case 61 x 26 and three channels it's BGR  
+we have resized this image now it's 15 x 15 
+and three channels now we want to take all  
+of that information and we want to make it into 
+only one very very long array right we want to  
+make it unidimensional so that's why we are 
+calling flatted and the reason we are doing this  
+is because that's what we need to do in order to 
+use the image classifier we're going to use today  
+when we are working with machine learning you 
+will notice different classifiers and different  
+models and different libraries and different so on 
+different everything require different formats or  
+require we format the data differently in order 
+to be fed into the machine learning model into  
+the classifier or into the whatever we are using 
+and in this particular case we need to flat the  
+data we need to make the data into an array 
+before we input this data into our classifier  
+so that's all for the data and we also need 
+to append the category for this data the label  
+and in order to do that I'm going to walk through 
+the categories slightly in a slightly different  
+way I'm going to call this is category 
+index category in enumerate categories  
+and now I will append category index to these 
+labels arrray to this label list and that's  
+pretty much all we need to do the only thing I'm 
+going to do next is to cast each one of these  
+lists into a numpy array so I'm going to say asarray 
+and then data okay and I'm going to do the same  
+with labels np asarray labels I know what you're 
+thinking hey Felipe this is not going to work  
+because you have not imported numpy and you're 
+completely right so I am going to import numpy now  
+import numpy as np okay so that is it that's all we 
+need to do in order to load our data and in order  
+to prepare our data to be fed into the classifier 
+or in order to move to the next step that is it we  
+have completed the first step in our process so 
+congratulations we are one step closer to reach  
+our goal of training our image classifier now in 
+order to make sure everything works properly and  
+we don't have any error I'm going to execute 
+the code as it is now and numpy has no flatted  
+um maybe it's flatten I think it's flatten maybe 
+I made a mistake so let's see what happens now it  
+seems we don't have any errors so yeah I made a 
+mistake now we have to wait a few minutes because  
+remember we are walking through absolutely all 
+the images in these two directories and we have  
+among the two directories we have 6090 images so 
+this is going to take some time but yeah now it's  
+completed and now it's time to move to the next 
+step where we are going to split our data into two  
+different sets we are going to create a training 
+set and we are also going to create a test set the  
+training set is the one we are going to use in 
+order to train our image classifier and then the  
+test set is the one we're going to use to test 
+the performance of the classifier we are going  
+to train so we definitely need to split all of our 
+data into these two sets and this is the function  
+we are going to use, we need to import another 
+function from scikit learn and this function will  
+be something like from scikit learn dot model 
+selection if I'm not mistaken import train test  
+split yeah so this is how I'm going... we're going 
+to use this function I'm just going to write some  
+things and then I'm going to explain it so this 
+will be something like X train X test y train  
+y test... calling our data X and Y it's a very 
+popular convention in machine learning so we are  
+going to do it too and this will be our train 
+test split function and we need to input data  
+labels and then there will be other parameters 
+as test size I'm going to set this in 20... in 0.2  
+don't worry I'm going to explain exactly why 
+I'm setting all these parameters in a couple  
+of minutes then another parameter is stratify 
+this will be according to labels and then Shuffle  
+I'm going to call Shuffle here and this will be 
+true okay so I have called train test split I  
+have input our data and our labels and then I have 
+specified a few parameters in order to show you  
+exactly what these parameters mean... I'm going to 
+start with test size I told you we were splitting  
+our data into two different sets the training 
+set... and the test set now let  
+me show you an image to show you... what 
+this means, to show you exactly how this looks like  
+so this is an image I found online this is an 
+image I found on Google or actually on duckduckgo and  
+basically you can see that we have an array which 
+is called data which contains all of our data and  
+we're creating two different arrays from it we are 
+creating X train and X test and we are specifying  
+this size this split size which is 0.2 so what we 
+are doing is creating two different sets which are  
+training set and test set from the total amount of 
+our samples from all of our data we are splitting  
+all of our data into two different sets and the 
+way we decide what's the size of the test set is  
+by specifying this parameter So currently we are 
+telling train test split to make this split in  
+a way that 20% of all of our samples 
+are in the test set right now moving  
+to the next argument Shuffle equal true this is 
+something that we always want to do when we are  
+creating data when we are preparing data in order 
+to be fed into a machine learning classifier we  
+definitely want to shuffle this data first so we 
+can avoid absolutely every bias we had when we  
+were reading the data when we were creating 
+these data arrays... we definitely want to shuffle  
+the data first this is a very good practice 
+sometimes there are some biases which we are  
+not aware of sometimes the way we are reading 
+data or the way we are creating these arrays  
+we we are making some mistakes or we are... I don't 
+know the way this walking is done maybe it's  
+alphabetical order or maybe it's whatever we 
+always want to shuffle the data first that's a  
+very good practice to avoid any type of bias when 
+we were reading the data and creating these arrays  
+then stratify equals labels I would say it's always 
+a good practice when we are splitting our  
+data into two different sets to Define exactly how 
+we are stratifying this split and in order to  
+show you exactly what stratify means I'm going to 
+show you this picture which I also found online on  
+duckduckgo and basically you can see that we have a 
+data set in this case is these 12 people and you  
+can see three of these people are blue three 
+of these people are green and then six of these  
+people are red and in this example we are taking 
+a a sample of four elements of four people and  
+the way this sampling is done is by stratifying 
+by the different labels so if you look at the  
+sample you can see that two of these samples are 
+red one of the samples is green and the other one  
+is blue so we are keeping the same proportion of 
+the different labels in our original data set... 
+that's exactly what we are doing when we are 
+stratifying according to the labels it's like a  
+way to make sure that the all the different labels 
+are going to be in exactly the same proportion as  
+in the original data set so it's definitely a good 
+practice... this is something we always  
+always want to do now let's continue and you can 
+see that we have completed the second step in our  
+process we are one step closer we have only two 
+steps left two steps to go we are one step closer  
+of training our image classifier and that's going 
+to be all for splitting our data into a training  
+set and a test set now it's time to train our 
+image classifier now it's time to do like the  
+the actual training and this is how we are going 
+to do it I'm going to import another function  
+which is called... if I remember 
+correctly from sklearn  
+I think it's model selection as well import  
+gridsearchcv then from sklearn dot svm import  
+SVC okay so the first thing I'm going to do is 
+to Define an object which is called classifier  
+and this will be something like this this is 
+the classifier we are going to use uh it's SVC  
+let's see if it's okay is sklearn svm import so I 
+think it's okay for some reason it didn't  
+found it now I see what's the error SVC should 
+be in capital letters and now everything should  
+be okay okay so what I'm doing here is creating 
+a new instance of this object and I'm calling  
+this object classifier and this is the classifier 
+we are going to use in order to train our image  
+classifier so what I'm going to do next is to 
+Define another object which is parameters and  
+this will be something like this I'm just going to 
+write it and I'm going to explain it in a couple  
+of minutes I'm going to define something like 
+a list of only one element which is going to  
+be a dictionary with two keys one of these keys 
+will be gamma and then the other key will be C  
+and that's pretty much all and then I'm going 
+to define a list for each one of these uh items  
+and for gamma it will be something like 0.01 
+0.001 and 0.0001 okay and for C I'm going to  
+do something like 1 10 100 and 1000 okay and 
+then it's when I'm going to call grid search  
+I'm going to define a new object which is called grid 
+search and this will be grid search cv and I'm going  
+to input these two objects I just created the 
+classifier and the parameters okay and now let  
+me show you exactly what I'm doing I'm creating a 
+new instance of SVC and I'm calling this instance  
+classifier and this is the classifier we are 
+going to use and I'm creating this object which  
+is called parameters which is a list containing 
+only a dictionary and this section has only two  
+keys one of them is gamma and the other one is 
+C and each one of these keys has a list of values  
+okay now I'm going to to show you the scikit 
+learn documentation and going to... and going back  
+to scikit learn and I'm going to show you how the 
+documentation looks like for SVC for the object we  
+are using as our classifier and you may notice 
+all the different parameters we have in this  
+classifier we have C kernel degree gamma cov0 
+shrinking probability and many many many other  
+parameters we have many many many many different 
+parameters to choose from but when we were  
+creating our object we are just calling this empty 
+Constructor we are not specifying absolutely any  
+parameter we are just using all the default values 
+for SVC okay and you may notice as well that we  
+are getting this other object and these two keys 
+we are creating are exactly two parameters from our...  
+from our object from the 
+object we are going to use as our classifier  
+so what we are going to do is we are not going 
+to train only one image classifier we are going  
+to train many many many many different image 
+classifiers and we are going to train an image  
+classifier for each one... for each combination we 
+have for C and Gamma so we have three values for  
+gamma and we have four values for C this means we 
+are going to train 12 image classifiers right the  
+way this process is going to work is that we are 
+not going to train only one image classifier but  
+we are going to train many many and as many as 
+different combinations we have for C and Gamma  
+in this case we have three values for gamma 
+four values for C three times four it's twelve  
+so we are going to train 12 image classifiers 
+that's the process we are going to take in this  
+tutorial and the way it works is that 
+we are going to choose the best of all of these  
+different classifiers we are going to train so... 
+and the way we are going to do this training the  
+way we are going to train as many classifiers 
+at once is by calling grid search by  
+calling this other object I have specified over 
+here so this is how we are going to use it   
+I have already defined this grid search and then the 
+only thing we need to do is to call grid search  
+dot fit and I'm going to input X train which 
+is my training set and then y train which  
+is which are the labels of our training set and 
+that's pretty much all that's pretty much all in  
+order to train our image classifier that's pretty 
+much all to train all these 12 image classifiers  
+right let's see what happens when I press play 
+now remember the way this works is that we are  
+loading the data first and this is going to take a 
+few minutes because ithis is a lot a lot of data  
+these are a lot of images and then we are taking 
+this process now the training also takes some time  
+because remember we are training many many many 
+many different classifiers so this is going to  
+take some time so I'm just going to wait a couple 
+of minutes and I'm going to see if something  
+happens or if the execution is successful okay 
+so the execution is now completed we don't have  
+any errors so we can continue and and this was 
+the third step in our four steps process this  
+means we are pretty much there the only thing we 
+need to do now is to test the performance of the  
+model we trained but we are almost there we have 
+almost completed this process and most importantly  
+we have already trained our image classifier, our 
+image classifier is now trained the only thing we  
+need to do now is to test how it performs to see 
+if we can use it or not okay and this is how we  
+are going to do I mentioned that we were training 
+not only... not only one image classifier but we are  
+training 12 different image classifiers one for 
+each one of... one for each combination of C and gamma  
+so we are training many many different classifiers 
+and the way we are going to select one of all of  
+these image classifiers if is by calling a member 
+of grid search which is called grid search dot  
+base_estimator_ so by calling this 
+member is that we are going to get the best of  
+all the different image classifiers that were 
+trained right we are training 12 different  
+image classifiers and we are just choosing the 
+best one and the way we are choosing for the  
+best one is by calling this member of grid search 
+that's basically what we are doing so this is our  
+model this is our classifier best estimator this 
+is our model now let's see how it performs let's  
+see if it's really like a good classifier let's 
+see what's the performance of this classifier on  
+our... test data on the data we have created 
+in order to test the performance of this algorithm  
+so what I'm going to do is to call base estimator 
+dot predict and I'm going to input my test data  
+so I'm going to input X test and I'm going to call 
+the output from this prediction y prediction right  
+and then I need to import another function which 
+is from sklearn dot metrics import accuracy score  
+and let's see what's our performance 
+and I'm going to make a print I'm going  
+to Define another value which is score and 
+score will be accuracy score y prediction  
+and y test right I'm taking this which are the 
+labels of the test set and I'm just comparing  
+against our predictions and now I'm going to 
+print something like I'm going to format this  
+super super nicely so we get like a... like a very 
+clear measure of how well this performs  
+so I'm going to express this as a percentage 
+and I will say something like of samples were  
+correctly classified something like this and 
+this will be format string score times 100  
+right because score is going to give us a number 
+which ranges between 0 and 1 and it's going to be a  
+measure of our score of how accurate our classifier 
+is on the test set now this is a value between 0 and 1 
+and it's very very useful and that contains 
+absolutely all the information but what I'm going  
+to do is just reshaping where I'm going to do 
+like a reformat of this number into a percentage  
+right because it's going to be much much cleaner 
+in order to see how it performs and all I have  
+to do now is to execute this code again and 
+let's see what happens let's see what's our  
+performance so I'm just going to press play and 
+I am going to wait a couple of minutes just like  
+before and I will come back with our results 
+let's see how it performs the execution is  
+now completed and this is the accuracy we got 
+with the best estimator from all the different  
+image classifiers we trained we are getting a 
+99.9 percent accuracy this means that this is  
+absolutely perfect this is a pretty much perfect 
+classifier a 99.9 accuracy is like a super super  
+high performance it's like a very good performance 
+so we can definitely use this classifier later on  
+we can definitely use this classifier in order 
+to use it in our project so the only thing we  
+need to do next the only thing we have to do 
+now in order to complete this tutorial is to  
+save this classifier to save this model because 
+we want to load this model from another project  
+or we want to load this model in a different... 
+code or in a different whatever from a different  
+location we definitely want to save the weights 
+or we want to save exactly all the information  
+which is related to this model so we can use it 
+later in a different project and the way we are  
+going to save this model is by using pickle which 
+is another python Library so I'm going to import  
+pickle and then I'm just going to call pickle dot 
+dump and I'm going to specify the model I want to  
+to save the object I want to save and also I need 
+to specify the file which is going to be something  
+like model.p and then I need to open this file 
+as wb okay and that's going to be pretty much  
+all in order to save our model in order to have a 
+file with our model so we can use it later on, on  
+our project or from our location or we can use 
+this file in whatever way we want so I'm going  
+to press play and that's going to be pretty much 
+all after the training process is completed and  
+after everything it's done we should have a file 
+in exactly the location we have specified which in  
+my case is here... we should have a file which 
+is called model.p so this is it this is going to  
+be all for this tutorial we have absolutely 
+completed all these steps in our process we  
+have completed all four steps in our process and 
+we have trained an image classifier using Python  
+and scikit learn so if you enjoyed this video 
+I invite you to click the like button and I also  
+invite you to write me a message in the comments 
+section below telling me what do you think about  
+this video telling me what do you think about this 
+tutorial and also telling me your ideas or your  
+recommendations for other videos or other projects 
+we could work next on this channel my name is  
+Felipe I'm a computer vision developer and in this 
+channel I make tutorials coding tutorials exactly  
+like this one and I also share my experience and 
+my resources the resources I use as a computer  
+vision developer so if these are the type of 
+videos you are into I invite you to subscribe  
+to my channel this is going to be all for today 
+and see you on the next video 

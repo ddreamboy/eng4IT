@@ -1,0 +1,1421 @@
+[Music]
+hey everyone this is Neha from IDEO Rico
+and I welcome you all to Erica's YouTube
+channel and this session is all about
+software testing tutorial so let me
+quickly tell you the topics that I will
+be covering in this session first I will
+tell you what a software testing and
+what is the need for software testing
+next I will talk about software
+development lifecycle and its various
+models after that I will walk you
+through principles of testing and once
+you understand these fundamentals next
+let's dive into software testing
+lifecycle and understand various steps
+involved in it and moving further to the
+discussion you will be seeing methods of
+testing its levels and some artifacts of
+software testing documentation and I
+will also talk about defect management
+and bug lifecycle now moving to
+automation testing you will be
+understanding fundamentals of automation
+testing and its various tools you will
+also be learning by selenium is most
+preferable tool for automation testing
+and finally I will wrap up the session
+by telling you how to locate elements
+and perform actions on the webpages in
+selenium without any further ado let's
+get straight into the module first let's
+understand what a software testing
+software testing can be defined as an
+activity to check whether the actual
+results match the expected results and
+it also ensures that the product is free
+from any bug or defect testing of a
+software also involves the
+implementation of products module or
+system part for evaluating all or some
+of its properties through testing
+testers can identify errors gaps and
+requirement or missing elements in a
+project or a system testing can be done
+both by manually or with the help of
+automated tools available in the market
+so why testing is important software
+testing is where it all boils down to
+today's world of technology is
+completely dominated by machines and
+their behavior is controlled by the
+software powering it well the machines
+behave exactly as we want them to every
+time everywhere yes the answer to all
+these questions lie in software testing
+by the end of the day at a software
+application
+and success rate which is going to
+control your business growth the same
+thing can be set even for web
+applications because most businesses
+today are completely reliant on the
+internet for example you can see here
+the airplane crash and the bankrupt why
+it is happening just because the system
+was not tested properly before it was
+launched and that's why we say testing
+is important else it might lead to a
+loss of monetary value jobs or even loss
+of a human and these are the examples of
+an untested software that becomes
+hazardous so software testing plays a
+significant role in testing a software
+or a system if the bugs are or defect is
+not properly removed from the system it
+might lead to system failure and that's
+why testing is important now let's see
+who performs software testing this
+questions answer is depending on the
+process and it's connected project
+stakeholders in the industry of
+information technology big companies
+have team members who bear the
+responsibility for evaluating the
+project or software based on the
+requirements during the test phase
+moreover some bugs can get detected if
+proper testing is done and the
+development of a software or application
+so people who can do testing our
+software testers project developer
+project lead team manager and end users
+so these are the people who takes care
+of software testing having understood
+this let's see what is software
+development lifecycle software
+development lifecycle is a process used
+by the software industry to design
+develop and test high quality software's
+stl see that the software development
+lifecycle aims to produce a high quality
+software that meets or exceeds customer
+expectations reaches completion within
+times and cost estimates as you can see
+here it involves many phases and let me
+explain you each of these phases first
+requirement phase requirement gathering
+and analysis is the most important phase
+in SDLC here business on
+list collects a requirement from the
+customer or client as per the clients
+business needs and documents and
+requirements and the business
+requirement specification that is the
+document name and it varies depending
+upon the organization
+some examples are CRS that is customer
+requirement specification and some might
+call it as business specification as
+well and then they provide the same to
+the development team next analysis phase
+once a requirement gathering and
+analysis is done the next step is to
+define and document the product
+requirements and get them approved by
+the customer this is done through SRS
+that a software requirement
+specification document and software
+requirements specification consists of
+all the product requirement to be
+designed and developed during the
+project lifecycle and key people
+involved in this phase are project
+manager business analyst and senior
+members of the team and the outcome of
+this phase will be software requirement
+specification now moving to design phase
+it has two steps one high level design
+and the other one low level design so in
+high level design it gives the
+architecture of the software product to
+be developed and is done by the
+architects and senior developers in low
+level design it is done by senior
+developers here it describes how each
+and every feature in the product should
+work and how every component should work
+here only the design will be there and
+not decode and the outcome from this
+phase is the high level document and
+lower level document which works as an
+input to the next phase so next is the
+development or your coding phase so what
+happens here developers of all levels
+are the seniors juniors freshers all are
+involved in this phase this is the phase
+where we start building the software and
+start writing the code for the product
+the outcome from this phase is the
+source code document and the developed
+product now talking about the testing
+phase here when the software is ready it
+is sent to the testing document where
+tests team tests it thorough lead for
+different effects the either test
+software manually or using the automated
+tools depending on the process defined
+in software testing lifecycle and also
+ensures that each and every component of
+the software works fine once a queue way
+that is the quality analyst make sure
+that the software is error-free it goes
+to the next stage which is
+implementation and the outcome of this
+phase is the quality product and the
+testing artifacts I'll talk about the
+testing artifacts at the later part so
+once all this is done the next and the
+last step is deployment and maintenance
+phase after successful testing that
+product is delivered and deployed to the
+customer for the use deployment is done
+by the deployment engineers or the
+implementation engineers once when the
+custom will start using the developed
+system then the actual problems will
+come up and needs to be solved from time
+to time fixing the issues found by the
+customer comes in maintenance phase 100%
+testing is not possible because the way
+pesters does the product is different
+from the way customer use a product
+maintenance should be done as per SLA
+that a service level agreement these are
+the various phases involved in software
+development lifecycle and this is how it
+works now we have different models of
+software development life cycle like
+waterfall model spiral model agile model
+etc now let's talk about what a fall
+model and understand how it works
+waterfall model is a traditional model
+it is a sequential design process that
+is often used in SDLC in which the
+progress is seen as flowing downwards
+like a waterfall through the different
+phases such as requirement gathering
+feasibility study analysis design coding
+testing installation and maintenance
+every next phase is began only once the
+goal of the previous phase is completed
+this methodology is preferred in
+projects where quality is more important
+as compared to schedule or cost the
+methodology is best suitable for
+short-term projects where the
+requirements will not change for example
+your attendance management or calculator
+etcetera so benefits of using this model
+are requirements do not
+in orders a design and code so we get a
+stable product and this model is very
+simple to implement requirements I'll
+finalize earlier in the lifecycle so
+there won't be any chaos in the next
+phases and requirement resources to
+implement this model are minimal
+compared to other methodologies and
+every phase has specific deliverables it
+gives high visibility to the project
+manager and clients about the progress
+of the project so what are its
+disadvantages the main disadvantage is
+that backtracking is not possible
+butters we cannot go back and change the
+requirements once the design stage is
+reached and change and requirements
+leads to change in design and code which
+results defect in the project due to
+overlapping of phases and by this
+customer may not be satisfied if the
+changes that they need are not
+incorporated in the product and the end
+of the waterfall model may not be a
+flexible product and this model can be
+used only when the requirements are very
+well known and fixed and it is also not
+suitable for long term projects where
+requirements may change time to time so
+this is about waterfall model next let's
+take a look at bow hem spiral model
+spiral model works in an iterative
+nature it is the combination of both
+prototype development process and linear
+development process that is your
+waterfall model and this model place
+more emphasis on risk analysis mostly
+this model adopts large and complicated
+projects where risk is very high every
+iteration starts with the planning and
+ends with the product evaluation by
+client so let's take an example of the
+product development team like Microsoft
+they know that there will be a high risk
+and they face lots of difficulties in
+the journey of developing and releasing
+the project and also they know that they
+will release next version of product
+when the current version is in existence
+and they prefer spiral model to develop
+the product in an iterative nature so
+they could release one version of the
+product to the end-user and star
+developing next version which includes
+new enhancements and improvements on the
+previous version and that is based on
+the issues faced by the user and the
+previous version like Microsoft released
+Windows 8 and improved it based on user
+feedback and release the next version
+that is 8.1 and it went on so it mainly
+undergoes four phases at this planning
+phase and in the space requirement
+gathering cost estimation and resource
+allocation is being done and next phase
+does risk analysis phase here strengths
+and weaknesses of the project is being
+known and next comes your design on
+engineering phase their coding internal
+testing and deployment is being done and
+the last is the evaluation phase like
+client evaluation client-side testing to
+get the feedback etc so benefits of
+using this model are it allows
+requirement changes and it is also
+suitable for large and complicated
+projects the main thing is it allows
+better risk analysis and is cost
+effective due to good risk management
+and disadvantages is that it is not
+suitable for small projects and the
+success of a project depends on the risk
+analysis phase that's all so this is all
+about the spiral model and different
+types of models in sdlc now let's move
+further and understand principles of
+testing testing of software is
+exceptionally imaginative and an
+intellectual task for testers to perform
+testing of software or applications
+pursue some principles that are
+mentioned over here these principles
+also play a significant role for
+software tester to test the project and
+they are first one software testing can
+help in detecting bugs testing any
+software or project can help in
+revealing few or some defects that may
+or may not be detected by developers
+however testing of software alone cannot
+confirm that your developed product or
+software is error free hence it's
+essential to devise test cases and find
+out as many defects as possible next
+testing with effectiveness is impossible
+so
+what is this until your project or
+application under test has a state
+forward structure having limited input
+it won't be likely or achievable to
+check and test all feasible sets of beta
+modules and scenarios and next early
+testing the earlier you will begin to
+test your project or software the better
+you will find to utilize your existing
+time next defect in clustering at the
+time of testing you can observe that
+majority of the defects or bugs that are
+reported are because of a small number
+of modules inside your software or
+system next software testing is context
+dependent an error free or bug free
+software is a myth just because when our
+tester tested an application and did not
+detect any defects in the project
+doesn't indicate or imply that your
+software is ready for shipping so at the
+time of testing modules or working of
+software you as a tester needs to test
+whether your software is meeting all the
+requirements of the client or not and
+whether the bugs found during testing
+has been mended or not these many
+factors need to be considered before
+shipping the software or releasing it to
+the market so these are some of the
+principles of software testing that one
+should keep in mind while testing a
+software now let's move further and
+understand one of the most widely used
+model that is verification and
+validation model to understand this
+model let's first understand what is
+verification and validation and software
+first verification verification as a
+static analysis technique in this
+technique testing is done without
+executing the code for example you can
+say inspection walkthrough reviews etc
+next validation validation is the
+dynamic analysis technique where testing
+is done by executing the code for
+example your functional and
+non-functional testing techniques in
+verification and validation model the
+development and QA activities are done
+simultaneously there is no discrete
+phase called testing rather testing
+starts right from the requirement phase
+the verification and Val
+activities go hand-in-hand so just have
+a look at the figure over here and you
+can see here in a typical development
+process the left-hand side shows the
+development activities and the
+right-hand side shows the testing
+activities I should not be wrong if I
+say that and the development phase both
+verification and validation are
+performed along with the actual
+development activities now let's
+understand each of these phases in depth
+so first talking about the left-hand
+side as you all know left-hand side
+activities are the development
+activities normally we feel what testing
+can we do in the development phase but
+this is the beauty of the model which
+demonstrates that testing can be done in
+all phases of development activities as
+well
+so here requirements are collected and
+lies and studied here how the system is
+implemented is not important but what
+the system is supposed to do is
+important like brainstorming sessions
+walkthroughs interviews are all done
+here to have the objective set clear so
+verification activity is like or
+requirements reviews and validation
+activities like creation of user
+acceptance test and it's test cases and
+the artifacts produced here will be
+requirement understanding document and
+user acceptance test test cases that is
+UAT test cases so this is about the
+requirement analysis phase now talking
+about software specification in this
+phase a high level design of the
+software is built the team studies and
+investigates on how the requirements
+could be implemented and the technical
+feasibility of the requirements is also
+studied and here the team also comes up
+with the modules that would be created
+based on the software and hardware needs
+so verification activities that include
+here are design reviews and validation
+activities like creation of system test
+plan and cases and creation of
+traceability metrics and the artifacts
+produced here are system test cases
+feasibility reports system test plan
+hardware software requirements and
+modules to be created
+so the next phase is the architectural
+design or your high-level design in the
+space based on the high level design
+software architecture is creative the
+modules their relationship and
+dependencies architectural diagrams
+database tables technology details are
+all finalized in this phase so again
+verification activities like design
+reviews are included and validation
+activities like integration test plan
+and test cases and the artifacts produce
+our design documents integration test
+plan and test cases and database table
+designs etc now coming to module design
+also called as low level design in this
+phase each and every model of the
+software component are designed
+individually methods classes interfaces
+data types etc are all finalized in this
+face so again verification activities
+like design reviews is included and
+validation activities like creation and
+review of unit test cases and the
+artifacts that are produced will be unit
+test cases so next we have the
+implementation or code in this face
+actual coding is done so code review and
+test cases review our verification
+activities and creation of functional
+test cases our validation activities and
+artifacts produced will be test cases
+and review checklist so this is all
+about left-hand side that is your
+development phase now talking about the
+right hand side this side demonstrate
+the testing activities or validation
+space so we will start from bottom that
+is your unit testing in this face all
+the unit test case is created in the low
+level design are executed so what does
+unit testing unit testing is a white box
+testing technic where a piece of code is
+written which invokes a method to test
+whether the code snippet is giving the
+expected output or not this testing is
+basically performed by the development
+team in case of any anomaly defects are
+logged and tracked so artifacts produced
+here our unit test execution results
+next comes integration testing in the
+face the integration test cases are
+executed which were created in the
+architectural design or your high-level
+design phase in case of any anomalies
+defects are logged and tracked even here
+so now talking about integration testing
+in this phase the integration test cases
+are executed which were created in the
+architectural design or your high-level
+design phase in case of any anomalies
+defects are logged and tracked so in
+integration testing it validates whether
+the components of the application works
+together as expected and the artifacts
+produced here are integration test
+results and now coming to system testing
+in this phase all the system test cases
+functional test cases and non-functional
+test cases are executed in other words
+the actual and full-fledged testing of
+the application takes place here so
+defects are logged and tracked for its
+closure progress reporting is also a
+major part in this face the traceability
+metrics are updated to check the
+coverage and risk mitigated and the
+artifacts produced are test results test
+logs defect report the summary report
+and updated traceability matrices and
+now talking about the last phase that is
+user acceptance testing so acceptance
+testing is basically related to business
+requirements testing here testing is
+done to validate that the business
+requirements are met in the user
+environment and compatibility testing
+and sometimes non-functional testing are
+also done in this phase and the
+artifacts produced will be user
+acceptance test results updated business
+coverage matrices so these are the
+various phases involved in the testing
+that is the right-hand side of the model
+that's why it is called V&B model where
+verification is nothing but development
+phase and validation is testing phase so
+when they use B model the model is to be
+used when requirement is well-defined
+and not ambiguous acceptance criteria
+are well defined project the short to
+medium and size and technology and tools
+used are not dynamic
+these are the situations when you should
+use verification and validation model
+now let's move further and understand
+software testing lifecycle software
+testing lifecycle is a testing process
+which is executed in systematic and
+planned manner in software testing
+lifecycle process different activities
+are carried out to improve the quality
+of the product so these are the various
+stages involved in software testing
+lifecycle first requirement analysis
+this is the very first step ins of
+producing lifecycle in this step the
+Quality Assurance team that is your QA
+team understands the requirement in
+terms of what we will be testing and
+figure out the testable requirements if
+any conflict missing or not understood
+any requirement then QA teams follows up
+with the various stakeholders like
+business analysts system architecture
+client technical manager to better
+understand the detailed knowledge of
+requirement and after that we have best
+planning test planning is most important
+phase of software testing life cycle
+where all testing strategy is defined
+this phase is also called as test
+strategy phase in this phase typically
+test manager is involved to determine
+the effort and cost estimates for the
+entire project this phase will be kicked
+off on the requirement gathering phase
+is completed and based on the
+requirement analysis we can start
+preparing the test plan and the result
+of this planning phase will be the test
+plan or press strategy or testing effort
+estimation documents once test planning
+phase is completed then QA team can
+start with test cases development
+activity so next we have test case
+development and this is started once the
+test planning activity is finished this
+is the phase where testing team write
+down the detailed test cases along with
+test cases testing team also prepares a
+test data for testing once the test
+cases are ready then these test cases
+can be reviewed by peer members or QA
+lead and also the requirement
+traceability matrix is prepared so what
+is this requirement race ability
+Matros is an industry accepted format
+for tracking requirements where each
+test case is marked with the requirement
+and using this RTM that is requirement
+traceability matrix can track backward
+and forward traceability after all this
+you have to set up the environment for
+testing so this is a vital part of STL C
+and basically test environment decides
+on which condition software is tested
+and it is an independent activity and
+can be started parallel with test case
+development next we have test execution
+once a preparation of test case
+development and test environment setup
+is completed then test execution phase
+can be kicked off in this phase testing
+team start executing test case is based
+on prepare test planning and prepare
+test cases in the prior step and finally
+we have the test cycle closure so in
+this once the test case is passed then
+same can be marked as passed if any disk
+case is failed then corresponding defect
+can be reported to development team by a
+bug tracking system and bug can be
+linked for corresponding test cases for
+further analysis so these are the
+various phases involved in software
+testing lifecycle before I go further
+let me clear out software testing is of
+two types manual testing and automation
+testing and selenium was founded as an
+automation testing tool to overcome the
+limitations and drawbacks of manual
+testing so till now whatever you learnt
+was manual testing that is the testing
+of a software is done manually without
+the use of automated tool or
+applications that are available in the
+market automation testing is an
+automated technique where the tester
+writes scripts by own and use a suitable
+tool to test the software it is
+basically an automation process of for
+manual process like regression testing
+automation testing is also you to test
+the application from Lord performance
+and stress point of view what are the
+challenges faced by manual testing
+manual testing means the application is
+test manually by QA testers and tests
+needs to be perform annually
+every environment using a different data
+set and success/failure rate of every
+transaction should be recorded so look
+at the image over here you can see a
+poor chap over here who manually
+verifies the transactions recorded the
+challenges he is facing cause Phatak
+boredom delay in work mistake and errors
+because of manual effort and this leads
+to the need for automation testing and
+automation testing beats manual testing
+every time why because it is faster
+needs less investment in human resource
+it is not prone to errors frequent
+execution of tests is possible support
+lights-out execution and also supports
+regression and functional testing as
+well and let's take a similar example
+suppose there is login page and we have
+to verify if all the login attempts are
+successful then it will be really very
+easy to write a piece of code which will
+validate if all transaction or login
+attempts a success or not moreover these
+tests can be configured in such a way
+that they are tested in different
+environments and web browsers what else
+can be done you can automate the
+generation of result file by scheduling
+it for a particular time during the day
+then you can also automate the
+generation of reports based on those
+results and the key point is that
+automation testing makes our testers job
+a whole lot simpler so these are some of
+the challenges faced with manual testing
+and automation testing overcomes it now
+let's see different testing methods of
+software first is blackbox testing this
+testing is also called as a behavioral
+testing where the software tests the
+internal structure design and
+implementation and the user interface of
+the product that is being tested is not
+already known to the tester so that is
+the reason it is called as blackbox
+where the input is being passed as a
+test case to the blackbox but the
+internal implementation details are not
+known to the tester and output is being
+given next white box testing this type
+of technique deals with testing the
+internal structure
+logic design and implementation of
+different modules this is also called as
+a glass box testing where the internal
+implementation details are known to the
+tester that is the code logic internal
+logic design and many more and next we
+have gray box testing in this it
+combines a concept of both black box and
+white box that this internal
+implementation details are partly known
+to the tester by the rest of the
+internal implementation details are not
+known to the tester and that's the
+reason it is called as grey box testing
+so these are the three methods of
+software testing now let's see the
+difference between functional and
+non-functional testing as already listed
+functional testing is performed before
+non-functional testing and
+non-functional testing is performed
+after functional testing and functional
+testing is based on customer
+requirements on the other hand
+non-functional is based on customers
+expectations functional testing
+describes what the product does and
+non-functional describes how the product
+works and examples of functional testing
+are unit testing acceptance mode testing
+integration and regression testing and
+non-functional testing includes
+performance testing volume testing
+scalability load testing strain and
+stress testing etc so these are the
+differences between functional and
+non-functional testing now let's talk
+about software testing levels it starts
+from unit testing where unit test cases
+are produced and then it goes to
+integration testing where the software
+is combined and tested and it produce
+integration test cases and then comes
+system testing where the integrated
+software or project is tested and then
+comes acceptance testing where the
+system needs to be tested for adequacy
+so these are the software testing levels
+that starts off with unit testing and
+ends with acceptance testing now let's
+move further and understand software
+testing documentation documenting the
+test case deals with documentation part
+of the developed product
+should have to be prepared before or at
+the time of software testing documenting
+the test cases will facilitate you to
+estimate the testing effort you will
+need along with the test coverage and
+tracking and tracing requirement here
+you will learn to dig into how
+documentation is beneficial by testing
+along with some of the features of it so
+why do you think documentation is
+necessary some commonly applied
+documentation artifacts associated with
+software testing are this plan does
+scenario test case and traceability
+matrix let's discuss each of these in
+brief first this plan test plan provides
+the outline strategy which will be
+implemented for testing the application
+and the resources which will be needed
+are also described it also holds the
+details about on which environment the
+tests will be performed so let's take an
+example of how we have to maintain a
+test plan report so this is my test plan
+report where I have columns like this
+number the type of the test target file
+test name purpose of the test the
+situation expected output actual output
+and outcomes and actions that are
+required for example say you are testing
+a website so the test type will be
+website and you have to give your test
+number say your testing on particular
+login information you can give the
+target file as login information and you
+can give whatever the test that you're
+performing say for example unit testing
+and you can check the purpose and the
+situations whether all the clicks are
+working or not or the email address is
+being entered or not in the login page
+and whatever the output that you expect
+and whatever the actual output that
+arrives and what is the outcome of it
+and the actions that you need to be
+performed these are all the main
+considerations of a test plan report now
+let's see what is at a scenario this
+scenario can be considered as a single
+line statement which notifies the area
+in which your application will
+experiment this artifact is needed for
+ensuring the overall procedure test
+from start to finish so again this is
+your test scenario where you need to
+have your use case ID your requirement
+ID the scenario on which you're working
+on and what is it a scenario and how
+many test cases that is the number of
+test cases that is required so you can
+go on documenting all the records over
+here and the test scenario next is test
+case test cases engage in collected step
+and conditions with inputs which can be
+implemented at the time of testing this
+activity focuses on making sure whether
+a product went through a set of tests or
+faced by any means such as functionality
+or other aspects many types of test
+cases are being checked during testing
+like functional test cases negative
+error test cases logical and physical
+test cases and user interface test cases
+as well so these are the columns which
+are necessary for a test case that is
+your test case ID your test case
+whatever it is its description the step
+that you take for testing a particular
+software or a particular test case and
+its description again your expected
+result actual output status and comment
+now the last artifact that we have the
+stress of the t matrix it is also known
+as requirement traceability matrix and
+it contains the table which sketches
+your requirements when your products
+software development lifecycle is being
+created this documenting artifact can be
+implemented for forward tracing which is
+to go from designing or can be
+implemented for backward tracing as well
+which is the reverse of forward tracing
+so this is how you put our traceability
+matrix that is you will be having your
+requirement race ability where you have
+n number of test cases and here you have
+business requirements so the matrix will
+be put if the result will be passed on
+both the ends so this is all about the
+documentation artifacts and the various
+types of artifacts that are involved in
+software documentation now let's talk
+about defect management as we know
+defect management is a part of
+we're testing process but what exactly
+is defect management and software
+testing has not been known now I will
+talk about it and tell you what exactly
+is defect management process to realize
+what defect management process actually
+is we should first understand the
+definition generally defect management
+can be defined as a process of detecting
+bugs and fixing them it is necessary to
+say that bugs occur constantly in the
+process of software development they are
+a part of the software industry and that
+is because of the fact that software
+development is quite a complex process
+the team members are usually placed in
+strict timeframes they must write large
+pieces of code every day and they
+usually don't have time to think about
+how to avoid bugs
+hence every software development project
+requires a process that helps to detect
+defects and fix them the process of
+defect management or bug tracking is
+usually conducted at the stage of
+product testing without realizing this
+it would be hard to understand the
+nature of defect management software
+testing can be conducted in two
+different ways
+usually the developers test the product
+themselves however there's also a type
+of testing that is based on user
+involvement the final users are often
+provided with an ability to report on
+the bugs they find nevertheless but this
+is not the best way of testing because
+the users could hardly find all the bugs
+and there are four steps involved in
+defect management process and they are
+as shown on the screen the first step is
+the stage of defect detecting we already
+mentioned that it can be conducted
+either by the team of developers or by
+the users regardless of the type of the
+testing the main goal is to detect all
+the bugs and the final product or its
+part next step is formulation of bug
+reports so these are the documents that
+include all necessary information about
+certain bugs
+usually they contain Delta on the type
+of bug and the
+possible way of its correction and next
+step
+that is the third step is the stage of
+bug fixing after the bugs are fixed this
+should be tested once more to make sure
+that the software works properly and
+during the final step the bug list is
+created so this is a document that
+contains information about all the bugs
+that occurred during the project's
+performance and the team often uses the
+bug list because the similar bugs have
+occurred so this is all about the defect
+management process next we'll see what
+is the defect lifecycle or a bug life
+cycle defect life cycle is a cycle which
+are defect or a bug goes through during
+its lifetime it starts when a defect is
+found and ends when a defect is closed
+after ensuring it's not reproduced the
+flat life cycle is related to the bug
+found during testing this life cycle can
+vary from organization to organization
+and also from project to project based
+on several factors like organization
+policy software development model like
+agile iterative project timeline team
+structure etc bug or defect life cycle
+consists of these following stages and
+that starts from new this is the stage
+when a defect is logged and posted for
+the first time and that defect state is
+given as new next assign after the
+tester has posted the bug the lead of
+the tester approves that the bug is
+genuine and he assigns the bug to
+corresponding developer and the
+developer team and this state is given
+as assigned next active or open at this
+state the developer has started
+analyzing and working on the defect fix
+and when developer makes necessary code
+changes and verifies the changes he or
+she can make the bug status as fixed and
+the bug is passed the testing team so at
+this stage the tester do the testing of
+the changed code which the developer has
+given to him to check whether the defect
+has got fixed or not and as you can see
+on the left hand side you have a reopen
+state and thus if the
+still exist even after the bug is fixed
+by the developer the tester changes the
+status to reopen again the bug goes
+through the lifecycle once again and
+next again it will go through verify
+thatis it should be verified by the
+tester again and again to check whether
+the bug is completely removed and or
+suffer our particular product is error
+free and then you have a closed state
+that means once the bug is fixed it is
+tested by the tester if the tester feels
+that the bug no longer legs in the
+software he or she changes the status of
+the bug to closed the state means that
+the bug is fixed tested and approved and
+you can see from active state it goes to
+two more stages that is rejected and
+defer rejected means if the developer
+feels that the bug is not genuine he
+rejects the bug then the state of the
+bug is changed or rejected deferred
+state indicates the bug is expected to
+be fixed in next releases the reasons
+for changing the buck to this state have
+many factors some of them are priority
+of the bug may be low lack of time for
+the release or the bug may not have
+major effect on the software and that's
+a reason it is said as deferred so this
+is all about the bug lifecycle and the
+various stages the bug goes through once
+it is new till closed now let's move on
+to divide reuse software testing type
+that does automation testing as I have
+already mentioned automation testing is
+an automated technique where the tester
+writes scripts by own and uses suitable
+tools to test the software it is
+basically an automation process of a
+manual process so there are many tools
+to carry out automation testing like
+selenium testing with HPE unified
+functional testing tests complete ran
+racks weight ir weight iron TELRIC test
+studio tours car tests and many more so
+what is selenium and buy it as a
+preferable tool selenium is an
+open-source tool which is used for
+automating the test carried on the web
+browser wait before you get carried away
+let me reiterate
+only testing of web applications is
+possible with selenium we can neither
+test any desktop application nor test
+any mobile application using selenium
+since selenium is open source
+there is no licensing cost involved
+which is a major advantage over other
+testing tools so why do you prefer
+selenium the reasons behind ever-growing
+popularity of selenium our test scripts
+can be written in any of these
+programming languages like Java Python
+c-sharp PHP Ruby pull and dotnet as well
+and tests can also be carried out in any
+of the OS like Windows operating system
+Mac or Linux not only that it can be
+carried out using any browser like
+Mozilla Internet Explorer Google Chrome
+Opera Safari etc and tests can be
+integrated with tools like testing G and
+J unit for managing test cases and
+generating the reports and it can also
+be integrated with maven Jenkins and
+docker to achieve continuous testing and
+that is the reason everyone prefers
+selenium over other automation testing
+tools so how to locate web elements and
+perform action so this is nothing but
+your web page where you have inspected
+the element and you are trying to locate
+a particular element on the web page so
+how is that done I'll tell you how that
+is with the help of selenium locators so
+what is a locator locator can be termed
+as an address that identifies a web
+element uniquely within the web page
+they are the HTML properties of the web
+element which tells selenium about the
+web element it needs to perform the
+action on selenium uses locators to
+interact with the web element on the
+webpage they are considered as the
+lifeblood of the tests using the right
+locator and shows at the tester faster
+more reliable or has lower maintenance
+over releases if you are fortunate
+enough to be working with unique IDs and
+classes then you are usually all set but
+there will be times when choosing your
+right locator will becomes a nightmare
+it can be a real challenge to verify
+that you have
+right locators to accomplish whatever
+you want so there are diverse range of
+pebble amounts like Xbox ID radio button
+etc and identifying these can be a
+tricky approach so let's see how and
+what are the different types of locators
+that can be used to locate a particular
+web element on the webpage so we have ID
+name link text CSS selector partial link
+text and XPath first coming to IB the
+best and most popular method to identify
+web element is to use ID the ID of each
+element is alleged to be unique IDs are
+the safest and fastest locator option
+and all they should be the first choice
+even when there are multiple choices
+it's like an employee number or account
+which will be unique let's see an
+example how to locate it and how to
+write a particular script for selenium
+so the very first step is to open your
+Eclipse create a class I have created a
+class called for selenium script and
+avold in my main method now next what I
+will do so the first step is to register
+chromedriver
+why when you write a script and run it
+the chrome driver will launch the Google
+Chrome if you are using Google Chrome
+web browser or if you are using Mozilla
+Firefox you can choose equal driver so
+as I'm using chrome driver I have to set
+the properties for chrome driver I'll
+set it like this I'll give system dot
+set property
+okay now I have launched my chromedriver
+so what's next now I will use driver
+torget method to navigate through Ebates
+outcomes why because I am using ebay.com
+website to test it so I will copy this
+and here I will give try forget
+and I will paste the value of EB within
+double-quotes okay after I do this I
+have to use the ID locator to locate a
+particular web element now suppose say I
+want to locate the search box what I
+will do I'll right-click on this choose
+inspect as I click on this thing you can
+see the search box is getting
+highlighted which implies as I mouse
+over on this you can see this search for
+anything was getting highlighted as you
+can see here it has a ID attribute whose
+value is G H AC okay so I will copy this
+and I live on method here that is
+Dreifort dot find element
+by dot ID and what is the value of ID
+that you copied from eBay at this GH AC
+okay so when you try to locate the spy
+ID that particular search box will be
+highlighted okay now I want to do
+something like say I want to enter some
+values for this so how will I do that I
+want to give like something called
+guitar or say mobile and click on the
+search when I search it over here you
+can see the search filtered by shop by
+brand okay so what I'm doing here is I'm
+creating it manually so if I want to
+search the same thing by selenium how
+will I do that for that what I use after
+this I will use a method called send
+keys okay and I will pass the value of
+send keys as mobile so now next once you
+give the send Keys as mobiles it will
+enter the value over here like mobiles
+okay but it won't give a search so in
+order to get the search what we should
+do you can see the search button over
+here so inspect that and again even that
+has the ID whose value is GH button okay
+so what I'll do is copy this again I'll
+try a driver or find element by ID and
+senators she hatch button as it is a
+button I have to use a click method
+because we are clicking on the button
+are not sending any values to the button
+but if it is our textbox then you can
+send the keys and send the value okay
+simple save it now what's the next step
+you are giving ID and searching mobiles
+and clicking on the search box right but
+there is something called implicit
+weights that is required to wait for a
+particular amount of time and then
+proceed further so I will be writing
+some methods over here so I will use
+this method why because I want to
+maximize the window of the output and I
+want to delete all the cookies and I
+want to set the page time or for 40
+seconds
+it's showing an exception because I
+haven't imported the package and one
+more thing I have said the implicitly
+wait for 30 seconds which implies it
+will wait for 30 seconds and listen
+until the element is loaded that is this
+one so even after 30 seconds if the
+element is not loaded then it will throw
+an exception saying no such element
+found okay so that is the reason I'm
+using implicit wait but if the element
+is loaded within first two or five
+seconds then the rest or 25 seconds will
+be ignored that is the reason implicit
+and explicit waits both are called as
+dynamic weights I'll explain you
+explicit weight also don't worry for now
+let's run the program and check the
+output as you can see chromedriver
+launched to Google Chrome maximize the
+window and opened eBay calm you can see
+it entered more bias by itself loaded
+and gave the output as desired correct
+sounds much interesting right everything
+isn't automated correct yeah that's true
+now let's learn one more locator that is
+named simple instead of ID we have to
+use name that's all it's same like ID
+only but we have to use name to locate a
+particular element is in name locator
+I'll be using mint.com say I want to do
+sign up and you can see here it has an
+email address tab I'll just click on
+inspect and you can see it has element
+whose value is email name is an
+attribute whose value is email correct
+so let's see how to do that I want to
+sign up I'll inspect on this you can see
+it has a name whose value is email so
+I'll copy this and instead of by ID I
+will make it as by name so hereby is a
+class and name will be your locator or
+your web element or your locator and I
+will paste the value let us email and I
+want to send email like something at
+Eureka at the rate gmail.com my email
+address and next I can also write the
+password as well even that has the name
+attribute whose value is password
+so again by name I'll give and I'll
+change this as password and I will send
+something like depending on my choice
+so it's capital K now say once I enter
+the email I want it to wait for two to
+three seconds and then enter the
+password in that case what I will do
+after the statement
+I'll give thread dots sleep of 3,000
+which implies it will date three seconds
+only
+okay so save this and run the program so
+again chromedriver launched google
+chrome navigated through mantra calm to
+this page and it entered at eureka at
+gmail.com waiting for three seconds and
+then enter the password correct as you
+can see it is written as chrome is being
+controlled by automated test software
+correct so this is how you can use
+thread dot sleep in between the two
+elements and gone next we have link text
+that is useful only for links that
+starts with the anchor tag and H
+reference and if something text is
+present in the link then you can use
+this link text locator and next you have
+CSS selector it's very easy so CSS is
+mainly used to provide style rules for
+the web pages and they can use for
+identifying one or more elements on the
+web page using CSS if you start using
+CSS selectors to identify elements you
+will love the speed shell show you one
+small example how do you see as a
+selectors so to demonstrate CSS selector
+say I want to locate the search box
+using CSS selector so I have inspected
+that and I have mentioned ID is a unique
+locator so whenever you write anything
+it will be with respect to ID so I will
+show you how to locate the element using
+CSS click on elements and click ctrl F
+where you can write string selector or
+XPath and remember CSS selector always
+starts with hash and what is the value
+of ID
+it is GH ac correct so I'll just give GH
+AC on right thing that you can see it
+highlighted the element which implies it
+was able to locate the particular
+element using CSS selector
+sounds much easier right instead of
+finding the name your link tags
+everything and just write the ID value
+and you will be able to locate the
+particular element correct same thing
+you can copy this and paste it over here
+I'm sorry I have to again change it to
+ebay.com first I'm sorry here and make
+it a spy CSS selector that's all and I
+will pass a value as hash CH AC because
+that's ID value okay something like no
+headphones
+I commend this for now save the Sun run
+the program again it launched Google
+Chrome navigated through ebay.com
+and enter the value as headphones as I
+did not click on the search it's not
+taking if you want again you can click
+on the search inspect copy the value
+that is gh button this one and you can
+paste it over your and choose click
+method because you're clicking on the
+search box so that's how you can use CSS
+selectors as well next will be your
+partial link text so if you know some
+situations we may have to find the links
+by a portion of the text and that it
+contains because you know proper text
+will not be there in such cases we can
+use partial link text to locate the
+elements and now talking about my
+favorite locator XPath it is designed to
+adapt the navigation of xml elements
+with the purpose of selecting individual
+elements attributes or some part of an
+XML document for specific processing so
+syntax goes like this it has double
+forward slash a tag name at select
+attribute an attribute name followed by
+his attribute value I'll show you a
+simple example of using XPath let's
+break mantra and try to locate this
+login information as you can see here it
+has the input tag and it has a
+placeholder whose value is your email
+address so I'll let it over here only as
+I have told it starts with double
+forward slash I will give it and it has
+a input tag okay and it also has
+a placeholder whose value is your email
+address so I will paste the value and
+your value should be within single
+quotes on writing this you can see it
+was able to locate the particular
+element so now say I want to write it
+using XPath I'll copy this expert and
+write it over here and I'll send key is
+like on some email address so just run
+the program and check the output it's
+launched Google Chrome that is your
+chrome Drive for launch google chrome
+navigating through mantra and it will
+write the prescribed email address okay
+so this is how you can use expert to
+locate a particular element under the
+page sounds much easier so this is how
+basically you can use different types of
+elements to locate a particular element
+on the webpage and you can use implicit
+and explicit ways yeah when I talk about
+explicit bits I'll show you how to use
+it now I want to use yahoo.com and I'll
+explain you explicit weights okay so I
+have given the X part for login username
+I'll show you how you can even use for
+this also no issues but but I want to
+make you comfortable with different
+websites so I'm just showing that so
+when you click here I inspect on this
+and I will write the XPath I can give
+the X part for this because it contains
+an ID whose value is login username so
+same thing I have given over here that
+is ID that will be your username and
+send kisses at a record rate yahoo.com
+and it has the click button that is this
+next button again it has an ID attribute
+whose value is login sign-in so based on
+that I have written these two statements
+and I have used a webdriver weight
+explicit way it is always achieved using
+webdriver weights okay it's a concept of
+the dynamic weight which weighs
+dynamically for specific conditions it
+can be implemented by the driver weight
+class it doesn't have any keyword like
+explicit weight as it has for implicit
+we can simply give webdriver weight
+Here I am creating an object of weight
+and I'm sending my driver that will be
+this I am giving explicit weight as 20
+seconds and then I'm creating a web
+element and asking it to wait until
+expected conditions as visibility of the
+element located by expert that is login
+username that will be or email box so it
+will wait until the expected condition
+says visibility of the element that is
+located by this XPath simple so save
+this and you can run the program and
+check the output so there are many
+visibility conditions like you have
+element to be clickable element to be
+visible URL to be located and many more
+as such you can simply give ctrl + Shift
+will get to know
+let's see how the output will be so it
+entered add you record Aradia who comm
+asking to move to next correct so as a
+deserve explicit wait we can change the
+timings accordingly but implicit wait
+one set cannot be changed as it is a
+global wait and it can be applicable to
+the entire program but for webdriver
+wait that is you explicit wait you have
+to creep on creating a webdriver wait
+for specific elements so it goes like
+that simple so these are some of the
+best practices for locators that is they
+are simple and small as possible and
+they work even after you change the
+properties of UI element and they work
+even after you change the properties of
+UI element around the element your
+target sounds much easier right so if
+you want to learn more about locators
+weights and XPath and more about the
+selenium basics you can check out the
+playlist for selenium videos and you can
+find and master all these things so
+that's all for the session on software
+testing tutorial I hope you got a clear
+idea about manual testing and automation
+testing as well and I hope you'll learn
+something out of it thank you and have a
+nice day I hope you have enjoyed
+listening to this video please be kind
+enough to like it and you can comment
+any of your doubts and queries and we
+will reply them at the earliest do look
+out for more videos in our playlist and
+subscribe to any rekha channel to learn
+more happy learning

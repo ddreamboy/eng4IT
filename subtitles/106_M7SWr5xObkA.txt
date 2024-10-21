@@ -1,0 +1,2563 @@
+hey what's up everyone and welcome back
+to another video so in this video we're
+gonna walk through a comprehensive
+tutorial on natural language processing
+in python i actually originally created
+this tutorial for the pycon conference
+and i've actually had it on my channel
+in the data science playlist but i've
+realized through a bunch of messages and
+youtube comments that not a lot of you
+have seen it so i figured i'd repost it
+on my channel i did film this video over
+a year ago but all the major concepts
+remain the same if you do have any
+troubles like installing a library or a
+package so let me know in the comments
+and i'll try my best to help as many of
+y'all out as possible a couple quick
+announcements before i get started i did
+just recently create a patreon and i
+also am starting to offer channel
+memberships here on youtube a bunch of
+cool perks and a great way to support
+the channel i definitely recommend
+checking those out i left a
+links to join in the description as well
+as a video i'll pop it up
+right here i think
+that you can watch to see all the
+details on the the memberships and what
+perks you get a lot of cool stuff uh
+exciting way to kind of engage with
+y'all a little bit more that's all i
+have hopefully enjoyed this tutorial
+time to travel back in time
+peace
+hey how's it going everyone and welcome
+to my pycon 2020 tutorial on natural
+language processing in python
+i'm bummed that i couldn't be there in
+person to share this with all of you but
+this online presentation is the next
+best thing so i'm excited to get started
+in this tutorial we'll kind of walk
+through so we'll start with the basics
+and kind of some of the more traditional
+nlp models and we'll walk our way up to
+some miscellaneous nlp techniques all
+the way up to these state-of-the-art
+language models
+like open ai gpt2
+so this tutorial is going to start with
+the basics it's going to start with kind
+of the nlp fundamentals we're going to
+look at
+basically how you can take text and
+convert it into a numerical vector and
+probably the easiest way to do that is
+what's called bag of words so i'll be
+the first model we look at we'll spend a
+little bit of time high-level overview
+of it and then we'll jump into python
+code related to it then the next thing
+we'll look at is a slightly different
+variation of how we can convert text to
+a numerical vector and that will be a
+word vector approach
+and we'll also see how we can use python
+code to implement models that use word
+vectors
+after we go through kind of the nlp
+fundamentals we're going to go through
+all sorts of different miscellaneous nlp
+techniques so we'll go through regex's
+basically pattern matching in python
+we'll go through stemming and
+limitization
+we'll go through some
+basic spell correction some basic part
+of speech tagging and we'll finish this
+tutorial off by kind of giving it a high
+level introduction to the
+state-of-the-art models that i i
+mentioned so this open ai gpt-2 model
+and more generally transformer what is
+called in transformer architectures so
+another big name one is bert
+so we'll kind of introduce and see how
+those came about and i'll show you how
+you can use python code to play around
+with those and build even more powerful
+models the first model we're going to
+talk about is called the bag of words
+model or also sometimes called bags of
+words model
+and to give you a little bit of
+intuition behind this approach i mean
+whenever we're doing any sort of data
+science a related task we like working
+with numerical vectors
+and obviously our issue with text is
+it's not a numerical vector so this bag
+bag of words approach is kind of the
+easiest way to take
+uh sentences and you know pieces of text
+and convert it into a numerical
+representation so imagine we have the
+four utterances i love the book
+this is a great book
+the fit is great and i love the shoes
+these come from two different
+types of categories at our retail store
+the books department and maybe the
+clothing department and we're trying to
+build a model to tell them apart
+well what we can do with the bag of
+words approach is it basically says take
+all the
+words that we see in all of our
+utterances and just extract out each
+individual word each unique word so that
+would give us
+i
+love
+the
+book this
+is a great fit and shoes
+take all those words
+and then
+based on what words what should which of
+these sentences have which of these
+total unique words
+we create a vector where one a one
+represents
+this sentence has the word and a zero
+represents it doesn't
+and so that's a basic approach of a
+binary bag of words model and so what
+does that look like in code well i think
+whenever we're building a
+bag of words model
+the easiest library to use is the
+scikit-learn library so we're going to
+extract a couple things from the
+scikit-learn library
+i'll make my text a little bit bigger
+from
+sklearn
+dot feature
+extraction
+dot text
+import
+count
+vectorizer
+and tf or sorry we'll just start with a
+count vectorizer so when it says count
+vectorizer this can be either a binary
+bag of words that we just mentioned ones
+and zeros it also could be if you
+imagine
+uh one of these phrases i mentioned i
+love the book
+the book was great if that was all like
+one sentence maybe a count vectorizer
+could also say that book appeared twice
+so it would be a rough a straight count
+of the
+uh word in the overall
+sentence how many times the word
+appeared in a sentence but i usually
+just tend to use a binary approach
+if you ever don't know how to find
+something like this if you know of the
+bag of words model but you don't know
+where to look to find it i just
+literally would do like a google search
+sk learning bag of words and you'll get
+to the scikit-learn documentation
+and
+through that
+you should be able to find some examples
+uh using
+a bag of words basically so here we have
+the count vectorizer that i just showed
+you and it shows us how to
+to utilize it so we might reference this
+a couple times as we do this
+so we have our count vectorizer
+um and
+above this i'm going to just real quick
+to find some training that rinses so i'm
+going to call this train axe
+i'm going to say
+let's use our examples i love the book
+as the first one i love the book
+this is a great book was the second one
+uh and then the last two were
+the fit
+is great
+and
+i
+love the shoes
+all right so that's our four training
+utterances we can imagine
+uh
+so the first thing we might want to do
+is utilize our cap vectorizer to
+transform this into a vector
+representation so once again i'm going
+to reference the
+documentation here
+and you know i know what i'm trying to
+do but i sometimes forget the syntax so
+this is why i always reference
+documentation like this
+uh so it looks like
+we want to use vectorizer.fit transform
+so vectorizer equals count vectorizer
+and then fit transform on our sentences
+so we can do that so we can say
+vectorizer
+equals count
+vectorizer
+vectorizer and then we can say our
+vectors are
+are equal to
+vectorizer
+dot fit transform
+train x
+and when this says fit transform
+it fits a dictionary around our training
+utterances so basically that's the first
+step in it's it's finding all the unique
+words so it knows how to make these
+vectors and then it's going ahead and
+transforming the utterances we pass in
+based on that vector that we just fitted
+so now we get our vectors
+so i could do like print
+vectors zero and it'll be the vector for
+um i love the book
+if this runs
+train x is not defined i need to run
+this cell too i'm using google collab
+right now to run this
+okay it looks good i might just do dot
+vector i think it is
+not found vectors
+let's just see how we print this out
+real quick
+uh
+oh i guess we could do
+two array
+to see how it actually looks
+we could also do
+vectorizer.getfeaturenames that looks
+helpful too
+so i'm going to print some things out
+i'm going to print out
+vectorizer.getfeaturenames
+and i'm also going to print out let's
+say
+vectors
+print vectors dot 2 array
+let's see what happens okay cool
+so
+our
+different words in this dictionary are
+book fit great is love choose the this
+and one thing to note is it looks like
+it actually uh stripped away the a so
+that might be just a feature of
+you know one word utterances it it
+strips away uh part of the
+way that this count vectorizer is
+implemented but if we look at the vector
+here
+let's look at the first utterance let's
+i love the book so
+we have a one here
+for
+book right we have a one here for
+the
+love right
+thus the second to last so we have a one
+there
+and
+i guess it's stripped away i as well so
+we don't see that but we get a vector
+representation other than the one word
+utterances where this vectorizer doesn't
+count and one thing to note is that i
+think by default if i made this i love
+the book book
+uh count vectorizer is non-binary so it
+actually matters how many
+times you type something in so if you
+wanted to you could do
+i think binary equals true
+here and now it switches back to ones
+and zeros
+okay so that's the basics of
+the bag of words just
+seeing it and making a very toy example
+of doing it let's build a quick
+model to actually classify
+these as being clothing related and
+these as being
+these first two being book related so
+i'm going to call something train y so
+that's going to be first one's books
+second one's books and whenever i have a
+repeated string like this
+i like to make it its own
+variable just so i make sure i don't
+actually like misspell it so we're going
+to make a class category real quick and
+just
+label books as one of the categories and
+that's going to be the string books
+and
+clothing as the other category
+and you'll see why i'm doing this in a
+sec so now when i want to
+i'm doing this in order so i have four
+things i'm going to give them their four
+uh labels in order so we have
+category.books we have category
+dot books and then the last two are
+about clothing so those are category dot
+clothing
+all right
+and i'm going to run that again
+run this again i guess and now we're
+going to build a simple classifier
+to
+just hide this print so you can see
+everything real quick
+um
+i built a simple classifier to
+classify whether these are book a book
+category
+uh and this is clothing and we can use
+it on new utterances
+so how do we do that
+well once again the scikit-learn library
+is very helpful in this
+and what a good classic uh
+classification model for text is often a
+linear svm so that's what we're going to
+use
+so we can do from sklearn import svm
+and then we can define our svm by the
+following
+i'm going to say classifier svm equals
+svm.svc
+with a linear
+kernel because i want to use a linear
+svm because it's i know
+uh just with my null like background
+knowledge that this is a good
+classification model for text often
+times
+and then with that
+svm we're going to do a fit
+on our
+training
+vectors which is right here these
+vectors because we couldn't just pass in
+the text so i'm going to call this train
+x vectors
+vectors
+and then our y labels which is just
+train y
+so this should fit a model to the four
+utterances we have here and ah we got a
+error i didn't rerun this so
+cool and then finally
+let's do the fun part and predict
+new
+utterances with this so i'm going to
+call this text x
+equals vectorizer
+dot transform
+so before we had to fit a dictionary and
+transform based on our training
+utterances now that we already have a
+vectorizer we can just do transform
+instead of fit transform and so i'm
+going to just say something like
+how about
+i like the book
+so
+based on what we have here because we
+said the word book you'd expect that
+this would classify as
+the books category so we can do
+classifier
+clf svm.predict
+on our testx and see what happens
+nice books
+that's cool let's try like
+i love the shoes maybe we say something
+like
+shoes are all right
+and wow that says clothing
+and obviously we only trained this with
+four utterances so it's going to be so
+powerful
+but
+um so yeah it's only gonna be so
+powerful but as we added more and more
+utterances to this our dictionary would
+grow more and more within this
+vectorizer fit transform and we'd get a
+more powerful model so the more training
+under instances we feed into a bag of
+words model oftentimes the better it
+does
+and i guess
+one of the caveats to that is
+you might build such a big dictionary
+that it might get hard to process like
+the model so another technique you can
+add in here and
+definitely sklearn offers you some
+ability to do this just maybe you only
+take the top 1000 words that occur
+so that's like another option
+another thing to know about bag of words
+is right now we are doing a unigram
+approach
+where we're just taking each individual
+word by itself
+but you could also do a bi-gram approach
+it's called which would
+categorize i love
+love the
+the book
+all as their own unique utterances so
+let's try to do that real quick let's
+see
+uh
+let's see what we have engram range
+that's probably going to help us
+so i'm going to type in endgram range
+because it probably will give me some
+more information about that
+equals
+oh so i'm gonna say one
+one and two to get i think both
+one words and two words so we can print
+this stuff out again and see if that is
+the case
+yeah so now you see we get
+two words
+as well so that we just now captured you
+bigrams as well
+and one thing to note about these
+diagrams one reason you might want to
+use two words in a row is let's say we
+were talking about if things were
+positive or negative
+well if i say something is great that's
+very positive but if i use a biogram and
+the word before great
+is not
+you know not great
+then that's a completely different
+sentiment so that's one way you know
+engrams are important and as you you
+know
+words depend on their context so
+uh
+you know adding additional words in this
+sometimes helps it could also be
+detrimental if you had too many words
+here in the endogram range
+you might have so many like random
+miscellaneous like three word
+phrases that only occur once in the
+entire set and it might actually skew
+the classifier off a bit so i'm going to
+just stick for now with
+just a single
+uh
+one unigram model
+and here's the final the final thing
+i'll say about bagger words before we
+get into the next model is here's the
+limitation is
+if we have a word
+that is not in our training utterances
+we're not going to know how to handle it
+so if i said something like
+i love the story
+well to us
+that's very similar
+you know to book and books
+uh
+but to our model we've never seen the
+word story so we might not know how to
+handle this so let's see what happens
+when we run this
+and here's the issue yeah it classified
+it as clothing
+even though it's obvious to us that
+story and book
+are very related and honestly i think
+even if we typed in something like books
+it doesn't know that book and books are
+the same because it has seen the word
+book
+right here but it's never seen books so
+it's like pretty dumb if it hasn't seen
+a word
+and yeah again it says clothing even
+though it's very obvious to us
+that book and books
+are the same so that's one downfall of
+bag of words is it's great on the stuff
+it's trained on
+but if it hasn't seen a word then it
+just fails miserably and you know that's
+not
+great when
+in the human language you know we can
+say different things in so many
+different ways
+so this leads us to the topic of word
+vectors and word vectors are another
+approach to turning text into a
+numerical vector and the big goal with
+word vectors is to convert text into a
+numerical vector that captures some of
+that semantic meaning in the vector
+space that you're mapping this piece of
+text to
+and what i mean by that is that imagine
+you have the words red blue and yellow
+these are all three different types of
+colors and what we're trying to do with
+word vectors is have in our we imagine
+you have this big like vector space we
+want the similar words to be mapped in a
+similar spot of that vector space so red
+blue and yellow would
+all be colors and should be mapped
+somewhere similar
+and there's many different approaches to
+training a
+vector to ultimately do this and one of
+the popular methods is called word to
+vec
+and word effect works in one of two ways
+usually there's two popular like most
+popular i guess ways to train in this
+word of act one's called continuous bag
+of words and one's called uh skip gram
+the different details of these two
+approaches isn't super super important
+but what is important is to kind of
+understand at a high level how they work
+so
+imagine we're going back to our kind of
+example of classifying between books and
+clothing related tweets
+so imagine we have the three phrases we
+say
+best book i've read in years we have
+great story and characters and we have
+no development of characters during book
+so these are three phrases related to
+books we can tell this pretty easily by
+reading these but how do we train a
+model to see that
+and what the word divac approaches do
+the continuous bag of words and the skip
+gram approaches is they look at a
+window of text
+so oftentimes that window might be
+you know five tokens long so best book
+i've read in so that would be kind of
+our context window
+and basically what we'll do is we'll
+selectively look at different tokens in
+that context window
+and based on that token
+we'll
+utilize the surrounding tokens
+to kind of figure out the context of
+each token and kind of start developing
+a meaning of each token and so
+translating that to this example
+we can start if we read enough text we
+can start to see relationships between
+words
+so for example here one relationship we
+might develop over time is
+book often appears close to read so now
+we can associate book and read into a
+similar spot of the vector space and
+this is ultimately going to be trained
+through some sort of neural network
+architecture
+for the most part so given our neural
+network architecture where you know
+our model is learning that book and read
+are close together uh in this next
+example you know great story and
+characters we might start relating story
+and characters
+together
+um
+and you know we'll see these together so
+we'll know that those are related should
+be similar uh
+vector space
+uh and then this last example no
+development of characters during the
+book well maybe we relate development in
+characters that's what our model is
+learning uh
+you know also it's probably learning
+that characters and book are related and
+and we can kind of start
+building out far like bigger
+relationships like okay we've seen
+characters in book here we know that
+those are probably related
+okay we go up here story and characters
+are often together so i'm guessing that
+story and book
+are
+probably related as well and
+this is a very toy example of what's
+happening with hundreds of thousands of
+like sentences being fed into these
+types of models and we're ultimately
+building up these
+word vectors out of that
+so it's one thing to talk about it let's
+start jumping into some python code to
+actually show you what that looks like
+and i think the best spot to
+easily utilize word vectors in python
+would probably be to use the spacey
+library
+so
+i whenever i'm like
+trying to remember how to do something
+like this you know i'm going to be doing
+a google search
+finding some sort of information on how
+i use
+a spacey and use the word vectors they
+offer as you can see we're probably
+gonna have to download some
+uh
+word vector model because we're not
+gonna train this from scratch we'll use
+what's something that's already been
+trained
+uh
+and then we can kind of follow along
+like this it looks like
+okay
+um
+yeah you can look through here maybe you
+look through
+the actual documentation but space is a
+good place to start and let's start
+implementing this
+okay so
+we're gonna need to use the spacey
+library before we can use the spacey
+library we're going to need to
+download that language these these train
+vectors so i already did that previously
+so i'm going to just go ahead to the top
+of my
+google collab file and this also
+probably should work with a jupiter
+notebook or whatever you're using or
+your your browser if you might need to
+do like a pip install here but i'm going
+to insert a code cell and i want to make
+this above i'm just do a couple
+installations of things that i need here
+because by default the google collab
+that i'm using won't have the spacey
+language model that or the spacey word
+vector model
+embeddings that we need so we're gonna
+have to install those so
+in here i can do pip install spacey so i
+think space is already installed but
+sometimes you need the most up-to-date
+version and i think this will help us do
+that
+and
+we're going to do python-m
+spacey download
+we're gonna download the medium sized uh
+embeddings
+but as we can see in this dock that i
+walk through
+there's also a large model but that
+might take a bit long to download but if
+you want to try some more powerful word
+vectors maybe try that large model okay
+so i'm going to run this
+it's downloading
+okay so we've downloaded it and one
+quick note is sometimes if you're using
+google collab
+and you do this you might have to
+restart the runtime before
+uh changes take effect like imagine you
+already imported spacey uh i don't think
+that spacey would recognize that this
+model is here unless you restart that
+runtime so
+i just did that to be
+doubly sure so import spacey that's our
+first step
+okay it looks like
+it uh imported properly
+and now what we want to do is load in
+that
+we're going to call nlp
+that uh word embeddings model that i
+just downloaded so n core
+web
+medium size so let's see if this works
+hopefully it does we only need to load
+this in once and then we'll stay in
+memory
+and like if you're not remembering how
+to do this i always like to remind
+people literally just do a google search
+word vectors spacey documentation
+the article i was looking at was in the
+actual docs you could probably actually
+find
+the docs here and that will give us yeah
+look at this this gives us some nice
+examples right there and that makes it a
+lot easier than trying to
+figure it out from memory
+so let's see
+[Music]
+i want to see a
+actual value looks like
+vectors or values
+i think i can do dot value and get my
+vector
+all right
+okay
+so what we're going to do here is
+basically we need to take text so
+we can if we want to use the same text
+from above so i'm going to just rerun
+this cell
+so now we have all these examples that
+we were using previously with our bag of
+words model so that's called train x
+and now i'm going to say our docs
+equal basically we're going to need to
+convert
+if i can see the initialization here
+i look up one more time word vectors
+spacey example
+i just want an example to see how i can
+do things
+spacey 101
+looks like i already had clicked this
+next one no
+this one right here so let's try this
+okay look at this
+yep there we go this is nice it's
+showing us how we can
+make this a little bit bigger so you can
+see
+this is showing us how we can get that
+vector if we pass in dock and all p
+do vector then we get
+a vector representation and did that
+let's see
+oh maybe the doc container
+had the information here in the docs
+vector vector vector vector i want to
+find it here
+okay here we go
+yeah a real valued meaning
+representation defaults to an average of
+the token vectors so basically if we do
+nlp of our phrase and then do dot vector
+it's going to take all the individual
+word word embeddings
+and
+average them together
+so that's i think what we ultimately
+want if we want to build a model around
+this
+um and also to note that these word
+vectors are usually hundreds of
+uh they have you know a dimension one by
+like several hundred so they they're
+pretty big but uh they kind of have to
+be to capture the information we need
+okay so docs are going to be
+nlp
+of text
+for text in our train x that we just
+defined
+and now
+each of these
+items in this docs list is a
+word vector representation of our
+sentences that we defined
+above
+here
+so i love this book this is a great book
+the fit is great i love the shoes
+and just so you have that
+here it might be helpful for me to just
+print out
+train x so i can remember that
+um okay so that's what we're ultimately
+converting so now if i print out
+docs
+you're gonna see that it's
+um
+oh i guess it keeps the
+if i print out docs dot vector
+or oops
+if i print out let's say
+the first
+docs vector
+gonna see it this is the word embedding
+representation the average word
+embedding for each of the words in i
+love the book
+so that's cool we did that pretty easily
+using spacey and a couple lines of code
+uh and now that we have this
+okay so now that we have this let's
+build the same model that we built for
+the s uh the back of words model for the
+spacey model
+so we can define a classifier again
+and i'll define it like this
+so we're going to define a classifier
+i'm going to give it a slightly
+different name i'm going to say
+svm and i'll give it
+wv for word vectors at the end just so
+we can tell these apart
+and we want it to not fit to the train x
+vectors anymore but we want to fit to
+we'll define a word vector
+word vector
+vectors we'll say
+i'll just call them
+train
+x word vectors just to separate a little
+bit from the
+other word vectors and that's going to
+be
+a dot vector
+x dot vector for x in
+docs
+so we're just getting all of those as a
+list
+so now we're going to pass that into
+our fit
+and the the y
+labels stay the same as above
+books books category clothing clothing
+all right
+so i let's see what happens here we're
+fitting this
+run this again run this again
+svm is not defined okay i need to
+re-import svm from scikit-learn
+cool i think there's one other thing i
+needed to reimport
+uh
+[Music]
+nope i think we're good
+okay so we have our model and now what
+happens if we
+try to predict
+some
+novel utterances
+so to do this we can pass in
+nlp of a phrase so how about i love the
+book we'll just do that again here
+and then we'll have to grab the vector
+for that
+what's going to happen here
+oh
+trying to do too much in one spot
+so instead of doing that i'm going to
+say
+test x
+word
+vectors
+equals
+well
+i'll also define a
+test
+docs
+that's going to be equal to
+trying to do a lot here
+sorry i feel like this is simple but as
+i do this live it's uh
+sometimes tough so test is going to be
+equal to
+is equal to
+a list of words so let's just say i love
+the book test docs now is the nlp
+representation of test
+x or
+text
+for
+text in
+for text in
+test x and then finally the word vectors
+are going to be
+um
+x dot vector for
+x in test docs
+uh cool so now we can predict
+test
+x word vectors
+cool
+sorry i i was trying to simplify it too
+much and as a result
+no
+oops
+so close uh how did i keep getting
+double things here
+okay
+i love the book
+works as expected i mean that was an
+exact take from here so that recognizes
+books but now let's try to find the
+power of
+of word vectors
+and let's type in something like
+i love
+the story
+and we're hoping that story and book
+have a similar word vector
+representation so that when we do this
+averaging
+when we do this nlp text which basically
+averages all those word embeddings
+together and actually get the vector
+value of that average embedding
+that
+we get a books classification again
+there we go look at that i love the
+story gets books as well and now let's
+try testing out some things for clothing
+related so i love the shoes works so if
+this is properly capturing the semantics
+you should be able to say something like
+i love the the hat and hopefully that
+says clothing
+look at that cool
+i love
+the hats that should also be clothing
+i love the books even though we haven't
+seen books exactly and now knows that
+book and books are more related because
+it's seen those in similar context
+windows
+and yeah there's all sorts of cool stuff
+that we can do with this you know these
+earrings
+hurt or something
+and already with just four training
+examples because there's so much power
+baked into
+the
+spacey word embeddings the word
+embeddings in general even just with
+this medium-sized model that
+we can already predict a lot of things
+correctly
+just by knowing that you know semantic
+space and i think this like word vectors
+are so cool and this concept is so cool
+that we can
+do so much with language like this so
+this gets me really excited um
+i guess before i end this little seg
+section uh there are some drawbacks to
+word vectors they're not a cure for
+everything
+i think one thing you'll see is that it
+worked out pretty well for us because we
+only had
+two categories we only had books and
+clothing but if we were trying to use
+word vectors by themselves and i think
+at the exercise at the end of this
+tutorial we might see this
+um
+if we were to say use 10 different
+categories and instead of these phrases
+being like four words they were like
+50 words then when we're trying to
+capture a a
+embedding
+for the entire sentence we're averaging
+together like 50 word individual word
+vectors
+and the actual meanings of all these
+individual words might get kind of lost
+in that averaging process so sometimes
+they're not quite as precise as maybe
+using bag of words in that case because
+things get kind of mixed together
+another drawback of the standard word to
+back word embeddings is
+uh this is a little bit different than
+the context that we're worrying about
+but imagine we
+were trying to
+get some sort of meaning for the word
+check
+so
+i went to the bank
+and wrote a check
+so that's gonna the check in this case
+is gonna have a specific meaning but if
+i also had another
+word embedded another sentence that was
+let me check that out
+check and let me check that out is very
+different than writing a check
+but the word vector is going to be the
+same for both of those so you do get for
+words that have multiple meanings you do
+get a little bit of a messiness because
+both their meanings are kind of try to
+are captured in the training process and
+ultimately
+part of those meetings are probably lost
+so
+word vectors are very
+cool uh pretty powerful but they don't
+solve everything
+and
+ultimately left a lot of room for
+improvement that it was ultimately
+a lot has been developed recently as i
+kind of mentioned at the start of this
+tutorial
+all right in this next section of the
+tutorial we're going to kind of do a
+rapid fire overview of a bunch of
+different nlp techniques that are good
+to add into your nlp toolkit and so the
+first technique we're going to look at
+is using regexes
+so regexay regexes are pattern matching
+of strings and they're not a python
+specific concept but we can definitely
+effectively utilize them in python so
+real quick i'm going to start with a
+quick overview of pi of regex's
+uh basically the way you can think about
+them is
+you could have all sorts of different
+types of phone numbers so like one two
+three one two three one two three four
+would be a valid number you know maybe
+a different set of numbers that's the
+same format
+um
+five five five five five five five five
+five five would also be another valid
+phone number
+maybe you want to
+write it a little bit differently and
+maybe do like plus one
+dash
+parentheses one two three dash
+two
+these are three different ways to write
+a phone number but they're all like
+technically valid ways to go about it so
+one way we could use regex's is
+pattern matching on like figuring out if
+something's a telephone number or not
+and so like in this case one thing we
+could see
+is that it
+has three digits followed by some sort
+of punctuation or maybe no punctuation
+followed by three more digits followed
+by uh four digits
+and basically we could define a regex
+for that and similarly for this like
+last one
+you could define in your reg x that it
+could have a plus one or plus some
+number optionally and so regix's allow
+us to
+easily capture
+these different types of patterns and
+effectively add this into kind of like
+code that we're writing so you know
+phone numbers writing reg x's for phone
+numbers is one thing it also might have
+like a password checker where if you're
+like logging onto a site they say oh you
+need one symbol
+one character one uppercase character
+and a number in your password and it has
+to be plus 10 10 digits or more a regex
+can help the people implementing that
+site on the back end make sure that your
+password meets those specs
+emails formats another thing so i think
+the easiest way to get into regex is to
+just start right away with an example so
+i'm going to say as the example is that
+say we want to match a string that
+starts with the letters a and b
+and they can have in between in the
+middle of the string it can have any
+number of characters it doesn't matter
+how many characters it has as long as
+there's no white space so we don't want
+any white space in what we're trying to
+match and then it needs to end with the
+letters cd
+so whenever i'm going about working on a
+regex i usually will start looking at a
+like regex cheat sheet to just remind
+myself of what we can do with regex so
+i'll link this in the github page
+for this tutorial but a page like this
+has all sorts of useful tidbits
+so
+ultimately what we're going to want to
+do is
+have like exactly
+a or b so
+or exactly a b which is going to be a
+group
+followed by any number of characters so
+if you see it there's this special dot
+uh or period that's any character except
+new line so maybe we will utilize that
+and then there's these quantifiers so if
+we
+could have zero or more one or more
+zero or one we can use these quantifiers
+and there's some other stuff too like
+word boundaries is useful but let's try
+to write a regex for the case i just
+said so
+i'm going to the site regex101.com
+and
+it actually has the flavor you can test
+so i clicked on python so what i said is
+it needs to be a b to start
+followed by any number of characters
+which is period
+and then it doesn't matter how many
+there are
+so it can be the star that means
+uh
+it can be zero or more followed by c d
+so that's like the basic
+implementation as we can see if i do a b
+e e c d
+it matches if i do ba
+all of this followed by x or something
+it's not going to match that one because
+it doesn't start with a b and it doesn't
+end with cd
+continuing on i said that there couldn't
+be any white space so let's see if a b
+space cd works and that does work so now
+we need to fix our regex to disallow
+white spaces going back to our cheat
+sheet we see that there's this
+not character
+not a b or c so we can utilize that
+along with
+um
+white space this character class so we
+can do
+forward slash
+forward slash s
+to do the white space we're going to do
+in this
+brackets we'll do not white space
+so let's
+go back to here so instead of dot star
+we're gonna do
+brackets not
+slash s
+close bracket and then one or more of
+that
+and so now we see that this works but
+this one now doesn't because it has
+white space in the middle
+if i remove that white space it's now a
+match
+that's pretty cool
+one thing to note here is i could do
+something like
+uh
+x x a b c d x x
+uh
+and that's still saying
+it's
+a
+match or at least like it's saying the
+line is a match because that's included
+if we wanted to make sure that it's
+exclusively
+uh
+this to start the line in this end line
+we can use a couple more special
+characters so this is the end of a
+string
+and this is the start of a string
+this is used without the brackets and it
+means start of string but if it's used
+in here it means not
+so we can add that so start of string
+followed by end of string so now this
+one doesn't match
+at all
+and that's the solution to that little
+exercise so what does this look like in
+code well we can quickly
+go to our google cloud file we can
+import the regular expression library
+which is just
+re
+in python
+and we can start out with our
+regular expression which we can define
+to be whatever we want so if we were
+defining the one i just described it
+would be
+carrot a b
+followed by
+not
+white space
+star
+and then followed by cd followed by the
+end of line so now we compile that to
+allow python to know that that's a
+actual regular expression
+and oftentimes when we're defining
+regular expressions in python we use a r
+in front of it just to
+help us highlight and help us know
+and then we want to do if we want to see
+if something has that we could say here
+are like
+tests
+or our phrases
+abcd
+xxx
+a b
+x x x c d
+a b space c d so only the first and
+third
+should match so if we wanted to check if
+something matches we can do
+for phrase
+in phrases there's gonna be two main
+functions that we're gonna use when
+we're checking for matches i'm gonna do
+a regular expression.match we're gonna
+pass in first our regular expression and
+then we're going to pass in the phrase
+that we wanted to see if it matches
+and if it does match i'm going to make
+this a conditional thing so if
+the regular expression matches then i'm
+going to have it append to a list called
+matches
+the phrase
+so we'll have to find the matches list
+okay
+and then finally
+print matches
+run
+okay so as you see as we expected the
+first and third match
+now here's something interesting
+let's say
+we took away the
+requirement of this happening to be the
+first and last thing in the line
+and now we added something like aaa
+in front and then ccc
+if we wanted to just check if a regex is
+in an entire string so here we do have
+it in the string but it's not the start
+it's not the entire thing there's places
+in this that don't match
+if we rerun this code
+you'll see that this regular
+expression.match function no longer
+uh
+says true on this one right here
+so the other main thing we're probably
+going to use when we're searching text
+for regular expressions is re.search
+and as you can see now it still matches
+those those two
+and quickly just to kind of apply this
+to our toy example that we've been doing
+imagine we wanted to create a regular
+expression that matches read
+story
+and book maybe we were making some sort
+of hard-coded rule
+to
+we were making some sort of hard-coded
+rule to
+find if something's in the books
+category
+so
+i liked
+that story
+um
+i like
+that book
+um
+this hat is nice
+as you can see this regular expression
+this is the or sign it counts those
+one quick nuance if we wanted to make
+our
+our regex more complicated is that i
+could try to trick this and say like
+history
+like
+uh
+in instead of read i can maybe say
+uh
+i
+the car
+treaded
+up the hill i don't know if that makes
+sense but you can see that read is
+inside of that but it
+uh
+is not actually referencing the word
+read
+we'll notice that still
+matching those things so one thing
+that's useful to know about is this word
+boundaries
+character within the reg x so
+forward slash b
+means it needs to be
+between word boundaries
+and now watch what happens when i run
+this again no matches
+so
+it now knows that story has to be by
+itself and one thing that's nice too
+with that uh
+slash b format is that
+you can have a period or something at
+the end it knows that that's a word
+boundary uh so that's like one way we
+maybe would apply it to our example that
+we've been working on but there's so
+many uh
+use cases for regexes
+all right next we're going to quickly
+look at stemming and limitization in
+python and these are two techniques to
+normalize text and what i mean by that
+is that in our first example with bag of
+words we saw an example or a problem
+where
+when we trained the model with the word
+book
+it didn't know the words books even
+though to us that's very straightforward
+so one example of what stemming and
+limitization will can do is take books
+and kind of reduce it down to a more
+canonical form of book
+and it can do like several different
+things so imagine
+these techniques could help you turn
+reading to read
+books to book stories and now here's
+where a little bit there's a little bit
+of a difference stemming follows an
+algorithm and is not guaranteed to give
+you a
+actual physical
+true english word so it might reduce it
+down to story whereas for levitizing it
+would take stories and it actually is
+using a dictionary making sure that
+everything in outputs is an actual word
+so that would output story there so how
+do we use this in python well i think
+the library that's
+uh easiest to you ah what did i do
+um
+the library that's easiest to
+access stemming and alignmentization is
+probably the nltk library
+we'll use the ltk library
+okay so first off we're going to need to
+import ltk
+and that nlt
+nltk stands for a natural language
+toolkit
+i don't know i'm trying to do too much
+import nltk and we're also going to need
+to do
+is
+import a couple or download a couple of
+things for nltk and this should work out
+of the box i believe
+if you just do nlt you get download
+so we're getting stop words word net and
+i think the stop words is going to be
+for my next example i don't know if
+we'll need that for the stemming
+limitation
+section all right downloading all that
+and now let's go ahead and start with a
+stemmer
+so
+to
+uh
+get a stemmer i recommend importing two
+different things i recommend importing
+tokenize library which basically can
+take a sentence and break it into its
+individual words
+as well as the actual stemmer and we're
+going to use the porter stemmer for this
+example so i'm going to alt key
+nltk.stab we'll import the porter
+stemmer and now let's uh go ahead and
+initialize that stemmer
+and now we can just type in like a test
+phrase so
+reading the books we'll say
+and
+to
+first we'll need to tokenize that
+because if we just try to stem
+but just try to
+i do stemmer.stem this is all you have
+to do to stem with the phrase
+it doesn't
+know how to process this because this
+algorithm expects a single word
+so we're going to have to tokenize it so
+we can just say words equal
+word tokenize of our phrase
+and now we can just do
+stemmed words we're gonna do this in a
+for loop so that for word in words
+we're going to stem the word
+stemmer.stem of the word
+and we're gonna append that to our
+stemmed words
+okay
+and now we can do a join by spaces
+of the stemmed words
+as the final thing so we started with
+reading the books and the stemmer now
+got us down to reading the book and this
+immediately can be seen to be very
+helpful for like that bag of words model
+that we built earlier where if you
+didn't have many training examples if
+you did stem the training examples you
+did have and stemmed any incoming phrase
+that you didn't hadn't been trained on
+it would probably help improve accuracy
+there
+a couple examples to see so if i did i
+said stories was one that was a little
+bit weird see how it
+stems it to story
+so it's not guaranteed to have a word
+and sometimes you'll get
+collisions on two words that aren't
+necessarily similar so there are some
+drawbacks but it's a nice little quick
+trick to have
+i think i just want to check something
+with that whole tokenization
+one thing to note is that you also might
+want to like strip out your punctuation
+or handle that a little bit separately
+if you're trying to return a phrase that
+makes sense because as you can see right
+there it uh
+at least the way i define this you have
+to be a little bit tricky because when
+you tokenize this i print out the words
+it treats the punctuation as its own uh
+own word
+all right moving on to lemmatization
+um
+let's now
+from nltk.stem
+import
+the
+word net limitizer so this is using this
+corpus called word net to help
+um
+reduce these words to a more simple form
+all right
+um
+so pretty similar to the last one we
+could just do lemmatizer equals wordnet
+lemmatizer
+and
+same thing for the example as before
+we need to tokenize whatever phrase we
+use
+oh my god i didn't mean to copy the cell
+no
+delete this
+i just wanted to copy this part
+all right so
+reading the books let's see what happens
+if we um
+i'll copy this too
+no not the cell just the
+piece
+and this will be
+lemmatized
+ties words
+uh dot
+and it's pretty straightforward instead
+of stem it's lemma
+ties that's 2ms
+the word
+and
+let's see what happens here
+print
+lemmatized or i guess we'll do
+we'll join again dot join of limitized
+words
+all right run that
+what's gonna happen reading the book
+okay hmm it's a little bit different
+than our above example it turned it into
+read the book and here's one
+thing that's a little bit trickier about
+using the lemmatizer with nltk
+is it expects
+for each of these words it expects the
+part of speech and by default it
+says that each token is a noun by
+default so that's why i converted books
+to
+a book but not reading to read if i
+instead said these were all
+verbs we'll see that it is read the book
+i guess that's interesting uh it still
+made books book
+um
+is it books he book yeah i guess like if
+you think of books as a verb
+he like
+he books it
+that would be book that makes sense uh
+so i guess there is a verb books but
+yeah the one caveat is you for trying to
+effectively utilize this sometimes you
+have to do some sort of part of speech
+tagging which i believe i'll get to in
+the tutorial
+um
+and then maybe utilize that part of
+speech tag here to like truly reduce
+down all the words but it might be also
+helpful to just reduce down all your
+your noun phrases or all your verbs
+um so that is lemmatizing and we'll
+we'll move on from there
+uh next while we're still looking at
+nltk we're going to quickly go over stop
+words and basically stop words are the
+set of english words that are kind of
+most common and sometimes we might want
+to strip those out
+of our phrases because they don't add
+much
+meaning to our sentences
+so a couple examples of stop words might
+be this that he it
+the these them
+those types of things so we can easily
+do this in
+nltk
+so here we go
+okay so we're going to continue using
+nltk we've already imported it at this
+point and we're going to do
+actually maybe just for help will be
+helpful is if i copy in this just in
+case people run these independently
+uh
+paste in that and then we're also gonna
+have to
+copy in the
+actual stop words so we're gonna import
+stop words
+and here we go so our stop words are
+gonna be
+um
+i don't want to stop words because
+otherwise i'll overwrite this import of
+stop words so
+i'll just say stop words
+equals
+stop words
+dot
+words and then we have the passion that
+we want english i believe
+actually maybe it would
+work without doing english so let's uh
+print out stop words
+i think it's oh i guess
+i guess you do have to specify english
+because i don't know what that means
+uh cool i me my myself we
+and i'm curious how many of these are
+there so length of stop words
+uh 179 so there's 179 words we might
+want to
+extract out and this just gives us a
+nice easy interface to do it so what we
+could do is we could have a phrase just
+like before
+so here is an example
+sentence
+removing
+stop words
+i'll just say demonstrating
+the removal
+of stop
+words
+so that's the phrase to begin with and
+now
+we will
+tokenize that just like that we did
+before so our
+words will equal word tokenize of the
+phrase
+and then forward in words
+well
+i guess our
+stripped phrase i'll call it that
+equals
+um
+so if word
+not
+in
+stop words
+then we can append it to the stripped
+phrase you probably do this in a list
+comprehension too so whatever you prefer
+uh word
+and then we can do
+dot join of the
+words or we could just keep this as a
+list because i guess it might not fully
+make sense as a strip phrase
+uh
+we'll we'll join them anyway uh join
+stripped
+phrase
+okay here example sentence demonstrating
+removal stock words so is and
+the
+of we're all removed as stop words and
+how this could help us is going back to
+the
+word vector model from above
+um
+if we maybe
+said something like i went to the bank
+and wrote a check
+you know we might get bogged down by
+some of these stop words in the actual
+meaning of this as we
+average together those word vectors so
+removing the stop words might give us a
+little bit more precise uh capturing of
+meaning in something like this that's
+just one example there's other examples
+where uh
+removing stop words is helpful
+next we're going to do kind of a rapid
+fire round of the rapid fire round and
+i'm going to just quickly go through
+another library called text blob that
+allows you to access all sorts of
+different uh nice little things with uh
+language quickly and it builds off the
+nltk library
+and it gives provides like a really nice
+interface for doing a lot of different
+things
+so i'm going to just say
+various other techniques
+and we'll look at
+spell correction
+uh
+sentiment
+and
+let's say
+part of speech tagging
+all right so when you're wanting to use
+this text blob library i recommend
+actually just
+looking at the
+reference
+and i will make sure i link this and
+that resources.txt i mentioned would be
+on my github
+but
+it's very straightforward one pager that
+has all sorts of nice things that you
+can do so from text blob import text
+blog that'll be our first line as you
+can see you literally just taken a
+phrase
+and right here b dot tags we've already
+done part of speech tagging you can do
+like dot noun phrases dot words
+dot sentiment uh
+do all this stuff
+with like one line like just a single
+dot something
+so the first one i wanted to look at was
+the spell correct and where is that
+correct here we go
+so let's go to the code from
+text blob
+oh shoot
+from text blob
+import text
+blob cool
+okay so whenever we do anything with
+textblob uh what we're going to want to
+start with is just
+basically making our phrase a text blob
+object
+so we're going to go
+phrase
+and say whatever it is
+equals this is an example
+and then what we're going to want to do
+is
+um
+just do
+we could even just surround this
+or i'll just say
+tb phrase so text blob phrase or
+converting it
+as text blob
+and then phrase
+okay and now with tv phrase we already
+can do all sorts of nice things so the
+first thing i mentioned was spell
+correct so tb phrase dot correct is all
+you have to do to spell correct that
+this is an example
+what if i said this is an
+example and use two e's
+see it's still this is an example if i
+use like two eyes here probably will
+still think look at that it's correcting
+this
+very quickly and when i mentioned that
+original goal of this tutorial was you
+know taking tweets and processing it you
+can imagine that a lot of tweets are
+misspelled and have this so being able
+to in
+uh you know we could easily make this
+two lines of code
+uh actually even a single line of code
+if we really wanted to get fancy
+do spell correcting on a phrase that's
+pretty pretty helpful so what else can
+we do with text blob well i mentioned
+you could do part of speech tagging
+so
+i'm going to go back to our reading
+examples so
+i read the book
+so
+obviously we don't have any spelling
+errors there
+but one thing we could do is get the
+parts of speech and i just have to do
+dot tags to do that
+ah okay what do we say
+uh looks like you're missing some
+required data for this feature
+okay so i'm going to real quick add this
+to my
+google cloud file and just like i
+downloaded some stuff earlier
+i will run this
+cool it's done
+and now we should be able to do part of
+speech tagging list object is not
+callable
+it might have been just dot tags it
+might already be baked in look at that
+uh so we have i which is
+a noun we have read which is the verb
+we have the
+which is
+whatever dt stands for and then a book
+which is another noun
+and
+um
+if you just look up like part of speech
+tagging
+you probably will
+find information on the different
+variants
+and so this
+i'll link this in my github i found this
+page as a helpful resource
+to
+learn about the different things that
+you see so you we did see okay like dt
+is the
+what do these things actually mean
+um
+adver like we can just kind of look
+through this and help us
+find so this is a determiner the dt uh
+now known as a singular now known s is
+plural
+so yeah this has all sorts of uh
+useful information right here so i'll
+link this if you want to know more about
+the tags here another cool thing is
+we can do dot sentiment
+um
+you might have to do a sentiment like
+this
+let's see go back to the reference
+yeah it's just not sentiment okay
+um
+so
+the book was great
+polarity 0.8 so high numbers here
+are going to mean positive but if i say
+the book
+sucked
+it was so bad
+right there
+we see that has a negative sentiment
+because this is a you know negative
+value here in the polarity
+um
+the book is another example the book was
+horrible
+another negative example here
+um so you can look into the details of
+the sentiment to see that but yeah
+in this api reference for text blog
+there's all sorts of really accessible
+easy things you can do so it's another
+great resource
+to utilize and i just want to make the
+point of
+one of the main goals of this tutorial
+is to show you all these different
+things you can use so you can kind of
+build upon this knowledge and apply it
+as you see fit and your
+own tasks that you are working on
+all right so moving towards the kind of
+state of the art
+models in natural language processing i
+wanted to start with recurrent neural
+networks
+uh so
+if you remember back to word vectors one
+of the issues that we had with them was
+that they were
+kind of set in stone and once you've
+trained uh your word vectors uh no
+matter what way you utilize a
+word inside of a like bigger phrase that
+word vector that you've trained is the
+same
+so we don't have kind of context
+dependent word vectors when we're just
+using a preset trained of preset a
+pre-trained set of word vectors out of
+the box so immediately
+recurrent neural networks can help us
+kind of solve that problem so here i
+have a diagram of a recurrent neural
+network and so basically how a recurrent
+neural network would work with language
+is we would feed in words into the
+network one at a time so we would have
+[Music]
+something like you know the word check
+come into our network and so that would
+come in
+uh
+the network would process it and produce
+a hidden state based off of it and also
+feed that hidden state
+to the next
+you know
+layer of the
+recurrent neural network so maybe the
+next word is
+out
+and so that now we have check and out
+all feeding into the same
+network
+basically
+we can do this as much as we want
+we're always feeding the output from the
+last input back into the network
+so we have check out the
+book
+so
+basically
+you know we're feeding this in and
+creating some sort of at the end of book
+we'll get some sort of final hidden
+state and we can use this hidden state
+in
+nlp applications
+and so what's nice about this is if we
+had another phrase that was write me a
+check
+well the
+way that check was used here is at the
+start of the sentence there's no other
+words around it
+and you're going to get a different kind
+of embedding for this check than you
+will when it says write me a check
+based on the context of write me a you
+know the embedding this final hidden
+statement be more related to banking
+versus check out the book would be kind
+of a more uh related to
+a hidden state that more represents
+check as in check it out
+uh so that's like a little toy example
+uh but that's ultimately like one of our
+goals with something like a recurrent
+neural network uh but the current neural
+network you know for a while this was
+kind of the go-to to build all sorts of
+state-of-the-art
+language models
+but it did have some drawbacks which
+ultimately got replaced by like the
+openai gpt2 model i introduced at the
+start of the video and some other
+other types of models so what are those
+drawbacks well
+the first one i would say is that
+the long dependencies don't always work
+well with a recurrent node network so
+imagine you have the sentence like i
+need to go to the bank today so that i
+can make a deposit i hope it's not
+closed
+uh while we are feeding in we would be
+feeding in each of these words to the
+network and like always that hidden
+state would have had some influence from
+each of these words
+by the time we get to closed
+a word like bank is pretty far away
+so in the final output embedding that
+hidden state it might not be clear to
+the network that the thing that we're
+talking about that is closed is the bank
+because it's so far away in this
+sentence so that's one drawback with
+recurrent neural networks another
+drawback is more on my performance side
+of things is that because we're feeding
+these one token at a time
+the sequential nature of that makes it
+tough to
+paralyze the training and utilization of
+rnn's and in language models sometimes
+and you know we can't as effectively
+utilize modern gpus
+right so that leads us into
+attention and a big paper that came out
+was called attention is all you need and
+this kind of set off a
+whole new wave in natural language
+processing
+so what is the difference with attention
+well basically you can feed in a phrase
+and
+as you iterate through the tokens in
+that phrase and
+you can basically
+figure out what needs to be attended to
+so if you like walk through this
+sentence i need to go to the bank and
+write a check
+well
+you know right when we get to the word
+when we get to the word check let's say
+we're feeding these all in and this is
+all being fed in at the same time uh
+using these positional encoding so it
+doesn't have to be one after the other
+but basically
+if you get to a word like check
+well we can it will probably spike off
+right and bank as like relevant items to
+check
+uh i need to go
+go might like set off if you're looking
+ahead uh bank might be triggered as like
+an important indicator to go
+uh
+etc so basically we're based on what
+word we're
+looking at
+our network kind of
+learns to
+attend to other words and figure out
+what's most important
+given a certain token that we're looking
+at
+and to kind of bring that to a high
+level the network we can kind of think
+of
+learns to ask questions
+uh
+about phrases it sees and these are not
+you know
+they're not actually asking you know
+human questions but baked into these
+attention networks they're basically
+looking at each token asking all sorts
+of
+questions on that token
+and learning
+based on that token what else is
+important in the phrase and this is a
+super powerful technique and also this
+attention can work at a longer range of
+dependencies
+than in our traditional rnn so this set
+off all sorts of really impressive stuff
+in the nlp world
+so
+the sort of video i mentioned the openai
+gpt2 architecture
+um one thing to note about that is its
+uh forward nature so basically the task
+that this is trained on is language
+modeling so give in some words what are
+the words that are coming after it
+and that's why it was really good at
+being able to auto complete like a story
+and when i typed in a phrase it could
+utilize the fact that it's been trained
+on figuring out and predicting what the
+next word should be based on what it's
+already seen
+um so let's open aigp
+gpt
+then there's this elmo network that's
+also listed here i just wanted to note
+this one i don't know as much about elmo
+network but one thing to note is that it
+uses lstms and it's
+kind of the core
+of it
+and an lstm is a type of recurrent
+neural network it's supposed to handle
+long longer dependencies a bit better
+but still compared to
+attention
+and actually
+and actually uh i
+wrote the header as this as transformer
+architectures but elmo's not
+technically a transformer architecture
+it's just another powerful language
+model
+um
+and then finally what we're going to
+focus on right now is burt which is a
+bi-directional
+transformer architecture and as a result
+of it being bi-directional it uh
+really captures a lot of
+very impressive things about language
+that even like the open a gbt model
+can't so we're going to just look at how
+we can use python to interact with the
+bert model real quick
+okay so to do this we're going to use
+spacey again
+so
+i'll link this article on my github page
+but basically spacey provides us with a
+really easy way to interact with
+transformers
+and if you just follow this link
+basically it gives you all the lines you
+need very quickly to get up and running
+so let's utilize spacey real quick
+um so the first two things we're going
+to need to do is pip install trend
+spacey transformers and python-m spacey
+download this model
+okay
+so
+ah i want to make a a title not an
+italicized title um
+transformer architectures i'll say
+all right so
+we wanted to download this large model
+and we also wanted to do a pip install
+of spacey transformers
+and what these uh exclamation points
+mean i'm pretty sure is that this should
+only
+this cell should only be run once within
+uh
+google collab so we don't accidentally
+download
+the model again
+okay downloaded and
+took a little while but
+ran successfully cool
+all right and now how do we actually now
+that we have it downloaded we can go
+back to that article and see how we can
+actually use it
+uh it looks pretty straightforward uh
+and you can if you're using a gpu you
+could
+utilize these lines of code
+and you'll note some details about that
+i'm going to just i'll copy this in real
+quick
+i think all i need
+is going to be
+i'm not going to use this right now i'm
+not going to use my gpu
+don't think we need an ump right now so
+i think you need to import spacey and
+torch and it should be good and then
+we're loading this large bert model and
+one thing to note about
+when we're using transformers we're not
+going to train it when we're using like
+bert model we're not going to probably
+train it from scratch
+the bert model itself is super super
+massive it takes multiple days on like
+some of the most powerful tensor
+processing unit machines to
+train this model so it's not something
+you're going to want to do you know at
+home
+but luckily they open source these
+models and we can utilize them
+effectively
+and one thing to note too is that even
+if you you are loading in this model
+that's already been pre-trained one of
+the nice features about one of the nice
+features about models like this is that
+they can be fine-tuned so you can
+fine-tune them on your specific task and
+get some really
+impressive results by doing that and
+that's a lot easier of a step than
+retraining it from scratch
+okay so
+run this see if it loads properly
+if you're using google collab you
+probably have to restart the runtime
+sometimes it doesn't realize
+where this model is unless you do that
+okay cool we have it
+um
+and now it's just like it is like if
+we're using spacey
+now that we've loaded in this bert model
+as our nlp engine
+basically we can do the exact same stuff
+as we did
+for
+the word vectors when we were in that
+section of the tutorial
+so here we go
+so basically what i think i'm going to
+do is
+just to find another set of training
+utterances and
+test utterances
+just like we did here i'm actually going
+to copy this in real quick because
+i don't think it's necessary to write it
+because i want to change the example up
+a little bit
+um
+all right
+so we're about to see the power of
+bert and transformers in general okay so
+this time i
+i'm defining another category class but
+this time instead of the difference
+between
+books and clothing our two categories
+are
+book related items and banking related
+items
+so here we've defined
+seven
+different
+uh utterances each with their associated
+category
+and we can read through these real quick
+okay cool
+so
+let's build our model around this
+and this is the exact same code
+basically that we used before we just
+need to now
+all it changes is that we have
+this model as our nlp engine as opposed
+to
+the word vectors that we were using
+earlier
+okay so i'm just copying in some code
+here
+this is yeah as i said before this is
+the exact same code as we were using
+before so
+we can train it
+on the train x here so i'm going to run
+this cell real quick
+so we want to train our model on that
+and we can predict new utterances here
+so i'm going to just
+start as a toy example say book
+okay and as a result it says books here
+that's what we expect
+one thing i want to note here though is
+one of our training utterances is check
+out the book
+and so with that example i was kind of
+walking through is you could say check
+out the book but if maybe you're writing
+about more banking related terms you
+might say i need to write a check
+so
+i'm going to just type in
+you know i need
+to
+write a check
+and you know in our trading audiences
+here check the word check only appears
+in
+the books category of our trading
+entrances and these three back here that
+are about
+banking
+need to make a deposit to the bank
+balance inquiry savings save money
+there's no mention of the word check
+so
+a true test of the power of this bert
+model is that oh does it know that when
+we say i need to write a check we're
+talking about banking and not talking
+about this word we've already seen in
+the other category
+and let's mode of truth
+and look at that i need to write a check
+utilizing the power of the bert model
+and just like some small number of
+training examples we see that
+uh
+it's it's banking related uh which is
+crazy and you know maybe you said
+check this story out you know once again
+it knows that
+check in this context is
+uh
+is about books so it's really impressive
+the capabilities because we've
+trained such a big model
+leveraging it is is really really
+powerful stuff
+and you can continue playing with this
+uh one thing i recommend looking into as
+i kind of alluded to is
+one of the nice things that you can do
+with
+a pre-trained model like bert here is
+you can fine-tune it to a specific task
+so here's some code that they use in
+spacey to show you how you would
+fine-tune this nlp
+you know model
+to a specific you know maybe
+classification task
+so that's really useful
+the next thing i want to mention is
+this this
+interface that spacey provides to bert
+is really nice but there definitely is
+room that if you wanted to build off of
+a model like bert you can't really do
+that so if you wanted to dive deeper
+into
+these types of models i recommend
+checking out hugging faces transformers
+github repo
+and in that
+they have pretty much all the most
+popular
+different uh
+models that have come out recently
+within natural language processing they
+have
+those models written in pie torch that
+you can look around with so like bert
+here
+this modeling bert file
+you'll see that
+pretty much
+a entire pie torch model is defined here
+so if you wanted to build off of bert
+and you know fine tune it specifically
+or
+uh something you could use this hugging
+face library
+all right so that's uh what we're going
+to talk about for
+um
+transformers and how the code would look
+to easily interface with that
+uh and one thing i want to note is that
+i can only teach you so much about the
+actual inner workings of bert in this
+tutorial i was kind of more focusing on
+quickly getting up to speed and using
+this in python
+um
+but i'll list out on the github repo
+resources that you can go to learn more
+about these types of things that i've
+found useful myself
+all right that concludes most of what
+we're actually going to do in the
+tutorial but i will leave this tutorial
+with an exercise that you guys can kind
+of tie everything together
+and really try to build your like
+keep building on your nlp skills
+so
+if you go to my github page github.com
+keith galley slash pycon2020
+basically
+i've curated some data
+for a nlp exercise you can work on and
+the data it comes from amazon reviews in
+several different categories
+and there's also a test set of amazon
+data in several different categories
+each the same categories and the goal of
+this task is to basically use this
+training data and build the best
+classifier you can to properly
+categorize the reviews here in the
+test set
+the kind of bigger picture context you
+could think about this problem then is
+imagine you are
+a in charge of
+the
+social media like analytics for a large
+retail store
+and you're getting people tweeting at
+you all the time about all your
+different products and you wanted to
+build a model to automatically like
+route those tweets to the appropriate
+parties that could handle
+questions about them then a model like
+this would be super useful
+so
+there's the training and test data for
+that task and i also provided this nlp
+exercise notebook
+and in this
+i kind of quickly walked through
+uh getting up and using this data and
+you know loading it in as training data
+loading in as test data building a model
+on the training data
+which
+by default the simplest model that i
+included here is a bag of words model
+but i'm going to be kind of adding
+by the time you probably see this video
+i'll have several uh models included in
+here but this bag of word model can help
+you get started on using this data and
+then basically based on that
+model
+uh evaluate the performance on how you
+do on the
+test set so as you can see
+out of the box bag of words categorized
+65 of the
+test
+reviews correctly
+into their category
+and if you wanted to break that down a
+little bit more
+closely i calculated the f1 scores here
+for each category and as you can see
+like it did really bad job on the
+automotive
+questions
+but
+did well on beauty and books
+and you can kind of utilize this data as
+you see fit and play around with
+building different types of
+categorizers classification models
+around this a couple of recommendations
+i have
+i think it'd be really interesting to
+see how well a fine-tuned
+bert model would do on this task
+i also think it would be very
+interesting to
+take the bag of words model but also
+leverage some of those other
+techniques we mentioned so like
+lemmatizing words
+uh
+stripping away stop words
+uh
+you know maybe doing some part of speech
+tagging see if you can leverage that and
+to make it more important all really
+interesting techniques to try to build
+more powerful models
+uh
+what else do i want to say here
+i guess quickly
+i didn't actually show you what the data
+looked like but if i actually clicked on
+one of these
+files
+maybe something like
+beauty would be easier to see
+uh
+i'll also link my source where i scraped
+all this data someone already did a lot
+of the grunt work for me and i want to
+give them credit so i'll have that
+included
+in the read me of my github page
+but yeah basically you have this review
+text
+always talking about
+the category here so this is beauty so
+like
+outstanding top organic shampoo what our
+model we would expect to learn is off of
+shampoo one thing to note here is this
+is not perfect data you'll get some
+reviews that are just like really good
+um
+and thanks and they don't give us much
+information so we're never going to be
+able to get like 100
+on this task but maybe another exercise
+you could work on is how could we strip
+out these kind of
+non-specific
+types of words and not use them as
+training information and
+test information
+all right we're going to end this
+tutorial here hopefully you had some fun
+uh learnings about some different nlp
+techniques in python
+uh there's a lot we covered in this
+video and hopefully my my goal out of
+this tutorial was for you to all see
+some of these techniques
+and have them in your mind so that you
+could take them and kind of build on
+your knowledge and apply them in
+different areas
+so really it's like seeing all of what
+you can do and then taking it from there
+and going also just a reminder before i
+leave uh if you have any questions or
+anything feel free to connect with me on
+you know linkedin instagram twitter and
+you can search up keith galley one word
+you'll probably find me and also if you
+want to find more tutorials that i've
+posted you can check out my youtube
+channel youtube.com kgmit thank you very
+much pycon for having me this was fun
+even if it wasn't in person it wasn't
+what i expected but i i it was exciting
+to go through this process and uh
+hopefully i'm
+will uh be there in person
+next year all right take care everyone
+thanks for watching
+peace out
+[Music]
+you

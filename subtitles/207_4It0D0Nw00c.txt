@@ -1,0 +1,430 @@
+when you talk about devops you might
+hear the names of a number of tools such
+as Docker kubernetes ansible terraform
+git GitHub Jenkins Prometheus grafana
+and it might be overwhelming the number
+of tools and technologies that there are
+to learn in this video I'm going to try
+and demystify these tools by walking you
+through a story a story of how you start
+with a small application where you don't
+really need a large infrastructure but
+as you expand how each of these tools
+come in at different stages of your
+product to help with the different
+challenges you face this is a very high
+level overview of how all of these tools
+fit in to your infrastructure as well as
+your development workflows and I'm sure
+by the end of this video you will leave
+with a good understanding of where these
+fit
+so it all starts with an idea so that's
+you and you have this idea that you
+think it's going to change the world so
+you're going to build a website that
+books tickets to Mars in advance so
+people don't have to pay too much or
+wait in a queue the future
+so what do you do as any other
+intelligent developer would do you start
+with the market research oops sorry I
+got that wrong as any other intelligent
+developer would do you get coding
+you open your favorite editor and start
+building your idea and hours later you
+have the first version of your product
+ready and it's time to share it with the
+world
+now how would you do that
+this code is still running on your
+laptop and it's only accessible at HTTP
+localhost 8080 for now even if you find
+a way to share it with the world from
+your laptop when you shut down your
+laptop no one would have access to it so
+you need to host your application on a
+system that is never turned off
+so you identify a server that is either
+a physical server in a data center or a
+virtual machine in a data center or in
+the cloud and you copy the code to it
+and you run it now you can't just run an
+application on a system by just copying
+code to it you need to have the system
+configured first to be able to run it
+for example if the application was
+written in python or Java or any other
+programming languages then you must have
+one of these programming languages or
+the runtimes in place on the server too
+if the application uses any libraries or
+packages then you must have those exact
+version of libraries and packages
+configured on the server too in the
+exact same way now you develop your
+application on your laptop so that that
+becomes your development environment and
+the server you host your application on
+becomes your production environment
+now once all of that is set up you now
+have your application running on the
+server the server has an IP so it's now
+accessible at that IP address but you
+don't want to have to share an IP
+address to people so you purchase a
+domain name and map that to your server
+now you have something to share to the
+world
+you're all set and you're now ready to
+share it with the world
+so you tweeted out tagging a certain
+individual and that certain individual
+retweets it and off you go your website
+is now famous and you now have thousands
+of users visiting your site and booking
+their future travel to the red planet
+now let's look at our workflow as of now
+the current workflow involves the
+development phase where you write your
+code on your laptop this could be on
+your favorite text editor like vs code
+or pycharm now the code in text format
+is not good enough to run to run it as
+an application by the end user it needs
+to be in an executable format if you're
+familiar with Windows or binary file if
+you're familiar with Linux and
+converting code from a text format to a
+binary or executable format is known as
+building the code and there are tools
+available such as the python setup tools
+or Maven or Gradle for other platforms
+and you usually have a build script that
+invokes these tools to build the
+application now once built the
+executable is moved to a production
+environment in this case our server and
+run in production and that's referred to
+as the deploy stage a simple three-step
+process so there are so many variations
+to this process and different ways and
+tools used to do this but I'm keeping it
+super high level for now
+now you have users now visiting your
+website and users are requesting for
+more features so you bring in your
+friends along as additional developers
+and now everyone is working on their own
+development environments but on the same
+code base and they all copied their code
+to a central Hub whenever ready and now
+they're stepping on each other's toes
+and working on the same files at the
+same time and creating conflicts and you
+need a solution that can help
+collaborate and that's where git comes
+in git helps all developers to work on
+the same application at the same time
+and collaborate efficiently now everyone
+installs and configures git on their
+machines and that's going to help in
+easily pulling the latest git code from
+the central hub using the git pull
+command add their own changes and push
+it back using the git push command and
+the central Hub is a cloud-based
+platform that serves as a central
+location for all code so git is the
+underlying technology and GitHub is the
+publicly hosted git-based Central
+Repository entry of code where you can
+configure project
+organizations users and Define different
+access for different users and some
+other similar platforms are gitlab and
+bitbucket
+so to summarize git is the command line
+tool or the underlying technology that
+enables versioning of code and
+collaboration between multiple
+developers and GitHub is the git-based
+publicly accessible repository of code
+where you push your code to and it has a
+web interface where you invite new
+developers manage your project manage
+issues with your projects add
+documentation to your code Etc
+so now with four developers and git and
+GitHub in place the development issues
+are sorted however we still need to move
+code manually to the production
+environment every time something new is
+ready so the previous workflow involved
+developing code in your development
+environment then building the code to an
+executable package and then deploying it
+to production however now with multiple
+developers the code needs to be built
+with the changes contributed by all of
+the developers so building on the laptop
+itself no longer works as an
+individual's laptop may not have all the
+latest changes it makes sense to move
+the build operation to a dedicated build
+server that gets the latest version of
+the code and builds it before moving
+into production
+so now pushing new builds to production
+is risky as it might have introduced new
+bugs or broken something that worked
+before so we need to test it in a test
+environment too
+so here's how the workflow looks now
+every developer develops code in their
+development environment in their own
+laptops and pushes it to GitHub you then
+manually copy the code to your build
+server and then builds the code to an
+executable then manually copy the
+executable to the test server
+and then test the application to make
+sure that it works as expected and that
+no new bugs are introduced and then
+manually copy the executable to
+production environment and deploy it and
+because it's a manual job and requires a
+set of manual tasks you decide to move
+all new code containing new features to
+the production environment once a week
+however that's not very well accepted by
+users or by your fellow developers
+because some of the minor features
+already and don't necessarily have to
+wait till the end of the week to be
+pushed production and the entire process
+of manual deployment itself takes a week
+to execute on its own when the code base
+and features grow you want to be able to
+release features faster and more
+frequently with less manual effort and
+that's where cicd tools come in
+now cicd stands for continuous
+integration and continuous delivery or
+deployment and tools like Jenkins GitHub
+actions or gitlab cicd help you automate
+these manual tasks and build a pipeline
+with one of these tools configured every
+time code is pushed it is automatically
+pulled from the GitHub repository to the
+build server and then build and then the
+executable is automatically moved to the
+test server and tested and on successful
+testing it is automatically moved to the
+production server and deployed
+now this allows changes features and Bug
+fixes to move faster through the
+pipeline and be deployed more often with
+lesser manual effort ultimately enabling
+you and your team to resolve issues
+quicker ship features faster and make
+your users more happier
+now with Git GitHub and cicd pipelines
+in place we have enabled our team to
+make changes to our application and get
+them to production servers seamlessly
+however it's still not all that seamless
+remember the dependencies and libraries
+that we talked about earlier the ones
+that are required to for the
+applications to run on any system these
+dependencies need to be configured the
+exact same way on the servers and this
+means that if a new package is required
+this needs to be manually installed and
+configured on all the servers that this
+code runs and this now is still a manual
+task if you miss out configuring one of
+these packages with the right version in
+the right way it will lead to the
+software not working and resulting in
+unexpected outcomes on different systems
+and that's where containers come in
+containers help package the application
+and its dependencies into an image that
+can then be run on any system without
+worrying about dependencies so now
+during the build you build a container
+image with the application and its
+dependencies package into it and all
+other systems can now simply run a
+container from that image without
+worrying about installing and
+configuring libraries and dependencies
+now one technology that enables working
+with containers is Docker with Docker
+the developer can create a Docker file
+which specifies what the dependencies
+are and that Docker file can be used
+during the build to build an image and
+that image can then be run on any server
+using a simple Docker run command
+now the major functionality of a
+container is that it enables isolation
+between processes so each container is
+an isolated instance and this allows us
+to run multiple containers each having
+its own separate instance of the
+application on the same server
+now let's focus on the production side
+of things on the production server
+currently we have one server but with
+our users increasing we want to be able
+to add more servers and run our
+application on all of them now that we
+have containers all we need to do is run
+containers on them but how do you do
+that the right way so that containers
+are spun up when the users increase and
+destroyed when load reduces how do you
+ensure if a container fails it is
+automatically brought back up
+and that's where container orchestration
+platforms come in kubernetes is a
+popular container orchestration platform
+that helps declare how containers should
+be deployed and ensure that it is always
+run in the same way as declared
+it can help Auto scale containers as
+well as the underlying infrastructure
+based on need and manage resources on
+the underlying service to ensure optimal
+resource utilization
+by now we have developers pushing code
+to a central GitHub repository the CI CD
+pipeline then pulls the code to the
+build server builds it to Docker images
+and then that image is used to test the
+application in the test environment and
+finally deployed in a production
+environment as containers by kubernetes
+the underlying infrastructure is still
+one big challenge so every time a new
+server is to be provisioned it needs to
+be set up in the exact same way as the
+others in the cluster it needs to have
+the right resources assigned to it the
+right version of operating system
+probably there is some storage attached
+to it and there may be some kernel
+settings or other software that needs to
+be pre-configured on it such as the
+docker runtime or the necessary
+kubernetes packages and all of these
+need to have the exact same
+configuration so this is going to be one
+big challenge if you have to click
+through the cloud platform GUI each time
+a server needs to be provisioned and
+this can take a lot of time and can lead
+to human errors in misconfiguring
+infrastructure resulting in having to
+rebuild the entire server to automate
+the provisioning of these servers tools
+like terraform can be used terraform
+automates the provisioning and
+configuration of servers irrespective of
+what cloud platforms they are on and it
+ensures that the server is configured
+are always in the same state
+if someone manually changes a
+configuration on these servers and not
+through terraform it changes it back to
+make sure that the state's defined is
+preserved the state is defined by
+configuring a terraform manifest file
+that looks like this it's a snippet from
+a terraform manifest file that has a
+list of servers and their configuration
+so yes it looks like code because it is
+code and that's why it's called as
+infrastructure as code all of the
+infrastructure configuration including
+the virtual machines the storage buckets
+the VPC Etc is now stored in the form of
+code and is stored in source code
+repositories that way it can be
+considered as any other code and be
+tracked if changes are needed then make
+changes to the code and run the
+terraform apply command
+now once the servers are provisioned the
+configuration of these servers can be
+automated by tools like ansible so while
+terraform is more of an infrastructure
+provisioning tool ansible is an
+automation tool that helps configure
+these infrastructure once provisioned
+note that there are many areas both
+terraform and ansible overlap both of
+these tools can provision infrastructure
+and automate software configuration on
+them but each has its own benefits in
+different areas so while terraform is
+used mostly for provisioning and
+deprovisioning infrastructure ansible is
+used for post configuration activities
+such as installing the software and
+configuring them on those servers so
+similar to terraform ansible uses code
+to configure servers it's called ansible
+playbooks and this code also goes to the
+source code repository on GitHub
+now provisioning is not all we now want
+to maintain it as well we want to be
+able to monitor these servers and take
+preventive measures we want to be able
+to see the CPU utilization on these
+servers the memory consumption monitor
+the processes identify what process is
+causing higher consumption Etc and
+that's where tools like Prometheus come
+in Prometheus collects information or
+metrics from the different servers and
+stores it centrally now not only do we
+want to collect metrics we also want to
+be able to visualize them graphically
+and that's where tools like grafana
+comes in grafana helps make sense out of
+the data collected by Prometheus by
+visualizing it into charts and graphs
+now all of that together help us go from
+an idea to building it deploying it
+getting it out to our users fast and it
+doesn't stop there getting feedback from
+our users reviewing them brainstorming
+and coming up with new ideas and
+implementing those ideas
+um is now a breeze so any code pushed
+now goes through the pipeline and we
+have that we have defined and it's
+automatically built tested and deployed
+sooner resulting in multiple deploys to
+production every day and once deployed
+it is monitored and more feedback is
+retrieved from the user and this cycle
+repeats onto Infinity
+and that is what devops is devops is a
+combination of people processors and
+tools that work together in going from
+an idea to execution and delivering high
+quality software consistently well
+that's all for this video I hope you
+enjoyed this high level overview of the
+different tools and Technologies and if
+you like the video don't forget to
+subscribe to our Channel and if you have
+any questions feel free to leave them in
+the comments below until next time
+goodbye
+foreign

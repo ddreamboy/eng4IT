@@ -1,0 +1,89 @@
+in this video you'll learn to apply t
+distributed stochastic neighbor
+embedding or t-sne while this may sound
+scary it's just a powerful technique to
+visualize high dimensional data using
+feature extraction t-sne will maximize
+the distance in two-dimensional space
+between observations that are most
+different in a high dimensional space
+because of this observations that are
+similar we'll be close to one another
+and may become clustered this is what
+happens when we apply tsne to the iris
+dataset
+we can see how to set those a species
+from the separate cluster while the
+other two are close together and
+therefore more similar however iris
+dataset only has four dimensions to
+start with so let's try this on a more
+challenging dataset our answer female
+body measurements dataset has 99
+dimensions before we apply tsne we're
+going to remove all non numeric columns
+from the dataset by passing a list with
+unwanted column names to the pandas
+dataframe drop method t-sne doesn't work
+with monomer data such we could use a
+little trick like one hot encoding to
+get around this but we're using a
+different approach here will create a
+t-sne model with learning rate 50 while
+fitting to the dataset t-sne will try
+different configurations and evaluate
+these with an internal cost function hi
+learning rates will cause the algorithm
+to be more adventurous in the
+configuration it tries out while low
+learning rates will cost to be more
+conservative usually learning rates fall
+in the 10 to 1,000 range next we'll fit
+and transform the t-sne model to an
+emeritus set
+projector high dimensional data set onto
+an umpire a with two dimensions we'll
+assign these two dimensions back to
+original data set name enum X&Y
+we can now start plotting this data
+using C point scatterplot method on the
+X and y columns we just added the
+resulting plot shows one big cluster and
+in a sense this could have been expected
+there are no distinct groups of female
+body shapes with little in between
+instead there is a more continuous
+distribution of body shapes and thus one
+big cluster however using the
+categorical features we excluded from
+the analysis we can check if there are
+interesting structural patterns within
+this cluster the body mass index or BMI
+is a method to categorize people into
+weight groups regardless of their height
+I added a column BMI class to the data
+set with the BMI category for every
+person if we use this column name for
+the hue which is the color of the c1
+scatterplot be able to see that the
+weight class
+indeed shows an interesting pattern when
+the 90-plus features in the dataset
+t-sne picked up that weight explains a
+lot of variants in a data set and use
+that to spread out points along x axis
+with underweight people on the left and
+overweight people on the right
+you've also added a column with hide
+categories to the data set if we use
+this hide class to control the hue of
+the points we'll be able to see that in
+the vertical Direction variance is
+explained by a person's height so all
+people are at the top of the plot and
+shorter people at the bottom
+conclusion the acini helps to visually
+explore dataset and identify the most
+important drivers of variants in body
+shapes now it's your turn to use Tizen e
+on the combined male and female

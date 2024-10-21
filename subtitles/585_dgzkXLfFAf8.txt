@@ -1,0 +1,614 @@
+good morning everyone my name is Kanu a
+broad essentially I help with any gatk
+related questions so on the forum so we
+have a gatk forum so any questions that
+you may have ask us now while we're
+presenting our scales during the coffee
+break or after the day ends or after the
+workshop if you have any questions feel
+free to post questions on the gatk forum
+and I'll help you out with them alright
+while I'm explaining data pre-processing
+please feel free to stop me and ask me
+any questions that you might have all
+right so this morning I'm gonna walk you
+through our best practices for data
+pre-processing Andre explained how so
+many things can go wrong with your
+sequencing there so now we're going to
+talk about how do you correct all of
+those so there are three main steps to
+data pre-processing first you want to
+map your data to a reference genome you
+want to remove duplicates that Andre
+spoke about and then recalibrate the
+base quality scores we'll go into
+details about each of these steps so
+what is data pre-processing even before
+that why do we pre process our data
+essentially the ruler is garbage in
+garbage out so you give your variant
+callers unverified reads your calls your
+way and call the confidence that you
+have on your variant calls will be that
+much lesser so you want to provide your
+vagin calls with as good reads as
+possible and so from the sequencer you
+essentially just get a huge pile of
+paired-end reads and these reads are
+affected with technical biases and
+artifacts and duplicates so you
+essentially want to clean up your reads
+before you do variant calling and so on
+the slide you can see here this is the
+workflow diagram for our best practices
+for data pre-processing it's essentially
+first you map your reads mock duplicates
+and then recalibrate the quality scores
+so the first step is to map the reads to
+a reference genome what you're looking
+at here are essentially reads
+color-coded by which region in the
+genome they come from so once you put it
+through an aligner it fits each of these
+reads against the region in the genome
+that it comes from for DNA sequencing
+data we use we recommend and use bwa 2
+for RNA seek we recommend star aligner 2
+so when you're mapping your reads to a
+reference sometimes it's as simple as
+you you can tell which region it's
+coming from for example in region 1 and
+region 2 there might be some local
+variants but it's still no the alignment
+knows which region it's coming from in
+some cases in your samples you have this
+duplicated regions and that's when it
+gets complicated and say yeah this is in
+simple cases it just directly Maps these
+and gives it a high mapping quality in
+cases where it's a little confusing
+about which reads come from a particular
+region that's when the mapping quality
+drops so an easy case would be
+essentially you have these pile of reads
+and you know which regions they come
+from and in most cases your genome is
+pretty different from the rest of it so
+in most cases it's easy to find these
+reads and map it through specific
+regions but sometimes a
+gets complicated for example if your
+reference itself has duplicated ratings
+and so then your reads the aligners
+confused where do these reads fit should
+go to a or to B and so to get around
+this we have paired and sequencing so
+when you have paired and sequencing and
+they are repeat region duplicated
+regions in your reference then using the
+using the read one every two pair you
+can fit it on the reference more easily
+and so the output of your sequencing is
+a SAM file and the binary version of a
+SAM file is a BAM file and essentially
+this file format has two sections
+there's the header which is common to
+all the reads in that sample and then
+there are records which are unique to
+each read so in the header you have
+information such as the version the
+sorting order of the leads in this case
+it's coordinates sorted you have
+reference sequence dictionary entries to
+say which of those reference sequence
+dictionaries was used in the sample and
+also read group information and then in
+your records that are unique to each
+lead you have the read name which gives
+you like essentially the sample name the
+flow cell information the lane
+information then you have Flags this is
+essentially binary information about the
+orientation of your read orientation of
+the read and its pair whether it's
+aligned to the forward or the reverse
+strand all that information is given in
+the flag and then you have the read
+position information you have the
+mapping quality you have this cigar
+string go into more details about that
+in a second
+you have mate information which is
+essentially telling you at what position
+was here
+the mate of that read mapped and also
+the insert size and then you have this
+read sequence and quality score that
+come from the sequencer and you have
+some metadata for example read group
+information and some other tags this
+link is hidden here but we have a link
+to the Sam format to get more details of
+specific tags and other information
+about this format so yeah let's talk
+more about any questions so far
+yes so oh right and this is just for the
+recording so the in a nutshell no you
+don't need to do any trimming in our
+workflow there's early on in the
+processing you can mark the adapters so
+that they will be ignored in the rest of
+the processing and anything like if
+traditionally you were doing quality
+trimming that's not necessary at all
+because the variant callers will take
+the the quality of the basis into
+accounts it's actually used as part of
+the the variant calling model so it's
+it's really not necessary to do any
+college trimming and adapter trimming
+either the adapters will be marked and
+recognized and ignored accordingly all
+right now to talk about the cigar string
+the second string is essentially
+summarizing the alignment structure of
+each read for example in in this example
+it's the cigar string is essentially
+telling you that the first base was soft
+clear
+there are three matches one deletion two
+matches and one-one insertion and
+another match
+when I say matches I don't mean exact
+base match for example in this case here
+at saying two matches but the bases
+don't match yes sorry can you say that
+again oh that's just for the neck
+so this read has these positions that's
+just the next base of the after the
+reading okay so going back to these
+three matches like I said these matches
+don't mean that is a base match it's
+more about that that the aligner is
+saying that these three bases match
+against these three positions of the
+reference that's it it's not talking
+anything about base magic alright so I'm
+in usually and like usually you have a
+fast Q file you map it to a reference
+using BW mm and you get this mapped BAM
+the problem with this is where is my
+read group information or metadata for
+my sample and that's not included in the
+fast Q file so if you want to add
+regroup information to your analysis you
+need to do it which in after this
+process in a very unnatural way and so
+to get around that I'd broad what we do
+is use a file format called unmapped BAM
+which essentially keeps your read
+information and your metadata together
+in one file and so what happens is it
+uses this unmapped BAM file process it
+it processes it
+and then creates this mapped Bam and
+then it combines so this has all the
+alignment information and then it
+combines this unmapped band with mavim
+to include the metadata information
+using this tool called merge BAM
+alignment Andre spoke about sometimes
+your reads may have some bacterial
+contamination
+so apart from merging on my bandwidth
+map BAM merge bam alignment also does
+some cleanup of the reads all right so
+we spoke about how alignment is done for
+DNA data for RNA seek though it's it's a
+special case because in you have these
+intronic regions that are spliced from
+your familiar from the reads and so if
+you map these using DNA alignment tool
+you have these huge deletions in your
+reads and so you use a special kind of
+alignment tool and we recommend the star
+tube bus alignment tool it's not on this
+slide but star alignment tool is what we
+recommend for RNA seek Elementary
+alright so
+that was step one alignment now let's
+talk about step two which is marking any
+duplicates in your reads why do we need
+to do that for example you have this one
+oops you have this one variant in your
+data that is basically being amplified
+by your duplicates and so radiant color
+will look at that and it will take it to
+mean that there is all this confidence
+for that book evidence and confidence
+for that one particular variant and this
+is essentially inflated so you want to
+remove all of these duplicates for that
+reason also in case of RNA seek
+duplicates give this artificial sense of
+increased expression so again even for
+RNA seek data you need to remove these
+duplicates and so how did these yes
+[Music]
+implementation detail so what we do is
+that we provide we do the the mark
+duplicate step across all of the lanes
+all of the read groups because there is
+there are really two types of duplicates
+some of them are at the library level
+and you want to be able to identify
+those and so by providing all the data
+together we're able to do that kind of
+cross library across regroup duplicate
+marketing
+[Music]
+we do it the same way regardless yeah so
+we so it's true when when we're doing
+the marketing duplicates we're really
+just identifying which ones we're
+considering as duplicates we don't
+actually remove them from the file they
+stay in the data it's true that
+technically you could just remove them
+completely and there is actually an
+option the tool has an option to remove
+the tools to remove the reads from the
+from the file we prefer to keep it just
+because we really hate throwing away
+data and it's it's a little scary
+because sometimes we want to reprocess
+things you could decide to throw the
+more inputs but that does mean that
+you've lost some information and you've
+lost the ability to go back and change
+your mind them how you're going to do it
+but yeah if if you're very concerned
+about storage for example you can throw
+them out
+we don't have slides on um eyes in this
+workshop we have some information some
+documentation that we could point you to
+if you actually if you post on the forum
+then we can get that to you and I
+suggest using the forum because then
+they'll be attracting its and we'll get
+back to you with the that's information
+it'll probably be Bonnie who gets back
+to you but yeah that's that's the
+easiest way to make sure we get that to
+you yeah go ahead sorry what's instead
+of bwa I'm sorry I'm not hearing you
+well
+the variation craft toolkit Oh graph
+sorry sorry
+yeah we're not we're not currently using
+graph based reference if that's what you
+mean Oh graph based alignments oh okay
+we're not using that yet there might be
+some evaluation going on but I will say
+about the choice of a liner so the
+choice of mapper aligner is the single
+most impactful change that you can make
+to a pipeline that causes batch effects
+and so we're extremely conservative in
+terms of not changing a liner unless we
+really have to unless it really gives us
+a great advantage because anytime you
+change your liner the the effects on the
+results is such that if we were to
+analyze different data sets aligned
+differently we get batch effects and
+there was a recent paper I think about
+batch effects and thousand genomes that
+kind of highlights that the we're kind
+of paranoid about that partly because we
+process very large datasets for example
+the Nomad call sets at this point is
+over a hundred thousand whole genomes it
+costs a ton of money if we have to
+reprocess all of them and for for for a
+cohort like that you have to have them
+all aligned in exactly the same way so
+if we if we change your liner we have to
+reprocess all of the data and we often
+reprocess a lot of the other datasets
+sequence at the roads for internal
+groups as well as some of our customers
+and so it's yeah changing that is a
+honestly traumatic process for us so as
+much as I think it's very exciting that
+there's some improvements made like a
+graph based research for alignments and
+variant calling I think
+it'll probably be a few years before we
+can consider moving to adopting that in
+kind of a production setting does that
+answer your question I think that was a
+question there first reduce bam oh so
+there was a tool called reduce reads a
+few years ago that we were experimenting
+with for compressing a read data and we
+have abandoned that one and it's it's
+it's bad don't use it and that was like
+five years ago I think or more
+definitely not using that anymore
+however for for compression purposes
+we're very happy with crime and so by
+default in our production pipeline we we
+produce cram files for storage so we
+still often have the data as a BAM file
+for running variant calling etc but for
+for storage we store everything is crime
+files and that that has made some pretty
+important improvements in reducing the
+file size it depends it depends on on
+the the settings that you use because
+you have several different settings and
+there's there's your basic lossless
+setting where you're not losing any
+information and then there's
+progressively more lossy options where
+you can do things like compressing the
+base quality to having just bins base
+qualities and the more you compress the
+more you can gain but I hesitate to give
+you a number because I don't have one
+off the top of my head but I can look it
+up but you can have some pretty dramatic
+improvements yeah sure I think you had a
+question
+dealing with batch effects we reprocess
+everything like if we know that we're
+going to have batch effects from like if
+we know that there's something in the
+pipeline that is going to cause batch
+effects we change the pipeline so that
+doesn't happen and we will reprocess
+everything with the same pipeline
+because it the the kinds of batch
+effects that you can have will lead to
+things like thinking that's there's a
+variant that's unique to a particular
+population when it's not and it's just
+because of different alignments choices
+it's it's often different artifacts or
+with the ability to detect some variants
+in difficult regions that's that's so
+influenced and so we prefer to have even
+if it means that we're going to have an
+artifact in the data we prefer to have
+it everywhere as opposed to having it
+only in some some subsets so yeah we
+we've done some work of so the broad a
+collaborated with a few other major
+sequencing centers in North America to
+define what we call the functional
+equivalence specification and so it's a
+specification of how you do the
+alignments and the pre-processing in a
+way that removes batch effects and if
+you have a pipeline that's compliant
+with that specification you can be
+pretty sure that's any datasets aligned
+with those pipelines compliant pipelines
+will be compatible and there's a there's
+a paper about it it's if you google
+functional equivalence pipeline I think
+it should come up and there's also a
+blog post on the GTA blog about its we
+really encourage people to you to adopt
+that and that the the biggest factor was
+actually the the aligner but there's a
+couple of additional things that you can
+do towards that
+any more questions on that all right all
+right so where did these duplicates come
+from they're our library duplicates and
+optical duplicates Andre went over those
+details so we'll move fastest so now
+going into how does the mod duplicates
+to mark duplicates essentially what it
+does is it looks at the orientation of
+the Reed and the unclipped v prime
+position of the first strip
+it doesn't do for base matching it just
+looks at the antelope v prime position
+and the orientation of the Reed and then
+decides whether it's a duplicate or not
+and for parent Reed it'll do the same
+thing for both the pair's orientation
+and the unclip phi prime position so
+here are 2 igv screenshots one without
+any of the duplicate smart and then here
+is how multiplicate works in essentially
+marking all of these duplicates and then
+you have this option in i GD to show you
+reeds after hiding all the duplicate
+reeds just to note that mark duplicates
+does not remove any reads it only marks
+them as a duplicate there's a tag that
+it adds to the alignment to show that
+it's a duplicate read back in the day we
+had a tool to do locally realignment
+around complex regions of the genome for
+example repetative regions as shown in
+this example here it would call all of
+these variants but then if you do
+realignment it sees that there's
+actually one insertion here which then
+clears out and cleans out all of these
+reads and removes these extra snips i
+was originally calling
+this is a deprecated tool we don't do
+this anymore because our variant colors
+haplotype collar and mutex you that
+we'll talk in more detail about does
+this intrinsically so this is basically
+a deprecated tor and the final step of
+this process is to fine tune the bass
+quality scores why do we do that
+your variant calling pipeline heavily
+depends on the quality of the basses
+called by the sequencer so any errors
+that the sequencer might have added to
+your quality scores it will get used by
+the vain caller irrespective so you want
+to clean up those quality scores and for
+that we use this tool called BQ SR which
+essentially detects the systematic
+errors created by the sequencer and
+these could be due to the physics or the
+chemistry of the sequencing technique
+itself or some manufacturing defaults in
+the sequencer which causes these errors
+across the sample and so BQ SR uses
+machine learning to create empirical
+error model and then uses that model on
+all the bases in the sample and fine
+Tunes the Quality Score some of the
+covariance that it uses is say for
+example you have two A's in a row and
+any read after these two is has a one
+percent increased error rate then it
+fine Tunes the quality score to say that
+any base after the first two is is has a
+1% lower base quality and that's
+essentially shown in this diagram here
+you have the dinucleotide contacts on
+the x-axis on the y-axis you have the
+accuracy which is the empirical quality
+minus the reported quality so the
+negative values show show that the bases
+have been over as to the quality scores
+have been
+estimated a positive value shows
+underestimated quality scores and in
+most cases we have seen that sequences
+tend to overestimate quality scores than
+underestimate and so when you map the
+rip these pink dots are before P Q SR
+and so and the purple are after BQ SR
+and then when you compare the reported
+versus empirical quality you see that
+this neat little line the forms after
+you apply the base quality recalibration
+something to note here is that BQ SR
+does not change the basis it does not
+say that oh this this particular base
+was called wrong I'm going to change it
+that's how it does all it does is fine
+Tunes the quality score and the
+confidence of calling a base so so this
+is independent of coverage I mean this
+is this really affects like individual
+base calls and and what quality we have
+that now the link that you can have is
+that if you there are some filters so
+gatk does some filtering on the quality
+of base calls so if that they're below a
+certain thresholds some bases will just
+be ignored and that goes back to the
+question about trimming do you need to
+trim for quality no in part because we
+take take the quality of bases into
+account so if you have and I forget what
+the exact threshold is but let's say
+it's a Q 10 below Q 10 you just ignore
+all of them your if you're looking if
+you're counting how much coverage you
+have and you're doing it
+a way that is aware of the usable
+quality you might end up with less
+coverage than you originally had if
+you're looking at usable coverage does
+that answer your question yes yeah so
+bonnie was going to explain how we how
+we mask out real variation and what I
+suggest is we go through that
+explanation and then after that we can
+address the question of how that applies
+to cancer samples all right
+so essentially what Loney was trying to
+say was that's how this error model is
+created is that first all the known
+variants are masked out for example we
+use DB snip and see what the known
+variants are and mask those out and then
+create the error model on the rest of
+the variance rest of the mismatches so
+anything that's not unknown variant is
+assumed to be an error and then the
+model is created on top of that and so
+we're where the the somatic aspect comes
+in is that you can imagine that when
+we're masking out known variation with
+DB snip for example certainly we can't
+mask out variants that have not been
+reported previously so even in germline
+samples my sequence will have some
+variants that are not known to DB snip
+and will therefore not be masked now the
+nice thing is because the number of
+bases is much much larger
+than the number of variants where that
+might be the case you have you have
+billions of bases there's not there's
+not many reads that will be affected by
+having a real variance from my
+previously undisclosed bearings so so
+that will completely get washed out the
+question here is well if you have a
+cancer sample with a much higher amount
+of of
+mutations is it possible that that
+starts introducing some noise what we've
+seen and we work with a with the Cancer
+Genome analysis team on that at the time
+is that for the most parts we're still
+not seeing in effects of having more
+more mutations in the cancer context
+there's still way more unaffected bases
+then you have affected basis by somatic
+patterns of additional variation however
+some of the analysts in in the group we
+work with sometimes use a database like
+cosmic to mask out the most common kind
+of recurring mutations they see in
+cancer because there are some things
+that do come up kind of in the same
+places so it is possible to mask that
+out but in general what we see is that
+it's not really worth doing at worse you
+get a little bit of extra noise in the
+model but you can still detect
+systematic errors because ultimately
+what we're detecting here is systematic
+errors where the Machine systematically
+made errors in the same places where as
+cancer mutations for the most part will
+show up as random mutations they're not
+associated with a particular covariates
+that's another model or not as much and
+so that's why it's not a problem not as
+much of a problem did that answer your
+question
+great all right and so finally how is
+this show up how does this
+information new based quality scores
+show up in your alignment file you have
+oops you have these recalibrated based
+qualities and you also have you can have
+original based qualities we usually
+remove these or your base qualities
+because to save space but yeah if you
+wanted it you could have the original
+base qualities and that wraps up this
+talk any questions we can take them in
+the coffee break next and talk more
+about it them alright thank you everyone

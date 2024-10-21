@@ -1,0 +1,25 @@
+want to bring math and art together
+let's generate an animated Mandel BR
+fractal using python I'll show you how
+first we import the libraries we need
+numpy mat plot lib and Funk animation to
+animate the fractal this function
+calculates the mandal BR set by
+iterating over complex numbers if the
+absolute value of Zed exceeds two we
+stop and return the number of iterations
+next we Define the generate underscore
+fractal function which creates a grid of
+complex numbers and applies the mandal
+BR function to each one then we set up a
+live update function to animate the
+fractal growth at each iteration finally
+we call Funk animation to animate the
+fractal in real time watch how the
+fractal comes to life with every frame
+you can play with the color map and zoom
+in for more details and that's how you
+can create an animate fractals in Python
+try it out and explore the beauty of
+math and code like share and subscribe
+for more cool coding tips

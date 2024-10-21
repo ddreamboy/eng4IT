@@ -1,0 +1,298 @@
+hey everyone in this video we'll be
+talking about NLP in the next 10 minutes
+so what can you expect from this video
+what's in it for you first we'll give
+you a basic understanding of NLP we'll
+tell you why we need NLP and we'll talk
+about what NLP exactly is next we'll
+look at NLP pipelines NLP pipelines
+cover the basic processes involved in
+text passing in NLP which means
+converting text to a form suitable for
+machines to understand as humans would
+understand it and finally we'll talk
+about some real world applications of
+NLP which are all around us and a lot
+more common than you might have realized
+so let's get started so what exactly is
+NLP before we talk about NLP let's talk
+about how humans talk and interact with
+each other humans communicate with each
+other mostly via speech or text to
+convey your intent to someone you may
+directly talk to them or send them a
+message the human way of communicating
+is known as natural language around the
+globe many languages are spoken and
+messages are shared virtually every
+single day all these conversations
+feedbacks and messages are data in
+themselves this data is extremely
+valuable as it can give us customer
+information and insight into human
+sentiment
+however this data is not useful to
+computers as it is not in a form that
+can be understood by machines machines
+communicate using ones and zeros and not
+via words they cannot understand English
+French or Spanish only binary and this
+is where NLP comes into the picture NLP
+stands for natural language processing
+natural language processing is a branch
+of artificial intelligence that deals
+with the interactions between humans and
+computer
+using the natural language the ultimate
+objective of NLP is to read decipher
+understand and make sense of human
+languages in a manner that is valuable
+and to build systems that can make sense
+of text and perform tasks like
+translation grammar checking or topic
+classification NLP basically is the task
+of processing written forms of languages
+and making a computer understand them
+companies are increasingly using NLP
+equipped tools to gain ins sites from
+data and to automate routine tasks a
+sentiment analyzer for instance can help
+Brands detect emotions in text such as
+negative comments on social
+media NLP at the end of the day is
+nothing more than accumulation of
+artificial intelligence computer science
+and the human language the next topic
+that we'll be looking at are NLP
+pipelines so what exactly are pipelines
+a pipeline is a set of data process
+processing Elements which are connected
+in series where the output of one
+element is the input of the next one it
+basically represents the various steps
+which have to be taken in our
+computation and the order in which they
+occur in this pipeline we are going to
+be passing our data parsing means
+converting our data from one form to
+another in this case we are passing our
+input Text data to a file which can be
+understood by a computer the text is
+first broken into segments and the
+segments are then converted into even
+smaller
+tokens the word stems of all of these
+tokens are found followed by finding the
+root words of these stems in a process
+known as
+lemmatization we will then recognize
+which part of speech the word belongs to
+which means if the word is a verb a noun
+or a pronoun and finally we will
+separate the instances of everyday
+popular entities
+from our words to better understand what
+the sentence is trying to convey the
+final file that we'll get will be a file
+which will be understood by a computer
+segmentation the first process of a
+pipeline is segmentation now what
+exactly is
+segmentation sentence segmentation or
+text segmentation is basically dividing
+the given text into logically
+decipherable units of information we
+divide the sentence into its constituent
+sub sent sentences usually along the
+punctuations like full stops or commas
+or along line breaks and Page components
+for HTML files dividing a document into
+its constituent sentences allows us to
+process it without losing its Essence
+and the necessary information that it
+contains in this case let's consider a
+sentence the lemonade quenched her
+thirst but not her longing after
+sentence segmentation we are going to
+divide the sentence into two the first
+sentence is going to be the lemonade
+quenched her thirst and the second one
+is going to be but not her longing the
+next step of our pipeline is called
+tokenization tokenization is nothing but
+the process of dividing a sentence into
+its constituent words the sentence that
+is given to us will be separated and all
+the words in the sentence will be stored
+separately this is done so we can
+understand the syntactic and semantic
+information contain AED in each sentence
+thus we decipher the relevance of a
+sentence by analyzing it word by word
+thereby making sure that no loss of
+information occurs the computer does not
+understand punctuations and special
+characters hence we can remove any
+punctuations and special characters
+which may occur let's take a part of a
+previously segmented sentence over here
+let's consider the lemonade quenched her
+thirst after tokenization we are going
+to separate every single word in this
+sentence so after tokenization we are
+going to get five different tokens the
+lemonade quenched her and thirst all of
+these are going to be treated as
+separate entities after tokenization we
+perform stemming stemming is a process
+of obtaining the word stems of a word
+word stems are also known as the base
+form of a word and we can create new
+words by attaching a fixes to them in a
+process known as inflection St is a
+process of recognizing the word stems of
+individual words this is done by
+removing affixes such as in s ed etc for
+example consider our sentence jump jump
+is the word stem of various different
+words like jumping jumped and jumps if
+we remove all of these affixes we will
+get our basic word stem which is Jump
+this is basically what we want at the
+end of stemming the next process in our
+pipeline is called lemmatization
+lemmatization is the process of figuring
+out the root form or root word which is
+nothing but the most basic form also
+known as the LMA of each word in the
+sentence lemmatization is very similar
+to stemming where we remove word a fixes
+to get the base form of a word the
+difference is that the root word is
+always a word which is present in the
+dictionary but the root stem may not be
+so lemmatization uses a knowledge BAS
+Base called word net let's consider
+three different words went going and
+gone at the end of the day all of these
+words have originated from a single word
+which is go in this case go is our Lemma
+all the other words which are derived
+from go can be traced back to it the
+next part of a pipeline is called part
+of speech tagging part of speech tagging
+is a process of converting a sentence to
+different forms it can be a list of
+words or a list of
+tuples the tag in case of is a part of
+speech tag and signifies whether the
+word is a noun adjective verb and so on
+we are basically splitting our verbs
+into their grammatical components to
+understand the meaning of any sentence
+or to extract relationships and to build
+a Knowledge Graph part of speech tagging
+is a very important step as the same
+word can have different part of speeches
+in different
+sentences for example let's consider
+this sentence give me your answer in
+this sentence answer is a noun but if
+you consider another sentence answer the
+question over here answer will be a verb
+using part of speech tagging we can take
+our different tokens and find the
+different part of speech that it belongs
+to in this case the is a determiner
+lemonade is a noun quenched is a verb
+her is a pronoun and thirst is a noun
+the final step in our NLP pipeline that
+we are looking at here is nothing but
+named entity recognition named entity
+recognition also known as named entity
+identification entity chunking and
+entity extraction is a subtask of
+information extraction that seeks to
+locate and classify named entities which
+are mentioned in unstructured text into
+predefined categories extracting the
+main entities in a text helps us sort
+unstructured data and detect important
+information which is crucial if you have
+to deal with large data sets the
+subcategories that we are considering
+are person whether the named entity is a
+person whether it's a quantity like
+kilograms a
+location an
+organization the name of a movie or
+whether it's a monetary value like
+dollars or euros
+so far we've looked at what NLP is and
+how we can perform natural language
+processing but what are some
+applications of it and where is it used
+in the real
+world one of the applications of NLP is
+in chatbots chatbots can help you solve
+issues while performing natural language
+generation in other words they can hold
+a conversation in plain English a
+chatbot is nothing but a software
+application which can be used to conduct
+an online chat CH conversation either
+through text or speech in place of
+providing direct contact with a life
+human agent you might have seen those
+talk to one of our agents section on
+websites those are usually chat Bots a
+lot of companies also use WhatsApp chat
+Bots to make the process seem less
+mechanical another application of NLP is
+speech recognition probably the most
+popular example of NLP in action are
+virtual assistants like Google assist
+Siri and Alexa natural language
+processing understands and translates
+the human language like Hey Siri where
+is the nearest gas station into numbers
+making it easy for machines to
+understand they recognize when you are
+talking converting speech to text and
+understand what you requested over the
+years virtual assistants have become
+streamlined enough to be able to emulate
+human speech patterns almost flawlessly
+another application of NLP is
+autocorrect
+autoc correction also known as text
+replacement replace as you type or
+simply autocorrect is an automatic data
+validation function commonly found in
+word processors and text editing
+interfaces for smartphones and tablet
+computers it acts as a spell check and
+corrects any spellings or grammar
+mistakes which may arise as you are
+typing some language check softwares
+like grammarly paper rator reverso and
+others can even check how unique and
+engaging your articles are and all of
+this is done using NLP now this brings
+us to the end of this video on NLP in 10
+minutes we hope that the video was
+useful to your journey to learning NLP
+to learn more about natural language
+processing and related topics you can
+check out the simply learn website which
+is linked in the description below to
+keep learning with fun interactive
+videos do subscribe to the simply learn
+Channel thank you for watching and keep
+learning
+[Music]
+hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

@@ -1,0 +1,19 @@
+using chat GPT aai with Microsoft Excel
+welcome to tricks at the rate 100 where
+for 100 days we are going to show you
+small small tricks that can help you in
+productivity so we simply go to chat gbt
+and type I want to make a homepage where
+serially all my other sheets should be
+numbered I want them to be hyperlink to
+each sheet please make a macro so
+whatever it has given me I have simply
+copy pasted and you can see that this is
+the sheet where I have different sheets
+bank account other PL balance sheet and
+as soon as I run it I simply will get a
+homepage with all the links this can be
+amazing when you have different sheets
+to work upon and you can create a
+homepage in less than 20 seconds for a
+detailed video check out the description

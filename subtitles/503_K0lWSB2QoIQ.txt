@@ -1,0 +1,240 @@
+hi everybody welcome to a new PI torch
+tutorial in this tutorial we will talk
+about transfer learning and how it can
+be applied in PI torch transfer learning
+is a machine learning method where a
+model developed for a first task is then
+reused as the starting point for a model
+on a second task for example we can
+train a model to classify birds and cats
+and then use the same model modified
+only a little bit in the last layer and
+then used a new model to classify bees
+and docks so it's a popular approach in
+deep learning that allows rapid
+generation of new models and this is
+super important because training of a
+completely new model can be very time
+consuming it can take multiple days or
+even weeks so if you use a pre trained
+model then we typically exchange only
+the last layer and then do not need to
+train the whole model again however
+transfer learning can achieve pretty
+good performance results and that's why
+it's so popular nowadays so let's have a
+look at this picture here we have a
+typical CNN architecture that I already
+showed you in the last tutorial and this
+let's say this has been already trained
+on a lot of data and we have the
+optimized weights and now we only want
+to take the last fully connected layer
+so this one here and then modify it and
+train the last layer on our new data so
+then we have a new model that has been
+trained and tweaked in the last layer
+and yeah this is the concept of transfer
+learning and now let's have a look at a
+concrete example in pi torch so in this
+example we want we are using the pre
+trained ResNet 18 CNN this is a network
+that is trained on more than a million
+images from the image net database and
+this network is 18 layers deep and can
+classify images into 1,000 object
+categories and now in our example we
+have only two classes so we only want to
+detect bees and ants
+and yeah so let's start so in this
+session I already I also want to show
+you two other new things so first the
+data sets image folder how we can use
+this and how use a scapula to change the
+learning rate and then of course how
+transfer learning is used so I already
+imported the things that we need and now
+we set up the data and the last time we
+use the built-in data sets from the
+torch vision data sets and now here we
+use the data sets dot image folder
+because we saved our data in a folder
+and this has to have the structure like
+this so we have the folder here and then
+we have a training and a validation
+folder so train and Val and in each one
+we have folders for each class so here
+we have ants and ants and peace and also
+in the validation folder we have ants
+and bees and now in each folder we have
+the images here so for example here we
+have some ants and also let's have a
+look at some piece so here we have a bee
+and yeah some you must structure your
+folder like this and then you can call
+the datasets dot image folder and give
+it the path and we also give it some
+transforms here and then we get the
+classes the class names by calling image
+sets image data sets dot classes and
+yeah then here I define the training
+model where I did the loop um and did
+the training and the evaluation I will
+not go into detail here
+you should already know this from the
+last tutorials how a typical training
+and evaluation loop looks like you can
+also check the whole code on github so I
+will provide the link in the description
+so have a look at this yourself and now
+let's use transfer learning so first of
+all we want to import the pre trained
+model so let's set up this model so we
+can do this by saying model so model
+equals and this is available in the
+torch vision thought models module so I
+imported torch vision models already and
+then I can call models dot rest net 16
+or sorry resonate 18 here and then I can
+say pre-trained equals true so this is
+already the optimized weights that are
+trained on the image net data and now
+what we want to do is we want to
+exchange the last fully connected layer
+so first of all let's get the number of
+input features from the last layer so
+let's say num features equals model and
+we can get this by calling dot FC fully
+connected and then the input features
+this is the number of input features for
+the last layer that we need and then
+let's create a new layer and assign it
+to the last layer so let's say model dot
+FC equals and now we give it a new fully
+connected layer and n dot Lin ER and
+this gets the number of input features
+that we have and then as new output
+features number of outputs we have to
+because we have two classes now and now
+we send our model
+to the device if we have GPU support so
+we created our device in the beginning
+as always so this is CUDA or simply CPU
+and now that we have our new model we
+can again as always define our loss and
+optimize us so we say criterion equals n
+n dot cross entropy loss and then let's
+say the optimizer equals this is from
+the optimization module Optim dot SGD
+stochastic gradient descent which has to
+optimize the model parameters and we
+have to specify the learning rate equals
+let's say point zero zero one and now as
+a new thing let's use a scheduler this
+will update the learning rate so for
+this we can say we can create this by
+saying it's called a step L our schedule
+ax equals and L our schedule ax is
+available also in the torch optimization
+module so we already imported this and
+then we can say L our schedule ax dot
+step L R and then here we have to give
+it the optimizer so here we say
+optimizer and then we say step size step
+size equals 7 and then we say gamma
+equals let's say point 1 this means that
+every 7 epochs our learning rate is
+multiplied by this value so every 7
+epochs our learning rate has
+only 10 is now only updated to 10% so
+yeah this is how you use a scapula and
+then typically what we want to do is in
+our loop in our loop over the epoch so
+for epoch in range let's say 100 and
+then typically here we use the training
+where we also do the the optimizer dot
+step optimizer dot step then we want to
+evaluate it evaluate it and then we also
+have to call schedule a step scheduler
+step so this is how we use a scapula
+please have a look at the whole loop
+here yourself
+so yeah now we set up the scheduler and
+let's call the training function so here
+we say model equals and then train model
+so this is the function that I created
+and then I have to pass the model the
+criterion the optimizer the scheduler
+and also the number of epochs so num
+epochs let's say 20 and yeah so this is
+how we use how we can use transfer
+learning so in this case we use a
+technique that is called fine tuning
+because here we train the whole model
+again but only a little bit so we
+fine-tune all the weights spaced on the
+new data and with the new last layer so
+this is one option and the second one is
+for this I copy and paste the same thing
+let's see where does it start so here
+and then as a second option what we can
+do is we can freeze all the all the
+layers in the beginning and only train
+the very last layer so for this we have
+to loop over all the parameters here
+after we got our model so we say for
+param in model dot parameters and then
+we can set the require scratch attribute
+to false so we can say param dot
+requires grat and then say re sorry dot
+require Scrat requires scratch equals
+false now we have it and this will
+freeze all the layers in the beginning
+and now we set up the new last layer we
+create a new layer here and by default
+this has require Scrat equals true and
+then again we set up the loss and
+optimize and the scheduler in this case
+and then we do the training function
+again and so yeah so this is even more
+faster and let's run this and then have
+a look at both the evaluations and I
+also print out the time that it took so
+yeah let's save this and let's run this
+by saying python transfer dot pi and
+[Music]
+this might offers it will download all
+the images and this might take a couple
+of seconds because I don't have GPU
+support here on my macbook so I will
+skip this and then I will see you in a
+second
+all right so now I'm back so this took
+super long on my computer so I reset the
+number of epochs to just 2 in this
+example so let's have a look at the
+results so after only 2 epochs so this
+is the first training where we did the
+fine-tuning of the whole model so this
+took three and a half minutes and the
+best accuracy now is 0.92 so 92% and
+then this is the second training where
+we only trained the last layer so this
+took only one and a half minutes
+approximately
+and.yeah curacy is also and it's already
+over 80% so of course it's not as good
+as in when we trained the whole training
+but still pretty good for only two
+epochs and now let's imagine if we set
+the number of epochs even higher so yeah
+this is why transfer learning is so
+powerful because we have a pre trained
+model and then we only find unit a
+little bit and do a completely new task
+and then achieve pretty good results too
+so yeah so now I hope you understood how
+transfer learning can be applied in PI
+torch if you enjoyed this tutorial
+please subscribe to the channel and see
+you next time bye

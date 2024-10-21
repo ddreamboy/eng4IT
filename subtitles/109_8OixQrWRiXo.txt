@@ -1,0 +1,416 @@
+python is the most widely used
+programming language today when it comes
+to solving data science tasks and
+challenges python never ceases to
+surprise its audience most data
+scientists out there are already
+leveraging the power of python every day
+hi i'm abeksha from simply learn and
+well after some thought and a bit more
+research i was finally able to narrow
+down my choice of top python libraries
+for data science what are they let's
+find out so let's talk about this
+amazing library tensorflow which is also
+one of my favorites so tensorflow is a
+library for high performance numerical
+computations with around 35 000 github
+comments and a vibrant community of
+around 1500 contributors and it's used
+across various scientific domains it's
+basically a framework where we can
+define and run computations which
+involves tensors and tensors we can say
+are partially defined computational
+objects again where they will eventually
+produce a value that was about
+tensorflow let's talk about the features
+of tensorflow so tensorflow is majorly
+used in deep learning models and neural
+networks where we have other libraries
+like torch and thiano also but
+tensorflow has hands down better
+computational graphical visualizations
+when compared to them also tensorflow
+reduces the error largely by 50 to 60 in
+neural machine translations it's highly
+parallel in a way where can train
+multiple neural networks and multiple
+gpus for highly efficient and scalable
+models this parallel computing feature
+of tensorflow is also called pipelining
+also tensorflow has the advantage of
+seamless performance as it's backed by
+google it has quicker updates frequent
+new releases with the latest of features
+now let's look at some applications
+tensorflow is extensively used in speech
+and image recognition text based
+applications time series analysis and
+forecasting and various other
+applications involving video detection
+so favorite thing about tensorflow that
+it's already popular among the machine
+learning community and most are open to
+trying it and some of us are already
+using it now let's look at an example of
+a tensorflow model in this example we
+will not dive deep into the explanation
+of the model as it is beyond the scope
+of this video so here we're using amnest
+dataset which consists of images of
+handwritten digits handwritten digits
+can be easily recognized by building a
+simple tensorflow model let's see how
+when we visualize our data using
+matplotlib library the inputs will look
+something like this then we create our
+tensorflow model to create a basic
+tensorflow model we need to initialize
+the variables and start a session then
+after training the model we can validate
+the data and then predict the accuracy
+this model has predicted 92 percent
+accuracy let's see which is pretty well
+for this model so that's all for
+tensorflow if you need to understand
+this tutorial in detail then you can go
+ahead and watch our deep learning
+tutorial from simply learn as shown in
+the right corner interesting right let's
+move on to the next library now let's
+talk about a common yet a very powerful
+python library called numpy numpy is a
+fundamental package for numerical
+computation in python it stands for
+numerical python as the name suggests it
+has around 18 000 comments on github
+with an active community of 700
+contributors it's a general purpose
+array processing package in a way that
+it provides high performance
+multi-dimensional objects called arrays
+and tools for working with them also
+numpy addresses the slowness problem
+partly by providing these
+multi-dimensional arrays that we talked
+about and then functions and operators
+that operate efficiently on these arrays
+interesting right now let's talk about
+features of number it's very easy to
+work with large arrays and mattresses
+using numpy numpy fully supports object
+oriented approach for example coming
+back to nd array once again it's a class
+possessing numerous methods and
+attributes ndra provides for larger and
+repeated computations numpy offers
+vectorization it's more faster and
+compact than traditional methods i
+always wanted to get rid of loops and
+vectorization of numpy clearly helps me
+with that now let's talk about the
+applications of numpy numpy along with
+pandas is extensively used in data
+analysis which forms the basis of data
+science it helps in creating the
+powerful n-dimensional array whenever we
+talk about numpy the mention of the
+array we cannot do it without the
+mention of the powerful n-dimensional
+array also number is extensively used in
+machine learning when we are creating
+machine learning models as in where it
+forms the base of other libraries like
+sci-by scikit-learn etc when you start
+creating the machine learning models in
+data science you will realize that all
+the models will have their bases numpy
+or pandas also when number is used with
+scipy and matplotlib it can be used as a
+replacement of matlab now let's look at
+a simple example of an array in numpy as
+you can see here there are multiple
+array manipulation routines like there
+are basic examples where you can copy
+the values from one array to another we
+can give a new shape to an array from
+maybe one dimensional we can make it as
+a two dimensional array we can return a
+copy of the array collapsed into one
+dimension now let's look at an example
+where this is a notebook and we will
+just create a basic array and
+for detailed explanation you can watch
+our other videos which targets on these
+explanations of each libraries so first
+of all whenever we are using any library
+in python we have to import it so now
+this np is the alias which we will be
+using let's create a simple array
+let's look what is the type of this
+array
+so this is an nd array type of array
+also let's look what's the shape of this
+array
+so this is a shape of the array now here
+we saw that we can expand the shape of
+the array
+so this is where you can change the
+shape of the array using all those
+functions now let's create another using
+arrange functions if i give arrange 12
+it will give me a 1d array of 12 numbers
+like this now we can reshape this array
+to 3 comma 4 or we can write it here
+itself
+so this is how our range function and
+the reshape function works for numpy now
+let's discuss the next library which is
+scipy so this is another free and open
+source python library extensively used
+in data science for high level
+computations so this library as the name
+suggests stands for scientific python
+and it has around 19 000 comments on
+github with an active community of 600
+contributors it is extensively used for
+scientific and technical computations
+also as it extends numpy it provides
+many user friendly and efficient
+routines for scientific calculations now
+let's discuss about some features of
+scipy so scipy has its collection of
+algorithms and functions which is built
+on the numpy extension of python
+secondly it has various high level
+commands for data manipulation and
+visualization also the ndmh function of
+scipy is very useful in
+multi-dimensional image processing and
+it includes built-in functions for
+solving differential equations linear
+algebra and many more so that was about
+the features of sci-fi now let's discuss
+its applications so cyber is used in
+multi-dimensional image operations it
+has functions to read images from disk
+into number arrays to write arrays to
+discuss images resize images etc solving
+differential equations fourier
+transforms then optimization algorithms
+linear algebra etc let's look at a
+simple example to learn what kind of
+functions are there in sci by here i'm
+importing the constants package of scipy
+library so in this package it has all
+the constants
+so here i'm just mentioning c or edge or
+any and this library already knows what
+it has to fetch like speed of light
+planck's constant etc so this can be
+used in further calculations data
+analysis is an integral part of data
+science data scientists spend most of
+the day in data munching and then
+cleaning the data also hence mention of
+pandas is a must in data science life
+cycle yes pandas is the most popular and
+widely used python library for data
+science along with numpy and matplotlib
+the name itself stands for python data
+analysis with around 17 000 comments on
+github and an active community of 1200
+contributors it is heavily used for data
+analysis and cleaning as it provides
+fast flexible data structures like data
+frames series which are designed to work
+with structured data very easily and
+intuitively now let's talk about some
+features of pandas so panas offers this
+eloquent syntax and rich functionalities
+like there are various methods and
+pandas like drop n a phil na which gives
+you the freedom to deal with missing
+data also partners provides a powerful
+apply function which lets you create
+your own function and run it across a
+series of data now forget about writing
+those for loops while using pandas also
+this library's high level abstraction
+over low level numpy which is written in
+pure c then it also contains these high
+level data structures and manipulation
+tools which makes it very easy to work
+with pandas like their data structures
+and series now let's discuss the
+applications of pandas so panas is
+extensively used in general data
+wrangling and data cleaning then pandas
+also finds its usage in edl jobs for
+data transformation and data storage as
+it has excellent support for loading csv
+files into its data frame format then
+pandas is used in a variety of academic
+and commercial domains including
+statistics finance neuroscience
+economics web analytics etc then pandas
+is also very useful in time series
+specific functionality like date range
+generation moving window linear
+regression date shifting etc now let's
+look at a very simple example of how to
+create a data frame so data frame is a
+very useful data structure in pandas and
+it has very powerful functionalities so
+here i'm only enlisting important
+libraries in data science you can
+explore more of our videos to learn
+about these libraries in detail so let's
+just go ahead and create a data frame
+i'm using jupyter notebook again and in
+this before using pandas here i'm
+importing the pandas library
+let me go and run this so in data frame
+we can import a file a csv file excel
+file so there are many functions doing
+these things and we can also create our
+own data and put it into data frame so
+here i am taking random data and putting
+in a data frame also i'm creating an
+index and then also giving the column
+names so pd is the alias we've given
+pandas random data of 6x4 index which is
+taking a range six numbers and column
+name i'm giving as abcd now let's go
+ahead and look at it
+so here it has created a data frame with
+my column names up abcd
+my list has six numbers zero to five and
+a random data of six by four so
+dataframe is just another table with
+rows and columns where you can do
+various functions over it also i can go
+ahead and describe this data frame to
+see so it's giving me all these
+functionalities where count and mean and
+standard deviation etc okay so that was
+about pandas now let's talk about next
+library and the last one so matplotlib
+for me is the most fun library out of
+all of them why because it has such
+powerful yet beautiful visualizations
+we'll see in the coming slides plot and
+matplotlib suggests that it's a plotting
+library for python it has around 26 000
+comments on github and a very vibrant
+community of 700 contributors and
+because of such graphs and plots that it
+produces it's majorly used for data
+visualization and also because it
+provides an object oriented api which
+can be used to embed those plots into
+our applications let's talk about the
+features of matplotlib the pi plot
+module of matplotlib provides
+matlab-like interface so matplotlib is
+designed to be as usable as matlab with
+an advantage of being free and open
+source also it supports dozens of
+backends and output types which means
+you can use it regardless of which
+operating system you're using or which
+output format you wish pandas itself can
+be used as wrappers around matplotlibs
+api so as to drive matplotlib via
+cleaner and more modern apis also when
+you start using this library you will
+realize that it has a very little memory
+consumption and a very good runtime
+behavior now let's talk about the
+applications of matplotlib it's
+important to discover the unknown
+relationship between the variables in
+your data set so this library helps to
+visualize the correlation analysis of
+variables also in machine learning we
+can visualize 95 percent confidence
+interval of the model just to
+communicate how well our model fits the
+data then mat modular finds its
+application and outlier detection using
+scatter plot etc and to visualize the
+distribution of data to gain instant
+insights now let's make a very simple
+plot to get a basic idea i've already
+imported the libraries here so this
+function matplotlib inline will help you
+show the plots in the jupiter notebook
+this is also called a magic function i
+won't be able to display my plots in the
+jupiter notebook if i don't use this
+function i am using this function in
+numpy to fix random state for
+reproducibility now i'll take my n as 30
+and will assign random values to my
+variables so this function is generating
+30 random numbers here i'm trying to
+create a scatter plot so i want to
+decide the area
+let's
+put this so this just multiplying 30
+with random numbers to the power 2 so
+that we get the area of the plot which
+we will see in just a minute so using
+the scatter function and the alias of
+matplotlib as plt i've created this if i
+don't use this and i have very small
+circles as my scatter plot it's colorful
+it's nice so that's one very easy plot i
+suggest that you explore more of
+matplotlib and i'm sure you will enjoy
+it let's create a histogram so i'm using
+my the style as gg plot and assigning
+some values to these variables any
+random values
+now we are assigning bars and colors and
+alignment to the plot and here we get
+the graph so we can create different
+type of visualizations and plots and
+then work upon them using matplotlib and
+it's just that simple so that was about
+the leading python libraries in the
+field of data science but along with
+these libraries data scientists are also
+leveraging the power of some other
+useful libraries for example like
+tensorflow keras is another popular
+library which is extensively used for
+deep learning and neural network modules
+keras drafts both tensorflow and theano
+back-ends so it is a good option if you
+don't want to dive into details of
+tensorflow then scikit-learn is a
+machine learning library it provides
+almost all the machine learning
+algorithms that you need and it is
+designed to interpolate with numpy and
+sci-by then we have c bond which is
+another library for data visualization
+we can say that seaborne is an
+enhancement of matplotlib as it
+introduces additional plot types so this
+was about top python libraries for data
+science according to me it still may not
+cover some other great useful libraries
+that deserve to be looked at so share
+your favorites in the comment section
+below as well as any interesting things
+about the libraries that we mentioned
+that's all from my site thank you and
+keep learning
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

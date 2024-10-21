@@ -1,0 +1,825 @@
+hello guys welcome back in this video
+let us see in detail about
+tokenization now let's have a question
+why do we need this tokenization so the
+requirement of this tokenization is
+let's say I want to perform any task
+like summarizing the text question and
+answering from the model I'll provide a
+context and I'd like to ask some
+questions to the model to get the
+response related to the question so like
+that for question and
+answering and if You observe for
+sentiment analysis
+also and so on we can able to
+perform multiple
+tasks by using any one of the NLP model
+by using any one of the natural language
+processing model we can able to perform
+these tasks by using any one of the NLP
+model then in order to perform any one
+of the task based on my requirement we
+need to pass our data or
+text or our content to our model right
+yes so while passing what type of data
+our model is expecting that type of data
+we need to
+pass any model will only accept
+numerical representations only as an
+input so now in order to perform these
+tasks in real time by using any one of
+the NLP model I am having a requirement
+to convert my input to numerical
+representation because my input how it
+will be actually in the form of sentence
+that is nothing but text right yes
+let's take an example so let's say I
+want to analyze the sentiment of the
+text by passing the input then here so
+what is the first task I need to do I
+need to pass my input right yes so how
+can I able to pass my input to any one
+of the natural language processing model
+so that we're going to understood in
+this video so what is the text so let
+let's take a sentence
+as let's take an example sentence that
+is let's say I am a developer I'm a
+developer or I want to become a
+developer I want to become a developer
+like this I want to send this input I
+want to send or I want to provide this
+sentence to any one of the ml model then
+how can I able to provide then can I
+send this sentence directly to my model
+no if I send directly this sentence to
+my model then my model do not able to
+understand that sentence because it only
+know the numerical representations and
+it only understood these numerical
+representations whatever the sentence
+that I have sent in the form of a text
+that our model will not
+understood and here one more important
+point is if I send any numerical
+representation instead of the sentence
+then my model need to understood that
+particular numerical representation
+representing this
+sentence how can my model able to
+understood that numerical representation
+represents the
+sentence so first initially that data
+need to be there right yes
+so in order to understood a numerical
+representation belongs to particular
+word or particular sentence or
+particular character first that data
+that vocabulary data need to be stored
+in that model right yes so let's say if
+I assign one to I and if I assign two to
+this whole sentence like want the
+sentence
+then I know that so this one represents
+this I this two represents this W and
+space before it how actually like that
+in vocabulary way how our model will
+actually store that data or in what
+vocabulary our model is using in order
+to identify our sentence from numerical
+words so let's first that so that we can
+able to further convert the sentence
+into that numerical representation and
+then we can able to pass that data to
+our model so let's first observe what
+vocabulary a model is using in order to
+understood numerical in order to
+understood our sentence based on the
+numerical representation so how can you
+how can we able to get that vocabulary
+sir we already have a library that
+Library is
+Transformers so in this Library actually
+we
+have we
+have tokenizers that is Auto
+tokenization auto tokenizer is there you
+can see suggesting yeah this Auto
+tokenizer is already present in this
+Transformers Library by using this Auto
+tokenizer Library by using this Auto
+tokenizer you can able
+to actually tokenize a sentence that is
+you can able to convert this sentence
+into numerical
+representation based on the model that
+you
+use you can use this tokenizer that is
+auto tokenizer to convert this to
+respective numerical representation
+because each and every model have their
+own tokenizers
+so so before passing any sentence input
+to our model we need to convert our
+sentence to
+tokenization by using that particular
+tokenizer only because that tokenizer
+will convert our sentence into numerical
+representation so don't worry we'll
+understood how the vocabulary stored for
+that particular model in the tokenizer
+as well
+by using this Auto tokenizer you can
+able to load a tokenizer or you can say
+you can able to load any model related
+tokenizer let's say I want to load a
+tokenizer related
+to B model then I can able to use this
+the this Auto tokenizer you can able to
+use Auto tokenizer Dot from pre-trained
+from pre-trained Models you can able to
+import a tokenizer let's say I want to
+use but
+base case I want to use this board base
+cased model to create a
+tokenizer so let's say I created a
+tokenizer that is I want to load a
+tokenizer here you can see for this
+model for this model by using this Auto
+tokenizer and Dot from pre trained I
+loaded this model related tokenizer into
+this
+variable now in order to understood this
+in better way let's print this tokenizer
+and let's see what it is
+printing what it is printing instead of
+this so actually I'm one bit out
+now I want to run it to check what how
+my tokenizer is loaded so how my
+tokenizer is
+represented now you can see so it's
+running yeah currently now it is loading
+the tokenizer yeah you can see so this
+is is how it will be
+loaded so it contains our tokenizer
+contains these many things like so what
+is the
+model which model tokenizer it is so
+that model is there and how many
+vocabularies are there so what is
+vocabulary vocabulary is nothing but
+each word related or each token related
+numerical representation we call word or
+sentence or
+sentence as a token here so in case of
+model we call it as a token so for each
+token numerical representation we will
+store in in the form of a vocabulary so
+like this how many vocabulary size is
+there
+28996 so this actually store these many
+data of
+vocabulary this also specifying me the
+max length this represent what is the
+max length of tokens that we can able to
+pass to our
+model and so it's actually F so that's
+why it is true and padding in right side
+you can able to apply padding so what is
+the major requirement of this padding
+sir the major requirement of this
+padding is whenever you are comparing
+the similarity between two words or two
+sentences during that scenario the
+number of tokens for sentence one and
+sentence two may not
+match one sentence may have large number
+of
+tokens compared to other sentence during
+that scenario you use this padding to
+just match the length of the both
+sentences before processing that data by
+using our model that padding actually
+happens in right side
+and if you see the other things like
+truncation side is also right side only
+as well as special
+tokens it contains this model actually
+contains special tokens like unknown
+tokens are represented by using Unk and
+separate tokens are represented by using
+SCP that means if there are two
+sentences then they are separated by
+using this SCP token and padding so just
+now we discussed in order to provide
+padding to a sentence so that padding
+that extra padding is provided by using
+this pad
+tokens and so
+while let's say if I provide this
+sentence then actually after tokenizing
+the sentence it actually contains the
+first the first element is this class
+token and the last element is this
+separate token in order to separate the
+sentence this this becomes the last and
+in order to tell this is the starting of
+the sentence this token is added and
+coming to mask so this is the mask token
+we can actually use it to train a
+model now we have understood how a
+tokenizer is loaded now what I'm
+expecting is I want to see the
+vocabulary so what is the vocabulary or
+you can say how actually you have seen
+right so how what is the vocabulary size
+of this model this model vocabulary size
+is this so what is vocabulary vocabulary
+is nothing but for particular word what
+is the numerical representation so that
+is the vocabulary so in order to
+identify a word based on numerical
+representation it also need a vocabulary
+right yes so that we going to see
+now how can we able to see you can see
+we created this we loaded this tokenizer
+right so by using this tokenizer you can
+able to see that tokenizer do oap so
+this is
+the this is the thing you can able to
+use or you can say this is the method
+you can able to use to see the
+vocabulary
+of that particular model now I'm just
+rerunning it again
+to see the
+vocabulary how yeah you can see multiple
+vocabularies are there for particular
+word
+particular numerical representation is
+assigned already now I want to see that
+in a meaningful
+manner I want to see these all in a
+structured format for one what is the
+word for two what is the word so like
+that I want to see in a structured
+format for that in order to represent
+this data in a very structured format I
+want to import
+pandas so let's
+import
+pandas yeah let's import
+pandas as
+PD I think this library was not
+installed yeah so let's install it
+meanwhile we
+install pandas so this used this command
+is used to install the library so
+meanwhile let's write let's continue the
+commands so I want to first I want to
+convert this vocabulary or you can say
+this dictionary into P data frame so how
+can I able to convert this dictionary
+into Data frame so okab data frame in
+this variable I want to store that data
+frame so in order to create this data
+frame I want want to use pandas PD do
+data frame what is that pd. data frame
+this you can able to use in order to
+convert your data or you can say our
+data our vocabulary data
+into Data frame and
+here we need to provide a dictionary
+format data or let let's provide the
+same thing
+or let's provide our own
+like what is
+the key and what is the value I want to
+store for particular
+variable or else you can able to
+directly provide this vocabulary so it's
+actual dictionary so you can able to
+provide and let's see the data frame how
+it looks like so let's print it so that
+we can able to get the data frame
+vocabulary data frame of this particular
+model so like this for every model so
+this related to what model this related
+to B base Case Model so like this for
+every model we have
+tokenizers yeah I think we got some
+error in line number 10 that is at here
+so let let's make it in the form of a
+dictionary to pass it so first I want to
+store tokens that is nothing but
+wordss so what are the wordss wordss are
+nothing but the first keys right yes so
+okab do
+keys so these keys are nothing but words
+as well as the second one is I want the
+token
+IDs so words as well as token IDs are
+stored right so okab
+dot values you can able to use values to
+get all the values of the dictionary and
+to get all the keys of the dictionary
+you can able to use it so let's rerun it
+to
+see to see this data
+in this dictionary format
+data yeah now you can able to observe
+totally these many rows are there that
+is a
+28,990 and you can see how the data is
+represented yeah looks good right yes
+but the token IDs are not in arranged
+order like0 to ending I want to I want
+to sort this data based on a ascending
+or like like zero from zero to ending
+that is 28 9 96 like that I want order
+order way I want to see so in order to
+see an order way let's sort the
+data based on this token ID so for
+sorting this so vocabulary data frame
+dot
+sort sort values I want to sort values
+by
+So based on what we are sorting based on
+this uh yeah token
+ID based on this token ID I want to sort
+so that's why I'm copying this and
+providing that here and so I want to set
+index as well so here you can see index
+I'm getting some random index values I
+want to set that index as the same that
+is this token ID I want to set this as
+index so I'm providing the token ID
+and again at last I want to store this
+sorted data in this vocabulary data
+frame itself so I'm storing it so let's
+see in a sorted order from zero to
+ending yeah you can observe so first
+yeah this is the sorted order so from 0
+to it was started and 200 yeah something
+it was there so up till there it was
+there now you can observe Z to token is
+provided for padding so let's say if we
+want to provide padding for a sentence
+then what it will provide it will
+provide zero it will provide a zero for
+that extra
+places in a sentence at the place of
+padding and one and you can see so
+multiple are
+there so let's
+print since lot of values are there so
+that's why the reason we are unable to
+see that data so let's download the data
+in the form of CSV and see that data so
+wab data frame dot to CSV so this is the
+this is the method you can able to use
+in order to load your
+data in data Frame data into your local
+machine and you need to provide the
+CSV file related name like data. CSV
+or let's provide okab data. CSV and do
+you want index
+then you can provide or else you can
+provide currently I don't want any index
+so that's why I'm providing false so
+let's rerun it so that my data frame got
+converted to CSV format and it will gets
+downloaded into
+my yeah it will get downloaded into my
+local machine you can see this is the
+okay okay
+folder so this is how this this is the
+CSV file that is downloaded so let's
+open this CSV file to see the
+data since our index is nothing but the
+token ID we need this so that's why I'm
+I want to I want this as well so that's
+why I'm providing true and rerunning it
+then let's see how how the vocabulary of
+this particular model will be so like
+this for every model there will be some
+vocabul
+permissions denied so let's provide
+one let's provide another file name and
+let's try
+to do this again yeah you can see so
+it's get downloaded so if you open it
+then you can able to see the token ID
+and the data corresponding to it right
+yes so the whole data is there if You
+observe so first few
+or you can say first some data will be
+represented for T padding
+and you can see for classing separation
+and MTH so like that for different
+labels
+first approximately yeah exactly one5
+tokens or you can say one5 tokens are
+given for these type of data then after
+you can see special symbols got
+started and up to 120 we have special
+symbols and numbers are
+stored from 121 to 130 and then again
+special symbols came and then you can
+see AB CDs that is nothing but your
+letters our characters are characters
+indication starting from
+138 then yeah so then special symbols
+are there so like that so for each and
+every for each and every you can see for
+different languages different symbols
+are there those are also stored here so
+since it's a language model multiple
+languages also got stored and you can
+see words word related word related
+token is also there so like this based
+on token and token ID this model already
+have based on the token and token ID
+this model already have this a tokenizer
+so where is the tokenizer yeah yeah here
+so this tokenizer whatever the tokenizer
+that we created from that model that
+will con that will convert our sentence
+that will convert our sentence into
+numerical representation particular
+corresponding numerical representation
+so before converting our sentence into
+corresponding numerical representation
+so this tokenizer this tokenizer will
+actually split or divide our sentence
+into
+tokens where those every tokens will be
+present here so by using that tokens it
+will represent the corresponding token
+IDs so let's first
+convert this sentence into two
+tokens to observe how this tokenizer is
+converting the sentence into
+tokens so for that let's comment this
+vocabulary representation I don't want
+this vocabulary right now okay now I
+want to see how this
+tokenizer will split my
+sentence so for that let's see so I want
+tokens right yes so by using that
+tokenizer you can to
+use tokenize you can able to use
+tokenize you can able to use this
+tokenize of this
+sentence so this can able to tokenize
+your sentence and then let's see the
+tokens how it will convert the sentence
+or you can say how it will tokenize the
+sentence tokenization is nothing but
+splitting the sentence toiz is nothing
+but splitting the sentence you can see
+how it is splitted I is taking as one
+word want is taken as one word two is
+taken as one word become is taken as one
+word a is taken as one word developer is
+taken as one word and this dot is taken
+as another
+word in this way actually it can able to
+tokenize the sentence so like this every
+tokenizer related to every model will
+tokenize the
+sentence based on what based on the
+vocabulary token toer vocabulary it has
+so actually this modal tokenizer will
+have the meaning related to this word
+that is the numerical representation
+related to this word so that's why the
+splitted like
+this now let's tokenize that is these
+are tokens right yes so now I want to
+tokenize these tokens nothing but
+whatever the sentence I have that I want
+to tokenize and see
+how my tokenizer will converting this
+sentence into numerical representation
+so for that so what we doing we are
+actually converting or you can say we're
+getting that tokens IDs right yes so we
+are tokenizing nothing but converting
+the tokens into token IDs so by using
+the tokenizer only you can able to do
+that by using the same tokenizer I'm
+using encode function and providing the
+same
+sentence and let's print these token IDs
+as well after this tokens let's print
+this token ID what we get after encoding
+that
+sentence I'm rerunning this to see these
+tokens as well as the token IDs you can
+see the token as well as token ID token
+token ID But If You observe so totally 1
+2 3 4 5 6 7 7even tokens are there
+coming to token IDs 1 2 3 4 5 6 7 8 n so
+why two extra tokens came in this token
+IDs other than the sentence why two
+extra tokens will came the reason behind
+this is the first token represents that
+class and this last token represents the
+separation nothing but the ending of the
+sentence so let's see that as well
+in order to see these two tokens related
+wordss or these two tokens related
+representing I want this vocabulary so I
+I'm using this vocabulary and I also
+require these data
+frames so I'm just uh removing or
+uncommenting these two
+and I want to print right so I want to
+print
+what is
+the what is this numerical
+representation represents in this data
+frame so for that I'm just using the
+print
+statement okab data frame dot
+item location or
+item load of this one1 nothing but this
+token I provided and I'm providing the
+another one as well
+that is nothing but this
+one2 one2 now I want to rerun this to
+see so what these two tokens will
+actually represented in this data
+frame so I think some error
+came yeah PD is not there so that's the
+error so let's rerun
+it we this importing p s PD also we need
+to un comment so that we forgot it yeah
+you can see so what does this represents
+this
+represents CLS what does this one or two
+token represents this represents this
+SCP so like this the starting and ending
+tokens will be represented in a sentence
+so that's why the two get extra and all
+the middle tokens represent the
+corresponding tokens the corresponding
+tokens in the tokenized sentence
+so now we observed and we
+analyzed how any model vocabulary will
+looks like by using this by using this
+tokenizer doab and we also analyzed how
+a tokenizer how a tokenizer will
+tokenizes the sentence by using this how
+it breaks the sentence and we also
+understood the encoding or nothing but
+token IDs of the sentence of the
+sentence we also identify the token IDs
+of the
+sentence and we also observed why two
+extra tokens got added to our sentence
+and what they are nothing but they are
+specifying the tokens like CLS as well
+as this SCP to represent the start as
+well as ending of the sentence
+now based on these token IDs based on
+these token IDs whatever generated I
+want to decode it that is I want to see
+the I want to see back that is these
+tokens I want to see back so can I able
+to do that yes we can able to do that so
+just a decode method you can able to use
+so these are the token IDs right now I'm
+just printing I'm just commenting the
+below because uh this vocabul vocabul
+related code we have already seen now
+let's see how to decode
+this so to
+decode to decode these
+tokens so token IDs let's say you you
+have this encoded sentence that is these
+tokens so by using these token IDs let's
+say I want to decode how we can able to
+decode that so in order to decode you
+simply write the sentence that is these
+token IDs
+dot this tokenizer do decode so by using
+the tokenizer right you you are decoding
+yes this tokenizer do
+decode of so what you want to decode
+this token IDs this tokens related IDs I
+want to decode and then I want to print
+whatever the response that I'm
+getting to
+see how what is the decoded
+tokens so
+as per your observation the first token
+represents the CLS and uh you can
+see so somewhat error I'm no
+some yeah these all are warnings you
+just ignore them you can see so the
+first one represents class and the last
+one represents this separation and this
+is what the sentence have provided so by
+using the token IDs also you can able to
+generate the
+sentence so from starting from first
+character to nothing but starting from
+the first sentence to last sentence I
+want I don't want the first as well as
+last up to there I want so like that
+that's why I'm providing this slicing
+and let's print it to get only the
+sentence no these tokens are not there
+right so let's print the sentence
+let's print this sentence yeah you can
+see we got this so again we are running
+it to see how the
+sentence will
+be you can see this is the decoded
+sentence so like this actually we
+represent we encode the sentence to send
+the sentence to our
+model one more important point you not
+only pass these token IDs apart from
+these token IDs you also pass two more
+parameters how to generate those so to
+generate those
+so how to generate
+those you can generate those by using
+tokenizer by using the tokenizer itself
+you can able to generate tokenizer of
+whatever the sentence that you want to
+pass that sentence you will provide so
+this will generate
+you this will generate you three things
+so let's see what three things it will
+generate and let's understood what are
+the three
+things first one is these token IDs you
+can see input IDs it will generated that
+input ID are nothing but my tokens
+related IDs okay then what these token
+type IDs these token type IDs represents
+the type of sentence what is the the
+input
+type is the input is prompt or is the
+input is question so like that in order
+to provide the variation between
+different
+sentences so this actually uses this
+token type IDs okay in order to tell the
+differentiation between input inputs so
+these token IDs are been given okay so
+what about these attention Mass so I
+already told you these attention Mass
+are nothing but in order to specify is
+there any
+padding is there any padding so in order
+to specify those paddings these
+attention masks are there so in order to
+observe the padding as well let's let's
+take one more sentence as an
+example to provide two sentences to this
+model so let's say this is the sentence
+one and this sentence one is nothing but
+I a
+developer I am a developer you can see
+these two will generate different length
+tokens right yes these two sentences
+will generate me different length
+tokens comma
+sentence one I'm passing now for the
+tokenizer I'm passing the sentence as
+well as sentence one that is nothing but
+these two sentences I'm passing
+and padding so here in order to balance
+the length nothing
+but for the first for the first sentence
+it will generate these many tokens for
+the second sentence might these many
+tokens won't be generated you can print
+it as well if you want so yeah let's
+print it to make it
+clear for the sentence one also I'm
+taking tokens one and printing that so
+let's rerun it so that you can able to
+observe how the output will be you can
+see this yes so for this the number of
+tokens are these many for this the
+number of tokens are these many right
+yes so now here do I applied any padding
+no so that's why these extra two bits
+are not taken and here all the padding
+bits are one now let's say I want to
+apply the padding in order to balance
+the two sentences I want to apply
+padding equals to
+true so I want to apply the
+padding and let's rerun it to see this
+attention mask to see this attention
+mask I applied the padding you can see
+extra two zeros got added that means two
+extra tokens are there in the first
+sentence you can see this is the first
+sentence
+related attention mask paddings and
+these are the attention mask paddings
+related to Second sentence that is
+sentence one here you can see two zeros
+are added nothing but two extra padding
+bits got added here whereas in
+previously two extra paddings are not
+added so that's why there is no padding
+here right yes so nothing but two zeros
+are there these two represents the pad
+in previously before padding there is no
+two extra zeros after padding now two
+extra zeros came so that's
+the so in order to represent that
+padding this attention mask is used so
+this whole data nothing
+but this all data will pass as tokenized
+data to our embeddings or to our
+model so if we recap it
+then from where we imported the
+tokenizer we imported the tokenizer from
+Transformers Library by using this Auto
+Transformers and we provided the model
+for which model we want to create this
+tokenizer and we have taken a sample
+sentence and we tokenized that sentence
+as well to see how the token
+representation of the sentence as well
+and then we we previously seen what is
+the vocabulary that is nothing but how
+this model is remembering this model is
+identifying what word represent what
+numerical representation so that
+vocabulary we have Sav we have saved in
+this vocab data one file and we have
+seen that vocabulary how it will be and
+then we just
+simply tokenized our sentence that is
+nothing but
+we taking a sample sentence and we
+tokenized that sentence by using using
+this tokenizer tokenized function then
+after we encoded that sentence nothing
+but we generated that token IDs from the
+tokens and we also understood what are
+the other parameters will pass to the
+model before before we sending the data
+you can see we provided the tokenized
+inputs nothing but input IDs and we are
+passing these token type IDs nothing but
+in order to represent what is that token
+type
+so in order to represent different
+inputs nothing but if you take an
+example then question and answering or
+you can say context you know
+to differentiate between different types
+of
+inputs this token type IDs are created
+and this attention Mass actually to
+represent padding so is there any extra
+padding happened or not so that to
+represent that you can see extra zeros
+are there so that representing by using
+this attention Mass so that's it all
+about this tokenization in
+depth analysis so I hope you understood
+this video and you understood some
+more important and detailed Concepts and
+You observe that detailed observation of
+this
+tokenization how a model how any model
+will understood the numerical
+representation that we create by using
+this
+tokenizers and how actually the
+vocabulary of this token tokenizer will
+be for any
+model and what we will pass and what we
+will pass as an input to our tokenizer
+you can see this data will pass as an
+input to our tokenizer and you also
+observed what are the major components
+in
+it so that's it all about this video I
+hope you understood this
+video and you got some clear conceptual
+knowledge if you feel this video is
+useful then please like it so that it
+will be very supporting to
+me and type your comment so that I can
+able to understood your
+feeling and don't forget to subscribe to
+my channel to watch such informative
+videos thanks for watching again see you
+back in the next video with another
+interesting topic until then bye-bye
+guys

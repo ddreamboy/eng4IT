@@ -1,0 +1,610 @@
+hello everyone in this video I will show
+you how to use deep learning for
+football analysis based on game
+recordings so the main idea is to
+extract useful information from video
+recordings of football games and more
+precisely the ultimate goal is to track
+each object of Interest such as the
+players and the ball and to capture the
+coordinates of each tracked object at
+any given frame with relatively high
+accuracy and this would certainly allow
+us to calculate many useful statistics
+such as ball possession rate players
+traveled distances the ball and players
+average speed and many other statistics
+however as you can imagine there are
+many challenges that we need to overcome
+in order to achieve that goal so the
+application we have today presents the
+first step and its main functionality is
+to detect the players the referee and
+the ball then seamlessly project their
+coordinates on a tactical map
+representation of the football field
+okay so now let's start with the demo
+for the web application and then I'll be
+explaining the different functional
+ities and the reasoning behind their
+implementation and finally we'll do a
+simple code work through and of course
+you can find the different files for
+this project in the GitHub repository
+which you can access through the link in
+the description one last thing I need to
+add before we start the demo is that uh
+when training the object detection
+models I use the Tactical recordings of
+uh football games and that's because if
+you want to achieve a highly accurate
+tactical map representation we need
+either a fixed camera or a camera that
+doesn't move too much that's why I
+decided not to use the regular TV
+podcast recordings of football games
+okay so without further Ado let's start
+with the web application
+demo okay so here we have the web app
+for football players detection with Team
+prediction and tactical map
+representation so the first page here is
+the how to use page you can follow the
+different steps here in order to
+navigate the app and learn how to use it
+but I'll show you how in this quick demo
+so first of all we start with the main
+settings we need to select a demo video
+we have two options here and here we
+have the first one selected but of
+course if you want to use your own video
+you can upload it using this button and
+then you can preview your uploaded video
+over here so let me show you this is the
+first demo video it's a tactical camera
+recording for the game between France
+and Switzerland so the next step is to
+set the team names so the first team
+here is France and the second team is
+Switzerland then we need to move on to
+the team colors Tab and here we need to
+set the different team colors that will
+be used afterwards for team predictions
+so here we have a select frame slider
+and we need to select frame where every
+player is detected for example here in
+the first frame we don't see the
+goalkeeper of the Switzerland national
+team detected so we need to choose
+another frame for example in the second
+frame we can see that both both
+goalkeepers of the two teams are
+detected and we can work with this Frame
+and then we need to select the different
+colors for both teams so for each team
+we have two colors one for the players
+and one for the goalkeeper and to select
+the colors we simply need to click on
+which color we need to select and then
+click on the detection images here so
+for example for the France uh players
+color we simply click for example on
+this uh pixel and the picket color will
+be shown in the box below now let's
+select the color for the France
+goalkeeper and we repeat the same
+process we pick color and it will be
+shown
+here we can do the same thing for the
+Switzerland team first the players
+color and finally the goalkeeper color
+of course you don't need to do this for
+the demo videos because the different
+colors are predefined but if you if you
+want to upload your own video you need
+to perform this step in order to get uh
+a correct or an accurate tee prediction
+uh once we have the different colors set
+we can move on to the last tab which is
+the model hyperparameters and
+detection okay so the different
+parameters here will be discussed later
+on but here we have uh annotation
+options which are detection options so
+if you want to show the key points
+detection the players detection the
+color pallets or the ball tracks you can
+toggle these um options and you can save
+the output video if you check this uh
+box and of course you can enter the file
+name which is optional if you don't want
+to enter a file name one will be
+generated and you can find of course the
+output video in the output uh folder
+let's start with the player detection
+option all right as you can see here we
+have the different players detected and
+and we have the team prediction for
+France and Switzerland and here we have
+each player with the color palette
+detected which is used for the team
+prediction and of course here we have
+the Tactical map with the ball track
+representation now the FPS here is low
+is around four on average but if we run
+the same code on a Jupiter notebook we
+can get it up to8 FPS but of course uh
+many more optimization steps can be
+taken in order to improve the
+FPS all right now let's stop the
+detection and add the uh show key Point
+detection option let's start again now
+it will show you the different field key
+points that were detected and these key
+points are used to build the Tactical
+map
+representation and as you can see here
+we have an efficient and accurate key
+Point detection all right now let's move
+on to the second demo
+video so we simply need to select the
+demo two op option on the main settings
+and everything else will be changed
+accordingly from the team names to the
+team
+colors so we only need to uh click on
+start
+detection all right so here we have two
+teams with quite similar colors and
+that's why the team prediction isn't as
+accurate and we will discuss later on
+what can be done to improve on that and
+if you've noticed it as well in the
+beginning the Tactical map
+representation was wasn't accurate but
+then it got corrected when the camera
+started
+moving and that's another functionality
+implemented to correct the different uh
+representation based on the camera
+movement okay so that's it for the demo
+let's stop the detection and let's
+discuss how the different
+functionalities were implemented okay so
+here we have a flowchart of the football
+analysis web application and we start
+here with an input video of course which
+is passed to two object detect ction
+models as you can see here so the first
+functionality in this web app and the
+most crucial one is the detection of the
+different objects of interest in the
+input video and here I trained two
+models one for the player the referee
+and the ball detection and the other one
+is for the field key points so the
+models I trained are YOLO V8 models
+which were trained on a custom data set
+that I labeled manually each data set
+contains about 500 images and as I said
+earlier I used tactical map recordings
+of football games in order to create
+these uh data sets and I used free
+annotation tools label me and Cat for
+The annotation of the data sets now I
+won't go into details on how to install
+and use these tools but you can find
+different guides on the internet and in
+their uh respective GitHub repositories
+which you can find the links for in the
+description so now that we have the data
+sets we can train uh the YOLO models and
+I've used hyperparameter tune technique
+implemented in Yolo V8 to achieve great
+results even with these small custom
+data sets that I've have created so as
+we can see here the confusion matrices
+shows that we have achieved relatively
+great results for all the different
+classes uh in both models except for the
+ball class where it only predicted 25%
+of the balls present in the validation
+set so we have low recall for the ball
+class and that's expected of course
+because the ball class was was
+underrepresented in the data set which
+is also true for other field key points
+and as we've seen that class imbalance
+affects especially the recall for those
+classes meaning that the object won't be
+detected as much as we want to and this
+issue can be addressed using larger data
+sets or through data augmentation
+techniques but for the time being I'm
+satisfied with the current models
+results but if you want to train a more
+accurate YOLO V8 model it is recommended
+that you use at least 1 ,500 images per
+class and you can find the different
+tips on how to create a good custom data
+set on the ulo V8 documentation page and
+you can also find the link for that in
+the description all right so now we have
+the models we need that pretty much
+represents all the machine learning
+present in this application and all the
+remaining functionalities are simple
+computer vision algorithms that uses the
+results obtained from these detection
+models so the results from the players
+detection model are used first to
+extract the color pet for each detected
+player this extracted color palette will
+be used later on to predict the team of
+the detected player and the result from
+the keypoint detection model is used to
+calculate a homography matrix which is a
+matrix that Maps the key points position
+on the Tactical map and the position of
+the detected key points on the video so
+once we have the homography Matrix we
+can map each point on the frame to a
+point on the Tactical map map and that
+is indeed the next functionality which
+is calculating the player's position on
+the Tactical map so once we have the
+bounding boxes for each detected player
+we can get the coordinate of each player
+on the frame and then using the
+homography Matrix we can map that
+coordinate to the Tactical map and
+that's basically how we get the
+representation now once we have the team
+predictions for the detected players we
+can add that as well as the ball tracks
+representation on the Tactical map in
+order to generate the output video all
+right so now let's discuss a little bit
+further the algorithm used for the team
+prediction as well as the homography
+transformation for the team prediction
+algorithm I was first thinking about
+using a clustering algorithm or
+clustering model with two clusters let's
+say for example team a and Team B and
+that way I thought we could distinguish
+uh both teams so I tried this idea and
+here we have for example for this Frame
+we need to extract all the players
+bounding boxes after that I wanted to
+use the extracted images of the players
+to train train the clustering algorithms
+I tried K means and DB scan well
+obviously we need to train a model every
+single frame since we will not be
+tracking the players that's exactly why
+we can't be using the images as a whole
+for the training process of the
+clustering algorithm as it will make the
+app very slow but I tried multiple
+feature extraction methods such as using
+a pre-trained CNN or averaging the
+colors present in each image or
+extracting the dominant colors palette
+these extracted features I tried to use
+them for the uh training of the
+clustering model however no matter what
+feature extraction method we use I
+obtained very poor results regarding the
+instantaneous team prediction and to
+illustrate the main issues regarding
+this approach let's check this example
+so here we have a random frame where we
+have successfully detected the different
+players and calculated the average color
+for each player in this image and here
+we have the position of each player in
+the RGB space now we can see clearly
+that we have a player far away from all
+the others and that's because we
+detected the goalkeeper in this Frame
+that is wearing a reddish colored kit so
+using DP scan is expected to fail in
+this case but even if we remove the
+goalkeepers from this equation we still
+don't see a clear separation between
+both teams that's understandable since
+both teams are wearing shade of blue so
+I figured let's use a rather
+straightforward solution without any
+machine learning model and that is by
+defining from the start the colors of
+each team and then each time we detect a
+player we can extract its pette of
+dominant colors and then calculate the
+distance between those colors and the
+predefined team colors and as such we
+can assign each player to its team more
+accurately but since we have the green
+grasp present in almost every image of
+detected players we can expect that the
+green color will always be present in
+the color palette we extract which is
+not very useful for the team prediction
+so that's why I decided to use a smaller
+centered rectangle to extract the color
+palette as shown here and that indeed
+improved dramatically the accuracy of
+the team prediction algorithm one last
+thing I need to note before move on to
+the next functionality algorithm is that
+the distances between the extracted
+color palette and the predefined colors
+are calculated in the lab space not the
+RGB space and that's because it is
+reported that the distances in that
+space are more meaningful and are much
+closer to the perception of the human
+eye and that's what we want okay so now
+let's move on to the next functionality
+which is transforming the coordinates of
+the detected players from the frame
+plane to the Tactical map plane now as I
+said to achieve this transformation we
+will be using something called The
+homography Matrix which is a commonly
+used Matrix to shift perspective so as
+Illustrated in this image we can use it
+to look to the same scene from different
+point of views and the transformation
+from one POV to the other is obtained
+through this homography Matrix so this
+is exactly the transformation we need to
+use in this application and to achieve
+that we need to map at least four points
+from the first point of view to the
+second point of view and in our case we
+have a tactical map in which we defined
+the certain number of key points and
+save their coordinates now when we
+detect at least four key points on any
+given frame we can calculate a
+homography matrix and as you can see in
+this example one thing I noticed is that
+with EXA L four key points we can have
+100% accuracy of POV shift using the
+homography Matrix or the homography
+transformation especially in the
+proximity of these four points however
+when we increase the number of key
+points the accuracy will decrease and
+that can be due to a slight warp in the
+camera recording or in case the points
+are not in the same 3D planner as I
+found mentioned in this stack Overflow
+post and after some trials I figured
+that the error from the homography
+transformation is not that big so we can
+work with it for now but the main issue
+was the shaky and jumpy behavior of the
+coordinates on the Tactical map which is
+due basically to the fact that we're
+calculating the homography uh Matrix in
+every single frame where we detect more
+than four key points and that's why I
+introduced a homography matrix update
+condition that is used to determine in
+every single frame whether to update the
+homography Matrix or to use the last one
+and this would obviously reduce the
+computational cost which will improve a
+little bit the frame rate and also make
+the Tactical map representation much
+smoother and the condition I set is a
+rather simple one where in each frame if
+we detect more than a certain number of
+key points that were detected in the
+previous frame we calculate if those
+common key points have moved on average
+Beyond a certain threshold and if that's
+the case we need to update the
+homography Matrix and if not we will
+keep using the last calculated one so
+the number of the common key points as
+well as the distance threshold are hyper
+parameters that should be set carefully
+now once we have the coordinates of the
+players and the ball on the Tactical map
+we can easily track the ball movement
+since we only have one ball present in
+the field at each frame and that indeed
+presents the last functionality of this
+application and finally the annotated
+frame is displayed and as we've seen in
+the demo at the beginning of this video
+we have on average 4 FPS but as we can
+see here if we run the same code on a
+notebook we can improve that FPS up to
+eight on average all right so now let's
+go over the code for the different
+functionalities that we discussed so
+first we need to get the labels as
+defined for the two data sets and as we
+can see we have them stored in these
+yaml configuration files that were used
+to train the YOLO V8 models so now we
+have both the numerical and alphabetical
+representation of the different labels
+and we will be using that to identify
+the objects we detect so then we need to
+set the video paths as well as the team
+colors parameters and as as I mentioned
+earlier we convert the colors to the lab
+format in order to calculate the
+distances for the team prediction then
+we need to import the YOLO models so we
+have two models for the player detection
+and for the key points uh detection
+after that we set some hyper parameters
+such as the confidence threshold for
+both models and the keyo displacement
+threshold and then we start the capture
+Loop so in this Loop we will process
+each frame so here we first increment
+the frame counter and we read the frame
+from the capture so in each frame we
+create a new copy of the Tactical map so
+we can display the uh detected objects
+uh coordinates and then here we set the
+ball tracking history variable in case
+we exceeded a certain number of frames
+without detecting any ball object so the
+first part in this uh code is the object
+detection and coordinate transformation
+so here we get the uh result from both
+models detections and we can see we have
+the results stored here here for the
+bounding boxes for both models as well
+as the labels and then we can extract
+the alphabetical representation of the
+detected labels after that we need to
+get the detected key points or field key
+points uh coordinates on both the
+Tactical map which are predefined
+coordinates and the coordinates on the
+current frame we will be using those
+coordinates of course to calculate the
+homography Matrix so here if we detected
+more than three labels meaning four or
+more key points we will check the update
+condition and here we have the frame
+number bigger than one meaning that if
+we're on the first frame we of course
+need to calculate the homography without
+checking the condition because we don't
+have a previously calculated homography
+Matrix but if the frame number is bigger
+than one we need first to check how many
+common key points are detected so if we
+have more than three common key points
+detected we need to calculate the error
+between the position of the uh detected
+key points on this Frame and on the
+previous uh frame so here we used the
+mean squared error and if that error
+exceeds a certain predefined tolerance
+we need to update the homography Matrix
+now the homography Matrix is calculated
+using this function find homography from
+open CV and I forget to mention that
+there are other methods to calculate the
+homography Matrix or to perform
+respective shift and there are uh ones
+that involves deep learning or machine
+learning but I wanted to keep things
+simple for this application and using
+this uh function from open CV we can
+obtain relatively good results so once
+we have the homography Matrix we can uh
+transform the coordinates of the
+detected players from the frame to the
+Tactical map and we can achieve that
+using a simple matrix multiplication as
+shown here so then we need to transform
+the ball coordinates as well and as a
+final step we update the ball tracking
+history so we uh save the uh position of
+the ball on both the Tactical map and
+the frame but we will only display the
+tracks on the Tactical map since the
+tracks on the input video are not
+relevant since the camera is moving so
+the tracks won't be uh reliable and we
+have here set some conditions for the
+track history so for instance this first
+condition would create new track for the
+ball if it moved dramatically from the
+previous position and this condition
+here would prevent the ball tracking
+history from surpassing Max length that
+we defined earlier so the second part of
+this algorithm is the Players team
+prediction so first of all we need to
+convert the frame from BGR to RGB since
+we're using open CV and it uses uh as
+default the BGR setting then we have
+this Loop which will extract the color
+palette from each detected player so the
+first part here is to extract a centered
+and much smaller rectangle instead of
+the whole bounding box of each player
+and this cented filter would be used to
+extract the color palette so so the
+color palette extraction is performed
+using this function from the pillow
+library and once we have the color
+palette extracted we need to get the top
+dominant colors so here we calculate the
+redundance of each color and we sort the
+values then we can get for example the
+top three dominant colors which are
+defined in this pallette interval
+variable from 0 to 5 all right so once
+we have the color palette we can append
+it to this list and then we can use the
+list of extracted color palettes to
+predict the team for each player so as I
+said we will be using the distance in
+the lab uh color space so that's why we
+first need to convert the detected color
+pallet from RGB to lab and then here we
+calculate the distance using this method
+from SK image which calculat the ukian
+distance in the lab color space so in
+this Loop for each color in each color
+palette we calculate its distance from
+the four predefined colors and then we
+can assign each color to the
+corresponding team which is closer to
+that color so here for instance we have
+a palette of five colors and each color
+will be assigned a team and then using a
+simple voting mechanism we can get the
+team prediction for each player which is
+uh performed in this Loop so we Loop
+over the different player distances and
+then we uh predict the the players team
+by vote counting and that's how we
+perform the team players prediction and
+now moving on to the last part which is
+to annotate the current frame and the
+Tactical map so first we Loop over all
+the detected objects by the player
+detection model and we display the color
+palette next to each detected object
+bounding box and then we annotate the
+Tactical map with the player position
+for each team with the corresponding
+color and then we add The annotation of
+course for the referee bounding box as
+well as the ball bounding box and then
+we add the ball tracking line on the
+Tactical map and as a final step we
+combine all The annotation in one single
+uh output frame and then we display the
+output frame and we move on to the next
+iteration all right so let me now run
+this code to show you what is the
+expected
+result all right and as you can see here
+we have a higher frame rate and you can
+see all the different annotation s uh
+that we discussed and you can click on P
+to pose uh the detection or Q to quit
+the detection all right so that's it for
+this application as I said you can find
+the code for this project in the GitHub
+repository uh through the link in the
+description and that's it for this video
+so see you next
+time

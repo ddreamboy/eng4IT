@@ -1,0 +1,421 @@
+okay so we are live and ready to go for
+our tutorial today and this is going to
+be a very gentle introduction to
+principal component analysis in
+cytometry for dummies so yeah again
+welcome to today's tutorial my name is
+romg sason and if you are interested in
+playing along at home you can play
+around with the demo data set at app.
+take.
+bio so again today's tutorial is about
+principal component analysis in
+cytometry for dummies like me and this
+is going to be a very gentle
+introduction to a very powerful tool and
+just as a reminder our mission at too is
+to make high parameter or high
+dimensional cytometry simple and easy
+for cl IAL
+trials so who might care about today's
+topic it's anybody who wants to find the
+essential drivers in a big citometry
+data set and this tutorial is heavily
+inspired by statquest and several others
+so please like And subscribe to
+statquest channel they do amazing
+work in short what it means is if you
+have a big Matrix that is say 33
+Dimensions 33 cell populations time 24
+subjects you can can use magic like
+principal components to reduce this 33
+dimensional data set to two dimensions
+and capture a lot of the variantes this
+is a preview of what we're going to walk
+through but this is an example study
+comparing young middle-age and
+centenarians and seeing the different
+immune profiles for these different
+patients so how do how do we get here
+and what is that all mean um what we're
+going to do is Step through a synthetic
+data set inspired by real life Lugi at
+Al in
+2007 so this was a experiment designed
+for this particular uh poster excuse me
+for this particular paper they had 24
+subjects nine young people eight
+middle-aged seven centenarians and they
+captured 33 T Cell subsets from an eight
+color flow panel but you can imagine
+capturing hundreds thousands or millions
+or potentially billions with
+unsupervised
+clustering so we're going to show the
+synthetic data set and which is inspired
+about this but then we'll also show the
+real life findings to to compare
+those so for example for each patient
+they had a blood specimen they ran
+through a cytometer and then they
+captured 33 populations which are the
+rows over here and then the columns are
+the individual subjects so for example
+the individual young people over here
+and centenarians on the right and you
+can see here the percentages which are
+the percentage of the immune State
+captured by
+um or of this particular cell type that
+this person had like 2% 3% Etc so these
+rows and columns are what we're going to
+do principal component analysis
+on so let's let's uh step back a second
+here so we said 33 populations by 24
+subjects if we just do two Dimensions so
+we take a blood specimen put it in a
+cytometer and just capture two
+populations and we have a lot of
+data it's easy to plot two dimensions on
+an XY plane so let's take let's go back
+over here so let's take this young one
+75% and
+2% we can plot somebody like this on an
+XY plane because we're only capturing
+two Dimensions so young one over here
+young two over here centenarians over
+here
+Etc and let's uh also you know reiterate
+that this tutorial is only useful if you
+are interested in caring about the
+differences between different
+populations if you don't care about the
+differences between uh you know say dose
+groups response groups then this
+probably isn't uh a useful tool right
+now but if you do care about the
+differences then principal component
+analysis is
+awesome so let's bump it up to one more
+Dimension so you go when from two
+Dimensions to three dimensions so now we
+H have individual cell populations over
+here um cell population one two three
+and the individual young people and then
+centenarians on this side
+at three dimensions this is also not so
+bad you can see the XY and Z plane over
+here and you can see the separation
+between centenarians and young people so
+remember in the XYZ plane we can plot
+all of these dimensions and we can see
+this kind of cluster and or clustering
+and we can see this kind of
+Separation but what happens when we go
+to four dimensions or 30 Dimensions or
+298 dimensions and this is where Minds
+get blown so the human brain can only
+visualize in three dimensions and so
+this is where PCA also known as
+principal component analysis comes in
+and there's going to be some fancy
+mathematical jargon but we'll hopefully
+break it
+down a reminder PCA is a way to see the
+essential drivers in a big cytometry
+data set in two Dimensions or three
+dimensions so if you've got 40
+Dimensions or 100 Dimensions or whatever
+you want to reduce it down to two or
+three dimensions but not lose a lot of
+the variation in the underlying data
+set so this is would be the end product
+if you have a 33 dimensional data set
+You' ultimately be able to reduce it
+down to a two-dimensional data set as we
+showed in the beginning with cenarius
+middle-aged people young people over
+here you can see pc1 and PC2 are little
+variables here that we going to show in
+more detail and these have numbers here
+of the amount of variance the data set
+they capture so 24 4.8 over here and
+12.23% variance you sum these up these
+will the Casual reader will note this
+these constitute 36% of the variance so
+we're going to walk through exactly how
+these are computed and what they mean
+for your uh data set
+analysis so how do we get to this this
+particular two-dimensional plot we
+started with this 33 dimensional plot
+with 33 populations in 24
+subjects and then we computed What's
+called the co-variance between between
+variables so uh over here this is an
+excerpt of the of a matrix where we have
+five individual cells and for each
+individual cell we compute how much it
+co-varies with itself and how much it uh
+covaries with other different uh cells
+as well so for example CD4 TN cd127 cd95
+minus cd38 dim with itself and then with
+another uh variable with another immune
+cell it's etc
+etc and the diagonal will show either
+signal or noise so high uh value over
+here is probably interesting a small
+value is probably noise off diagonal is
+redundancy so large values are redundant
+and small values are going to be noise
+and so we're going to walk through to
+build your intuition for
+that so
+let's uh go down to a a a smaller
+version of this data set or excuse me a
+dummy version of this data set and uh to
+explain that more detail so remember on
+the diagonal of that covariance M Matrix
+large values are interesting and off
+diagonal uh these are you know the off
+diagonal shows redundancy so large
+values are redundant and small values
+are
+noise so these are the raw population
+percentages of t- cell subjects across
+subjects uh t- cell subsets across
+subjects so if you take a sample over
+here like high variance T subset one
+this varies a lot as you look from left
+to right you go from subject one to
+subject 10 this is going up and down
+quite a bit same with this subject as
+well this noise subset that we've
+labeled isn't changing that much so as
+you go from left to right it varies very
+little um off diagonal these look quite
+similar to one another so if you look 19
+11 10 Etc so T Cell subset 4 and T Cell
+subset 5 look very similar to one
+another so they're likely going to be
+noise and then off diagonal these vary a
+lot from each other so these are likely
+to what these are likely to be useful so
+if you think about this this High
+variance population is likely to have a
+high covariance with
+itself this noise population is going to
+have a very low covariance with itself
+it doesn't uh it's not going to change
+that much these redundant populations U
+will have a low covariance with one
+another
+and these uh uh useful populations are
+very likely to have a high covariance
+with one another so uh this is very you
+know uh going to be going to come in
+handy in our covariance uh diagram
+later so what principal components goal
+is is to drop noisy populations and
+focus really on the signal populations
+and potentially eliminate redundant
+populations as
+well so let's go down to more more
+details so zooming out to all 33
+populations so here you have the
+covariance Matrix and high values on the
+diagonal are signal and uh you can see
+basically High values on the the off
+diagonal um are going to be
+characterized by co-variance between
+those two particular populations oops so
+now let's zoom out to all 33 populations
+so you can see over here the diagonal
+you'll see a lot of signal on these
+particular uh values and the off
+diagonal you're going to see potential
+markers of
+redundancy so if two variables vary
+together then they have a low covariance
+um and if two variables uh are you know
+basically uh if two variables vary
+together they're have a low low Co
+variance so this this could be
+potentially um interesting for
+us um so now we can to compute the igen
+values of this Matrix so we I Val is a
+very complex term and we're not going to
+go into the entire derivation here but
+from this big Matrix you get all the
+individual principal components here and
+then individual igen values so igen
+value one is
+3,248 that's 24% of the total variation
+so this is computed by taking 324 and
+summing this entire column together and
+getting to 24% so this captures a lot of
+variation in the population
+principal component four
+5737 this is
+8.17% so 573 divided by the entirety of
+this column gets you to
+8.17% so here's a definition here the
+pc1 axis is the first principal
+Direction along which the samples show
+the largest
+variation let me pause again here this
+is beyond the scope of this tutorial to
+explain igen values and igen vectors
+there's a great tutorial linked here
+that you'll be able to see
+uh in the YouTube and that's from three
+blue one brown so if you're interested
+in that uh feel free to check that
+out let's assume you have these
+principal components derived for your
+cytometry data set so you've got pc1
+through pc7 you've got all these
+individual igen
+values each principal component is going
+to correspond to a set of loadings so
+let's take pc1 and this particular I
+value and you're going to go down over
+here and you can see these coefficients
+are going to tell you which subsets
+matter the most so for each cellular
+population you're going to see pc1
+loadings
+0.237 uh
+0.195 0.183
+0.307 um and we're going to be able to
+plot XY from these pc1 and PC2 loadings
+so we start here with this raw
+percentage
+75.4% and these coefficients will tell
+you which subsets matter the most so pc1
+loadings PC2 loadings and we multiply
+through so 75.4 *
+0.237 gets you to
+17870 75.4 time
+0.156 gets you to
+11725 so this is what we're going to
+plot on the XY
+plane so this is the pc1 and PC2 axes
+and um you can see the centenarians the
+middleaged and young people all plotted
+so we reduced 33 Dimensions down to two
+Dimensions by taking pc1 and
+PC2 so what is the value of this entire
+exercise we've captured a 33 dimensional
+data set in two Dimensions so you've got
+a big cytometry data sets with dozens
+hundreds or thousands of cells measured
+by specimens and you want to see what
+drives the difference between an
+endpoint like respons or
+dose now bonus is to explain correlation
+Circle plots this is a way to
+graphically represent the relationship
+between the original variables and the
+principal
+components so for these individual t-
+cell populations you're going to have
+the position of the variable on the plot
+and the igen values which are going to
+describe the magnitude of variable
+contribution so for example pc1 loading
+of 0.29 is high and then you've got 0.13
+and 0.12 these contributions are quite
+low so let's see how to read a
+correlation Circle plot so over here
+you'll see Sim ly the pc1 and PC2 plots
+and you'll see different cell
+populations let's take this one CD4
+positive TN cd127 positive cd95 positive
+CD3 dim the magnitude long arrows
+contribute more to the variation and
+short arrows don't contribute that much
+and if it's more horizontal then it
+contributes more to pc1 and more
+vertical it contributes more to
+PC2 so this is showing a correlation
+Circle plot for the top five t- cell pip
+so let's go to some real findings from
+lugli at Al and this is actually came
+from the real life data set so you have
+young patients over here middle-age
+patients over here centenarians and
+their pc1s and PC tws and PC3 is were
+much better than the r synthetic they
+had 60% variation in the first principal
+component 28% over here 4. 77% here so
+they captured a lot of the variants like
+87 plus almost like 9
+92% from all three components so they
+were capturing a lot of the the data set
+variation in their real life data set
+and they s found that young donors in
+advanced age were different based on
+memory t- cells and specifically these
+differentiation markers were up in young
+donors and these uh differentiation
+markers were up in advanced
+age so now let's turn to a Takeo data
+set so we're we offer CCA on app. take.
+bio and this came from University of
+Minnesota in 2022 this is a phase 2
+clinical trial with 40 subjects 20
+specimens 20 responders and 20
+non-responders so let's click on over to
+see this data set which you can also
+play around with all the credentials are
+over here so you can log in whenever you
+like we're going to go to the umn data
+set here and and we're just going to
+quickly reorient ourselves remember
+there's 40 samples 20 subjects over here
+and let's go to group similarity and
+here you can see the principal component
+analysis and the explained variance pc1
+55% PC2
+19.6 so these do a good job of capturing
+the variant so let's color by response
+so we can see a little bit of separation
+between responders and
+non-responders and then further down
+down we're going to Let's sh this down
+to seven contributors so we can see
+different contributors what is driving
+the difference so for example classical
+monocytes are driving a big difference
+C4 positive T Central memory are driving
+the second second most and cytolytic NK
+cells which one wouldn't necessarily
+expect on a classical flow panel are the
+third
+here so yeah you can see that in a
+little bit more detail over here so
+classical mon sites all the way down to
+cyto kind producing and K
+cells so this could tell you what drives
+the difference in treatment response as
+well so wrapping up PCA is particularly
+useful when the the um data set is
+highly correlated so you can assume that
+there may be redundancy in the data or
+that you can potentially drop variables
+without losing uh an explanatory power
+so this is a great quote which is PC can
+be used to reduce original variables
+into a smaller number of new variables
+but still explain a lot of the variance
+of original variables in fact you can
+even quantify how much is retained
+afterwards so with that we'll wrap up
+and if you're interested in more you can
+check out app. too. bio we have tons of
+data sets there that you can play with
+and uh if you've got any further
+questions feel free to email us or
+contact us at take. bio so thanks for
+signing

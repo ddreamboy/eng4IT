@@ -1,0 +1,14 @@
+hello welcome to
+troyx we have a
+esp32 touch
+sensor and a relay
+board we will see how to connect and
+program it with
+micropython touch sensor is connected to
+pin 14 and relay is connected to pin 26
+of the
+esp32 and now let us check the circuit
+I have connected relay output to my old
+cooler
+fan it is working well please support
+and subscribe for more videos

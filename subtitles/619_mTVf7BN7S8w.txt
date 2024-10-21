@@ -1,0 +1,729 @@
+if you have watched my convolutional
+neural network video
+you would have learned that cnn out of
+the box
+are not scale or rotation invariant
+which means let's say you are trying to
+classify roses and tulips
+and the training set contains the proper
+clear images of these two flowers
+after training your cnn when you supply
+a rotated image of a rose for the
+classification
+cnn might not perform better and to
+handle this problem we use a technique
+called
+data augmentation in data augmentation
+from your existing training samples you
+try to generate new samples
+for example i have a picture of this
+flower here
+and my original data set contains only
+like one type of
+flower image like a clear unrotated
+image
+what i can do is i can apply now several
+transformations such as horizontal flip
+rotation scaling contrast and i can
+generate new samples so in this image i
+generated four new samples out of one
+and this technique is very effective in
+this video
+we will do a flower classification
+using cnn we will see how the model
+overfits the data
+and how we can use data augmentation to
+generate
+new samples and increase the accuracy of
+our model
+i'm going to use a tensorflow's flower
+data set for this video
+and i have used uh the standard
+tensorflow tutorial
+uh from here from their website uh but
+this
+was a little complicated so i have tried
+to simplify it
+so in my notebook here first i have
+imported
+all important libraries we are using pil
+which is an
+image library in python okay so the
+first thing we are going to do
+is we will be downloading the flowers
+data set
+from google website so google's website
+has
+this zip file which contains uh
+photos of different flowers and
+tensorflow has uh this
+function called a get file so you're
+getting this file you're specifying a
+data set url
+here you are getting this file into a
+folder called flower photos
+and the cache directory is the directory
+where
+you want to save this data set so i want
+to save it in my
+current directory where i am having this
+notebook
+so i have therefore supply dot here
+if you want a different directory you
+can do
+something like see whatever data
+my image images you know so just specify
+the whole path
+i'm just going to use the current part
+and until true means
+uh this is a zip file so unzip it
+okay and then you get this data
+directory
+variable back
+okay so for you it will take some time i
+already had this images downloaded
+that's why
+it worked pretty fast for me so let's
+check what data directory means
+okay data directory means in my current
+directory which is dot
+i will now have a data set folder inside
+the draft if
+i will have flower photos which will
+contain all my pictures so let's check
+that folder
+so my current folder is now having this
+data set folder
+this zip tz file
+is present here and then i have my
+flower photo so if i look at my flower
+photos
+i have five type of different flowers so
+this is a daisy flower you can see i'll
+just
+make it bigger you see there are variety
+of pictures actually
+see there's a woman having the flower
+and there is
+like it's like variety of pictures
+you're having then similarly
+roses you're having so many different
+roses if you look at these images
+says 641 rose images total
+okay and overall this is my 250 megabyte
+around 250 megabyte or let me just
+check it's even more yeah 220 megabyte
+of data set so make sure you have enough
+space on your hard disk
+after these photos are downloaded
+now i am going to convert this data
+directory
+into apart lip so there is a model in
+python called pathlib
+and this will allow us to do certain
+things in easier way because
+we will be going over all these
+flower images one by one and read them
+into numpy array
+and for that this path live will be
+useful so i'll tell you how it will be
+useful
+so first i converted this data directory
+into apart lib
+so now it looks like this so it's it's
+basically your
+path but it's a windows path object and
+once you have that
+you can do things like this so you can
+say glob give me
+all the images which has extension jpg
+so when you do that it will recursively
+go through
+all the directories and subdirectories
+and give you a list of
+all these jpg files so we'll need that
+during our model training
+that's why we converted it into a path
+lib
+so now let me quickly count these images
+so
+i have all these images and if i do
+length of this images
+see i have three six seven zero so
+that's my data set that's my
+total number of images and now
+i will just look at roses so if you want
+to
+get uh roses this glow
+function is useful let's say if you want
+to get only roses images
+so you can just say data directory dot
+globe
+roses slash star and this will give you
+a list of
+all the rose images now quickly
+let's uh show these images using
+pil model so pl is a famous pillow
+library
+uh from python by the way when you're
+working on this code if you
+face like model not available error just
+do paper install okay
+you can just say pip
+install pll pillow
+so this is a pillow library
+and same thing with any other module
+let's say if you don't have
+cv2 then you can just say pip
+install opencv
+so this is the command you run pip
+install open cv python
+and you will get opencv okay
+so now this is what you do
+to show an image using pil so you will
+say pl dot image open
+str roses1 or zero
+okay so this is showing me this
+particular zeroth image i can do one
+so it will show me all these images uh
+you can also
+let's quickly plot let's maybe tulips
+so see tulips looks like this so this is
+like a quick
+data visualization to kind of
+you know explore what you have in your
+data sets
+now i want to create
+a class names as well
+so what i'll do is i will create a
+dictionary
+of different flowers and all the
+image paths associated with it okay and
+that will help me
+um during my model building process so
+what i did is see simply
+like this particular thing roses
+see we already saw it give you all the
+parts
+of rose images and you can do same thing
+for daisy dandelion sunflower
+because see if you look at this data set
+see these are the five type of flowers
+you have so i just hardcoded those five
+flowers
+into my dictionary and my dictionary is
+now having
+all the images uh image paths
+right so if i do let's say now
+roses it will have all the
+file paths of roses daisy will have all
+file parts of these
+this is pretty simple dictionary stuff
+and i also want to have a labels
+dictionary so labels dictionary will be
+this
+so so i'm just assigning
+a class number to each of these flowers
+randomly okay
+now what we can do is
+we can use cv2 module to
+uh read this image file
+into opencv object okay into
+short of like a numpy array so opencv
+module
+has this method called imread
+so here you supply file path and in
+return it will give you numpy array so
+let's say
+i call it img okay now what is my path
+okay so let's paint
+let's get the first roses image so rose
+is
+zero okay so let me just
+do something here
+you see this is the file path of the
+first rows image
+and if i do this
+see i'm getting an error because looks
+like cb2 is not accepting window path
+as an argument so
+if you just wrap this in str
+it will give you the actual string path
+and
+opencv expect that string path okay
+so i am doing that and in the return
+what you get
+opencv just read the image from disk
+and converted into three dimensional
+array see if you do shape
+three-dimensional so this is x this is y
+and three
+is for rgb channel
+now opencv also has
+a function called
+resize so you can take the image and
+resize it to some standard size
+because our images in these folders
+are different dimension okay so if you
+look at this image particular image
+this is 320 by 232
+and if you look at this image this is
+320 by 212 they are
+they're varying a little bit 320 by 240
+so the dimensions are not same
+when we train our model we want to
+make the dimensions same spore for all
+the images
+so when you do this you see it resizes
+it
+so now let's run a for loop and prepare
+our
+x and y so i will just say
+x and y are two blank area so now we are
+kind of preparing our
+x and y and x strain and y train etc
+let's iterate through all the images
+first so
+we'll do for flower name
+and images in flowers
+images dictionary dot items
+so what this will do this is a simple
+[Music]
+python
+see i will just print a length
+so you're iterating through let's say
+roses you have 641 image daisy you have
+631 image and so on
+okay so this is the dictionary we are
+iterating through
+and now here
+i will go through all the images so for
+image in images
+so here at this point i will have every
+single image
+and that image as per the api that we
+saw earlier okay
+i will read it like this cv2 dot read
+and we need to have str to convert from
+lip path to regular string
+image activities image
+and then i want to resize it
+so if i resize it using this method here
+i will get a resized image right so i
+will just say resize
+image why do we
+resize again when machine learning model
+expects
+all the training samples to be same
+dimension
+that is the that is the reason why we
+are resizing and then you just
+do x append okay
+and then y append
+y has to be a number so how do you get
+number
+so here flower name is rose roses okay
+so flower name is roses and for roses i
+have
+zero as a number so if i do
+flowers labels
+dict and then flower name
+i will get uh the number for each of
+these flowers
+okay and if you want to quickly verify
+it
+see you look at it like the first few
+images are flowers so you see all the
+zeros here and if you look at x
+it's a simple three dimensional array
+why three dimensional well first
+dimension is for x second is for y
+and third is for rgb channel you know
+rgb
+so we have three channels
+now for convenience i will just convert
+this into simple numpy array because
+it will be useful later on okay
+so nothing major it was a simple plain
+python list i converted it into
+a numpy array
+after i do that our usual step is to do
+a train test split
+so i'm doing the train test split here
+and um if you look at my
+length of x strain
+this has two seven pi two examples
+and length of x test has
+this much so the default split
+if you look at the documentation
+is like i think 25.75
+okay so whatever you can change it if
+you want to
+have a different distribution of your
+taste and train
+sets now
+in every image classification video
+we'll notice this one common thing which
+is scaling
+so we always divide rgb channel values
+with 255
+uh to scale them right right now see you
+you look at these values
+they're random like 30 40 whatever
+it could be from 0 to 255.
+if you scale it like this so on numpy
+the convenient method is you divide the
+numpy array
+let's say you do this and it will
+divide all the numbers in this three
+dimensional array by 255
+so it will be scaled between zero and
+one so i'll just call this
+x strain scale
+and x the earth's taste scale
+now when i look at the
+normalized array see it's now in range
+zero and one doing this helps with the
+model
+training and that that's the reason we
+always divide this thing by
+255. all right now we are ready to build
+a model
+so how do we build a model where in the
+model you
+always do this so we are building a
+convolutional neural network
+and here we will specify our layers
+one by one now you know my from my
+previous videos
+we always have convolutional layer layer
+then max pooling layer then again
+convolutional layer max pulling layer
+and so on
+so we'll have multiple of such layers so
+what i'm going to do now
+is have these multiple
+convolutional and max pulling layers
+like this
+okay we talked about padding in last
+video we saw how the same padding or no
+padding
+works this 16 means we are having 16
+filters
+and the size of every filter is 3x3
+in the second layer we are having 32
+filters and sizes three by three
+third layer we are having 64 filter
+sizes three by three
+so all of these are hyper parameters
+there is no like exit science on how you
+specify you you can
+you can have less number of layers you
+can have
+different features you know different
+values this could be whatever 45
+so there is no like fixed rule okay it's
+just a little bit trial and error
+and you know after we specify our
+convolutional layers
+we always um have a dense network
+okay so before we start dense network we
+have to
+flatten our values because the dense
+network will accept
+the single dimensional array so until
+here
+at this point you will have a 2d array
+so you want to convert that into
+single dimensional array by specifying
+the latent layer
+and now let's specify some dense layers
+so
+i will have maybe one hidden layer and
+and we are using activation as value
+everywhere because that's a
+standard layer that we use and
+again i'm specifying 128 neurons
+this could be different it could be 200
+400 you have to just
+do trial error and figure it out and my
+number of
+classes are five
+why five well because i have five type
+of flowers
+see one two three four five
+that's why five in my last layer
+will have total five neurons by the way
+okay so just imagine you have five
+neurons in your final output
+so if the zeroth neuron is activated it
+means its roses
+if first neuron is activated it means it
+is daisy
+that's why these there are five neurons
+each corresponding to
+every flower here
+now i'm not using any activation layer
+here
+it is okay if you don't use any
+activation it will use linear activation
+so we'll try that linear activation and
+see how that goes
+the second step is to do compile so in
+the compile i will use adam as optimizer
+i'm using sparse categorical cross
+entropy
+because my final array y has the exact
+value
+it is not a hot encoded vector it has 0
+1 2
+3 4 5 that's why i'm using this and from
+logit
+is equal to true now we'll do
+model fitting i will just run it for
+maybe 30 epochs
+it might take you a long time to do this
+training
+uh based on what kind of computer you
+have if you don't want to wait too long
+you can maybe run for 10 epochs
+up to you i got a very high accuracy on
+my training set here you can see 99
+and i want to now we will evaluate this
+on my test data set so on test data set
+i got only 65
+so this is an example of overfitting
+because
+on training set it tends to do so good
+like 99 percent you know it's like damn
+accurate
+but on test set it is having only 65
+accuracy and whenever you see this case
+most likely there is an overfitting
+happening i will also try to just
+predict
+a few things so that you get an idea
+so let's see if you do model dot predict
+like this
+you know on x day scale you will get all
+your predictions
+so i will get all my predictions
+and they look like this remember we used
+a linear see here we did not specify
+activation
+which means it used linear activation
+this way you see values
+all around the places you know 15 2 and
+so on
+if you want to convert this into a score
+a probability score
+so tensorflow has this softmax function
+which can convert
+this numpy array into a set of
+probabilities so for example i am taking
+the first example which is this
+i want to convert it into a probability
+score
+and when i do that see i get this tensor
+which is
+c epsilon values so now it's between 0
+and 1
+and you can then use an arg max function
+so np dot arg max function will
+give you the index of the element which
+is maximum
+so let's say just to demonstrate you so
+it is saying 0
+1 2 so 1 2 3 is your maximum
+element uh so i will now do score here
+so score
+let's say score okay score
+so it is saying that uh this is probably
+number one so number one is what all
+right so let's see number one
+number one is daisy so it's our daisy
+flower
+okay and if you look at our right
+taste that is also number one
+so for this first test sample it worked
+okay
+but still it has 65 percent accuracy
+which is very low
+and this is happening because of
+overfitting and we can use data
+augmentation
+to address this overfitting so how to do
+that exactly so
+tensorflow has a good api so i'm going
+to
+use keras dot sequential model once
+again
+this is how you use data augmentation
+okay
+so you specify your
+transformation in this array and
+this let's let's start with
+maybe a random zoom okay
+so this is how we do it now the api is
+experimental it might change
+uh but right now it is working you know
+so you can just do tensorflow
+maybe random zoom something like this
+and it should show you
+the api documentation
+okay so there's random zoom there are
+all kind of
+oh no this is not the one actually
+[Music]
+yeah this is the one this is the one we
+are using
+so there is random zoom there is
+rescaling
+there is a random rotation there is a
+random flip
+okay so these are all the transformation
+which are available
+so here i will just say this is my data
+augmentation
+okay and after you do that what you can
+do is
+uh let me first plot my image
+okay so i'm just plotting my first image
+from my
+training set it's a it's a daisy flower
+and i want to now apply uh
+augmentation so how to do that okay so
+i'll just
+do x is off so that it doesn't show you
+those weird x and y axis
+and then i want to
+apply transformation on this x zero
+image okay how to apply that
+well you can call data augmentation as a
+function
+so when you call it as a function
+like this let me just show you
+so when you call it like a function
+like this uh
+let's see what's going on here actually
+you know what it expects two-dimensional
+array so you have to call it for the
+whole
+x vector and then you can take the index
+and it gives you this tensor array
+this is a transform image
+and in order for this to work with
+the okay so let me just take this guy
+first
+and supply here now this will not
+work straight away because you have to
+convert it to
+a numpy array from your tensor so i will
+do
+this which converts it into a numpy
+array and when you do that
+you see what happened so i am applying
+random zoom here
+so it's zoomed image see it made it can
+you see the difference between the two
+the flower is smaller here if you do
+zoom
+too much let's say very high zoom
+this is my original image look at this
+zoomed out too much
+you see it can also zoom in
+zoom out so this is what that
+transformation is doing
+other trans type of transformation
+is a random contrast
+so let me show you that
+so i'm just doing a random contrast here
+you see the image is very bright now
+it's like over bright this is original
+image this is the
+new image so it can apply this see
+random or transformation you can also do
+yeah rotation maybe so let's do rotation
+so when you do rotation
+it will just rotate that image see it is
+rotating now
+and when you call multiple times it will
+randomly rotate into a different angle
+so now this is useful we can use this
+functionality to produce
+more samples from our current samples
+we have around 3600 samples we'll use
+this
+data augmentation to produce new samples
+and make our model more rubber so that
+it doesn't overfit
+it can generalize well because when you
+supply rotated scale
+contrast images in your training when
+you're doing actual prediction now it
+can handle a variety of images
+all right now i'm going to use different
+transformations in the same sequential
+object
+i supply three transformation horizontal
+flip
+rotation and zoom and we'll use this
+particular object
+in our actual model building
+process so i copy pasted the
+same uh model that we had before so here
+we train this model right
+so i copy pasted the same thing i have
+two changes however
+i'm supplying data augmentation as my
+first layer
+so in the pipeline the first layer
+itself is doing augmentation producing
+new samples
+i am also having a dropout layer we we
+learned about dropout layer in earlier
+videos
+it is going to drop 20 of the neurons at
+random in each pass
+and it will give us better
+generalization
+okay so now let's run this model
+so after i ran this uh again it took
+some time
+if it's too much for you you can reduce
+this epochs
+the with the new model my accuracy with
+the training set was 90
+but look at my accuracy with the test
+set my test set accuracy
+improved by 75 percent so this is a huge
+improvement from 65
+we improve to 75 percent
+so i hope that gives you some idea on
+the usefulness of data augmentation
+i have the notebook this particular
+notebook link available in the video
+description below so just download it
+try it out
+also if you go to youtube and search for
+core basics deep learning
+you will find my complete deep learning
+tutorial playlist
+i'm still actively working on it this
+will be the next video here
+uh but this will have all the material
+that you need
+in order to learn deep learning you can
+also do code basics machine learning
+and you will find my tutorial playlist
+so just
+follow these tutorials many of these
+tutorials i have
+an exercise today i don't have any
+exercise for you
+but majority of them will have exercise
+so that you can practice your
+all right if you like this video please
+give it a thumbs up and share it with
+your friends
+thank you

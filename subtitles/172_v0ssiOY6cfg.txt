@@ -1,0 +1,363 @@
+[Music]
+hey everyone this is Evan from Edge
+electronics and this is my kitty cat
+Clio today we're going to show you how
+to capture and label images for training
+an object detection model right Cleo so
+by the end of this video you'll have a
+labeled image data set that you can use
+to train an object detection model on
+Frameworks like tensorflow as I show in
+my other videos
+the first step for creating any machine
+learning model is to build a data set
+for object detection models this means
+capturing and labeling hundreds to
+thousands of images of the objects you'd
+like to detect
+now it turns out that building a data
+set is actually the hardest and most
+important part of the process for
+training a model there's tons of details
+that should be considered as you're
+going around Gathering pictures but for
+this video I'll just show the basic
+process for taking pictures of your
+objects and labeling them using label
+image
+all right
+come on Cleo let's get started
+before you start Gathering images it's
+important to think about your object
+detector's application you want to think
+about the environment it will run in the
+perspective and distance it will see the
+objects from and even what type of
+camera it will use the pictures you take
+should look similar to what the object
+detection model will actually see when
+it's deployed in your application
+if it will be used in a variety of
+locations and conditions you'll need to
+get training images that represent those
+locations and conditions
+for this video the application I'm
+working on is a cat toy timer I just got
+Cleo a bunch of new toys and I want to
+set up a camera to watch Cleo as she
+plays with them it'll keep track of how
+much time she spends playing with each
+toy that way I'll know which one's her
+favorite so I can buy her more
+I'll work through the data Gathering
+process for this application as we go
+through the video
+alright so the first step is to start
+with the camera set up the camera so
+it's pointing at the area where you want
+to detect your objects now this step can
+vary in complexity depending on the
+scope of your application
+if you just want to detect objects in
+front of the camera you can make a
+simple setup where you set or hold
+objects in front of the camera at
+various angles and distances
+you can hold the camera and walk around
+taking pictures of the objects you want
+to detect
+or if your application is going to see
+the objects from many different
+perspectives and backgrounds then you'll
+need to set up the camera in a variety
+of ways to capture multiple views of
+your objects
+for my application I'll set my camera up
+to point at the floor where Clio usually
+plays with her toys
+now that your camera's set up let's take
+some pictures of the objects you can use
+any picture taking software that's
+installed on your computer if you've got
+opencv set up on your computer you can
+use a simple python script I wrote
+called picture taker it will open the
+camera and take a picture anytime you
+press p on the keyboard
+each picture will be saved into a
+specified folder
+instructions on how to install and use
+picture taker are available on my GitHub
+see the link in the video description
+below
+so the goal of taking pictures is to
+provide enough statistical data to the
+machine learning model for it to learn
+what your objects look like
+for an initial model you want to have at
+least 200 pictures in your data set you
+should have at least 50 examples of each
+object
+set objects in the camera's field of
+view and take pictures of them at
+different rotations distances and angles
+in my case I'm going to set the pet toys
+on the floor take a picture reposition
+the toys and repeat I'll change the
+camera's location height and angle a few
+times to get a different perspective of
+the scene
+if you know you'll be detecting objects
+and scenes with busy backgrounds you can
+also include other objects in the
+pictures or use various backgrounds to
+improve robustness
+and of course I need pictures of Clio
+too I'll let her play with the toys and
+take pictures while she's playing go get
+them Cleo
+[Music]
+once you've taken at least 200 pictures
+you should have enough to train an
+initial model if you really want to go
+crazy you can take 500 or even a
+thousand pictures production quality
+models actually would end up using ten
+thousand to a hundred thousand or even a
+million images
+so the more pictures that you take the
+more accurate your model is likely to be
+but make sure that there's enough visual
+difference between each picture you take
+or else these additional pictures that
+all look the same won't provide much
+value to the model
+okay we're finally done taking pictures
+now it's time for the fun part labeling
+them
+let's switch over to the computer where
+images are stored at this point you
+should have a folder full of pictures of
+your objects
+now we need to label the class and
+location of each object in every image
+the training algorithm will use this
+label data to teach the model what your
+objects look like and how to locate them
+in future images
+to annotate the images we'll use an open
+source labeling tool called label image
+label image has a simple and effective
+interface for drawing bounding boxes
+around objects and indicating their
+class
+label image is pretty easy to install if
+you're on Linux or Mac OS follow the
+instructions on the GitHub page for
+Windows label image is available as a
+standalone executable install it by
+going to the releases page linked in the
+video description below and downloading
+the windows file for the latest version
+next go to your downloads folder
+label image comes in a zip file that can
+be extracted to wherever you'd like on
+your computer I'll create a folder
+called label image on my desktop
+and then copy the folder inside the zip
+folder
+into the label image folder
+then go into the new folder and
+double-click the label image executable
+Windows might try and stop it from
+running if it does just click more info
+and then run anyway
+all right this is label image first open
+your folder of images by clicking the
+open directory icon and navigating to
+the folder where your images are stored
+click the select folder button and the
+first image in the folder will appear
+time to label some objects to start
+drawing a box click the create rect box
+button and click to draw a box around
+the first object in your image
+type in the name of the class and click
+ok to complete the label
+repeat the same process for each object
+in your image I'll give some more tips
+on good labeling practices later in this
+video
+foreign
+once you've labeled all the objects
+click the save icon and just save it as
+the default file name
+this creates an XML file inside the
+folder
+the XML file contains annotation data
+for the image
+the data is formatted in the Pascal VOC
+annotation format which is a standard
+way of storing bounding box coordinates
+classes and other information about
+objects in an image
+this format is commonly used with the
+tensorflow object detection API to train
+models if you're using a different
+framework the data can be converted to
+other formats using conversion tool like
+roboflow
+go check it out if you're interested
+okay back to labeling
+click the next image button to move on
+to the next image
+now let's learn some hotkeys to help
+speed up the process instead of clicking
+the create rectbox button you can just
+click press W on the keyboard to start a
+new Label Box
+instead of clicking on the save icon you
+can just press Ctrl s to save a file
+press D to move on to the next image or
+a to go to the previous image
+another way to speed things up is to
+pre-define the label map go to the
+folder where label image is installed
+and go into the data folder and open the
+predefined classes file
+delete the existing classes and type in
+your own classes in my case the classes
+are Kitty carrot Mouse fish and polka
+then save and exit the text file
+now go ahead and close and
+reopen label image
+go back to the directory where your
+images are stored
+now when you draw a Label Box the
+suggested classes will be the ones you
+put in the text file this makes it so
+you don't have to type out the whole
+class every time it also helps to
+prevent you from misspelling classes or
+using inconsistent class names which can
+cause errors or performance issues
+during training
+make sure to save before going on to the
+next image if you've made any changes
+all right let's go through a few more
+images and I'll give some labeling tips
+that will help your model achieve better
+performance
+object detection works best with objects
+that have clear and well-defined
+boundaries like a cat or a vehicle
+as such make sure to include the full
+object inside the bounding box
+it doesn't have to be perfect but err on
+the side of making the box too big to
+make sure that the whole object fixed
+Inside the Box
+it's okay if there's a few pixels
+between the box and the edge of the
+actual object
+you can also use the zoom tool to draw a
+more precise bounding box around the
+object
+so if the object is long and diagonally
+oriented in the image that means you'll
+get a lot of background when you draw a
+box around it but that's okay just make
+sure to have multiple examples of this
+object in multiple orientations in
+various images
+if an object is partially obscured like
+this carrot is just draw a box around
+the part that's visible
+a good way to think of how to draw
+bounding boxes for obscured objects is
+where would I want the model to predict
+this object's location
+wherever you want the model to predict
+the location that's where you should
+draw the bounding box
+it's also okay for bounding boxes to
+overlap so don't worry if the bounding
+boxes intersect each other
+however avoid using images that are too
+cluttered with objects here's an example
+picture of a crowd of people say you
+want to train your model to detect and
+count each person how would you label
+this image it's hard to Define where the
+edge of each person is as such your
+model will have a hard time predicting
+bounding boxes it's best to use images
+where there are clear boundaries around
+each object
+in some images it's hard to know what
+the bounding box for an object should
+look like or whether it should even be
+labeled for example I can barely see
+each end of the carrot past my cat's
+legs legs in this image should I label
+the carrot should I label the whole
+thing or should I label each end
+separately
+my general rule is this if I'm confused
+about how to label the image then I just
+throw it out the model learns best from
+Clear obvious examples if you have
+confusing or contradictory labels the
+training algorithm won't be able to
+minimize the model's loss
+here's another example of an image that
+I'll throw out because I'm confused if I
+should label the carrot or not the model
+will probably have a hard time telling
+that this small shaded object behind the
+cat is actually a carrot you want to
+start by giving your model simple
+examples that are easy to learn from
+after you get your model working well in
+Easy conditions then you can address
+more difficult visual situations by
+adding more images and difficult
+conditions
+to throw out an image just leave it
+unlabeled and then go to your folder and
+delete those images
+okay that's enough tips on labeling for
+now keep an eye on my channel and my
+website for more detailed tips on
+effective labeling strategies
+for now continue working through each
+image in your data set it's kind of a
+boring task so put on some music or
+enjoy a nice beverage while you work
+you'll know you're done when you click
+next image and nothing happens what a
+relief
+you can use this data set with my latest
+video showing how to train a custom
+tensorflow Lite object detection model
+with Google collab
+the video gives step-by-step
+instructions for training converting and
+deploying the model on a Raspberry Pi or
+other other device and the best part is
+you can do it all through your web
+browser and run training on a free
+collab server
+all right we did it at this point you
+should have a custom data set folder
+full of images and a label file for each
+image the next step is to use this
+custom data set to train an object
+detection model head over to my latest
+tensorflow video for step-by-step
+instructions on how to train a custom
+object detection model thanks for
+watching this video and we'll see you
+next time
+thank you
+[Music]

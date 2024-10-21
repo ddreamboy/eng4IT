@@ -1,0 +1,96 @@
+a lot can be achieved through a simple
+prompt but to guide a large language
+model to get to a specific and more
+accurate output you need to up your
+prompting game one of the greatest ways
+to do so is by showing the language
+model certain examples examples of how
+you want the work to be done these
+examples are called shorts and in this
+video we'll talk about uh three
+prompting techniques zero short one
+short and finally few short prompting
+and show you how it will improve your
+prompting skills also guys do not forget
+to check out our other videos in this
+prompt engineering 101 series on this
+note let's
+start the difference between zero short
+prompting one short prompting and few
+short prompting lies in how many example
+you show to the model this is how zero
+short prompting looks like it is the
+most basic form of prompting it simply
+shows the model a prompt without
+examples and ask it to generate a
+response
+how does the model answer this so the
+models like chat GPT are tuned to follow
+instructions and are trained on large
+amounts of data they are capable of
+Performing some tasks zero short let me
+show you an example if you ask the large
+language model what is 2 + 2 it will
+answer you correctly as it has been
+trained to do so similarly if you give
+this particular prompt the output will
+be neutral here we didn't provide the
+model with any examples whatsoever of
+text alongside this classification uh
+the llm already understands what
+sentiment is and how to compute it
+that's how zero short capabilities of
+llm
+work one short prompting takes uh the
+concept of zero short to a step further
+one short prompting is when you show the
+model a single example the model then
+uses this single example to understand
+and generate text accordingly here's an
+example let's say you want to translate
+a sentence from English to to French so
+you put the prompt and instead of
+telling the model explicitly to
+translate it to French you just give a
+simple example and look the llm
+automatically translates the sentence
+into French this is how one short
+prompting
+works now zero short and one short
+prompting give remarkable results but
+they can still fall short on more
+complex tasks Here Comes few short
+prompting as a name suggests few short
+prompting involves providing a few
+labeled example in the prompt let me
+show you how this works for this prompt
+let's say you want the answer to be
+either true or false but if you only put
+uh this prompt the model will give you
+uh this specific answer and not the
+response you want this shows that there
+is a need for more advanced prompt
+engineering now let's try the same
+prompt with a few examples we put in the
+prompt with multiple examples and look
+at the answer now F short prompting has
+much more impact moreover as this table
+shows F short has a higher overall
+performance and accuracy than zero short
+and one short prompting combined not
+just that the performance improves as we
+increase the number of examples in the
+world of generative AI prompting has
+become a bridge between large language
+models and practical language based
+tasks so next time use these prompting
+techniques add examples and improve your
+overall interaction with large language
+models these techniques will get more
+complex task done easily and with higher
+accuracy so guys that's all we had for
+you in today's video uh if you liked it
+give it a thumbs up and uh do subscribe
+to our channel for more interesting data
+Tech content See you in the next video
+bye

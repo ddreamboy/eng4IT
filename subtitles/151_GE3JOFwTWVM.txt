@@ -1,0 +1,167 @@
+my SmartWatch tracks how much sleep I
+get each night if I'm feeling curious I
+can look on my phone and see my nightly
+Slumber plotted on a graph it might look
+something like this and on the graph on
+the y-axis we have the hours
+of sleep and then on the x-axis we have
+days
+and this is an example
+of a Time series
+and what a Time series is
+is data of the same entity like my sleep
+hours collected at regular intervals
+like over days and when we have time
+series we can perform a Time series
+analysis
+and this is where we analyze the
+timestamp data to extract meaningful
+insights and predictions
+about the future
+and while it's super useful to forecast
+that I'm going to probably get like
+seven hours shut eye tonight based on
+the data time series analysis plays a
+significant role in helping
+organizations drive a Better Business
+decisions so for example using time
+series analysis a retailer can use this
+functionality to predict future sales
+and optimize their inventory levels
+conversely if you're into purchasing a
+purchaser can use time series analysis
+to predict commodity prices and make
+informed purchasing decisions and then
+in fields like agriculture we can use
+time series analysis to predict weather
+patterns influencing decisions on
+harvesting and when to plant
+so let's first of all introduce number
+one
+the components
+of Time series analysis and then number
+two we're going to take a look at some
+of the
+forecasting models
+for performing time series analysis and
+then number three we're going to talk
+about how to implement
+some of this stuff
+okay now let's talk about the components
+first of all and one component is called
+trend
+now this component refers to the overall
+direction of the data over time whether
+it's increasing whether it's decreasing
+perhaps it's staying the same so you can
+think of it like a line on the graph
+that's either going up or going down or
+staying flat
+that's the first component the second
+one
+seasonality
+now this component is a repeating
+pattern of data over a set period of
+time like the way that retail sales
+Spike during the holiday season so we
+might see a spike and then a bit lower
+the spike is back and it keeps repeating
+like that that's seasonality
+third component
+that's cycle
+and cycle refers to repeating but
+non-seasonal patterns in the data so
+these might be economic booms and busts
+that happen over several years or maybe
+even decades so it's a much smoother
+curve
+and then lastly there is variation
+and variation refers to the
+unpredictable ups and downs in the data
+that cannot be explained by these other
+components and this component is also
+known as irregularity or noise and well
+it looks like maybe that
+yeah very difficult to pick out the
+trend
+so those are some of the components of
+Time series but let's talk about the
+forecasting models that we can use to
+perform some analysis and there are
+several popular forecasting models out
+there one of the most well known is
+called the
+arima model
+now arima that stands for auto
+regressive integrated moving average and
+the model is made up of three components
+so there's the the AR part that's the
+auto regressive component and that looks
+at how past values affect future values
+then there's the I for
+integrated or differencing components
+and that accounts for Trends and
+seasonality and then there is the m a
+component that's the moving average
+component and that Smooths out the Noise
+by removing non-deterministic or random
+movements from a Time series
+so that's arima another pretty popular
+one you'll often see is called
+exponential smoothing
+and exponential smoothings model is is
+used to forecast time series data that
+doesn't have a clear Trend or
+seasonality so it doesn't fit into these
+kind of areas and this model works by
+smoothing out the data by giving more
+weight to recent values and less weight
+to older values and there are many other
+forecasting models out there and the
+right one to use of course depends on
+the data you're working with and the
+specific problem you're trying to solve
+okay so that's finally talk a little bit
+about implementation how do we implement
+this there are several software packages
+out there that can help you perform time
+series analysis and forecasting such as
+those with r and Python and Matlab
+so if we just focus in on on python
+for a moment
+two of the most popular libraries for
+time series analysis in Python
+firstly pandas
+and secondly
+a library called mat plot
+lied
+with pandas you can easily import
+manipulate and analyze the time series
+data and it can handle things like
+missing values aggregate data and
+perform statistical analysis on the data
+Matt plot live is a library that can
+help you visualize the time series data
+you can create line charts or Scatter
+Plots and heat Maps using these
+libraries you can perform a wide range
+of Time series analysis tasks like data
+cleaning exploratory data analysis and
+modeling you can use pandas to
+pre-process your time series data and
+then use mat plus live to visualize the
+trends and seasonalities in that data
+look by understanding the components of
+a Time series and then choosing the
+right forecasting model you can make
+more informed decisions and gain a
+competitive Advantage so look whether
+you're a data analyst or a business
+owner or just a curious sleeper take
+advantage of the power of Time series
+analysis and get a glimpse into what the
+future may hold
+if you have any questions please drop us
+a line below and if you want to see more
+videos like this in the future please
+like And subscribe thanks for watching

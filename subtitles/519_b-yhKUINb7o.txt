@@ -1,0 +1,102 @@
+[Music]
+in this video we'll be discussing the
+concept of semi-supervised learning
+semi-supervised learning kind of takes a
+middle ground between supervised
+learning and unsupervised learning as a
+quick refresher recall from previous
+videos that supervised learning is the
+learning that occurs during training of
+an artificial neural network when the
+data in our training set is labeled
+unsupervised learning on the other hand
+is the learning that occurs when the
+data in our training set is not labeled
+so now onto semi-supervised learning
+semi-supervised learning uses a
+combination of supervised and
+unsupervised learning techniques and
+that's because in a scenario where we'd
+make use of semi-supervised learning
+we'd have a combination of both labeled
+and unlabeled data let's expand on this
+idea with an example say we have access
+to a large unlabeled data set that we'd
+like to train a model on and that
+manually labeling all of the state
+ourselves is just not practical well we
+could go through and manually label some
+portion of this large data set ourselves
+and use that portion to train our model
+and this is fine in fact this is how a
+lot of data use for neural networks
+becomes labeled but you know if we have
+access to large amounts of data and
+we've only labeled some small portion of
+the data then what a waste it would be
+to just leave all the other unlabeled
+data on the table I mean after all we
+know the more data we have to train a
+model on the better and more robust our
+model will be so what can we do to make
+use of the remaining unlabeled data in
+our data set well one thing we can do is
+implement a technique that falls under
+the category of semi-supervised learning
+called pseudo labeling this is how
+pseudo labeling works so as just
+mentioned we've already labeled some
+portion of our data set now we're going
+to use this label data as the training
+set for our model we're then going to
+train our model just as we would with
+any other labelled data set okay and
+then just through the regular training
+process we get our model performing
+pretty well so everything we've done up
+to this point has been just regular old
+supervised learning in practice now
+here's where the unsupervised learning
+piece comes into play after we've
+trained our model on the labeled portion
+of the data set
+we then use our model to predict on the
+remaining unlabeled portion of data we
+then take these predictions and label
+each piece of unlabeled data with the
+individual outputs that were predicted
+for them this process of labeling the
+unlabeled data with the output that was
+predicted by our neural network is the
+very essence of pseudo labeling now
+after labeling the unlabeled data
+through this pseudo labeling process we
+then train our model on the full data
+set which is now comprised of both the
+data that was actually truly labeled
+along with the data that was pseudo
+labeled through the use of pseudo
+labeling were able to train on a vastly
+larger data set we're also able to train
+on data that otherwise may have
+potentially taken many tedious hours of
+human labor to manually label the data
+as you can imagine sometimes the cost of
+acquiring or generating a fully label
+data set is just too high or the pure
+act of generating all the labels itself
+is just not feasible so through this
+process we can see how this approach
+makes use of both supervised learning
+with the labeled data and unsupervised
+learning with the unlabeled data which
+together give us the practice of
+semi-supervised learning so hopefully
+now you have an understanding of what
+semi-supervised learning is and how you
+may apply it and practice through the
+use of pseudo labeling and I hope you
+found this video helpful if you did
+please like the video subscribe suggest
+and comment and thanks for watching
+[Music]

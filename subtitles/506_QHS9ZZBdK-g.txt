@@ -1,0 +1,376 @@
+greetings fellow Learners before we
+begin our titular tale of transfer
+learning I have a thought-provoking
+question for
+you what activity or skill was easy for
+you to pick up but not necessarily for
+anyone else for me I would say it was
+teaching and I attribute a lot of this
+to the public speaking i' had been doing
+since I was growing up by the time I was
+in 10th Grade I was speaking in front of
+thousands of people hosting events when
+I was in school studying in India and
+eventually I started hosting other
+events which you can still find on my
+channel till this day so public speaking
+is definitely a transferable skill I
+used for teaching on YouTube and so
+teaching came a little bit quick to me
+but please comment down below what your
+superpower skill is and I would love to
+know you better now this video is going
+to be divided into three passes where we
+start with an overview of transfer
+learning followed by some detailed
+example and how we would exactly solve a
+transfer learning problem and then we're
+going to code that same thing out in
+pass three of the explanation so stay
+tuned we're going to learn a
+lot this is a neural network so let's
+say that we want to train this network
+to take in a given question and produce
+an answer to do so we construct a data
+set of about 1 million questions along
+with their
+answers now during the training phase of
+the network we will pass question answer
+pairs to the model the model updates its
+parameters and we repeat this process
+until the model eventually learns to
+answer
+questions now during the inference phase
+the model can take an unseen question
+and then it can produce an answer so
+this is great now let's say that we want
+to perform another related task where we
+translate a given English sentence to a
+French sentence so to do so we will
+construct a data set of like let's say
+again 1 million English sentences with
+their French
+translations we start with an untrained
+Network and during the training phase of
+the network we pass English French pairs
+to the model and update the model
+parameters now during the inference
+phase the model can take an unseen
+English sentence and then produce a
+French
+translation this is is great
+again but now one major pain Point here
+is that building data sets of this 1
+million size can be very difficult and
+if we wanted to now solve the problem of
+say translating English to Spanish this
+can be difficult because we would need
+to collect 1 million examples again from
+scratch now transfer learning helps
+mitigate this problem so let's say that
+we want to build an English Spanish
+translator we can first train the model
+on one problem like English to French
+and then we can fine-tune this model on
+the problem we want to solve which is
+English to Spanish in this way knowledge
+can be transferred using a model trained
+on one problem as a starting point and
+hence we don't need as much English to
+Spanish data for the model to actually
+learn quiz
+[Music]
+time have you been paying attention
+let's quiz you to find out what is the
+benefit of transfer learning a it
+reduces the need for computational
+resources B it overcomes data
+limitations C it enhances model
+interpretability or d none of the above
+please comment your answer down below
+and let's have a discussion if you think
+I deserve and you love learning please
+do consider hitting that like button
+because it will help me a lot that's
+that's going to do it for pass one in
+quiz time for now but keep paying
+attention because I will be back to quiz
+you let's illustrate transfer learning
+by teaching a model to perform an NLP
+task which is question answering in the
+simplest form of question answering the
+network is given a context and a
+question and the output answer can be
+extracted from the context so the output
+is essentially just going to be two
+numbers the first number is going to be
+the index of the start position and the
+second number is going to be the index
+of the end position for this type of
+network we will use Bert with transfer
+learning for details on the architecture
+of Bert you can check out this video and
+for now just know that Bert is a stack
+of the encoder part of the Transformer
+neural
+network and it is trained in two phases
+we have a pre-training phase and a fine
+tuning phase so let's talk about each of
+these so during the pre-training phase
+we will take a dumb Network and we'll
+train it on two problems Mass language
+modeling and next sentence prediction so
+in Mass language modeling the model will
+take in a mask input and determine what
+those masks are in next sentence
+prediction the model will take in two
+sentences and determine whether the
+second sentence logically follows the
+first and once it is trained on these
+two problems The Bert model is set to be
+pre-trained now you as a user don't
+usually need to pre-train a model
+yourself and these models can be
+downloaded online and then fine tuned
+for your use
+case during the fine-tuning phase we
+will take this pre-train network and
+train it further on question answering
+so the data set would have a question
+plus context we concatenate these
+together this stream of text is then
+broken down into individual units called
+a token we then pass these tokens into
+Bert and in code we're going to use a
+version of Bert called distill Bert that
+converts each token into a
+768 dimensional
+embedding when I say embedding they are
+basically vectors that is a set of 768
+numbers that represent the meaning of a
+word now each of these 384 tokens are
+then mapped into a two-dimensional
+Vector now the first number will
+determine the probability that this
+token is the start token of the answer
+and the second number determines the
+probability that this token is the end
+token of the answer so they are numbers
+between 0o and
+one and we have
+384 of these two-dimensional vectors
+we can then take the maximum values
+across these columns to get the start
+position and end
+position and there's a little bit of
+postprocessing to handle some edge cases
+overall the big picture here is birch
+requires substantially less question
+answer data than if we had trained a
+model from
+scratch squeeze
+time
+it's that time of video again have you
+been paying attention let's quiz you to
+find out which of the following
+architectures can make use of transfer
+learning a Bert b
+GPT C feed forward neural networks or D
+all of the
+above comment your answer down below and
+let's have a discussion that's going to
+do it for quiz time for now but keep
+paying attention because I will be back
+to quiz
+you in this pass we are going to
+fine-tune Bert on the question answering
+data set this notebook we describe a few
+processes the first is loading up the
+training data then we're going to have
+to pre-process that training data so
+that it can be fed to a model then
+loading and training of the model itself
+and then some postprocessing to be able
+to interpret the results from the model
+and then performance evaluation so let's
+go through each starting with just
+loading the data set in this case we're
+going to use Squad version one which
+means that the answers will always be
+present within the context that is
+provided so as to simplify the process
+we're going to use distilled Bert and
+the batch size is 16 which means that we
+can pass 16 examples to the network all
+in parallel and we can get 16 results in
+parallel this data set has 87,000
+training examples and 10,000 test
+examples and so this shows that we only
+need so many examples to actually
+fine-tune our model instead of the
+millions that we would potentially need
+if training from scratch and here is a
+record of how exactly that training data
+looks the important part is the context
+the question and then the answer where
+the answer is we can see that the text
+that the answer respond corresponds to
+and this text is directly present within
+the context itself so they consider to
+be unscriptural doctrines that is
+present right over here and then its
+starting position is also given over
+here which is the position of they in
+this case step one of loading the data
+set is complete now we want to go to
+step two of actually pre-processing the
+training data so first thing we want to
+do is concatenate the question and the
+context and then we will break that text
+down into individual tokens via an auto
+tokenizer so you could see that here
+this is the question this is the context
+we have broken it down into individual
+tokens and then we have padded it using
+a padding token this is required because
+we want some fix size inputs
+mathematical inputs to be passed into
+the model at a given time and then we
+also want to fetch the start position
+this will indicate the index of the
+start of the answer and then the index
+of the end of the answer because it's
+already present in the context so for
+example 33 to 39 for this fifth example
+right over here which is the same one
+right over here it just basically says
+that I think a golden statue of the
+Virgin Mary answers this question and
+this a golden I think this is the 33rd
+token whereas this is the 39th
+token so how do we go from this to
+creating this tokenized version plus
+padding plus you know getting the start
+and end positions right over here of the
+answer well we have a function that does
+all of that right over here which is
+going to be called prepare training
+features so we were able to load the
+data set and we are now able to
+pre-process our input data and our
+output data now we need to load and
+fine-tune our model and this here is the
+architecture so what happens here is we
+now have the input tokens which were the
+384 tokens each of those tokens is is
+going to be mapped to a
+768 dimensional embedding Vector
+position embedding allows the tokens to
+encode positional information because
+their position matters layer Norm is
+going to help stabilize training Dropout
+is going to act as a regularizer to
+prevent or mitigate overfitting then we
+have the Transformer and this consists
+of six encoder Transformer blocks
+because this is Burt and with the
+encoder Transformer it's going to
+perform a series of attention operations
+in order to better encapsulate the
+meaning of every single token and that's
+why the output of every single token is
+going to be 768 Dimensions better
+encapsulating meaning if you want to get
+an idea of exactly how every single
+component works I highly recommend you
+take a look at the Transformers from
+scratch playlist now we going to have
+384 tokens and each of those is going to
+be mapped to a two dimensional output
+which indicates the probability of start
+index and the probability that this
+token is the end index so that's the
+model that we're dealing with and we can
+actually start the training process
+fairly
+easily so we've loaded the data set we
+have pre-processed the data we now have
+trained the model and now let's actually
+look at post-processing and prediction
+of the model itself so this code over
+here is going to take a batch of
+examples and generate some predictions
+now this is going to be a list of 384
+tokens which indicates the probabilities
+of it each being the start index and
+another 384 token list of it being the
+end index you could see and it also has
+a batch size because we're passing 16
+examples at a time but we really only
+need the position like the true position
+for every single column we can actually
+just take like the maximum value over
+here so that means that for example this
+is going to be a list of 16 examples in
+the batch so for the first example token
+46 is the start and then it ends at
+token 47 that's the answer then the
+second example the answer starts at
+token 57 and ends at token 58 for the
+third example the answer starts at token
+78 and ends at token 81 and so on and so
+now that we've done the load data set
+the pre-processing the model training
+the postprocessing we can now do some
+Hardy evaluation because we had our
+evaluation ation set of about 10,000
+examples and we could see how much there
+was an exact match to the actual answers
+generated by the model and the answers
+that are actually true and we can also
+generate some other evaluation metrics
+and once done you can push your
+fine-tune model to hugging face Hub quiz
+time all right this is going to be a fun
+one what is the primary advantage of
+using disle Bert over Bert a disle Bert
+is larger and more
+powerful B distill Bert provides better
+interpretability C distill Bert is
+faster and has a smaller memory
+footprint or D disal BT has a higher
+capacity for model
+complexity comment your answer down
+below and let's have a discussion and if
+you think I do deserve it please do
+consider giving this video a like
+because it'll help me out a lot now
+that's going to do for quiz time and
+pass three of the explanation of the
+video but before we go let's generate a
+[Music]
+summary transfer learning involves
+pre-training a model on a general task
+then further fine-tuning the model on a
+specific task this way we don't need as
+much task specific data now Bert uses
+transfer learning by pre-training on
+mass language modeling that is given a
+MK input determine the masks and next
+sentence prediction that is given two
+sentences determine if the second
+sentence logically follows the first and
+we can use less data to fine-tune on
+other NLP tasks like question answering
+and that's all we have for today the
+links to the code and all the resources
+will be provided in the description down
+below so do check it out if you want to
+know more about how Bert works I highly
+suggest you check out this video right
+over here and you can watch the rest of
+the NLP playlist as well thank you all
+so much for watching if you do think I
+deserve it please do give this video a
+like thank you and I will see you in the
+next one bye-bye

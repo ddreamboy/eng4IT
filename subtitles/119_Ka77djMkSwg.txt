@@ -1,0 +1,247 @@
+Hey it's, Simon from supersimple.dev
+Today's video is about a really
+important topic if you want to get a job
+as a web developer.
+So we're going to talk about what are
+javascript frameworks
+and which one should you learn. So pretty
+much every web developer
+uses a framework in addition to
+javascript to build web applications,
+and here's my detailed explanation of
+what a framework is.
+So the first thing you need to know is
+the basics of javascript.
+Now if you don't know javascript yet I
+have an in-depth tutorial on javascript
+and the link to that is in the
+description.
+Now, I assume that you know javascript at
+this point.
+So a javascript framework helps you
+render stuff.
+It's a rendering system. Rendering means
+displaying something on a web page.
+It's the most common thing you do in web
+development.
+So for example, if I want to render a
+button on my web page,
+I can use this code and this is just
+html we don't even need javascript yet.
+Now let's say that I have a list and I
+want to render this list
+on my web page. Well we'll use javascript
+here to
+loop through this list and for each item
+we're going to create an html element,
+and then add that element to the page. So
+that's rendering using javascript.
+So a very common task in web development
+is: we're going to take some complex data
+and we're going to use javascript to
+render that data on the web page.
+For example let's say that we have a
+list of comments on a youtube
+video and we want to render it to look
+like this.
+In the beginning there were no
+frameworks so developers just use
+plain javascript to render data so this
+is the code to render the comments using
+plain javascript, and this is the code
+using a framework. So as you can see
+this code is way easier to read and
+write. You can even see the structure of
+the html
+that you're rendering. So if you use a
+javascript,
+framework you can write your code like
+this, and then the framework basically
+converts it into this javascript
+for you. And that javascript is going to
+render it on the page.
+So that's why web developers use
+frameworks, it makes our code
+so much more simple. Now let's go through
+a demo of a real
+framework and this is how to use a
+framework. So first we have to go to the
+frameworks
+website and every framework has their
+own website. So if you don't know what
+that is
+we're going to search it in google, so we
+can search backbone.js.
+Now once we're on the website we're
+going to find a copy of the framework's
+code,
+so a framework is just a bunch of
+javascript code
+that someone else wrote, it's no
+different than the code that you write
+yourself.
+So we're going to copy all of this code,
+and run it in our web page.
+So an easy way to do this is just to
+copy this url
+and then in our web page we can add a
+script tag
+and we're going to give the script tag
+an src attribute.
+So this s r c attribute stands for the
+source attribute.
+It will grab a copy of the code found in
+this url,
+which is all of the frameworks code, and
+it's going to run this code.
+So we're going to run the frameworks
+code at the top of our website
+and that's it. Now you can start writing
+your web pages like this,
+and the framework will convert it into
+javascript and render things
+for you. Of course you have to follow the
+instructions for how to use the
+framework,
+so we would have to go back to the
+website and
+read all the instructions for how to use
+it.
+And a warning if this is your first time
+learning about frameworks, these
+instructions can be very hard to
+understand.
+If you have any questions you can email
+me supersimple.dev/feedback
+or leave a comment below. So now that we
+have a general sense of what a framework
+looks like we're going to break down the
+three main parts of a framework.
+So the first part is rendering, which we
+just talked about.
+We write our code like this and this is
+also known as templating,
+we're writing an html template where the
+values are filled by our data,
+and then the framework takes it, converts
+it into javascript, which
+then renders our web page. So the second
+feature of a framework is data handling.
+So all frameworks have a way for you to
+put your data in the framework.
+And then it will take the data, and
+render it for you according to your web
+page.
+So it will take the values in your data,
+and then fill your template with those
+values.
+And then when the data changes, for
+example we add or remove a comment,
+the framework will automatically
+re-render for you so that your web page
+is always
+up to date with your data. So the third
+feature of a framework is called event
+handling,
+which means it helps you add event
+handlers to your page so instead of
+writing button.onclick
+in javascript, the framework gives you an
+easy way to add event handlers to your
+html elements.
+This is also known as the mvc
+architecture, or model
+view controller, and this is what the
+majority of javascript frameworks are
+built on.
+And this is why if you have a good grasp
+of mvc, you shouldn't have much trouble
+learning a framework and switching from
+one framework
+to another. If you want to learn more
+about mvc, we built an mvc-based app in
+my javascript beginner
+tutorial, but I'll also make a specific video
+about
+mvc in the future, so please subscribe
+for that.
+Now while you're at it if you got value
+from this video please click that like
+button below so this video reaches more
+people
+and helps people get tech careers. So
+these are the three main features of a
+framework, some of them provide more
+features than this,
+but all frameworks have these three
+features.
+So the second part of this lesson is
+which framework should you learn if you
+want to get a job as a web developer.
+So in 2021, the front end frameworks you
+should consider
+are react, vue, or angular and
+avoid other front-end frameworks.
+Frameworks are created in generations
+just like an iphone you have the first
+generation, the second gen,
+etc if you want to get a job you need to
+learn the latest generation of
+javascript frameworks.
+Because just like an iphone, everyone
+wants to use the latest generation,
+or they want to upgrade, so right now
+react, vue, and angular are the latest
+generation of
+frameworks, and that's why you should
+pick one of these to learn.
+So the links to each of these frameworks
+are in the description, you can take a
+look at them and see which one
+interests you. So how long will it be
+before a new generation comes out
+and these frameworks become outdated?
+Well the truth is that no one knows for
+sure,
+but I'll let you know as soon as it
+happens so please be sure to subscribe.
+So of these three frameworks which one
+should you learn?
+So the way this works is frameworks tend
+to be popular in certain regions.
+So pick the framework that is the most
+popular in the region you want to work
+in.
+For example in the bay area and toronto,
+where I've worked companies like to use
+react, so I've been using react. And it
+might be different for you.
+So what I do to figure this out is I go
+on linkedin or your country's job search
+website,
+and then I search for web developer jobs
+in the location that I want to work.
+And then I make a list of which
+frameworks come up most often,
+and I learn that one. And if there's
+two that come up equally as often,
+then you can try them out both and see
+which one you like
+better. So that's the end of this lesson.
+Thanks so much for watching the video,
+today we learned what is a javascript
+framework and which one should you learn
+if you want to get a job as a web
+developer.
+So each framework has a step-by-step
+guide on how to set it up
+and you can take a look at them in the
+description.
+If you have any trouble or if you have
+any questions please send me an email
+at supersimple.dev/feedback
+Thanks again for watching, my name is
+Simon from supersimple.dev and I want to
+make a tech career possible for
+anyone. Stay positive keep learning and
+I'll see you in the next one.

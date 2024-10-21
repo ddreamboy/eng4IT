@@ -1,0 +1,41 @@
+Welcome back!
+Remember that the goal for
+dimensionality reduction is to find a lower dimensional subspace that you can use to capture much of the structure of your original data.
+So to understand how this can work, we need to understand how you can represent data in multiple different coordinate systems.
+In fact there are many ways to represent multivariate data.
+We can define a basis as a set of N vectors that you can use to construct any point in an N-dimensional vector space.
+We're used to using a specific choice of basis called the standard basis in which
+your first basis vector is one unit in the direction of the
+activity for neuron one and the second basis vector is one unit in the direction of neuron two.
+So when we say that this point here is equal to
+3,2 what that really means is that we can represent it as a combination of
+3 times the vector u plus 2 times the vector w.
+But this is not the only basis that we can imagine for this data. So you could rotate
+these basis vectors and therefore represent this point v as a completely different set of coefficients.
+So in this case your view would be 3.5 times the vector u minus 1.2 times the vector w.
+These are both examples of orthogonal basis.
+So in both this standard basis and this rotated basis, all of the basis vectors are orthogonal to each other.
+You can also have a basis where the vectors are not orthogonal so here's an example of that. But you can still represent
+each point in the two-dimensional plane as a combination of these two vectors.
+You can also rescale your basis. So in this case, I'm rescaling the standard basis by increasing u and w.
+So that v is now equal to 1,1 instead of 3,2.
+This is an example where the basis vectors are orthogonal but it's not an orthonormal basis.
+By orthonormal, we mean that the basis is orthogonal and all basis vectors have a length of 1,
+and we can measure the length as the square root of the sum of the squared values of the entries.
+It's worth noting that if you already have an orthogonal basis, then you can very easily normalize it by
+dividing each basis vector by its magnitude.
+So now the question is how do you tell if your two basis vectors are orthogonal to each other.
+So you can test this using the dot product which is a scalar quantity.
+So it's just a number and it's a function of two vectors, so u dot w is defined
+as the magnitude of u times the magnitude of w times the cosine of the angle between them.
+And what happens if It is at a right angle?
+So if they're perpendicular or orthogonal then the cosine is equal to zero,
+so that means that the dot product is zero. And in fact two vectors are defined as orthogonal
+exactly when the dot product is equal to zero.
+But does this mean that we need to always look for the angle between any two vectors to find out if they're orthogonal?
+Thankfully there is another formulation of the dot product.
+So this is the algebraic definition and it turns out that these are actually equivalent definitions if you use some trigonometric
+identities to prove it. So u dot w can also be written as the sum of ui times wi.
+That's much easier to calculate especially in a vector format.
+So if u and w are both column vectors then u dot w is u transpose times w.
+So this is a much easier way to test if two vectors are orthogonal is by taking u transpose times w.

@@ -1,0 +1,1071 @@
+this is Yang Lee and he got his PhD from
+the Chinese uh Academy of Science in
+2002 and uh he did his post at Berkeley
+uh with James land and uh now he's at
+the University of Washington and he's
+going to talk a bit about uh some work
+he's done most recently on something
+called the activity designer um and his
+his his area and interest have been in
+say rapid prototyping tools for
+ubiquitous Computing
+applications uh this talk is going to be
+external and go up on YouTube so if
+you've got uh questions that are of a
+confidential nature then we need to hold
+them to the end when the camera is no
+longer roll so without further Ado
+thanks Rich um let's just waiting for
+slides to show up
+so sorry for beating okay hopefully it's
+a everything will
+be what's going on
+okay thanks everyone um so I'm going to
+talk about my work on rapid prototype
+tools for ubiquitous Computing
+applications first I would like to give
+you a sense of what ubicom applications
+I focused on uh so ubicom applications
+are those that can support our everyday
+activities in the physical world one
+uh nice example here is a Google Maps or
+iPhone I think a lot of you know what it
+what it is so the the application can
+approximate the user's current location
+using widely accessible cell tower
+information based on the sense location
+of the user it can then provide useful
+services such as uh finding nearby
+businesses another example here is the
+Intel scet display it gives caregivers a
+continuous awareness about the elders
+everyday activities that are detected we
+rid uh sensing
+Technologies so for for uh for example
+uh when the when the Elder forgets to
+take her medication uh the icon on the
+display that depicts the medication
+status will turn rate so the caregiver
+knows what happened so with advances in
+sensor Technologies as well uh as a
+Computing
+infrastructures there is a huge
+potential to build applications like
+these examples to simplify our lives and
+to achieve the vision of UB
+Computing so however it's very difficult
+to design ubicom
+applications compared to the
+well-defined desktop Computing
+environments we are all familiar with
+real world environments are more complex
+right and our everyday activities in the
+physical world are more Dynamic and less
+structured another problem here is uh uh
+you become often involves sophisticated
+Technologies so it require higher levels
+of technical expertise to prototype and
+test you become
+applications so before I go on talking
+about how I am going to address these
+problems let's first reflect on the
+success we have uh with a desktop
+computer applications and the graphical
+user interfaces so a common practice in
+user interface design is uh the
+iterativity the alternative design that
+involves uh rapidly creating prototypes
+and testing prototypes with users to get
+feedback so many tools have been
+developed uh for the process one of the
+earliest successful examples is uh
+Apple's hyper card hyper card allows
+people who don't have much uh technical
+background uh to easily create graphical
+user
+interfaces another example is dyam so
+it's a tool for the early stage design
+of websites I was heavily involved uh in
+the development of uh
+Dynam so it has been downloaded over
+100,000 times since 2001 so it's really
+popular to for the early stage for the
+early stage design of
+websites so rapid prototyping tools like
+these examples have played
+a important role in the success of
+desktop com Computing and the graphical
+user interfaces so the purpose of these
+tools is not for creating full-fledged
+final applications but rather they can
+lower the bar for interaction designers
+uh to create interactive prototypes and
+test these prototypes with end users to
+get
+feedback
+so this uh turns out to be the key
+factor
+for producing useful and usable user
+interfaces so to to achieve similar
+success for uus computing I would like
+to
+uh provide computational tool support
+for designers to easily design test the
+ubicom applications for the rest of my
+talk uh first I'm going to briefly talk
+about my early work with topiary for
+rapidly prototyping location enhanced
+applications a specific form of ubom
+applications and then I'm going to spend
+most time talking about my recent work
+on activity based prototype as well as
+uh it's to support activity
+designer so when first started uh
+looking at the domain of ubicom design
+it's such a broad space that is
+difficult to be uh addressed by a single
+piece of
+work so I focused on location enhanced
+applications uh these applications can
+provide useful services using the
+location of people places and things
+right so I already talked about what
+Google uh iPhone map does at the
+beginning of the talk uh alcohol is
+another application it keeps track of
+physical objects patients and doctors in
+Hospital building so these applications
+are useful but they are difficult to
+design and
+test so location enhanced applications
+often require a high level of technical
+expertise to design for example location
+and the place uh sensor Technologies are
+nonstandard and and
+complex although some tour kits are
+available for programmers it often takes
+weeks or even months to build a location
+enhanced application before it can be
+tested with end users to get any
+feedback so it's too slow and expensive
+to iterate on designs right
+so for people who don't know how to
+program such as interaction designers
+there are no tools available at all to
+address these problems I created top a
+tool for non-technical designers to uh
+easily create and the test location
+enhanced
+applications so there are two major
+research goals I intend to achieve uh
+with a top so one how we can allow
+designers to easily design location
+based behaviors without programming
+right another goal here is how can we
+allow a design to be tested with users
+in the field without having to deploy a
+location infrastructure so location
+infrastructures are not always available
+especially indors right and there are
+also some complicated issues such as
+location to place uh inference
+okay so here I would like to use a
+running example to talk about how
+topiary address the design of location
+enhanced applications let's assume we
+want to design a a location based tour
+guide so these are the list of features
+we want to
+have to design session application the
+first thing we want to do is to describe
+location context of Interest as in or
+out of place near or far from somewhere
+or
+somebody
+so to allow designers to easily specify
+location uh location context I created a
+visual language in top for this purpose
+so you can first import a map image unit
+two as background optionally we can draw
+a root Network on top of the map right
+so the road network will be used for
+constructing shortest path
+at the wrun
+time then we can add models of people
+places and things right so the map
+naturally represent the special
+relationship uh between these entities
+for example Bob is in the bookstore in
+addition to presence context such as in
+or out we can also specify proximity
+context such as near or far for example
+although Carol is outside of the parking
+lot her proximity region intersects the
+boundary of the parking lot which
+indicates Caro is near the parking lot
+while she is far from all other entities
+so we can move people and uh things on
+the map to represent diverse spatial
+relationships then we can drop a
+recording window uh to capture location
+context of Interest right so the
+recording window works like a screen
+capture to but instead of capturing
+pixels on uh on the screen Tober
+captures special relationships of those
+entities that are included by the
+recording window so in this case we got
+Bob is in the bookstore right
+so then we can uh generalize it captur
+the location scenario for example
+replacing the book the concrete Place
+bookstore with a any
+place so of course we we can also
+capture uh Reacher locations in scenario
+such as Carol MB in the par lot it can
+be represented by multiple spatial
+relationships here so the V language
+here does not necessarily cover the the
+entire space of location context but it
+can cover a useful subset of location
+context which are useful for uh rapid
+prototyping
+purpose so then actually we can use the
+capture location context
+to specify location based behaviors uh
+using a storyboard so a page represent a
+screen of video output and the link repr
+uh represents a transition between Pages
+for
+example when the user clicks on the get
+info button uh the Prototype will show
+uh the bookstore page when the Bob when
+Bob is in the bookstore and show the
+library page when Bob is in the library
+right and uh when Bob is in neither of
+these two places the Prototype shows the
+map another link here starts from the
+page itself the link the transition can
+automatically take place as long as the
+associated scenario is true in this case
+when anyone moves near Bob the Prototype
+shows a table of friends so that's how
+the behavior of the Prototype depends on
+the location of the user right so once
+we have a prototype we want to test the
+Prototype with users uh how can we do
+that so
+traditionally a prototype of a
+desktop application is tested with uh
+participants in a lab right but the
+target use scenario of location enhanced
+applications are often in the field and
+when the user is mobile and a prototype
+should behave based on the changing
+location of the user so the controlled
+lab environment is no longer appropriate
+as a result topiary uses uh so-called
+wizard of a approach to test a location
+prototype so in such a test a user walks
+in the field with a mobile device uh for
+running the
+Prototype then the designer acts like
+wizard simulates the user's location or
+a separate
+device now I'm going to play a a video
+clip to give you a sense how this works
+so the designer can start a prototype on
+a mobile device such as a
+PDA then the device can be handed to the
+end user uh the designer can follow the
+the user around in the field and then
+simulates the users location on the map
+on separate device so the change of the
+user application will trigger the
+application behavior and a user can
+interact with the Prototype on the uh
+mobile
+device so topar has been downloaded uh
+over a thousand times since 2004 and
+it's Inus by researchers and the
+University students
+um so I'm not going to talk about
+details here I if you you're interested
+I know we can talk afterwards so here I
+would like to give you a summary about
+why we want to do alternative design
+with a top right so without
+top we can only explore uh so it took us
+a few weeks to just explore a single
+design and we had to program and deal
+with sensors but with tobery uh we can
+explore multiple designs just in a few
+hours right and uh all the time during
+the design process we only need to deal
+with a high level abstractions such as
+Maps story boards and wither
+R okay so after I developed the top in
+natural start was uh how we can provide
+com computational tool support for
+people to easily uh prototype and test a
+broader set of ubom
+applications to achieve that goal uh
+there are two Central research questions
+right so one is uh how we can go Beyond
+location right so top uses a map
+metaphor to represent location context
+so one would be an appropriate framework
+or structure to incorporate more diverse
+contextual information information into
+the design another question here is how
+we can go beyond controlled environments
+for testing you become applications
+right for many ubom applications it's
+very important to to test them in
+people's everyday
+lives so top design can can be tested in
+the field but it's it's a still a
+controled environment right so the
+wizard has to follow the user around so
+on one hand we want these prototypes to
+be created at a low cost on the other
+hand we want them to be tested in
+people's everyday lives over a extended
+period of time which inevitably uh
+require High degrees of realism and
+robustness with these research questions
+in mind I focused on a set of emerging
+you become applications so these
+applications employ Rich contextual
+information about people's everyday
+lives and they show high value by by
+supporting PE uh people's long-term
+activities uh such as uh uh keeping feed
+and
+uh elder
+care but again these applications are
+very difficult to design test it's more
+difficult to design test than location
+based
+applications so to understand why it's
+difficult to design and test the these
+applications here I would like to uh
+look into the design and development
+process of ubit the application
+developed at uh Intel Research Seattle
+uh UB improves people's awareness about
+their physical activities by visualizing
+their uh workout status uh as flowers or
+butterfly for
+example the more exercises a user has
+done the more flowers will be shown on
+the display right so first ubifit is
+addressing a very complex Target domain
+it supports keeping feed long-term
+activity could spend years or even the
+lifetime of the
+user uh second ubed requires high levels
+of technical expertise to prototype it
+took a crew of technically skilled
+researchers two years to design develop
+and deploy
+ubifit and finally
+finally uh because ubit is addressing a
+long-term activity it has to be tested
+in people's everyday lives uh over an
+extended period of time so that the
+impact of the design can be observed
+right it would be impossible to observe
+the behavior change in a short period of
+time
+so it turned out uh um these
+difficulties are not just with the
+particular project of you
+fit my colleagues and I conducted the
+interviews with uh 11 professional
+interaction designers and we find many
+designers encountered similar challenges
+and we found field research is very
+important uh for uom design and uh it's
+important to bring field findings into a
+design process as a context for design
+and currently there's no tool support
+for that and uh because of high level
+technical barrier
+uh exist for experimenting with new
+ideas it's very difficult and expensive
+to push a early idea to functional
+prototype and to the real world
+experiment so these are the problems are
+I intend to
+address so my research goal at the high
+level uh is to Pro is to provide
+computational tool support to allow
+non-technical people people to easily
+prototype and deploy what used to take a
+team of researchers weeks and months to
+do
+so to achieve that goal I created uh a
+activity designer a rapid low threshold
+prototype uh to for uh ubicom
+applications
+so here I would like to use a real
+example to talk about why activity
+designer is useful in design ubicom
+applications UB GRE is a project
+conducted by researchers at University
+of Washington carage M University and
+the uh Intel Research Seattle so ubig
+green addresses Environmental Protection
+by encouraging people uh to do
+Transportation activities that have less
+impact on the environment
+right so the designer started design um
+by describing what are possible
+Transportation activities right so the
+the information can come from field
+research or solely based on the
+knowledge of the designer then the
+designer uh create a prototype uh called
+the UB or phone application using
+graphical story body and the prototyping
+by demonstration as we can see here the
+designer used a lot of examples to
+describe how the leaves of the tree
+should change based on the number of
+green activities a user has
+done okay so then the designer deployed
+the prototype to multiple part part uh
+participants and it only took a few uh
+button clicks and copy paste to deploy
+such a prototype so it's really a lot
+easier uh for
+deployment the Prototype was tested with
+a multiple partic participants over two
+weeks and uh
+participants Transportation activities
+were detected in a combined way uh some
+basic Transportation activities such as
+running or biking are detected by mobile
+sensing platforms which are developed at
+Intel Research Seattle and UD
+up some Transportation activities which
+are difficult to be detected such as
+driving and taking bus uh these
+activities are reported by users uh
+themselves so during the testing process
+the designer was able to monitor
+multiple tests at the same time on a
+remote computer so as we can see here
+the designer had two kinds of designs
+and each of them was tested with a six
+participants so it's like a a between
+subject study the the so the designer
+intended to find out which design is uh
+better
+uh and the designer
+can uh revise the design and redeploy
+the design any time remotely so the
+designer didn't have to collect all the
+mobile devices back in order to deploy a
+new design he he could he could just do
+it
+remotely okay okay so uh hopefully at
+this point you got a rough idea about
+what activity designer does so now I I
+would like to flash out more details
+about the two and the uh theory behind
+the two so the process I I intended to
+support with activity designer is a
+so-called uh activity based prototyping
+so the process uh starts with a field
+research then it goes through the loop
+of activity analysis and
+modeling uh interaction prototyping and
+intive
+testing at the first glance the process
+uh seems like a simple extension of the
+alterative process interative design
+process but what's special here is uh
+the important role uh human activities
+are playing so human activities are used
+as a first class objects in the entire
+design
+process activities are transformed from
+field observations to activity models to
+computational
+constructs so back to the question
+how how can we incorporate diverse
+contextual information into a design
+right so how can we incorporate context
+reach human activities into the design
+process uh that's a to answer that
+question I looked into
+to uh activity Theory now I'm going to
+talk a little bit about Theory
+uh before we get to the technical uh
+details so activity
+Theory uh offers a consistent view about
+context and it also gives uh activity
+hierarchy the hierarchy
+includes activities actions and uh
+operations for example for the long-term
+activity keeping feed it can be carried
+out as a set of actions such as lifting
+wavs and running or
+treadmill an action can in turn be
+decomposed uh as a sequence of
+operations such as pushing the quick
+button to start and running so the
+hierarchy captures the essence of a
+long-term activity but it's inadequate
+to capture the situation
+factors that might be associated with uh
+activities such as location information
+we cannot fit the location information
+into the
+hierarchy
+so for ubicom design I I introduced a
+few new Concepts uh to the hierarchy for
+example for the for the running action
+it can happen in multiple situations
+right Running With Friends at the gym or
+running alone at the park so I call the
+combination of an action and a situation
+is seene so a seene is a
+direct uh observation about people's
+everyday lives and then the same action
+can serve for multiple purposes or for
+serve for multiple themes that's a high
+level activity
+structures for example running for
+keeping feed and running for fun so a
+theme is a equivalent concept of
+activities in activity Theory
+so the hierarchy actually uh the uh
+framework here underlines the entire
+activity designer system as I'm going to
+show in the next few
+slides so now I'm going to talk about
+the key features of activity designer in
+supporting each of these
+steps so field data may come in uh as a
+free text imagees uh
+uh images video clips or metadata such
+as uh structured questionnaires so this
+uh this field data can be imported in
+the two as a collection of scenes or
+observations so you don't have to do a
+field research uh to use a to you can
+just add these uh observations based on
+your own knowledge right then based on
+this uh individual observations then we
+can can create high level activity
+structures themes a theme is a a aspect
+about people's everyday lives for
+example eating healthy and having fun
+are two aspects for staying healthy
+right so each theme is associated with a
+subset of scenes or
+observations clicking on theme will make
+activity designer only uh to show a
+subset of
+observations so on this
+activity uh models uh observations and
+themes are maintained visible throughout
+a uh design process that's how they can
+form a context for design so designers
+can picture target activities in their
+mind as I'm going to show in the next
+few slides these activity models are
+also an important resource for creating
+functional prototypes and they are also
+a basis for generating computation
+constructs for running these prototypes
+at a run
+time okay so then the next step is to
+create uh to create functional
+prototypes in activity designer we can
+create multiple prot multiple prototypes
+at the same time so we can think uh
+globally in terms of how each of these
+prototypes should behave to to provide
+coordinated support for Target activ
+activities the storyboard here shows the
+design of the uh house monitor
+application uh so I'm going to use this
+design to talk about uh the key features
+of activity
+designer okay let's do something
+concrete here the first uh feature we
+want to prototype here is uh uh turns
+the purple fish to a gold fish when the
+user hands run uh when the user has
+achieved her weekly exercise goal which
+is uh running in the gym four times a
+week so the key part to prototype this
+feature is to specify the condition
+right when the user has join in the gym
+four times this
+week to design such a feature the
+designer can drag the running workout
+action to the link to create a condition
+a default query is a con uh
+constructed then the designer can
+interactively customize the query into a
+Target form such as specifying time
+periods confidence value activities of
+Interest
+yep so the activity query language
+allows designers to easily specify
+activity queries over noisy event
+streams so we can specify activity
+occurrences of of Interest using a list
+of filters the specification here
+represents all the running workout of
+the user or a friend in the gym or
+park we can also use a theme to
+represent a class of actions of
+situation uh situational factors the
+second specification here uh represents
+all the actions of the user for having
+fun so in addition to graphical
+storyboarding for prototyping we can
+also demonstrate how the interface
+output uh should change based on the
+users's activities for example based on
+the three example at the bottom of the
+screen the system can learn the mapping
+between the numerical value of the
+nutrition status and the video output so
+the so the dial will rotate at the right
+time based on the uh nutrition
+status for those uh Advanced designers
+or users they can also script uh uh Rich
+behaviors so I'm not going to talk about
+this in detail
+here so then we can test a design any
+time with uh simulated activity data
+right so in the in the activity uh
+designer uh uh we can also debug the
+design like uh we can click on we can
+interact with the Prototype like uh any
+user can so we can test multiple
+prototypes at the same
+[Music]
+time
+yeah okay then we can test the these
+prototypes with the real users on the
+target
+devices so activity designer provides
+two options for running a prototype uh a
+prototype can directly uh run on the
+activity designer virtual machine if the
+target device is a high-end device such
+as a tablet P uh PC um for the lowend
+devices such as a mobile phone the
+virtual machine will not be able to run
+so in that case a prototype can be
+automatically converted to a web
+application it's actually based on uh
+Google web toolkit so it's really cool
+uh so at the one time users activities
+can be detected uh via real sensors are
+reported by uh users themselves I
+mentioned this earlier so all these
+components are communicating with each
+other through activity server a key a
+key component in the activ activy
+designer runtime architecture so the
+architecture allows a new component to
+be easily plugged in for example if we
+have a new sensing technology we can
+plug it in and it will
+work so these uh uh interfaces for
+reporting activities and these Computing
+constructs such as sensor wrappers or
+database structures they are all
+automatically generated based on
+activity models we created at the very
+beginning of the design so it really
+makes the uh deployment a lot easier so
+the designer doesn't have to care about
+all these uh technical
+details and we can analyze the design
+easily in activity designer we can load
+in a session and replace uh activity
+Logs with a
+prototype we can
+also uh use the same query language to
+generate the graph for example uh like
+what's showing
+here so we can do some simple
+statistical analysis in in activity uh
+designer we can also export the data the
+query uh query data so we can do some
+more analysis in other statistical
+tools okay so next I'm going to talk
+about how I evaluated the activity
+designer so first first I conducted the
+elab study uh with 10 participants uh
+the participants were asked to design
+the key features of three
+applications uh here I would like to uh
+briefly talk about what I found from the
+study so participants were able to
+finish uh most of these tasks and we got
+positive
+feedback in particular although none of
+uh my participants had a backround in
+activity Theory they were able to easily
+understand the concepts and the
+representation of uh activity
+framework excuse
+me so the study also revealed the need
+to have a more expressive way to specify
+queries that's why that's uh that was
+the motivation for me to ENT the query
+language in the current version of
+activity designer
+so then I conducted a lab study uh to
+evaluate the query language in
+particular six participants were asked
+to specify queries in response to 15
+questions in natural English for example
+for the question has the user been in
+the classroom of theater for five
+minutes the participants were as were
+required uh was required to specify the
+query in the dialogue box like
+this so participants were able to finish
+most tasks without help and in
+particular for those participants who
+had experience in SQL and ubicom
+development uh the comment is the Creer
+language is much easier than SQL and
+it's still expressive enough to specify
+a a range of
+queries activity designer has also been
+used by other researchers uh in their
+design projects uh such as uh for the
+domain of uh Environmental Protection
+and social
+awareness so I talked about UB
+earlier so from these studies I found uh
+the framework as well as a tool support
+uh the the activity designer system were
+effective for designers to describe and
+prototype ubicom applications that could
+address large
+scale
+activities uh I found the designer were
+able to create and deploy prototypes in
+C in just a few hours rather than a few
+months and uh they having be some
+positive
+results in terms of how activity
+designer allows people to create new
+applications so I have released activity
+designer as open source so uh please
+download the two and give it a
+try so in conclusion uh my research in
+this area uh contributed two rapid
+prototype tools top
+for prototyping location has
+applications and activity designer for
+design you become applications for INS
+testing in addition to software
+artifacts uh my
+work also contributed a activity based
+prototyping process in particular the
+activity framework provide a new way for
+describing and structuring contextual
+information so looking forward uh I
+would like to continue working on new
+technologies that allow people to
+effectively Leverage The rapidly growing
+computing power and information
+resources so if we look at Thea
+trajectory of uh interaction design from
+desktop to ubiquitous computing we
+always trying to to incorporate more
+information into the design process
+right so activity designer Pro uh
+provides a platform for activity based
+design so I hope to work uh to explore
+more two support for Design uicom
+Systems that could address large scale
+activities I also intend to empower and
+users to be able to easily create
+personal gadgets
+so these uh Google gadgets are actually
+created with activity designer uh so
+they are fully interactive and they can
+behave based on users activities such as
+Transportation activities and daily
+exercises right so based on my
+experience with a activity designer I
+hope to develop uh higher level to or
+more specialized to uh for end users to
+be able to easily create Google gadgets
+right so we have millions of gadgets
+easily created and uh yeah so I was
+supposed to give you a live demo but my
+computer crashed so I mean I can do it
+later
+so uh another Direction I intend to work
+on is the data driven design and
+development of interactive systems so as
+user activities are getting more and
+more complex it's very important for us
+to analyze the massive data we collect
+and uh to identify users needs and to
+optimize interaction behaviors uh these
+systems are other projects I have been
+working on in parallel so activity prism
+is a tool for analyzing uh people's
+behavior uh activity patterns it
+provides multiple ways uh ways for
+people to look into uh activity data and
+the cars is a system for
+automatically extracting interaction
+logic from testing sequences so it can
+actually uh extract is a story board
+from uh sequential
+data finally uh I would like to work on
+uh activity based context where
+Computing in particular I I would like
+to study the issue of uh how to organize
+Computing and information resources
+based on users activity the benefit here
+is uh then we can provide users with uh
+information Computing resources that are
+relevant to their current activity so I
+think uh this uh nice Google products
+such as I Google and Google mobile and
+Google Desktop they provide a great
+platform for me to uh to explore this
+research
+agenda so another research area I have
+worked on back the tabs
+so planning
+vacation so are these tabs based on
+activity is that the idea uh so actually
+that's a good question so I I think so
+IG Google can already do something so we
+can already do some activity based stuff
+with IG Google so it's like each tab
+actually I I studied I Google so you
+each tab here is like uh job search
+family visit and planning vacation it's
+like each tab is already like uh a
+container of uh activity right so we can
+add some relevant gadgets to that tab so
+yeah so iig Google already has an the
+nice feature of this so I think it's
+really a nice platform to work
+on um another area I have intensively
+worked on is a pen based user interfaces
+so I have worked on uh problems such as
+gesture recognition y paring and Pen
+based mode switching so that's one uh
+example interactive
+motion at this point I would like to
+thank my advisor James Landy uh as well
+as my collaborators on this
+work thanks very much and I can take
+[Applause]
+questions question
+I so as you move you had the example of
+uh designing for designers and designing
+for end users and you have that example
+of deploying the some you know the
+gadgets to the Enders what what do you
+have to do to make that transition from
+one group of people designers to to end
+users is there a big difference or uh so
+like designers
+smarter so uh the assumption is that
+Designer designer ERS uh have no uh so
+designers have more uh expertise right
+so uh so for any users uh uh we
+certainly need to provide higher level
+support for them right so I think
+for
+uh so my work has been focused on uh to
+support for designers
+so with these tools we can know the
+domain better so as we know the domain
+better uh we can provide uh better tool
+support for any users so I'm not sure I
+answer question uh yeah so so it's like
+uh the first set of tools for designers
+is more open-ended in general and then
+exact exactly so uh tools for designers
+uh so tools for any users normally the
+environment should be
+uh uh there should be most St
+has been instrumented right so we can
+only support end users to customize
+interaction behaviors in a small uh in a
+smaller range right for designers it's
+like everything is from is from scratch
+so it's like white paper then I draw my
+design uh so these tools allow designers
+to explore a larger space uh so I think
+that's a one of the difference uh
+between tools to for designers and the
+tools for and
+users um you mentioned the Wizard of Oz
+model for um taking the application out
+into the field and observing the users
+on on the phone or the device or
+whatever it is that you're you're
+looking at the experience is there
+logging going on or somehow just capture
+the screen so you can see what the users
+exactly
+so all right let me um
+uh it's kind of slow but I can answer
+question at the same time
+so all
+right
+jeez
+so we can actually record and replay a
+test right so uh when we re replay the
+test and we can observe how uh uh how
+much time a user spend on each screen
+and then we can even uh so uh the twool
+can also show the trail the the user has
+walked and uh we can also uh analyze the
+storyboard transition and uh so yeah so
+it's a uh the entire test is uh recorded
+and we can re replay the test
+yeah any other questions yeah so in the
+beginning of the presentation you
+mentioned that you know when you were
+designing for ubom you usually need to
+design very sophisticated systems I'm
+just curious like uh whether it's the
+sophisticated systems or whether it's
+more about repurposing the existing
+systems to work in a new context I mean
+a simple example is like you know many
+times when we talk about like super
+highend technology is like you know uh
+very high very high density say storage
+devices stuff like that so like 8 gig
+capacity in a very small flash drive
+versus like you know even a 32 MB
+outdated flash drive might serve the
+purpose in the new context so I'm just
+trying to figure out like you know
+whether it's more about making use of
+the existing systems in a new context
+versus trying to develop like super high
+five systems from scratch and what's
+your perspective on like this I'm just
+curious
+uh so for this uh uh I think your
+question is uh uh whether we want to uh
+design uh entire new system from scratch
+or we want to enhance uh yeah existing
+systems yeah essentially like you know
+what I'm trying to understand is when
+you're trying to design for ubitus
+computing uh should you directly go for
+like you know developing highly complex
+systems from scratch versus trying to
+analyze okay what are the needs that I
+trying to serve first and then seeing
+like you know are there enough existing
+Technologies which can somehow support
+because different technologies have like
+you know different Curves in terms of
+how much sophistication they need right
+so that's a good question so I think as
+a first first step you always want to
+understand the existing Technologies and
+existing activities right so then you
+identify what are the breakdowns in the
+existing activities with existing uh
+Technologies right
+so uh once we understand that uh then
+the next thing is we want to come up
+some we want to come up with some new
+designs to address those problems so
+with these tools you can create the
+markups for the new systems uh you are
+thinking about then you test the new
+designs with a uh with users to get
+feedback uh then the next step is uh how
+can we realize uh the new design idea in
+the actual settings right it could be
+just the a simple extension of the
+existing systems or it could be uh it
+could require us to redesign rebuild the
+whole thing so these tools they provide
+a way for people to figure that out
+right I mean that's that's actually one
+of the reasons why I like it so much
+because uh if you look at it from the
+point of view of say
+databases it's not a very complicated
+database per se it's it's a pretty
+primitive I don't want to like you know
+say that you know it's but it's
+relatively primitive in terms of the
+code database functionalities but the
+way you have repurposed it in the
+context of the problem that we are
+trying to solve I think that's really
+brilliant right so I mean thanks for
+your comments first I so I think the
+good thing here is so I mean the key
+thing here is uh uh we want to develop
+tools that really uh serve for the
+purpose right even very uh I mean even
+the two is a f fantastic for one purpose
+it's it's not necessarily the right
+thing for another purpose right so uh it
+has to be appropriate for the goal you
+you want to achieve yeah this one last
+thing I mean uh have you actually
+thought about uh sort of scalability of
+these tools in terms of say uh initially
+if I say develop a gadget I me
+especially the IG Google Gadget When you
+mention it's like IG Google Gadget has
+the capacity to be deployed or I don't
+know maybe a couple of million people
+can use it if you have enough adoption
+so have you thought about like how this
+uh sort of rapid prototyping tool can
+scale and and in a way it goes back to
+what the point which you making earlier
+yeah that's definitely a good question
+so I think one uh isue these two suffer
+is definitely scalability right so the
+uh the main purpose of these twos is uh
+is to create a mockup right to figure
+out design space to understand what you
+want to design with for the IG Google
+thing that's something I I so basically
+in terms of scalability activity
+designer is much better than opary and
+uh you can you can really create a lot
+of realistic stuff with a activity
+designer but for that future work I
+proposed uh tools for any users to
+create to create Google gadgets on that
+part I intend to create uh some new tool
+support right like uh even higher level
+tool support for end users to easily
+create the final stuff that's something
+final it's not just the markup so
+yeah scills as well as gadgets yeah
+exactly which
+is
+okay thanks well I guess that's it thank
+you very much thanks thanks very much
+[Applause]

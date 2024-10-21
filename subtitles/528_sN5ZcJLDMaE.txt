@@ -1,0 +1,203 @@
+hey guys in this video let's talk about
+Ensemble learning methods we'll cover
+three common types of Ensemble begging
+boosting and stacking here are some
+interview questions what is Ensemble
+learning what are the examples of
+Ensemble learning what are boosting and
+bagging what are the advantages of
+backing and boosting what are the
+differences between back-end boosting
+why boosting models are good explain
+stacking as you can tell being able to
+answer these interview questions
+requires you to have a clear
+understanding of different Ensemble
+learning methods so in this video we'll
+go over all of them and let's start with
+understanding what is Ensemble the idea
+behind Ensemble method is pretty simple
+is that a group of weak Learners can
+come together to form a strong learner
+and the strong learner will have better
+predictive performance than could be
+obtained from any of the base Learners
+alone if one base learner is erroneous
+it can be auto corrected by others so
+the final model is typically less prone
+to overfeeding and more robust it's
+unlikely to be influenced by small
+changes in the training data here's a
+diagram showing the concept of Ensemble
+for classification tasks we start with
+the training set then we build
+classification models based on this
+training set we have m models in total
+C1 C2 to CM and then each model has its
+own predictions and then we look at all
+these predictions and we use voting to
+Output the final prediction voting means
+that we select the most frequent results
+across all these predictions
+now we know the general idea of Ensemble
+let's look at one Ensemble learning
+method begging bagging is short for
+bootstrap aggregation it builds several
+instances of an estimator on bootstrap
+samples of the original training data
+and then aggregate their individual
+predictions to form a final prediction
+here's a diagram showing how it works
+the first step is to create bootstrap
+samples simply with replacement from the
+training data here we have amp bootstrap
+samples from T1 to TM the reason we
+create bootstrap samples is that we want
+to ensure each sample is independent
+from others as it does not depend on
+previous student samples when creating
+bootstrap samples then we use a single
+learning algorithm to build a model
+using each bootstrap sample these models
+can be built in parallel as you can see
+we have C1 C2 to CM M classification
+models in total then we use mobile
+models to make predictions and the
+predictions are combined using voting or
+averaging this diagram shows backing for
+classification tasks so it's using the
+voting method voting means that the most
+frequent result will be the final
+prediction and averaging for regression
+tasks means that we want to take the
+average of all these predictions to be
+the final prediction of the model an
+example algorithm leveraging the back
+investor is random Forest here's how it
+works random Forest combine a set of
+decision trees to make predictions
+the symmetries are good candidates for
+bagging because they can capture
+complicated interactions in the data and
+it grows sufficiently deep they have
+relatively no bias because trees can be
+noisy that benefit greatly from the
+voting or average method to get the
+final prediction from a bias versus
+three dollar point of view random virus
+starts with low bias and high variance
+because its tree is fully grown and
+decision trees tend to overfit and then
+the random forests work towards reducing
+variance by taking majority vote or
+averaging across trees all right now
+let's move forward to boosting boosting
+improves the prediction Power by
+training weak Learners sequentially each
+compensating the weaknesses of its
+predecessors let me explain what this
+means both things start with a weak
+learner gradually turned it in a strong
+learner by letting future weak Learners
+focus on correcting mistakes made by
+previous learners for example in
+classification tasks misclassified
+examples get a higher weight than
+examples that are classified correctly
+so future Learners focus more on
+examples that previous Learners
+misclassified so essentially we are
+making the weak learner more complicated
+and this process will help reduce the
+bias of the weak learner here's a
+diagram showing how it works
+both things start with a weak learner
+better than random gas you can see that
+in the first iteration some examples are
+classified correctly and some are not in
+the next iteration the weight of the
+data are readjusted so that they can be
+corrected
+boosting assigns higher weights to those
+that were classified incorrectly and the
+lower weight to those that were
+classified correctly
+this sequential process of giving higher
+weights to misclassified predictions
+continues until a stopping Criterion is
+reached and the final prediction is the
+weighted result of all weak Learners one
+probably example of boost investors is
+gradient boosted trees gradient boosted
+trees trendy series sequentially it
+optimizes the residual loss of the tree
+by adding another tree it appears to art
+form backing on lots of problems and
+become the Preferred Choice from a
+biased variance Trader point of view
+gradient boosted trees start with high
+bias and no balance because the first
+three is shallow it's slightly better
+than random gas and then they work
+towards reducing bias by making the tree
+more complicated now let's summarize the
+differences between these two Ensemble
+learning methods backing and boosting in
+bagging individual Learners are trained
+independently they can be built in
+parallel versus in boosting individual
+Learners are dependent on each other
+other remember that a new learner is
+created to correct mistakes of the
+previous learner so the process is
+sequential from a bias variance
+perspective begging reduces variance of
+individual Learners while boosting
+reduces bias by making individual
+Learners more complicated because of
+this packing Masters work best with
+strong and complex models for example
+fully developed decision trees while
+boosting methods usually work best with
+weak models for example shallow design
+trees a good example of bagging is
+random forest and example of boosting is
+a gradient boosted trees finally let's
+look at stacking another Ensemble
+learning method which is the last
+frequently appears in interviews then
+back-end boosting the idea of stacking
+is to build a metal model that takes
+output of Base Learners as inputs it
+combines estimators to reduce their
+biases it can be applied to
+classification and regression tasks
+similar to backend boosting here's a
+diagram of stacking and we can consider
+it as two level Ensemble method in the
+first level individual estimators are
+created based on the training data
+here's a diagram showing how it works we
+can consider stacking as two level
+Ensemble learning in the first level
+individual estimators are created using
+the training data and then a combiner
+estimator of meta learner is created to
+fit to the level 1 estimator predictions
+to make the final prediction for example
+a static model for classification tasks
+can look like this the individual
+classifiers are random forest and
+support Vector machines and then we have
+a meta learner or stacking classifier
+which is logistic regression to make the
+final prediction based on the output of
+individual classifiers the stack method
+has some pros and cons
+in practice a stacking predictor
+predicts as good as the best predictor
+of the base layer and sometimes
+outperforms it by combining the
+different strengths of these predictors
+but training a stacking predictor is
+computationally expensive

@@ -1,0 +1,770 @@
+thank you so much and it's absolutely
+fantastic to be here I mean the first
+thing I have to say is that you live in
+an amazing place I mean it's really
+really beautiful and and if they kick me
+out of the UK because I'm Italian we
+brag say I might actually move here so
+justjust I seriously consider it if
+proxy ever happens we don't know so I
+just wanted to say a few things so first
+of all this is I work on ethical AI so I
+think this is a massive buzzword I mean
+everybody's talking about it and the key
+thing is we don't know what that really
+means and and I just wanted to try and
+discuss it we do because because I think
+you are playing a key role in this and
+what we've seen happening over the last
+few weeks at Google is absolutely
+fantastic so I just want to start with
+this so did you see what happened with
+Google when they set up their ethics
+advisory board so they set it off and
+great but what they did is that they put
+somebody on their board who is coming
+from the Heritage Foundation which is a
+very climate change denial organization
+very sort of right-wing but apart from
+that what is really really important I
+think is that the people working on
+Google they signed a letter and they
+said we're not happy with it yeah and
+that's what many people across the world
+to people like me work in empowering
+especially women that have come to that
+we call engineering activism which is
+the fact word when it comes to machine
+learning when he comes to creating
+things which are rather transformative
+because they transformed the way we are
+the women they make decision the way the
+organization's operate it has to be done
+in a proper way whereby controls in
+place and with with a very strategy and
+a lot of people working in the sector
+they're starting to say have they
+wanting to have a say and what happened
+to Google over the last few weeks has
+been in
+because then Google said well we have to
+go back to square one now whether the
+decision of doing that board in that way
+or not was the right one will come to
+that but what matters is that across the
+world what we are seeing is that people
+like you working day-in day-out at the
+cutting edge and really the full front
+of change you are starting to make the
+difference and and really shaping up the
+debate about ethics
+so everybody's talking about ethics
+right now I mean it's really strange
+because I go to like so many events so
+go to like European Commission British
+Parliament at the UN and even that
+recently there you Oct and everybody
+wanted to talk about ethics and there is
+problem with that which is that we need
+to define what ethics is in the first
+place so I want to talk about it I also
+run an organization called women lady in
+artificial intelligence we set up in
+2018 and the reason why we did is that
+the word not enough women not just
+enough women in coated enough women in
+machine learning in official
+intelligence but not enough women
+shaping their debate around it where is
+this going
+what is it's not just about fixing
+algorithms when it comes to bias and
+fairness but it's also the step behind
+before that which is what is this for
+and so we set up these organizations
+with turnover one day I wrote an article
+in The Guardian I was like I'm really
+tired you know there's like who is
+shaving this debate and within two hours
+have received hundreds of messages
+coming from everywhere in the world from
+Australia to Sweden the u.s. the Brazil
+and we set up this organization and
+we've recently launched a manifesto
+called ten principle for ethical Adi and
+we launched it into the British
+Parliament and at the Council of Europe
+conference on AI
+and it's and it's it's going really well
+but but yeah politician don't so seem to
+to to yet understand what we're really
+talking about but I'll come to that so
+quickly this is what I'm going to talk
+about why it matters the key issues
+around privacy and ethics where I would
+like to see the machine learning
+community as it was said before the
+machine learning community is about
+doing the right thing and this is
+where I would like you lead in the way
+not just here in Sweden but everywhere I
+just want to tell like what the key
+issues are on the privacy and ethics
+side and then what possible solutions
+and regulations of artificial
+intelligence system so I'm gonna start
+one thing 2018 last year was a
+breakthrough so what happened last year
+we had came me to analytical what
+happened last year we had the first
+victim of a driverless car what happened
+last year's red Amazon almost we didn't
+in the end but release the software for
+recruitment purposes there was only
+picking up female Seavey's male civvies
+I wish male civvies Freudian slip and so
+2018 was a rather big year and what they
+did was so showing to us was that
+unregulated and I don't mean heavy
+regulation I mean agile regulation and
+regulated and accountable AI and
+unregulated and accountable use of big
+data is really a khalid for very
+dangerous things and this is what
+happened in 2018 so what we are talking
+about when we talk about ethics my
+background is in in the privacy law but
+what we're talking about ethics at the
+moment we're talking about it because
+big things are arising in including for
+example bias and unfairness in
+algorithms we've seen for example in the
+u.s. what will happen with compass we've
+seen in in Google stay now if you type
+that you're looking for and professional
+haircut or whatever cut or what you get
+is the pictures of black women what we
+are seeing is is Facebook just recently
+it was demonstrated that 85% of highly
+paid job roles were only advertised to
+men so what we've seen is bias but we're
+also seeing is
+and accountable decisions made around
+human beings and access to housing
+access to education and and access to
+things that could be life-changing
+many many local government has
+organizations in the UK for example I'm
+sure this is happening everywhere in the
+world without people knowing they are
+deploying artificial intelligence for
+decisions they're often unaccountable
+and very difficult for people to appeal
+in the use in the u.s. this is happening
+all across the country and there's also
+been named as automation of inequality
+because so many people find it difficult
+to appeal to decisions for example about
+access to credit in relation to
+creditworthiness or housing decisions or
+awarding for example of tax credits and
+they find it very difficult to appeal
+therefore leading to what is called
+ornament automation of inequality the
+problem with the ethic debate is that we
+are talking about it and we're not
+translating that into practice and this
+is where your role comes in so what we
+are is happening at the moment is
+everybody's talking about it we're fully
+falling in the sort of echo chamber well
+we're all saying how important it is to
+do the right thing but we're not really
+putting that into practice and then we
+are having the big question which is
+should we regulate artificial
+intelligence is there something that
+read to be regulated and it's it's I
+always worry a little bit when Mark
+Zuckerberg comes around and say we need
+regulation because I think why you
+saying that you know we have regulation
+it's called general data protection like
+the regulation may not be enough may not
+be enough but the key issue is do we
+regulate it
+do we need codes of ethics do we need
+for example certificate or fairness do
+we need for example to leverage article
+42 of the general data protection
+regulation and encourage country to set
+up both to organizations to for example
+certificate issued to kite marks or
+trust marks to make sure that people can
+trust the decisions or products or that
+our this in particular decisions they're
+made by machine learning and then the
+other big thing which is around the
+rethinking the concept of privacy I mean
+we live in a world where our data is
+collected as you know all the time
+whatever we do because we have a
+smartphone or because we're live in a
+connected home or because we take public
+transport at every single time our data
+is collected and there is one huge
+problem here which is the key concept of
+data privacy when I went into law is
+data minimization but our dreams they
+need data so there is a conundrum here
+there is big data and they one end and
+data minimization on the other end we
+are at a moment in our society where we
+do need to redefine the concept of
+privacy and some people are saying how
+do we redefine it howie's are they how
+do we live as data citizen in the world
+that we live in and there are some
+people were talking about how do we
+rethink in privacy in the Arabic tech
+and for example I'm somebody who
+advocates for group privacy rather than
+mainly focusing on individual privacy so
+we know what that have just been saying
+that data is collected every time the
+products I worked with organizations and
+deploy machine learning for all across
+sectors it could particularly one of my
+key focuses at the moment because of the
+ethical implications of it is is around
+the real-time bidding processing and and
+and and dynamic pricing because I'm
+passionate about it because it's where I
+think ethically I becomes particularly
+important and sectors as I said that
+everywhere the company I work for we
+started in the energy sector so we do a
+lot of work around use of artificial
+intelligence in energy and how that can
+you form make bestest better decision
+not just in terms of pricing but in
+terms of of distribution of energy
+across the grid so what we said is what
+are the key things around they've
+changed and they make ethics complex in
+the in machine learning so the key
+things is round as we said they show up
+data the problem is that they they use
+Irby data which is recent
+changed the the landscape is around
+there's got different characteristic
+from before so the first one is a to
+persistence it's probably the reason why
+I say to my children especially to my 14
+year old going to first parties I say -
+don't ever put a photo of yourself drunk
+at a party on Facebook because ten years
+down the line when you're out looking
+for your first job your employer might
+be looking at that photo and decide the
+guys giving you a job
+the problem with data that we're feeling
+right now these data persistence so the
+fact that once data is out there and you
+know that is there to stay and people
+say in very wrongly people say that data
+is in your oil well is not because once
+you you you've used the oil it's used
+with data you can use it over and over
+again you can repurpose it you can and
+once is there is there to stay there the
+problem we have is about accuracy how do
+you ensure accuracy all throughout the
+process in your systems and how do you
+make sure the data that I provide now
+that you may be using five years down
+the line is still accurate and reflects
+me as the data subject and then the
+issue about transparency and we'll come
+into that because this is where I really
+need your help
+it's transparency which is about the
+trade-off between the explained ability
+concept and the and the efficiency of
+the system that you are creating and
+then of course we mentioned bias and
+then we mentioned security so persistent
+we spoke about it so there is really
+about the fact that data is here to stay
+accuracy now the problem that we have
+with data right now is called inferences
+the problem we have is that you can
+understand things about me and very same
+city things about me from data which is
+no sensitive at all for example
+organizations in financial sectors and
+especially a new fantastic tech
+organizations companies working in the
+financial sector they're working on
+credit worthiness and the fact and this
+is great and this is fantastic because
+you can assess credit worthiness when
+individuals that don't have the
+traditional conditions to
+as product so for example a young couple
+that doesn't have a background they've
+in in and and and paid jobs or in in the
+past you know they can access credit
+because they can demonstrate
+creditworthiness in other ways but this
+could also be very dangerous because you
+were are the consequences of first of
+all assessing what creditworthiness is
+but second were are the consequences of
+using for example data coming from
+social media to understand where the
+somebody can access credit or not
+because they are considered by some
+Authority
+to be able to to repay their loans so
+there is a very deep ethical issues of
+our ethical issues about that and those
+so for example from non sensitive data
+at all we are now able for example to
+understand whether somebody is entering
+a manic state whether somebody's likely
+to commit suicide and this is happening
+all across Facebook and all across
+social media and the problem is what you
+do with this information if you use this
+information for way which is considered
+ethical that is fine but what happens if
+we take this reasoning was there one
+step forward and what happens if you can
+identify people who are likely to commit
+suicide or I've just on three day
+messaging on Facebook and not just what
+what they've typed but what they have
+typed and they haven't posted because
+they've deleted well if we are able to
+understand from those information as
+somebody has just entered a manic state
+and what happens if for example we start
+targeting them with messages around a
+trip to Las Vegas because we know the
+somebody was just entered the manic
+state is more likely to spend money so
+why am i mentioning all of this because
+the ethical consequences around being
+able to extrapolate data which is very
+sensitive from information that is not
+sensitive at all it's quite dramatic and
+this is another big issue that we are
+facing at the moment and this is
+companies that work in a digital
+advertising sector they particularly me
+to be aware about this what do you do
+about in fair data and we're having a
+massive debate in a legal community at
+the moment around how far we can go in
+defining infer data as personal data
+because the RAC contradictive opinions
+in different courts about it the other
+thing is when you develop your systems I
+want you to be able to buy to
+understandable biases and this is where
+there is a lot of confusions bias is not
+a bad thing in itself
+the problem is when bias becomes
+stereotyped and when the stereotype
+becomes entrenched and becomes
+prejudiced and this is the race that
+we're facing
+when machine learning artificial
+intelligence because we are scaling up
+all this a completely taking it to
+another level
+I want to give you an example if you use
+and develop a facial intelligence
+software tied into using it in in HR and
+so many composite companies I know they
+use artificial intelligence in human
+resources to identify who is the best
+candidate for a job but what happens
+when you come to when it comes to
+defining good candidate good candidate
+what happens if you say good is somebody
+who comes to work every time at 8
+o'clock fair enough but what happens if
+your office is near the Eiffel Tower in
+Paris or in the Fifth Avenue man Adam
+boys going to be able to live nearby to
+be able to come to the office at 8
+o'clock a single mom with two kids
+no you're introducing bias by default
+what happens if you want to understand
+who is more likely to carry a knife you
+look at the sampling data that you have
+where is this data coming from is a
+sample but this data is historic data
+and black people are much more likely to
+be stopped and searched in the street
+you're introducing bias bias comes in
+from bias data obviously garbage in
+garbage out and you know that
+better than me but is not about just
+about buyers data it's also about the
+ability of you when you produce a system
+when you create one to see where could
+the buyers come from if I use class
+labels if I use a specific variable am i
+introducing bias without a noticing
+without knowing that if for example I
+use a postcode and a postcode becomes
+particularly relevant in the parameters
+that I'm setting am i introducing bias
+for example is that a postcode we're
+particularly wealthy people live these
+are all thinking or conversations that
+you need to have and when they work with
+organisations I always say to them have
+you thought about all this is your
+workforce diverse enough so that you can
+understand all these issues because the
+bias and the potential stereotypes that
+I can come up from with are very
+different from what somebody else might
+come up with this is why a diverse
+workforce is very important but it's not
+just that I always say to organizations
+what is the governance that you have in
+place are you doing something which is
+like a first or second or third line of
+defense to complicate it no it's not
+because you are the code is with the
+programmers yeah you come up with
+something but then you work with
+organization so you introduce machine
+learning in your own organizations and
+you have to think about all this but you
+can't bear the responsibility on your
+shoulder all of it there has to be an
+organizational divert it's a strategy
+who is involved with this and also is
+somebody else involved with this are
+citizens involved if for example they
+involves giving a loan or if there
+involves dynamic pricing or if they
+involves something which is so crucial
+to people life how much they spend where
+do they get access or not - alone on
+whether they see an advert or not which
+trust me is a major thing a new
+developing this system who is involved
+in these decisions was involved in
+thinking is they going to be biased or
+not and my acciden
+Teli fallen into this trap am i
+accidentally going to serve a particular
+ad only to specific people without even
+realizing it these are all very
+important conversations that we need to
+have now the gdpr is unhelpful one the
+GDP a helpful and unhelpful the GDP si
+si is an article which is article 22 and
+the GDP are says individuals have a
+right to access a minimum meaningful
+information where a decision about them
+is made yeah doesn't mean anything to
+say what does it mean meaningful
+information who knows there would be for
+a court to decide but you are
+programming this thing right so you have
+to be able to work with organizations
+that deploying it or your own
+organizations deploying it they have to
+comply with this legislation ok article
+22 says that the human in the loop
+basically saying you know an individual
+has the right to say I want my decision
+to be reviewed by a human but also but
+also it says an article 71 is a recital
+71 it says explain the ability another
+word that I told I have to say it is
+like because I don't really know what it
+means and I'll tell you why I don't know
+what it means because I don't want to
+know how an airplane works last night I
+went to the Norwegian allies I go on the
+plane I just want to know that somebody
+has checked at the airplane if it to fly
+I'm not expected to know exactly how the
+engine works and all that but when you
+are out there when you create your
+systems then organizations may say to
+you well how do I comply with the gdpr
+so that's where the governance is
+important how are you going to ensure a
+degree of accountability and
+transparency where are you deciding that
+the Cuttino fee is a trade-off is
+between explain ability and efficiency
+this is a strategy this that
+organization has to make where is the
+risk appetite
+how does it match with the company
+values but that has to be clear you need
+to be able to say that you need to be
+able to say this is how individuals can
+access information about me but about
+them do you know what the consumer
+directive at European level is currently
+been updated do you know why because we
+dynamic pricing we all get a different
+price than we online and loads of I mean
+I have all my friends I'm doing dynamic
+pricing and machine learning but the
+problem is that this directive correctly
+is saying individuals when they offer to
+prize based on their availability to
+spend their browsing history and then
+they tame whatever they need to be told
+there and then that that price is not a
+fixed price but it's the result of
+dynamic pricing consumer rights how are
+you going to explain that when you build
+your system how are you going to make
+sure that your client if you sell it or
+if you're developing in-house if
+somebody says to you I want to know how
+you've come to that decision how do you
+explain it and this is very important
+quickly check what the European Union
+the group on ethical guidelines trust
+worth the a I know Sophie's ethically I
+trust worth the a I could be a finally
+possible word to say exactly the same
+thing to say that privacy and ethics by
+design is what we're looking at I would
+highly recommend to look at that
+document it came out yesterday and he
+also includes a call to action which is
+the reason AAA which is an algorithm
+impact assessment in their test it and
+let them know what you think tester
+telling me see if he's easy and agile
+enough for you on the scientific side
+and the technical side to do it as much
+as is for us we'll see on the legal side
+to send on the ethical side and on the
+philosophical debate to say that you
+have to do it do it yourself try it
+algorithmic impact assessment some
+people say oh we've got a data
+protection impact assess and merge it do
+it together
+nobody's stopping you to merge the two
+and nobody's saying to you that you
+can't use one fantastic element of the
+data privacy impact assessment which
+nobody uses is which is privacy by
+negotiation which means can you involve
+the public in this can you share what
+are the values in the pinning where
+you're doing security the source is a
+bias we went through which is what I was
+talking about the proxy is the
+intentional or non-intentional
+discrimination and this is the last
+thing I wanted to talk to you about you
+are doing something very important and
+you are defined in how the future is
+going to be but I over worry at the
+moment to the worry I have is that we
+are all talking about fixing an
+algorithm and I indeed have spent much
+of my presentation talking about how to
+fix an algorithm which is about the bias
+the algorithmic impact assessment
+privacy Latics by design
+governance how is the organization going
+to roll out to to roll machine learning
+applications but there is one thing I do
+fear that everybody's talking about
+ethics as a smokescreen I do feel that
+everybody's talking about ethics but I
+have to fix an algorithm without asking
+the main question which is what is this
+for in the first place so can we all
+agree the artificial intelligence is
+there to augment our capabilities to
+work alongside us not replace us to
+enhance our humanity not to diss Manish
+it and can you as the AI machine
+learning community pledge to this and if
+you see something that doesn't feel
+right at all if you feel that you've
+worked on something but it's being used
+for the wrong thing say it
+do like Google have done do like Amazon
+have done the employees where they've
+said you have this facial recognition
+program recognition but he fails to
+recognize black women
+selling it I do argue the mushy Lenin
+can be potentially enormous Lee
+transformative but the problem is that
+those defining the ethics are the ones
+defining the trajectory and what a eyes
+needs to be useful but this is a debate
+and needs to involve the whole community
+and I really hope that you from here in
+Gothenburg alongside many others in
+London in the u.s. in Brazil everywhere
+in the world you the ones were actually
+there doing it you can embrace this
+global engineering awareness that is
+growing and say we're gonna do it for
+the right thing and if it's not for the
+right thing we're actually going to say
+it out loud I hope I was able to
+stimulate a bit of a debate and thank
+you for listening three now we have some
+minutes for questions if anyone so I
+have a question
+great talk first of all I think this is
+a very important subject so it seems
+like the outfall out of Cambridge
+analytical was sort of a fair amount of
+collateral damage and also some well
+intended stuff that didn't really play
+out the way it should have maybe and I'm
+concerned about sort of the how broad
+the brushstrokes are sometimes and how
+able we are to be precise for example is
+it relevant really to spend millions to
+blur faces on random pedestrians in the
+countryside in Germany to build a
+self-driving car it seems like
+collateral damage in an attempt to stop
+other things so do you have any thoughts
+on how to be precise enough here to not
+have too many unintended consequences
+yeah it's true I mean what say your for
+example do you feel that we're going in
+so a direction which is
+please waste the time in terms of for
+example if you say if we have to or do
+you feel that we have to reframe this
+discussion it seems like gdpr has like
+it's God in all the lawyers really
+really afraid and confused and making a
+lot of things much harder than they
+maybe need to be in the wrong like it's
+hitting the wrong targets in a lot of
+cases but I also have to be I mean
+honestly I started being involved in
+privacy when I was about 16 because I
+went to the US as an exchange student
+and I found that the where cameras
+everywhere even in the toilet so the
+reason why I go involved into privacy
+was because of that but at the same time
+I can fear why 99% of people when you
+talk about these things would be like oh
+my god he's the privacy person because
+he can't get extremely boring can he and
+he couldn't get boring because as you
+say people seem to waste a lot of time
+discussing minor minor details
+so yesterday there was a one-er thority
+across the EU spending entire and hours
+of discussions around whether when CVS
+of applicants are collected whether you
+know whether they can be retained for a
+small time or whether they can be
+destroyed I mean it's fine but we're
+missing the point here aren't we and
+that that is and on that I agree with
+you but there is a key thing here though
+which is about who is making that
+decision in terms of I mean you have a
+community here and you say we are
+together because of the common good you
+know so we want to say we want to do the
+right thing but have you asked yourself
+what does right look like or what is the
+common good would defines it you know
+the problem with this is the same thing
+and what you were talking about what
+matters most is that the faces of those
+people or the right of to trial of a
+driverless car you know that driverless
+cars are great I mean I look forward to
+it
+if any I mean I don't drive so you know
+it's fine but the driverless cars car as
+long as I can steal cycle safely pissah
+but driverless cars can reduce pollution
+it can be extremely safe it's great
+who is making that decision that is more
+important to do that and and my fear is
+that because we live in a world where
+that all this stuff stems from the
+digital and the digital
+well this num is dominated by nine big
+corporations my fear is that the people
+making those decisions exactly those
+people and to be fair and and I fear for
+this a little bit because because then
+you know what's going to happen to all
+of us you know if any particular from a
+feminist I'm proudly consider myself a
+feminist you know well you know what has
+happened what happens from a feminist
+perspective so there's my fear you know
+and when you did you're right about Judy
+so remember just rambling but you know
+but I think you're right about Judy PR
+but what I'm saying is that it's always
+a trade-off isn't it and who is making
+their decision about what matters most
+that's the question I think there's a
+lady in the back we have oh there will
+be a mic well has there been any company
+that has you know like an example that
+you can give us to learn from on how to
+work with this absolutely sorry I
+mentioned that if you look at the
+ethical guidelines seconds give it a
+link I didn't have time to put it cause
+it came out yes so I was in the play so
+the the European Commission they just
+had a high-level group on artificial
+intelligence and they've issued a report
+which has an inside it an algorithmic
+impact assessment which is basically all
+the things I've been talking to you
+about and how to make sure they're
+embedded from did from from the start we
+all follow the same module because we're
+all part of the same group and also has
+a really nice great about how to create
+the right structure what is the
+responsibility of coders programmers
+versus procurement a charm and
+everything so if you follow that that is
+that it is really good I mean I work
+with organization this is exactly what I
+do you know setting up the governors and
+to look in a how to assess algorithms
+and I'll give you the link to my fortune
+you don't have any more time for
+questions but for anyone who is really
+interested in the ethical discussion
+there will be a panel later today so
+please please come to that ask
+and thank you Anna Anna for the
+wonderful talk
+thank you so much
+[Applause]

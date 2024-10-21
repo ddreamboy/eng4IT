@@ -1,0 +1,169 @@
+hello everyone welcome to this tutorial
+by simply learn in this video you will
+learn about an interesting machine
+learning topic that is supervised versus
+unsupervised versus reinforcement
+learning let's discuss each of them in
+detail and understand when to use these
+algorithms along with their applications
+now there are a number of algorithms
+used in the field of machine learning to
+solve complex problems
+each of these algorithms can be
+classified into a certain category so
+the different types of machine learning
+algorithms are supervised learning
+unsupervised learning and reinforcement
+learning now let's look at the
+definition of each of these learning
+techniques supervised learning uses
+labeled data to train machine learning
+models label data means that the output
+is already known to you the model just
+needs to map the inputs to the outputs
+an example of supervised learning can be
+to train a machine that identifies the
+image of an animal below you can see we
+have a trained model that identifies the
+picture of a cat unsupervised learning
+uses unlabelled data to train machines
+unlabeled data means there is no fixed
+output variable the model learns from
+the data discovers patterns and features
+in the data and Returns the output here
+is an example of an unsupervised
+learning technique that uses the images
+of vehicles to classify if it's a bus or
+a truck so the model learns by
+identifying the paths of a vehicle such
+as the length and width of the vehicle
+the front and rear end covers roof hoods
+the types of Wheels used Etc based on
+these features the model classifies if
+the vehicle is a bus or a
+truck reinforcement learning trains a
+machine to take suitable actions and
+maximize reward in a particular
+situation it uses an agent and an
+environment to produce actions and
+rewards the agent has a start and an end
+state but there might be different parts
+for reaching the end State like a maze
+in this learning technique there is no
+predefined target variable an example of
+reinforcement learning is to train a
+machine that can identify the shape of
+an object given a list of different
+objects such as square triangle
+rectangle or a circle in the example
+shown the model tries to predict the
+shape of the object which is a square
+here now let's look at the different
+machine learning algorithms that come
+under these learning techniques some of
+the commonly used supervised learning
+algorithms are linear regression
+logistic regression support Vector
+machines K nearest neighbors decision
+tree random forest and knife
+base examples of unsupervised learning
+algorithms are K means clustering
+hierarchical clustering DB scan
+principal component analysis and others
+choosing the right algorithm depends on
+the type of problem you're trying to
+solve some of the important
+reinforcement learning algorithms are
+are Q learning Monte Carlo sarsa and
+deep Q Network now let's look at the
+approach in which these machine learning
+techniques
+work so supervised learning takes
+labeled inputs and Maps it to known
+outputs which means you already know the
+target
+variable unsupervised learning finds
+patterns and understands the trends in
+the data to discover the output so the
+model tries to label the data based on
+the features of the input
+data while reinforcement learning
+follows trial and error method to get
+the desired solution after accomplishing
+a task the agent receives an award an
+example could be to train a dog to catch
+the ball if the dog learns to catch a
+ball you give it a reward such as a
+biscuit now let's discuss the training
+process for each of these learning
+methods so supervised learning methods
+need external supervision to train
+machine learning models and hence the
+name supervised they need guidance and
+additional information to return the
+result unsupervised learning techniques
+do not need any supervision to train
+models they learn on their own and
+predict the output similarly
+reinforcement learning methods do not
+need any supervision to train machine
+learning models and with that let's
+focus on the types of problems that can
+be solved using these three types of
+machine learning techniques so
+supervised learning is generally used
+for classification and regression
+problems we'll see the examples in the
+next SL
+slide and unsupervised learning is used
+for clustering and Association problems
+while reinforcement learning is reward
+based so for every task or for every
+step completed there will be a reward
+received by the agent and if the task is
+not achieved correctly there will be
+some penalty
+used now let's look at a few
+applications of supervised unsupervised
+and reinforcement
+learning as we saw earlier supervised
+learning learning are used to solve
+classification and regression problems
+for example You can predict the weather
+for a particular day based on humidity
+precipitation wind speed and pressure
+values you can use supervised learning
+algorithms to forecast sales for the
+next month or the next quarter for
+different products similarly you can use
+it for stock price analysis or
+identifying if a cancer cell is
+malignant or
+benign now talking about the
+applications of unsupervised learning we
+have customer segmentation so based on
+customer Behavior likes dislikes and
+interests you can segment and cluster
+similar customers into a group another
+example where unsupervised learning
+algorithms are used as customer churn
+analysis now let's see what applications
+we have in reinforcement learning so
+reinforcement learning algorithms are
+widely used in the gaming Industries to
+build games it is also used to train
+robots to perform human
+tasks and with that we have come to the
+end of this video on supervised vers
+vers unsupervised versus reinforcement
+learning I hope you like this video If
+you enjoyed watching this video then
+please subscribe to the simply learn
+Channel and hit the Bell icon to never
+miss an update thank you for watching
+and keep
+learning hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos turn up and get certified click
+here

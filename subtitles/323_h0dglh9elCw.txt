@@ -1,0 +1,682 @@
+hi everyone today we will make a
+beautiful gooey application that can
+classify images of animals and vehicles
+I'll introduce you to a brand new
+open-source Library called tyi which
+will help us design a very stylish
+interface then we will combine it with
+taner flow to tackle all the machine
+learning stuff and yes you will see a
+detailed workflow of how to build your
+own neural network because on this
+channel we don't use AI we make AI so
+without any further Ado let's
+roll so let's unpack our plan for this
+tutorial the first step is designing an
+interface where users who know nothing
+of python can upload their own images
+and interact with our neural network
+then once our interface is complete we
+will create an image processing neural
+network and you don't need a fancy
+computer for that because it even works
+on my old broken laptop then lastly we
+will connect our neural network to our
+application we will of course test it
+with images from our personal Gallery so
+let's begin by downloading the starter
+files from my GitHub and the link is as
+usual in the description now inside our
+starter files you will find a logo a
+placeholder graphic a wireframe which is
+basically our plan for this project as
+well as a whole bunch of demo images to
+play with now in addition I've included
+two Jupiter node books that will show
+you how to design and train a basic
+neural network completely on your own
+then last but not least I even included
+a demo neural network in case you'd like
+to save some time and skip a bunch of
+steps great now first things first let's
+navigate to our terminal and let's
+create a brand new working environment
+with cond create dasn and in my case I'm
+going to call this environment ml EnV as
+in machine learning environment we will
+install python 3.11 in it let's give it
+a run and we'll then activate our
+environment with cond activate M lore
+EnV now once we are inside our
+environment we can then install taipi
+with Pip install tyi and once the
+installation is complete we will go
+ahead and copy the path to our starter
+files we will paste it inside our
+terminal following a CD command as in
+change directory beautiful now we can
+start coding for this we will open our
+IDE or in my case a code editor named
+brackets and let's quickly see how a
+basic typy interface Works starting with
+the Imports so from typi dogi we will
+import GUI with a capital G and we might
+as well save it as a python file we will
+call it classifier py beautiful then
+right below we will create a guey
+instance followed by an empty set of
+round brackets and we will assign it to
+a variable named app then WR below if
+name equals main we will then call app.
+run now a cool trick is to pass the _
+reloader argument into run and set it to
+true that way we will not need to rerun
+our app from the terminal every time we
+make little changes to our code so let's
+quickly save our file let's navigate to
+our terminal and let's run it with
+python classif fire. py which will open
+a browser window with an empty typi
+application on Port 5,000 of our local
+machine and as you may guess we are
+dealing with a web application so how
+exactly do we add elements to our window
+well first of all we will need a web
+page so right below our import we will
+create a new variable named index and we
+will assign it to a string with an HTML
+heading one element also known known as
+age one with the heading text of hello
+from python now once we have a web page
+we can then specify it inside our guey
+instance with page equals index great
+now let's save this file let's navigate
+to our browser let's refresh our page
+and beautiful here's our lovely heading
+now mind you we did not need to rerun
+our app from the terminal with python
+classifier ppy we simply clicked refresh
+and our changes were updated that's all
+thanks to this use reloader equals true
+argument yay now the cool thing about
+taipi is that it's not really limited to
+HTML only if we wanted to we can
+actually specify some markdown syntax
+instead so let's quickly get rid of
+those tags we will replace them with a
+hashtag and a space in front of the
+heading text if we save our file now
+let's refresh it and we get get the same
+result but the real purpose of typi is
+Way Beyond some HTML or markdown
+elements it is mainly focused on much
+more powerful control components that
+come with both front end and backend
+properties so let's see a quick example
+to show you what I mean so let's go
+ahead and revise our index string first
+by turning it into a multiliner with a
+set of triple quotes and inside those
+quotes we will create an image control
+component with a set of angle brackets
+followed by a set of vertical bars and
+inside them we will specify the type of
+image then in front of our type inside
+an additional set of vertical bars we
+will associate a python variable with
+our image and mind you we haven't
+defined this variable yet but we will do
+it right away now the way to specify
+variables with typi is in a set of curly
+brackets that contain the variable name
+in my case I'll call it image uncore
+path and then right above our index
+we'll go ahead and Define image uncore
+path and we will set it to a string of
+logo.png awesome let's quickly save this
+file let's navigate back to our browser
+window let's refresh it and boom here's
+our lovely lovely image now another cool
+thing we can do is styling our control
+components with python so let's quickly
+try to Center this image on the page and
+back in our code we'll simply wrap our
+image control component in an additional
+set of angle brackets that begin with an
+additional set of vertical bars and
+inside them we will specify the
+constraint of
+text- Center ha let's save this file and
+boom here's our lovely centered logo
+next we will need to choose a file from
+our system using the file selector
+control component for this we will
+quickly copy our image control and we
+will paste it right below then we will
+change the type of image to the type of
+file undor selector and we'll also
+change the associated variable from
+image path to content where content
+represents the file that we will upload
+in the future now to make sure that our
+application doesn't complain we will go
+ahead and create a placeholder variable
+of content and we will assign it to an
+empty string otherwise we'll get a bunch
+of warnings in our terminal now if we're
+already here we might as well add some
+instructions right beside our file
+selector to do so we will add some text
+and the way to add text in taii is
+simply by typing it so in my case select
+an image from your file system right
+easy peasy let's save it and let's
+refresh our web page and beautiful
+here's our new lovely components let's
+quickly click on this file selector
+let's then choose all files rather than
+costume files and let's select one of
+our demo images ha there you go our
+image was uploaded successfully given
+this lovely notification at the bottom
+now another thing you may notice is that
+our text and our file selector were
+placed on the exact same line while our
+image was placed on a separate line so
+let's see what's going on here now back
+in our code you will notice that after
+our image control we've added a line
+break while in between our text and our
+file selector there are no line breaks
+at all now the last two elements left on
+the wireframe is the image that we
+upload using our file selector as well
+as a temperature indicator where the
+indicator basically tells us how
+confident our model is every time it
+makes a guess so I am 80% confident that
+this is a cat and I'm 50 % confident
+that this is a ship and so on and so on
+so let's quickly implement it now we
+already know how to make images we'll
+just copy our previous one we will then
+paste it at the very bottom of the web
+page and actually let's quickly refactor
+it because our logo is not going to
+change so there's really no point you
+know in storing it in a variable
+variables vary our logo does not so on
+the top image we will replace the image
+path portion of the variable with a
+string of
+logo.png then for the bottom image
+because it is going to change every time
+we upload a new file we can just keep
+this image path variable on and we can
+set it initially to placeholder uncore
+image.png and then we will just update
+it as we go okay so first let's save it
+let's make sure we didn't mess anything
+up and beautiful now let's see how we
+can update it to update an element we
+would usually need a button that is
+attached to some kind of callback
+function but with tyi we can actually
+use an alternative it is called the on
+change function and just as it sounds it
+is activated By changes in the state of
+our software any kind of change
+uploading a new file is just one of them
+so let's quickly see how it works now
+right below our index page we will go
+ahead and Define our uncore change
+function which takes in a state a
+variable able name and a variable value
+so Al together three arguments without
+the typo now instead of explaining all
+of them let's just quickly print them
+that way we can see them with our own
+eyes so we'll print VAR name and write
+beside it VAR value now this time we
+don't really have a choice we will need
+to rerun our app from the terminal so
+let's go ahead and close our current
+server instance with contrl C we will
+press the up Arrow to fetch the most
+recent terminal command and we will
+execute it with enter and then inside
+our newest tab we will go ahead and
+select an image sorry guys once again we
+will have to select all files we're
+going to fix it right away okay and then
+as soon as we select a new image our
+unchange function will be automatically
+executed so as soon as we press open we
+can navigate back to our terminal where
+we see that the variable name is content
+and the variable value is the path to
+our image
+yay and then once content is no longer
+an empty string we can then go ahead and
+replace our placeholder image with the
+actual image we uploaded to do so we
+will go back to our code and first we
+will Implement a best practice technique
+where we first add a condition of if
+Vore name equals equals a string of
+content and only then we will update the
+image otherwise we don't want to do that
+so the way to update our image is with
+state. imore path which is the name of
+our variable from earlier and we will
+assign it to
+Vore value ha where state is
+automatically received by onchange and
+then image path was defined earlier and
+currently is set to placeholder unor
+image okay and then VAR value of course
+we just received it right over here
+that's the path to our image cool now
+before I forget we will need to fix our
+file extensions problems so at the end
+of our file selector component we will
+add another vertical bar and inside it
+we will specify the extensions property
+and we will set it to PNG if we now save
+everything and now hopefully when we
+press on the file select button yay we
+no longer need to manually select all
+files we can see our PNG images right
+away and then if we select one of them
+yay it is being updated on the page
+amazing now the last item in our
+wireframe is a temperature indicator so
+let's go ahead and addit before we move
+on with machine learning for this we
+will go ahead and copy our image control
+we will then paste it right below it
+will adjust the type of image to the
+type of indicator and we will also get
+rid of this image path variable we will
+replace it with for now some kind of
+placeholder let's say label goes here we
+will of course fix it very soon then to
+the very end of this component we will
+add the control property of value and we
+will set it to zero at least at first
+then we will add another control
+property called Min or minimum which we
+will set to zero as well then we will
+also set the max property to 100 because
+we're dealing with a percentage and we
+will not forget to add the vertical bar
+to the end of this expression otherwise
+it's not going to going to work cool now
+let's save it wow that's a big it's a
+very big indicator so let's make sure we
+restrict it to a nicer width back in our
+code we will simply add the width
+property and we will set it to um let's
+say 25 VW as in vertical width to make
+our app look extra crisp we will
+actually copy this width property we
+will also apply it on our logo there you
+go it will paste it here uh and that way
+everything will be extra proportion
+okay let's go ahead and refresh our app
+and holy smokes you guys our app looks
+amazing we can finally move on with the
+functionality of things also known as
+machine learning for this we have a
+bunch of requirements Beyond tyi which
+I've prepared in advance in this lovely
+requirements file so let's quickly
+install it with Pip install dasr
+requirements.txt and once the
+installation is complete we will open
+Jupiter notebook with Jupiter notebook
+and here you can choose between the very
+detailed neural network Builder that has
+everything you need to know to perform
+your own experiments so it's basically a
+step-by-step breakdown of all the neural
+network processes which I highly
+recommend for beginners but on my end
+I'm going to go for the quick Builder
+instead and I will explain it as we go
+it's the exact same code just a
+different level of detail now step one
+in designing neural networks is loading
+a data set which our network will study
+really really well in a process called
+training now in our case we are loading
+a data set named sear 10 directly from
+tensorflow but what kind of data are we
+dealing with well CFR 10 is made out of
+60,000 tiny colorful images that
+represent 10 classes of animals and
+vehicles each of our images comes with a
+label or y that represents the type of
+animal or vehicle we're dealing with now
+the images themselves are called samples
+or X and each of them is precisely 32
+pixels wide by 32 pixels tall now since
+we are dealing with colorful images each
+of them has three color channels the
+first one is red the second one is green
+and the last one is blue as in RGB now
+in addition we get 50,000 images to
+train with and we put 10,000 images
+aside for a process called testing where
+we evaluate how well our model trained
+by exposing it to images it has never
+seen before so we are basically checking
+if we did a bunch of learning or if we
+did a bunch of memorizing because
+there's a bit of a gap next we have a
+process of data reduction where we take
+a good look at our samples and labels
+and see if we can represent them a bit
+more efficiently in our case we used a
+technique called normalization on our
+samples where we take pixel values in
+the range of 0 to
+255 and convert them to values in the
+range of 0 and 1 that way our images
+look exactly the same but their values
+are much much smaller now in the case of
+our labels we used a technique called
+one Hut encoding to convert decimal
+values to their binary
+equivalents then finally we create our
+neural network based on the structure of
+our data and that's exactly why our
+input shape is 32x 32 pixels and three
+color channels deep that's also why the
+output of our network is 10 classes Long
+other than that you can pretty much
+customize everything else and you can
+find all the detailed instructions in
+rules in the other notebook and once we
+have a model we can then go ahead and
+train it on our training set where the
+number of epo represents the number of
+times our model will go over the entire
+data set you can of course change this
+number to anything you'd like just
+please remember that more is not
+necessarily better I will show you in
+future tutorials why now after our
+training is complete our model will then
+be automatically saved on our computer
+as Baseline docas but how do we know
+that our model is smart well right below
+please make sure that your training
+accuracy gradually grows with every
+Epoch while your training loss gradually
+reduces with every Epoch otherwise it
+means that something is wrong but if
+everything is fine we will then move on
+with testing where we end up with an
+accuracy score now this accuracy score
+represents how many of our test samples
+the 10,000 images that our network has
+never seen before so how many of those
+were correctly classified and generally
+speaking a good number is anywhere above
+65% if you can reach those numbers then
+congratulations you have just costomized
+your very own neural network we can now
+move on with combining it with our
+application now to make it work from
+tensorflow docas we will import models
+and then right below we will l the model
+we just trained with models. loore model
+to which we will pass our name in my
+case Baseline maria. caras lastly we
+will assign this expression to model now
+to use our model we will go ahead and
+Define a predictor image function that
+takes in a model as well as a path to
+image now initially let's just make sure
+that our model was properly loaded so
+let's go go ahead and print model.
+summary and an empty set of round
+brackets we might as well print the path
+to image just to be polite now let's
+quickly go ahead and call our predict
+image function inside the onchange event
+so at the end of our conditional
+statement we will type predictor image
+we will pass our model as well as VAR
+value let's quickly comment this uh
+print statement that we had from earlier
+because it's going to confuse us a bit
+let's navigate to our terminal and we
+will type python classifier py now let's
+load one of our images the usual suspect
+let's have a look in a terminal and yay
+here's our lovely model summary we have
+officially connected our machine
+learning elements with our graphic
+interface next we will need to convert
+this path into an actual image for this
+we will import a library called pillow
+with from pill import image with a
+capital I then inside predict image we
+will type image. open to which we will
+pass the path to image we will then
+assign this expression to
+IMG just so we don't get confused now
+because we might get images in all kinds
+of color formats let's make sure we
+convert all of them to RGB we can do
+this with IMG do convert to which we
+will pass a string of
+rgp we will then reassign it back to IMG
+now because our training images were all
+32 pixels by 32 pixels we will also need
+to resize our images with IMG do resize
+to which we will pass a tuple of 32x 32
+we then assign it back to image IMG but
+we cannot load it into our neural
+network just yet because we haven't
+normalized it our pixel values are still
+between 0 and 255 instead of 0 and 1 now
+let's see a clever trick of how we can
+fix it for this we will need npy so
+let's first import it with import NPI s
+NP then we will convert our image into a
+NPI array with np. as array to which we
+will pass IMG and we will then assign
+this expression to data because it is
+not an image anymore it is something
+called tensor now once our data is in a
+tensor form we can then go ahead and
+divide it by
+255 let's reassign it back to data and
+boom this is how we normalize our images
+now let's quickly print a before and
+after just to make sure we didn't mess
+anything up okay so before we'll print
+data in the index of zero followed by
+another index of zero that way we are
+basically printing the color of the very
+first pixel we'll do the same for the
+after okay we only care about one pixel
+we don't care about the entire image
+let's save everything um and actually
+before we run you know our app once
+again let's make sure that this image
+that we just manipulated is actually
+compatible with our Network for this we
+will type um model. predict and we will
+pass data into it okay we can then
+assign it to props as in probabilities
+let's save everything and let's select
+another image let's go for the one with
+white background let's open it let's
+look in our terminal and okay let's
+ignore this error we'll get back to it
+shortly and there you go pixel values of
+255 were successfully converted to
+values of one yay now let's tackle the
+nasty error okay it seems like we have
+some issues with the shape of our data
+in fact we are missing an entire
+Dimension now the reason why we got this
+error is because our model expects a
+very long list of samples not just one
+but 50,000 or 10,000 of them so let me
+show you how to trick our neural network
+to process a single image and it's a bit
+embarrassing I'm warning you in advance
+but it works so we will do it okay now
+instead of Simply specifying our data
+inside predict we will first wrap it in
+a list which we will wrap in a NPI array
+with np. array then lastly we will focus
+on all the items until the item at index
+one in this array and if you think that
+it's the same as specifying zero boy oh
+boy you'll be surprised okay now let's
+double check that we didn't mess
+anything up let's go ahead and print our
+entire list of probabilities with probs
+which is basically a list of 10 items
+one for each class and if we're already
+here we might as well print the top
+probability with probs do Max and an
+empty set of round brackets and also
+okay let's also print the class class to
+which this stop probability belongs
+we'll do it with np. ARG Max to which we
+will pass probs okay let's save it and
+let's give it a quick run now let's load
+one of our demo images let's go for this
+giant boat let's navigate to our
+terminal and there you go now probs
+Returns what we call a class membership
+probability so what are the chances that
+our image belongs to each class where
+this is the chance that our image is an
+airplane and this is the chance that our
+image is a car and so on and so on now
+the top probability represents how
+confident our model is that our image
+belongs to the class of eight in our
+case we are talking about 85% which is
+pretty confident but the only problem is
+the class of eight doesn't really mean a
+boat but if we navigate to our Jupiter
+notebook we can see that the digit 8
+represents the class of
+ship Bravo now let's make sure we
+display it on the interface rather than
+on the terminal so first we will copy
+our class names dictionary from our
+notebook and we will paste it at the
+very top of our code then inside our
+predict image function we can finally
+get rid of most of our print statements
+except the last two which we will turn
+into variables so problems. max turns
+into topor probe and then our argmax
+Command turns into topor PR as in
+prediction now since we are not really
+interested in the class number we are
+much more interested in the class name
+we will wrap our argmax Command in a set
+of square brackets and we will specify
+it as a key to our class names
+dictionary okay and that way the key of
+eight will return the value of ship hm
+now once we are done with our function
+we will go ahead and return both the top
+PR sorry top probe is first and the top
+PR which means that we will need to copy
+these two variables and we will unpack
+our function call into the exact same
+variable names and great we are
+officially done with predict image now
+we need to display those values on our
+guei for this we will need two new
+placeholder variables okay we will
+assign them right below our image path
+so the first VAR variable is probe and
+since it is a number we will assign it
+to zero and as you may guess the second
+one is PR which is a name so we will
+assign it to an empty string now since
+probe returns how confident our model is
+whenever it makes a guess we can safely
+specify it inside our temperature
+indicator first by replacing our label
+with the typi variable of probe and then
+we will do exactly the same with our
+value so instead of zero we will assign
+it to the variable of probe now in terms
+of the class name we'll display it right
+above our sample image inside a new text
+control which we will create with a set
+of angle bars then a set of vertical
+bars and inside them the variable of PR
+and great now the only thing left to do
+is updating those lovely typy variables
+inside our onchange function so at the
+very bottom of our function we will say
+state. probe which we will assign to
+topor probe but the only problem is when
+we look at our top probe we see that
+it's a decimal number it's not exactly a
+percentage so let's quickly converted to
+a percentage by multiplying it by 100
+now since we'd like to get a whole
+number we will also wrap it inside a
+round function and lastly we will assign
+the state. pred to a string of this is a
+to which we will concatenate our or top
+prad nice actually almost nice now since
+I really like everything nice and neat
+we will also copy our image Path State
+change we will paste it at the very
+bottom and now all our state changes are
+specified together now let's quickly
+save everything and let's see if it
+worked and let's try an image of a dog
+and beautiful our model agrees with 90%
+confidence the only problem is I forgot
+to add a line break so let's quickly fix
+it and this time let's load an image of
+a cat and okay this is a cat but we are
+only 47% confident this time which is
+not much now let's quickly see what
+happens if we are trying to trick our
+neural network what if we send it an
+image of an animal it has never seen
+before one that doesn't belong to any of
+our classes and I'm of course talking
+about the elk which is not a deer no but
+because it has horns it's close enough
+right so let's open it and boom our
+Network recognizes our elk as a deer
+with 80% confidence awesome and lastly
+if you'd like to test my application it
+is now live and running on taipi cloud
+you can find the link in the description
+of course and I'm specifically talking
+about their free hosting option so if
+you'd like to do the same for your app I
+included all the instructions in the
+description as well it is a brand new
+saying so if you'd like to see a proper
+tutorial on it please let me know and
+thank you so much for watching if you
+found this video helpful please share it
+with the world and don't forget to leave
+a huge thumbs up if you'd like to see
+more videos of this kind you can always
+subscribe to my channel and turn on the
+notification Bell I'll see you very soon
+in another awesome simplified tutorial
+in the meanwhile bye-bye

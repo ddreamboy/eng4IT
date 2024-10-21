@@ -1,0 +1,203 @@
+hello guys welcome back my name is Adam
+and is the fifth episode in our
+fundamentals course the topic for today
+is cloud service models what are their
+differences and what are their key
+characteristics stay tuned as always at
+the beginning of the episode let me
+start with the session objectives so
+what is being tested during the exam in
+this section you need to understand what
+exactly is infrastructure platform and
+software as a service but also
+understand them well enough to be able
+to compare and contrast them between
+each other and to better understand that
+we need to first understand what exactly
+is considered infrastructure platform
+and software and for that reason I
+prepared you a very small exercise an
+example so let's imagine we are a
+startup company and we want to host our
+own application and build entire
+infrastructure for that reason of course
+the first thing we will need to do that
+is to purchase some servers so all the
+hardware that will actually run the
+applications themselves obviously our
+servers needs to be able to connect to
+the Internet
+therefore we will need to provide all
+the networking infrastructure as well
+including the Internet connectivity
+itself because every server needs a
+storage you will need to additionally
+provide a storage infrastructure another
+doors our hard drives or solid stair
+drives some raid our eyes and things
+like that we need to provide that
+additionally once this is in place you
+have all the hardware needed in order to
+run the server now in order to ensure
+the best utilization of the hardware
+that you have you will want to run some
+virtualization software so that you can
+run multiple virtual machine on a single
+Hardware piece so that you can host
+multiple applications but still maintain
+the total separation of the environments
+and virtualization software will allow
+you to do that at that point you will
+start creating multiple virtual machines
+in order to host your applications all
+those virtual machines will need an
+operating systems
+whenever does Windows or Linux or any
+other operating system on the market as
+the operating system is in place you
+additionally want to install a
+middleware which typically means all the
+software additions that you need in
+order to run the system and the
+application itself and a typical
+application will additionally need a
+runtime so another layer of the software
+which will host your application if this
+is a web application this could be IES
+web container if it's a container
+application and maybe a docker but
+runtime is additional layer that you
+will need to maintain yourself once all
+of those layers are in place we are now
+finally ready host our application and
+application data on that system well
+there are quite a few layers on the
+screen a few clear distinctions can be
+made here first four layers from the
+bottom are so-called infrastructure so
+all the layers that directly are related
+to the hardware and the virtualization
+next layers can be grouped our platform
+layers so operating system middleware
+and runtime to all the software's all
+the system and configuration that is
+required for you to run the application
+but not the application itself and the
+last part the application and the data
+itself is so-called software layer and
+the asset service part of our episode
+means who will manage what if you manage
+all of those layers that means we're
+talking about the on premises so the
+clear ownership is on you you manage all
+the infrastructure platform and the
+software and cloud providers not even
+involved but if you decide to outsource
+the infrastructure purchase the
+infrastructure from the cloud provider
+to let Microsoft manage the
+infrastructure while you manage the
+platform and software this is so-called
+infrastructure as a service so the
+ownership of that part goes to a cloud
+provider in this case Microsoft will
+manage all the networking hardware and
+the virtualization itself while you will
+manage the platform and the software
+part typical use cases here are
+migration of the world from the
+on-premises testing and development but
+also extending your on-premise
+environment of the capacity of the cloud
+so that you can create storage backup
+and disaster recovery scenarios
+the list of services used in order to
+implement infrastructure-as-a-service
+solutions is quite long but typically
+you will see things like virtual machine
+virtual networks managed disks or one of
+many services that you can use for this
+purpose but in general the rule of thumb
+is if someone says that they have
+infrastructure as a service solution
+that means they have a lot of virtual
+machines and probably this is the skills
+they're looking for if you're designing
+for the cloud you most likely will go
+one level up so you will allow Microsoft
+to manage the platform and the
+infrastructure part while you just build
+your own applications in that case we
+are talking about platform as a service
+in this model cloud provider will manage
+the infrastructure and the platform so
+besides the hardware Microsoft will need
+to manage operating system all the
+security patches all the middleware and
+the runtime to host your application and
+you will only need to build and manage
+your own applications typically this
+model is used whenever you're developing
+cloud applications this could be a
+state-of-the-art web applications AI
+machine learning business analytic
+solutions well pretty much anything if
+you're building applications you're most
+likely using platform as a service
+solutions in this case we can talk about
+SQL for relational databases app service
+for web hosting logic apps for
+enterprise integrations function apps
+for several Azure one of the dozens or
+even hundreds of other services allowing
+you to take advantage of cloud in a
+platform as a service model and if you
+decide to outsource everything to
+Microsoft that means you are using
+software as a service model in that case
+the ownership of the cloud provider is
+everything and there's nothing on you
+you could think what would be the case
+of software as a service usually this
+means buying of the Shelf applications
+applications like Outlook Skype onedrive
+and all the other business applications
+that you're probably using every day
+this is software as a service from
+Microsoft managers every
+and you just use the applications I will
+now summarize the differences between
+those service models but from a little
+bit different angle if you let cloud
+provider manage the physical data center
+buildings
+networking security servers and storage
+we are talking about infrastructure as a
+service if that cloud provider
+additionally manages the operating
+system and the development tools we are
+talking about the platform as a service
+but if that cloud provider additionally
+manages the applications in the data we
+are talking about the software as a
+service maybe this view will let you
+better understand the scope of
+responsibilities for each of those
+service models and that's pretty much it
+if you want to summarize what you
+learned go to my website - episode
+number 5 check out the study guides with
+official links to Microsoft documents on
+those free service types
+check out the cheat sheet and check your
+own knowledge what you learned here in
+the practice test and that's it for this
+episode I appreciate every single one of
+you that stayed until the very end if
+you like what I do support the channel
+by subscribing liking and commenting if
+you want to follow to the next episode
+simply use the playlists or hit the icon
+on the side and see you in the next
+episode
+you

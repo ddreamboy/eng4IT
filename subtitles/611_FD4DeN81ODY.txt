@@ -1,0 +1,189 @@
+what makes a country happy
+in 2021 the un published a report that
+gives a score to each country on earth
+according to the following six factors
+in order to analyze and draw conclusions
+from this data we need to be able to
+understand or at the very least
+visualize it obviously we cannot
+visualize six dimensions all at once but
+we can pick two or three factors for
+example gdp social support and life
+expectancy and visualize that here is
+norway for example the us china russia
+and the rest of the countries but if we
+do it this way however then we lose some
+possibly valuable information that might
+be contained in other factors of the
+data like freedom or generosity pca is
+all about taking all factors combining
+them in a smart way and producing new
+factors that are one
+and correlated with each other and two
+are ranked from most important to least
+important these new factors produced by
+pca are called principal components and
+they are constructed in such a way that
+if you restrict your attention to the
+first few components only you would
+still get a fateful representation of
+the data let us now explain how pca
+picks its components for that let's take
+the same data as before but limit
+ourselves to the first three columns
+only for simplicity and drop a few
+countries so that the plot is not too
+cluttered to pick the first component
+pca asks the following question how can
+we arrange these points on a line in a
+way that preserves as much information
+as possible
+a first attempt is to project all of
+these points on one of the 3d axes
+but that corresponds to throwing away
+all the other columns of the data so
+maybe there is a better less wasteful
+way
+to answer that question let's take a
+small detour to explain how projection
+works
+when you project a point x on a unit
+vector u you get a new point x prime
+whose magnitude is given by the inner
+product between x and u and we can think
+of the square of this inner product as
+the amount of information about x that
+is preserved after projection on u in
+particular this quantity is maximum when
+x is parallel to u and is minimal when x
+is orthogonal to you
+back to pca the first component that pca
+picks is a unit vector that tries to
+preserve as much information as possible
+so it maximizes the sum over all
+countries of the square of the inner
+product while solving this optimization
+problem might look intimidating at first
+glance it is actually surprisingly easy
+to solve if you use the so-called
+lagrange multipliers method if you are
+not familiar with the terms optimization
+or lagrange multipliers you can either
+simply ignore the next 20 seconds and
+just take the results we're going to
+reach for granted or first go watch my
+beginner video series on optimization
+so
+in order to solve this problem let's
+simplify the objective function a bit
+with some not terribly complicated
+manipulations we can rewrite this
+expression as u times the matrix c times
+u where c is known as the covariance
+matrix of the data we then form the
+lagrange function
+take the gradient with respect to u and
+set it equal to zero
+in conclusion we know that the direction
+u that preserves information the most
+after projection satisfies the equation
+c times u equals lambda u for some
+unknown scalar lambda
+and if this equation looks familiar to
+you there is a reason this is exactly
+the equation of the eigenvectors and
+eigenvalues of c
+and interestingly the amount of
+information preserved after projection
+on an eigenvector
+is given by the corresponding eigenvalue
+so clearly the best direction to pick is
+the eigenvector with the largest
+eigenvalue so for our example this is
+what the eigenvector with the biggest
+eigenvalue looks like and one way to
+interpret this component is that roughly
+all three original factors have equal
+contribution and for this reason let's
+call this component power
+when we project the data points on this
+component we know that icelandic
+countries that we normally associate
+with happiness like norway for example
+are all positioned high on this axis
+while countries like niger are
+positioned low
+of course this representation is not
+perfect since you have countries like
+singapore that rank high simply because
+they have an unusually high gdp
+but this is to be expected though
+because we have only looked at the first
+component that pca gives
+let us now discuss the other components
+of pca how do we pick the second
+component for example
+ideally the second component is a unit
+vector that does not contain information
+that is already contained in the first
+component
+or in geometric terms we want the second
+component to belong to the subspace
+orthogonal to u1 but other than that it
+should maximize the same quantity as
+before
+and following reasoning similar to what
+we did before we find that the second
+component is given by the second
+eigenvector of the covariance matrix of
+the data and looks like this
+in english this component is the
+difference between individual factors
+and social factors so let's call this
+component balance
+if we project the countries on the plane
+spanned by the first and second
+component we find that the happiest
+countries seems to be the most balanced
+ones and countries that are either very
+high on the balanced axis like benin or
+very low like turkmenistan are generally
+less happy
+and it's very interesting to revisit the
+case of singapore
+so while it's doing great in terms of
+the power axis
+the individualistic nature of its
+citizens seems to make it less happy of
+a country overall
+more generally the directions picked by
+pca are exactly the eigenvectors of the
+covariance matrix you see every
+symmetric matrix like c has n
+eigenvector and eigenvalue pairs that
+are orthogonal to each other the
+eigenvectors are exactly the components
+that bca picks and the eigenvalues give
+you a sense of the importance of the
+corresponding eigenvectors for our case
+we see that pca suggests to look mostly
+at the power component
+and only look at balance for a more
+refined analysis or to compare countries
+of comparable power in fact we can make
+things even more precise
+if we divide all the eigenvalues by
+their sum we see that the component
+power explains about eighty-five percent
+of the data while balance explains about
+ten percent of the data and the third
+component explains the remaining five
+percent
+this was the basics of pca and how it
+can help you analyze high dimensional
+data if you want to dive deeper into the
+topic you can look at the references in
+the description and if you like the
+video like and subscribe and see you
+next time
+[Music]

@@ -1,0 +1,1224 @@
+hello everyone my name is Joe Franti and
+I am a developer Advocate at Dino and uh
+you may have seen our big news recently
+we just launched
+dino2 uh for those of you who don't know
+what Dino is we are a JavaScript runtime
+uh we're super fast we're built by the
+guy who originally built node Ryan Dal
+and his aim in doing so in building Doo
+was to make JavaScript and typescript
+development simple and fun and
+pleasurable and
+delightful um and I remember you know
+when I first became a web developer and
+this is dating myself slightly um but
+node was still very new at the time all
+the web developers were using jQuery you
+had to learn HTML javascripts CSS jQuery
+and that was basically it and I remember
+when I first started I think I taught
+myself those over maybe a summer and
+then I started applying for entrylevel
+jobs and I feel like developers these
+days like I really feel for new
+developers the entire ecosystem the tool
+chain is super complicated there's so
+much to configure so much to learn so
+many tools to choose before you can even
+get
+started um and Dino aims to reduce this
+complexity by com combining a lot of the
+tools that you'll find yourself needing
+right into the
+runtime so Dino comes with its own
+linter it comes with a format uh it's
+got typescript support uh out the box uh
+it's got testing built in and it also
+comes with a lot of the standard web
+apis that you know and love from the
+browser already baked in so you can use
+things like fetch you can use websockets
+you can use web storage and the whole
+hope is that we're making backend
+development for JavaScript developers
+feel a lot more like home feel a lot
+more like the web development that we're
+used to and if you're coming from node
+don't worry Dino has full compatibility
+with node so your node projects will
+just work in Dino you'll be able to run
+them and we'll take a look at that a bit
+later on um and any mpm packages that
+you have used in your node projects that
+are written with modern JavaScript
+standards will also work fine with
+Dino so to coin a phrase let's put my
+money where my mouth is I'm going to
+show you a couple of projects we're
+going to build a couple of apps with
+Dino we're going to take a look at some
+of its cool features and we're going to
+see what the what the dev experience is
+like and you can sort of see for
+yourselves whether you think this is a
+delightful
+experience uh so first of all if you
+don't have Dino installed you're going
+to need to do
+so uh you can can in find you can find
+the install command on the dino site and
+now is when we're going to test out my
+fancy setup so awesome okay so you can
+find the installed command that you need
+for your particular operating system on
+the doo doc site this is Dino uh docs.
+dino.com
+runtime um and then you can you can
+choose the one that you need I've I'm on
+Windows I've already got it installed so
+I'm not going to install it now but um
+this is the command that you would need
+and then you can check whether you've
+installed it correctly with doo minus V
+so if I jump over into my
+editor and I type
+in Fe we can see I'm running Dino 2 so I
+have Dino installed awesome um and then
+you're also going to want to install the
+dino extension for vs code which is
+going to give you some nice autocomplete
+help as you write your apps uh so vs
+code you can go to extensions type in
+Dino and just get the uh dino language
+to have a client installed as well and
+this is going to just make editing with
+Dino in vs code much more
+pleasant so the first thing we're going
+to do is we're going to create a new
+project and Dino can actually scaffold a
+basic project for you so we're going to
+do that to
+start uh so I'm going to in in my
+console use the dino inet
+command and that's going to initialize a
+new project for me and oh let's get into
+the right
+uh so
+Dino Adit and I'm going to call this
+project we're going to make a chat app
+um which is going to show off Dino's
+built-in support for websockets so I'm
+just going to call it chat app
+and we'll do that and you can see D has
+created us a project and it says that we
+need to CD into the project and then we
+can run so let's do that CD chat
+app and let's open it up in Visual
+Studio code there we go awesome so this
+is the basic project that Dino scaffold
+out for you so I don't know if you can
+see let me zoom in a little bit there we
+go so D scaffolded out three files for
+us we've got a main TS uh which uh is
+where we're going to write our code uh
+to actually run the app um and we can
+run this let me open up my terminal
+[Music]
+again with the Dino Run command so we
+can say Dino Run uh what's it called the
+name
+TS and you can see it's going to Output
+uh we've just got a little add function
+which is going to add two numbers
+together um I can update
+that run it
+again and uh it's run nice uh dino also
+uh has we we really support testing like
+we think people should write tests for
+their code um so the scaffolded lout
+project actually comes with a test
+already built
+in and in order to run our tests we just
+need to know
+test and we can see that test is passed
+um so we're just using this assert
+equals function so if I change this here
+uh and we run Dino test
+again we can see that our test t has
+failed this time um and so I didn't have
+to install anything in order to run
+these tests I didn't have to configure a
+test Runner this is all stuff that is
+just built in with Dino uh and the final
+um exciting thing to look at here is the
+dino Json file now those of you who are
+coming from node will be already
+familiar with the idea of a package Json
+Dino Json is where you can configure the
+runtime um and it's also where you can
+do things like add uh scripts which we
+call tasks or add your dependencies
+which we call Imports um and these are
+things that you should all this should
+be fairly uh you know these are things
+you should recognize from node
+[Music]
+um since we're starting fresh we're
+going to I'm going to continue using
+this Doo Json but but if you already
+have a node project that you're porting
+over to dino dino does actually support
+a package Json as well so we could use a
+package Json here instead um I'm just
+going to use a dino Json because that
+what is what is set up by uh dino
+andit uh and Dino also comes with its
+own set of standard modules that you can
+import to use in your project so if we
+have a look in here in the in this Dino
+Json you can see in this list of imports
+here you can see we're already importing
+something which is this SCD assert um
+and that's actually what is being used
+in our test so we're using this assert
+equals to assert that 2+ 3 equals five
+in this case uh and yeah Doo comes with
+this uh standard Library which is a
+whole collection of blocks of code that
+you're likely find yourself needing
+across multiple projects the idea is
+that we don't want you wasting your time
+sort of Reinventing the wheel as it were
+so the standard library is there for you
+to use to get going quickly uh with
+blocks of code that you're going to use
+fairly frequently uh to leave you time
+to focus on your application logic um
+and you can browse the standard Library
+modules on jsr so uh if I just swap over
+our browser and our editor again if you
+go to jsr you can see all of the
+packages that are available to you in
+the dino standard library and these are
+packages that are guaranteed to work
+that have been thoroughly checked and
+tested by our
+developers um so this is stuff that you
+know we want you to use to make your own
+time
+easier uh so we're going to build a
+little chat app so let's do that now and
+the idea of this chat app is we're going
+to be able to open up multiple browser
+windows and chck between the two showing
+the sent messages in both and we're
+going to use websockets to send these
+messages um and websockets are just a
+way it's a protocol that enables two-way
+communication between a browser and a
+server so websockets allow you to send
+and receive messages between a browser
+and a Ser between a client and a server
+without having to constantly Poll for
+updates um so what we're going to need
+to do is we're going to need to set up a
+server which is going to manage the
+websocket connections and which is going
+to receive the messages and then
+broadcast them out to all the connected
+browsers and in order to do that we are
+going to use a package from jsr called
+Oak so let's just have a quick look at
+that so Oak is a really great middleware
+framework for um as it says here for
+handling HTTP so we're going to add the
+oak package to our new project so let's
+jump back into our
+editor and in the command line we're
+just going to say Dino
+add and we use the specifiers in Dino so
+if you want to add an mpm package it
+would be mpm colon the package name
+because we're importing this from jsr
+it's going to be jsr colon and our
+package name which is
+Oak
+Oak and you can see that Dino has added
+that into the dino Json file here and
+now we can import it into our
+project uh so in our main.ts I'm going
+to get rid of all of this helpful code
+here that Dino has added for us and
+we're going to import the modules that
+we want from that Oak middleware so
+let's do that and you're going to have
+to watch me fail to type here thank
+goodness for co-pilot so we're going to
+import
+application and
+context and
+[Applause]
+router
+from SL
+Oak and because we've set it up in the
+Json with the
+name uh oak oak we can see that now in
+our main TS and we can use it with that
+name uh so then what we're going to do
+is we're going to initiate uh the oak
+application instance in fact there we go
+looks like uh co-pilot has our back
+already uh we're going to set up a
+port and we're going to
+set up a router as
+well and just to get started oh look
+co-pilot's got my back already we're
+just going to set up a really basic
+route at slash um which is just the at
+the at the base uh and this will help us
+test whether our server is up and
+running uh we'll integrate the rout into
+the application and we will use LOD I
+don't know how people write without
+co-pilot these days so finally we're
+going to start the
+server there we go and we
+will await uh incoming requests so now
+if we visit Local Host in our browser we
+should see Hello World
+returned Let's test it out
+SW over to the
+browser oh no we're not going to see
+anything returned because I'm not
+actually running the project so the the
+thing that I didn't talk about yet is um
+back in our Dino Json we have this idea
+of tasks so when I ran the project
+earlier I did dinor run
+main.ts um and Dino comes with uh this
+idea of a permissions based model so
+very like when you're doing web
+development and you want to use
+somebody's uh media like their their
+microphone or their camera or um uh
+anything else that's connected the
+browser will prompt for permission Dino
+does the same thing so what's happening
+here is Dino is saying I need something
+I need to access something across a
+network so you need to allow network
+access um and it just keeps your
+projects a little bit more secure than
+uh the sort of the wild west of node
+which just allows access to everything
+so um what I could do here is I could
+say instead of Dina run I could say
+minus minus allow net or I can which is
+going to be a pain in the ass to type
+constantly so we set up these things
+called task
+you may you won't have seen that prompt
+that I just got so I just got this
+security prompt here um which is saying
+do you want to allow network access um
+and I can either say yes or I can run
+the prompt I can run Dino Run again with
+uh the minus minus allow net flag or I
+can set up this task here which is going
+to run the Dina run command for us so
+what I'm going to just say
+allow net in here and then in my uh
+command line which I've just seen you
+can't actually see because it's just off
+the can you see that on the screen it
+looks like it's just off the bottom let
+me
+uh just that a bit smaller for
+you there you go
+cool uh so now here I can instead do D
+task
+and I spell allow
+wrong let's try that again there we go
+okay and now my server is running on
+Port
+8000 if we open it up in the
+browser you can see my little hello
+world in there excellent so uh that's a
+super basic uh HTTP server set up with
+Oak now let's actually SCA P out some
+interesting uh functionality for our
+chat app um so I don't want to use for
+this example I don't want to use feet or
+set up any other tools I wanted to show
+you how to make a really Bare Bones
+application um we'll look at something a
+little bit more tooled out later but for
+now let's just set up a super basic Dev
+server which is going to serve some HTML
+and some CSS and some client side
+JavaScript so let's jump back into the
+editor and in our main.ts file we're
+just going to uh so we'll get rid of
+this rout for now and instead we're
+going to say that we want uh to app. use
+there we go and we're going to set the
+root to the current working directory uh
+in a public folder which we will make
+and our index is going to be
+index.html nice okay
+so this is just going to send a file as
+an HTTP response and doo. CWD is the
+current working
+directory um and uh yeah so that's just
+going to set the index file to be the
+default file to serve when the root URL
+is accessed so now let's make that
+folder
+so make public and inside there we will
+make an index.html
+and we're just going to scaffold out a
+really basic chat app so we're going to
+have uh a text input we're going to have
+a button to send we're going to have a
+list of online users and we're going to
+have a div which is going to contain the
+conversation
+itself let's try that
+again so that just gave me a little bit
+of boil plate what should we call it uh
+chat
+app and in the body uh I'm going to
+cheat this for
+time so we have in here just a boring
+old header with an H1 and the side uh
+which is going to be where we show our
+online
+users um and then a container div which
+is going to hold all of the messages a
+form which has an input and a send
+button um and I'm going to add some CSS
+in too just um because at the moment it
+looks quite boring uh let's
+see oh okay so I don't know if you saw
+that I
+um I refreshed a browser and Dino said
+wait a second uh you you've asked me to
+uh server file so I need read access to
+this file so in my doo Json I'm just
+going to add in the
+allow read in
+there and we'll run that task
+again and now if we just have a look in
+the
+browser we have a very ugly chat app so
+let's just quickly add in some CSS this
+is going to be a here one I made earlier
+so
+situation
+uh we can have a look through the CSS
+later if you would like
+to so in here I'm going to make another
+new folder a new
+file
+style.css paste in a bunch of
+styles
+and if I refresh in the browser
+so I
+don't that need to be such
+public oh it's style singular
+there we go okay uh we open up the
+browser again you can now see my
+beautiful chat
+app let's change the size of that window
+if we can
+do so you can actually see it there we
+go stunning beautiful chat app
+nice uh but it doesn't do anything at
+the moment so I can type in here and
+click Send and nothing happens I don't
+know who's online because I haven't
+asked anybody who's online I haven't uh
+collected anybody's names um and it's
+not going to do anything functional
+because at the moment we don't have any
+JavaScript so let's add some client side
+JavaScript into the mix so back in our
+editor we're just going to also add in a
+script tag
+and we're going to
+defer and it's going to
+be type module and Source it's going to
+be sure we'll call it script.js why
+not awesome okay um and we can just put
+a console log in
+here just to test that that has worked
+hello from script.js
+if I open up my browser again you can
+see there howo from script yes awesome
+so we're getting all of those assets
+served by our little server um but at
+the moment we have no way of knowing uh
+like who's on our chat um we have no
+functionality so let's start by
+prompting the user for their name so in
+our little script JS we're going to set
+up a new part
+username and we're going to I mean this
+is super lowy we're going to prompt and
+say uh y enter be a bit more polite than
+co-pilot please enter your username um
+and if they don't if they just close the
+prompt then we're just going to call
+them
+Anonymous um and next we're going to
+construct a new URL for the web socket
+connection uh so we'll set up a
+URL uh
+and this is going to be so we're going
+to do it on um SL
+websocket oh let's do WS for typing ease
+and I'm also going to give the username
+as a
+parameter there we go uh thank you again
+coob we don't need window there awesome
+so all we're doing here is saying uh
+we're going to set up a new web circuit
+connection um and then we're going to uh
+replace the protocol so instead of HTTP
+it's going to be WS so we will say url.
+protocol equals yep there we go url.
+protocol. replace HTTP with with ws and
+then we're going to open the websocket
+connection on that constructed URL there
+we go not
+at and uh then we're going to update the
+server to actually do something when
+that web circuit connection is made so
+if we jump back into our server
+SL uh we can in
+here do our rout to.get again except
+we're going to put it on WS now and
+we're going to pass
+in context
+no um and you'll see here that I'm
+writing typescript and again I didn't
+need to configure anything in order to
+do that uh typescript is supported out
+of the box with Dino uh so it just just
+works it would just work if I could
+type so we're going to get the user name
+from the parameters of that URL and then
+for now we'll just console
+log that person is connected uh so now
+if I open up the browser
+[Music]
+again and I
+refresh I should be prompted for my
+username I can say
+Joe and you can't see that but in my
+editor we just got a little console log
+saying Joe has
+connected awesome okay
+uh we're going to now actually build out
+the chap application logic um I like to
+keep my files nice and neat so I'm going
+to split the chat app logic into its own
+file which I'm going to call chat
+server.
+TS and uh in our .ts let's just import
+the chat
+server
+no helpful but not quite helpful enough
+Co
+pilot thank you uh and uh let's actually
+build out some of the chat server so the
+chat server is going going to need the
+context as well from that request so
+let's import context from
+Oak and uh this is just going to give us
+information about the HTTP request so it
+gives us access to things like headers
+to URL parameters to the body and
+importantly it's what lets us upgrade
+our connection from HTTP to websockets
+so uh we're going to
+export uh we'll just call it chat server
+yep and uh I'm going to put in a a
+method in here called handle connection
+which is going to handle our connection
+[Music]
+uh which will get the context let's see
+uh and what is it done here
+uh and in the wrong place on the
+keyboard
+socket so we're going to upgrade so
+that's um what's going to allow us to
+move from polling to websockets and then
+we're going to get the username and
+we'll just console log
+it uh yeah so now uh we should be able
+to jump back into our main.ts and
+actually use that method that we just
+exported um so let's do
+that uh where are we going to put this
+let's put it uh here
+no I want
+lowercase and uh we will then uh change
+this so instead of because we've just
+put we've just passed all of that across
+through to the chat server so we're
+going to say chat server do handle
+connection and pass it context nice okay
+uh so let me just briefly jump back into
+the browser
+refresh make sure this is still
+working and yeah you can see Joe
+connected awesome
+okay uh so now we know that a user is
+online we can go into our server side
+JavaScript and actually add their name
+to a list of online users so uh sorry
+onto our client side JavaScript is what
+I meant uh so let's do that um so let's
+make a new function
+called uh update user
+list and we're going to
+usernames and uh let's see if co-pilot
+can work out what I'm going to do no
+we're not going to in a HTML
+and we're going to say uh yeah create a
+list create a bunch of Lis uh add each
+username into an lii and append that to
+the list of usern to the uh username
+uh list uh I can't remember what did I
+call I don't think I called it user list
+did I I called it users excellent okay
+and uh we also know that we want the
+user to be able to type their message
+into the input uh so let's make a
+selector for the input and make a
+selector for the form as
+well did I call them input and form in
+my
+HTML I called it form and input
+excellent uh and I want the cursor Focus
+to go straight onto the input when
+they've finished entering their name so
+that they can start typing a message
+immediately so I'm just going to do
+input.
+Focus just a nice bit of extra usability
+there and then um I'm going to when the
+form is submitted I want to send a
+message across the socket so let's do
+that
+form.
+onsubmit e prevent default message is
+input value we empty at the thing and
+then we're going
+to socket. send we're going to
+stringify the m message along with what
+I'm going to call a message
+event so we will
+[Music]
+send and then send the message itself as
+well
+uh so because we've made the form of
+HTML form the submit happens on pressing
+the submit button or on pressing enter
+so we don't need to do any like
+listening for keyboards or listening for
+clicks or anything like that we just
+have our own submit um but now we need
+to update the server to actually do
+something with this message so we've
+done our our web socket. send we need to
+actually update the chat server to do
+something with
+it uh so um we're writing typescript
+here as I mentioned uh so the first
+thing I'm going to do is uh set up some
+types for us to use so I'm just going to
+uh extend the web socket type to include
+the
+username so let's just make a nice new
+type
+uh there we go thank you co-pilot so all
+all that is is we've got a web socket
+and it's also going to have a username
+and then I'm going to set up a type for
+the app event as well
+uh which is going to just be a
+uh which is a
+string
+and cool nice and then we can upgrade
+our socket here to be as circuit with
+username very nice
+um and then I'm going to also set up a
+uh a new uh property which I'm going to
+call connected clients which is going to
+store a connection of all of the
+websocket store a collection of all of
+the web sockets
+[Music]
+connections yes perfect okay um and then
+we're going to stop people from being
+able to take usernames that already
+exist uh so once we've got the username
+we will say if this do connected clients
+that has
+username uh we'll do socket.
+close uh with a
+108 user already connected
+lovely uh and this is
+complaining
+because okay just going to Che that um
+so because we know that
+we're the username is always going to be
+assigned it's either going to be
+something they typed in or it's going to
+be the word anonymous I'm just going to
+cheat that for now uh awesome and then
+we're going to return
+here so they'll just be asked to give a
+different username and now let's set up
+some more methods to actually flesh out
+our app so we know we're going to want
+to send a
+message so let's set that up we know we
+are going to want to do something when a
+client
+disconnects and we're going to want to
+update the list of usernames when a
+client joins or when a client connects
+uh so let's build out first the client
+is
+connected uh and we're going to need to
+pass a
+username string and we're just going to
+say when the client disconnects delete
+the username from the list and broadcast
+the list of new usernames copilot
+already did I spell connected with three
+ends
+amazing let's fix
+that thank goodness for spell check
+built into vs code um awesome okay uh so
+when the client disconnects we're just
+going to remove and we're going to
+rebroadcast the list of usernames um
+so let's update now the broadcast names
+function since we're going to be doing
+that um so what we're going to do is
+we're going to extract the keys from the
+connected clients map to get the list of
+the usernames and then we'll create an
+array of them and then we're just going
+to broadcast a message with that new
+array so we will say
+[Music]
+[Music]
+uh something I haven't actually
+mentioned yet uh because I'm very bad at
+remembering to put semicolons on the end
+of lines uh dino comes with a built-in
+form matter um so if you work with
+people who do bizarre things to the to
+the shap of their code you can actually
+run Dino format and it'll Auto format
+your file for you so it looks beautiful
+um and it'll add semicolons onto lines
+where you could have gotten to add them
+which is my
+crime um and obviously the format is
+fully customizable so you can change the
+rules that it uses so if you're someone
+who doesn't like semicolons you don't
+have to have them um and the dino Json
+is where you would set up the rules for
+the formatter for the lenter for the uh
+test Runner uh yeah just a little aside
+there so um yes what are we doing uh
+we're going to
+then
+broadcast those
+uh usernames with an event of update
+users
+and also usernames there we go okay
+awesome uh so now I've just made a me
+method called broadcast which doesn't
+exist so let's create
+that uh which is going to indeed need an
+app
+event and it's going to take the message
+string uh it's going to sorry create a
+it's going to stringify the message and
+then send that message
+so yeah in
+fact nice and naming there uh four
+yep okay awesome so for each of the
+clients uh send that
+message and finally let's make that send
+function put some spaces in between here
+give this a bit of breathing room there
+we go that's a bit nicer isn't it uh so
+we will we need to give this some
+information so it's going to need the
+username and the
+message not
+event and yep so we're going to say
+class
+data is
+uh message.
+data I've lost a bracket there
+somehow and
+if it's not equal to send message just
+return we like to return early and often
+here
+is that telling me I've got extra
+bracket there yes I have okay
+excellent and uh otherwise this
+broadcast um and we're going to
+broadcast event is going to be uh send
+message the username is going to be the
+username and
+the message is going to be message data
+lovely
+okay let's format
+again okay awesome so now we can
+actually call these m methods to
+actually do things when the webset
+connection uh when stuff happens on the
+web soet connection so either a message
+is sent someone connects or someone
+disconnects so let's do that next so uh
+up
+here where we
+yeah we so in our uh handle connection
+we are going to say uh socket.
+username is going to be username and
+socket onop we're going to say uh so on
+open we want to broadcast the uh
+usernames so we will say
+cast usernames and we're going to bind
+it uh the
+this and then we're going to say
+socket
+close and on close we want to run our
+client
+disconnected and give it the username
+and then when a message is received so
+sock. on
+message uh exactly that we're going to
+say this do send
+uh socket. username uh and the
+message and then finally we're going to
+set the connected clients up with the
+username and the connection so we will
+say this copilot already knows what I
+need to do uh so the final thing that we
+need to do now is actually update our
+client side JavaScript to deal with the
+messages that it is going to receive
+uh okay we're all good here so let's
+jump back into our
+script.js um so when we were receive a
+message from the websocket server it's
+going to contain a username and it's
+going to contain some sort of message
+text we want to be able to display both
+in the browser um and we could do this
+with you know um creating elements in
+JavaScript and appending them but I
+think it's actually
+nicer to use a template in the HTML
+um templates are super cool uh in fact
+I'm just going
+to to copy pter again for uh gravity
+sake so all I've done here is uh so
+we've got a template which I've given an
+ID of message inside that template is
+just a container div for styling span
+which is going to contain the username
+and a paragraph which is going to
+contain the message itself then back in
+our script s uh we can create a function
+to run when the message is received
+which is going to get that template and
+populate it and append it to the HTML so
+let's put that in here so we'll call it
+add
+message it's going get the
+[Music]
+username the
+message and uh C template
+is yeah what did I call it I just called
+it messages didn't
+I I
+think message
+singular uh we will clone that yep uh
+we'll
+do
+except I'm not doing that we're just
+getting a
+Spam we're setting the context to be the
+text to be the username name can't spell
+that says
+Spin and then we'll grab the p and we'll
+put the message in
+there and then I'm going to do something
+clever here so
+uh you'll see here um co-pilot has
+suggested that we are pend I'm going to
+prepend and the reason for
+that is
+um you know when you when you're writing
+in a text chat you want the messages to
+scroll off the top of the screen as they
+come in um and obviously by default uh
+it will be adding them in but our scroll
+bar won't move so what I've done in the
+CSS is actually invert the
+container um and then what we're doing
+is prepending so we're putting the thing
+at the bottom and our scroll will
+actually move down as new messages come
+in uh which was a hack that I found on
+uh w3c I think of all places and I quite
+like it um so now when a message is
+received let's actually do something
+with it uh so under here we are going
+to ws. on message
+we're going to PA our yep exactly
+that who exactly that okay so what we're
+going we're going to create a new
+variable which is going to contain the
+data which is going to be the past data
+and then we're going to make a switch
+statement which is going to say in the
+case that we are updating
+users we're going to update our user
+list with the uh usernames
+and in the case that it is a send
+message uh we're going to add the
+message data so we'll get the username
+and the message and we will run our add
+message function that we just
+made okay that was a whirlwind uh
+introduction uh so let's take a quick
+look at that in the browser and see if
+it actually works
+come
+on process failed what did I get
+wrong chat
+server what a typo
+somewhere if I lost a bracket
+somewhere
+okay that seems to be running
+[Music]
+now there we go okay awesome so
+hello cannot read properties of no have
+I uh missed a name on something
+get element by D
+message oh y I bet I didn't call it that
+did I what did I call it
+conversation there we go
+[Music]
+yay okay awesome and let's open it up in
+another browser
+window hooray okay so that was a super
+Speedy uh building of an entire chat app
+so something else that I wanted to show
+you very briefly
+um was that your node projects can also
+work in
+Dino um so let's just make an entire new
+project and I won't perhaps we won't
+build out an entire second app but we
+will just have a quick look at using a
+tool chain that you might know and love
+um so uh I know a lot of people
+obviously are using next right now and
+it's really important that Dino runs
+your next project so I just wanted to
+prove to everybody that it does that
+your package Json completely works that
+your mpm Imports completely work in Dino
+so let's make a brand new uh next
+project so we can do doo run minus a and
+what minus a does we saw those
+permission prompts earlier minus a is
+just saying allow everything so allow
+access to everything it's kind of like
+the default setting in node uh and we're
+going to say
+mpm create next app
+latest and we'll call it uh
+test next
+app and we'll just take all of the
+defaults and we'll watch it
+install this is when we pray that my
+internet is fast enough for this
+um so
+uh my original Hope was to build out an
+entire uh next project with you as well
+but I took way too long on that chat app
+so while we're watching this install
+I'll just show you some resources that
+you can use uh for uh building next app
+so if you go to docs. dino.com
+runtime uh we've got a whole load of
+tutorial in here so if you're using
+react if you're using next if you're
+using view uh you can absolutely use
+those uh in Dino um the app that I was
+going to build with you is actually all
+written out here so if you want to
+follow along you can totally build an
+entire Dinosaur app in here um but let's
+just jump back into my editor so you can
+see we've so we've built a next app so
+if we CD into test next
+app and we open that up in
+[Music]
+here I can so you'll see here I mean
+this is just a standard next app we've
+all seen this before it has a package
+Json which has scripts and dependencies
+I can do Dino Run Dev no Doo task
+Dev and it's going to run and set
+up
+a little next app for us
+uh which should open up in my browser
+once it's finished
+compiling there we go uh so we have a
+fully functional next app um which works
+exactly as you would expect next to work
+um you can run it with Dino you can if
+you want to you know add dependencies
+into the package Json and Dino will be
+able to use them you can also if you
+want to add a dino Json if you want to
+do things like start configuring the
+format or the
+ler um or indeed if you just prefer
+adding your dependencies in there Dino
+will be able to work fine with both a
+package Json and a dino Json in there um
+that's no problem uh yeah so if you want
+to see the code of the project that we
+built today you absolutely can it is on
+GitHub let me get you the
+link
+uh in fact let's go let's open up the
+browser and actually have a look at it
+so um the tutorial that I walked through
+today was our chat
+app and the finished project is here so
+let me just paste that into
+the chat um
+or I can zoom in here for anyone who's
+watching
+online uh so if you want the code you
+can see it here we also have a whole
+bunch of other tutorials in this
+repository so if you go to the dino
+repository and search for
+tutorial
+St there we go there's a whole bunch of
+tutorials in here and I am adding more
+uh every day so check back for more um
+and if there's particular libraries that
+you're interested in I would love to
+hear um and I can add those in um but
+the takeaway message should be Dino just
+works you shouldn't have to do anything
+special there shouldn't be any giant
+sort of porting job when migrating from
+node to dino the things that you know
+and love will just work with Dino um and
+if the mpm packages that you're trying
+to use don't use es modules you will
+need to update them but we also have
+some helpful uh advice on how to do that
+so if you go to
+uh
+the doo documentation we have a whole
+load of advice on upgrading upgrading
+from Comm JS to es modules over
+there okay that was um a well wind of an
+introduction to dino uh I hope that that
+was interesting I haven't seen any
+questions come in I don't know if we've
+had any questions at
+all there there was at least one um
+which um was basically
+around essentially what you kind of
+we're covering here somebody who is
+experiencing like trying to run an
+existing node app on Doo um and sharing
+some of the errors that they they came
+across um including um like a relative
+import path module not prefixed with uh
+I guess you it says to use node colon
+module like is there so is there
+something like if you have an existing
+node app and you want to go ahead and
+Port it over are there things you're
+going to run into like that or is there
+some kind of configuration maybe that's
+like you have to run it with that- a or
+something like that or or so I mean it
+will depend entirely on you know it'll
+depend on the project itself we do have
+a guide I'm just trying to find it now
+um so we have a whole guide for things
+that you might run into so the majority
+of project should just work there are
+however um you know a bunch of node
+build buin that you may need to do you
+know the node specifier so for example
+if you're using um OS you might or
+you're using node specific FS for
+example you would need to do node colon
+FS or node colon OS to use those
+built-in node modules but then Doo will
+support them um if you're using your mpm
+packages again the mpm specifier is the
+way to go um and then as I mentioned if
+it's not using ES modules you will need
+to update it to use es modules do you
+know only supports es modules doesn't
+support
+commonjs um but we do also have some
+tooling that'll help you uh swap over so
+the uh the place to look is
+um docs. dino.com
+runtime fundamentals
+node Okay so yeah I think the other
+error they were running into was uh was
+something along those lines which is cuz
+it it says require is not a Define is
+not right like so yeah so anything the
+users require you're going to have to go
+ahead and update you're gonna have
+to okay so then the the follow-up
+question for me would be like okay let's
+say I have a node project like that and
+I Port it over to dino what are some of
+like the things the benefits that I
+might see as as you know for doing that
+so uh the dino well Dino is built in
+Rust so it's um it's actually slightly
+faster than node so that's the first
+thing but we're we're talking you know
+seconds difference there so that may not
+be enough for people um one so the
+things that I spoke about you know the
+built-in support for typescript the
+built-in test Runner the built-in linta
+the built-in formata all of these things
+just mean that you can sort of flatten
+your project a lot more we don't need to
+be importing a load of dependencies we
+don't need to be doing a load of
+configuration like it keeps your project
+folders a lot
+neater uh dino also um if you're uh
+building a dino project from scratch
+Dino you will notice doesn't have that
+node modules folder which is just it
+uses a centralized Global cache instead
+uh which again just keeps your project a
+little bit neater um and then the other
+thing that we looked at was the security
+angle
+so it can be a bit of a wild west out
+there and sometimes especially if you're
+installing a bunch of dependencies and
+you're not looking at exactly what all
+of them are doing they may be accessing
+things that you're not expecting them to
+and getting that warning in the um in
+the console is actually quite nice way
+to keep an eye on what's accessing what
+so know I set up a an HTTP server and it
+asked for network access like yes of
+course you can have network access you
+need that but if I'd installed some
+dependency and suddenly something was
+asking for network access I might you
+know want to look at what was happening
+in that dependency it just it just keeps
+you a little bit
+safer yeah in fact that I think our last
+presentation about a month ago was about
+specifically about dependencies and the
+kind of security nightmares they can
+cause um node being among you know the
+npm registry being among the biggest
+like kind of potential attack vectors
+that that you could find um so that that
+makes a lot of sense uh but if I have an
+existing one I mean I guess can is there
+like a path for transitioning off of npm
+now that I can I've got full npm
+compatibility but like maybe I want to
+start kind of taking the benefits of
+those security like I can transition
+into moving some of those yeah I mean
+you will still you will still get that
+security so as soon as you start running
+in node as soon as you type you know
+Dino task Dev it's going to
+say you need access to these this this
+this this this and this it's
+automatically going to prompt if those
+things are needed so it's a nice way to
+actually find out if your program is
+doing stuff that you don't know what
+it's
+doing okay yeah okay so I don't even I
+don't even need to use the dino
+centralized cache version of anything
+that you get that security automatically
+even with
+the that's very cool excellent um yeah
+and I think one of the things that that
+like you showed is just that this isn't
+learning something entirely new like the
+learning curve is pretty low and now
+with mpm compatibility should be about
+as low as as you know possible um so we
+Dino has to vote for um you know the the
+whole of the of nodes apis uh so
+everything all that knowledge that you
+already have like a lot of the people
+that IAL to were like I don't want to
+learn an entirely new thing all of that
+knowledge is fully compatible you can
+you can bring it all over we're not
+nobody wants to learn everything from
+scratch you know you've got 10 so more
+years of experience in node now like it
+would be ridiculous to ask people to
+learn an entirely new tool like and and
+Dino fully recognizes that um so you can
+actually check out the API compatibility
+that we have
+uh again in the doo docs uh so if you go
+to docs. dino.com
+API uh you can have a look at all of the
+dino apis you can see all of the web
+apis that Doo supports and you can see
+all of the node apis in there as well
+which Dino also supports so all of the
+documentation is there awesome and I'm
+hope hopefully we can even get you back
+in the future maybe talk about like some
+of the dino deploy and Edge stuff that
+you all have yeah absolutely I'd really
+love to show deploying a whole project
+um next
+time the next episode

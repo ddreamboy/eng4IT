@@ -1,0 +1,245 @@
+Hey there, I'm Mike, and today we're going to look
+over the top 15 Python frameworks
+you need to master in 2023.
+(upbeat music)
+Python has quickly become
+one of the most popular programming languages
+due to its simplicity, versatility,
+and abundance of resources available to those
+learning the language.
+It's often the first language
+that beginner programmers learn,
+and it's also widely used in the industry
+for purposes ranging from web development to data analysis.
+In this video, we'll dissect the most popular
+and useful Python frameworks that you should get to know.
+But before we get started,
+I wanna let you know that there'll be links
+to more resources in the video's description.
+And remember, subscribe and ring that bell
+to get notifications
+for future helpful content.
+Now, let's check out the top 15 Python frameworks.
+The following are lightweight microframeworks,
+useful when you want to create a simple app rapidly
+or have little memory consumption in your server.
+Do you want to create ridiculously light web applications
+with no other dependencies?
+Bottle is a lightweight Python microframework
+designed to easily build small
+or medium-sized web applications.
+It doesn't include any external dependencies,
+aside from the Python standard library.
+Its built-in templates make it easy to learn and use.
+Bottle is built on top of the WSGI standard
+and is compatible with most web servers and Python versions.
+CherryPy is a minimalistic
+website application development framework for Python.
+It's an object-oriented framework that allows you
+to build web applications in the same way
+you would with any other OOP in Python.
+It's been around since 2002,
+and has been widely adopted in production environments
+across a diverse range of websites,
+from those with simple functionality
+to those that demand high complexity.
+For example, both giant software services Netflix and Hulu
+use CherryPy as a part of their infrastructure.
+The main task of CherryPy is to handle HTTP requests
+and match them with an adequate logic
+written by the developers.
+This means that by default,
+CherryPy doesn't provide database access or HTML templating,
+leaving all the logic of the application to you.
+The following are complete web frameworks
+that include components for common web development tasks,
+such as database access, form handling, and security.
+Unlike microframeworks, Python web frameworks
+provide everything you need out of the box.
+You should really consider your needs
+when building a web app.
+Sometimes it's more than enough to just use WordPress.
+Django is one of the most popular
+and widely used web frameworks in the Python ecosystem.
+It's a rock solid full stack framework
+that includes everything you need to build
+a complete web application.
+It was first introduced in 2005
+as a Pythonic way to build a newsletter site.
+Nowadays, it's one of the most used Python libraries
+for web development,
+with almost 8 million downloads per month.
+Some of the biggest sites ever made
+were originally created with Django, such as Instagram,
+discus, Pinterest, Bitbucket, and Chess.com.
+Django follows the model view template architecture,
+and includes built-in features such as templating,
+database management, admin panel, signals,
+and views to manage the logic of your backend.
+To master Django,
+it's advisable you have strong fundamentals
+of Python object-oriented programming,
+as well as functional programming.
+You won't go wrong by choosing Django
+for your next web project.
+It's a powerful web framework
+that provides everything you need
+to build fast and reliable websites.
+And if you need any additional features,
+say the ability to create a REST API
+to use with modern front-end frameworks
+like React or Angular, you can use extensions
+like Django REST framework.
+Plus, Django is one of the simplest frameworks
+to set up and deploy through Kinsta.
+FastAPI is a modern web framework
+that does one thing spectacularly well,
+build APIs.
+Since it's released in 2018,
+it has rapidly gained popularity
+due to its great performance and simplicity.
+In fact, FastAPI has over 9 million monthly downloads,
+surpassing even full-stack frameworks like Django.
+Bear in mind that FastAPI's only purpose
+is to build backend APIs.
+That means you must have a frontend framework like Vue.js
+to display your site to your users.
+That said, the framework is incredibly easy to work with,
+and you can even deploy an app with your FastAPI
+through Kinsta and your GitHub repo in mere minutes.
+Pyramid is a flexible and extensible web framework
+that's well-suited for both small and large applications.
+It's the sweet spot between a microframework like Flask
+and a full-stack framework like Django.
+Pyramid includes the most common features you would need
+when developing a Python web application,
+but it'll lets you focus on only the components
+you need for your project.
+The following Python graphical user interface frameworks
+provide a wide range of tools and features
+for creating desktop applications,
+including support for event-driven programming,
+widgets, and graphics.
+PyQt is one of the most popular sets of Python buildings
+for the Qt cross-platform application framework.
+This framework perfectly combines the simplicity of Python
+as a general purpose language,
+and the powerful Qt application framework built in C++.
+A binding is an API, think of it as like a bridge,
+between two programming languages.
+In this case, the Python bindings for Qt
+mean you can use the Qt tools written originally in C++
+inside your Python code.
+Bear in mind that PyQt comes with two licensing options.
+GPL version 3 is free to use,
+but anyone you distribute it to is able to redistribute it.
+And Commercial,
+and this lets you keep your code private
+so you can monetize your work,
+but you'll have to pay for a license
+for every developer that uses it.
+Currently, it's about $550 per developer.
+Tkinter is a built-in Python GUI framework.
+It's part of the standard library,
+so you won't have to install any additional dependencies.
+Similar to PyQt, which uses Qt,
+Tkinter uses a graphical user interface toolkit called Tk.
+It also provides a set of tools for creating various widgets
+such as buttons, labels, text boxes, and menus.
+In general, Tkinter is a great way to quickly create
+small GUI programs, but due to its outdated look and feel,
+you might be better off
+choosing a beefier framework for bigger projects.
+The following are Python software libraries
+that provide pre-built functionality and tools
+to help developers build and deploy machine learning models,
+supporting common tasks such as data processing,
+model training and evaluation,
+as well as tools for deploying models to production.
+scikit-lern is the most popular machine learning library
+being used both in the tech industry and in academia.
+It provides efficient tools for common ML tasks,
+and it's built on top of other scientific libraries
+like Numpy and SciPy.
+TensorFlow is an open source platform
+for building and deploying machine learning models.
+Deployed by the Google Brain team in 2015,
+it's a powerful library for deep learning,
+with a wide range of tools
+for building and training neural networks.
+TensorFlow can be used for a variety of tasks,
+such as image and language processing,
+speech recognition, and predictive analytics.
+These frameworks help students, scientists, and researchers
+to perform their tasks without focusing
+on the low level details of the computation.
+Scientific computing frameworks often include functionality
+for linear algebra, optimization, interpolation, integration
+and other common tasks in scientific computing.
+NumPy is a scientific computing library
+that is designed to handle multi-dimensional arrays
+and matrices of numerical data.
+It also provides a wide range of mathematical functions
+to operate on these arrays.
+NumPy is the foundation block
+for many other Python libraries and frameworks
+using data science, including SciPy, Pandas,
+scikit-learn, and TensorFlow
+SciPy provides a collection of algorithms and functions
+built on top of the NumPy.
+It helps to perform common scientific and engineering tasks,
+such as optimization, signal processing,
+integration, linear algebra, and more.
+These frameworks are all about helping you
+in the tedious process of testing your code.
+If you're using test-driven development,
+the following frameworks are a must in your workflow.
+Pytest is a widely adopted testing framework
+that is designed to be easy to use and extend.
+It helps you to write elegant tests
+in both small and complex Python codebases.
+Unittest is a built-in Python testing framework
+that is based on the xUnit testing conventions.
+It provides a Pythonic and object-oriented way
+of creating automated test cases and suites of tests.
+These types of Python frameworks provide a set of tools
+and libraries that enable developers
+to write asynchronous code
+in a more manageable and efficient way.
+asyncio is at the heart
+of many other asynchronous frameworks.
+It allows developers to create concurrent code
+using the async/await syntax, and it's designed to handle
+thousands of concurrent connections.
+asyncio provides a single API
+for multiple transport protocols,
+such as TCP, UDP,
+SSL/TLS, and subprocess communication.
+Aiohttp is an asynchronous HTTP client/server framework
+built on top of the asyncio package.
+It provides a simple and intuitive interface
+for handling HTTP requests and responses,
+as well as support for middleware, sessions,
+and other web development tools.
+Python frameworks can help to promote code organization,
+increase productivity,
+and make the software development process
+easier and more efficient.
+Which Python frameworks have you worked with
+and what's been your favorite?
+Share your thoughts in the comment section below.
+At Kinsta, we take hosting
+and performance to the next level.
+With our application hosting, you can run almost any app
+in a matter of minutes with full support
+for all of your favorite languages and frameworks.
+And our database hosting allows for easy database creation,
+with full control over every aspect of your project.
+Explore these features and more
+at kinsta.com/application-hosting,
+and thank you so much for watching.
+If you found this video helpful,
+please don't forget to like, subscribe,
+and hit the notification bell from more tutorials,
+explainers, and helpful content like this.
+(upbeat music)

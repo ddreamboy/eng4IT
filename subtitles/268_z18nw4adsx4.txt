@@ -1,0 +1,1133 @@
+if you have an interview coming up and
+you want to revise 10 most important
+machine learning algorithms real quick
+you will not find a better video than
+this let's go ahead and do the revision
+of 10 most frequent used ml algorithms
+these are the 10 algorithms I am going
+to explain you how they work and what
+are their pros and cons okay and as you
+can see first five algorithms is in one
+color next three is in a different color
+and last two is in a different color
+there is a reason for that guys I will
+tell you in a moment but before that
+let's try to answer two basic questions
+okay let's try to answer what is machine
+learning and what are algorithms okay so
+I'll start with a non-bookish definition
+and I will give you one simple example
+suppose you want to travel from
+Bangalore to Hyderabad okay where you
+want to go you want to go from Bangalore
+to Hyderabad
+for this you can either take a train or
+you can either take a flight or you can
+take a bus as well or maybe you can
+drive your own car as well okay so two
+things we have to understand here guys
+what is the task okay and what is the
+approach
+fine
+so the task in hand is we have to go
+from Bangalore to Hyderabad okay and the
+approach is all these three options that
+I told you just now
+now related to the world of machine
+learning in machine learning the task
+can be different kinds of tasks okay for
+example it can be a regression task
+okay or it can be a classification task
+okay
+or it can be a unsupervised learning
+problem I will just write unsupervised
+okay so in approach section we can have
+different different approaches based on
+if we are solving a regression problem
+or we are solving a classification or we
+are solving a particular case of
+unsupervised learning okay in regression
+also we can take many approaches for
+example in regression there is not only
+one approach in regression I can take
+approach one approach two approach 3
+approach 4 approach five in
+classification I can take this approach
+this approach this approach in
+unsupervised also I can take multiple
+approaches so that is why this color
+coding is there
+the first five algorithms that you see
+here
+will solve I will explain you for
+regression use case Okay so there we
+will take a regression use case and try
+to understand how to solve that using
+these five algorithms okay the next
+three that you see I am going to explain
+you with a classification use case so
+these approaches are for classification
+problem okay
+and last two I am going to explain you
+for a unsupervised learning problem how
+that will be this these algorithms will
+be used to solve unsupervised learning
+problem okay
+so let's go ahead guys and try to
+understand with a simple input data I
+have taken a sample input data here and
+let's without any delay start on the
+first algorithm known as linear
+regression so machine learning is all
+about learning pattern from the data
+using algorithms okay so if we are using
+a algorithm known as linear regression
+then what will happen let's try to
+understand that so first algorithm of
+our list linear regression okay now
+suppose this is the employee data of an
+organization you have a age column you
+have a salary column fine so 22 years
+person earns 23 000 and so on and so
+forth suppose we using the linear
+regression approach to solve this
+regression problem now as I told you
+first five problems will be regression
+problems first five algorithms you will
+understand using regression problem okay
+come here this is your data so what
+linear regression will do is
+it will just take this data and it will
+see how the data is plotted on a XY
+plane like this for example on one axis
+we can take salary okay on y axis
+and on x axis we can take Edge okay and
+I am just roughly pointing these points
+okay first point 22 and 23 000 maybe it
+can come somewhere here on x axis if you
+put h on Y axis salary I am just putting
+here second data point can come
+somewhere here let's say 41 and 80 000
+data points and third data point 58 and
+150k this data point can come maybe
+somewhere here I can say okay
+so what linear regression will do is it
+will try to plot a line okay ideally
+what the assumption is all these points
+should fall on same line
+a line like this can be plotted or a
+line like this can be plotted but the
+Assumption here is
+ideally in an Ideal World all these
+points will fall in the same line but it
+will never happen in the real world so
+what logistic linear regression will do
+is it will try to fit something known as
+a best fit line okay so this is your
+best fit line let's assume that how this
+best fit line is computed it will try to
+minimize the distance from all these
+points together so distance from this
+point is this distance from this point
+is this parallel to Y axis distance from
+this point is this okay so you can call
+this even you can call this E2 you can
+call this E3 okay so what linear
+regression will do is it will try to
+minimize even Square
+plus E2 square plus E3 Square
+for whichever line it finds the minimum
+even Square E2 Square E3 Square it will
+call that line as the model
+okay it will call that line as the model
+now as you know from your normal
+understanding of mathematics
+this straight line will have a equation
+in the form of mostly simplest we can
+write Y is equal to MX plus C right in
+our case I can say salary is equal to M
+times h m times of H this is
+multiplication plus c c can be an
+intercept let's give some number here
+some random number I will give let's say
+2000 okay
+so imagine this line which is the model
+for linear regression has this formula
+okay now the next question comes
+tomorrow when the pattern has been
+learned and a new age comes let's say
+age is 50.
+so what will be the salary for that
+person so very simple the model will
+come here and put the numbers here for
+example if for M we can put any number
+let's say 0.2
+then age will be 50 and then salary will
+be intercept will be 2000 whatever this
+calculation comes that will be the
+prediction of the salary for this 50
+okay very simple very simple
+mathematical model the assumption is
+there is a linear relation between
+independent variable and Target variable
+okay that's the Assumption so what it
+will do it will try to plot a line what
+it will call as a best fit line wherever
+it finds this value as minimum once the
+best fit line comes then how the
+prediction happens like this okay
+obviously there will be pros and cons of
+all the algorithms all the models so
+what is the pros and cons of linear
+regression the the pluses or Pros for
+this model will be it's a simple to
+understand model it's a mathematical
+model you can explain to someone but the
+cons will be
+um it's not necessary that your data
+will always be this simple that can be
+fit in a line right or close to a line
+so it's a simple model hence lot of real
+world problems it may be difficult to
+solve with simple linear regression
+there can be a varieties in linear
+regression that
+um I have created videos you can watch
+through those videos but simply linear
+regression works like this okay this is
+one first approach
+first approach means first algorithm now
+let's go ahead and try to see how
+decision tree will approach the same
+problem okay how decision tree will
+approach this same problem
+so if you give this same data okay if
+you give the same data to decision tree
+and you ask hey learn pattern from this
+data what decision tree will do is
+it will just try to break the data how
+it will break the data is it will create
+a rule like this okay so I can write a
+rule here for example I can say is less
+than equals to 30 this is a rule okay so
+some records will satisfy this rule okay
+some records will satisfy and some
+records will not satisfy this way data
+will break okay if you come here is less
+than 30 how many records only one record
+is more than 30 two records so how many
+records will come this side only one
+record will come okay so let's say that
+record is
+I should not write the wrong Numbers 22
+23k 4180k
+so I will write here 22 and 23 K and
+here I will write 41 and 80k okay and
+there is one more record let me take the
+numbers 58 and 150k
+58 and
+150k understand this carefully guys
+because for next next algorithms this is
+the base okay
+so decision tree will split your data
+like this so you had total how many
+records in the beginning three records
+here how many records you are having one
+record here how many records you are
+having two records okay so this is first
+level of split now definitely can split
+it one more time okay
+so tree can make here there are limited
+number of Records but imagine if there
+are more records there can be one more
+split here saying you know another
+filter is is maybe less than 40 or
+something like this okay but I will not
+take that now that will make the tree
+complex okay so this is your model
+breaking your data based on some
+conditions is nothing but your model so
+somebody asks you what is a model in
+decision tree this is your model now the
+important question is suppose tomorrow
+somebody comes and asks for a person
+with age 50 what is your prediction for
+a person with age 50 what is your
+prediction very very important concept
+to understand guys decision tree will
+come and check what is this for age 50
+okay so age 50 will come in which
+category will come in this line okay in
+this line how many records are there two
+records so decision tree will go ahead
+and take the average of these two
+salaries so for age 50 your prediction
+will be what will be the prediction guys
+for age 50 prediction will be 80k plus
+150k divided by 2. okay this is how
+decision tree will be making the
+prediction
+suppose you ask through this entry hey
+what will be the salary of a person with
+age 21 so it will not go to right hand
+side it will go to left hand side
+because this is the tree branch in which
+it should go it will directly say 23k in
+this case because there is only one
+record Suppose there are two records it
+will take the average okay so you see
+how these two approaches are different
+for solving same regression problem here
+a mathematical line will be fit and here
+a decision tree you know data will be
+broken into multiple pieces and
+prediction will be made okay remember
+guys decision tree is based for many
+other Advanced algorithms and our third
+algorithm in the list is something non
+as a random Forest okay a random Forest
+what random Forest will do is it will
+say decision tree okay you have done a
+good job but
+uh there is a chances of overfitting of
+the data so we did not discuss pros and
+cons of this process it's a simple model
+you know you don't need to do a lot of
+mathematics Etc and cons is there is a
+chances of overfitting because you know
+if there is a little change in the data
+your model may change totally that's a
+risk here in decision tree so
+overfitting
+So Random Forest will come and say Hey
+you are taking a right approach but
+there is a chances of overfitting so why
+don't you fit multiple trees so what
+random Forest will do is it will come
+and create multiple trees this is your
+tree one okay like the way we saw
+decision tree this is your for example
+tree one okay this is your for example
+tree two
+okay
+and similarly there can be n number of
+trees okay similarly there can be n
+number of trees so we will call this as
+T1 we will call this as T2 and that
+there can be you know 500 trees for
+example
+so what random Forest will do is it will
+say two deficiently hey if you are
+fitting one tree there is a chance of
+result being biased or there is a chance
+of overfitting or there is a chance of
+model not being stable but what I will
+do is I will fit 500 trees okay and how
+I will make the prediction is very
+important to understand here guys
+prediction of random Forest will be
+average of all these prediction for
+example if we are trying to predict for
+the age 50 right for the age 50 what
+will be the salary if we are trying to
+predict okay then in random Forest it
+will take prediction from tree one plus
+prediction from 3 2. Plus
+prediction from tree 500 okay it will
+take all the predictions and it will
+take average of that
+what is the what is the thing that we
+are trying to achieve here suppose in
+one decision tree your tree is
+overfitting or not performing well or is
+biased okay so what may happen in
+diffusion trees since you are taking a
+feedback from 500 different trees so
+that overfitting problem or model in
+stability problem may not be there okay
+so this is how random Forest is
+different from decision tree remember
+all these individual trees will not be
+using all the data for example
+suppose in your data there is one
+thousand rows and 10 columns okay just
+an example I am giving so all these all
+these trees will not use necessarily all
+the records it may be possible that tree
+One is using 100 records and three
+columns randomly selected three two T2
+is using three two hundred records and
+three columns randomly selected okay and
+that is the advantage of this random
+Forest that all these trees Will May
+learn a different kind of pattern and
+when you take a aggregated result then
+you will have all the flavors okay this
+kind of learning that I just explained
+you is known as and Sample learning okay
+remember guys at unfold data science you
+will find a big playlist explaining all
+the algorithms of Ensemble learning in
+detail I will paste the link in the
+description you must check if you have
+any confusion on how and simple learning
+works okay
+but there is more to Ensemble learning
+what happened just now in random Forest
+is known as parallel way of learning
+okay parallel way of learning
+parallel way of learning why parallel
+way of learning guys because here tree
+one and three two and three three are
+independent of each other when you call
+a random forest model 31 can start
+building by taking a sub sample of the
+data 3 2 can start building by taking a
+subsample of the data they are not
+dependent on each other okay so all
+these things can happen parallely hence
+we call it a parallel learning now the
+question is is there another way of
+learning in Ensemble yes there comes our
+next algorithm known as add a boost okay
+Ada boost standing for adaptive boosting
+so what Ada boost will do is
+let me write the data here let me write
+the data one more time and I may be
+writing some different numbers
+so that's not important just
+understanding the concept is important
+okay so 42 I will write 50 000 and let's
+say 58 I will write 150 000 just as an
+example this is your input data
+so boosting is another technique
+boosting is another technique of
+Ensemble category okay in boosting
+especially at a boost what will happen
+is it will assign a weight to all your
+observations okay suppose this is your
+original data for training salary being
+your target column so initial weights
+initial weights
+okay
+and
+what the initial weights will be it will
+be the same weight for all your records
+for example there are three records so
+one by three I am saying one by three I
+am saying one by three I am saying so
+all the rows are equally important okay
+try to understand the concept guys in
+Ada boost in the beginning first
+iteration all the rows are equally
+important okay but how Ada boost works
+is in the name only there is adaptive it
+adapts to the mistakes of the previous
+model now why I am saying a previous
+model and next model is one thing you
+have to always remember at a boost is a
+sequential learning process you you
+remember how I just now told random
+Forest is a parallel learning process
+so in random Forest
+tree one and three two are independent
+of each other okay it will take a sub
+sample and create it will take a sub
+sample and create nothing to do with
+each other
+but in adoboost or other boosting
+techniques
+it's a sequential model so there will be
+a multiple models in this so there will
+be multiple models fitted to the data I
+will tell you in a moment what these
+models will be model 1 model 2 model 3
+Model 4 and so on and so forth how many
+ever model comes but it will not happen
+parallely okay it will happen in
+sequence
+now the important thing to understand is
+how this sequence will be generated okay
+so what will happen is this model one
+you can think of as a base model this
+model one you can think of as a base
+model and remember in Ada boost your
+decision trees will look like stumps
+stumps means there will be a tree like
+this and there will be another tree like
+this so it will the depth of the tree
+will not be Beyond one level okay so
+this is called stumps in the language of
+machine learning
+so multiple stems will be created now
+suppose your model 1 is this first stump
+what is your model one guys this first
+stump okay
+model one comes and make some prediction
+about the salary model one comes and
+make some predictions about this salary
+okay so what we will have is another
+column called as salary underscore
+prediction and where from this
+prediction Comes This prediction comes
+from model one the first model okay so
+obviously there will be some mistakes so
+22 000 may be said as 21 900 and 50 and
+150 can be said as 50 can be said as
+let's say 52 000 okay and 150 can be
+said as let's say two hundred thousand
+based on this first model first decision
+tree that it is creating which I am
+calling a system so there will be some
+differences between actual and predicted
+and from this there will be a residual
+coming residual means errors right
+residual means errors okay so what will
+be the errors 21 900 minus 22 000 right
+so it will be for example I can say a
+hundred
+actual minus predicted it is minus two
+thousand and it is minus minus 50 000
+because we have put okay so this is the
+errors these are the actual values and
+the first model what it predicts right
+those are the errors from the first
+model OKAY twenty two thousand minus
+twenty one nine hundred is one hundred
+and so on and so forth
+now
+these are the initial weights okay
+so what will happen in the next model
+when the M2 is fitted right these
+initial weights will be changed and more
+preference will be given to the
+observations where these residuals are
+more okay I am repeating one more time
+guys M1 will predict this and then
+residuals or errors will come when the
+M2 is trained right then the weights
+will not be same for all these three
+records rather weight will be increased
+for this because you are getting more
+errors here and weight will be decreased
+for this because you are getting less
+error here okay
+and so on and so forth M2 will come
+compute create the residual then again
+weights will be adjusted M3 will come
+predict residual will be calculated
+weights will be adjusted and finally
+what you will get is a combination of
+what will be your final model your final
+model will be a combination of base
+model I am calling it the first model
+okay plus M1 plus M2 plus M3 plus so on
+and so forth remember this this is not a
+mathematical equation this is just
+indicative equation I am giving you okay
+if you want to understand more
+mathematics behind it please go ahead
+and click on the link I'm giving you in
+the description okay and all these
+things will not have equal say in the
+final output their say also will be
+different in the final output for
+example in random Forest you saw all the
+models have equal C in the final output
+we are dividing by 500 okay
+but here all these models will not have
+equal say they will have an equal say
+okay
+let's move ahead to another what is the
+pros and cons for this model again this
+model will give you a may give you a
+better result than most of the models
+because it is adapting to the changes
+but if you have a larger data side it
+may it may need more resources to train
+and also it is a one kind of Black Box
+model some kind of Black Box model means
+you don't have much explanation of what
+is going on inside apart from some hyper
+parameters okay
+let's move ahead to the last algorithm
+integration category known as gradient
+boost okay what is the last algorithm
+integration category gradient boost
+remember guys all these algorithms that
+I'm explaining you I have not taken
+anything that is used less all are used
+more only okay
+so I will take a simple data age
+salary is 21 salary let's say 20K is 40
+salaries let's say 42k is 58 salary is
+let's say 60k this is your input data
+and you want to run a gradient boost on
+this
+what will happen is understand guys this
+is again a sequential learning not a
+parallel learning okay so there will be
+a base prediction
+for all these data base prediction okay
+base prediction
+what is the base prediction guys base
+prediction is nothing but it's a kind of
+dumb model it will assume that for all
+these guys it will be a average of you
+know all these three records so what is
+the average of this uh 80 plus 42.
+80 plus 42 divided by 3 right so 2 1 1
+2. right let's say assume for Simplicity
+this is 36k okay so the base prediction
+will be put here 36k 36k 36k one is the
+base prediction comes then there will be
+a residual computed okay residual will
+be the difference between actual and
+predicted values whatever these numbers
+are
+fine now comes the interesting part how
+gradient boost is different from Ada
+boost or other algorithms so what
+gradient boost will do is it will try to
+fit a model on this residual okay it
+will try to fit a model on this residual
+and try to minimize these residuals so
+that will be called as a base model okay
+and then there will be next model you
+can call it residual model one okay and
+then there will be a next model you can
+call it residual model 2 and so on and
+so forth okay so what will happen is
+residuals will be computed and then
+whatever the residual comes based on
+that base prediction will be updated so
+for example let's say your residual here
+is how much 20 minus 36 minus 16 is your
+residual right
+so this will act as a independent column
+and this residual will act as a Target
+column
+and then let's say in the prediction
+this minus 16 is is comes as let's say
+minus 10. so what will happen is this
+base prediction will get updated by this
+this base prediction will get updated
+again it's a complicated model if you
+want to understand more details there
+are links in the description please
+click on that it will be very clear to
+you okay so what will happen base model
+plus residual model 1 plus residual
+model 2 so on and so forth and there
+will be some parameters which will
+assign weight to all these models so as
+I say all these models will not have
+equal vote in the final output there
+will be a different votes in this fine
+so this is about gradient boost one of
+the famous algorithm for winning kaggle
+competitions and most of the things so
+gradient boost and there is another
+variant of gradient boost known as xgb
+extreme gradient boost please go ahead
+and read about this algorithm guys I am
+not covering because there is a slight
+difference between gradient boost and
+sgb you can read about that as well fine
+let's move ahead to the second category
+of algorithms known as classification
+algorithms so in classification
+algorithms the first algorithm that I am
+going to cover is logistic regression
+now very very important guys please pay
+attention here and try to understand how
+logistic regression is going to work for
+any given scenario it's a mathematical
+model hence it is important for you to
+understand okay suppose this is an
+employee data and you have 21 22k
+whether the employee leaves the
+organization or does not leave the
+organization just I am saying 1 0 okay
+and then 40 year guy makes let's say 42k
+leave 0 no 58 year guy makes let's say
+60k just for example leaves know one so
+this is a classification problem where
+we are trying to predict whether a
+employee will leave the organization or
+does not leave the organization the last
+column that you see is your target
+column the last column that you see is
+your target column this type of problem
+is called a classification problem
+because what this what the objective of
+this model is tomorrow I give you age of
+the employee for example 31 salary of
+the employee for example 34k and I asked
+to the model hey Will the guy leave or
+not leave the organization okay so this
+is a classification problem how logistic
+regression will take this problem is we
+have we have to understand some
+mathematical Concepts here so if you see
+here the target column is 1 0 only so
+that is either one or zero one or zero
+okay so which means that Y which is our
+Target can be understand this is very
+important concept guys
+can be either 0 or 1 it cannot be
+anything else your target cannot be
+anything else apart from 0 or 1 but your
+age and salary can take any real number
+X can be
+any value between minus infinity to plus
+infinity right
+so X can be any value between minus
+infinity 2 plus infinity y can be only 0
+or 1 okay
+so what we have to understand here is we
+have to somehow create a relation that
+will enable us to predict y given X okay
+the problem here is on the left hand
+side we have minus infinity to plus
+infinity range that is X range okay so I
+will write here x x means independent
+features on the right hand side your
+values can be only 0 to 1 0 or 1 not 0
+to 1 okay
+so what we do is we do not directly
+predict y rather we predict something
+else what is that something else that we
+predict so in place of predicting y we
+predict probabilities okay probabilities
+of an observation falling in y
+probabilities
+l i t i e s Okay so
+what we will do is we will predict
+probabilities then the range will be 0
+to 1 as you know probability can take
+the range between 0 to 1 okay
+now this range is also not what we are
+looking for minus infinity to plus
+infinity so what we will do is we will
+do one more transformation and we will
+make this as a odds so what is the range
+of odds 0 to Infinity okay but still we
+are not minus infinity 2 plus infinity
+range so what we will do is we will take
+log of odds okay log of odds
+okay and then the range will become
+minus infinity to plus infinity
+how your equation will look like here is
+when you say log of odds right so on the
+right hand side it will be log of P by 1
+minus p
+okay on the left hand side you will have
+beta node plus beta 1 x 1 plus so on and
+so forth okay this equation that you see
+in front of you now is called the base
+equation for the logistic regression now
+one important concept to understand here
+guys this is a logic function okay and
+inverse of logit function H sigmoid
+function okay support suppose you take
+the inverse of this or sigmoid of this
+so what will happen is if you apply
+Sigma at both sides so if you don't know
+what is sigmoid function then sigmoid
+function f x looks like this 1 by 1 plus
+e to the power minus X this is your
+sigmoid function on XY plane how it will
+look like is this suppose this is your 0
+this is your 1 and this is your 0.5 okay
+so sigmat will look like this so it will
+always be between 0 to 1 okay so your
+logistic regression this equation will
+be changed in the form of sigmoid
+function so your f x or P okay P will
+look like if you take if you take
+sigmoid on both sides right then on the
+right hand side you will just have p and
+here we will have 1 by 1 plus e to the
+power minus
+beta0 plus beta 1 x 1 okay remember guys
+this equation is equation 1 and this
+equation is equation to both the
+equations are same the difference is
+this is a logit equation and this is a
+sigmoid equation okay now take it if you
+if you take a inverse of logit that is
+nothing but sigmoid okay understand this
+carefully and now this equation from our
+example how it can be written is 1 by 1
+plus e to the power minus beta 0
+plus beta 1 into age okay plus beta 2
+into salary
+this is nothing but your logistic
+regression equation okay and as you know
+as I told you this is a sigmoid function
+so the output of what you see here
+output of this will always be between 0
+to 1 which means you can get a
+probability and then you can say that
+based on this probability I can say
+whether the employee leaves or does not
+leave okay logistic regression is again
+a very important and not easy to
+understand concept okay so as you can
+see we are modeling a categorical
+variable against real numbers hence we
+need to do certain Transformations these
+are the Transformations that we need to
+do and how it relates to the probability
+I just explained you now okay pros and
+cons mathematical model not very
+difficult to understand cons it again
+assumes a lot of things about the data
+which may or may not be correct hence it
+may not give a great result all the time
+okay but very famous and very important
+algorithm to understand
+next algorithm in the category in the
+classification category one simple one I
+want to cover here that is known as gear
+nearest neighbor okay it's a pretty
+simple algorithm suppose in the same
+data on this data you want to build a k
+n algorithm okay so since I have data
+here so I will explain here only so what
+can happen is it will plot a x-ray plane
+like this okay and it's a
+three-dimensional data so you can have
+one more axis for salary
+or you can have two access only because
+from two axis we can we can predict okay
+so let's come here age and let's say
+here salary okay
+out of these three employees let's say
+one employees 21 22 employees Falls here
+and second employee 40 Falls here and 58
+Falls somewhere here okay so what K
+nearest neighbor will do is it will try
+to allocate neighbors to all these
+individual observations for example this
+is your observation one this is your
+observation two and this is your
+observation three okay so one does not
+has any neighbors but 2 is the neighbor
+of 3 and 3 is the neighbor of two okay
+so tomorrow some prediction comes for
+let's say age 50 again I will take 50
+example
+50 example
+so what it will do is it will try to see
+and I will take salary also because in
+this case salary is also there so salary
+is let's say 61k okay so what it will do
+is it will try to see where can I fit
+this 58 percent and salary 61k Maybe
+who are the nearest neighbor to that guy
+so the nearest neighbor to that guy may
+be this guy and this guy suppose that
+new guy comes somewhere here okay so who
+are the neighbors for this this is the
+first neighbor this is the second
+neighbor okay so it will simply go ahead
+and take the you know mode of results
+for example these these two guys are the
+are the second neighbors right I mean
+two neighbors of that so it will take 0
+and 1 which is maximum so in this case
+there is no mode of the data but
+obviously if you take a larger data
+there will be modes of the data okay so
+whichever mode for example Suppose there
+are 30 records out of that 20 is 1 and
+10 is 0. so the prediction for this guy
+will be whatever is maximum or whatever
+is mode so if the mode is one or zero
+whatever it is that will be the
+prediction for k n okay so as I told you
+Cannon is a pretty simple algorithm it
+will just plot your data try to find the
+nearest neighbors and then when a new
+observation comes you give how many how
+many Observer how many neighbors you
+want for that record and it will create
+one based on that okay so Canon is a
+simple to understand algorithm nothing
+complex in that so I covered quickly in
+that that slide itself okay now let's
+try to understand another classification
+technique known as support Vector
+machines or svms
+so what svms will do is it will plot
+your data in whatever axis you have
+suppose age is one axis and salary is
+one axis okay
+and your data points I will take little
+more data points okay your data points
+look like this so these are some data
+points and this is these are some more
+data points okay
+so what sbm will do is it will try to
+create something known as a decision
+boundary okay how this decision boundary
+is different from linear regression
+decision boundary is in any integration
+there is a pure mathematical equation
+involved here there is a concept of
+something known as a hyper plane okay
+for example if I draw a line between
+this right so all these guys black guys
+you can think leaves or Target column is
+one
+all these guys you can think does not
+leave or Target column is zero does not
+leave
+okay
+suppose your data is like this so what
+will happen is your svm will plot this
+is called in the language of sbm this is
+called a decision boundary okay decision
+boundary so in this case your data looks
+pretty simple pretty separated hence the
+decision boundary can be as simple as a
+line okay but in most of the scenarios
+real world scenarios decision boundary
+cannot be as simple as this okay so
+there will be some black dots here there
+will be some black circles here okay and
+there can be some this Cross Blue Cross
+this side right so in this case decision
+boundary is not doing Justice so
+decision boundary need to change and
+that is where the concept of hyper
+planes and kernels two very important
+Concept in svm guys if you want to
+explore more on sbm hyper planes okay
+and kernels
+so when your data become complex then
+simple decision boundaries cannot
+predict it well okay so you need to have
+a have a complex decision boundary and
+that is where hyperplane and kernels
+concept come but just to give you an
+idea of how svm works it will create a
+decision boundary and tomorrow any
+prediction any new result come for
+example somebody asks what is the um you
+know for a person with for a person with
+age 50
+and salary is 60k whether the person
+will leave or not leave so this svm
+model will see on which side of decision
+boundary this guy is falling if this guy
+falls on this side of decision boundary
+it says do not leave if this guy falls
+on this side of decision boundary it
+says leaves okay so in svm remember
+concept of decision boundaries hyper
+planes kernels and kernel tricks okay
+so we have covered three things from the
+classification scenarios and five things
+from the regression scenarios let's go
+ahead and try to see some unsupervised
+learning problems okay so what is the
+meaning of unsupervised learning till
+now we are having a Target column but in
+unsupervised learning we may not have a
+Target column okay suppose for the same
+employee data we have age and salary
+but somebody comes to you and tells you
+that hey can you tell me if there are
+different buckets of employees existing
+in my organization
+different buckets means some people with
+less age and more salary some people
+with more is endless salary so are there
+different buckets somebody can can come
+and ask you okay
+so how you will solve that problem is by
+using something knowledge clustering or
+segmentation okay so suppose the task in
+hand is here there are three records
+only but there can be more records right
+in the real world scenario what I am
+interested in knowing is if there are
+natural clusters in my organization so
+this is my organization data on one axis
+I have is on other axis I have salary
+okay and I have multiple data points
+here three data points only but I am
+plotting more data points just for
+demonstration okay so there is nothing
+to predict but employed is interested in
+knowing if there are buckets means if
+few employees are closer to each other
+in terms of their characteristics so for
+example these employees are closer you
+can call bucket one these employees are
+closer you can call bucket two or
+segment 2. okay but how this will be
+implemented is in K means clustering so
+one technique for implementing bucketing
+is K means clustering okay there can be
+other techniques also for segmentation
+or bucketing one technique is K means
+clustering in this technique what will
+happen is the distance between the
+various employees will be computed for
+example this is your employee one and
+this is your employee two okay suppose I
+ask you how similar is employee one from
+employee two so there can be different
+similarity metric that you can compute
+for example euclidean distance or
+Manhattan distance or cosine similarity
+Etc I have detailed video on these
+things as well I will link it in the
+description but suppose I tell you a
+simple uh you know how the distance how
+the similar Sim how these two employees
+are similar or different so you will say
+21 minus 40 whole Square
+plus 20K 20K
+minus 42k whole Square so on all the
+dimensions you are taking the distance
+between them squaring it and under
+rooting it this is called euclidean
+distance between E1 and U2 whatever
+number you get it okay
+so suppose E1 and E2 equilibrium
+distance is less and E1 and E3
+equilibrium distance is more so in that
+case you say E1 and E2 are closer to
+each other okay and in the similar way
+you start finding the employees which
+are closer to each other and then you
+call this as one bucket similarly this
+score you call is at an another bucket
+okay remember I have explained you in
+simple terms but there is a very
+important Concept in k-means known as
+centroid concept okay so please go ahead
+and watch unfold data science detailed
+the video on k-means clustering you will
+understand all the details of how
+centroid is defined and how this
+algorithm works at a mathematical level
+okay I will link that video please
+ensure you watch that
+so this is about k-means clustering now
+last but not the least guys you might
+have seen in Amazon and Flipkart that
+there are different different uh
+products that is recommended to you for
+example if you buy a laptop then it will
+tell you hey go ahead and buy this
+laptop bag as well so this is nothing
+but a recommendation okay
+in the Netflix if you watch let's say
+one movie one action movie let's say if
+you watch Mission Impossible then it
+will go and recommend you Jack Ryan
+series maybe okay
+so this is called a recommendation
+system that is running in background
+okay so how this system works one simple
+uh yet powerful technique for
+recommender system is known as
+collaborative filtering collaborative
+filtering
+okay
+so what collaborative filtering does is
+it will take users okay users
+and it will take items
+try to understand this simple concept
+Edge it's pretty simple to understand so
+users can be a month
+and users can be John
+and users can be do okay and in the
+items we can have let's say Mission
+Impossible
+in the atoms we can have Jack Ryan in
+the atoms we can have another any movie
+of James Bond Series in the atoms we can
+have Spiderman okay in the atoms we can
+have any comedy movies for example home
+alone you can say okay
+so Aman which movie Aman watches or
+which movie Aman has watched for example
+Mission Impossible Aman has watched Jack
+Ryan he has watched but he has not
+watched let's say this movie Zero I will
+say okay James one movie and this movie
+he has not not uh watched okay
+Spider-Man movie there is another guy
+John who has watched Mission Impossible
+Jack Ryan James Bond movie and
+Spider-Man movie as well
+there is another guy doe who has not
+watched any of these movies but has
+watched Home Alone the comedy movie okay
+so
+the which users are similar to which
+user will be computed based on one of
+the user similarity metric so what are
+the user similarity metric I told you
+cosine similarity it can be different
+kind of distance metric so as you can
+think from the common sense also here
+Aman watches action movies if you can
+see here and John also watches action
+movies more
+Mission Impossible and Jack Ryan but
+Aman has not watched James one movie and
+Aman has not watched Spider-Man movie so
+what will happen is since Aman and Jon
+are similar to each other so go ahead
+and watch the movies that Jon has
+watched but Aman has not watched because
+Aman and Jon both tastes are similar so
+go ahead and recommend what John has
+watched but Aman has not watched so what
+will be the recommendation going to Aman
+James Bond movie and Spider-Man movie
+Okay now imagine this is a large metric
+of large users and large items so it
+will be seen which users tastes are
+similar to each other okay and then
+the other user which has not watched
+that movie will be recommended the
+movies or series based on the similar
+users watching history okay this is
+pretty simple but powerful technique
+known as collaborative filtering
+so let's revise once guys what all we
+discussed long discussion but very very
+fruitful for you to revise few
+fundamental concepts linear regression
+decision tree random Forest data boost
+gradient boost for segregation we
+discussed classification I explained you
+logistic regression how svm works and
+how k n works and I explained you two
+unsupervised technique came instant
+collaborative filtering now not in too
+much detail I went because it's not
+possible to go in all the details of 10
+algorithms in short time but read this
+as a refresher and please go ahead and
+click all the links of whichever
+algorithm you are more interested in
+learning all the videos are there on all
+four data science okay
+I request you guys please press the like
+button if you like this video and please
+press the Subscribe button and the bell
+icon
+if you want me to create more videos
+like this see you all in the next video
+guys wherever you are stay safe and take
+care

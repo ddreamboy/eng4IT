@@ -1,0 +1,679 @@
+hello i'm luis serrano and in this video
+we're gonna learn principle component
+analysis or PCA principle component
+analysis or PCA
+is one of the most important
+dimensionality reduction techniques out
+there
+what is dimensionality reduction well
+let's say you have a huge table of data
+so big that it's hard to process and you
+would like to make it into a smaller one
+while still keeping it as much of the
+information as possible so
+dimensionality reduction techniques what
+they do is they reduce the number of
+columns so today we're going to learn
+PCA in a few steps first we're gonna
+learn mode projections are then another
+on variance covariance the covariance
+matrix then we will learn what I give
+values and eigenvectors are and finally
+we're gonna go to PCA so let's begin so
+let's start with a simple problem let's
+say we have a bunch of friends standing
+like this and we want to take a picture
+of them so the question is where do we
+take the picture from what angle so it
+could be this one it could be this one
+or this one
+well it seems like this would be one of
+the best angles to take the picture
+right and that's really what
+dimensionality reduction is it's taking
+a picture of your data and trying to
+keep as much information as possible in
+this picture so when your data looks
+like this then a picture of the data
+could be for example projecting it over
+this line then you get these points over
+here another one could be projecting it
+over this line now the question is
+intuitively which of the two projections
+seems better let's compare them put them
+side-by-side well it seems to me another
+one on the right is better because the
+points are more spaced out and you can
+actually tell them apart if you only
+have this picture you could actually
+make out the day a little better than
+with the one on the left so what we're
+gonna learn in this video is how to
+obtain the projection in the right how
+to get that sort of ideal line to
+project our data and keep it as far as
+as possible so first a little
+parentheses why does this matter
+why did we do this so let me give you an
+example of some housing data let's say
+we have a housing data set with a bunch
+of columns with the fall information
+sighs number of rooms number of
+bathrooms the schools are around the
+area and the crime rate so if I gave you
+this data set and I told you there's too
+many columns there's five and I want
+less what would you think feel free to
+pause the video and think how can we
+sort of reduce this and keep the
+information well just from my balling it
+I can see a difference here right the
+first three features are related to size
+so maybe we can lump them together into
+something called a size feature and the
+second two are related to the
+neighborhood so let's lump them together
+into something called a location feature
+so that's what dimensionality reduction
+is right we went from five columns to 2
+and we're capturing the information
+because it seems to me that a bigger
+house may also have a higher number of
+rooms and a higher number of bathrooms
+so we may not need the 3 piece of
+information we may need maybe maybe a
+sum of the 3 or maybe a weighted sum and
+the same thing for the second for the
+location feature so how to do this
+ideally that's what PCA does so let's
+look at an example not not from going
+from five columns to two but let's go
+from two columns to one so we have
+number of rooms in size and we're gonna
+try to lump those into one feature so we
+have a graph here where on the
+horizontal axis we have number of rooms
+and on the vertical axis we have size
+and notice that our suspicion was
+correct the bigger the house the more
+rooms it has there is some variation but
+for the most part and so where would be
+projected data how do we take a picture
+of this houses so that they look as
+spaced apart as possible well let seems
+like this line would work right and a
+little aside we're not doing linear
+regression we're not trying to fit the
+closest line to the data we're trying to
+fit the one that makes the best
+projection so it's slightly different
+and definitely with the different
+purpose but if we do this then we
+project each cows to the line by drawing
+the perpendicular and sending it there
+so we do this and then our dataset
+changes a little bit it's not exactly
+the same one it's not faithful to the
+data but it's much much simpler because
+now it's not two-dimensional it's
+one-dimensional because now we can see
+it like this and now we only have one
+which is the size feature so now all of
+a sudden our data set became more simple
+it went from being a two dimensional
+data set to a table of two columns to a
+one dimensional data sets to a table
+with only one column now every house
+only has one number attached to it not
+two so from two dimensions to one
+dimension namely size and number of
+rooms to the size feature now we did it
+from two dimensions to one dimension
+because it is graphically nice to see
+but you can imagine that from five
+dimensions to two dimensions it would be
+going from something like these features
+to the size and the location feature so
+it's hard to picture five dimensions in
+our head but imagine what we just
+different to the one imagine it doing
+from five to two so if you seen
+statistics before the next couple of
+minutes may look like a Ryu but I still
+find it interesting because I like to
+see things in a more geometric way so
+what is the mean of a set of numbers
+well let's say that I have three weights
+that are exactly the same and I want to
+balance them so how do we balance them
+how do we find the perfect point of
+balance for these three weights and
+let's just assume that that bar has no
+weight so what I'm gonna do is I'm gonna
+imagine there's a wall here at the left
+and I'm gonna measure the distance from
+every point to the wall so the one is
+that distance one then the other one is
+to one and the other one is six and I'm
+gonna take the average of these points
+so the mean is one plus two plus six
+divided by three and that's the point of
+equilibrium if I were to put a balance
+here at three then the points would
+balance but now there are a lot more
+things I can say about a set for example
+what if I have these three points and
+these three points how do I tell those
+apart well not using the mean because
+they have the same mean notice that they
+balance on the same point but if you can
+see the points on the top are a lot
+closer to each other and the ones at the
+bottom are a lot more spread out so how
+do I measure that what I'm gonna do is
+I'm gonna take the distance from each
+point to the center so the point in the
+left is a distance one from the center
+and the point of the right distance one
+from the center and the point in the
+middle is this distance zero for descent
+from the center because it's actually
+the center is the point where the points
+balance
+and the same thing in the bottom except
+these are 5 5 and 0 so the variance is
+you're gonna add these numbers but
+actually it's gonna square them and the
+reason we square them is because
+actually when you take a distance that
+goes towards the left you're subtracting
+and it coordinates and then so you're
+gonna get a negative number so you
+square everything so you get everything
+positive and so for the top you get 1
+squared plus 0 squared plus 1 squared
+divided by 3 which is 2/3 and for the
+bottom one we get 5 squared plus 0
+squared plus 5 squared divided by 3
+which is 50 over 3 so it's much bigger
+so this is basically a measure of how
+spread out is a set so now we have what
+is the variance of the original set well
+from the center the point of the left
+side distance to the next point is a
+distance 1 and the point in the rises
+distance 3 so the variance is 2 squared
+plus 1 squared plus 3 squared divided by
+3 the average of these squares and so
+that is 14 divided by 3 so you can see
+that it makes sense 14-mile 3 because
+that kind of spread out now the question
+is what is the variance for a
+2-dimensional data sets on the set is in
+the plane what do we mean by spread out
+well two things we can do is ask how
+spread out it is in the horizontal
+direction and how spread out is in the
+vertical direction so basically we
+forget about the height and we send
+everything to the horizontal or x axis
+and then calculate the variance of those
+points which is the experience and then
+do the same thing by forgetting the x
+coordinate sending everything to the
+vertical axis and now with those points
+we calculate the y variance and then we
+have two numbers the X variance and the
+Y variance and they should tell us well
+how spread out as a set however there
+are some technicalities let's look at
+this set and let's look at this set what
+are the x and y variances of those two
+well let's calculate the X variance and
+let's say these distances are 2 so it's
+gonna be 2 squared plus 0 squared plus 2
+squared divided by 3 which is 8 divided
+by 3 and what's the Y variance well it's
+the
+distances are one then it's one squared
+plus 0 squared plus 1 squared divided by
+3 which is 2/3 so those two sets have
+the same X variance and the same way
+variance but they're fundamentally very
+different so how do we tell those two
+apart can we have a third metric that
+tells us that these two are different
+and the answer is yes and it's gonna be
+covariance so the question the
+covariance answers is how do we tell
+these 3 points apart from these three
+points so let's think can you think of a
+number or a metric that tells those two
+sets apart so if we're to pause the
+video and think about it now tell you
+the one that I think it's the product of
+coordinates so what if you look at the
+two numbers and multiply them to 201 the
+-2 and the 1 etc well let's see for the
+point in the middle 0 times 0 is
+obviously 0 for the top right in the
+bottom left corner it's actually plus 2
+because 2 times 1 is 2 but minus 2 times
+minus 1 is also 2 and for the air two
+points is minus 2 because 2 times minus
+1 is the same as minus 2 times 1 which
+is minus 2 so this product of
+coordinates is positive for these two
+points and negative for these two points
+and it's therefore the one in the middle
+but that that's ok
+it still it still helps us tell the
+points apart so basically covariances
+that is the sum of products of
+coordinates see before it was the sum of
+squares of one of the coordinates now is
+the sum of products of coordinates so
+let's calculate the covariance of this
+set we see that the products are -2 0
+minus 2 and for this set where the
+products are 2 0 & 2 so the covariance
+for the center-left is negative 2 plus 0
+plus negative 2 which is minus 4 over 3
+divided by 3 the average of those and
+the one on the right is 2 plus 0 plus 2
+divided by 3 which is 4 over 3 so the
+point in the left have a negative
+covariance and the point ins in the
+right have a positive covariance if you
+heard the team correlation that's also
+very related to this the points on the
+left are negatively correlated and the
+ones on the right are positively
+correlated because in the ones on the
+left as the X Direction grows the Y
+direction decreases whereas the ones in
+the
+as the acceleration grows the
+y-direction grows as well so let's look
+at another set and try to calculate the
+covariance this is our set what do you
+think the covariance of this one is
+gonna be well let me tell you let's
+calculate all the products they are -2 0
+& 2
+according to this numbers over here and
+then the covariance is just the sum of
+all those things but you can see that
+they all cancel out so the sum of all
+those things divided by 9 the average is
+actually 0 and it made sense because
+this set is not positively correlated or
+negatively correlated it doesn't look
+like a diagonal in either one of the
+directions it looks like a sort of thing
+in the middle so by looking at the type
+of set we can sort of tell the
+covariance if we have a set like this or
+like this or like this what do you think
+the covariance is are so the first one
+looks like an inverted diagonal so it's
+not negative covariance the first one
+looks like it's just sort of well
+centered so it's have probably
+covariance of zero or a very small
+covariance and the third one is bus has
+a positive covariance because it looks
+like sort of forwards diagonal so this
+covariance is gonna help us a lot with
+PCA so we're now ready to start thinking
+about PCA let's say we have a data set
+like this one how do we find the perfect
+projection well first let's put it in
+some coordinate axes and the first we're
+gonna do is Center it so Center it means
+we're gonna take the average of the
+coordinates both in the X and in the Y
+direction find that center of mass think
+of the point where these set would
+balance and move that to zero so we're
+going to move it so that this data set
+is centered at zero and now we are gonna
+create a 2 by 2 matrix and the 2 by 2
+matrix is going to be very simple it's
+just going to be formed by the two
+variances and the covariance of this
+data set so on the top left corner we're
+gonna put the X variance so the variance
+on the horizontal axis and this
+coordinate we're gonna put the Y
+variance so the variance in the vertical
+direction and then in the other two
+spots we're gonna put the covariance
+we're gonna put it there twice and in
+the literature this matrix is normally
+called
+Sigma but we're just gonna call it the
+covariance matrix and so let me just
+make up some numbers this data set looks
+like it could have this covariance
+matrix nine four four three because nine
+is the experience because the dancer
+looks like it's pretty spread in the X
+Direction is not so much spread in the y
+direction so the variance wise may be
+something like three and it looks like
+it's up has positive covariance because
+it looks like like a forwards diagonal
+so let's just say that the covariance is
+four so now we're gonna do a little
+aside on linear transformations because
+that matrix we're gonna think about it
+now as a linear transformation don't get
+scared with the term linear
+transformation is really just a function
+or a map from say the plane to the plane
+this could be also be in higher
+dimensions but here it's just gonna be
+in two so it sends any point in the
+plane on the left to a point in the
+plane and the right in the following way
+using the numbers of the matrix so a
+point of coordinates X comma Y gets sent
+to the point 9 X + 4 y + 4 X + 3 y so
+two coordinates go to two coordinates
+and the numbers are taken from matrix
+this nine and this for getting coded
+here and this 9x was for Y and this 403
+getting coded in this 4 X + 3 y if you
+feel more comfortable thinking of points
+as a two rows instead of two columns the
+way I did it feel free to think of that
+so that you can think of matrix
+multiplication but if you want to just
+simplify think about it this way so
+let's see what this transformation does
+let's see what it does to several points
+where does the point 0 0 go well what is
+9 times 0 plus 4 times 0 well that's
+your 0 and 4 times 0 plus 3 times 0
+that's 0 so this book goes to a point 0
+0 so let's draw the point in the left
+the point 0 0 and that goes to the point
+0 0 so very simple let's do another
+slightly more complicated point where do
+you think they go point 1 0 goes at any
+moment feels very pause the video and
+think about it yourself
+1 0 goes to 9 4 because if you plug in
+the numbers 1 and 0 for x and y you get
+9 + 4 4 9 x + 4 y because you get 9
+times 1 + 4 times 0 and then 4 times 1 +
+3 times 0 so that goes to the point nine
+four so we're gonna send the point 1 0
+to the in the left to the point nine
+four at the right and these are not
+drawn at scale
+but I'm trying to capture the entire
+entire movement here next point would be
+0 1 which is over here and you can do
+the math that goes to 4 3 so it goes
+over here the next point is minus 1 0
+which is here and it goes to minus 9
+minus 4 which is over here and finally
+the point 0 minus 1 which is over here
+goes to the point minus 4 3 which is
+here and hopefully you can see a pattern
+here right as a matter of fact if you
+take this circle the unit sphere where
+do you think it goes well it goes to
+this ellipse over here now it almost
+seems like what we did was stretching
+the plane in a sort of diagonal
+direction actually we did two
+stretchings but one is very small but
+that's really what a linear
+transformation does most of them so
+let's think about this there is some
+vector here the red vector that actually
+goes to this one so what happens is we
+sort of stretch the plane in that
+direction the direction is we can
+calculate in a minute but it's 2 1 so
+it's 2 units to the right and one unit
+up that's that's just a direction that's
+not a vector and the magnitude is 11
+we'll see why it's 11 but basically the
+plane got stretched by a factor of 11 in
+that direction and then there's another
+vector which has the direction - 1 2 and
+that one gets sent to itself so it's
+actually stretched by a direction of 1
+sometimes you will have different
+numbers but basically think of it as 2
+stretchings
+and they happen to be perpendicular in
+this particular case so let's let's see
+the directions are 2 1 and -1 - these
+are the eigenvectors which give us
+direction and the eigenvalues which are
+these factors of stretching are 11 and 1
+so those are as I said called
+eigenvalues and they give us the magnet
+so again we can think of a linear
+transformation given the eigenvectors
+and the eigenvalues as in the direction
+to one so two units to the right and one
+up we stretch by eleven in the direction
+minus 1/2 which is one unit to the left
+as minus one and two units up we stretch
+by a factor one so we don't do much and
+so the transformation basically does
+this so notice that these two vectors
+are very special because an average
+vector so anything that goes like in
+this direction for example I'm just
+drawing a random vector goes to some
+other thing but the red vector goes to
+something that points in the same
+direction and the green vector goes to
+something that points in the same
+direction so those two are the
+eigenvectors the two vectors that
+actually go to something that points in
+the same direction then basically what
+you're trying to say is that the linear
+transformation which is this matrix for
+most vectors it does some crazy thing
+but for two particular vectors applying
+it to the vector V is the same as
+multiplying that vector B via number
+right
+so it's scaling and it's sending in the
+same direction so these are the
+eigenvectors the red and the green
+vector and this value is the eigenvalue
+so there are many ways to calculate and
+given values and eigenvectors my
+favorite was just type the matrix into
+Wolfram Alpha and it just tells me
+everything there's another right way
+that I won't get into much detail but
+basically you take your matrix you take
+the characteristic polynomial which is
+subtract X minus the things in the
+diagonal and then do - for everything
+that's off the diagonal take the
+determinant of this which is this
+formula over here and express it as a
+quadratic and factor this quadratic into
+two things and then you magically get X
+minus 11x minus 1 I'm going a little
+fast here because it's something that if
+you really are interested you can you
+can read further then the eigenvalues
+are gonna be the two roots of this
+polynomial so xi + 1 that's how we find
+the eigenvalues and how do we find the
+eigenvectors well now that we have the
+eigenvalues and
+we have transformation times a vector UV
+and I'm reusing the letter V but that
+doesn't matter we just have two
+coordinates is equal to 11 times that
+vector and the matrix times another
+vector is 1 times that vector so if we
+solve these students equations for u and
+V we get the eigenvector to 1 and the
+eigenvector minus 1/2 if you find this
+interesting and you want to see some
+amazing animations with amazing
+explanations go to this channel three
+blue one Brown he has a whole series on
+linear algebra and his treatment of
+eigenvectors and eigenvalues is actually
+fantastic so that may have been a little
+bit too much math but think about this
+as the moral just says that if you have
+a linear transformation it is stretching
+the plane in two directions and those
+directions are given by the eigenvectors
+and the amount you're stretching is
+given by the eigenvalues okay so now
+we're ready to do PCA first we start
+with a data set and we Center it now we
+calculate the covariance matrix which as
+we saw the X variance is 9 the Y
+variance is 3 and the covariance is 4 so
+this matrix has eigenvectors which give
+us direction I give values to choose
+magnitude the first one is Direction to
+1 and 9211 which is this one over here
+the second wise direction minus 1/2 and
+magnitude 1 which is this one over here
+and notice that the two eigen vectors
+and eigen values tell us a lot about our
+data set right because it sort of tells
+us in what direction is spread and by
+how much
+also notice that the red and the green
+vectors are perpendicular and that's not
+out of luck that's something that
+happens when we have a symmetric matrix
+symmetric means that in this case this 4
+and this 4 are the same because in
+general symmetric means if you reflect
+the matrix over the main diagonal you
+get the same matrix so the entries on
+top of that ion are the same and the
+ones below the diagonal that was a
+corresponding one and when the matrix is
+symmetric then the eigenvectors are
+orthogonal or perpendicular even in
+higher dimensions another thing that is
+pretty lucky is that the transformation
+is actually
+to stretchings this also doesn't happen
+all the time some transformations are
+rotations or different things and that's
+because sometimes the eigenvalues are
+imaginary numbers or complex numbers in
+this case they are real which is also
+something that happens when the met
+matrix is symmetric so because
+covariance matrices are always symmetric
+because that's how we built them we put
+the entry on top and on the bottom that
+that four we repeated it so in this
+particular case of covariance matrices
+they always have very nice eigenvalues
+and eigen vectors that are perpendicular
+so what we're gonna do is we have
+summarized our data set as the red
+vector and the green vector and what
+we're gonna do is we're gonna say okay
+which one is more important which one do
+you think is more important well the one
+with the largest eigenvalue right one of
+them matters 11 times the other one so
+let's say the 11th one wins and the
+other one gets the boot so we delete
+everything that's green and only care
+about what's red and what does that mean
+well that means we're gonna consider
+this entire line and we're gonna project
+everything into this line and that is
+the projection that is the picture of
+the data set and let's see what we did
+what we did is we turn our
+two-dimensional data set into this 1
+dimensional data set and because we
+picked projecting over the eigenvector
+with the highest eigen value that means
+we project over the axis that carries
+the most amount of information ok so now
+we're finally ready for the big picture
+of pca are you ready we start with a
+large table of data with lots of rows
+and lots of columns in this case we're
+gonna say five columns but you're gonna
+see how this works in general so this
+gets plotted in a five dimensional plot
+I can't draw in five dimensions but it's
+my best sort of imaginary representation
+of how things would work on five
+dimensions with five axis so now from
+this data we get a five by five
+covariance matrix in the main diagonal
+entries we see all the variances
+respect to each of the dimensions and in
+the off-diagonal entries we get the
+covariance for each pair of dimensions
+taking a at a time and notice that this
+is symmetric because we put the same
+entry on the top right then as a bottom
+left so now that we have a matrix we
+calculate a bunch of eigen stuff we
+calculate five eigenvectors with there's
+corresponding eigenvalues then we order
+them from small to big and now it's up
+to us to pick how many of the big ones
+we want that depends on the on the eigen
+value or on or on how many dimensions we
+want to get to but let's say we pick the
+top two and erase the bottom three so
+now what do we do we go back to our four
+dimensional plot and plot those two
+eigenvectors with the length being the
+corresponding eigenvalue so we get this
+to the red and the green now this
+creates a smaller dimensional space in
+this case it creates a plane plane we
+can see so now what we do is we project
+everything with respect to this plane so
+we sort of take the shadow or like take
+a picture that prints in this plane and
+we get a two-dimensional plot and this
+two-dimensional plot is a pre faithful
+representation of our five dimensional
+plot because we did it the smartest
+possible way by picking the directions
+in which the data is spread the most and
+therefore from this two-dimensional plot
+we get a smaller table with two columns
+that actually captures the data as well
+as possible so that's it that's the
+dimensionality reduction and that's a
+big picture of PCA and that's it for
+this video thank you very much for your
+attention
+as usual if you liked this please
+subscribe for more videos coming up
+please hit like and share with your
+friends and write a comment I'd love to
+read your comments and it's always very
+useful for me to see suggestions of what
+topics you would like to see etcetera
+and if you would like to tweet at me
+this is my Twitter handle Louis likes
+math so thank you very much and I'll see
+you in the next video

@@ -1,0 +1,276 @@
+hello all my name is Krishna Graham
+welcome to my youtube channel today in
+this particular video we'll be
+understanding about recurrent neural
+network architecture and you'll also
+understand the forward propagation over
+time now why I am saying forward
+propagation over time because that is
+the main functionality behind RNN behind
+the working of the RNA so we'll try to
+understand what exactly it is guys if
+you want to know about RN and first of
+all you need to know a general
+architecture of RN and want exactly is
+an RN it so this is how an RN and
+architecture looks like here this is my
+input okay and this input may be of any
+number of dimensions okay any number of
+dimensions basically means I can have
+any number of features right and then
+this is my hidden layer here I can have
+any number of hidden neurons okay and
+finally I have my output now along with
+this particular output we also get
+output with respect to time that
+basically means suppose I want to solve
+a NLP use case which is of sentiment
+analysis now in sentiment analysis we
+have a sentence and we try to determine
+whether that is a positive sentence or a
+negative sentence or a positive review
+or a negative review so usually whenever
+I consider a sentence suppose this is my
+sentence 1 and inside the sentence
+suppose I have four words like this food
+is bad ok and according to this I have
+my output which will definitely say it
+as zero because this particular review
+is a negative review right now if I take
+this particular example our RNN act each
+and every time like at t is equal to 1
+will pre process one word then at t is
+equal to 2 will pre process the second
+word now what will happen as we are
+processing suppose in the first case
+will pass one word right the pre
+processing will happen over here and
+then it will give you an output and
+apart from that for the next word right
+whatever was the output for the first
+word that will also be sent to this
+particular neuron and recurrent neural
+network and because of this the sequence
+information is kept ok now I'll make you
+understand what exactly I'm telling you
+I'll try to expand
+this whole diagram over here okay this
+is how my whole diagram will look like
+now see this this is my general
+architecture of a recurrent neural
+network so I told you that I'm trying to
+solve this NLP uske sentiment analysis
+and I'm discussing about the forward
+propagation how forward propagation will
+take place okay so let us go ahead and
+try to understand now suppose I have
+these four words okay and this is an
+output now at time T is equal to 1 my
+first word goes inside this particular
+hidden layer now suppose in this
+particular hidden layer I have 100
+neurons ok I have 100 neurons now what
+will happen the first thing that will
+happen is that this input this word and
+I can represent this word into some
+dimensions that is of Rd so I can
+represent this with some vector you know
+this word I can represent with some
+vector and how to do that I'll show you
+that in the practical application this
+you know about word to ik tf-idf bag of
+words there each and every word we try
+to represent in the form of vectors
+right so similarly this particular word
+will be represented for some D dimension
+vector then we assign weights because
+this is how in a NN also happens right
+we have our input then we multiply the
+weights and then we give it to the
+hidden layer so this hidden layer is
+having 100 neurons right so suppose this
+is having 100 neurons so I will try to
+multiply my input layer that is whatever
+the input data I'm coming along with
+this particular weights and I will get
+the output over okay now this is at time
+is equal to 1 at time is equal to 1 I am
+just passing one input right now ok so
+let us go ahead and write the first
+function of oh one so oh one can be
+written over here as ok so here I'm
+actually now and understand one more
+thing guys here is all my hidden neurons
+and you know that in hidden neurons I
+apply some activation function right
+like Ray Lu like the tan H like sigmoid
+activation functions so this oh one will
+basically be some function right I'll
+apply some kind of function over here
+and in this function will try to
+multiply the blue and x11 that is what
+we
+right in enn we'll multiply the inputs
+along with the weights in each and every
+hidden neuron so here I can basically
+write it as x i1 x w okay so this will
+be my output 1 okay this will be my
+output 1 pretty much clear okay and this
+is important this is what is happening
+in the forward propagation right now
+once this output 1 is computed now get
+go back to this architecture now this
+output 1 has to be given to the same
+hidden neuron right so this hidden you
+run again will come over here okay and
+same number of attend 180 ada neurons
+will be coming but that time is equal to
+t is equal to 2
+my next word that is x12 will get passed
+now when it is getting passed the same
+waves will get assigned over here
+remember guys weights will get updated
+only in the back propagation not in the
+forward propagation so in my t is equal
+to 2 the same weights will get assigned
+my new input will be x12 but I also have
+an output right this output is also
+going to the Nira and when I am passing
+this output I will assign some different
+weight okay and they have a lot of great
+initialization techniques guys which I
+have already discussed in my artificial
+neural network so this is my W dash
+which is get initialized for this
+particular output now how will my
+function look when I am using this data
+in this data and I am getting the output
+Oh - now my Oh - will be nothing but
+function first of all and multiply X 1/2
+into W so this will be my X 1/2 into W
+plus C and doing the addition operation
+for this one also now right so oh one
+multiplied by W 1 and this is very very
+important guide because this is what
+happens in the forward propagation in
+the backward propagation again the
+derivative of all this will get
+calculated so that is how you know
+unremember oh here Oh 2 is completely
+dependent on this x1 2 and O 1 and that
+is how sequence is actually kept the
+sequence information is actually cared
+now at time is equal to 3 that is T is
+equal to 3 again
+now this particular output will go back
+to the same hidden neuron so o2 is going
+over here again this weight will get
+initialized over here okay that blew up
+- and it'll be same okay and in this
+case in the third time T is equal to 3 X
+1 3 is getting passed right now in when
+X 1 3 is getting passed again this will
+be the same weights over here and this
+will continue till the end of the
+statement
+so my oh 3 again I can write it as my oh
+3 will nothing beber function of X 1 3 w
+plus o 2 into the blue - okay so this is
+my W - okay and this is my oh 3 now
+similarly finally my Oh 4 which is this
+output will be nothing but function of
+or X 1/4 x w+ o 3 into w 1 and this is
+where you are getting all your output 1
+output 2 output 3 output 4 in the
+forward propagation this is how the
+function is getting computed and that's
+it we'll just stop in this 4 cycle right
+T is equal to 4 and sentences may have
+any lengths right so for the first eight
+sentence that you see over here it will
+go till t is equal to 4 now you can see
+over here T is equal to 4 right now
+after you get this output function then
+finally we pass through this sigmoid
+because since this is an suppose this
+sentiment analysis is having an output
+as 0 and 1 so I have to use a soft max
+right over here so this will be my
+softmax activation function and then I'm
+doing this and another way it will get
+assigned to this like w double dash okay
+and then this will classify and this
+will give us our Y hat predicted value
+so this is my Y hat predicted value and
+then I go and compute my loss function
+where I will try to subtract this two
+value and our main aim is to reduce this
+particular value now once I have done
+this in the backward propagation what
+will happen that will be discussed in
+the next video but just understand that
+how the forward propagation has happened
+we have started from here we have gone
+till the end you know so just with
+respect to one statement each and every
+word is can be
+into vectors of some D dimensions and
+that depends on the type of vocabulary
+the number of words that are present in
+that vocabulary so it is very very
+important how you can actually implement
+that but in forward propagation this is
+how it goes this main output basically
+means that unless and until the
+statement does not get over this will be
+getting passed to the same middle layer
+and always remember guys over here the
+output phone will be dependent on X 1/4
+and output 3 output 3 will be dependent
+on X 1 3 and output 2 output 2 will
+dependent on this and this value so by
+this the sequence information is always
+maintained you know it is not discarded
+which was the problem in some of the
+techniques that we had like in
+bag-of-words tf-idf in other techniques
+but in this technique the sequence
+information is not removed so this is
+basically being used in many many
+important applications where you know
+the output from that particular chatbot
+from that Google assistance is very very
+important
+based on our statement that we usually
+speak you know and this functions that
+we have derived over here this is very
+very important again guys because in the
+back propagation will try to find out
+the derivatives of this right so I hope
+you understood this particular video one
+more change now I have to do is that
+guys always remember for each and every
+hidden neurons when time is equal to 2 3
+& 4 you can see that one output is going
+so to in order to change this in the
+input also and make an output 0 and here
+the weights are initialized this output
+0 is nothing but it will be some 0
+padded values or randomly initialized
+values initially ok then I'll try to
+multiply this along with this I try to
+add this also in my first name so here I
+can basically write it as x11 w+ o 0w -
+right
+so i can write like this so yes this was
+all about this particular video I hope
+you liked it please do subscribe the
+channel share with all the friends Oh
+ever require this kind of health it is
+very important to understand all these
+things guys so that you'll be able to
+implement a whole lot of things in
+record
+in our network so yes that's really
+intellectually they have a great day
+thank you one at all

@@ -1,0 +1,151 @@
+today we're going to talk about some
+cyber security skills I believe everyone
+should have first thing on the list is
+going to be ioc's or indicators of
+compromise this means identifying what
+exactly is the source of a Cyber attack
+it could be a website like in this case
+a file on your computer as with all of
+my other videos we're going to go
+through this with a real example so this
+is actually a malware website that we're
+just going to visit but hey how do I
+know if this is malware at that brings
+us to the second cyber security skill
+and that is going to be investigation
+the ability to perform research and dig
+out the details behind something let's
+say you visit this website because a
+friend on Discord sent you this link
+first the website seems overly
+simplistic and we're going to look a
+little bit deeper in The Code by just
+pressing F12 and if we expand the head
+as you can see we've got the description
+we've got reference to GitHub and we've
+also got some references to Discord but
+not everyone can understand it HTML but
+what you can do is you can always use
+websites like scam advisor and simply
+look up whatever website you're visiting
+so let's say we wanted to do a deeper
+dive into planis therapy.org it has a
+trust score of 56 so if we scroll down
+it's got a valid SSL certificate which
+we can also check from here with the
+nice lock but it's also got a paid
+service to hide its identity now this is
+not uncommon a lot of websites do that
+but it also doesn't have many visitors
+and it's only been registered very
+recently now this is all data that's
+publicly available through the Ian
+record now on the contrary if we search
+for a website like the PCC
+channel.com you're going to see
+instantly that we have a trust score of
+100 so you know you can safely visit us
+next against our judgment we're actually
+going to download the malware which
+brings us to malware analysis there was
+a time when malware analysis was really
+difficult and you would need an expert
+in bite code Assembly Language to do it
+but that has changed so once we extract
+this belligerent exe put it on our
+desktop we can analyze it quite easily
+by simply going to a site like hybrid
+analysis picking an operating system
+that we're running and generate a public
+report and within a few seconds we get a
+verdict that this is indeed malicious
+now you could use a variety of services
+including vars total but as you can see
+it's not always a reliable indicator of
+whether or not a fall is malicious if
+you're just Rel on the detections but
+you could also skip the online services
+and use something like P Studio drag and
+drop the file there and look for things
+in red basically things like the program
+name being Windows update assistant an
+invalid certificate and an overlay on
+the exe might be suspicious the next
+skill I'm going to talk about is
+forensics which is the ability to take a
+deeper look and what's happening inside
+a system you don't have to use Advanced
+tools like volatility but everyone can
+download Microsoft's CIS internal Suite
+from CIS internal.com and learn to use a
+couple of basic tools like process
+Explorer and TCP view process Explorer
+is going to show you everything that's
+executing on your system all of the
+processes all of the dlls everything
+that's loaded along with scan results
+and vars total if you select it in
+options TCP view on the other hand is
+going to show you every connection that
+your computer is making to a remote
+address and using the first skill
+investigation you can actually figure
+out what these addresses are so for
+instance if we now run this file that we
+got from the website and it's running
+all of these uh different command line
+tools and we can see that this
+particular process that we just launched
+has established a connection with this
+IP address it's not really showing us
+any UI but it's connecting and
+communicating with a remote address
+which suggests some kind of Trojan
+Behavior similarly this particular
+process is loading a lot of DLS some of
+which are being detected views like this
+can look quite intimidating to the
+average user but you have to remember
+this is all graphic user interface
+everything is written so you can read
+the process name you can read the
+description and over time you're going
+to familiarize yourself with what runs
+on your system by default so that when
+you run something new you're going to be
+able to spot it instantly as time goes
+on I think the basic skills of being
+able to investigate and verify what
+you're looking at going to be more and
+more important now I hope you found this
+video helpful please like and share it
+if you did now this video is sponsored
+by one of my favorite cyber security
+tools which is malware bites a
+full-fledged lightweight antivirus
+program that has routinely demonstrated
+good detection capabilities in our tests
+as well as massively improved their UI
+recently and if we look at settings it
+has everything from ransomware and
+exploit protection to the ability to
+block pentesting attempts many of you
+may have heard of malware bites as a
+second opinion scanner something you use
+to remove malware if your system is
+infected but the brand new malware bites
+is actually a full-on AV replacement and
+stops malware in real time they recently
+updated their user interface as you can
+see it looks very slick and dark mode
+we've done independent tests of this in
+the past which you can find on the
+channel and they've shown consistent
+Improvement in the last few years so
+show them some love check them out using
+the link in description thank you all so
+much for watching this is Leo from the
+PC security Channel and as always stay
+informed stay
+secure
+for

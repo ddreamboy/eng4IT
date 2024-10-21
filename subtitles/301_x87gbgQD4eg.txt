@@ -1,0 +1,388 @@
+you want to know how bad you are at
+security in this video i'm going to show
+you one of the best tools at discovering
+security vulnerabilities
+so that you can be more prepared for a
+job in cyber security
+but first if this is the first time that
+we're meeting welcome to my channel
+my name is john good and here i get to
+spread my passion for cyber security
+training
+tips and tricks and career advice to
+help you go further
+remember to smash the thumbs up to like
+this video hit the subscribe button and
+the bell icon so you don't miss future
+content
+and make sure to leave a comment for the
+youtube algorithm if you like my
+training
+and you want more check out my website
+at johngood.com
+to get access to training courses
+without distracting interruptions
+or advertisements make sure that you
+also sign up for my newsletter
+using the link in the description to get
+your free copy of my ebook
+on cyber security careers you can also
+join me on the discord server the link
+is in the description
+alright let's get into the video when
+was the last time that you had to
+install
+updates on your computer one of the
+things that will always be consistent in
+security
+is that new bugs and vulnerabilities are
+found every day
+being able to identify vulnerabilities
+or weaknesses in our networks
+and track them throughout their life
+cycle until they're resolved
+is crucial to keeping a network secure
+after all attackers have the same
+bulletins
+and vulnerability release information
+that we do so it becomes a race to fix
+that vulnerability
+before an attacker can exploit it have
+you ever heard of the cis controls
+the cis controls are critical controls
+that an organization
+needs to secure their network continuous
+vulnerability management
+happens to be the number three critical
+control that an organization has to have
+on their network
+if you haven't heard of the top 20
+controls what you can do is go to
+ciisecurity.org
+and they have a list of all the
+different controls if you want to look
+more into this
+but right here at number three we have
+continuous
+vulnerability management let's be honest
+as you'll begin to see the vulnerability
+management life cycle
+can take a lot of time and resources in
+order to be successful
+we have to know the systems that we have
+on our networks then we have to go scan
+those systems and identify
+vulnerabilities
+we have to determine the vulnerability
+severity
+so how likely it is to be exploited and
+then we actually have to track that
+vulnerability
+through its remediation luckily there's
+commercial tools that exist to assist us
+in the vulnerability management process
+in this particular video
+we're going to cover nessus which is a
+popular vulnerability scanning tool
+nessus has two different components that
+make it actually work
+first we have the client and this refers
+to that web interface that we actually
+use
+as the administrators or users and we
+can interact with the system
+the schedule scans generate reports and
+all kinds of other features
+the other component is the server
+component this is what actually performs
+those scans
+and then it sends the results over to
+the web interface or the client
+with vulnerability scanning there's four
+major steps
+the first step is port scanning this is
+where the scanner is going to actually
+go out there determine which hosts are
+alive
+and which ports are open on those hosts
+then we have service detection
+this is where nessus is going to send
+out probes to find out which
+application is running on that port the
+version number
+and the actual name of it then we have
+vulnerability identification
+this is where nessus is going to compare
+what it discovers about each service
+detected on each host
+and then it's going to actually compare
+it against its database
+of known vulnerabilities of those
+applications and version numbers
+and then finally we have the probing
+step this is where nessus is
+actually going to try to further
+identify if there's false positives
+or identify if that vulnerability
+actually exists
+now that we know some of the basics
+about vulnerability management and
+vulnerability scanning
+i want to actually take you through the
+nessus product by installing it
+and running some scans so you can
+actually see what it looks like
+for this demo we're going to be using
+the free non-commercial use
+license that you can also use at home if
+you want to practice along
+before we get started i want to make
+sure that we're on the same page as far
+as a disclaimer
+so everybody say it with me i will not
+scan
+networks that i do not have written
+permission
+to scan okay we agree
+if you scan networks that you do not
+have permission
+to scan you can actually get into a lot
+of legal trouble
+so make sure that you're only scanning
+systems that you have permission to scan
+all right so let's go over to the
+computer now so we can install nessus
+so the first thing that you're going to
+want to do is go to google
+and search for nessus
+and nessus is made by tenable which is
+the producing company here
+we'll click this first link
+and the nessus essentials is the one
+that we're actually going to use for our
+home use
+you can see that there's a few other
+options that you would use in an actual
+corporate environment
+we'll scroll down here and we'll go to
+download
+so you will have to actually register to
+get an activation code from them
+so i will go ahead and do this and then
+i'll check back in once we enter our
+information
+it will take us to the download page and
+then we just have to pick the version
+that we want to use
+accept the terms and go ahead install
+i am running centos here so yours might
+look different depending on which
+operating system you're running
+but again we're going to install it
+i'll enter my password here
+and now that we have it installed we
+need to go ahead and start it
+up here so i already have a command
+prompt window open back here
+and so i will change to root
+and start the service
+all right great so nessus is started now
+so when you're actually going to connect
+to nessus after you've installed it
+you need to go to your local host and
+then port 8834 is the website you'll get
+this
+error because it doesn't have an
+official signed certificate
+so hit advanced
+and then add exception and confirm
+security exception
+now we'll be brought to this webpage
+where we need to select our specific
+version
+again we did nessus essentials so
+continue
+and then we already have an activation
+code so
+we can skip this step and we'll enter
+our activation
+in here so i'm going to enter mine in
+and then hit continue
+and then i'll check back in once we're
+done with that now that we've entered
+our activation code we need to create a
+user account
+so i'm going to create the username root
+and the password will be super secret
+and then hit submit
+now this account is the account that
+you'll log into when you need to run a
+scan
+what it's going to do now is it's going
+to go ahead and download the plugins
+it's going to update itself
+so that we have all the available
+signatures
+and the most up-to-date database for
+when we perform our scans
+so we will let this run and then we'll
+check back in once we're done with that
+all right and now we have successfully
+installed
+nessus to our local system with the
+nessus essential license
+i hope that you're enjoying the content
+in this video so far
+if you are make sure to hit the thumbs
+up to like this video
+and if you think of any questions let me
+know down in the comment section below
+also remember that this training and
+full courses can be found on my website
+at johngood.com without distracting
+interruptions
+or advertisements all right let's get
+back to the content
+so now that we've installed nessus the
+first thing that we need to do
+is we need to actually run a discovery
+scan it's called
+and this is going to discover all the
+hosts on our network
+so i'm actually only going to scan the
+localhost
+because that's this system right now
+that i'm running this on
+so i'll enter the ip address and hit
+submit
+and nessus will go ahead and scan for
+potential hosts
+it finds my host so if we used a full
+network
+or mini host then it would obviously
+list them in here
+but again with this home license you
+only have a 16 host limit
+that you can scan and then we will hit
+run scan
+all right and this is going to do a
+basic network scan
+all right now that scan is complete so
+we can actually drill down
+into the different vulnerabilities that
+it found
+it will tell you some of the information
+early on before it actually finishes
+so you can look at the information
+before it finishes
+but you can see here that we have this
+nice pie chart here
+92 percent of the findings were
+informational
+six percent were medium two percent were
+low
+so if we want to drill down into that we
+can go up here and click the
+vulnerabilities
+and it will tell us the individual
+issues
+so we're going to go into this http
+issue here
+and we can see there's a medium
+vulnerability and we're going to click
+on that one
+you can see that it gives more
+information about that individual
+vulnerability
+and what it found so in this particular
+one
+this remote web server supports the
+trace and or track methods
+with this i just installed a default
+installation of apache
+so it's going to have some of these
+regular default findings
+in this vulnerability finding you can
+also see this output so it gives more
+information about it
+and you also get some article links you
+can go check out as well
+the medium rating or the medium risk is
+based on
+what nessus believes it is okay
+so that's where that medium comes from
+then you also
+get modified and the published date
+so you can see when they updated the
+signature
+and just a little bit more information
+you also get the port that it was found
+on
+so adtcp www and the host that it was
+found on so again localhost
+this system that i'm actually running it
+on now you also get
+some of these cves over here as well so
+if i click on this original one go ahead
+and open that in a different window
+that will take us to the actual database
+where it describes its findings
+and i definitely would check this out
+this is going to be a great database
+where you have a lot of different
+information this is the nist
+nvd website and this has all the
+different
+vulnerabilities that are out there oh
+and again
+that was found for the specific
+vulnerability the specific
+cve you found it on the actual
+vulnerability finding
+it links directly to it when you're
+looking for more vulnerability
+information
+you can also go to the vendor website
+because of course they're going to
+release
+when there's a new patch and potential
+security issues
+and that's in addition to what we can
+use on the scanner
+and that national vulnerability database
+which is that website i showed you
+by nist question of the day what are
+some alternative tools to nessus
+or vulnerability management that exist
+out there i want you to actually go out
+and do some research
+and let me know down in the comment
+section below what some of these
+alternative tools are
+in this video we walk through the
+installation operation
+and reporting in the nessus
+vulnerability scanning tool
+we also went through different ways that
+you can research
+vulnerabilities their severity and ways
+to actually mitigate them
+or remove them from our environments
+remember vulnerability management is a
+very
+time-consuming and ongoing process that
+only works when we can track the
+vulnerabilities that exist
+through their mitigation or when we
+actually eliminate them from our
+networks
+as always make sure to leave a like
+comment and subscribe check out my
+website at johngood.com for more
+training without distracting
+interruptions
+or advertisements and i'll see you next
+[Music]
+time
+[Music]
+you

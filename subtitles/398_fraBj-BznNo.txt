@@ -1,0 +1,289 @@
+welcome to the world of big data in
+today's digital Age We generate massive
+amounts of data every second but what do
+you do with that information
+how can you harness its potential and
+extract valuable insights that's where
+the big data tools come into the play
+these powerful tools are designed to
+handle the enormous volume velocity and
+variety of data that surrounds us they
+provide the infrastructure Frameworks
+and capabilities needed to process
+analyze and derive meaningful Knowledge
+from these vast data sets in this
+tutorial we will explore the top 10 big
+data tools that have revolutionized how
+we approach data analytics and
+processing these tools have become the
+backbone of modern data driven
+organizations enabling them to unlock
+hidden patterns make informed decisions
+and gain a Competitive Edge
+that's it if you are an aspiring data
+engineer looking for online training and
+certifications from the prestigious
+universities and in collaboration with
+leading industry experts then search no
+more simply learns postgraduate program
+in data engineering from Priority
+University in collaboration with IBM
+should be your right choice for more
+details on this course use the link in
+the description box below with that in
+mind here's the list of the top 10 big
+data tools that are commonly used in the
+industry which you need to know we will
+get started with the first one that is
+Apache Hadoop
+Apache Hadoop is a powerful open source
+framework that revolutionized big data
+processing it enables the distributed
+processing of vast data sets across
+clusters of computers providing
+scalability for tolerance and cost
+effectiveness hadoop's core components
+Hadoop distributed file system and
+mapreduce allow data to be stored and
+processed in pal making it ideal for
+large-scale data analytics with Hadoop
+organizations can effortlessly store
+manage and analyze structured and
+unstructured data unlocking valuable
+insights its ecosystem of tools and
+Technologies has made it a corner store
+in the Big Data landscape empowering
+businesses to tackle complex data
+challenges and drive data-driven
+decision making the second one in the
+list is Apache spark Apache spark is a
+lightning fast and versatile open source
+framework for big data processing and
+analytics it provides an in-memory
+Computing engine that accelerates data
+processing making it ideal for real-time
+analytics machine learning and iterative
+algorithms Spark's Rich set of API
+supports various programming languages
+allowing developers to work with ease it
+offers modules for streaming SQL machine
+learning and graph processing making it
+a comprehensive tool for diverse data
+tasks with its ability to handle
+large-scale data processing spark has
+become a popular choice for
+organizations looking to extract
+valuable insights from their big data
+quickly and efficiently
+third one on the list is Apache Kafka
+Apache Kafka is a distributed streaming
+platform that has gained immense
+popularity for real-time data streaming
+and processing it provides a fault all
+and scalable and high throughput
+messaging system that enables the
+building of real-time data pipelines and
+applications kafka's unique design
+allows you to handle High volumes of
+data and seamlessly integrate with
+various data sources and syncs it
+follows a published subscribe model
+where producers publish messages to
+topics and consumer subscribe to those
+topics to receive and process the
+messages in real time kafka's
+versatility and reliability make it a
+crucial tool for data ingestion stream
+processing and event-driven
+architectures in modern data driven
+organizations
+fourth one on the list is Apache hype
+Apache hype is a data warehousing
+infrastructure built on top of Hadoop
+designed to simplify data analysis and
+query it provides a SQL like interface
+allowing users to write queries and
+analyze data stored in hadoop's
+distributed file system Hive translates
+queries into mapreduce shops and making
+it easy for analysts and data scientists
+to work with big data without writing
+complex mapreduce code it supports
+various data formats partitioning and
+schema Evolution Hive is particularly
+useful for batch processing and ad-hoc
+queries enabling users to extract
+insights and perform data exploration
+efficiently it plays a crucial role in
+enabling data preventation making in
+organizations dealing with large volumes
+of data first one on the list is Apache
+pink
+apply shipping is a high level scripting
+platform that simplifies large-scale
+data analysis on Hadoop it provides a
+programming language called Pig Latin
+which abstracts the complexities of
+writing mapreduce jobs with Big users
+can express data Transformations and
+analytical tasks using a simple and
+intuitive scripting language making it
+accessible to data analysts and
+scientists Peg automatically optimizes
+and executes these tasks in parallel
+enabling efficient processing of large
+datasets it supports a wide range of
+data types and offers a rich set of
+operators for data manipulation Apache
+pick is a valuable tool for batch
+processing and iterative analytics in
+Big Data environments sixth one on the
+list is Apache Flink
+Apache fling is an open source stream
+processing framework that excels in both
+batch and real-time data processing with
+its fault tolerant and scalable
+architecture flank enables the
+processing of continuous streams of data
+with low latency it supports event time
+processing and stateful computations
+making it suitable for complex analytics
+and machine learning tasks flink's
+flexibility allows users to build the
+data pipelines and applications that
+seamlessly integrate batch and stream
+processing flings flexibility allows
+users to build data pipelines and
+applications that seamlessly integrate
+batch and streaming data its robust set
+of features including windowing fault
+tolerance and exactly once processing
+positions its robust set of creatures
+including windowing fault tolerance and
+exactly one's processing positions Flink
+as a powerful tool for handling
+real-time data processing requirements
+and enabling Advanced analytics on
+streaming data seventh one on the list
+is Apache Cassandra Apache Cassandra is
+a highly scalable and distributed nosql
+database designed to handle Mass amounts
+of data across multiple commodity
+servers it offers High availability for
+tolerance and tunable consistency levels
+making it suitable for use cases that
+require high performance and scalability
+Cassandra's decentralized architecture
+and peer-to-peer application and shows
+data durability and seamless scalability
+as data volumes grow it provides a
+flexible data model and supports fast
+read and write operations making it
+ideal for real-time applications time
+series data and large scale data
+injection with its robust features
+Cassandra empowers organizations to
+handle big data workloads with ease and
+reliability rates were on the list is
+elasticsearch elasticsearch is a
+real-time distributed search and
+analytics engine designed for lightning
+fast search capabilities and data
+exploration it allows users to store
+search and analyze large volumes of data
+in near real time making it a powerful
+tool for various use cases like log
+analysis monitoring and full text search
+elasticsearch is built on top of the
+luens search library and provides a
+scalable distributed architecture and
+that can handle High throughput
+workloads it supports advanced search
+features aggregations and jio search
+capabilities making it an essential tool
+for businesses that require fast and
+accurate data retrieval and Analysis now
+ninth one on the list which is Apache
+storm Apache storm is a distributed
+real-time computation system designed
+for processing high speed streaming data
+it provides a scalable and full torrent
+platform for real-time analytics making
+it ideal for applications that require
+low latency in processing storms
+architecture enables the parallel
+execution of data processing tasks
+allowing for seamless scalability and
+high throughput it supports various
+programming languages and provides
+reliable message processing with
+guarantee the data delivery
+Finance telecommunications and social
+media where real-time data processing is
+crucial for detecting fraud monitoring
+Trends and making it immediate business
+decisions with storm organizations can
+harness the power of real-time data and
+respond swiftly to changing conditions
+and finally we have Apache discipline
+Apache is a plane as a web-based
+notebook that provides an interactive
+environment for data analytics and
+exploration it supports multiple
+programming languages including python
+scalar and SQL allowing users to write
+and execute code Snippets in
+collaborative and intuitive manner
+Zeppelin facilitates data visualization
+by integrating with popular
+visualization libraries and provides
+real-time visualizations for quick
+insights it enables the creation of
+interactive documents known as notebooks
+which combine a Live code visualizations
+and narrative text with its flexible and
+user-friendly interface supplement
+empowers data scientists and analysts to
+explore analyze and share their findings
+efficiently making it valuable tool and
+their big data ecosystem these are just
+a few examples of the talk a big data
+tools available in the industry each
+tool has its own strength and use cases
+so it's important to consider your
+specific requirements when choosing the
+right tool for your big data project
+with that we appreciate the end of this
+session on the top Big Data tools should
+you have any queries regarding any of
+the topics discussed in the session then
+please feel free to let us know in the
+comment section below and our team
+effects plus we'll be more than happy to
+assist you with all your queries and
+concerns and until next time thank you
+for watching and stay tuned for more
+from Simply gone
+staying ahead in your career requires
+continuous learning and upskilling
+whether you're a student aiming to learn
+today's top skills or a working
+professional looking to advance your
+career we've got you covered explore our
+impressive catalog of certification
+programs in Cutting Edge domains
+including data science cloud computing
+cyber security AI machine learning or
+digital marketing designed in
+collaboration with leading universities
+and top corporations and delivered by
+industry experts choose any of our
+programs and set yourself on the path to
+Career Success click the link in the
+description to know more
+hi there if you like this video
+subscribe to the simply learned YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click here
+thank you

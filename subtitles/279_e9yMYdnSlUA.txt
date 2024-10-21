@@ -1,0 +1,358 @@
+in this video I will share with you five
+tips to better organize your python code
+these are not going to be life-changing
+they're not going to have to do with
+software design and software
+architecture there are simple things
+that you can Implement that make your
+code much more readable and easier to
+navigate with that said let's get into
+tip number
+[Music]
+one all right so my tip number one is to
+use modules and and packages now a
+module is an individual python file a
+package is a directory containing
+multiple python modules this is the best
+way to organize your python code
+whenever you're working on a relatively
+large project you definitely want to
+utilize both of these things right now I
+will give you a quick two-minute
+tutorial on how they work if you want to
+learn more and learn more about software
+design in particular then check out my
+course programming expert. I'll leave a
+link to it in the description you can
+use discount code Tim if you are
+interested regardless let's have a look
+at this so here you can see that I have
+this physics package and what makes it a
+package is the fact that I have this a
+knit. pi file inside of it so whenever
+you want to make a package you do a
+directory you put some python modules
+whatever you want you don't have to have
+any but if you want some and then you
+put an underscore uncore
+nitor dop now this is a special file and
+I'll talk about how it works in a second
+but this is what makes this uh folder
+here a package okay so now that I've
+done that from main.py I can come here
+and say import and then just import the
+name of the directory itself now notice
+when I run the code here there's no
+error I'm able to import this
+successfully and let's have a look at
+something cool here when I go inside of
+a knit. piy and I run the code or I have
+print hello world now when I come to
+main.py and I run this notice hello
+world prints out now I didn't print
+anything from here I just imported the
+physics package and what happens is
+whatever's inside of a nit dopy that's
+going to run exactly one time the first
+time that this package is imported so
+from my main file I import the package
+and then whatever's inside of here runs
+exactly once now the power of this is
+that you can do some initialization code
+inside of your package you also can
+import things from a nitpy which then
+allows main.py to import them without
+knowing what's inside of the package so
+you'll see what I mean here but I have
+this class uh let's actually go with
+forces okay so I have this forces class
+so what I can do is go to a nitpy and I
+can say something like from Dot and then
+forces import and then forces okay we'll
+continue to print to low world and now
+what this allows me to do is from
+main.py I can now say from physics
+import and I can import forces and the
+reason I can do that is because we've
+imported here now if I remove this line
+so let's actually remove it and try when
+I run this notice it says forces is not
+in the module or not in the package
+physics sorry can't find it okay let's
+clear that let's go back here let's
+reimport that now let's run and notice
+it prints out hello world but now I
+could also use forces if I want so I
+could say forces like this and when I
+initialize it it just prints something
+out so let's initialize it let's run and
+then I get hello world and forces so
+that is really the power of modules and
+packages you can put packages inside of
+other packages and what I was doing here
+in a nitpy is something called a
+relative import where I am importing
+from the current package that's what the
+single dot means the uh the forces file
+and then from the forces file I'm
+importing the forces class anyways that
+is tip number one use modules and
+packages don't be afraid to separate
+your code out if you have one large file
+containing multiple classes multiple
+functions all kinds of stuff that
+doesn't make sense to be in one place
+separate into multiple modules separate
+it into multiple packages and then write
+the appropriate import statements to
+bring everything into the file that you
+need all right so tip number two may be
+slightly controversial so let me know in
+the comments if you disagree with me of
+course there's exceptions to everything
+that I'm saying here and this is going
+to be to place a single class in a
+single file again there may be some
+exceptions some people may say to not do
+this but for me when I'm writing
+primarily objectoriented style code in
+Python I like to place each of my
+classes in an individual file so in this
+case I have an angular momentum class
+obviously it's a very simple example
+just for the video and I've placed it in
+a file F called angular momentum now
+another thing to note here when you're
+naming files in Python the convention is
+to do snake case so snake case with all
+lowercase letters you should not have
+any Capitals in there and if you want to
+have a space do an underscore but when
+you're naming a class you want to have
+this in Pascal case so Pascal case means
+capital on the first word capital on all
+the other words no spaces and no
+underscores so it looks a little bit
+weird because this is different than the
+file name but that's the convention in
+Python that's what you are supposed to
+do according to pep 8 anyways that is
+what I'm saying for this tip Place each
+class in an individual file I find this
+makes your code very organized very easy
+to find the different classes and if you
+need to use a class from another class
+then just import all right that is tip
+number two all right so for tip number
+three which is to group related
+functionality together I'm here on my
+organization's GitHub page I'll leave it
+in the description if you want to
+contribute to open source projects then
+please check this out all of the stuff
+here is done by volunteers I have
+written a single line of code and this
+is all organized and facilitated through
+my Discord server
+discord.gg WT I'll leave a link to in
+the description we have like 33,000
+members so please join that if you want
+to be a part of this and you can also
+ask some of the people who have set
+these repositories up hey how did you
+structure the code if you're curious
+about that anyways I'm going to go to
+this API directory here I don't know
+what a lot of this stuff is because
+again I've not read any of this code
+it's all volunteers but I'm just going
+to show you how they've kind of
+structured the different repositories uh
+and you'll see how easy it is to
+navigate everything and how someone like
+me who again has really never looked at
+this before can easily figure out where
+all of the different code is so the tip
+was as a reminder group related
+functionality together so immediately
+when I'm looking here I see a bunch of
+random files these files are fine to
+just be in the main directory because
+they're all kind of unrelated and since
+all these things are unrelated they'll
+all be in the same place so we're
+grouping the unrelated things together
+which you know in turn groups related
+things together uh anyways that we have
+utils test docs and then API so
+immediately we have four packages or
+four directories that are separating out
+the main things that we have in our
+application so when I go to utils I see
+that I get some utilities notice I have
+my init.py inside of here we're
+importing a few things and then saying
+all is equal to this another python
+convention I won't really talk about
+that then if I come here to test I have
+a bunch of different tests I have my
+test utilities so the utilities for the
+test are in a separate uh I guess you
+could call this a package although it
+doesn't have the init.py file but that's
+fine you can still kind of call it a
+package uh continuing we have our docs
+okay documentation here so we have an MD
+file markdown file for how you actually
+run some of the different things here
+going back we have API inside of API we
+have models we have Services we have
+versions if I go to Services uh we have
+the different Services if I go to
+versions We have a version V1 okay so
+this is where I'm getting at it's not
+super complicated there's not a ton of
+stuff that you have to do just think
+logically about what stuff makes sense
+to be together and put it together in
+this case they thought we had API
+documentation tests and utils that was
+the main group of stuff okay all the
+stuff related to that goes inside of the
+package if there's more specific stuff
+within say the API within the docs we
+make a new package or folder for that
+and we are good to go all right so my
+next tip is a quick one and this is to
+place all of your Utilities in a single
+place so either a single file or a
+single package now there's a lot of
+times when you're writing kind of helper
+function function or functions that
+don't belong in a certain class or
+belong in a certain file and you don't
+really know where to put them for
+example maybe you want to convert a date
+from the date time object to a string or
+maybe you want to you know figure out
+the distance between two points whatever
+there's some random kind of helper
+functions that again aren't easily
+classified into a class or a file or
+some part that already exists in your
+application if that's the case what you
+want to do is create a utility package
+or a utility module if you only have say
+three or four functions that you're
+using and dump them all into there like
+I was saying before when you have stuff
+that's not related together all of the
+stuff that's not related you should put
+in one place because what relates it is
+the fact that it's not related to
+something else I know that's a little
+bit backwards but I just want to show
+you here in this codebase they have the
+utils package right and inside of utils
+we have things related to permissions
+these are going to be used in multiple
+places they don't make sense to be
+anywhere other than the permissions file
+right same thing with response we have
+stuff related to the response we have a
+Json response class time. py okay this
+is doing stuff with time snowflake time
+whatever I don't know exactly what's
+going on but the point is the way
+they've named this and organized it it's
+very easy for me to go in and see where
+the utilities are being used and that
+way they're not clogging up different
+files and if I want to add something or
+change something I can do it all in one
+place in the utils package or utils file
+that was it for that tip let's move on
+to number five all right so my last tip
+for you here is to organize your import
+statements now I don't know if they've
+done it exactly the way I'm going to
+recommend in this code base but I can
+already see that they have this uh being
+done decently and this becomes very
+important when you have a ton of
+different Imports and a large project so
+you'll see a lot of python files where
+you have like 20 Imports 30 Imports in
+this case we have 11 Imports and it's
+just really nice and easy when you
+actually organize and sort the Imports
+so you can go in whatever style you want
+so long as you're uh consistent across
+your project what I like to do is import
+all of my third party libraries first
+which is actually what they've done here
+so they're using fast API so they take
+all their stuff from Fast API then from
+fake reies then from AOH HTTP then from
+logging although logging is actually a
+built-in module in Python so I wouldn't
+put that exactly with all this anyways I
+like to go thirdparty Imports then I
+like to go built-in Imports so something
+like OS Json logging stuff that you
+don't have to install this built into
+python then I like to go with my local
+files or my relative Imports so in this
+case these are all local files that
+they've coded themselves utils response
+uh API config and then lastly I like to
+alphabetically order my imports although
+that can be a little bit challenging
+sometimes because you have to ask how
+are you doing it alphabetically are you
+doing it by the name of the package for
+example or the name of the module are
+you doing it by what you're importing so
+that one's not as important anyways this
+just makes it really easy to quickly go
+in locate the different things you're
+importing see if you need to change
+something and know what block you're
+going to add a future import to so again
+they haven't done it exactly like I
+would do it but this is pretty good they
+have all of their third parties then
+they have their built-ins I would put
+this one line down just to have third
+parties built in and then I have all of
+my local Imports or relative Imports so
+just to continue to test these guys and
+see if they've been consistent here
+let's go into another file and okay so
+here I already notice a few
+inconsistencies so these are local files
+then we have another local file then we
+have our built-in which is typing then
+then we have our third party module then
+we have a local file then we have
+another local file now maybe they've
+organized it in this way for some reason
+that I'm not familiar with or that I
+just don't understand because again I
+don't write this code this is not my
+code base to maintain uh but what I
+would have done is SW swapped it around
+so it was in the order I said third
+party built-in and then your local files
+however again there's always exceptions
+and you can always make debates this is
+not a strict rule these are just tips
+that for me I find helpful and well
+hopefully they helped you with that said
+I will wrap up the video here if you
+guys enjoyed make sure leave a like
+subscribe to the channel check out
+programming expert if you want to learn
+more about this topic and I will see you
+in another YouTube video
+[Music]

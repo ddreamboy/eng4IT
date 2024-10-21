@@ -1,0 +1,18 @@
+top python libraries for data scientists
+part one number one numpy numpy stands
+for numerical python and it provides
+support for large multi-dimensional
+array objects and also provides the
+tools to work with them number two
+pandas from data exploration to
+visualization to analysis pandas is the
+number one library you should master and
+also it provides tools for you to do
+data analysis and also data manipulation
+number three matplotlib matplotlib is
+the most popular library for exploration
+and visualization in the python
+ecosystem and also it provides so many
+tools and customizations and charts for
+you to work with so for more such
+insightful content follow scalar

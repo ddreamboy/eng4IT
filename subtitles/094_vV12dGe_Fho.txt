@@ -1,0 +1,593 @@
+hey youtube in this video we're going to
+talk about time series forecast using
+machine learning and python time series
+forecasting is a very common problem
+that you face as a data scientist where
+you have historic data and you want to
+predict into the future in this video we
+are specifically going to be using a
+machine learning algorithm called
+xgboost and depending who you asked
+bojan many believe xgboost is one of the
+best out of box machine learning models
+to use on tabular data and even time
+series problems like this what's even
+better we're going to be working
+completely in a kaggle notebook so you
+can just click the copy button on the
+top of it and if you have a kaggle
+account you can edit the same code that
+we're working with today and explore it
+yourself my name is rob i make videos
+about data science machine learning and
+coding in python if you enjoy this video
+please consider liking and subscribing
+it really encourages me to keep on
+making videos like this in the future
+okay let's get into the code so a little
+background on the data set that we're
+going to be using for this tutorial and
+we're going to be using
+an hourly energy consumption data set
+that i actually uploaded to kaggle a
+while ago it's been very popular and
+what it has is energy consumptions for
+different regions
+in a portion of the country
+and we have those values at an hourly
+basis for over 10 years so here we are
+in a kaggle notebook and if i look over
+on the right side i can show you that we
+have this hourly energy consumption data
+set imported that we'll be using a
+little bit later but let's get started
+by doing some imports so we're going to
+import pandas as pd
+import
+numpy
+as np import matplotlib
+pi plot as plt
+and let's also import seaborn as sns
+and then for our modeling we're going to
+import xg
+boost
+as xgb this is going to be the model
+that we use for our forecasting
+now before we even get into the data we
+need to talk about how there are
+different types of time series data now
+if we had
+data time series data that was just
+completely random there'd be no point in
+modeling at all
+but there can also be other trends in
+our data that we want to account for
+there can be
+exponential growth something like you
+might see in the stock market
+increasing or decreasing linear trend
+seasonal patterns and also there can be
+a combination of any of these so
+seasonal patterns with growth the type
+of data that we're going to be looking
+at today we will see is mainly seasonal
+now sometimes people refer to this as
+the time series being stationary or
+non-stationary
+but for more most time series it won't
+actually fall into exactly one bucket
+and this actually boost model that we're
+gonna use
+works pretty well with changes to the
+data over time but you're gonna have to
+account for this depending on what your
+data set looks like now let's go ahead
+and read in this data set by using
+pandas read csv
+we're going to open up the hourly energy
+consumption
+and we're going to read pgm east hourly
+and call this df for data frame
+if we quickly run just a head command on
+this we can see the first few rows
+and we see that we have going back to
+2002
+the hourly energy consumption value and
+if i run a tail command on it i can see
+it goes all the way up to 2018 with
+pandas it's pretty common to set our
+index to be the date time
+column since that will be consistent in
+this time series data set and let's go
+ahead and save that off
+and then it'll be
+it's a good idea to actually visualize
+it so let's make this a plot
+with a style of
+dots instead of a line
+let's give it a
+figure size
+let's also pull the color palette from
+seaborne so we can use that when we're
+plotting and put this up here by our
+imports
+and we will just make the color the
+first color in this color palette we
+could put this up here and maybe give it
+a title
+pjm east
+energy
+use in
+megawatts and we can show it now another
+thing i'm noticing is it looks like this
+data fram index
+is just
+an object type so we might want to cast
+this as a date time
+by running pandas to date time on the
+index and now our our index d type is
+actually a date time 64
+type which is uh much better for this
+case instead of just having this be a
+string we'll do this when we load in our
+data and now if we plot it
+the x-axis looks a little bit easier to
+read
+because it's formatted as a date time
+instead of
+a string value i'm just going to go
+ahead here and split these lines to make
+it a little easier to read and then
+we're going to go
+into the
+train
+test split
+now if you're really building a model
+that you're going to productionize there
+are some ways to do full cross
+validation
+in a time series data set
+we're not going to go into that in
+detail in this video but i do have
+another video about cross validation
+that you should check out but here just
+for learning's sake we are going to take
+our data and we are going to split on
+the date january 2015
+and have everything prior to january
+2015 be our training data and keep our
+test data as
+the following dates
+so we can make uh we can do that pretty
+easily by taking the index and finding
+where it's less than january 1st 2015
+locating those
+rows in our data set
+and then calling this train
+and similarly we'll call this test if
+it's greater than or equal
+to those dates
+just to visualize this i'm going to
+actually plot both of these
+in the same plot by making a matplotlib
+subplot we're gonna plot train
+and we're gonna plot test
+and we'll add labels to each so the
+first one is training set
+and the second one is
+test set and we'll do plot.show
+the colors are going to be different
+and we can see here that we have split
+here
+january 2015. actually let's just make a
+line there too
+we'll make a line there on that date
+with the color being black and the style
+line style being dashed lines
+and i'm going to add in a legend so this
+name actually looks correct let's add
+this title here that call this train
+test split
+beautiful
+now another thing we might want to look
+at while we're exploring this data is
+just
+to get an idea of what's one single week
+of data looks like let's take january
+1st
+2010
+and
+up until january
+8th
+2010
+this should just be one week of data
+and let's go ahead and plot this
+so we can notice a few things here it
+looks like within each day there are two
+different peaks this is pretty common in
+energy consumption and there are also
+valleys during the nights
+it also looks like you have a weekend
+effect here where
+one of these days actually january 1st
+would even be a holiday will be affected
+by
+that day either being a weekday or a
+weekend so that brings us to our next
+step which is feature creation we're
+going to create some features with this
+data using the time series index luckily
+pandas makes this very easy for us so if
+we take the just the index we see here
+we have a list of all the dates but we
+can actually use the
+dot hour on this and we'll get a number
+value for each of these dates which is
+just the hour component so we're going
+to go ahead and add this as a
+new column in our data set called hour
+we're going to do the same thing for the
+day of week
+by doing df index dot
+day
+of week
+now these values will start i think as a
+monday but we can always look these up
+in the documentation you see that day of
+week here monday is a zero and sunday is
+a six
+we can pull out the quarter which will
+be
+splitting the year into four different
+groups
+and then of course the month
+we can do
+the year
+we can even do the day of year
+so let's go ahead and add these in as
+features
+and just to clean this up we are going
+to make this into a function called
+create features
+that will take in a data frame
+and return the data frame with the
+features added let's also give it a
+quick doc string that says
+create time series features based on
+time series index
+and we'll run this function
+on our data frame now let's go ahead and
+visualize
+our feature to target
+relationship now one of the ways we can
+visualize our feature versus our target
+is by using seaborne's box plots box
+plots are nice because they get you give
+you an idea of the distribution of the
+data set so we're going to give it the
+data of this data frame
+our x variable is going to be the hour
+and our y variable is going to be
+pjm
+east megawatt and let's give this a
+bigger fig size
+and go give it a title megawatts by hour
+so we can see here that early in the
+morning there seems to be a dip in
+energy use and it tends to get higher
+later in the evening now we can do the
+same thing with month
+let's give it a different color palette
+and there we can see that the megawatt
+uses by month
+tends to
+peak here two times in the winter season
+then in the fall and spring it has lower
+in another peak in the middle of summer
+when everyone's running their ac units
+okay now that we've created features and
+we know our target and we have some idea
+of the relationship between the two we
+are going to create
+our model we're going to create our
+model based on the training data and
+evaluate it on the test data set so
+let's actually import a metric i forgot
+to do this earlier but from
+from
+sk learn metrics
+we're going to import mean
+mean squared error as our metric mean
+squared error will give us more penalty
+for any predictions that's way off
+versus just a little bit off but the
+type of metric you might want to use for
+your data set will really depend on what
+you're looking to do now this is a
+regression test so we're going to create
+a regression model using xgboose's
+regressor xgb regressor
+now there are a lot of things that you
+can tune in xgboost but we're going to
+start with the number of estimators
+that's basically just how many trees
+this boosted tree algorithm will create
+we're gonna set that to a thousand
+and then we're gonna go ahead and fit
+this
+on our training set
+but before we do we need to take our
+training
+and test data set
+and run them through the create features
+function
+i'm going to add df copy here to create
+features that'll make sure that we're
+actually editing a copy of our data
+frame when we run it through here it'll
+get rid of that error
+and then let's also define our features
+which are all of the columns that we
+created
+time series features
+and our target
+which is this pjm
+east megawatts
+now we're going to actually make a
+features data set from our training data
+set and call it x train
+and that's just going to be all of the
+features
+from our training data set we're also
+going to make a y train which is our
+target and that's just going to be the
+target column from our data set and
+we're going to do the same thing with
+our test
+now we can feed this through our model
+so we'll give this our fit method takes
+x train
+and y train
+and we're actually going to give it a
+valuation set
+which is
+going to be both our x train
+and x test y test
+we're going to have the model training
+stop early if it
+if the test set does not improve
+after 50 trees and we're going to make
+this verbose
+so actually it's saying that we need to
+put the early stopping rounds here
+when we create the model itself
+now as we train here we can see that the
+root mean squared error as trends are
+being added to the model on the training
+set
+begin to go down
+and also the root mean square error
+value on the test set or validation set
+starts to go down
+but then the validation set starts to
+get worse and this is overfitting and
+that's what we would like to avoid
+early stopping will stop our model
+training once it sees this occur since
+we've given an evaluation set
+but also another thing we can do is
+lower our learning rate to make sure
+that it doesn't over fit too quickly
+let's try this again
+and when we actually provided this
+verbose we can tell it give it a number
+instead of true that'll tell us just to
+print out the training and validation
+score
+every 100 trees that are built
+now what you can see here it stopped
+after 436 trees that's because our test
+or validation set started to actually
+get worse after that many trees were
+built
+now one of the nice things about our
+model now that it's trained with xgboost
+we couldn't check out the feature
+importances and we do that by just
+running feature importances off of the
+regressor that we've created and that'll
+give us the importance values based on
+how much these features were used in
+each of the trees built by the xg boost
+model
+but these values by themselves aren't
+very helpful so let's make a pandas data
+frame
+where the data
+is these features importances
+and our index is
+the feature names
+let's also call the
+columns
+is importance
+and call this data frame fi for short
+we can sort the values
+by importance
+and
+plot as a
+horizontal bar plot with the title
+of feature
+importance
+put this up here
+and now we can see that the model has
+really been using the hour feature and
+the month feature the day of week and
+day of year feature less and then
+year is down here at the bottom there's
+some overlap in these types of features
+if we removed month
+day of year would just be used in its
+place so keep in mind that when you have
+highly correlated features this feature
+importance
+functionality really will not tell you
+exactly how important each feature is
+individually more so as a collective in
+this complete model there are other
+there are other packages out there for
+exploring future importances more but
+this gives us a good idea of what our
+model is using
+all right now we're gonna forecast on
+the test set with our trained model
+we can do this simply with just taking
+our regressor and doing predict
+on our x test set and we're provided a
+numpy array of all the predictions for
+the test set let's take our test data
+and make a new column called prediction
+where we will store these predictions
+then because i would like to see these
+next to all of the training data let's
+merge this
+on the test set
+let's do uh
+how equals left
+and
+let's do left index is true and right
+index is true to say that we'll merge
+these two data frames
+on the index columns
+and we don't want to copy over all the
+features so we're just going to take
+this
+prediction
+column and merge it over
+now in our main data set that we first
+started with we now have a prediction
+column for our test set
+and if we plot
+pjm east
+and
+plot our prediction
+now we can plot our
+rod
+data
+and predictions
+let's give this a legend so putting this
+all together we can see our predictions
+plotted on top of
+the training data set
+and similar to what we did before let's
+try to take a look at this one week of
+predictions
+but we're gonna have to do 2018 because
+that's in the test set
+so what i've done here is i'm plotting
+the predictions and the ground truth
+over one week and you can see that the
+model isn't perfect there's a lot of
+improvement that can be made
+some ideas include doing better
+parameter tuning we did not tune this
+model at all
+we could also
+add in features for specific
+days of the year like holidays that
+might carry forward
+to
+either increase or decrease the energy
+use that it would predict for those days
+there's a lot that can be done to make
+this better but you could see that our
+predictions on the test set in this week
+do actually follow the trend that you
+would expect to see
+going up and down having the dips during
+the
+the night times
+and we can even run our evaluation
+metric on this
+by using our test predictions
+well let's do mean squared error
+which takes first the true value and
+then the prediction so that would be our
+test
+pjm east megawatt
+and then our prediction now i'm actually
+going to run the square root of the mean
+squared error this will get us the root
+mean squared error which is the same
+metric that we were using here rmsc when
+we're evaluating the model as it trained
+so our root mean squared error on the
+test set
+is
+three three thousand seven hundred and
+fourteen
+to improve this model we would want to
+reduce that score so i'm gonna print
+this here
+and we're gonna print out the score with
+let's do four decimal pl points there
+two decimal points looks pretty good
+another thing we can do is just
+calculate the error so let's take our
+test data set
+and our target value
+and subtract our predictions
+prediction and then let's take the
+absolute value of this so that the
+negative and positive don't matter but
+it'll just give us a general error value
+for each of our predictions
+and let's look at the worst and best
+predicted
+days
+so what i'm going to do here in the test
+set is take the index
+and then take the date
+so that each date's going to have its
+own value and make that a new column
+and if we group by date
+take our error
+and the mean value
+this will give us the average error for
+each
+day that we've predicted and then if we
+just sort values all right if i do
+ascending equals false and then we take
+the head of the five
+then we can see that the worst predicted
+days all seem to be
+in the middle of august of 2016.
+and if i do the opposite way with a
+sending equals true we can see that some
+of the best predictions were made
+in 2016 as well so by calculating error
+we can then see which dates we actually
+predict for the worst and try to improve
+those going forward
+now in terms of next steps
+that you would want to do if you were
+actually running this yourselves would
+be to
+create a more
+robust cross validation
+to add more features
+if you could get them from external
+sources like maybe the weather forecast
+or
+holidays
+and add those in as features to the
+model and see how it improves things
+thanks so much for watching this quick
+tutorial on how to use machine learning
+for time series forecasting if you like
+this video please consider liking and
+subscribing that way you'll get alerted
+every time i create a new video let me
+know in the comments if you have any
+feedback or things you'd like me to see
+make videos about in the future see you
+next time

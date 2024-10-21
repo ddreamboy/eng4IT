@@ -1,0 +1,394 @@
+hi today we're looking at fix match
+simplifying semi-supervised learning
+with consistency and confidence by cukes
+on David birth Berthelot and others of
+Google research so this paper concerns
+semi-supervised learning so what does
+semi-supervised learning mean in
+semi-supervised learning you have a data
+set of labeled samples so right you have
+this data set of X's and corresponding Y
+labels but this data set sometimes is
+very small now you have a much bigger
+data set of unlabeled examples just X's
+with no labels right so you don't know
+what the labels of the of the unlabeled
+examples are but what you would like to
+do is you would like to use this really
+large data set in order to help you with
+learning the association between the
+data points and the labels so for
+example in this case you would have
+something like like an image
+classification data set and I'm gonna
+take the example here of medical data so
+you have a pictures of lungs let's draw
+a long here that is an ugly long you
+have pictures of lungs and whether or
+not they are they have like a tumor in
+them right so medical data is very hard
+to get especially labeled medical data
+because you need first of all you need
+the data itself but then you also need
+like like one at least one but ideally
+like three radiologists to look at
+whether or not this is a good or a bad
+image and label it so it's usually very
+expensive to collect that data but you
+might have plenty of unlabeled data
+right you might just be able to go who
+you're through through some database and
+find like anonymized undiagnosed long
+scans somewhere lying around the same
+with image like other images
+so labeling images is pretty human
+intensive but the internet contains like
+a whole bunch of unlabeled images so the
+task of semi-supervised learning is how
+do you use this unlabeled data set in
+order to make your classification on the
+label data set easier and fix match
+combines two approaches to this in a
+smart way namely the consistency and
+confidence approach right so what does
+what does well it will jump right into
+into the method so basically what you
+want to do is you want to say my loss
+that I optimized right this is my loss
+consists of two parts namely a
+supervised loss which is your classic
+classification loss right plus an
+unsupervised loss right and then you
+have like some sort of a trade-off
+parameter in front now your supervised
+loss here this is where this is just the
+the cross-entropy
+let's call it h between your predicted
+labels and your the actual true labels
+right and the predicted labels say they
+can be you know kind of a distribution
+over labels now the magic of course is
+here in the unsupervised loss and this
+unsupervised loss this is what's
+described here in this part right so the
+unsupervised loss is going to be this
+age between P and Q and we'll see what P
+and Q is so if for the unsupervised loss
+you two of course want to start with an
+unlabeled example then you have the same
+sample go into two different pipelines
+in the first pipeline up here what you
+do is you so-called weekly augmented and
+here we're dealing with images so we
+have to talk about image augmentation so
+image augmentation has long been used in
+supervised learning to kind of give you
+more it's kind of a cheat to give you
+more training data so if you have an
+image right of let's say
+famous cat you can obtain met more
+training data if you for example by
+random cropping so you can random crop
+let's say we just take this bottom right
+corner here and then we enlarge it to
+the original size right then it is still
+sort of a cat but it's just a part of a
+cat right but usually that helps because
+you you say okay um my image data set is
+just pictures of animals right it's
+entirely conceivable that someone held
+the camera like this or like this right
+so technically in terms of generalizing
+to a test set these both data points
+should be valid so I'm just gonna add
+both to my training data so you can see
+how from one training data point you can
+get many training data points just by
+doing this cropping what you can also do
+is you can flip it left right right you
+just in swap the pixels left right and
+usually the these kind of um so a a a
+cat that has a little dark spot here is
+still a cat when it has too little dark
+spot over there right but to your
+classifier those are two different
+samples so you can do many of those
+things and they have to kind of
+augmentations they have what they call
+weakly augmented and strongly augmented
+right so in the weakly augmented
+pipeline I think they just they crop and
+they they shift and they rotate or
+something like this so you can see here
+this this horsey here it is something
+like it's cropped here about then it is
+turned slightly to the left and then
+yeah I think that's it so they crop they
+rotate and then they also flip
+horizontally at random in like 50
+percent of the time so these are what's
+called weekly augmented the goal here is
+just to kind of obtain a bit more
+training data alright so you run this
+through your model through your
+classification model as you would
+a regular sample and you get a
+prediction now from your prediction you
+can take the highest prediction here and
+that is going to be your pseudo label so
+this is P of Y this is your distribution
+that you estimate right so and this and
+this if you just take the max this is
+going to be your Y hat right and this is
+what they call a pseudo label sorry
+you'll see why it is called a pseudo
+label so the other pipeline here is the
+strong augmentation pipeline now in weak
+augmentation we just wanted to get
+somewhere training it in strong
+augmentation now the goal is to really
+screw up that picture to the point where
+it's still you know you could recognize
+it in the same class but you can see
+here the augmentations they go wild so
+you play around with the color with the
+hue you play around with the light
+intensity right with the contrast you
+can do many many things you can see this
+this image looks basically nothing like
+this image buddied you can still kind of
+recognize it as a horse but the strongly
+augmented data is much more distorted
+than the weakly augmented data and
+that's the point so also you send the
+strongly augmented data through the
+model and again you get a prediction
+right and now is that the trick is you
+take the label from here and you you
+take that as if it were the true label
+right you take that as if it were the
+true label and you form a loss from this
+prediction being the model prediction as
+if this thing here that also comes from
+the model as if that was the true label
+right that's why it's called a pseudo
+label because it is a label that you
+produce from the model itself now of
+course if these were to be the same
+picture it would be kind of pointless
+right that's why you see there
+needs to be a weekly and a strongly
+augmented pipeline I am pretty sure ammo
+if you want a more basic version of this
+make this just clean
+so no augmentation and make this augment
+it right that's that's how you can think
+of it the fact that there is weak and
+here strong augmentation I think is just
+a your classic trick to get more
+training data but in essence you can
+think of it as this is here the clean
+thing you just want to produce a label
+and then you want the that an Augmented
+version of the image has the same label
+now you can think of it shortly what
+does this model learn if you just have
+this you remember I think the important
+thing is always to remember that there
+are two components here right there is
+first the supervised loss this is the
+important one ultimately because we have
+the true labels right and then second
+there is the unsupervised loss which is
+just an auxiliary loss that is supposed
+to just kind of tune our model to the
+nature of the data right so don't forget
+that this this down here just concerns
+the unsupervised part of that loss so if
+you think what does the model actually
+learn when whenever you train it like
+this it basically learns to revert this
+strong augmentation right say basically
+sells hey model whenever I give you a
+week
+augmented image and I distort it heavily
+right whenever I give you an image and
+that distort it heavily I want the label
+to be the same so the model basically
+learns that whatever the image the
+whatever the image the model at the end
+of the trend will be able to basically
+map any strongly augmented picture to
+the same class as a weekly augmented
+picture if it comes from the same source
+right so
+the model basically learned to ignore
+these kinds of augmentations that's what
+this loss over here does it basically
+says these sorts of augmentations these
+sorts of distortions of images please
+ignore those because I always want you
+to output the same label here in the
+prediction here as if I had not
+distorted or just weakly distorted the
+image so that's that's what you have to
+keep in mind that this this loss is
+designed to make the model not
+distinguish between differently
+augmented versions of the same image and
+interestingly that really seems to help
+with the with the supervised loss right
+my kind of hypothesis is is that all
+these methods what they're kind of
+trying to do is to just tune the neural
+network to the let's say the orders of
+magnitude of the of the input data and
+also to the kinds of augmentations that
+the humans come up with and that's a
+very important point
+so the Ottoman tations and here we said
+you know it's it's kind of a rotation
+and the crop the kind of augmentation
+really seemed to play a role
+so this paper finds that on C 410 where
+the state of the art I believe is
+something like ninety six ninety seven
+percent accuracy on C for ten with just
+two hundred and fifty labeled examples
+right now the usual data set size is
+about fifty thousand it goes to ninety
+four point three four point nine percent
+so almost 95 percent accuracy with the
+state of the art being like ninety seven
+this is incredible with just two hundred
+and fifty labeled examples crazy right
+and it with only four labels per class
+it gets eighty eight point six percent
+so that's just forty images with labels
+they get a
+8.6 percent of of the of accuracy
+compared to the 97 percent that you get
+with like 50,000 images that is pretty
+pretty cool right simply by having all
+other images not labeled but pseudo
+labeled and consistency regularized
+right so the the two to two things that
+are combined by fixed match again or
+consistency regularization which
+basically it means that the model should
+output similar predictions when fed
+perturbed versions of the same image
+right this they they're really
+forthcoming that they are not the ones
+who invented this they just combine the
+consistency regularization with the
+pseudo labeling now the pseudo labeling
+they have also not invented the pseudo
+labeling leverages the idea that we
+should use the model itself to obtain
+artificial labels for unlabeled data
+we've seen a lot of papers in the last
+few months or years where it's like the
+teacher teaches the student and then the
+student teaches the teacher model again
+and so on so that they simply combine
+the two methods in a clever way they
+have one last thing that is not in this
+drawing namely they only use the pseudo
+label they have a break right here and
+they only use the pseudo label if if the
+confidence if this P of Y here is above
+a certain threshold so they don't take
+all the pseudo labels but they only take
+the labels where the model is fairly
+sure about right so they haven't
+actually an ablation study where they
+show that this is reasonably reasonably
+important and if you go down here where
+they say ablation or is it ablation
+ablation study oh yeah something I also
+find cool if you just give one image per
+class this one image per class ten
+images that are labeled
+it still gets like 78 percent accuracy I
+think the images are chosen as good
+representations of their class but still
+one image per class pretty pretty cool
+an important part of this is the
+ablation study where they say okay we
+want to tease apart why this algorithm
+why this on semi-supervised learning
+technique works so well and they find
+several important factors they find for
+example that they're all mentation
+strategy is extremely important so how
+they augment the images is very
+important you see here the error of this
+4.8% and the 250 label split if you
+change up the if you change up the the
+augmentation strategies your error gets
+higher right and so they say we use this
+cutout and we measure the effect of cut
+out we find that both cut out and seek T
+augment are required to obtain the best
+performance removing either results in
+in a comparable increase in error rate
+we've seen before for example they went
+they went from there some 93 sorry 93
+point something percent to ninety four
+point something percent from the
+previous state-of-the-art
+semi-supervised learning and here they
+find that simply changing the
+augmentation strategy changes the error
+by more than a percent so you can just
+see this in context of of what's
+important here right
+they say again the ratio of unlabeled
+data seems pretty important we observe a
+significant decrease in error rates by
+losing using a large amounts of
+unlabeled data right then the optimizer
+and learning
+schedule seems to be very important as
+well in that they use this they say STD
+with momentum works much better than
+Adam and then they use this decreasing
+learning rate schedule this cosine
+learning rate schedule so there seem to
+be a lot of things a lot of hyper
+parameters that are fairly important
+here and you can see that the gains are
+substantial sometimes but they aren't
+like through the roof substantial where
+you can make a good argument that it is
+unclear how much really comes from this
+clever combination that fit fix match
+proposes and how much also just comes
+from whether or not you set the hyper
+parameters correctly and exactly how
+much computation are you able to throw
+at selecting your selecting your hyper
+parameters so that that seems to be a
+bit of a a bit of a pain point for me
+they also say we find that tuning the
+weight decay is exceptionally important
+for low label regimes right choosing a
+value that is just one order of
+magnitude larger or smaller than optimal
+can cost ten percentage points or more
+and so that all of that seems to me that
+this this kind of research where you're
+you're nibbling for half or single
+percentage points in accuracy while a
+single misstep in a choice of hyper
+parameter might cost you ten times that
+gain is is a bit sketchy now I recognize
+they get numbers like no one else has
+gotten before but where exactly the
+gains come from and if the gains really
+come from this architecture or actually
+just more from throwing computer
+at it I don't know all right with that I
+hope you enjoyed this and I invite you
+to check out the paper bye-bye

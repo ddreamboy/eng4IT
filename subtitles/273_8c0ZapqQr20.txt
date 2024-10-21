@@ -1,0 +1,17 @@
+save your mesh save your time here's why
+the mask modifier is your best friend in
+blender unlike manual deletion The Mask
+modifier lets you hide topology without
+permanently altering your mesh making it
+easy to adjust later if needed the mask
+modifier allows you to hide parts of the
+mesh without altering the geometry which
+makes it easier to test animations with
+different versions of your character
+here is how you can use the modifier
+make a new vertex group go into edit
+mode select every vertex that you want
+to stay visible assign a full weight of
+one to all these vertices and then go
+back to the modifier and add this ver
+text grp to the modifier here is how you

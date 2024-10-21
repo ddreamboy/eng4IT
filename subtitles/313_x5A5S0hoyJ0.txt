@@ -1,0 +1,286 @@
+in this video we're going to create an
+esp32 based sensor node that together
+with a BME 680 sensor will measure
+temperature pressure humidity and air
+quality and send all this data over
+Wi-Fi and the mqtt protocol to our
+Raspberry Pi 4 based iot server
+we made this server in a previous video
+and essentially what this does is take
+our sensor data store it in a database
+and allow us to see it visually in a
+grafana dashboard
+this video is going to focus on the
+sensor side of this project so if you
+want to have a look at the server video
+I'll link that in the cards above and
+also down in the description
+so let's get into what we're going to
+use for this project we're going to use
+an esp32 Dev board this is just a
+generic Dev board um which is an
+AliExpress special probably a clone of a
+clone of a clone
+um but any Dev board will do in terms of
+sensors you can use really whatever
+sensor you like in this situation and it
+all depends on what data you want to
+measure I will be using a BME 680 sensor
+from Adafruit but you can easily adapt
+this project for other sensors
+we're going to need a variety of jump
+cables to connect the sensor to the
+esp32 board as well as some kind of
+power supply to power the sensor mode
+as I'm going to have this sensor in my
+office I'm going to plug it in via USB
+directly to the Raspberry Pi server
+which is on 24 7. finally we're going to
+need the iot server that we made in our
+previous video
+and we're going to program everything in
+the Arduino IDE
+so how will the sensor node work as I
+previously mentioned this sensor node
+will transmit sensor data over Wi-Fi via
+the mqtt protocol mqtt is a network
+protocol where essentially a client
+pushes data to a broker the client in
+this case is the esp32 and the broker is
+an application called mosquito running
+on our Raspberry Pi server
+the sensor data will be sent as a Json
+string
+this flowchart shows how the how the
+software will work from a more detailed
+perspective I've kind of had to make
+this somewhat horizontal flowchart to
+make it fit into a 16x9 frame but
+hopefully it's clear enough for you guys
+to see essentially our code that will
+run on the esp32 will start by opening a
+serial connection to print some debug
+messages
+then we will check if we have wired up
+the sensor correctly and once we've
+connected to the sensor we will attempt
+to connect to a Wi-Fi network
+once we've connected to our Wi-Fi
+network we'll then try and attempt to
+our mqtt server and after all this setup
+is complete we enter a main Loop which
+reads the sensor data packages it into a
+Json message and sends it to the mqtt
+server
+then this process is repeated as an
+interval of your choosing the Json
+message is essentially the value of the
+sensor reading say temperature with a
+key which is representative of what the
+sensor is reading
+for example a key of T would indicate
+that the sensor reading is temperature
+this is then decoded by the server
+and then stored properly in our database
+the Arduino libraries that we're going
+to use are the BME 680 and sensor
+libraries
+the pub sub client for mqtt
+communication
+Arduino Json to create our Json message
+wire to enable I squared C communication
+and Wi-Fi to enable our network
+connectivity
+as I mentioned we're using I squared C
+to connect the BME 680 sensor to the
+esp32 dev board
+this requires four jumper cables power
+ground and then clock and data lines
+in order to implement our program in the
+Arduino IDE the first thing we need to
+do is install the esp32 boards package
+from espressive if you haven't done that
+already
+and this is done by adding the following
+URL to the additional boards manager in
+file then preferences
+this is the first time you've done this
+it might prompt you to install the board
+and that will appear in the bottom right
+hand side and you just hit install
+in terms of the libraries we listed to
+install them you need to open the
+library manager by clicking on this icon
+and then searching for the libraries you
+don't have installed and install them
+right so now let's get programming I
+will explain everything as I go through
+it but if you want to skip this then the
+full source code is available on our
+website link down in the description
+and if you'd like to challenge yourself
+perhaps go back to the slide where I
+showed you the programming flowchart and
+see if you could start off there and
+perhaps at the end when you finish that
+compare with what are what we programmed
+we are starting with a fresh Arduino
+sketch and first things first we need to
+include all of the libraries we
+previously listed
+after this we create another function
+called reconnect for a total of three
+that is
+setup Loop and reconnect
+then we create a BME object which
+initializes the bme680 sensor over I
+squared C and we do that using the
+Adafruit underscore bme680 Constructor
+then we create three Char arrays or
+character arrays to store your Wi-Fi
+network SSID and password as well as the
+IP address of the mqtt server
+obviously I've blanked out my network
+details here but just substitute yours
+in they're in plain text and make sure
+to include the quotation marks either
+side
+then we create a Wi-Fi client simply
+called ESP client and then we tell the
+pub sub client which client we used
+there's a lot of clients there but just
+follow this code here
+now let's start with our setup function
+the code in the setup function runs once
+when the program is started we will
+start with 100 millisecond delay to make
+sure that everything is started up and
+running properly then start the serial
+connection with a baud rate of 115 200
+and wait for the serial connection to be
+opened before continuing
+then we test to see if we can connect
+the BME sensor by using an if statement
+and in the the condition of that if
+statement we use the BME dot begin
+function and we check whether it returns
+a one or a zero
+if the BME sensor is not detected then
+we enter an infinite while loop
+and that will just prompt us to you know
+unplug the board check our wiring try
+again then we need to configure the BME
+sensor and I'm using the default values
+here from Adafruit so I'm just going to
+copy paste them over I advise you to do
+the same but if you really want to get
+into the wheeze of things then have a
+look at the data sheet of the bme680
+sensor and maybe have a play around with
+what these values do
+then we attempt to connect to our Wi-Fi
+network I'm going to print some debug
+messages before using the wi-fi.begin
+function with the SSID and password we
+previously set as arguments
+to check that we are connected we're
+going to use a while loop which checks
+the Wi-Fi status against the WL
+underscore connected condition
+in this while loop we print out a sort
+of loading bar of dots every half a
+second whilst we wait for the Wi-Fi
+network to connect as this can sometimes
+take a couple of seconds
+once connected we print out an alert
+over serial so we know things are
+working as anticipated
+finally in the setup function we set up
+the mqtt server details with client.set
+server
+and then the server IP address and the
+port of the mqtt server which is
+1883 as a as a default
+the first thing we're going to do in our
+main Loop is check if we are connected
+to the mqtt server
+the first time the program enters this
+Loop we won't be connected and so this
+function will run
+let's write this function now
+in this function we create a while loop
+which Loops until we are connected
+I'll print a debug message so that we
+can check what's going on
+we then allocate a client ID to this
+device in the form of a string and a
+random number appended to the end of the
+string
+then we attempt to connect to the mqtt
+server using the client.connect function
+with the client ID as an argument
+this function is used in the condition
+of the if statement
+if the connection fails then we print
+out the error code for debugging
+with that function complete we can now
+go back to our main Loop
+firstly we create a static Json document
+which will contain the sensor data we
+read from the sensor we can also create
+a character array and call it something
+like output which will store the Json
+message we want to send to the mqtt
+server
+then we create a variable to store the
+current time and this will be used as a
+kind of timer
+we then create an if statement which
+will effectively Implement a 10 second
+delay between running the code in this
+if statement note that here I forget to
+declare the last message variable but
+that's an unsigned long and I fix it
+once I try and compile it and sort of
+face palm in a couple of minutes
+then we read the temperature pressure
+humidity and air quality data into
+temporary variables
+using the bme.read functions
+then we need to add these variables into
+the Json document each value has a key
+Associated to it to indicate what value
+is being stored
+after this we use the serialized Json
+function to turn this document into a
+string that can be sent across the
+network using the client.publish
+function
+which takes the argument of the topic to
+push the data to in this case home
+sensors and the Char array of the Json
+message
+with all this written we can compile the
+code and upload it to the board
+obviously you can see this has warned me
+that I've missed the Declaration of a
+variable but with that fixed I can
+upload the code now
+and once uploaded we should be able to
+see that the sensor data being sent
+across the xeron monitor is the sort of
+um what we want to be sent across the
+network and this should be updated every
+10 seconds
+if we open up grafana we should see all
+this data being populated
+so this is quite a straightforward
+project so please feel free to adapt
+this to your needs do let us know how
+you want to use this project down in the
+comments we love to see how you use the
+things you learn in our videos
+if this video has helped you out then
+please consider liking and subscribing
+thank you very much for watching
+and as always have a nice day

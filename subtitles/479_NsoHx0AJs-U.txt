@@ -1,0 +1,79 @@
+[Music]
+raise lots of pearls around
+machine-learning why for the most
+important reason because everyone likes
+to know the future even before that
+event happens for example can I know
+more about my customers and what are
+they going to buy from me today can I
+recommend products based on their search
+patterns and find customers who are
+dissatisfied from my service and based
+on that who are likely to churn or
+probably identified customers who are
+likely to default on their payment
+patterns now the question is why I would
+like to make all these predictions
+simply to ensure that I can take
+necessary corrective action or necessary
+corrective measure to ensure the future
+behavior of customers is in line with my
+expectation so business owners and
+marketers would like to predict more
+about their customers would like to know
+more about their customers what they
+need why they need when they need those
+products all these information will help
+them generate more profits secondly why
+machine learning is important all these
+things that we discussed machine
+learning helps us to find and know the
+future of our customers predict the
+future
+besides that machine learning also helps
+you adapt and learn with changing
+scenario these machine learning
+techniques have a capability by which
+they can Auto refresh they can
+automatically refresh within with a new
+stream of data that comes into the
+system so with the new stream of data I
+can refresh my model and
+click the future and thirdly they also
+helps you automate things such that you
+can act and react fast with a changing
+scenario these are some of the reasons
+why machine learning of late is gaining
+more and more prominence machine
+learning and automation is the way going
+forward if that is what is the way going
+forward and businesses are going to
+operate then let's understand what is
+machine learning
+simply put machine learning is algorithm
+that learns from data identifies
+patterns in data and store that learning
+in form of a model and that model can be
+applied on new set of data to predict
+how it is going to behave how the
+customers are going to behave in future
+so that is what machine learning all
+about by the way machine learning need
+not just be applied to customers machine
+learning techniques can be extended to
+manufacturing industries machines and
+lines and more for example I can apply
+machine learning techniques on some
+manufacturing machine to understand
+whether any component of that machine is
+likely to fail in near future if I can
+flick whether a component is going to
+fail in near future I can do a
+preventive breakdown repair and
+maintenance work in advance even before
+the machine fails so that helps me
+ensure my production and manufacturing
+line continues to work smoothly so these
+are some of the reasons why machine
+learning is in demand
+[Music]

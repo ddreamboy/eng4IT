@@ -1,0 +1,236 @@
+welcome back so we're talking about
+neural networks which is a very powerful
+expressive machine learning architecture
+to learn arbitrary input/output
+functions given that you have enough
+training data so now I want to walk
+through a little bit of the architecture
+and kind of how you build neural
+networks what they're made of things
+like that so the basic building block of
+a neural network is a neuron which is
+this little functional unit kind of an
+input/output node or neuron and to be
+mathematically precise you have kind of
+an input signal u that goes into this
+node and it does some mathematical
+operation on you to give you some output
+Y and this could be something like just
+multiplying it by a constant or adding a
+constant or it can be more more
+sophisticated so often people use
+sigmoidal function z' these are called
+activation functions where if u is small
+the output is just 0 and if u as large
+regardless of how large it is
+the output might be 1 and then there's
+some smooth activation function from 0
+to 1 this is a sigmoid 'el or a
+hyperbolic tangent activation function
+very very common also neural inspired so
+a lot of the neurons in your brain kind
+of have these sigmoid activation
+functions so this is really really
+commonly used increasingly now people
+use this kind of this rel u linear kind
+of it's it's 0 up until a point and then
+it grows linearly with you this is a
+very useful useful building blocks that
+people are using in modern machine
+learning architecture and I could give a
+whole lecture on all of these different
+activation functions there's tons of
+them some are better for something some
+are better for others the rel U is very
+common so is the sigmoid 'el so you take
+that that neuron that unit and you start
+to stack it either in series or in
+parallel or both so I can put two
+neurons next to each other and do a more
+complicated function this function this
+function followed by this function I can
+have middle layers I can
+for example do three different functions
+from this output and then I can add all
+of those up or multiply them or do some
+other function downstream and so I can
+build up this kind of complexity in
+what's known as an artificial neural
+network so here I built up this neural
+network it's a network with nodes and
+edges describing the topology of how
+it's connected but it's artificial
+so neural networks you know you have
+neural networks in your head this is an
+artificial one built up out of these
+building blocks and the different nodes
+can have different activation functions
+you they can add up linear combinations
+of their the previous layer and things
+like that okay and then if you keep
+stacking more and more and more of these
+layers so each layer is doing some kind
+of sequential processing if you start to
+add a lot of these then you have what's
+known as a deep neural network and this
+is the basis of deep learning today okay
+and so there are a ton of things you can
+do with these neural network
+architectures I'm just going to show you
+a few here so this is this is kind of
+the neural networks zoom my colleague
+Nathan cuts made this image it was
+inspired by the Asimov Institute's
+neural network zoom this is in our
+textbook data driven science and
+engineering and this just gives you an
+idea of some of the the massive variety
+of neural network architectures that you
+can design and so each color for the
+different nodes means different types of
+nodes different types of computations
+that are happening there's also the
+different topology of whether or not
+information is getting compressed in a
+bottleneck and expanded or in all of
+these different architectures and this
+is only a few of kind of the the
+architectures out there in neural
+network so really there there are tons
+of different and every every year there
+are dozens of new architectures being
+proposed to solve different problems so
+it really is a zoo there's a ton of a
+ton of different things you can do and
+we're increasingly learning through
+trial and error and study and analysis
+and lots of hard work by many
+researchers which architectures are good
+for which problems and so again this is
+just just a few of them
+so a couple of key ones I want to point
+out convolutional neural networks CN NS
+are really really important these are
+used a lot in image recognition the
+basic idea is if I have a big image this
+array here I don't know if you can see
+but there's a smiley face I took this
+from Wikipedia what a con the new
+convolutional neural network does is it
+has these convolutional layers that
+basically take a mask and slide it
+across the image doing local
+computations in local patches and so
+what you might be able to do is pull out
+edges or features and you would run that
+through a convolutional layer and pull
+out these these edges and then you might
+run those through another convolution at
+layer and another convolutional layer
+and you stack these convolutional layers
+and then you do some processing on them
+and so convolutional neural network CN
+NS are really important for image
+recognition anything where there is a
+translation invariant so you know if I
+have a picture of a cat the cat could be
+over here or it could be over here CN NS
+can start to pull out kind of this
+translational invariance that exists in
+images recurrent neural networks are
+really useful for audio and temporal
+signal signals that vary in time like if
+you look at the the acoustic signature
+of speech in time and what these do I
+didn't actually draw it but what you can
+do is you can add these kind of feedback
+loops so you can have the neurons
+feeding back to themselves or I can have
+different layers kind of feeding back
+and so this allows you to have this kind
+of temporal feedback where there's some
+memory in the system it's not just a
+feed-forward Network which is what I
+showed you before where all the
+information just flows from left to
+right here you have this kind of
+feedback network this recurrent neural
+network that gives you this memory so LS
+TMS long short term memory networks are
+really useful for audio processing and
+dynamical systems anything that varies
+in time because they have these kind of
+feedback signals which allow you to have
+kind of memory so there's information
+that it's just living here kind of
+getting recirculated through this
+network so that's pretty cool very very
+interesting architecture another one
+that I really liked a lot
+and I use a lot is the auto-encoder so
+here I'm showing you kind of what I
+think of as a shallow linear
+auto-encoder meaning that my nodes are
+doing linear combinations just taking
+linear combinations of the input layer
+and what the auto encoder is trying to
+do is take a high dimensional signal
+compress it down to some latent space
+this is Z variable that's all the
+information I need to keep track of in a
+way that that Z information can be
+relisted back to the high dimensional
+image so that X hat is approximately
+equal to X okay so this is kind of a
+compression decompression or an encoder
+decoder architecture where you can take
+big data high dimensional data and
+figure out what is the kind of the late
+in space what are the degrees of freedom
+that matter and so researchers showed a
+long time ago that you could reconstruct
+the famous principal component analysis
+which has been around for a hundred
+years in this neural network
+architecture this shallow linear auto
+encoder network and since then
+researchers have massively generalized
+this too deep autoencoders where now the
+the nodes can have nonlinear activation
+functions and I can have many many many
+many layers and get better compression
+better kind of extraction of the
+essential features of my high
+dimensional data in this late in space
+is Eve and that's one of the reasons I
+like these models is because there's
+some interpretability that you get when
+you do this kind of information
+bottleneck this compression down to this
+latent space because there might be few
+enough variables here that I can
+actually analyze and try to understand
+what these mean with respect to the data
+so I think these are kind of just some
+neat architectures you have
+convolutional neural networks recurrent
+neural networks you have these auto
+encoder networks and there's many many
+more kind of as much as you can imagine
+you can build a network to do it and
+maybe that's the last thing I want to
+point out is that designing and
+implementing these architectures is
+becoming extremely simple because of the
+explosion of open source software put
+out by Google and Facebook and others so
+you have Tenzer flow and pi torch and
+caris which are these incredibly
+powerful environments where you can
+design
+neural network architectures and then
+train them with with training data to
+build these very very powerful and
+expressive models so it's a really neat
+and also increasingly easy to design and
+use okay thank you

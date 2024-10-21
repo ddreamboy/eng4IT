@@ -1,0 +1,87 @@
+data warehousing is one of the hottest
+topics both in business and in data
+science but if you're new to the field
+you're probably wondering what a data
+warehouse is why we need it and how it
+works
+don't worry because in four minutes
+you'll know the answers to all these
+questions alright first let's start with
+the definition what is the meaning of
+the phrase single source of truth in
+Information Systems Theory the single
+source of truth is the practice of
+structuring all the best quality data in
+one place let's look at a very simple
+example surely it has happened to you to
+work on a file and to create many
+different versions of it how do you name
+such a file well once you are done you
+often place the word final at the end
+this results in having a bunch of files
+with extensions final final final final
+final final or my favorite really final
+final if this is you you are not alone
+it seems that even corporations never
+know where the most recent or most
+appropriate file is but what if you knew
+that there is one single place where you
+would always have the single source of
+information that would be quite helpful
+wouldn't it well a data warehouse exists
+to fill that need so what is a data
+warehouse exactly it is the place where
+companies store their valuable data
+assets including customer data sales
+data employee data and so on in short a
+data warehouse is the de-facto single
+source of data truth for an organization
+it is usually created and used primarily
+for data reporting and analysis purposes
+there are several defining features of a
+data warehouse it is subject oriented
+integrated time variant non-volatile
+summarized let's quickly go through
+these one-by-one
+subject oriented means that the
+information in the data warehouse
+revolves around some subject therefore
+it does not contain all company data
+ever but only the subject matters of
+interest for instance data on your
+competitors need not appear in a data
+warehouse however your own sales data
+will most certainly be there
+integrated corresponds to the example
+from the beginning of the video each
+database or each team or even each
+person has their own preferences when it
+comes to naming conventions that is why
+common standards are developed to make
+sure that the data warehouse picks the
+best quality data from everywhere this
+relates to master data governance but
+that is a topic for another time time
+variant relates to the fact that a data
+warehouse contains historical data too
+as said before we mainly use a data
+warehouse for analysis and reporting
+which implies we need to know what
+happened five or ten years ago
+non-volatile implies that the data only
+flows in the data warehouse as is once
+there it cannot be changed or deleted
+summarized once again touches upon the
+fact that the data is used for data
+analytics often it is aggregated or
+segmented in some ways in order to
+facilitate analysis and reporting all
+right so that's what a data warehouse is
+a very well structured and non-volatile
+de facto single source of truth for a
+company if you enjoyed this video don't
+forget to hit the like button and share
+it with your friends and if you'd like
+to become an expert in all things data
+science subscribe to our Channel
+thanks for watching and good luck

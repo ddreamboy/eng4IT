@@ -1,0 +1,596 @@
+[Music]
+what is going on guys welcome back in
+today's video we're going to learn how
+to use sk learns pipelines to make your
+machine learning processing more
+professional so let's get right into it
+all right now for today's video i'm
+going to use a jupyter notebook in order
+to explain everything because i think
+it's just more convenient to do so you
+can still follow along in pycharm in the
+idle in vs code whatever you want to use
+but for me as a tutorial maker a jupyter
+notebook is just more convenient when
+working with data science machine
+learning stuff because i can run
+individual cells i can change individual
+parts and rerun them instead of just
+running the whole block of code every
+time i do something so i'm going to use
+a jupyter notebook and in order to
+explain to you what pipelines are how to
+use them and why you should use them
+we're going to look at a very simple
+example today and for this we're going
+to need the usual python data science
+stack like pandas numpy matplotlib maybe
+i mean we're not going to use math.lib
+but sklearn is important of course
+because those pipelines come from
+sklearn
+and we're going to start with a very
+basic example we're going to import
+pandas as pd and we're going to create
+some artificial data this data is going
+to start as a dictionary we're going to
+say we have
+a name
+so this is the column name and then we
+have here anna
+bob
+charlie
+diana
+and eric whatever
+then the age is gonna be
+20
+34 23
+78 and 33
+then the gender is gonna be
+f for female m for male so f fm
+f
+m
+[Music]
+and then what we also have is a job or
+what they have as a job
+and
+let's say we have uh
+three jobs or four jobs to choose from
+let's say we have a programmer we have a
+worker not worker sorry writer
+we have a cook
+we have another programmer
+and we have um
+i don't know let's say teacher or
+something
+now
+this is some sample data that we're
+going to use to explain pipelines and
+when you get data from the real world
+sometimes data is going to be missing
+for example we might not have this data
+we might have none here because this h
+is non-existent so we need to find a
+solution for that
+now first of all let's go ahead and turn
+this into a data frame df is going to be
+pandas data frame based on the data
+and then we can look at the data frame
+so this is a very small data set it's
+artificial it's not real you can also do
+everything we learned today on real data
+sets in fact i have a tutorial on how to
+use how to predict titanic survivors
+using the titanic data set and there we
+use actually pipelines and a lot of
+pre-processing so if you want to have a
+practical example you might want to look
+at that video
+today we're going to talk about the
+basics and this is what a small data set
+looks like for example we have missing
+values we have values that we cannot
+feed into a neural network or into a
+k-neighbor's classification right we
+cannot just go ahead and say programmer
+is something that we feed into the
+neural network i mean we can do it
+character by character as ascii codes
+but that's not what we want to do those
+are categories and those are also
+categories we have a binary value here
+mf so either male or female we have
+missing values and we have a value that
+is irrelevant probably for the
+prediction of something now here we
+don't have anything to predict because
+we're not going to do an actual machine
+learning project i want to explain the
+pre-processing part with a pipeline but
+if we have like another feature here
+like salary or happiness or whatever
+we might use those values but the name
+is not going to be very relevant
+so for today's pre-processing the job is
+going to be the following i'm going to
+define this here as marked down we're
+going to say
+the pre-processing
+pipeline will be the following
+first we want to drop the irrelevant
+name feature
+so drop name feature
+then what we want to do is we want to
+impute the ages
+basically meaning that we want to do
+something with the ages now we can just
+drop this line because we don't know the
+h we can just ignore it or we can impute
+it with the mean or with another
+strategy we're gonna impute it here
+so impute ages
+then we're gonna um
+turn
+gender into
+uh binary slash numeric
+so zero one
+um and then we're gonna turn
+or one hot encode
+the jobs one hot encoding basically
+means that we take uh categories and
+instead of um setting numbers like one
+two three or something
+we create a new column for each job so
+in this case we would have column
+programmer writer cook teacher
+and the value is either 0 or 1. why is
+that more reasonable than
+labeling them with numbers and coding
+them with 1 2 3 and 4
+because 1 2 3 4 will be interpreted by
+many models as proximity so one and two
+are closer than one and four in this
+case it doesn't make sense if programmer
+and cook have one and two and teacher
+has four the programmer isn't closer to
+the cook in an on a numerical scale
+than to the teacher it is basically a
+category and not something like cold
+medium warm hot or something there it
+would make sense to use numbers in this
+case it doesn't make sense so we create
+um separate columns here
+so this is the pre-processing pipeline
+this is what we want to do and usually
+what you do is you do it by hand right
+if you don't use pipelines so what you
+do for example is you say from
+sqlearn.impute
+you want to import a simple computer
+come on auto completion there you go
+simple computer um and from sklearn
+dot pre-processing you want to import
+the one hot encoder and then you start
+you know you drop the name feature you
+do it yourself every time so you
+basically say okay df equals df drop
+we want to drop the column name on the
+axis one
+there you go we drop the name feature
+now i can print this here you can see we
+don't have the name anymore now of
+course i cannot run this another time
+because then it's going to say
+there is no column name so we have to
+run everything here actually
+in order to make this happen
+um
+[Music]
+then the next one was impute the ages
+impute the ages is quite simple we
+create an imputer
+simple computer the strategy is going to
+be
+the mean strategy so basically taking
+the mean of the other ages to basically
+ignore
+ignore it on a larger scale here to get
+like the center value it doesn't make
+sense every time in this case it might
+make sense might not
+depending on how important dh is for the
+prediction
+and then we're going to say dfh is
+essentially just computer.fit
+transform
+[Music]
+data frame
+h like that now i need to run this again
+because i deleted the name and now if we
+look at the data frame we have the h
+imputed so before we had here a nan and
+now we have a 27.5 because that's the
+mean
+so this is imputed now
+next one was uh turn
+gender into a numeric feature so numeric
+gender
+and for that we define a dictionary
+which basically says okay m will be
+translated to zero f will be translated
+to one
+and then
+um the gender actually we can do it like
+that to be consistent here
+is gonna be and then list comprehension
+gender dictionary g for g in
+df
+gender now of course i need to rerun
+this
+there you go and now we have zeros and
+ones here instead of m and f
+and last but at least one one hot
+encoded jobs this is gonna be not really
+complicated but we're gonna need a
+couple of more
+lines of code so we're going to say
+first of all the encoder is going to be
+the one hot encoder
+and then we're going to say okay the
+matrix that we want to use here is going
+to be encoder
+fit transform
+i'm not even sure if that's the best way
+to do it this is just how i did it in
+the titanic tutorial for example
+maybe there is a more clean way to do it
+but what i do is i create a matrix
+by taking the jobs and then turning it
+to array and then i basically take this
+matrix put it into the data frame and
+then add the columns manually by saying
+column names
+um
+equals programmer by the way this only
+makes sense of course if we're not going
+to add more categories so in this case
+it might not make a lot of sense because
+the next job might be
+uh construction worker right and then we
+don't have the category and we mess
+things up so job may not be the best
+example we're gonna stick with it here
+for the tutorial but maybe something
+like uh roll in
+in a school for example if we're if we
+have teachers or um staff in school we
+have someone who cleans someone who
+teaches someone who is the um
+what do you call principal or something
+of the school so that would make more
+sense because we don't add new roles
+there in this case we can always add new
+jobs but since we're doing one hot
+encoding we're gonna stick with the jobs
+that we have here
+um programmer what was the other one
+writer
+cook
+and teacher
+those are the column names and now what
+we do is we say for
+i in range
+length
+matrix t
+and by the way this is all just an
+example you can work with real data sets
+you can do your own pre-processing so
+the focus is not on what we're doing
+right now this is just the the example
+we're gonna talk about pipelines this is
+the the most important focus here
+so column names
+i equals
+matrix dot t i
+and then last but not least we drop
+the
+so df equals we're going to drop the
+drops column because we now have it
+encoded
+axis equals one now we need to run this
+again
+and then we should be able to actually
+have the pre-processed data frame if it
+is also printed there you go
+and this is what we want to end up with
+now the problem is that if i go ahead
+now and i copy this here
+and um let's say those are not the same
+values here but i have different values
+so it's uh something like let's let's
+continue with f we have fiona
+um
+gerald
+efgh i don't know
+hans
+which is a german name
+uh
+i for
+i don't know a name with i what is
+isabella
+uh j for jacob
+there you go and then we have like
+another non value and then we have here
+fm
+again fm okay there you go and then we
+have different jobs like writer
+programmer
+programmer
+programmer
+and teacher if we have this data now and
+want to do the same thing we want to get
+it in that format we would have to
+repeat that code and of course you could
+say okay just put it in a function and
+yes you can do that you can just make a
+function that does that but it's more
+professional to use pipelines because
+then we have
+one element passing to the next element
+so one one part of the pipeline feeds
+its output into the next pipeline um
+component and then this component feeds
+it output to the next one and so on
+so
+we can either run the full code or we
+can use pipelines which is what we're
+going to do and for that we're just
+going to ignore this down here we're
+going to use that in the end to show how
+pipelines work we're going to start by
+defining estimators because in a
+pipeline we have estimators an estimator
+is something that has the functions fit
+transform fit transform
+so
+essentially a classifier is an estimator
+so when i say k-nearest nervous
+classifier i can fit it i can transform
+i can fit transform i can also predict
+and so on
+and in a pipeline we have estimators in
+order to create an estimator we need to
+extend from the base estimator class we
+need to create a new class and we need
+to have the functions fit and transform
+so we're going to say from
+sqlearn.base we're going to import the
+base estimator and transform a mix in
+transformer mixing basically just means
+that when we define fit and transform
+it's automatically going to create fit
+transform you don't have to specify it
+manually
+and we're going to now create a class
+the first thing we did was drop name
+feature
+now let's
+just for the sake of demonstration
+here we're going to call this class name
+dropper just to see how it works we
+extend from base estimator we have
+transformer mix in here as well as um as
+the parent
+class and now we just define the
+functions fit
+fit takes self x and y which is none by
+default
+as parameters and all we need to do here
+is return self nothing fancy we're not
+going to use fit here we're just going
+to return self just so we have have it
+defined and the whole logic is going to
+be in the transform function and the
+transform function
+transform
+function takes self and x as an input
+here and in this case all we want to do
+is we want to say okay instead of
+returning x and x in this case keep in
+mind is a data frame usually these
+estimators take numpy arrays when you
+use them from sklearn hours here takes
+pandas data frames so what we can do
+here is we can treat x as the data frame
+x is essentially the same thing as df
+here so we just return x dot drop
+and we drop
+the name column
+axis equals one
+so this already is an estimator that we
+can use and i think i can show you here
+how it works
+so let's actually go ahead and turn this
+into df2
+df2 is going to be pd
+data frame
+data
+like that and now df2 looks like that
+and what i can do now is i can say
+dropper equals namedropper
+and i can say
+dropper.fit transform
+df2
+and now you can already see that the
+name is gone so this is what the fit
+transform did
+and we're gonna do now different
+estimators for the different purposes
+we're gonna have an estimator for
+for uh what was it
+computing gauges we're to have one for
+making the gender numeric and one for
+one hot encoding the drops
+and
+the next thing that we're going to do
+here is
+going to be the h impeder
+h computer is gonna also be a base
+estimator transformer mix in
+basically we can copy this here
+there you go
+fit function stays the same and here in
+the transform function what we do is
+what we did above we say computer equals
+simple computer
+strategy is going to be mean and then
+computer
+um actually how did we do that we said
+df in this case x not the f
+h equals
+imputer dot fit transform
+df
+and i i'm not pf sorry x
+and here we
+set h into square brackets like that
+now you might say can we not use
+computer directly as
+part of the pipeline since it is already
+an estimator since it has already the
+fit transform function we can do it but
+computer works with um
+arrays like not with uh not with data
+frames and because of that we don't do
+that here we have one layer of
+abstraction above that and here we just
+return x
+as a result
+and then the next one is the
+feature encoder we're going to combine
+the rest into one
+estimator
+and
+basically you can copy this again here
+and we can now actually use the logic
+from above so let's just copy this
+delete
+that paste this here
+and now this stays the same now
+everywhere we have df obviously we're
+going to change it to x because we're
+not working with df but with x
+so here again we change
+um f and m to one and zero
+and here we basically just do one hot
+encoding again change it to x here
+column names are the same here we change
+this to x
+change this to x and instead of
+assigning it to df we just return it
+so again this feature encoder takes the
+data frame we change the gender column
+to zeros and once we encode the job to
+zero and one features to binary features
+and then we drop the drop
+column and that's basically it
+now what we can do here manually is
+since we have the data frame two let me
+just show it again df2 this is what it
+looks like we can go ahead now and say
+okay
+um create a name dropper so let's say
+dropper equals name dropper
+uh then the second one was imp equals h
+computer
+and then um
+ink it's gonna be the
+feature encoder
+and now what we can do is we can say
+just dropper that fit transform
+uh df2 and we get that now i can feed
+that into the computer dot fit transform
+function to
+build on top of that result now you can
+see that we imputed the h and then i can
+say inc dot fit transform based on that
+result
+and then it results in that so this
+works but this is manually and now we
+can use pipelines to make this even more
+convenient by saying from sklearn dot
+pipeline
+import pipeline
+and then um
+you're gonna say pipe for example equals
+pipeline and here we pass a list of
+tuples and the first one
+we always have to specify is the first
+element in the tuple a name so for
+example dropper doesn't really matter
+what you call it and then the actual
+thing name dropper
+and of course if you have hyper
+parameters that you can pass here in
+your model if they're in your estimators
+if they're more complex you can do that
+um in our case we have very simple
+estimators here
+then we have computer and this is going
+to be the h computer
+and then we have
+encoder
+which is going to be the feature encoder
+so this is the pipeline now one
+estimator
+feeds the result into the next one into
+the next one and then the pipeline takes
+some input and outputs uh the final
+result so again if we go ahead and we
+print df2
+this is what it looks like and if i now
+go ahead and i say pipe fib transform
+fit transform
+[Music]
+df2
+you can see that we immediately get the
+results so we just have to use that
+pipeline this pre-processing pipeline
+and this makes a lot of sense if we use
+it over and over again of course if you
+just have to do it once doesn't make a
+sense to use a pipeline for it just do
+the steps and you're done however if you
+have to do it over and over again
+because you do it first with the
+training data then with the validation
+data then with the testing data and then
+in the future you might get
+new data sets in a regular time interval
+and then you want to do it all the time
+you don't want to do the steps all the
+time a function is not professional you
+just use the pipeline you have one
+one full piece of pre-processing
+pipeline that you just feed some some
+data in and on the other side you get
+the complete pre-pro completely
+pre-processed data set for the neural
+network so you just take the raw data
+feed it into the pipeline you get the
+pre-processed data out on the other side
+and you feed it directly into the neural
+network or whatever you want to use and
+this is how you use professional
+pipelines from sqlearn in python so
+that's it for today's video hope you
+enjoyed i hope you learned something if
+so let me know by hitting the like
+button and leaving a comment in the
+comment section down below and of course
+don't forget to subscribe to this
+channel and hit the notification bell to
+not miss a single future video for free
+other than that thank you much for
+watching see you next video and bye
+[Music]
+you

@@ -1,0 +1,85 @@
+ 
+ 
+Hello everyone. Welcome to the semicolon
+ 
+This video is a part of the series
+data analytics
+with python.
+and today we are going to learn about the pre-processing
+steps you have to take before you can
+apply the machine learning algorithms to the data.
+Pre processing data is an important task
+and is very important for accuracy.
+this is because, data is mostly noisy
+It sometimes has missing values
+and also false values
+So, feature selection and
+feature extractions are two major methods
+of pre-processing which directly
+impact the accuracy of the model.
+Feature selection is a method
+of selecting some features out of the data and
+discarding the irrelevant ones.
+Say you have to predict the mileage of the car and information you have
+in form of attributes is
+engine capacity, top speed and color.
+We must obviously consider only engine
+capacity and top speed and not the color
+for prediction.
+Feature extraction is the method
+which converts M attributes of your data to N attributes.
+The original number of attributes may be greater than
+the new number of attributes. They may be less or
+equal to as well.
+Feature extraction is a broad topic.
+I'll try to cover certain aspects of it in this video
+If you have image data
+each image can be made up of thousands of pixels.
+In that case, the algorithm you train with it
+may turn out to be inefficient.
+You can extract features like color histograms,
+symmetry or pixel counts.
+Some advance methods includes
+convolutional neural networks. But the feature extraction techniques
+in images are mostly dependent on the data.
+If you have text data you have many methods to extract
+information out of text data which are
+count vectorizer, TFIDF, word vectors,
+bag of words and many others.
+Dealing with text data is an important
+part of data analytics. On example of feature extraction
+with text would be in cases
+where your country column has string.
+Your algorithm would never understand
+the string value. So you can add country names
+as attributes and use a boolean
+value to represent your country.
+This is a similar method to count vectorizer
+and one-hot vector as well.
+You can enumerate your country which is a similar
+method to bag of methods.
+ 
+Dimensionality reduction is  an important part of
+data pre-processing where the number
+of attributes go on increasing.
+This is a problem due to curse of
+dimensionality where the model gets
+tougher and tougher to train as the dimensions of the
+attributes increases.
+We can use famous methods like principal component analysis
+singular value decomposition
+for reducing the dimensions of the data.
+Dimensionality reduction
+can also help us visualize data better
+because it becomes harder to visualize at higher dimensions.
+ 
+Now, filling the missing values
+in the data by predicting missing values or filling it with
+mean is also important.
+Once we are done with all these steps
+we are now ready to apply the data
+to a machine learning model.
+If you like this video and found it helpful
+hit the like button. And if you keep watching more and more of
+these hit the subscribe button as well.
+Thank you.

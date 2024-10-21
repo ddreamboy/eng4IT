@@ -1,0 +1,2386 @@
+te currently in medical field without
+prior Tech experience okay that's fine
+no problem at all that's why we're here
+to take you from zero to Cloud right it
+doesn't matter your background we are
+here to you know take you from zero to
+the cloud so you have nothing to worry
+about basically so like I was saying um
+after the introduction we'll be bringing
+one of our Cloud professionals on board
+who's going to be talking to us about
+you know the Cloud job rules basically
+demystifying what the cloud role is all
+about basically right and how you can
+position yourself to be at The Cutting
+Edge of what this opportunities what you
+stand to get from this opportunities
+right so um that's basically what we're
+going to be doing for the first part of
+the session and for the second part
+we're going to be getting into the um
+what's it called now into the um permit
+me to to just check in yeah panel
+discussion thank you panel discussion so
+we're going to be going into the panel
+discussion where we'll have them also
+come on board and share with us um some
+of the things that we need to equip
+oursel with if we're going to be
+transitioning into Tech it's very very
+important so that you don't you don't
+just go into it and then you find
+yourself struggling and then you say
+that oh at the end of the day you decide
+to you know give up so we they are here
+to answer all your questions basically
+and on that note um it's very important
+for you to note that um if you have any
+question whatsoever kindly drop it um
+we're going to be dropping a link in the
+chat box so please kindly use the sedo
+link to drop all your questions there
+will be no question we will not be
+taking any question from the chat box so
+please and please a link will be dropped
+for us in the chat box all right so it's
+called a SLO link so once the link has
+been dropped kindly just put in your
+question there and we will be able to
+take all your questions right we're
+ready we are in for it tonight so you
+have nothing to worry about but please
+and please we just like you to take
+notes of this the SLO link will be
+dropped in the chat box very shortly so
+we would like you to use that link to
+you know put in your question whatever
+question you have about transitioning
+into Tech about Cloud about about devops
+we are yet to answer those questions
+right it's very very um important that
+you take note of this okay so I'm going
+to be getting back to the um chat
+session again
+so okay so Victor says um it's from a
+boying it's not sure okay I'm not sure
+cloud is for me or anything related to
+Tech but I hope it will be for me at the
+end of today definitely we're hoping
+we're hoping as well um Al from Saudi
+Arabia says is an operation SL
+performance analyst I want to transition
+into the main Tech cloud is where my
+focus lies I have some key questions to
+ask though okay great thank you Al for
+sharing so please once we have the um
+SLO link being dropped in the chat box
+kindly use it to answer to drop in your
+questions basically and you will be able
+to take it all right thank you so much
+um everyone I think that will be all for
+now before I get to introduce our first
+speaker for tonight our first speaker
+for tonight so I'm going to be going
+over is bio so that we can know that so
+that you all can know that the person
+we're bringing on board they are not
+people who are just going to be telling
+you something vague they've been into it
+they've been into it and they know
+everything that you need to be able to
+be able to transition into Tech
+basically so um I'm going to go ahead
+and read a bio right now says um Charles
+is a fixer and reformer at Arts is
+passionate about problem solving and the
+technology industry he's a senior Cloud
+engineer at Amazon web services that AWS
+stationed at their Cape Town office
+before Amazon Childs worked with an
+indigenous exploration and production
+firm in Nigeria and was in charge of the
+it infrastructure and IT service
+management so you you you know what
+you're getting into tonight Charles has
+a bachelor's in electrical and
+electronic engineering from the
+University of ion and was appointed as a
+Google student ambassador to UI by
+Google while on campus the skill set
+include Enterprise Cloud architect
+infrastructure as code automation
+systems Administration networking and
+scripting he is an Avid Reader and
+lifelong learner whenever you don't
+found child um behind the computer
+screen is probably draw me with his
+fingers at the piano so ladies and
+gentlemen this evening I would just like
+you to welcome Charles as as it takes
+over the session tonight um Charles good
+evening good to have you on the call
+thank you for joining us it's always a
+pleasure to have
+you um hello everyone thank you for
+having me Charles here let me see if my
+light's going better okay I think it's
+good now hello thank you for having me
+it's my pleasure to be here this evening
+for the next couple minutes we'll be
+looking at different Cloud rules and
+hopefully you get an idea of where you
+fit in which of the options that you can
+try out and hopefully build career in
+now we
+are we are taking this webinar on a very
+very basic level so we don't assume that
+you have any prior it knowledge prior it
+knowledge we expect you might be coming
+from different
+disciplines within Cloud P Academy we've
+actually been able to convert those that
+came from Linguistics English like
+different history different fields and
+are now working as Cloud Professionals
+in Industry so if you join the academy
+you get to hear from them from time to
+time how they were able to move from
+English or from the the literary world
+to it world and our and our flourishing
+in that industry so I'm just want to I
+want to get my screen shared now yes so
+let's kick it off so we'll be looking at
+cloud different Cloud roles different
+options of as a cloud professional or
+devops engineer whatever those terms
+mean and over the next couple slides
+uh by the end of this session you
+understand the key requirements for
+landing atry level cloud jobs you also
+discover different Cloud roles that
+match your transferable skills and
+interest and you can have more clarity
+on your transition Journey
+right so who is a cloud professional a
+cloud professional is someone who works
+with Cloud well systems and tools
+apparently and when we say cloud
+compared to traditional it systems where
+you need to configure manually or
+physically you get some cabling maybe
+you go to Data Center very cooling
+you're doing all this remotely
+everything is secured in the cloud
+somewhere maybe running on some data
+center somewhere in the world you could
+be in Europe and the data center the
+server that you're working on is over in
+the US or you could be in Europe the
+servers that you're working on are in
+Sydney or in Australia so a cloud
+professional is someone who works with
+different online tool systems and tools
+different cloud services or even hybrid
+cloud system that is working with Amazon
+Google Cloud Azure cloud and being able
+to configure that together to be able to
+run an application the systems and tools
+store manage and process data over the
+Internet so you're not physically going
+to Data Center to to go and go and
+configure servers or troubleshoots
+everything is done remotely instead of
+using fiscal servers and you they help
+businesses run their applications and
+processes information in a way that is
+flexible
+secure and easy to access from anywhere
+so let me let me blow your mind before
+traditionally when before the era of the
+cloud right um every company will have
+its own data center this this room that
+is heavily guarded in your organization
+you must have seen some some rooms like
+that many companies have now moved
+online but we still have some companies
+that still have data centers traditional
+data centers they'll be very cooling
+there'll be lot of cooling systems HED
+specialized hbac systems love server
+rcks if you peep into it be like one
+heavily GED like a bunker an underground
+bunker or maybe like where to put the
+gold coins and American Federal Reserve
+Bank yeah that's how the rooms look so
+you would typically order serers maybe
+from HP Dell or IBM then back then and
+this order usually takes five five
+months sometimes six months or eight
+months sometime I've also been on the
+other end before now I've had to order
+some h servers in my previous role and
+this took a while four six months before
+it arrived right and even after it
+arrived you have to configure it
+sometimes when you ordered it
+application requirements would have
+changed from the application team so it
+wasn't flexible that's a point there was
+a lot of delays to release application
+but now with Cloud you can launch a
+server at just a snap of finger click of
+a button all those things we needed to
+wait time there's no time you take to
+just need to click on the type of server
+you want windows or Linux or to Mac and
+boom you get it if it doesn't meet your
+your if after you started working on it
+and doesn't meet your specification you
+can easily just destroy it and launch
+terminate it and launch a new one so the
+cloud makes this um application
+deployment server configuration much
+faster I mean I dare say a 100 a th%
+faster because remember looking at you
+used to take six months before and now
+you could do it within hours or within
+seconds within minutes so that's that's
+phenomenal
+so Cloud just makes um running
+applications working with servers
+everything flexible and easy you pay as
+you go instead of Maybe by ordering a
+server for $25,000 or $10,000 in the
+past you can just walk start running a
+server you be paying per per minute and
+you halfway through the Journey or one
+hour through you discover that this
+server is not meeting a specification
+maybe doesn't have enough RAM or it's
+not meeting your CPU requirements you
+can you can upgrade it instead of
+terminating you can just say okay
+please help me AWS or Google or Azure
+help me upgrade this this my my my my
+cloud instance to a higher version where
+I can have more CPU and in a twinken
+over just part off CH make that change
+and there you go so let's move on so
+what are different types of cloud
+professionals they are The Architects
+those that will Design how the service
+will integrate to each other right so
+those those Architects do work first
+before the operation guys the cloud
+professionals now start doing it so
+takes a while to move from operations to
+architecture but um just know that
+before you start any Cloud work Cloud
+work Cloud project most times there will
+be an architect that will have gone
+through and try to synthesize and try to
+look at what the application customer
+requirements and try to architect how
+the a couple of services together they
+can use to achieve the objective right
+so um then on the operational side now
+we now have Engineers that will be
+involved in three broad categories some
+that will be in administration some that
+will be in operations some that will be
+handling security Securities Peri is
+zero so I'll start with security so
+remember no customer want to move it
+data to the cloud or it service to the
+cloud if it's not secure right so
+security is priority zero and you should
+treat treat that way so those of you
+that might be confused why I'm using
+zero so in computer lingo right I'm not
+sure I know in mathematics in arithm you
+start from one two three but in
+computers computers actually start at
+zero when they're counting so that's why
+I say priority zero so when you hear me
+saying security is priority zero it just
+simply means that is number one it's the
+first thing you get out of the way so
+the cloud professionals that can be
+working on security ensuring that
+there's list privilege access
+confidentiality Integrity authentication
+is in place multiactor
+authentication and also maybe may be
+using identity provider like OCTA um to
+integrate authenticate so that users
+don't have multiple password so security
+don't worry we'll talk about that then
+the the operational guys the okay I want
+to launch a new server I want to upgrade
+a server I want to deploy this
+application um I've written the code
+help me deploy it so those are the
+operations here they work closely with
+the It software development team to
+deploy then we have the administration
+guys right those people administer they
+they monitor they manage the environment
+security patching things like patching
+applying security patches Microsoft
+releases it Amazon also releases some
+patches monthly for Linux Dr Amazon
+Linux dros those ones are rolling
+updates that you need to ensure they
+they to be able to meet some compliance
+requirement especially if you're a
+company like cap one or a bank or they
+using processing money people's money or
+Pro Pi data mind you back to security
+there are penalties for leaks for pii
+when pi is misused or mis handled in
+Europe we have gdpr those of you that
+are passionate about security can go and
+read up about gdpr gdpr is like the
+regulating um um is the body that
+regulates how information is processed
+and stored in any um in Europe on any
+Cloud Server even Europeans um
+information it might not even be in
+Europe Sydney but if as long as European
+data that you having there you have to
+abide by the gdpr laws and the penalties
+are heavy if you mishandle or if they
+are leaks if your data leaks so you need
+to be very careful there so
+Administration setting up the system so
+I just went from from right to left so
+let's move on now so let's look at the
+job market now Amazon CE CEO that's Andy
+Jazzy usually say something that less
+than 5% or about 5% of Enterprise it
+workloads have been moved to the cloud
+so this means that there's still a huge
+chunk of um it spending that is not yet
+in the cloud huge chunk of IT services
+that have not been moved to the cloud so
+just um just note that we are still in
+the early days of the cloud cloud is not
+saturated yet so everyone has a place um
+for the next few years many companies
+will still be migrating to the cloud and
+Cloud now be become a def facto so this
+is why a lot of operations Engineers are
+needed around the world now devops
+professional Cloud professionals to be
+able to bridge that gap between
+companies that migrating and compan that
+just want to run the application already
+in the cloud so we have some data
+statistics here from um um some notable
+companies that says that between 20 2022
+and 2023 public cloud services grew by
+22.9% year overy year with Revenue
+reaching over 500 billion in 2022 that's
+tell you the amount of the market sh is
+a very very big market and according to
+mckin the cloud Market is expected to
+reach an estimated three trillion in
+Revenue by 2030 so if you're able to
+complete the the tradings and get
+certifications out of the way you can
+get the basics some skills mean 5 years
+from now wo you have access to unlock
+some significant value in the industry
+so see this as an opportunity there's
+opportunity in the market that's the
+that's the that's the that's the
+information that I want you to get from
+this data so the surge of AI across
+Industries a sharply increased the
+demand for cloud professionals as I said
+earlier who manage secure and optimize
+Cloud environment to support these
+Technologies so let dive into them now
+about I have about 11 or 12 of them now
+remember not every all companies will
+have Cloud to Engineers Cloud develops
+Engineers some might just have one Cloud
+engineer doing all those things some
+might if it's a big company like Netflix
+or
+Uber then you may have different but we
+we in this slides we've just tried to
+introduce that these are the different
+types of cloud jobs that we have out
+there it doesn't mean that you shouldn't
+try to combine it or if you are hired as
+a devops engineer you're not starting to
+do many of those things you not be
+wondering oh but I only came in as a
+devops luk depending on the small
+companies and this Advantage for small
+comp small companies small team doing a
+lot of things work but big companies
+different teams different Engineers
+doing specific things so see it there an
+opportunity even if you have to do many
+of those things in one maybe you're not
+just doing one of those roles that we're
+going to discuss today it's an
+opportunity to learn as you grow your
+career those these skills will be very
+very helpful
+so we're going to be just speaking on
+Broad terms now Cloud support engineer a
+csse like myself we help customers
+resolve simple to complex issues with
+cloud services by applying Advanced well
+basic to advanc troubleshooting
+techniques and deep technical expertise
+the beauty of cloud support engineer is
+that you can enter fresh that this entry
+level you can come as a CSA straight
+from school right without any experience
+so you go through associate get training
+and before you graduate with CSC CSC and
+you begin to grow senior CSC and you
+even might Branch out to become a
+solution architect or Enterprise
+architect so CS is like the ENT you can
+enter as entry level just know that CSC
+is in gr you can build some CSS that
+entry level some Advanced some very very
+senior some are 10 15 years um CSS right
+um so they act as a bridge between users
+or customers and cloud service providers
+ensuring a simless experience for
+customers and you can work in different
+Industries you can you can work in techn
+industry Finance e-commerce
+telecommunications and we have companies
+that that you can find these rules awss
+Microsoft Google Cloud Oracle Google
+Cloud C it's customer engineer it's the
+same thing as a cloud support engineer
+Oracle JY Bank MTN plotter wave and Jr
+well this is not an exhaustive list as I
+said but this gives you an idea of of of
+of what they do let's move on um so to
+be a CSC you need to have basic to
+advance understanding of Cloud platforms
+at least you know to know one Cloud
+platform how integrate together how it
+works together problem solving skills
+communication skills and in the then
+typical day in life customers will come
+to you or your users come to you oh my
+application is crashed my application is
+failing my server crashed oh I want to
+couple I want Design This generative AI
+solution how can I integrate it oh I'm
+trying to integrate this Lambda function
+with this step function and it's failing
+how can I integrate it to that can you
+help me diagnose this error can you help
+me develop a script to be able to
+automate this this and that so I'm going
+very technical now but those are kind of
+queries that you be you be working with
+as a CSC so any potential is quite large
+you could be earning from well you can
+see some figures there but these are not
+100% full this gives you an idea of of
+of the amount you earn right um career
+trajectory Cloud support specialist that
+is you can move from a CS to become a
+cloud support specialist to become an
+operations engineer to become a
+Solutions aror let's move on so Cloud
+architect yes Cloud architect is a
+junior well Junior Cloud architect here
+that helps design Cloud systems that
+meet a company's needs so you Des you
+decide which cloud services to use for a
+specific use case right a specific
+project or a job maybe you want to
+design a ticketing application or you
+want to design a generative application
+and okay I want to use sageer Bedrock or
+E2 where should I run how should I run
+these models which of the models should
+I use you you need you'll be applying a
+lot of trade-offs here you'll be doing a
+lot of tradeoffs and application
+integration how the application how the
+different cloud services integrate to
+each other there are lot of Industries
+where you can work Healthcare Finance
+retail technology and companies that
+usually have Cloud acted include Amazon
+yeah IBM Google Cloud Microsoft Cisco
+and the likes so let's look at the
+skills that you need to have to become a
+cloud architect so you need to have deep
+understanding of cloud platforms basics
+of cloud design and chitecture knowledge
+of key cloud services computer storage
+networking serverless and typically a
+day in the life you be designing
+cloud-based Solutions customers will
+come to you oh I want to design a
+payment solution I want to design or an
+identity provider solution what kind of
+servic should I use couple together the
+developers are visting the code how
+should they deploy it which kind of
+service what tradeoff should they make
+how can they optimize the cost so that
+they still able to divide from value and
+some they're able to break even over
+time running on the cloud um working
+with clients understand the needs
+ensuring smooth integration of cloud
+services to to run the application that
+your customer is running you can see the
+any potential potential rather is also
+quite High um career trajectory you
+could go from a cloud Junior Cloud
+architect to a senior Cloud architect to
+Enterprise architect to even to become
+the
+CTO right so let's move on who's the
+cloud devops engineer a cloud devops
+engineer makes sure software runs
+efficiently in the cloud by automating
+processes ensuring that the the release
+the new versions are new updates are
+released very well and even if you make
+a release and it's bad many customers
+are complaining like GT bank or many of
+this you find that is bugging production
+you quickly roll it back quickly to the
+previous version so you manage release
+process deployment integration of code
+different versioning of the code that
+developers have written so you also do a
+lot of automation infrastructure as code
+in this role so you you work closely
+with the development and it teams to be
+able to manage software release and
+package management so you use a lot of
+containerization here doing a lot of
+Docker images and how to to manage those
+images ensuring those images are meeting
+your standard your application
+requirements so places you can work
+include Industries like technology
+Finance e-commerce in fact this rule is
+the most popular develops engineer role
+and almost every industry now that is
+moving to the cloud or using the cloud
+in some way um requires you devops
+Engineers so companies include AWS Azure
+Google cloud and the likes Netflix and
+the
+likes so what are the skills that you
+need to have to become a rockstar devops
+engineer you need to have basic
+knowledge of cloud platforms and basic
+scripting understanding of C cicd
+pipelines if you don't know what cicd is
+don't worry it comes to the academy
+you'll know what CD is if you go through
+our our Academy and um you have
+infrastructure to menion popular
+infrastructure as code tools like
+terraform anible cdk Cloud development
+kits for Amazon and P
+formation yeah what's a day in the
+typical life of a devops engineer you
+automate Cloud infrastructure setups for
+example you have this application
+currently running in London and you want
+to replicate the same thing in Sydney
+instead of having to provision
+everything everything's already as code
+you just spin it up using a cloud
+formation template or terraform template
+or anible or city can in a different
+region and everything's up and running
+just like a snap of a button um so the
+career trajectory you could go from
+Junior devops engineer to a senior
+devops engineer to devops manager and
+Cloud Solutions Architects and the ening
+potential is also quite High trust me
+and a lot of people in what are looking
+for devops engineers like we can you can
+exhaust them you can exhaust the rules
+that available for devops engineers Sr
+is I love this one this one has a very
+very Sr the term Sr was invented by
+Google and Google actually did a lot of
+ping work in the era of cloud computing
+and containerization with kubernetes so
+those of you that don't know kubernetes
+an orchestration Eng engine for Docker
+sorry for containers and largely
+developed by Google many many years ago
+14 15 years ago now um s ensures Cloud
+systems are highly available reliable
+and they do a lot of automation they
+automate a lot of operational tasks you
+want to shut down this you want to
+handle patch manone everything is
+automated so Sr tries the goal of Sr is
+to make sure you're automating most of
+the operational tax ensuring the systems
+are running reliably and highly
+available the monitor performance yes
+you ment a lot of advanced monitorings
+availability into application and
+infrastructure design scaling system so
+exam customers come to you they're
+currently running with 1,000 users they
+want to go to 100,000 users they want to
+ensure the system is able to handle that
+traffic so you need to now look so the
+SR Engineers would design the scaling
+part element of that
+application so place you can work a lot
+e-commerce banking Healthcare technology
+and Company they use that use Sr are
+very all over almost every company I
+know top Fortune 500 company I know uses
+an S Sr One Way Sr doesn't only work
+with a cloud this customer might your
+customer might have the data on premises
+but Sr is Sr anywhere either in the
+cloud or in premises the same um um um
+same role job scope so you need to have
+deep understanding of cloud
+infrastructure right um when turn you
+need to very good with monitoring tools
+like promethus
+grafana knowledge of scripting language
+and you need to be confortable writing
+code in at least one language if it's
+python you know you can develop python
+applications web applications use
+popular Frameworks this is Java you need
+to know spring or at least one web
+framework to able to develop at least um
+some GUI and applications to monitor to
+track
+latencies reduce um um to manage your
+applications or infrastructures code
+so a typical day in the life of an Sr
+you're automating a away you're finding
+operational tax to automate a way so
+you're monitoring system performance and
+getting proper
+alerting and ensuring automatic recovery
+from failures for example when you
+connect to your laptop to the internet
+the first thing most most of us is to go
+to google.com to Ure that there's
+internet right U so Google has developed
+that that reputation that they always
+available so it's the SR teams that have
+that made that possible that they
+regardless if they have maintenance or
+anything Google is you always know that
+at least when you go to google.com or go
+to Cod UK you should get a respon so
+that's phenomenal hat off to the Google
+Sr teams so ensuring systems are
+reliable and skillable so the en
+potential is quite High about the
+highest one of the highest let me say
+the highest and career trajectory you
+could go from the senior SR to lead Sr
+to engineering director or even the
+CTO let's move on cloud this ad me yeah
+these are people that do a lot of os
+management um urance is available if it
+crashes how to recover from
+crashes um provisioning monitoring and
+patching right lot of companies that you
+can work for and the industries almost
+every industry requires a a systems
+administrator in one way or the other
+but let's go to the skills that you need
+to have you need to have Cloud
+management skills maybe AWS asual Google
+need to know networking at least medium
+to Advanced networking knowledge Linux
+or W and windows medium to advance so
+the cloud systems Administration is very
+very similar to the power engineer role
+well most of the information here you
+need to also have it in CSC role so as a
+cloud admin to me same thing as a cloud
+support engineering because you need to
+know Linux Windows Administration your
+network has solid and you also need to
+know infrastructure as code tools and
+devops typically devops tools so you can
+troubleshoot something to or to um
+figure out what's wrong you need to know
+have deep understanding of system so s
+means do a lot of os
+work so what's the day in the life of a
+s mean you manage Cloud resources ensure
+the system is up if it's Crash you need
+to figure out why is it crashing is a
+driver ensures that the drivers are
+released safely try to make sure it
+doesn't happen again um handling backups
+and security configuration things like
+that um career trajectory means you
+could go from a senior assist admin to
+from a junior admin to a senior admin to
+a cloud operations manager to Cloud
+architect all the way up the the chain
+and you can see the ending potential is
+also very high six Cloud security
+analyst I know a lot of people on the on
+the C security enthus so cyber security
+yeah this one is for you so this this
+other rule also has other varations you
+could hear setups de setups everything
+is just Security operation security
+analyst a security analyst could be a
+setups SEC Ops starts for security
+operations engine so setups for short or
+Dev setups development security
+operations so when you hear setups Dev
+seup as I see I put on on the slide here
+just know that he also referring to the
+security analyst role see security
+analyst protects the cloud from hackers
+security threats and ensures that users
+are implementing are working
+authenticating the right people have the
+right access the right people have the
+right access and authentic what does
+that mean it means that's thats the
+principle of least privilege so it's
+only users that need to do something
+that should have that you shouldn't have
+all the permission don't give him
+administrator access because you just
+want see simp you should only have
+specific per permissions to be able to
+do specific um job that you need him to
+deliver so security analyst setups Dev
+setups Engineers the monitor for any
+security issues implements principle of
+list privilege and security
+configurations develop and assign
+permissions a lot of policies you do a
+lot of polic policies development policy
+audits ensuring that only users have
+zero trust implementing principle of
+zero trust security configuration so a
+lot of security work is done by the
+security
+analyst place you can work every
+industry because everyone wants to be
+secured Healthcare especially because
+when you're dealing with people's data
+private data you need to be very secured
+right unless you run risk of penalties
+gdpr and nist for America finance
+government technology companies include
+almost every company because um security
+security is in priority zero right
+that's what I called it in my intro so
+you need to have security tools you need
+knowledge of security tools like
+firewalls VPN cryptography SSL
+certificate management encryption chist
+encryption asymmetric encryption
+symmetric encryption wor security
+analysts Enthusiast will know what
+understand what I'm saying but if you're
+if you're keen on security in the cloud
+then uh you need to look at what these
+terms and understand what they do maybe
+take some security trainings as
+well um you need to understand Cloud
+platform security how to implement
+police privileg um access on the cloud
+monitoring for threats and
+vulnerabilities and a typical day in the
+life of a of a security analyst you
+monitor Cloud environment for threats
+maybe using automated Solutions maybe
+next Generation firewall maybe 40 gate
+or Palo Auto or you just been doing some
+security monitoring you want to be
+insect expecting your packets ensuring
+that the right packets are going through
+your systems implementing security
+measures to defend guard Duty dos
+protection um um SQL injection
+protection for applications things like
+that you also investigate and respond to
+incidents you develop and assign
+permissions you developing policies a
+lot You' doing a lot of policy
+development will know this very well
+because she was also um she's been a
+cups engineer in the in the previous
+role um and from the career trajectory
+you could move from a security engineer
+to Cloud security lead to cyber security
+manager to CTO security trust me is
+paying is one of the hot hottest paying
+jobs you you guys can understand it in
+fact security maybe pays higher so those
+of you are passionate about money right
+but everyone wants to live a comfortable
+life be able to take care of family so
+if you really Ken on money right trust
+me security pays a lot because security
+is priority Z so if you can take time to
+learn all these things trust me you
+could be you could be smiling to the
+bank people just wonder why he's smiling
+oh yeah he's smiling he's always smiling
+yeah he's a security engineer okay now
+say let's move
+on cloud data engineer so we're in the
+era of data data generative AI if if you
+don't know the generative AI is was
+trained by terabytes of data like data
+that can't sit on your laptop or sit on
+any server that you can imagine it has
+to you have to put it on on a collection
+of servers as high performance servers
+in a cluster before you can see that
+data so um data those data professionals
+are now in demand because data
+engineering is very relevant in
+the
+sorry very relevant in the AI era which
+we are now generative AI
+era so the cloud data engineer manages
+data in the cloud the make sure data is
+stored safely processed efficiently and
+securely
+and available for
+analysis and you can work in Industries
+like media e-commerce banking
+technology um place like Netflix Open AI
+any anybody that is doing AI will need
+some data engineer in switch payack
+Amazon these are all companies that
+require data
+Engineers what are the skills that you
+need to have understanding of cloud data
+services wss3 red shift Ado basics of
+data pipelines and data manipulation
+tools like SQL pie torch numpy and the
+likes a day in the life of a data
+engineer you're building a managing
+cloudbased data set systems using S3
+object Orient object system block data
+optimizing data storage and access uring
+data is secure that's number one and
+what's the career trajectory like you
+could move from a senior data from data
+engineer to a senior data engineer role
+to a data architect to a chief data
+officer that's a sweet
+and you can see the ending potential is
+also very
+high Cloud automation is very similar to
+CR Sr so as I put here so just look at
+Cloud automation is just like a trim
+down version of the SR you you just be
+focusing on automation right so anything
+they want to do you want to stop instan
+start instan launch a thousands or 100
+thousands of servers you're trying to
+automate that and make sure it doesn't
+fail you're responsible for creating and
+managing automated workflows and
+processes in power environment so you
+just reduce manual work trying to
+automate most of the manual o and many
+time you are releasing an application
+you need to click on this button you
+want to automate instead of clicking on
+that button how can you do this in code
+with terraform or with Lambda or with
+python with any scripting language of
+your choice you can see you can work in
+a lot of places and you need to have
+some of the skills that you need to have
+very similar to the SR deep knowledge of
+cloud platforms scripting knowledge in
+at least one language maybe python bash
+or an automation tools like terraform
+anible Jenkins are very very necessary
+so a day in the life of of an Cloud
+automation engineer you're automating
+Cloud infrastructure deployment writing
+script to reduce manual tasks and urance
+systems can skill without having to do
+some manual
+remediations and what's the career
+trajectory like so you could go from a
+senior automation from an automation
+engineer to a senior automation engineer
+to develops lead Cloud operations
+director up the way to se Suite we're
+almost done so cloud product manager you
+could be helping to work on product
+launches so trust me a lot of work goes
+into product management that may not be
+visible to the eye just know that these
+are people that are not exactly coding
+or touching systems but actually
+involved in more product management
+project management of the release of a
+particular service or application so
+they help plan launch cloudbased
+products they work with developers and
+designers to ensure the product meets
+customer needs and is successful in the
+market to the of market research ensure
+that the product is a is a perfect fit
+for the customers they're trying to
+Market it to place you work includes a
+lot of places
+and um you can see there a lot of people
+almost many companies that that require
+that use cloud systems to have product
+managers right and you need to have
+basic understanding of cloud
+Technologies the skills that you need to
+have now project management is big one
+for product product managers ability to
+communicate with Technical and nonch
+technal teams problem solving the ear
+potential is also quite
+high and typical day in the life of a
+product manager you you work with
+product development teams you work with
+Engineers to deliver features you
+prioritize customer needs aligning with
+products and business goals in a career
+trajectory you could go from a product
+manager Junior to a senior product
+manager head of products VP of product
+up up the chain up to C sweet Cloud
+network engineer yeah like this ones
+this ones um the network Engineers
+designs maybe hybrid want connect Hy or
+AWS to on Prem how can we connect the
+networks together do you use Direct
+Connect or side to side vpns n PLS
+traffic how do you ensure maybe traffic
+is one way transitive nontransitive
+connections or your active directory how
+can you make sure that you have just one
+active director or distribute domain
+controllers across different Cloud
+providers so nare Engineers help you
+divine complex Network infrastructure or
+simple to complex Network infrastructure
+such that everyone everything is
+interconnect you can you can get data
+from your database everything can go
+smoothly so they ensure data can flow
+smoothly and securely across the cloud
+across different applications different
+regions in a smooth and and secure
+flexible way and you can see the
+different Industries where you can work
+so you need to have very solid
+understanding of networking like rooting
+switching um OSI model out to
+troubleshoot basics of power Wars
+network
+security um firewall management
+especially Cloud platform knowledge and
+a typical day in life of a network
+engineer you design and manage Cloud
+systems ensuring secure and efficient
+network connectivity you TR network
+issues right some users can connect to
+this database some can connect why is my
+database connection
+failing what VPN access do I need I'm
+connected to VPN I can't still access
+some resources can you allow some ports
+for me yeah you'll be doing a lot of
+Port man you can also automate this so
+Cloud Network Engineers also do some
+automation at the back end to automates
+many of these manual attacks I want to I
+need this sport I need to be able to
+download this and give me access you
+won't be manually going to give access
+you'll be doing that in an automated
+fashion so from cloud network engineer
+you could move to senior Cloud network
+engineer Cloud infrastructure engineer
+Network and the last one but not least
+well okay we still have two to go so
+there's also Cloud migration specialist
+so this this person just helps you do
+migration many companies are in the
+middle of migrations now or some have
+just migrated maybe some are still going
+to migrate a lot some of most of the
+application eventually the cloud
+to a cloud of migration specialist help
+businesses securely move data and
+applications from traditional system
+Legacy systems like Mainframe super
+computers that you put on on Prime to
+the cloud so they ensure the migration
+happen smoothly and securely without
+losing data in fact you may have a
+database that is running on Prem and you
+want migr that dat basally cloud in such
+a way that they they can't be you don't
+even have 10 minutes for that cut over
+the day that you cut over so you need to
+be need to be active active replication
+has to be happening so the lot of things
+they migration Specialists are required
+knowing how to Stage how to Stage the
+migrations in waves maybe we'll move the
+database systems first and we move some
+web tier some front end so different
+different um plans goes in
+here so what are the skills that
+required from cloud migration special
+specialist knowledge of cloud platform
+experience with Cloud migration tools
+like migration Hub mg application
+migration service DRS Disaster Recovery
+Service asual migrates and knowledge of
+project management and risk assessment
+it's also necessary in the cloud
+migration
+role right so a day in the life of a
+cloud migration specialist you plan and
+execute migration of on premises systems
+to the cloud or it might not be on
+premises alone may be from maybe you
+want to move from Google Cloud to Amazon
+cloud or from Azure Cloud to Amazon
+Cloud right so how to move from between
+Cloud platform not to migrate away from
+One Cloud platform to the
+other ensuring minimal time downtime and
+risk management and troubleshooting of
+migration issues right so let's move on
+Career trajectory could go from a cloud
+migration specialist to a senior Cloud
+migration specialist to Cloud architect
+to CTO so that's the um and the last one
+not least is the platform
+engineer a platform engineer builds and
+maintains the infrastructure that allows
+developers to deploy applications
+quickly in the cloud so think of
+infrastructure or maybe I have this
+application I want to run I have
+everything already set up but I just
+need the platform the infrastructure the
+servers or a collection of the network
+layout already
+done the servers already already
+provision for me to deploy my
+application so the make sure everything
+is stable and secure for development
+process so so the platform Engineers
+will make sure that the platform the
+infrastructure that your code will be
+running on is already developed before
+the the devops engineers release their
+code to the platform so you can see the
+industries where you can work there
+almost every industry I know well
+require some platform as I said develops
+engineer might actually be doing some
+job work for of of a platform engineer
+so just when you see those platform
+engine rules May on LinkedIn or indeed
+on J these are the kind of things that
+they will be doing not that oh if I
+don't see platform engineer no I can do
+you could be a devops engineer and also
+be doing some some job the work of a
+platform engineer or be doing all these
+things yes so companies are small that
+Nimo can afford a lot large team so you
+have to be able to deliver on multiple
+faets so you need to have deep knowledge
+of cloud platforms knowledge of
+containerization the popular
+infrastructure that customers use ECS
+elastic container service kubernetes
+elastic kubernetes service how to
+orchestrate containers in a secure and a
+skillable fashion typical da live
+platform engineer You're Building Cloud
+platforms automation automating
+infrastructure in deploying cloud
+services ensuring scalability and the
+career trajectory could go from platform
+engineer to senior platform engineer to
+platform lead and then Cloud architect
+Enterprise architect up all the way to
+um to become a c s
+executive right you can see the ending
+potential is also very very large so how
+do you get your first role you you need
+to First learn the basics that's why we
+have a training an
+academy um that the coort they can join
+where you would take it from Novis to to
+um to at least you be able to work in as
+a professional to a cloud professional
+so you learn how to use at least one
+Cloud platform it's AWS Azure Google
+Cloud many of these rules the on some of
+them specify some would give AWS asual
+good Cloud so they expect to at least
+know one perform solid because most of
+them is just the same implementation
+just the names of the services are
+different the same implementation mostly
+across board but Amazon just has more
+services what 200 Services others have
+less so you need to know infrastructure
+as how to codify many of these Cloud
+operations that you do on the on the
+console you also Master relevant devops
+tools like antio
+terap and Jenkins and the likes so how
+how can you do that you can volunteer do
+internship you on write to companies
+startups that you know that you just
+want to volunteer to run their Cloud
+operations and join the team so you can
+see real life What It Takes how how they
+how they put fires maybe release
+application is crashing people's money
+are St out to quickly roll back you need
+to get some experience releasing
+applications to that distributed working
+with distribute applications Le by
+practicing do projects and put it on
+your GitHub build up your GitHub
+portfolio and also Network connect with
+mentors attend webinars like this use
+your LinkedIn go for events and you
+gradually you build your your your
+network
+so um I'm going to let uh my colleague
+take it from here um don't worry we
+still have a panel discussion where we
+can take questions you they you have so
+but this just the first part of the um
+the webinar and thank you so far for
+being with me and for listening
+thank you so much Charles for such a PR
+really good session very detailed hello
+everyone um thank you all for still
+being here for paying attention for
+listening we are now going to go into
+the questions I know that I haven't
+heard all of that some of you have all
+sorts of questions and that's exactly
+why we're here you know today I have
+with me Charles and I J like these are
+top Cloud professionals these are some
+of the finest in the industry so we're
+here for you we're here to answer all
+your questions so but I want you to know
+that every single thing that child spoke
+about we don't expect that you
+understand the Integrity of what
+networking is of what protocols are of
+what all of this are that's why there is
+opportunity for you to learn from
+scratch and grow and that's exactly what
+we do at Cloud booster so if you have
+any questions about what you've heard
+whether you've heard about about Cloud
+before or you don't know anything about
+Cloud we're here for you we don't expect
+that you have any background in
+technology at all right we have people
+who have worked with us that have
+transitioned from nursing into cloud
+computing from English Linguistics all
+sorts of backgrounds into cloud
+computing so we just want people that
+are passionate ready and we know that of
+course for you to go on that Journey you
+would have questions one of the
+recommendations that Charles just gave
+was you know speak to people in the
+industry have mentors and that's why
+we're here so we want you to be free
+want it to be open you know um use the
+slido link ask your questions and we
+will take it off from there so I'm going
+to be taking all your questions one
+after the other I'll group similar ones
+of course we expect that there'll be
+similar questions but today um I'm going
+to be working with a panel um of course
+you guys have interacted with Char
+already so let's have Charles on board
+as well on the spotlight thank you for
+that beautiful session and of course we
+have AA at suchu as
+well um on the call so it's going to be
+three of
+um answering all your questions and
+myself so I want each of them to
+introduce themselves I know Charles has
+given you a hint into what he does just
+30 seconds you know um you know what's
+your role and exactly what do you do and
+I as well and I'll introduce myself and
+then we'll take your question so Charles
+over back to you just 30 seconds
+introduction okay so um so I'm sure most
+of you heard it when um e introduced me
+earlier but I'm Cloud support engineer
+here AWS I work with a lot of customers
+Global customers help them resolve
+fairly simple to complex Enterprise um
+Enterprise architecture architectural
+problems op personal problems or even if
+they want to build guidance on building
+the Next Generation application um also
+within a team where I work with
+customers to streamline their Cloud
+operations so I work a lot of cloud
+operations customers want to automate
+how to manage many customers have
+several AWS accounts how to manage it
+manage it in an organization ational
+formats and showing that they deploy
+applications across similar state to
+multiple applications yeah I also I also
+do a lot of work on that side I'm also a
+subject matter expert for some aw
+services like systems manager so
+anything systems manager patch
+management um um automation yeah that's
+my that's my baby that's where I I
+handle escalations for that so that's
+just a little about what I do in the
+cloud thank you Charles so Charles Works
+in AWS Amazon web
+themselves he works with them so you can
+imagine his wealth of knowledge in this
+space I please over to
+you hi everyone so I'm j e IG for short
+and um I work in BP not like Char I work
+with the the customers directly of AWS
+and I work as an Enterprise security
+architect so I'm in cyber security but I
+did start out with Cloud security and
+now I'm doing more deaths offs and apis
+and application security also some
+container security as well so I've kind
+of gone around the space of cloud to
+like the devup side and all but yeah I
+work more my day today is more like
+meeting with the finding a like this
+designing and recommending strong design
+patterns for certain cloud services like
+our container security our def SEC of
+space our apis and our absc
+generally thank you so much J thank you
+and just similar to Charles and J uh you
+know I'm also a cloud DeVos professional
+my name is Gim Sol Jo founder of tuster
+Academy um I also have my night to5 I
+work with PWC as a cloud um devops
+architect right so um within my 9 to5 in
+Consulting I basically help convince a
+lot of organizations to move their
+systems to the cloud and of course when
+they need to do those migrations
+basically just leading on that building
+Cloud teams helping organizations to
+move their systems to the cloud of
+course before we even get there there's
+a lot of sales that goes on convincing
+them about the benefits of the cloud and
+all of that of course previously I've
+worked in um Accenture myself and I have
+worked together in Accenture we I've
+also worked in Capital One where we're
+doing a lot of hands on actually
+building those solutions back in on the
+cloud as a cloud develops engineer and
+using a lot of tools that you guys have
+heard about today so we're all very
+hands of been in the industry for over
+half a decade and we're here for you so
+I'll just go right into the questions
+okay so um the first question and of
+course everyone on the call these are
+your um instructors and Cloud Boer these
+are people that will be teaching you the
+cloud devs Concepts should do a role in
+the training so you have um you're in
+safe hands so now um someone is
+asking um you know can you talk us
+through how someone like me with no Tech
+background or network I've just
+completed the training how do you help
+me secure a job I've just completed a
+training did you complete I don't
+believe that You' I don't identify the
+name so perhaps you've completed the
+training how do you help me secure a job
+how do you help with interviews right
+and of course some people are asking
+questions about the cost Cloud booster
+cost what is it all about um some people
+are asking what are the steps and how
+long will the T training take you know
+some of you are asking what is the cost
+of the training hello please does the
+trading fee cover AWS last subscription
+or are we to pay for that separately um
+you know some people are asking
+specifically about the training and I'm
+just going to take question about
+training I'll actually talk more about
+the train how much is the train and how
+long will the training be all the
+questions to train I'll take it at the
+end right but one thing I'll just say to
+you is that broad overview what we do at
+Cloud booster is that we take you from
+zero into Cloud you don't need any
+background in technology and we know
+that you need more than technical skills
+to actually be a competent Cloud DeVos
+professional so we don't just train you
+because someone said I just finished
+training what do I do next we don't just
+train and then leave you right so we
+train you we give you um it's virtual
+live classes every Saturday you get to
+as we're teaching you theoretical
+concept we teach you the Practical
+aspect of it so you have a well-rounded
+training for an 18 weeks period it's
+virtual life classes you can be anywhere
+in the world you join the training on a
+zoom call every Saturday 9:00 a.m. to
+about 5:00 p.m. BST every Saturday and
+of course you're working You're Building
+Solutions on the cloud and you're also
+building your portfolio so by the end of
+the training or during the course of
+training will start telling you about
+how you can use your skills to apply for
+job opportunities globally so you're
+putting together we teach you how to put
+together your CV we teach you how to put
+together your linked profile how to do
+interviews we give you interview
+simulation sessions as well oneon-one we
+test you just to ensure that your job
+ready and of course we deploy you into
+you know the job market so that's really
+what training is about and it's for
+everybody so I hope that guides in terms
+of Road Mar so someone is say from a
+cloud Architects perspective what is the
+largest scope of work when migrating
+workloads from on premise to the cloud
+um I don't know if Charles wants to take
+that question uh you know what's the
+largest I find it an interesting
+question but yeah someone is asking what
+what's the largest scope of work when
+migrating workloads from on premised to
+the
+cloud good question so um largest scope
+of work when migrating workload well
+many customers have trust me a lot of
+data centers around the world um and a
+lot applications that have different
+moving components so an application
+typically is not just on a laptop on a
+server it might be on different multiple
+servers right scattered across different
+en some data might be resized in in sap
+might be in S3 might even be in
+different gr plot so firstly many
+customers don't even know where all this
+data are so you need to First analyze
+where are the data the data that is used
+all the components of this trust me many
+of those applications are are released
+before many of those users join the
+companies so not every company has a
+full full scope full picture big picture
+of where the data is that applications
+they using dayto day are running they
+know the operational work but you need
+to first look at it holistically we are
+all the moving parts and developing that
+could be the lot of tools Discovery
+agents they can use to to quickly get up
+that AWS other Cloud providers have but
+firstly developing that holistic view we
+have all the data recited that need to
+be moved to the cloud and how do we need
+to how do we stage manager now might
+think it's easy like okay move database
+there may be some dependencies there
+some leg that this this application
+depends on another one depends on
+another one so you need to stagger them
+okay which one is the root that if we
+move this one first other applications
+won't fail so wave management how to
+deploy migrate applications or migrate
+migrate your your data in waves it's a
+very very very very very tricky one and
+also risk assessments now during
+migration some data might get corrupted
+how do we ensure that okay there's a
+there's a disaster for Disaster Recovery
+how do we make sure that okay if
+migrating we eventually to the cloud
+eventually find out that data is
+corrupted how do we quickly fall back on
+premise so we don't lose money how do so
+it's called risk management so you this
+is also another critical part of
+migration project so the lot of um it's
+I can't pin which one will be the
+largest now but I hope this just a
+handful of areas that you consider and
+you can give yourself determine okay
+which one would actually be a a a a big
+part of it for you but these are just
+different this is not an exhaustive list
+trust me migration job in fact it'll be
+we have partners that help with
+migration migration is not as simple as
+just copying the application code and
+moving into the cloud a lot of res
+investment project management wave
+management that goes into is dependency
+management to remember many companies
+like big companies have multiple
+dependencies that they themselves don't
+even know so it's your job to help them
+figure out okay well how the
+applications link together and help them
+to migrate um Sim Lance into the cloud
+well I've worked with a lot of
+Enterprise customers many times after
+migrating it crashed it will become
+corrupted if de commination the pr
+server how can they proceed so this is
+where the class have been class for
+engineers now I have to sweat to try to
+find ways work around to just bring back
+the application so that they don't lose
+money so that's why you need to make
+sure that the cloud the migration is
+solid your migration when you do your
+business case for application your
+project plan is solid so that you make
+to get against such issues sorry I spoke
+I'm very passionate about Cloud so I
+think I took too long maybe totally
+fine it's totally fine thank you so much
+Charles someone is asking um please how
+can I get to Charles I want Charles to
+be a mentor so we're going to put link
+to his LinkedIn profile in the chat box
+so take advantage of that so the next
+question I would like to take is which
+products are ideal thank you so much for
+your um response to that um child very
+um very extensive um someone is this
+question will be for IG which projects
+are ideal for a beginner to implement in
+order to stand out in front of a hiring
+manager right and you can just use that
+to also touch on anything that can help
+any advice you have for somebody who has
+no Tech background because most people
+are saying what's my road map how do I
+go from exactly where I am now to
+getting hired so what are the you know
+what projects can they work on what can
+anyone do if they need to move from
+where they are right now to actually
+becoming a cloud developed
+engineer thanks wiy for that I would say
+that um if you have no idea on cloud if
+you're coming from a non- te background
+um my my recommendation most times is to
+try and join a program that would help
+you because the thing is that you can
+just get so overwhelmed with doing a lot
+of things and you're Miss you're just
+doing a lot of things that just don't
+you know Target to anything I always
+actually recommend Cloud booster to
+people personally not because I'm a
+trainer but because I know that if you
+don't have a direction and a clear part
+of oh this is where I'm going to next
+you're going to do a lot of things and
+at the end you'll just be like so
+overwhelmed and have nothing you've done
+you know it's almost like software
+engineering but software Eng is a bit
+better because you can just get an
+application and write up a code and you
+know post it on GitHub and you know
+deploy it somewhere and you know can
+come with that for cloud it tends to be
+a lot more like you need to know where
+you want to end up in so that you can
+when you're writing when you're kind of
+going on any projects you're like okay
+I'm going to write I'm going to learn
+this I'm going to start write want to go
+towards container okay I want to be a
+container engineer Cloud that's part of
+the cloud engineer but kind of more
+container specific I'm going to Lear
+this and write this kind of stuff and
+get this deployed or if you just want to
+be a normal like you know admin kind of
+engineer you know there are different
+part so my advice on that don't have a
+like nothing you're just coming from a
+non-tech background I would say do a
+program learning whether you join Cloud
+booster or I always say join Cloud boost
+it's at least more mentored and more
+tailored right but if you you know
+you're from coming from a tech
+background you already have idea on Tech
+and you just want to kind of like play
+around and get stuffs in then of course
+you can always like this um this um um
+Cloud This Cloud platforms give you free
+credits to start out with so you can
+always go on any of this Udi courses CU
+there are some of them are free and you
+can just pick up like one course and
+then just walk through what they are
+doing and you know get some of their you
+know they're doing some scalability
+stuff you do it they're doing database
+MySQL you know um that do lamp stack you
+do it on cloud you know you can always
+do stuff on your own in Cloud without
+having as much Direction but if you're
+coming from non Tech zero idea I would
+say join a TA program you probably get
+better in terms of where you're going to
+than just doing any random stuff Tech is
+a very information heavy place so you
+can get very overwhelmed with a lot of
+stuff right so I'll take it easy if
+you're coming from non Tech I'll say
+join something that is more tailored if
+you're coming from already and you have
+an idea or say utilize the cloud
+platforms because they give free credits
+take some CES on whether it's UD even
+YouTube even just picking up like oh I
+want to just do a lamb stack on you know
+on on AWS and you could just start out
+with that and actually end up like you
+know deploying something and when you go
+for an interview can you don't just
+write on your CV you know deployed in my
+you know spare my SP time I deployed as
+a project I deploy this application as a
+project and these things are quite easy
+to to spin up and run right so I would
+say it depends on your path I would just
+say don't go about doing 101 things at
+the end where does it tie into you know
+so that would be my own contribution to
+that
+b thank you so so much J thank you and I
+hope that has answered your question
+please I hope everyone can still hear me
+I
+think um question please um you could
+just send me a DM to conf so you can
+hear
+me okay good thank you thought it was
+breaking all right thank you for
+confirming okay thank you so much J very
+very solid so um people are asking about
+you know I have a question here my
+question is will I be able to get a good
+job I'm in my 50s and I'll be Crossing
+um from marketing and sales with over 20
+years experience um I want to combine
+that with other questions as well
+someone else is asking what is my road
+map to becoming a cloud finops engineer
+um and then people are saying that
+someone is asking um how can a cyber
+security graduate end up learning cloud
+in the future right um as a new be what
+is the first certification to go for
+like is it a practitioner certification
+or should I go for associatees you know
+um someone is saying that do you need to
+have a knowledge of coding or
+programming language to be a cloud
+security um architect or a CSC um
+someone is saying that this sounds like
+a very good career part what are the
+challenges and perhaps some of the
+pitfalls of being uh Cloud engineer I
+know why I'm combining it don't worry
+we'll take we'll answer it I just want
+to make sure that answers are touching
+on everything together and we don't take
+too much time someone is saying that can
+you take us through how someone like me
+with no Tech background um you know how
+do I get into Tech okay we're taking
+that question already which of this
+roles do I need zero coding or
+programming language or knowledge to do
+okay um and then someone is saying that
+for someone who is just transitioning
+with no previous experience what job
+Road do you recommend I start with i
+person ask you what is my journey to
+become a cloud network engineer so what
+I see um as a common theme through these
+questions is people still want to know
+what that pathway looks like right
+somebody is saying that I want to become
+a cloud phixs um I want to become a
+cloud security I want to become a cloud
+network engineer and you know how do I
+go on that journey and what I would say
+is that similarly to what everyone has
+said um you know without repeating
+ourselves multiple times you need people
+to hold your hands on that Journey right
+you you don't want to go on that Journey
+alone you need to build your technical
+expertise you want to become a cloud if
+you are currently in security you can
+definitely go into Cloud I mean I just
+started in security before she went into
+Cloud right so we have people with that
+experience so the fact that you know
+security is really good you can layer
+Cloud on top of that going into devups
+as well devups is Dev devops and there
+with security um right at the center of
+it so regardless of where you are right
+now you want to go from where you are
+into landing that exciting job whether
+as a cloud network engineer or is a
+cloud devops engineer or is a cloud fups
+engineer you need to build a technical
+expertise in fact someone is saying that
+I saw a question I said oh how do I
+combine all of this multiple things that
+you guys are Spen about because we
+talked about different different um
+career fields in Cloud again my answer
+to that is you need to build your
+technical expertise don't think of
+specializing right at at the beginning
+you want to learn all the cloud Concepts
+you want to learn all the devops concept
+and then as you go along you will find
+out which areas are really of more
+interest to you and you also have to
+look at what is in the market so you're
+constantly gauging your skill set what
+you like and what is in the market right
+and what we found in industry and of
+course Charles and I will say as well
+what we found in industry is that
+sometimes you even get hired and they
+call you a particular name oh you're
+cloud data engineer for example and you
+end up doing Cloud devops engineering
+you end up doing platform you end up
+doing architecture you know so you know
+you don't want to be limited that oh let
+me choose something now we're just
+showing you what is possible the various
+possibilities so you just need to expose
+yourself to these tools to Cloud to um
+you know different devil tools that that
+mentioned someone that saying that oh
+which one does not involve programming
+my question is why you running away from
+programming you know you're running away
+from programming because you think it's
+difficult but it's not that's what we do
+at Cloud we take it from zero right
+where you are right now someone is
+saying I'm a product manager how do I
+transition you don't need to I mean
+don't you don't need to run away from
+programming right because you can learn
+it from scratch you can understand it
+you need a bit of programming as a cloud
+devop engineer it will help you but it's
+not difficult it's not difficult it's
+something you can learn from scratch we
+teach you python you know so and the
+more rare your skills are the more
+difficult it is or the more technical
+your skills are the harder it is to
+replace you so you want to position your
+career in such a way that you have
+skills that people are running away from
+and if you have it it means that
+recruiters are going to run towards you
+because you have the skills that people
+need okay so I want to um throw the
+question open about the pitfall some
+people are saying oh I'm sure the person
+is like oh you guys are just talking
+about the good sides you know beautiful
+things about Cloud what are the pitfalls
+what are the challenges so I'll give IG
+an opportunity to answer that question
+of you know and then the next question
+for child will be what's different
+between Cloud someone is asking what's
+different between Cloud architecture and
+you know Cloud devops you know what's
+the difference between that Charles can
+answer that after but I I want you to
+talk about the pit for someone is saying
+what's the pit for what are the
+challenges don't just tell us the good
+things tell us the challenges as
+well say it's a pitfall I'll say it's a
+strong Challenge and it's for every Tech
+right you need to be up to date you need
+to really be on it Tech is not a place
+where you get one thing so I learned
+this two years ago so I'm here you're
+going to really go back quickly so I
+mean for anyone that every time people
+say oh you know you're in Tech you're in
+SEC you're any money even the child said
+you're any money you know it's not as
+much as any money now is as much as you
+have to remain up to date for you to
+keep being valuable right now we're
+having a lot of AI so you can't just
+like oh sorry I only know Cloud it's all
+I do in life no you're going to have to
+keep up like you have to you know
+certifications are things you must you
+know keep up you know updating your
+knowledge keep up being relevant like
+you can't just sit on your Laurel so I
+w't say it's a pitfall as much as it's a
+challenge so Tech is not for the lazy
+hearted I know it's Tech have the money
+just for the lazy hearted so you have to
+be up and up and you know you have to
+plan in yourself okay this is what's
+coming up I need to go and learn it I
+need to understand at least I need to
+understand what the basic is on it right
+I can't run away from new new things and
+say this is all I know I just do Cloud
+devops this is all I know terraform is
+what I've been KN you something else
+comes up newly you need to like jump on
+it and understand it at least you may
+don't know it like an exp but you should
+be able to be open to learning so
+actually that's one of the strongest
+things you must have as a tech person is
+that um you know willingness to learn
+ability to learn actually something that
+is more looked out for in an interview
+than even all your sometimes your your
+heart your heart skills your experiences
+that can the person want to learn things
+quickly that's Tech really you know so
+yeah I'll say that absolutely spot on
+thank you so much um Charles can you um
+guide us on the difference I want to say
+what's differ between Cloud develops
+Cloud architect and Cloud engineering
+and if you can also touch on what
+certification should people get started
+with because you have a lot of
+certifications so you can talk us on
+that J as well yeah so a cloud architect
+doesn't do a lot of ant on sorry it
+doesn't touch systems to maybe use
+terraform to deploy it for the customer
+or using terap to remediate something or
+to change something to flip a feature
+flag or to release a feature right so a
+cloud architect actually takes the
+business requirements maybe you want to
+build our own generative air maybe
+Stanford says okay in of custom engineer
+or our our prospective applicant come to
+a website to see okay when is the
+application starting or when is the
+application ending for this cycle okay
+put all that into a model such as an
+agent an AI model an AI agent they can
+just ask the AI agent when is Stanford's
+application closing right it's very
+difficult to search websites for that
+information you have to click two three
+buttons find okay what are the
+requirements to join an gradate program
+so a Solutions architect would take that
+problem look at different moving parts
+and try develop an architecture
+algorithm synthesize those service
+together make trade-offs maybe there are
+10 things that can do that job and now
+try to find the most cost effective and
+that will be able to work for the
+customer the customers will be able to
+manage not all customers are very good
+at managing they may have small teams
+that they can't manage so it's your job
+as an architect okay which service can
+they use that they can easily ramp up
+that won't take them a lot remove a lot
+of I've been sure about so Architects
+that can overarch and looks at the big
+picture takes the business requirement
+and try to drop like a workable solution
+to to De to to deploy it or to to
+deliver that particular business outcome
+that a customer wants so it's a sales
+role you're taking requirement from
+business and trying to translate into a
+network or an architect technical
+architecture that the devops engineers
+will now or developers will run with to
+deploy right so that's
+architecture um so devops um Cloud
+engineer or devops engineer okay Works
+closely with the developers now when
+they want to release a new code you help
+them to manage the pack package package
+that code and help them to release it
+safely roll it back when necessary and
+also automate dual infrastructure as
+code such that the application the
+release of the application is automated
+it's not manual you're not copying the
+code the new code and go and drop it so
+you can easily roll back you have a lot
+monitoring in place be able to track
+that development or roll back love
+alarms in place love alerting as well so
+that's the develops part cicd
+application deployment release
+management it's a heavy part of the
+infrastructure code is heavy part of
+devops engineer role the last one is
+cloud engineer Cloud engineer is
+holistic can be any um CL Cloud engineer
+might be a devops engineer so Cloud
+engineer is like a broad term so
+companies like Fujitsu Fujitsu UK I know
+they have a lot of cloud Engineers KPMG
+KPMG has a lot of cloud Engineers if you
+just look at them use it was also on our
+slides here so different companies have
+different terminologies but you might be
+doing the same Cloud doing everything
+devops engineer is doing plus Cloud
+architects
+companies small companies if I'm doing a
+startup I only have one maybe Cloud
+engineer in my team I don't want to have
+devop setup Network you do everything
+and that worked for me because when I
+was my previous was a small company uh
+or smaller teams so I was doing
+networking doing a Ser Administration do
+so that gave me a lot of when I'm on
+calls working with lot of global
+customers and I'm working with multiple
+teams is it to relate and to send size
+those information so as a bad team when
+you're doing a lot of jing a lot of
+things together as a cloud engineer
+generalist yeah I called myself a cloud
+engineer generalist because you need to
+know how everything fits into each other
+nicely I think those were the three that
+menion if I miss anyone let me know yeah
+that's correct and what certifications
+should people do at the beginning of
+their career good so if you're novice I
+recommend you start with Cloud
+practitioner right but if you're already
+Advan you're working with it you might
+want to go straight into Solutions
+architect now if you want to go into the
+architect role to be from Solutions
+architect associate to Solutions
+architect um um professional your
+knowledge shouldn't stop there you might
+want to do some Advanced speciality
+courses security specialist machine
+learning because as a Solutions
+architect professional you expected to
+be professional that this hot
+reverberating on all standards so you
+should know some Advanced Network and
+advanced security so nearly never ends
+certification never say ah once you get
+the professional H I'm made there's no
+doesn't work that you keep playing
+Amazon keeps releasing new we release
+one AI set I'm also trying to see how I
+can prepare for that AI set now so if
+you want to go the architect route
+that's the that's the angle trajectory
+you take now if you want to go the um
+develops engineer route so you start if
+you're novice start with a cloud infr
+cloud um practitioner then from cloud
+practitioner you can go to um Cloud
+Associates well Cloud developer
+Associates now after Cloud developer
+Associates I'll will challenge you to
+also go for the at least the solutions
+architect associate so you at least know
+most multiple service not just develop
+Serv like dynamodb Sous Services after
+um um Solutions architect associate you
+can now go for devops engineer
+professional devops engineer
+professional is a very pretty
+challenging exam and is usually is the
+one of the highest certification
+professional certification with devops
+engineer so but in the Stream round
+version will be Cloud practitioner Cloud
+developer associate Cloud devops
+engineer professional but I say you
+knowledge don't stop there you can still
+Branch out to do operations if you're
+working as a generalist as a develop Eng
+not just doing developer service you
+benefit from doing all these others you
+can even do all the 12 set or the 13
+sets now and get your golden jacket so
+Nothing Stops you um learning never ends
+in the world of technology thank you so
+much Charles um and um as we wrap up the
+panel discussion I'm going to ask I her
+final question so someone is saying that
+um you know um I like what a just said
+about narrowing down your focus I'm
+never s of being overwhelmed with um
+info or feeling stuck um child's
+presentation was helpful with the
+different jobs so I think that's just a
+comment um thank you for that so hi J
+how long did it take you to become an
+Enterprise security architect do you
+have any tips and then um please take
+that alongside how can a cyber security
+graduate end up learning cloud in the
+future yeah so how long they took me oh
+no maybe six seven years is so I think
+my role as an Enterprise security you
+know first of all security security is
+one of those High It's Always In Demand
+right and then I think because I had
+Cloud very early as well that helped me
+so I I really really um accelerated very
+quickly my career because of my cloud
+base so it was that when I joined when I
+was in Cloud was around 2018 2019 so a
+lot of people were moving to cloud and
+it wasn't didn't have a lot CL security
+people then so it was kind of like oh
+you know we need to kind of progress you
+quickly because the clients were really
+looking for my skills I had a client
+that was like I need three IGS in my
+team literally that's how she described
+it I want three IGS in my team so it was
+that kind of like we need them so
+obviously that helps me to get a lot of
+quick range of um view around Cloud
+security quickly and then my role in
+Enterprise security is mainly like death
+SEC Ops abse and all so I'll would say
+it took me about six five to six seven
+years but I I stay with software
+development as well cuz that helped me
+in my architectural role right right cuz
+I do dep SEC so I need to understand I
+do app so I need to really understand
+applications and the details so I it
+took me that short time normally
+security architect can take you like
+when I interviewed for some companies I
+looked at the architect rules and it's
+some people it took them 10 years 11
+years but things go quicker these days
+because knowledge also gets you know a
+lot new so AI so an AI security person
+now will be so like if you really get
+into AI within two 3 years four years
+you'll be an expert because a very new
+area so if you get deep into it you will
+be very highly regarded in fact my
+husband was telling me about someone
+that wasn't his field in medical area
+and switch to Ai and the guy is a
+director now in fiser literally like his
+his colleagues are still like small in
+the field he's gone up to director
+because he added something extra to his
+medical area so it's really important to
+note that I mean with tech and with
+newer areas you can get before we used
+to have all this oh an architect takes
+15 years to become an architect that was
+when things were slow things are faster
+now so knowledge is increasing quickly
+so the earlier you catch up getting you
+can actually really grow quickly right
+so that's why I would say I would say
+just Target five years you can actually
+get there quicker and really if you
+really really like put your food ground
+to understand things much more in detail
+then in terms of um sorry what was the
+next question again with
+me you're mute I can't
+hear I think um how do you end up from
+being um you know a security architect
+and then going into cloud in the future
+yeah so I said I would say on knowing
+Cloud so you already know security you
+just need to know Cloud right because
+the thing security doesn't really change
+security is very big I think people
+don't know that people tend to think
+security is very intense it's not intens
+so it is very basic it has very basic
+principles around it what you need to
+know is cloud so that you can know how
+you now layer your security knowledge on
+cloud security is always busy security
+is always the same thing like if I give
+you any Cloud solution I can literally
+think of top five top six things I'm was
+asking around Security in that area and
+I won't go wrong right so you need to
+not understand Cloud so that you can be
+able to help them with the security of
+their Cloud so if you already know
+security that's good no Cloud if you
+know Cloud you can actually add up your
+security and your Cloud knowledge
+together and actually start helping them
+then you can always explore
+certifications that would give you more
+of that in-depth um assurance that you
+understand things so like the AWS
+security professional is a very strong
+start actually G you like one it's in in
+in in the in the world of um Information
+Security Professionals it's like a onee
+experience that getting that s so there
+are some things like that that would
+actually help you to assure and also get
+in depth knowledge of something but I
+would say no cloud like you already know
+security no Cloud you kind of see that
+you can layer it on top and understand
+like you already have basic security it
+doesn't change you just need to know
+Cloud so you can be able to help them
+out with the security of their Cloud
+okay amazing amazing thank you so so
+much child and IG very very detailed
+responses we'll put the links to their
+LinkedIn profile um you know in the chat
+box as well feel free to connect with
+them very passionate about you know
+helping you get into cloud and of course
+you also meet them at Cloud booster as
+well so that brings us to the end of our
+panel session can you say thank you to
+Charles and a for such a wonderful time
+and for answering your questions thank
+you so much from all of us at Cloud
+booster um you know we appreciate you so
+the final wrap up I just want to answer
+all the questions around people are
+asking what's the rote what does my
+journey look like some of you are saying
+I'm I'm I'm over 50 I'm younger than 16
+there is no age restriction to learning
+cloud computing um some of you are
+saying you've had issues with payments
+please send a DM to any of program
+advisors if that is you um we have
+payments available in various currencies
+but I just wanted to show you you know
+what your journey to cloud computing
+will look like for those that are asking
+right I want to show you what your
+journey will look like now if you enroll
+for the training because we're starting
+a new court um next
+month and basically in two weeks time so
+and it's an 18 weeks Journey so by
+November right you're going to
+understand the basics of cloud computing
+still in the month of November you're
+going to be exposed to storage Services
+we talked about networking earlier today
+Charles mentioned it the same month of
+November you will um you know you will
+be exposed to various kind of networking
+on the cloud and by December this year
+you'll be able to build um you know
+computers on the cloud we call it is2
+AWS is2 instance you will be able to
+build that okay still the same December
+you'll be exposed to databases you'll be
+exposed to high availability and how to
+build resilient architecture on the
+cloud how to build systems on the cloud
+that never fail that never go down and
+by January you'll be looking at security
+on the cloud which we spoken extensively
+about today how do I ensure that my
+cloud services are secure right by
+January and of course still the same
+month of January you'll be looking at
+scripting as well we've talked about the
+importance of prr programming um you
+know we're going to be exposing you to
+python scripting bat scripting lenux
+scripting still in the same month you'll
+be looking at Version Control which is a
+very powerful Concept in the world of
+cloud computing you know G and GitHub
+how do you use that by February you're
+going to be exposed to infrastructure as
+code um child spoke about it as well
+terraform you will be looking into
+Docker containerization in February
+container orchestration using kubernetes
+and of course by March you'll be dealing
+with cicd pipelines on Jenkins and
+configuration Management in anible I
+don't expect that you understood all
+those technical terminologies that's why
+you're coming to us at Cloud booster we
+will take you from scratch some of you
+are asking what does program untila let
+me walk you through what that is it's an
+18 weeks program it is virtual you don't
+need to come to any physical space
+everything will be done online you just
+log into to zoom every Saturday 9:00
+a.m. to 5:00 P p.m and you're in class
+so what is part of your comprehensive
+Cloud develop training is your intro to
+Cloud devops course right we have very
+lovely recorded videos in house you know
+with a lot of Animation that explains
+very different Cloud concept which you
+would have as um you know resources that
+would that you would work with while
+you're attending um sessions every
+Saturday and then we have weekly live
+classes we give you one-on-one
+facilitator support at Cloud booster so
+you're not alone for example if you have
+a class of 20 30 50 students after we
+teach you those Concepts in class we
+divide you into groups and in those
+groups that's when you build your
+Solutions on the cloud we ask you share
+your screen let's see what you're doing
+let's see how we can support you because
+we know that you need more than just
+exposing you to information to actually
+know how to do the job you need to build
+it right in front of us and we marking
+everything we're tracking what you're
+doing we're recording it you know you
+have fully guided Labs as well some of
+you are asking you know what kind of
+projects do I get to work on AWS
+standard projects devops projects
+industry standard projects that you put
+together add it to your CV and you help
+you learn the opportunities that you
+want that's what people that have you
+know been a part of cloud booster that's
+what they've done and of course AWS
+certification exam Readiness materials
+with do exam simulation sessions for you
+as well you have additional resources
+you have a learning community we do
+employability training C reviews Mark
+interview sessions and of course after
+the training there's a lot of followup
+involved as well the training that will
+prepare you for our Cloud booster is the
+AWS Cloud architect Cloud Solutions um
+Solutions architect training by the end
+of your training with us you'll be able
+to take that exam and of course we put
+you on a path where you are able to you
+know keep learning and you keep growing
+your skills so after training with us at
+Cloud booster you'll be able to use the
+following Technologies AWS as your major
+cloud provider of course you can learn
+other ones in the future but we want you
+to learn one first and then you learn
+other ones in the future you can learn
+other ones as you go along once you know
+one Cloud platform right you can learn
+every other one and child spoke about
+earlier as well so the Technologies you
+be able to use AWS python linox anible
+terraform DOA Jenkins GitHub kubernetes
+elk these are the tools that are
+topnotch in the market and because
+you're listening to us today we're
+offering you a 30% discount so you're
+only going to pay £2,500 for the
+training up until if you take advantage
+of um the offer between now and 25th of
+October but I have another special offer
+for you some people have dropped off the
+call some of you are still here so you
+guys are eligible for the next offer I
+have for you right and of course there
+are installment payment plans available
+and you can pay in any currency if
+you've had issues with payment before
+just reach out to any of our program
+advisors we'll help you to resolve it
+okay for those of you that are still on
+the call this is a special discount for
+you this one is a woof like if you're in
+Nigeria you know what a woof is like
+discount that you should not even think
+about twice like come on if you're still
+on the call you can take advantage of a
+50% discount where you only pay 2,000
+for all of that you're going to be with
+us for 18 weeks we're going to expose
+you to the finest Minds in the industry
+Charles I all of us put it together
+ahead teaching you all of this concept
+from scratch you don't need to have any
+background we're
+you have issues on Sunday call meet us I
+mean we're going to help you during the
+week There's a group where you join as
+well you're working on a project during
+the week your stock you can reach out to
+us at the working hour time you can also
+we also have droping sessions on
+Wednesday as well where you can bring
+all the issues that you're having and
+we'll help you we want to help you
+transition C DeVos we know the
+opportunities are there and we know that
+you can do it the only thing that is
+limit to you between now and your next
+opportuni is the skills that you need to
+acquire and we want to take advantage of
+this special super special discount
+expires by 12: um p.m. on Monday 21st of
+October and of course we have
+installment plans available as well so
+all you need to do is to pay your first
+deposit of £700 within 24 hours are you
+qualified for that but don't worry just
+reach out to us reach out to any of our
+um Pro program advisors send webinar
+discount to any of those WhatsApp
+numbers and you can log down that deal
+okay so want to help you but here for
+you your um success is our joy right we
+have the skill set we know the
+opportunities are there in the market
+and we want you to be the next person
+that recruiters are chasing because you
+have the skills that you need to land
+that amazing job opportunity thank you
+so much for your time today guys we're
+looking forward to seeing you in our DMS
+reach out to us we want to help you and
+of course feel free to connect with all
+of us on LinkedIn as well you know um of
+course we would we would help and
+support you on your journey that brings
+us to the end of our program today
+please enjoy the rest of your evening
+again we're going to put the numbers in
+the chat box those are the numbers to
+reach out to any of our program advisors
+just send webinar discount you lock down
+that amount and you get started with us
+in the next two weeks you can still
+achieve your 2024 goals honestly the
+year is not yet over like we still have
+two more months this year sorry about
+three more months this two and a half
+months this year I can still achieve
+your goal thank you guys have a lovely
+day and um see you in our DMS and thank
+you once again IG and Charles for such
+lovely sessions thank you bye
+everyone
+e
+e e

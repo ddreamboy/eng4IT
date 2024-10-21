@@ -1,0 +1,1139 @@
+foreign
+welcome to yet another session based on
+scikit-learn today we are going to
+generalize how scikit-learn workflow is
+basic programming intuition behind it
+and then we'll cover the first step of
+every machine learning problem solving
+methodology that is making sure data is
+clean and generalizable in more
+technical words this step is called
+pre-processing so by the end of this
+session you'll understand the workflow
+of scikit-learn and how you can carry
+out data pre-processing I hope the
+agenda for this session is clear to all
+of you guys but before we get started
+with this session please make sure that
+you hit the Subscribe button and Bell
+icon so that you never miss any update
+from intellipath YouTube channel okay
+that being said let's dive into this
+session and talk about how scikit-learn
+workflow is now if you guys talk in most
+basic sense the scikit-learn workflow
+begins with some sort of data you then
+eventually provide that data to the
+model and this model will learn from
+provided data and then it will further
+be able to make predictions that's the
+general workflow in the most basic sense
+but that's quite vague so let's go a
+little deeper now what do we mean by
+giving a data set to the model typically
+if we have a data set that is useful to
+make some predictions we split it into
+two parts and the common notation to
+call the splitted data is one to call X
+and other to call Y now this x here is
+something that is representing
+everything that I'll be using to make
+predictions what I mean by that is this
+x will contain the features of an event
+that will describe the outcome of that
+specific event for example Heavy Rain
+false drainage system are the features
+that will lead to events such as water
+logging that means the outcome here is
+water logging and Rain plus faulty
+drainage system are the parameters
+responsible for that event now why in
+our case will be the output data I mean
+it will contain the result which will
+occur on a given set of parameters for
+example let's say I have an iris data
+set now in this data set I'll have the
+class of plant as my target variable and
+features such as sample length and width
+as well as petal length and width acting
+as parameters which will describe the
+type of plant now our model should find
+patterns in these features which make
+the a particular plan belong to a
+certain category but before that we'll
+feed this X and Y data to our model then
+we'll Train The Logical ml algorithm
+over this provided data basically we'll
+fit our data to this model but before I
+talk more about that let's visit our
+code editor and get ourselves a data set
+that scikit-learn provides the data set
+will be the same I mean the iris one
+whose use Library so for that purpose
+let's visit the code editor
+now let me import this scikit-learn
+Library the command to do that is import
+sklearn and I'll run this block
+now to get our data set we have a
+command and that command is from sklearn
+dot data sets
+import
+load underscore Iris
+so iris is basically a data set that is
+already stored inside sqln Library so we
+will be importing it
+using this load Iris method
+so let's run this block as well now next
+we'll visualize how this data looks and
+for that we'll just write load
+underscore Iris command and
+this will actually load the data on our
+code editor
+so let's run this
+here you can see that there are input
+variables and there are some Target
+variables as well all right and this is
+the information about our data set now
+if I want to visualize X and Y
+separately then I can do that by adding
+return underscore X underscore y to the
+previous functional argument
+so I'll copy this command
+I'll add the argument that we just
+talked about that is
+return
+underscore X underscore
+y
+and I'll run this command oh wait so
+I'll have to set this true as well
+now here you can see that both the input
+features and the output feature has been
+separated Clearly Now moving forward
+we'll be storing this data for future
+computation in variables of our own
+let's say those variables are again X
+and Y and to sort of store this data in
+these X and Y variables will have to use
+the load command again so we'll use x
+comma y
+stores
+load underscore Iris
+and return underscore
+X underscore
+y
+equal to true
+and we'll run this block and with this
+successful execution I can say that I
+have a feature data and output data
+separated in X and Y variables okay now
+we have data in a format that can be fed
+to a machine learning model to sort of
+get an overview of the procedure will
+actually formulate a model but before
+that we should conceptually visualize
+what a machine learning model actually
+does and for that purpose let's go back
+to the presentation now when you create
+a model initially it's not directly
+filled with data the model creation
+involves two steps in scikit-learn
+basically we first create or generate a
+model and then after that we make the
+model learn our data in scikit-learn all
+models are just python objects and then
+this learning over here in scikit-learn
+terminology is often denoted with DOT
+fit methodology during this typical Step
+Up dot fit we actually pass the set of
+variables that we have termed as X and Y
+representing the feature data and output
+now remember guys our model must pass
+through both of these phases so that it
+can make the prediction now that being
+said I hope that you guys have collected
+some intuition out of this let me take
+all of you back to the notebook in order
+to show you how easily the said notion
+can be coded okay guys there is one more
+thing I want you guys to be clear of now
+the problem that we are dealing with
+here right now is the classification
+problem in this problem we have to
+classify our rows into different plant
+classes right well we'll be talking
+about the concept of classification
+later on in this series but for now let
+me tell you that we can use models like
+linear regression k n or svm to solve
+these classification problems now first
+let me pick up the linear regression
+model to call an object of this model
+inside a notebook I'll have to write a
+command that is from
+SK learn
+dot linear
+underscore model import
+linear
+regression now I'll run this block and
+I'll take new one now for the model
+creation stuff what I'll have to do is
+I'll have to create a variable name
+model and assign this called object to
+it that means what I'll do is I'll
+create new variable and I'll put this
+function linear regression into it so
+let me do that
+now I'll run this block and you can see
+that the model has been created now guys
+this is the phase where model is not
+learning anything here we are just
+creating it so this is the first stage
+that we talked about so if I were to
+call a method model.predict right now it
+must return an error let me check that
+so if I call model Dot predict
+over the data samples X
+and if I run this statement I must get
+an error and see we are getting it here
+and so for dodging this error all we
+have to do is fit our model to the data
+for that purpose let me take a new block
+here what we'll do is we'll fit our data
+and for that we have a command
+named as fit
+and will pass X and Y to it
+yeah you can see that our model is being
+fit with linear regression object or
+algorithm now once this step is done the
+model will pick up patterns from the
+data set this time when I try to call
+the predict function our model will be
+able to make some sort of deductions for
+right now we are not going to discuss
+what this machine learning model
+actually does because our priority right
+now is to understand the overview of ml
+modeling workflow well one more thing
+guys the best thing about scikit-learn
+is that API for all the machine learning
+models will remain the same I mean we
+just created the linear regression model
+similarly the API structure will prevail
+for all other models well before that
+let me actually see if this model is
+predicting the output or not so I'll use
+model.predict function and I'll pass X
+to it and it must produce some output
+that matches with y
+so guys here you can see that we are
+getting some sort of predictions all
+right now this was the one model what
+about other models well let's say I want
+to create one more ml model that is K
+nearest neighbor so the first thing I'll
+do is I'll invoke the K nearest neighbor
+classifier object and for that I'll use
+the command that is SK learn
+dot Neighbors
+import K Neighbors regressor
+and now I'll store this inside the new
+variable
+and I'll run this block now in The Next
+Step I'll fit our data to this new
+algorithm
+so Mod Dot fit
+X comma Y and I'll run this now our K
+nearest neighbor regressor will
+generalize over the provided data and to
+check if it is making right predictions
+or not I'll use the prediction method so
+I'll use mod.predict
+over
+the input data and I'll run this block
+now guys you can see that this is
+actually making very close predictions
+right so let me also show you the output
+data see here it is so it is actually
+making very close predictions now we'll
+talk about the structure of this
+algorithm later words and why linear
+regression perform bad on this
+particular use case but for now on let's
+just focus on the workflow of this
+modeling technique now guys we just saw
+the predicted data and the given output
+data and we made a comparison but what
+if I want to visualize this data what
+can I do well for that purpose I'll have
+to import the matplotlib library the
+matplotlib library contains lot of graph
+plotting techniques that will allow me
+to plot graph for the predicted data and
+the actual data so for that purpose I'll
+be using scatter plot here now what I'll
+do is I'll put predicted values on x
+axis and given output values on y-axis
+so let me code this quickly import
+matplotlib
+add PLT then predicted data is equal to
+model dot predict
+X and then I'll plot
+and then I'll plot the scatter
+graph
+and I'll pass predicted data on x axis
+and y on y that is our output variable
+right so let me run this block and guys
+by looking at this graph you can see
+that the predictions we have made and
+given output matches in all the
+scenarios what that means is our model
+has learned the pattern in data
+accurately which means there is good
+signal and low noise but this might not
+Prevail with every data set or the
+problem we'll discuss more about how
+models work and how to choose the best
+model but for now this is the basic
+structure of machine learning solution
+buildup and its very basic sense but
+guys keep this in mind that this is not
+how a typical machine learning problem
+works or this is not how the typical
+machine learning problem should be coded
+the data you get might not be well
+optimized and there might be a degree of
+difference between measurements and data
+like that cannot be fed to the machine
+learning model that adds adds one more
+layer to our machine learning procedure
+that is data cleaning and pre-processing
+so moving forward we'll take a deep dive
+into the concept of this data cleaning
+and pre-processing so guys basically
+every machine learning exploration
+begins with exporting the data set in
+the last demo where we understood how
+the scikit-learn API works we directly
+imported the scikit-learn data set and
+stored it inside one variable but this
+time I'll show you how to store data set
+inside a data frame now if you guys are
+wondering what exactly is this data
+frame then let me make this clear guys
+data frame is a unique two-dimensional
+data structure implemented in pandas
+library of python I mean it contains
+rows and columns like SQL tables or a
+spreadsheet in terms of programming you
+can visualize it as a dictionary of a
+series of objects all right okay now
+that being said the first thing we'll
+have to do is import the pandas Library
+the command is quite simple import
+pandas
+as PD and I'll run this block now next
+is getting a data to store inside the
+data frame the data set we are going to
+use is the Titanic data set now again
+this is the data set that's part of
+scikit-learn framework and it is
+commonly used for Learning and data
+exploration purposes if you want to make
+a career in data science then intellipat
+has IIT Madras Advanced Data science and
+AI certification program
+this course is of very high quality and
+cost effective as it is taught by IIT
+professors and Industry experts so guys
+to load this data set we'll have to
+import one functionality that is fetch
+underscore openml now the command to do
+that is from
+sklearn dot data sets
+import
+fetch underscore openml
+now I'll run this and it will import the
+fetch openml functionality next we'll
+import our data set using the fetch
+openml function and we'll store it
+inside the data frame so how can I do
+that well DF is equal to fetch
+underscore openml
+the data set that I am going to load
+that is Titanic and I want to use
+actually a very specific version of this
+data set that is version one
+and I'll set as underscore frame equal
+to true
+and we'll be taking it as a data right
+okay now let's run this block and check
+if our data set is imported and stored
+inside our data frame or not for that
+purpose we'll use the command known as
+DF dot info so let me write that command
+quickly
+and here you can see the information
+about our data set so basically our data
+set contains 13 columns right and all of
+them are basically non-null values right
+at the bottom most part you can also
+find out the data types that are part of
+this data set here you can see that we
+have two categorical variables we have
+six float features and then we have five
+object type features now let's find out
+if there are missing values in our data
+set the pandas function we have for this
+purpose is dot is null
+so let me use that function quickly DF
+dot is null
+and I'll run this and here you can see
+that it is highlighting the areas where
+a data set contains null values right so
+wherever it is true that means there is
+a null value inside that row or that
+particular column all right guys so this
+is not actually a better way to
+visualize right so for that I'll
+calculate the overall null values inside
+each column and the command to do that
+is very simple DF dot is null dot sum so
+I'm summing null values across every
+column all right so let's run this
+command and here you can see that there
+are like 263 null values in h column
+1014 null values in K bin column two
+null values in M Bar column
+1188 in body and same for home.dest and
+body now the data type here is integer64
+that is the numbers return here are
+integer obviously now the question that
+should strike your mind is how
+significant are these null values and is
+it necessary to dodge them well let me
+help you guys visualize this with help
+up and graph for this purpose we'll be
+using the seabon library so let me first
+import it so I'll import c bond library
+with command import C bone
+adds SNS and I'll run this block now the
+library has been imported after
+importing I'll also set the graph
+styling with the help of set function in
+cball so SNS dot set then we'll
+calculate the missing value percentage
+for each feature now how can we do that
+actually Well what we'll do is we'll
+divide the number of null values entries
+by the number of rows in our data set
+and to convert it into percentage we'll
+multiply it by 100 and let me put that
+in a programming syntax here so it will
+look like Miss value percentage
+will be equal to PD dot data frame
+DF dot is null
+dot sum
+divided by the length of
+DF all right and I'll multiply it by
+100.
+now the next step will be the plotting
+graph we'll plot it as a bar graph and
+we'll keep the percentage on y-axis okay
+so the command I'll use for that is Miss
+underscore value percentage
+Dot Plot kind of graph I am going to use
+it's again as I mentioned bar then the
+title that I want to give to this graph
+that is missing values
+and then y label that is percentage all
+right so let me run this block
+and here you can clearly deduce that we
+do have multiple null entries now the
+problem with that is if we don't have
+appropriate data our model won't be able
+to learn properly right for example
+consider you don't have any study
+material and suddenly your faculty takes
+your examination will you be able to
+perform great in that examination you
+won't be because you won't know the
+concepts right and same prevails for
+machine learning and this will actually
+lead to scenario where our model will
+make very blunt predictions and will
+have very less accuracy score so we'll
+have to find a resolution to add
+something in place of these missing
+values or drop the entire feature so
+that it won't affect learning adversely
+all right so first let me walk you guys
+through the concept of dropping a
+feature now in our entire data set the
+body feature has the most null values as
+you can see here right so what we'll do
+is we'll drop this column we'll print
+the size of data set the function we
+have for that purpose is dot shape
+function so the command for printing the
+shape will be print the size
+of a
+data set
+TF dot shape all right now I'll run this
+command and we'll get the shape of our
+data set all right that means there are
+13 columns and 1300 0 9 rows all right
+now I wanna drop one column right
+so let me move ahead with that the
+command for that will be DF dot drop
+which is the function that is used to
+drop the column
+and inside it I'll pass the column that
+I want to drop that is body and I'll set
+axis equal to 1 so that it will remove
+the column if I set access is equal to 0
+then it will actually remove the row all
+right and I'll set in place
+equal to true
+and then
+I'll enter another printing statement
+where I'll print sides of the data set
+after dropping
+column to dropping a feature let's say
+and again it will pass the same DF dot
+shape argument and let's run this block
+all right so here you can see that one
+column has been removed all right now
+the in place argument that we have added
+in this drop function is something that
+will keep true right so what this does
+is it tells The Interpreter that make
+sure the changes that we have done are
+being converted into permanent changes
+basically guys Panda shows the data
+frame which changes we make but it will
+not modify the original data frame DF
+and to make sure that DF is updated we
+use this in place argument all right
+okay I hope so this strategy is clear to
+all of you guys next we'll look into
+another method that is value imputation
+so guys deleting feature is never
+preferred because by removing a column
+where actually missing one reason which
+causes the course of outcome or which
+contributes towards the output right and
+we don't want to see that happening
+because our model won't be able to
+generalize properly otherwise in
+scikit-learn we have SIMPLE computer
+class which can help us impute missing
+values quite easily this simple computer
+is a very convenient strategy for
+missing data imputation it replaces all
+missing values with a statistic
+calculated from the other values in a
+column this strategy can often lead to
+impressive results and avoid discarding
+meaningful data when constructing your
+machine learning algorithm the
+statistics that this imputer uses are
+mean median and mode these three methods
+compute the numeric output out of
+available data to replace null values
+and by making use of them it has been
+observed that machine learning models
+perform very well and become capable of
+generalizing a new set of data so first
+of all let let us import the simple
+imputer into our notebook and for that
+let me visit the code editor now I'll
+take a new block of code and I'll impute
+this simple emulator and the command to
+do that is from sklearn dot impute
+import simple computer
+all right
+now we'll impute the values for the h
+column here all right first of all let
+me print the number of null values in
+this column so the statement I'll write
+as print
+number of
+null values
+before imputing
+and I'll pass
+this DF dot age
+is null
+argument all right so what this will do
+is this will return the total number of
+null values inside this H column all
+right so let me run this command
+and here you can see that there are 263
+null values inside this H column all
+right next we'll create simple imputer
+instances but before that let me tell
+you about the arguments that include so
+basically it includes three important
+arguments the first one is missing
+values the missing values is a
+placeholder which has to be imputed I
+mean basically it is the null value in
+our data set by default it is said to be
+Nan right then we have second argument
+that is strategy the data which will
+replace by NN values from the data set
+is known as statistical strategy the
+strategy argument can take values such
+as mean median most frequent and
+constant and then we have third
+important argument as fill value the
+constant value to be given to the Nan
+data using the constant strategy should
+be mentioned in fill value section all
+right now here we'll use the mean
+strategy all right so the way to invoke
+this simple computer is that create a
+new variable and invoke it simple
+computer
+and set the strategy to mean as we have
+mentioned
+now we will apply this Transformer that
+we have just generated to the H column
+with fit underscore transform method so
+what fit underscore transform method
+will do is it will fit our data to this
+computer and it will generate the
+non-null values to replace the null
+values that is Nan values all right so
+command I'll write for that as DF h
+equal to impute dot fit underscore
+transform
+DF
+column h
+all right now next we'll print
+number of null values
+in h column
+after imputation
+all right passing argument will be
+basically the same so we'll copy it and
+we'll paste it here
+now let me run this block
+and here you can see that there are zero
+null values inside H column right now
+what that means is we have successfully
+imputed values for our age column okay
+guys I hope this is clear to all of you
+now now let me show you guys how we can
+impute missing values for this whole
+data set Well what we'll do is we'll
+figure out parameters differently by
+defining one python function separately
+the reason behind doing this is pretty
+simple guys the data set contains
+different data types some of which are
+even string format and computations like
+mean median or mode cannot be achieved
+on string data right hence we need to
+program the separate function that will
+allow us to visualize what sort of
+elements are inside our data set right
+okay so let me Define this function as
+get underscore parameters So Def get
+underscore parameters
+and I'll pass DF as an argument inside
+this function I'll create the parameters
+dictionary after this I'll create for
+Loop and I'll iterate Through The
+Columns of our data frame I'll choose
+the column that contains null values
+right so the command for this will be
+for column in
+DF dot columns
+and we'll choose null columns right it's
+null dot any
+now if
+DF column
+dot d type that means the data type of
+entries inside that column is equal to
+float 64 or FDF
+column Dot D type is equal to int 64.
+or
+it is equal to int 32 then set strategy
+equal to mean all right so if we have
+the numerical variables then definitely
+we can use mean as strategy right
+otherwise what we'll do is else will use
+strategy as
+most frequent
+all right
+so let me run this part so there is no
+bug in this much part now we guys have
+decided the strategy but there is one
+more problem guys that needs addressing
+in Python when we deal with mixed data
+types columns are converted into ndra
+format in broadest upcasting so to dodge
+that we'll create a custom missing value
+array actually we'll create a 2d array
+containing column and null type so for
+that we'll actually have to figure out
+missing values as well so I'll create
+the new variable
+named as missing underscore values and
+I'll set DF
+column
+DF column Dot
+is null
+dot values
+zero now similarly the parameters
+dictionary
+will store missing values
+adds
+parameter that we created in last line
+that is again a missing value
+and strategy
+will be strategy
+and will return
+the parameters
+and now
+let me pass the argument and run this
+block the argument should be get
+underscore parameters
+and DF as an argument all right so let
+me run this block quickly yeah guys
+there was an indentation error in our
+block so I have removed it now here you
+can find out that there are missing
+values and there are different
+strategies right for cabin we have none
+as missing value and strategy will be
+most frequent for embark missing value
+will be NN and strategy will be most
+frequent again for fair the missing
+value will be Nan and strategy will be
+mean and same different strategies for
+different columns all right so now we
+have got the parameters all right so
+let's make use of them and actually
+predict the values right the first thing
+we'll do is we'll store this parameter
+dictionary into a new parameter variable
+which will be available outside the
+local scope of previous function right
+so the way to do that is Define new
+parameters and store these parameters
+inside it
+I'll run this command okay next we'll
+iterate through the parameter dictionary
+we'll set missing underscore values and
+strategy depending upon the data type of
+each column and then we'll pass it to
+the simple computer let me do that
+quickly here so for column comma
+parameter
+in parameters
+parameters dot items
+missing values
+equal to
+param
+missing values strategy
+will be equal to
+that is stored inside our parameter now
+we'll import the imputer and for that
+purpose and for that purpose the command
+I'll write as input imputer equal to
+simple computer
+and I'll set missing values
+equal to missing values itself
+the variable that we just abstracted
+from this parameters dictionary and
+strategy
+strategy which we also have gotten out
+of this parameters dictionary now I'll
+fit
+data to it so DF call
+that means all the columns inside our
+data frame if you want to make a career
+in data science then intellipat has IIT
+Madras Advanced Data science and AI
+certification program
+this course is of very high quality and
+cost effective as it is taught by IIT
+professors and Industry experts will be
+fitted to
+this simple imputer using fit underscore
+transform method
+and will only perform this over column
+Matrix all right so now let me run this
+block
+yeah it's successfully compiled and
+finally let me also print the sum of
+null values inside our data frame so DF
+dot is null dot sum
+and here you'll find out that there are
+no more null weight
+so let me run this again
+and you'll find out that there are no
+null values inside our data set right
+now next we have feature engineering so
+so guys feature engineering is the
+process of selecting manipulating and
+transforming raw data into features that
+can be used in supervised learning in
+order to make machine learning work well
+on new task it might be necessary to
+design and train better features as you
+may know a feature is a measurable input
+that can be used in a predictive model
+it could be the color of the object or
+the sound of someone's voice feature
+Engineering in simple terms is the act
+of converting raw observations into
+desired features using statistical or
+machine learning approaches now I'll
+show you the example of feature
+engineering but before that let me show
+you how our data set looks so I'll use
+DF dot head command here which will show
+us the way our data looks all right so
+here you can see these two columns right
+sib SP and Pad so CBS SP is the feature
+in our data set that captures the number
+of siblings passengers have traveled
+with and Patch captures the number of
+parents and childrens that the passenger
+traveled with so we can use feature
+engineering to infer the person traveled
+alone or by with his family by looking
+into these two parameters right and for
+that we'll have to combine these
+parameters so let me put down what I
+have said in context of program real
+quick so what we are gonna do is we are
+gonna check if the person has traveled
+alone or with family so we'll merge this
+cbsp and Patch columns together so for
+that DF family
+will be equal to
+DF
+SP
+plus DF
+parch now if DF Dot
+loc
+dot DF family
+so inside the data frame the location
+where DF column is
+if the roads value is greater than 0
+then
+the person will be considered as
+traveled alone
+and the value will be set to zero all
+right and similarly if DF Dot Lock
+is equal to 0 then travel alone
+and the value that we'll put will be 1.
+now DF
+traveled
+underscore alone
+value underscore counts
+Dot Plot title
+equal to
+passenger
+traveled
+alone
+and the type of graph we want to show
+will be bar now I'll run this block
+there is an error guys so let me check
+this error
+okay so here we have used the double
+square box maybe because of that we are
+getting this error so I'll remove it and
+I'll run the code and yeah here you can
+see that we have the data where
+passenger traveled alone and when he did
+not travel alone so guys this is how you
+are supposed to carry out feature
+engineering and create a meaningful
+parameter out of the very very raw
+parameters that are provided to you so
+this was all about the notion of feature
+engineering now the next point I have on
+my itinerary is encoding features into
+format that can be fed to the machine
+learning model now when dealing with
+classification problems you need to
+encode categorical features numerically
+on an container scale the scikit-learn
+API requires categorical features code
+editor first I'll import the one hot
+encoder from Escalon
+then I'll set so guys the column that we
+are going to transform with one hot
+encoding F6 so basically we have two
+sixes in our data set that is female and
+male so female and male are both in
+textual format we want to convert it
+into binary format so for that we'll use
+these two characters and this six column
+itself so we'll set female comma male
+equal to one hot
+encoder
+dot fit underscore transform
+DF
+sex column and we'll convert it to the
+array
+now let me show you how this is achieved
+here
+so
+what we want to print is 6 then
+the female
+and the mail so this will generate
+encodings for both sex female and male
+parameters so let's visualize how it
+looks
+yeah here we are getting an error that
+is data frame object has no attribute to
+array that is true so all I have to do
+is take this two array out from here
+guys the reason behind this error is
+again we are dealing with a column so
+we'll need to add one more box brackets
+we'll add them and we'll run this code
+this is working fine here you can see
+how one hot encoding looks like but this
+is quite redundant isn't it all this
+information could be stored in single
+column where female is 0 and male is 1
+right to do so we'll select the mail
+column from the array resulting from the
+fit underscore transform method so what
+we'll do is we'll
+create the new coding block and inside
+it df6
+will be one hot
+encoder
+dot fit underscore transform
+inside it again will pass the sixth
+column
+and we'll convert this whole thing to
+array so that
+it will be saved in a column format all
+right and to save it in a column format
+I'll have to pass this as an argument
+with this indexing we can say that the
+format our data will be stored inside
+dfset column will be in a tabular column
+wise format all right so
+now let's run this command
+so we haven't converted this into a
+method so that was the error
+now
+the next thing will be visualizing the
+data so let me show you how one hot
+encoding looks now here check out the
+six column guys
+so here you'll see that sixth column has
+been replaced with zeros and ones so now
+zeros will be Min and one will be female
+all right now I hope this one and one
+hot encoding part is clear to all of you
+guys after this we have data scaling so
+if the data in any condition has data
+points far from each other scaling is a
+technique to make them closer to each
+other or in simpler words we can say
+that the scaling is used for making data
+points generalized so that the distance
+between them will be lower as we know
+most of the machine learning models
+learn from the data by the time the
+learning model Maps the data from the
+input to Output
+and the distribution of the data points
+can be different for every feature of
+the data larger differences between the
+data points of input variables increases
+the uncertainty in the result of the
+model the machine learning models
+provide weights to the input variables
+according to their data points and
+inferences for output in that case if
+the difference between the data points
+is so high the model will need to
+provide the large weight to the points
+and in final result the model with a
+large weight value is often unstable
+right this means the model I can produce
+poor results this means the model can
+produce poor results or can perform
+poorly during learning I am not saying
+that all the algorithms will face this
+problem but most of the basic algorithms
+like linear and logistic regression
+artificial neural networks clustering
+algorithms with K values Etc face the
+effect of the difference in scale for
+input variables scaling the target value
+is a good idea in regression modeling
+scaling up the data makes it easy for
+model to learn and understand the
+problem in the case of neural networks
+an independent variable with spread of
+values may result in large loss in
+training and testing and cause the
+learning process to be unstable for
+example one feature can contain data in
+pounds and other in kilograms to
+interpret properly these features need
+to be on same scale they should be at
+least in kilograms or they should be at
+least in pounds so that is the reason
+why we need data normalization
+data we can use two methods that are
+available in scikit-learn that is
+standard scalar and min max scalar let's
+first talk about min max scalar for each
+value in a feature min max scalar
+subtracts the minimum value in the
+feature and then divides by the range
+the range is the difference between
+original maximum and original minimum
+guys basically this min max scalar
+preserves the shape of original
+distribution it doesn't meaningfully
+change the information embedded in the
+original data like you can see the graph
+over here right so what it does is it
+converts it into range of 0 to 1 all
+right that is all you need to remember
+about min max scalar next we have
+standard scalar standard scalar follows
+the standard normal distribution that is
+it assumes a normal distribution for
+data within each feature the scaling
+makes the distribution centered around 0
+with a standard deviation of 1 and the
+mean removed for a data sample X its
+core for standard scalar is calculated
+as x i minus mean of x divided by
+standard deviation of X which is the
+mean is represented with mu and standard
+deviation is presented with Sigma sine
+and again the mean can be forward
+calculated using this formula and
+standard deviation can be calculated
+using the formula given here all right
+guys now I am not gonna talk about the
+mathematical details about both of these
+techniques I'll simply show you how you
+can Implement these scaling methods in
+Python program all right so let me visit
+the code Editor to do that now first
+thing first let me import the standard
+scalar to our notebook for that we have
+command from a scale on
+dot free processing
+import
+standard
+scalar
+all right I'll run this command
+now the next step will be selecting the
+numerical columns because we can only
+scale numerical columns right so let me
+find out the numerical columns first for
+that I'll create the new variable named
+as numerical columns and inside it I'll
+store
+the selected data type columns that is
+int 64
+float
+64.
+and integer 32.
+and
+I'll print these columns
+so let me run this here you can see that
+these are the numerical columns we have
+in our data set now what we'll do is
+we'll apply our standard scalar all
+right so first of all I'll invoke the
+object of standard scalar using the
+syntax new variable is equal to standard
+scalar all right
+now I'll run this command again next
+I'll create new data frame which stores
+the num columns
+that is numerical columns and I'll apply
+SS dot fit underscore transform it
+and again I'll pass
+all the numeric columns
+now
+dot describe
+I'll run this
+now here you can see that all the values
+has been standardized all these values
+are between 0 and 1's proximity all
+right guys now all of these values are
+in log format so if you convert these
+values into simple numbers you'll find
+out that these values lie between 0 and
+1. so this is how standard scalar works
+now let me also show you how min max
+scalar works now we'll import the min
+max scalar so the command for that is
+from Escalon Dot preprocessing
+import
+min max scalar
+now after that we have already found out
+the numerical columns so we'll again
+call that num columns variable that we
+created previously so right now all we
+need to do is we'll need to pass this
+min max scalar to some variable so that
+it will be invoked
+and then
+DF dot num underscore columns will be
+equal to
+minmac dot fit underscore transform
+again will pass
+num underscore columns
+and will print
+The Columns but guys we have already
+applied standardization to this data so
+I don't know how these values will be
+well they are quite nice all right
+because the data was previously
+standardized itself so because of that
+our min max scalar is putting it into
+more perspective all right so these
+values are quite processable and if we
+feed them to the network machine
+learning model it will be able to
+produce some sort of very accurate
+prediction which is close to our output
+parameter all right now I hope this min
+max scalar and standard scalar is clear
+to all of you guys out there let me tell
+you that this was just an overview of
+how data can be handled okay we'll be
+carrying out more such operations down
+the line throughout this series so with
+this session just try to build a basic
+intuition for this pre-processing
+process all right and I wish to thank
+you all of you guys for being here till
+the end of this session I hope this
+session was informative and entrailing
+you have liked this video a thumbs up
+would be much appreciated also if you
+have any concerns about this set concept
+then please put them in the comment box
+below our 24x7 team of experts would be
+obliged to resolve all of them for you
+guys also make sure you are subscribed
+to the intellipath YouTube channel so
+that you never miss upcoming multiple
+updates if you want to make a career in
+data science then intellipat has IIT
+Madras Advanced Data science and AI
+certification program
+this course is of very high quality and
+cost effective as it is taught by IIT
+professors and Industry experts

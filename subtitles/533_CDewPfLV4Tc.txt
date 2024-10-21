@@ -1,0 +1,1133 @@
+[Music]
+hello everyone this is janet here from
+edureka and i welcome you all to this
+interesting session
+where we'll be looking into ensemble
+learning so without any further ado
+let's take a look at today's agenda
+we'll start this session by discussing
+what exactly is ensemble learning and
+why do we need it
+following that i'll be walking you
+through various techniques in ensemble
+learning
+and finally we'll end the session by
+implementing ensemble learning in our
+machine learning model
+before we begin do consider subscribing
+to our youtube channel to stay updated
+on training technologies
+and also if you're looking for online
+training certification in machine
+learning
+check out the link given in the
+description box below
+alright so let us now understand what
+exactly is ensemble learning
+in the world of statistics and machine
+learning ensemble learning techniques
+attempts to make performance of a
+predictive model better by improving
+their accuracy
+ensemble learning is a process using
+which multiple machine learning models
+are strategically constructed to solve a
+particular problem
+this problem can be of a classification
+type or of a regression type
+ensemble learning models have three
+basic components
+first off we have a data set here data
+is jumbled
+and sent to the machine learning model
+the mixing of data is referred to as
+sampling
+and we can either perform row sampling
+or a column sampling
+next we have group of base learners base
+learners are machine learning models
+that can either be independent or
+dependent to each other
+here every base model gives it
+prediction in accordance with the data
+that is fed to it
+and finally output or the prediction of
+all the base model
+is combined in a final model here the
+decision is made based on the majority
+vote
+or by looking at their predictions
+weights
+so moving ahead now you might be
+wondering when we already had state of
+the models like decision tree or svm
+then why was there a need of ensemble
+learning well you see
+ensemble learning helps improve machine
+learning results by combining several
+models
+this approach allows a prediction of
+better predictive performance compared
+to a single model
+this is why ensemble methods place a
+first in many prestigious machine
+learning competitions
+such as netflix competition kdd 2009 and
+kaggle
+what basically i'm trying to say here is
+that ensembl methods are meta algorithms
+that combine several machine learning
+techniques into one predictive model
+in order to decrease variance or by
+improving the predictions
+one of the most commonly or important
+terms used in ensemble learning is a
+bias and variance
+let us now understand each of them in
+detail starting off with bias
+bias error is useful to quantify how
+much on an
+average are the predicted value
+different from the actual value
+the high bias error means that we have
+underperforming model
+which keeps on missing essential trends
+then we have
+variance variance on the other side
+quantifies how much of the predictions
+made on the same observation
+different from each other a high
+variance model will simply overfit your
+training population
+and perform poorly on any observation
+beyond the training data set
+as you can see over here in the
+following diagram the red spot over here
+represents the training data set
+and the blue spot over here represent
+the testing data set
+okay the perfect model over here we can
+set as low bias and a low variance
+now as you can see over here in this
+three charts the under feeding model is
+something wherein it does not perform
+well
+even on a training data set and as you
+can see over here on the extreme right
+hand side the model has by hearted every
+component
+so the model would perform excellent on
+the training data set
+but on a new data set or the test data
+set it will perform poorly
+the best type of model over here is low
+variance and low bias
+this type of model is called as just
+right model
+and what happens over here is that we
+have some kind of error or noise which
+is present on either side of the
+classification or a regression task
+okay so now that you know what is bias
+and what is variance
+let us now move ahead and understand the
+various ensemble learning techniques
+a quick reminder that i would like to
+say over here is that it is essential
+for you to know
+how decision tree works all right in
+order for you to understand how decision
+tree works you can check out our eduraka
+content
+and the link for it can be provided in
+the description box below
+all right so let us now go ahead and see
+what are the different types of ensemble
+methods
+you see there are several different
+types of ensemble learning models
+and following are the three of the most
+popularly used in the industry
+we have bagging boosting and stacking
+stacking can also be referred to as
+voting
+let us now see each of them in detail so
+let us now start off by understanding
+bagging based ensemble learning bagging
+is one of the ensemble construction
+technique which is also known as
+bootstrap
+aggregation bootstrap establishes the
+foundation of bagging techniques
+you see bootstrap is sampling techniques
+in which we select an
+observation out of the population of an
+observation
+but the selection is entirely random you
+see each observation can be chosen from
+original population
+so that each observation is equally
+likely to be selected in each iteration
+of bootstrapping process after the
+bootstrap samples are formed
+separate models are trained with the
+bootstrap samples
+in real experiments the bootstrap
+samples are drawn from the training
+dataset
+and sub models are tested using the
+testing data set
+the final output prediction is combined
+across a projection of all sub models
+so as you can see over here we have a
+training sample right
+and then we can perform column sampling
+as well as the row sampling
+and each of the samples are individually
+provided to these classifiers
+this can also be a regressions okay and
+each of these classifiers are
+independent of each other
+and whatever the output they give is
+finally passed on to this ensembl
+classifier which gives out the final
+predictions over here
+alright so let us now move on to the
+next type that is voting based ensemble
+learning
+we can also call this as stacking you
+see voting is one of the most
+straightforward ensemble learning
+techniques
+in which predictions from multiple
+models are combined the model starts off
+with creating two or more separate
+models
+with the same data set then a voting
+based ensemble model can be used to wrap
+the previous models
+and aggregate the predictions of those
+particular models
+after voting based ensemble model is
+constructed it can be used to make
+predictions on a new data
+the predictions made by the sub models
+can be assigned weights
+stack aggregation is a technique which
+can be used to learn how to weight these
+predictions in the best way possible
+okay so as you can see over here we have
+couple of models like model a model b
+model c
+and this model over here can be like
+something as simple as linear regression
+or logistic regression so as something
+as complicated as svm decision tree
+random forest or whatever model you
+would like to add okay
+and each of these models will get the
+same data set okay
+and whatever the output or the
+predictions that have been made
+what's gonna happen is this generalized
+model over here will try to vote okay
+so if model a and model b are trying to
+say it belongs to class 1
+and model c is saying it belongs to
+class 0 what happens is generalized
+model will consider
+the output of a and b because we have
+maximum votes
+and that particular class would be
+something called as prediction okay so
+this is how stacking works so moving
+ahead let us know understand
+boosting based ensemble learning you see
+boosting is a form of a sequential
+learning technique
+okay the algorithm works by training
+model with its entire training set
+and subsequent models are considered by
+fitting the residual values
+or error into an initial model in this
+way boosting attempts to give high
+weightage to those observations that are
+poorly estimated
+by previous models when the sequence of
+these models are created the predictions
+made by these models are weighted by the
+accuracy score
+and the resultants are combined to
+create a final estimation
+models that are typically based on
+boosting can be something like extreme
+gradient boost
+gradient boosting add a boost and many
+more so as you can see here from the
+picture
+you know this is a basically a
+sequential model unlike backing or
+voting where the models were totally
+independent of each other
+here the next model or the subsequent
+model is dependent upon the previous
+model's weight
+the combinations of these model is going
+to be
+the final model okay so as you can see
+here in the first training classifier
+there are two values over here that is
+in negative side were classified wrong
+and one value here was classified wrong
+now this thing was passed as a feedback
+over here to this next model
+and as you can see here we have these
+two
+objects or these two in the form of a
+correct class but now
+the problem still remains that we have
+three more parts over here which are
+wrongly classified and finally over here
+this part is correctly classified and
+we have lot of mess over here so as you
+can see here all of the data points here
+are classified correctly in the final
+model
+now that we have a brief intuition about
+each of these techniques
+let me now quickly show you how to
+implement each of these models using
+python
+and also let's see how we can implement
+them using built-in python library that
+is sklen
+okay so let me quickly jump to my code
+editor here and the code editor that i
+would be using today is gonna be google
+collab
+all right so here we are at google
+collab so now what i'm gonna do is we'll
+start off by
+working with backing techniques right so
+let me quickly give a
+heading here so first off what we'll do
+is we'll
+import couple of libraries that is from
+sklearn
+dot data sets we will be loading the
+iris data set
+let me quickly get that from scalar dot
+data set
+load it's going to import
+load ids okay
+and apart from that import pandas
+pd then import
+numpy as np
+so far let's just have this and now
+in order to load our data what we'll do
+is we'll create this data is
+equal to load ids
+and let's hit enter here and let's see
+how this data would look like
+so as you can see here we have three
+columns right and each of these column
+represents
+a feature so let's see what is this
+feature here so that will be
+feature names
+okay first off we have sepal and sepal
+red petal length and petal width
+and let's also see the target names
+target names refers to the output
+all right and let's see what this would
+look like
+so we basically have three classes over
+here setosa
+versicolor and virginica so now let's
+convert this into our data frame as of
+now it's not in a data frame it's in a
+form of a numpy array right
+so let me bring this to our data frame
+so here it will be d is equal to
+so first off we have sepal length right
+so
+let me copy that or we can also put this
+in a zip format but uh just for the
+simplicity sake let me
+just copy this so the data over here
+will be
+data dot data and we want the first 50
+rows and the first column okay
+so this is for sepal length similarly
+we're going to do it for petal length
+let me remove this okay
+let me give a comma over here fine and
+the data over here will be
+data dot data
+and now we're gonna have all the rows
+and this will be two fine
+and now after that we'll have species uh
+species over here basically refers to
+the satoshi or seeker and all that
+so we'll have species
+okay so it'll be np dot array
+basically i'm going to use list
+comprehension here for
+i in data dot target
+so if i is greater than 0
+if this is the case then i want that
+particular class okay so let me quickly
+give you a brief what i'm doing
+so basically over here we have as you
+can see we have four features that is
+sepal and sepal weight length and petal
+length and pedal width right
+but as we are trying to understand how
+this thing work i'm not going to take
+this
+entire data over here all the columns
+okay so instead of that i'll take this
+sepal length
+and petal length and we'll also keep it
+simple by keeping it as two class
+classification
+and now if i execute this
+and just put d over here
+so now let me convert this into a data
+frame okay
+so uh it's pretty simple so we'll all we
+need to do is
+bf that is data frame is equal to pandas
+dot data frame and now we are going to
+pass
+a variable that is b
+and now if i just put here df
+so as you can see uh we have sepal and
+petal length and species which is equal
+to one
+okay so as you can see here we have
+species one and two
+if i wanted i could have changed to
+whatever i want but yeah we can just
+keep this for now
+and here one represents versicolor and
+uh two represents virginica all right so
+now what i'm going to do is if you
+remember how
+backing works first off we have a data
+set and then
+what i'm going to do is for that
+particular data set we have to randomize
+it and that particular randomized data
+would be sent for different different
+models okay so now we'll try to
+randomize
+our data or you can also set it as
+shuffle
+so for this it will be like df is equal
+to df.sample
+and we want it to be df dot shape okay
+the reason why i'm doing df.shape
+is i'm just providing the length over
+here and if i see df now you'll see that
+it has been shuffled up
+so if you can see here we have all ones
+over here and two's in the next half
+or the next bottom but here you can see
+everything has been shuffled i can also
+see it from this index values over here
+and now we will create a data set for
+training and then we'll also create a
+data set for test
+just keep in mind that you know we'll
+create c
+we have 50 of class 2 and 50 of class 1.
+so what i'm going to do here is i'll
+create a data set df
+underscore train
+and this should be df dot i log
+and let's say we will take all the
+values from 0 to 60
+and i'll be having all the columns out
+of the 60 values we'll just take
+random 10 values okay so it'll be sample
+10.
+okay now if i print this df.train or df
+underscore train
+so you'll see here that you know i get
+10 values
+but these are randomized if i try to
+rerun this again
+you know it will be a totally different
+value okay so let me
+kind of rerun this so as you can see now
+we
+initially it was one one but now it
+changed so let me do it once again
+so as you can see it changes every time
+so similarly what i'm going to do is
+we'll do it for test
+so will be df underscore test
+this will also be equal to so what i'm
+going to do is
+i'll just copy this over here and paste
+it
+but here we don't want the values from
+60 from 0 to 60
+i'll take the values from 61 to all the
+way to 100 okay
+and we want all the rows all right so
+this is all there is about training and
+test data set
+and now what i'm going to do is out of
+this 10 values that is given to us by
+training data set
+i'm gonna take five values and i'm gonna
+provide that as an input okay
+so for this i'll give it as df
+underscore test test
+or you can this is just a variable name
+so it will be df underscore
+train and we'll randomly take 5 values
+and we'll keep the replacement as true
+replacement as true
+means that you know the numbers can
+repeat we can also have replacement as
+false but as of now we'll take
+replacement as true
+all right so this is great this looks
+pretty much great and now what i'm going
+to do is we'll create our x and y
+so x underscore test
+so this will be df underscore tt
+dot i log we want all the columns that
+is five columns
+and except the last one we want all the
+columns okay
+so basically we have we want all the
+rows and here
+apart from the last column because the
+last column represents
+our y value that is species right you
+can also set as dependent variable
+and then i'll put it as values okay and
+similarly i'm going to put it for y test
+okay we want all our independent
+variables and we want the dependent
+variables just the last one
+okay so it will be -1 and then values
+so that this gives us in the form of a
+numpy and let me just
+create this yeah so now what i'm going
+to do is we have finished the two stages
+first off we have if you remember right
+we have the data stage where in whatever
+the data we have we'll sample it up
+in the next stage we are supposed to
+provide whatever the data we have
+to our models and whatever the data
+it goes inside the models would be
+random samples
+okay so there will be random samples so
+what i'm going to do is i'll just create
+a function here
+so let's say def and we'll give the name
+of this function as evaluate
+and what this function accepts is a
+model name
+and apart from this model the model over
+here represents the name of the model or
+the object name
+and then we obviously have to provide
+the input data that is x test
+or instead of excess we'll just give it
+as x and then y
+and what this model will do is what this
+function will do is it'll just fit
+we want our x and y data all right
+so to make you understand better what
+i'm going to do is i'm also going to
+plot our model so
+p l o t underscore tree
+and we'll plot a model in order to plot
+this model
+uh we obviously have to import these
+libraries so let me quickly do that up
+for you
+so first off we'll have to import from
+sklearn
+dot tree import
+decision tree right classifier and then
+we'll also need plot tree
+okay so now we'll also import another
+library that is from
+sklearn dot metrics
+import now this is basically to see how
+well our model is performing we can just
+use accuracy score
+and now to see how our like how the
+values
+and the decision tree is being plot we
+can just use from
+we have to import this first off we have
+to download this before we do that
+so as this is a third party library we
+have something called as
+pip install ml extend
+all right and let me now execute this up
+okay so this is already present in our
+code editor here
+so what i'm gonna do is from ml extend
+dot plotting import
+plot decision tree regions right so it
+will just basically give
+where all we have plotted our decision
+tree right so plot decision tree regions
+and let me execute this up okay now
+we'll come back to our function here
+okay this plot tree would plot whatever
+the decision tree we have created
+we want to show our plot so it will be
+plt dot
+show now to see how our decision tree
+would look like so we'll have
+plot underscore decision tree regions
+and for this we'll pass our x value y
+value
+the name of our model that is model and
+then
+we can also pass something like legends
+so this would be just two and again
+after this will be plt dot show
+now let's also see the accuracy okay so
+by any chance if you try to like uh get
+the predicted value that is wipe red
+so this would be nothing but model dot
+predict
+and whatever the test we have so it's
+going to be x test right
+all right just to give you a better
+enhancement what i'll do is
+i will just print out rx print
+the actual value of y so y
+test and now
+i would also like to print out the
+predicted value so print
+okay and then finally let's see the
+accuracy so we'll have
+print accuracy score
+this should be something like i will
+just use the function
+accuracy score and no will pass out our
+white test values
+and the predicted values and finally
+this would just written
+as the model okay uh it would written as
+the train model right mot here
+all right so we have to give comma over
+here
+so the thing is this has to be within
+the colon and we have to provide a comma
+similarly this has to be within this
+and now we'll provide a comma and let's
+execute this once again
+fantastic so now what we're going to do
+is we are going to pass out
+some values okay and you're going to
+pass out the model or we're going to
+create the model and then pass
+x and y values so first off we'll say
+model one
+okay so decision tree dt1 or whatever it
+is you can give the name
+and we'll call it as decision tree
+classifier and this goes here
+so for this we have to pass the x and y
+value right so
+what i'm gonna do is from here right so
+from
+from this df dot train data set so if
+you can see over here
+from df dot train data set over here i'm
+gonna call my
+values i'll take just random five values
+so it will be
+df underscore t so it'll be
+df underscore train
+okay so this thing over here is gonna be
+test right not train
+and now we're gonna do it for the train
+so let me execute this up okay so now
+we'll do it for train over here
+df train will just take out random 10
+values or eight values
+the number of values that you want to
+take is totally up to you so we'll have
+eight
+and replacement will be true okay
+and now what i'm going to do is we need
+the x and y values so it'll be x
+green so this will be df
+underscore t dot ilock
+okay we want all the independent
+features
+and the dependent features except the
+last one
+dot values and similarly we'll do it for
+y
+so this would be df underscore t
+dot i lock all the rows
+and then ah just the last column dot
+values
+now we'll just pass this inside our
+evaluate model here
+so what we'll do is we'll just give it
+as bag one
+okay this will be equal to evaluate uh
+this is the function that we have
+created
+and in this function we have to pass our
+the object of a model so it will be df
+that i'm going to give
+and now i also will be passing out rx
+strain
+and white rain okay and let's execute
+this
+oh yeah the reason why i'm getting this
+error is because
+here it says decision tree like richer
+oh yeah this because over here model dot
+fit
+yeah the reason why we are getting this
+error is because i'm passing here data
+frame
+it's supposed to be the decision tree
+classifier right so
+yeah so let me quickly execute this up
+now
+yeah the reason why we're getting this
+plt over here is because we haven't
+imported matplotlib
+so let me quickly get that import
+matplotlib dot pipelot
+splt and let's try to
+execute this once again uh this
+particular function
+and also this value here
+so as you can see here our model has
+perfectly predicted
+all the values right so if it says one
+it just means that it's hundred percent
+if you want me to show you that in a
+better way what i'm gonna do is i'll
+multiply this
+over here by 100 okay
+so whatever the values were there all
+the values were predicted right
+and this is how the decision tree had
+been plotted and this is the decision
+tree
+now what i'm going to do is this is our
+first decision tree
+so let me just give here a comment
+now just like this what i'm gonna do is
+i'm gonna create one more decision tree
+for this all i'm gonna do is copy this
+part here
+i'm gonna copy the entire thing and
+we'll just paste it here
+and we'll change the names second tree
+all right so out of 60 samples it can
+take up any random eight samples
+okay and we'll just change this value
+here from
+bag one to back two and this everything
+remains the same
+and let's execute this here okay so even
+this is scoring hundred
+let's see if our data set is same or not
+so let me just quickly
+go through this all right so it's highly
+unusual for this to
+give the same predictions but as we're
+using decision tree obviously it's one
+of the most powerful
+model so yeah it's giving us the correct
+predictions and finally let's come down
+here
+and this would be like the third tree
+okay so just like this we can confirm
+one thing that all the data aren't same
+okay so as you can see here the
+positions of the data have
+changed so obviously all the data's
+aren't same it's just that the values
+have been predicted correctly right
+so let's try re-running this once again
+just to see if we can get any
+wrong values okay so this is a perfect
+example
+so as you can see here here we are
+getting the accuracy as 100
+okay 100 so this because all the values
+have been corrected perfectly
+and now if you come down to this you can
+see the accuracy over here it's just 20
+okay that means only one value out of
+all has been predicted correctly
+all right so now this is a good example
+so
+the predicted value over here or the
+outcome over here is going to be two
+fine and similarly this has given out
+a correct prediction let me quickly run
+this once again
+and as you can see here over here as
+well we have one value which has been
+predicted wrong
+so this is a good example as you can see
+one is hundred percent the other one
+is 8 20 and other one is 80. okay so
+we have created three individual models
+and now the last step over here is to
+perform aggregation
+so performing aggregation
+you say aggregation is all about giving
+a vote okay
+so let's see what happens over here so
+for this
+print so we'll give something like
+prediction
+one okay and now what i'm going to do is
+bag one because it's just a model right
+so bag one
+dot predict so let's say we'll predict
+the test values right so we'll give some
+random values so it will be np dot
+array and over here we're going to pass
+out this sepal length
+and whatever the features we have
+designed that is separate length and
+petal length
+so let's say let's take some random
+value let's say 2.5
+and 4.9 okay
+and now we obviously have to reshape
+this because we're just passing one
+value so it'll be
+dot reshape one comma two
+so this is going to be in the lower case
+it's a small typo that i've done
+okay so this model is gonna predict one
+so now what i'm gonna do is
+i'll just copy this up here and we'll do
+it for all the three bags
+so instead of bag one will give you as
+back two
+and back three all of them will be fed
+with the same data and let's see what
+each of them will predict
+okay this is great all of the models are
+predicting one that means the final
+output over here is gonna be one
+as the data set over here is small
+that's why we are getting this accurate
+value
+if the data set was to be pretty huge we
+obviously won't be getting such an
+accurate value
+and apart from that let me quickly
+change this
+two and three okay and if you try to
+rerun this again let's see if you are
+lucky or if you can get one wrong answer
+rerun this from the start so
+yet again we have got all the correct
+predictions okay
+so now what happens is as all the three
+values are one
+the maximum voting would take place so
+the final answer would be
+one now consider if one of them would
+have to give two
+right and then we have two of them as
+one so what will happen is as the
+maximum number of vote is one
+so the final output would be one so this
+is how backing algorithm works
+so moving ahead let us see another
+technique that we have discussed earlier
+the another technique that we have
+discussed earlier was about voting right
+or stacking
+so the next one that we have seen was
+voting
+or stacking so
+fine so now what we're going to do is
+let's see another technique that's
+ensemble technique that is stacking
+stacking is all about providing
+different kind of models
+and then we'll perform aggregation just
+like this okay
+so again i'll import let's see various
+libraries that we can have
+so from sklearn dot neighbors so we'll
+be using
+k nearest neighbors that is k n
+import k neighbors classifier
+we can also have some linear model like
+logistic regression so from
+sklearn dot linear model
+import logistic regression
+and apart from that let's say we want
+something on nave bass so we can have so
+from
+sk learn dot knife bass
+import or multinomial knife base you can
+also take gaussian knight base okay
+so multinomial knife base and we can
+also have gaussian knife base
+and finally we will also take something
+like decision tree so from sklearn
+dot tree import
+decision tree classifier all right and
+let's execute this
+so now we have to create a number of
+models that is m1
+so it will be here nearest neighbors
+okay
+classifier and now we'll also have
+model like this m2
+so we'll have logistic regression then
+model three we can say we'll have
+multinomial live base
+then model four will be something like
+uh gaussian likewise
+and let's say our model 5
+this would be a decision tree classifier
+okay so we have five models here now in
+order for you to work on decision right
+like
+if you want to work on voting or
+stacking we have something called as
+voting classifier so we have to import
+that so to do that we'll have
+from sklearn dot
+and symbol or you can also set ensemble
+import
+porting classifier okay and now we'll
+create a model so
+model will be equal to voting classifier
+we'll call class and now within this we
+are gonna pass
+a list of tuples okay so first off we'll
+have a list
+and now we'll pass tuples so we'll have
+the first model obviously does knn
+and we'll just pass the name of the
+model that is m1
+similarly we can do the second model is
+logistic regression
+so we'll give lr and this would be m2
+let me change this back to comma and not
+colon fine
+and now we have the third one as
+multinomial neighbours so
+mn and we'll give it as m3
+and then we have gaussian knife base gn
+so it will be g4 m4 that's a model 4
+and finally we'll give decision tree
+and this will be model five okay so
+basically we are trying to pass a list
+of tuples let me give some space so that
+you understand this
+okay and let me execute this so now to
+train our model so we'll have
+model dot train
+or it's going to be model outfit right
+so model.fit
+and now we're going to pass our x train
+and y train so let's
+load our data set so as we already have
+our value over here that is iris data
+set so i'm just gonna use that
+so what i'm gonna do is we'll just copy
+this values here
+so basically for voting we don't have to
+perform randomization
+so i can copy this data frame so let me
+just
+see whether this works so df we scroll
+down
+and let's add a cell here and let's see
+what this df represents
+okay so this df represents all the
+values here right so basically what i
+need is x test
+so x strain sorry so the x strain over
+here would be something like
+tf dot ilock fine
+i need all the rows and the number of
+columns i need is
+the first two right so except the last
+one i need all and similarly for
+white test or white green so this will
+be
+df.i lock
+so i need all the rows and just the last
+call
+okay we also need to import print test
+plate so let me quickly get that as
+well from sklearn
+dot model selection import
+print test split okay
+and let's quickly get create an object
+for that
+so let me scroll down and let me just
+copy this part here
+okay now instead of x over here i'm just
+gonna pass this value
+dot values and
+similarly here let me cut this
+and instead of y we'll just pass this
+value here
+okay this looks good now let's execute
+the code
+and now we'll just have to fit our model
+right so we'll have to do
+x train and then you and white train
+all right so this is basically telling
+us you know what are the various values
+that this took
+or the hyper parameters that were
+involved and now finally we'll see
+the score that our model have seen so
+for that we'll do
+model dot score and we'll just pass here
+extras and whitest
+so we just need the same value right so
+x train
+and then white train so as you can see
+here we're getting a 91 percent accuracy
+right
+so if i multiply this by 100 so you'll
+see we're getting 91 percent accuracy
+and this is on a training data set this
+is something which is expected
+now let's see how much accuracy we can
+expect on our test data set so the model
+dot score
+we have x test and then we also have
+white test
+and let's execute this so as you can see
+here we are getting an amazing score
+that is 93 percent
+so this means that our model is working
+absolutely fine
+okay so we do not have overfitting or
+under fitting conditions over here
+and our model is working perfectly fine
+so this means that you know our model is
+you know performing very well almost all
+the values have been predicted fine
+so now that we have seen two of the
+popular ensemble technique that is
+backing and voting let's now move ahead
+and see
+the last algorithm that we have
+discussed in our slide that is boosting
+so let me quickly come here and give it
+a comment
+so this would be boosting
+all right so over here what we're going
+to do is we're going to perform
+or we're going to create this boosting
+algorithm so
+one of the most popular boosting
+technique is add a boost classifier
+okay so add a boost algorithm so let's
+now see how we can implement this using
+sklearn so
+this is pretty simple and
+straightforward that is from sklearn
+dot n symbol or ensemble import
+add a boost and as you are performing
+classification so it's going to be add a
+boost classifier
+and the thing about adaboost classifier
+is that it performs only
+binary classification okay so as we
+already have the data set present over
+here what i'm going to do is we'll
+create a model right
+so we'll say add a boost classifier
+so it'll be a b c and we'll create an
+object of this
+add a boost classifier and let's give
+number of estimators here that is number
+of models that we want so an estimators
+would be like
+four and we'll give it as a random state
+ah this would be zero
+and now what i want to do is i'll do abc
+dot fit
+and we'll just pass our x test value or
+sorry x train value and then white train
+value
+the reason why i'm not importing
+explicitly here is because we have
+already imported the data set here right
+so it doesn't make sense importing it
+once again so let me kind of
+fit this all right and now let's predict
+or now let's see how well our
+classification is working so we'll give
+it as white thread
+this would be abc dot predict
+and now we'll just pass here x test
+okay and now let's see the score over
+here
+so we can just say it as abc
+dot score will let's say something like
+x test and white test
+so as you can see here we are getting
+the value as 93 percent which is pretty
+good
+and if you want to see how much about
+classification we have done
+or how many classes have been predicted
+right what we can do is
+we can use this function here
+that is accuracy score so
+accuracy score here we're going to pass
+the actual value that is
+white test and the predicted value that
+it will be wipe red
+okay and let's see what would be the
+accuracy here so we're getting the same
+accuracy basically we are
+calculating almost all the values
+correctly all right so this is all there
+is about
+ensemble techniques we have discussed
+three of them that is bagging
+boosting and voting techniques alright
+guys with this we come to the end of a
+session i hope you enjoyed and learned
+something new
+if you have any further queries please
+do mention them in the comment box below
+until next time good bye and take care i
+hope you have enjoyed listening to this
+video
+please be kind enough to like it and you
+can comment
+any of your doubts and queries and we
+will reply them
+at the earliest do look out for more
+videos in our playlist
+and subscribe to edureka channel to
+learn more
+happy learning
+you

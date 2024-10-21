@@ -1,0 +1,156 @@
+We are living in the future.
+OK, there are fewer flying cars, 
+moon colonies and jetpacks
+than I imagined when I was ten,
+but we’re still surrounded by technology 
+which pretty recently seemed like
+it could only exist in the 
+realm of science-fiction.
+And the most prominent example of this 
+is computers we can talk to.
+Speech recognition has come a long way 
+since its first incarnation in 1952,
+but progress has been surprisingly slow.
+Moving from recognising individual words
+to full sentences took about 20 years,
+and honing that process to the point
+where it could be brought to the 
+consumer market took almost another 20.
+But with modern advances in computing
+power, things have sped up a lot,
+and the launch of Google’s 
+Voice Search in 2011,
+and Apple’s Siri shortly afterwards,
+signalled the beginning of 
+a new era for this technology
+- an era that is now in full swing.
+It’s estimated that as of 2020
+there are as many as 4.2 billion voice 
+assistant devices being used worldwide,
+and that number is expected 
+to reach 8 billion by 2023.
+But their increased ubiquity 
+and improved computing power
+doesn’t mean a free ticket 
+to unlimited progress -
+there are still a number of significant 
+challenges facing this technology.
+But before we talk about those,
+we first need to know 
+how speech recognition works.
+This is a spectrogram:
+a visual representation of the frequency 
+content over time in an audio recording.
+This audio recording.
+The brighter the colour,
+the higher the concentration 
+of that particular frequency.
+For example, if I make a SSSS sound,
+you can see the concentration 
+of higher frequencies here.
+And if I make an OOOO sound, you can see 
+this blob of lower frequencies here.
+Linguists have been using spectrograms 
+to analyse human speech for years,
+learning to recognise 
+T’s, B’s, S’s, vowel sounds,
+and even tell what someone is saying 
+just from looking at the image.
+This is how speech recognition works.
+The computer splits the image up into 
+slices, analyses each slice
+and compares it to a library of what it 
+knows different sounds normally look like.
+It then works what sound 
+that slice is most likely to be
+and moves onto the next one.
+What’s especially smart though
+is that it also factors in the 
+analysis of previous slices,
+making judgements based on 
+how words tend to be constructed.
+For example, if it’s 
+90% certain this a K sound,
+it’s far more likely that this is going 
+to be an A or an O than a J or a P.
+Now, looking at this process, it's easy
+to see why progress has taken some time.
+Most humans wouldn’t have a hard time
+hearing the difference
+between the phrases
+“Hi, I’m Adam” and 
+“Hi Madam” for example
+- we have a lifetime of experience.
+But the spectrograms for those two phrases
+are going to look pretty similar.
+And while modern services use 
+machine learning to train themselves
+on every new piece of audio they receive, 
+they haven’t caught up yet.
+Still, the most advanced speech 
+recognition systems today
+have got down to an error rate 
+of around 11%, which is pretty impressive.
+So... what’s the problem?
+Well it turns out that understanding what 
+you’ve said is only half the battle.
+The really tough bit is 
+working out what you meant.
+If I were to say “I closed the window 
+in my room because it was too cold.”
+most people would
+understand what I mean is
+“My room was too cold, 
+so I closed the window”.
+But “it” is ambiguous in that 
+first sentence -
+technically I could be saying
+“The window was too cold, so I closed it”.
+Humans understand the relationship
+between a cold room and an open window,
+and that the phrase “it’s too cold”
+refers to our general surroundings,
+and that the temperature of a window 
+is no reason to close it.
+So we deduce the intended 
+meaning fairly easily.
+Computers don’t have any of 
+that pre-existing knowledge,
+which makes a sentence like that 
+very difficult to interpret.
+This kind of phrase is 
+known as a Winograd Schema,
+named for professor Terry Winograd who 
+first addressed this issue in 1972,
+and while this is only 
+the tip of the iceberg
+when it comes to the problems computers 
+have understanding natural speech,
+it does touch on the 
+challenges that still lie ahead.
+And those challenges 
+aren’t only technical.
+There's the ethics involved
+in large companies
+using your voice 
+recordings to enhance their AIs,
+and making profit from the 
+data sets they collect.
+Plus, there’s the problem of trust -
+many people still feel uneasy about 
+welcoming these devices into their homes.
+How these issues will play out in the 
+future remains to be seen.
+Both Amazon and Google have publicly 
+said that their speech recognition systems
+are inspired by, and 
+aspire to one day emulate,
+the Star Trek dream:
+a computer that understands 
+natural speech, and responds in kind.
+And while no one is yet close 
+to realising that dream,
+in a time when machine learning 
+and AI are constantly redefining the
+boundaries of what’s possible, it might 
+not be that long before it’s in reach.

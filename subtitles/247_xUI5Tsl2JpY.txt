@@ -1,0 +1,1081 @@
+okay then my friends so it's time to
+move on to functions which I think here
+are really fun parts of JavaScript and
+functions are probably one of the main
+building blocks in pretty much any
+programming language that you come
+across and they fall under the object
+type in our data type list now what
+functions allow us to do is define a
+block of code which we can call and
+execute whenever we want so I guess you
+could think of functions as a bit like a
+box with some code inside it that does a
+particular thing like this now when we
+want to run the code inside that
+function all we do is we call the
+function like this and it runs the code
+inside it now later on if we want to
+call it again we can do and it runs the
+code again and this behavior is really
+useful because it means we're only
+defining the code inside the function
+once but we can run it multiple times
+whenever we want whenever we call it so
+imagine we have a web page with a button
+on it and every time a user clicks that
+button we want to run the same bit of
+code we could create a function which
+contains that code that we want to run
+and then whenever a user clicks that
+button just call the function to run the
+code and we can do that whether the user
+clicks it twice or ten times it really
+doesn't matter we define the code once
+in the function and run it or call it as
+many times as we want in the future now
+we could also pass a values into
+functions so that the function could
+take those values and do something with
+it and then when it's done spit out an
+updated value at the end now an example
+of this would be to receive maybe a list
+of geo coordinates from a database that
+we want to convert into some kind of
+real address we could write a function
+that takes in a latitude and a longitude
+value and it grabs those and converts
+them into some kind of real address so
+say we get a list of different
+coordinates 50 of them in total we're
+just defining the function once then we
+could call the function 50 times only
+three times here because there's not
+enough room on the screen but we could
+call it as many times as we wanted to
+and we're just passing the different
+coordinates and for each time we call it
+it takes in those coordinates and spits
+out a real address so
+this is the power of functions to create
+little blocks of code that become
+reusable so in this chapter we're going
+to be looking at functions in a lot of
+depth and we'll also take a sneak peek
+at how we could potentially use a
+function to interact with a webpage
+we're also going to be discussing what
+methods are a little more in this
+chapter but not in too much detail just
+yet remember a method is just a function
+which does something but there is a
+small distinction between functions and
+methods and we will discuss that as well
+all right then so I'd like to show you
+how to create your first function the
+first thing we need to do is write out
+the function keyword then we give the
+function a name I'm going to call this
+greet so much like we gave a variable a
+name we also give it functions a name
+too now after the name we place our
+parentheses and then we do some curly
+braces these curly braces are a code
+block for the function so all of our
+code for the function goes inside this
+code block then whenever we call the
+function in the future this is what is
+going to execute so for now I'm going to
+keep this simple
+and just do a console dot log and say
+hello there so then now we have declared
+a function which we can then call at any
+point later on in our code now if I was
+to save this at the minute and run it in
+the browser nothing is going to be
+logged to the console because even
+though we've defined our function here
+we've not actually called the function
+so in order to call the function we need
+to say the function name which is greet
+that's the name right there
+then we use parentheses to call the
+function so this is known as calling the
+function are also invoking the function
+so if I run this now what it's going to
+do is see this it's going to run the
+function the code block for this
+function and hopefully log this to the
+console so over here we can see hello
+there and if we wanted to run this again
+multiple times we could do so if I want
+to do it three times
+it should logged out three times okay
+then so this way of creating a function
+is called a function declaration we're
+declaring a function now we can also
+store functions in variables and invoke
+in a very similar way so what I'm gonna
+do is come down here and I'm going to
+create a Const and call this speak I'm
+storing this in a constant because I
+don't want to overwrite the function
+later on so I don't want this to change
+so I'm going to set this equal now to a
+function we don't give this function a
+name here like we did up here because
+the name is now the constant of the
+variable and we add our code block at
+the end now this is known as a function
+expression basically anytime you get a
+variable and set it equal to something
+whether it's a function or a string or a
+number or something else that is known
+as an expression okay and at the end of
+expressions we should always have
+semicolons so I'm going to put a
+semicolon at the end of this function
+now we don't do a semicolon at the end
+of this function because this is not an
+expression and this semicolon down here
+this is probably one of the only times
+you're going to see a semicolon at the
+end of a code block when we use a
+function expression so then now we have
+this function stored in this constant so
+inside this function I'm just going to
+do something like console.log and then
+say good day okay so how do we call this
+function how do we invoke it
+well we invoke it in exactly the same
+way we just say speak and then
+parentheses so the name of the constant
+followed by parentheses to invoke that
+function so I'm going to comment these
+three out and save it and preview over
+here and we can see good day now now I'm
+just gonna duplicate this a couple of
+times
+save it and we can see we get three good
+days so again we can call this as many
+times as we want so this is a function
+expression when we store a function
+inside a variable and this is a function
+declaration when we don't now most of
+the time these two different ways of
+creating functions they behave the same
+way but there is a subtle difference
+when it comes to something called
+hoisting in JavaScript now hoisting is a
+term that loosely describes how our
+functions are effectively hoisted to the
+top of a file before the rest of our
+JavaScript actually runs so in essence
+they're all declared before the rest of
+our job
+script and it does this with function
+declarations but it doesn't do this with
+function expressions so what that means
+is that we could potentially declare a
+function using a function declaration
+down here at the bottom of the file and
+we could still run these things over
+here okay so let me come and out speak
+and use greet because what's happening
+is JavaScript is using hoisting to hoist
+the function essentially to the top of
+the file that's a gross
+oversimplification but essentially this
+is what the effect is so even though
+we've defined it down here it's
+effectively hoisting it up to the top
+and therefore when we're using it here
+we can use it because it's already been
+defined by that point now if I save this
+and run it we can see all of those
+greets right there so this is still
+working even though the function comes
+after where we call it so hoisting works
+with function declarations but it
+doesn't work with function expressions
+so if I take this one now and put it at
+the bottom and then try to use speak
+then this is not going to work because
+JavaScript does not hoist function
+expressions only function declarations
+so if I save this and preview now we get
+an error speak is not defined and that's
+because by the time JavaScript reaches
+this and tries to call speak or invoke
+speak it's not yet been defined this has
+not been hoisted to the top so then this
+might seem like a good idea to use this
+function declaration instead of function
+expression at first but actually it's
+not such a good idea to me it just seems
+jumbled up and it doesn't enforce a good
+coding practice when you're declaring
+things so really I think you should
+declare something first and then use it
+to keep a logical flow to your code and
+if you don't do that you could end up
+with a mishmash of functions and calls
+all over the place therefore I prefer
+most of the time to use function
+expressions like this which are not
+hoisted so that we have to define our
+functions first at the top before we use
+them so without creating functions in
+the future 99.9% of the time and
+probably going to create them like this
+alright then so sometimes we like to
+pass values into functions to do
+something with that value for example we
+could want to pass in some kind of name
+to the speak function up here and then
+maybe out put that name in the console
+so to do this we first declare that we
+want to receive some kind of value
+inside the function and we do that
+inside the function parentheses so we
+name this something and I'm going to
+name it name because that's what we want
+to receive now what this does is create
+a local variable called name that we can
+use inside this code block so if I
+wanted to I could now output that inside
+here so I'm going to convert this into a
+template string which says good day and
+then outputs the name so if I try this
+at the minute when we call it we're not
+actually passing a value into the
+function so this is not going to work so
+if I save it and preview it we can say
+good day undefined which makes no sense
+so what we have to do is actually pass a
+value into the function so say for
+example I come down here and say Mario
+and save it what's going to happen now
+is we're going to call this speak
+function but we're going to pass in this
+value as well and then when the function
+is called it takes that value and it
+assigns it to this named variable that
+we created and now we can access that
+value inside the function so if I save
+it now and preview we can see that now
+it says good day Mario because it's
+taking this value and assigned it to
+this local variable now we can't access
+the name outside of the function itself
+because it's a local variable so that
+doesn't work
+so when we're trying to do this
+nothing's going to happen this variable
+has the scope of this function and can
+only be used inside it so then when we
+pass in a value like this to a function
+this right here this is known as an
+argument when we receive that value up
+here and we create these different
+values inside the function these are
+called function parameters now the two
+names are interchangeable and a lot of
+people get them mixed up including me so
+you'll probably sometimes hear me say
+this is an argument or this is a
+parameter and vice-versa
+but the names are just names most
+important is this idea of passing a
+value into a function which we can then
+use now sometimes we might want to pass
+a few different values into a function
+so we can do that by first of all
+declaring the different parameters in
+here comma-separated so I'm going to
+take one in called time as well and then
+same again down here come and separate
+the arguments so I'll plus in morning
+and then we can output that instead of
+date we can output the time so we'll do
+that so now it should say good morning
+Mario because we passing Mario and
+morning so if I save this in preview we
+can see good morning Mario now the order
+is important the order of the arguments
+must match the order of the parameters
+we can't pass in the name second and the
+time first and expect that the function
+is going to know what those things are
+know it assigns the first thing here to
+the first thing here the second thing
+here to the second thing here third
+third fourth fourth and so forth okay so
+then what if we do something like this
+just call speak and we don't pass in any
+values then we've seen this we get good
+undefined undefined and that doesn't
+make sense so to combat this just in
+case a function is invoked without
+passing anything in what we could do is
+give these parameters some default
+values so I could say something like
+this name is equal to Luigi and the time
+is going to be equal to night now that
+if we invoke the speak function but we
+don't pass any arguments into the
+function what's going to happen is the
+function itself will assign these
+default values to these parameters so it
+will say good night Luigi so if I save
+this preview we can see good night Luigi
+but the moment that I pass in some
+arguments for example I'm going to say
+Shawn and day the moment I do that and
+invoke the function these values are
+going to overwrite these values so we
+can see good day Shawn so what happens
+if I just pass one of them in well the
+first one will overwrite this value but
+the second one will
+still be the default value because we've
+not passed in a second argument so if I
+save it now and preview it we can see
+good night shot we get Sean but night is
+still the default value so then that is
+how we're passing arguments into a
+function and how we receive those as
+parameters inside the function so then
+we can use them all right then so when
+we've been creating functions so far all
+we've been doing inside the function is
+logging something to the console and
+that's fine but we might not always want
+to do this we might want to instead have
+the function return a value to us for
+example we could have a list of radiuses
+or radii I think the plural is called
+which we get from either a user or a
+database or something else and we might
+want to pass each of those radii into a
+function that calculates the area of a
+circle now we don't want to log the area
+of the circle each time we call that
+function instead what we want to do is
+receive that area of value back so it
+can do something with it later on so
+let's create this function first of all
+I'm going to comment this old one out
+and down here I'm going to create a new
+constant called calc area and set this
+equal to a function and this function is
+going to take in a parameter which I'll
+call radius and inside the function we
+want to calculate the area of a circle
+so I'll do that we'll say let area equal
+to PI which is 3.14 times the radius
+squared so to the power of 2 so now we
+have that area value but we don't just
+want to log it to the console we don't
+really want to say console dot log area
+because if we do that then if we call a
+function later on calc area and passing
+some kind of radius then it's going to
+log this to the console but then we
+can't do anything with that area later
+on down the file because it's not stored
+in memory anywhere it's only stored
+locally inside the function so we see
+the area right here but if we try to use
+the area later on then it's not going to
+work I can't say console dot log area
+that's not going to work because this is
+a local variable now inside the function
+element so instead it would be nice
+to return this area of value so we can
+do that by using the return keyword and
+then the thing that we want to return in
+our case we want to return this variable
+area so now when we call this we're not
+logging the area to the console anymore
+instead we're returning a value now
+what's going to happen if I save this
+and come over here we don't see anything
+so what we need to do is take the value
+that is returned to us and do something
+with it now when a function that returns
+a value what we need to do is store that
+value in some kind of variable so what
+I'm going to do is say Const area is
+equal to calc area and then pass in 5 so
+what this does is call a function it
+returns the area and the area now is
+returned here so it's set equal to this
+new constant which has a global scope
+area so I could say now console.log area
+oops
+area and that's going to work so if we
+save this and view we can see it and
+these two things don't have to be called
+the same by the way that just happened
+to be called the same so if I want to
+call this a and console dot log a that
+would still work okay we're just storing
+the value that we get back regardless of
+what it's called here inside this new
+constant ok I'm going to change that
+back to area because it makes more sense
+to me so that's how we return a value
+now just a little bit of cleanup here
+what I want to do is get rid of the
+return here and just place it directly
+here so we don't need to store this in a
+local variable first of all we can just
+return it directly that's going to
+calculate this value and return that
+value directly so that's just a bit of
+cleanup so this is still going to work
+refresh and we still get seventy eight
+point five so the benefit of this is
+that we can now take this area and do
+something with it we could create
+another function to calculate the volume
+and pass in the area for example we
+could say
+Const calc Revolt is equal to a function
+which takes in an area and inside that
+will do something to calculate the
+volume now we could call this
+later on by saying calc vault and
+passing the area right here okay
+so we're able to reuse a value that a
+function brings back to us and I forgot
+my semicolon there I'm gonna save that
+so there we've got my friends that is
+how we can return values from functions
+all right then gang so arrow functions
+are a more modern addition to the
+JavaScript language and they offer us a
+cleaner and shorter way to write
+functions so what I'm gonna do is I'm
+gonna take this function that is a
+regular function we've already seen this
+to calculate the area and I'm going to
+turn this into an arrow function and
+show you how we do this so I'll keep
+this here as reference but what I'm
+going to do is come down here and create
+a new constant and I'm going to call
+this calc area it's the same name but
+we'll comment this one out later on and
+when we create an arrow function we set
+it equal to first of all parentheses we
+don't use the function keyword so the
+parentheses right here they take in any
+parameters that we have so we have the
+radius so let's pass that in then we do
+an arrow which is equals and then the
+Chevron and then we open up our code
+block at the end we can still do our
+semicolon now inside this code block
+this is where we do the function body
+which is this kind of thing right here
+so now then this is an arrow function
+version of this regular function and
+it's just a bit shorter we don't have to
+write out the function keyword right
+here so it's a bit easier to create now
+if I comment out this thing
+I'm calling this function right here so
+it should work so let me save it and
+come over to the browser and we can see
+that we get seventy eight point five for
+the area so this is still working this
+our function okay it's just a newer and
+shorter way to write functions now we
+can simplify this even more the first
+way we can simplify this is using these
+parentheses or rather taking them away
+when we only have one parameter we can
+take away these parentheses and this is
+still going to work if I save it and
+refresh we can see we still get that now
+this only works when there's exactly one
+parameter if we were to pass in two
+parameters then we need the parentheses
+so radius and then something else we
+need the parentheses there when there's
+more than one parameter likewise if
+there's no parameters we also need the
+parentheses there we can't just take
+them away because that wouldn't be an
+error function we need the parentheses
+there when there's zero parameters or
+more than one but if there is just one
+parameter we can take away the
+parentheses like that okay so the next
+thing we can do when we just have a
+single return like this on one line we
+can actually take away the return
+keyword and we can scoot it up to the
+same line over here and we can take away
+the code block curly braces like so and
+now what this does is return this value
+even though we don't write out the
+return keyword like that it still
+returns the value look if we try to
+return here on one line we get a
+squiggly line under it meaning that's
+not what we're meant to do we just write
+out value that we want to return if I
+wanted to return a value which was hello
+I write it there and it would return
+that and then this right here would get
+the value of hello whatever is returned
+I don't want to do that I want to return
+this thing which is the area if I save
+it now and run it then this still works
+so this kind of syntax if you're
+comparing it to this is now a lot
+shorter and a lot easier to write so
+remember one parameter and we can remove
+the parentheses anymore and we need them
+or any less and we need them and if
+we're just returning something very
+simply on one line we can move it up to
+the next line
+remove the return keyword and also
+remove the curly braces so there is
+another major difference between a
+regular function like this and an error
+function and that is to do with the
+binding of the this keyword which we've
+not covered yet and that means there
+will be times when error functions
+shouldn't necessarily be used but I
+don't want to delve into that just yet
+it's beyond the scope of this video put
+intended but we will cover that at a
+later time
+now as a little exercise just to get
+used to error
+functions what I've done is I've created
+some regular functions down here so I'm
+just gonna cut those and I'm gonna paste
+them up here like so and delete all the
+space I don't need that and I'm gonna
+just get rid of all this because we
+don't need these anymore
+and what we're gonna do is just practice
+turning or regular functions into arrow
+functions so right here we have another
+simple regular function so if you want
+to pause the video right here and try it
+out for yourself then unpause and watch
+how I do it that's absolutely fine but
+what I'm gonna do now is do an arrow
+function version of this function so I'm
+going to say Const greet is going to be
+equal to function we don't have any
+parameters so we need the parentheses
+then we do our arrow then we do our code
+block I'm going to return hello world
+now because we're doing a simple return
+on one line we can remove that keyword
+and we can also scoot this up and remove
+these things right here so this is the
+error function version of this and if I
+try to call this now I'm going to call
+greet and I'm going to comment out this
+so there's no conflict and save it this
+should work oops we need to log it to
+the console so let's say Const test or
+results is equal to this because we're
+returning a value and that's going to be
+stored in result now so now we can say
+console dot log results and save it and
+preview and we can see that okay so
+let's do the next example I'm going to
+comment that one out and uncomment this
+this one's a little more complex so we
+have this Const :
+and it takes in two parameters then
+inside we're creating this local
+variable called total and we're cycling
+through the products so we can see that
+products must be some kind of array and
+for each product we're getting a total
+and we're adding the product value plus
+any kind of tax okay so just a simple
+formula then in the end we're returning
+the total so this is more than just a
+simple return statement now what I'm
+going to do is come down here and I'm
+just going to console dot log and we're
+going to console that log
+the bill function and we're going to
+pass in a couple of parameters or
+arguments in this case so the first one
+is the product and this is going to be
+an array of prices essentially so we're
+going to take in the first one which is
+10 will do 15 and 30 after that we need
+a second argument which is the tux and
+that's just going to be not point two
+for 20 percent
+now I'm logging this directly in the
+console instead of storing this in some
+kind of variable and then logging it to
+the console like we did here but this is
+exactly the same okay it's just a
+shorter way of doing it well login it
+directly okay so we have that let's just
+make sure it works save it and we get
+this as the total over here 66 so we
+know what it should be so we're taking
+those products in we're cycling through
+them for each one we're adding to the
+total variable over here we're taking
+the product price plus any tax on that
+price which is not point two times the
+product price then we're returning the
+total so let's convert this now into an
+error function so what I'm going to do
+is say Const bill is equal to
+parentheses we have more than one
+parameter so we need our parentheses we
+take in the products and we also take in
+the tax then we need our arrow then the
+curly braces the N we'll do our
+semicolon
+okay so inside this function what we're
+going to do is create the local variable
+so total equal zero and in fact we can
+just copy this stuff right here we don't
+need to totally rewrite it again like so
+now we can't shorten this to one line
+because we have all of this extra logic
+right here and that doesn't work with
+our functions on one line it only works
+when we have one simple return statement
+like we did up here we're just returning
+something simple or with the area
+example in here we have a lot more logic
+so we can't just scoot this up to one
+line but we can still have an arrow
+function which is still a bit shorter
+than a regular function okay so this is
+the error function version of this
+there's not that much difference we just
+remove the function keyword and add on
+the arrow that's all we're doing
+essentially so let me comment this out
+and make sure this one
+still works we're calling it down here
+save it and preview and we still get 66
+so then a lot of the time in this course
+I will be using arrow functions as we go
+forward so if you ever need a refresher
+do come back to this video and like I
+said there is another major advantage of
+arrow functions in some cases when it
+comes to the this keyword sometimes it's
+a disadvantage and we'll talk about that
+later on all right then so hopefully now
+you're going to be quite clued up as to
+what a function is it's a block of code
+to do something that can be invoked and
+run at any point in our code so now I
+want you to cache your mind back to when
+we were talking about strings and
+numbers and other data types now we use
+something called methods on those data
+types which did something for us and I
+said that methods and functions are kind
+of synonymous with one another because
+they do the same thing right
+they can be invoked so we're in a bit of
+code which does something for us so a
+method is just a function now what
+distinguishes methods is the way that we
+invoke them and where they are defined
+now if we have just a regular function
+or an arrow function and in fact I'm
+going to create this I'll say Const
+greet is equal to an arrow function and
+this error function is just going to
+return a value hello
+now what I'm gonna do is I'm going to
+store a results we'll call it result 1
+equal to greet so now when we invoke
+this function like this we're getting
+this value back and we're storing it in
+this variable so we could log this to
+the console will just log results 1 and
+this will work so we should see hello so
+notice when we invoke this regular arrow
+function we just invoke it like this the
+function name and then parentheses now
+when we use a method the method is
+invoked using dot notation so remember
+we could take a string and use the
+method on it called to uppercase and the
+way we do that is by taking that string
+and saying dot to uppercase so the value
+then dot notation then the
+name now this is still just a function
+right but the way we invoke it is
+different we're using dot notation right
+here on the value itself whereas here
+we're not doing that we're just invoking
+it directly by saying the function name
+and then parentheses in both cases we do
+still use parentheses and in both cases
+we can pass in arguments to them the
+only difference in how we're calling
+them is that we're calling a method on
+the back of something using dot notation
+so what I'm gonna do is store this in a
+result as well so let's result to equal
+to this thing and then I'm going to
+console dot log results too and this is
+gonna work
+so I'll save it and preview and we can
+see this right here Sean so then methods
+are functions but they're functions
+which are associated with an object or
+datatype if you like like a string
+they're defined on an object or datatype
+whereas our function was just defined
+here on its old not on an object on
+datatype so we've not covered objects
+yet so i don't we need to freak out
+thinking you don't know what they are
+but they're one of the seven datatypes
+in java script in the future we will
+look objects' and then create our own
+methods on our own objects and we'll
+also be using many methods built into
+the JavaScript language like this thing
+right here as well but for now I just
+wanted to plant the seed to let you know
+that these methods that we use are still
+just functions that do something for us
+they are essentially the same thing just
+with a different name and the difference
+is how we call them and where they are
+defined so that is good enough for now
+okay then so we know now what functions
+are hopefully and we know that methods
+and functions too and we've also seen
+that we can pass arguments into
+functions and methods when we invoke
+them and we can use those values those
+arguments inside the function now so far
+those arguments that we've been passing
+in have just been things like strings or
+numbers or something but we can also
+pass in a function as an argument and
+when we do this the function we pass in
+is called a callback function so take a
+look at this example
+I've created here a function called my
+funk it's a narrow function and it takes
+in as a parameter a callback function
+now this can be called whatever you want
+you don't have to call it callback
+function this is just what I've called
+it so inside this function right here
+we'd do something and then at some point
+the idea is that we call this callback
+function okay so when we invoke my funk
+we need to pass in some kind of function
+as a parameter so what I'm doing is
+calling my down here and let me
+just cut this for a second so you can
+see we're just calling the function like
+that then as an argument instead of
+passing in like a string like we
+normally would instead what we're doing
+is we're passing in a function as an
+argument so this is just a regular
+function using a function keyword and
+inside it does something now when we
+call the callback function up here what
+we're doing is calling that callback
+function and we're passing in this value
+as an argument this value is something
+we define inside the function up here so
+inside the callback function when we
+pass it in we have to declare that
+parameter because when we call it we're
+going to be getting a value inside it so
+now that value is passed into this
+callback function when it's called and
+we can log it to the console if we want
+to or do something else with it so if I
+save this and preview we can see that
+value logged to the console now this
+seems like a lot of work to do just this
+what I've just done but this is just to
+demonstrate the general premise of a
+callback function we pass a function
+into something another function as an
+argument and at some point in that other
+function that callback function will
+probably be called
+and may be passed a value which we can
+take in so that's the general premise
+now what I'm gonna do is convert this
+into an error function right here so
+first of all I get rid of the function
+keyword then we need an arrow like so
+and then because there's only one
+parameter right here then we can just
+delete these parentheses so this is
+exactly the same and this a lot of the
+time is how you're going to see callback
+functions define
+okay when we pass them into another
+function so that's the general premise
+when we're creating our own function
+here and taken in a callback function we
+define that callback function right here
+okay so now we know that what I'm gonna
+do is delete this and you can see here
+I've created a variable called people
+and this is equal to an array of
+different people they're all strings now
+what I'm going to do now is use a
+built-in array method okay so remember
+methods are just functions we're using a
+function on this array so I'm going to
+take people and this method is called
+for each now then for each is a method
+which iterates over an array it's a bit
+like a loop where we iterate over some
+kind of array but in my eyes this is a
+little more elegant now this for each
+method expects as an argument in here a
+callback function so let's do this as a
+regular function first of all because
+sometimes I think it's easier to
+visualize this way so like so and then
+if I see in here console dot log and
+we'll say I don't know something so what
+this for each method does here is it
+iterates through an array and the array
+iterating through is people and for each
+element inside that array it calls this
+callback function so this is going to
+log out for each element inside that
+array so we should see one two three
+four five times because the function is
+going to fire five times once for each
+element in the array so if I save it and
+preview we can see we get five right
+there next to something okay so it's
+done it five times okay then now inside
+this callback function we can actually
+take a couple of different parameters
+the first one is whatever the value is
+at the time that we're iterating over so
+every time we fire the function for each
+individual element we get that element
+as our first parameter now I'm calling
+it person because it makes sense to use
+the singular of people because these are
+all people so each one is a purse
+but you can call it whatever you want
+you can call it Val if you want it
+doesn't matter I call it the singular of
+whatever this is so now we can log out
+the person each time around so that
+should be Mario then Luigi then Ryu then
+Shawn and then chun-li so let's save it
+and we can see those right here ok so
+again all we're doing is iterating
+through this array using for each and
+firing a callback function which we pass
+through as a parameter or an argument
+rather to the for each method for each
+individual item in the array and we get
+access to that person in the array each
+time around ok then so now let's convert
+this into an arrow function right here
+because that's mainly how you're going
+to see this written so we delete the
+function keyword and we add our arrow
+right here like so now because there's
+only one parameter we can delete this if
+we want to so now it's just person into
+the arrow function so if we save this
+it's going to do exactly the same thing
+all right so you're going to see me
+write callback functions like this a lot
+of the time using arrow functions now
+then this callback function right here
+inside for each not only takes the value
+of each individual element as a
+parameter but we can also take in a
+second optional parameter and that is
+the index of the element so when we fire
+the function for the first time it's
+going to be zero because that's the
+index then the second time it's going to
+be one because that's the index then two
+then three so we could log out the index
+and the person so if we save that and
+preview we can see now we get the index
+and the person so there are two
+different parameters we can pass into
+this function now if you wanted to you
+could define a callback function
+somewhere else and then just pass it in
+to the for each method or whatever
+method we're using now to do that I'm
+going to come up here and create a new
+Const and I'm going to call this a log
+person and this is going to be equal to
+an error function we're taking the
+person and the index much like we did
+down here then inside this function I'm
+going to just log
+templates drink so I'm going to say
+console dot log and then a template
+string we're going to output first of
+all the index variable and then I'm
+going to output a dash and then I'll say
+hello and then the person okay so now
+we've created this function what I can
+do is use this function as a callback
+function for this method so instead of
+defining the function here now we're
+defining it up here and now I could just
+say log person like so and what we're
+doing is essentially passing this error
+function into this for each method it's
+doing exactly the same thing and this
+should still work so although it's
+spelled incorrectly hello we still get
+the desired results so a lot of the time
+you're gonna see me write callback
+functions directly in here especially
+when they're just small functions
+because I think it's easier than writing
+separate functions out here somewhere
+then passing them in it looks nicer as
+well but sometimes if we have a large
+function then we're going to externalize
+them create them somewhere else and then
+pass them in as a callback function so
+hopefully now you understand what
+callback functions are they're just
+normal functions that we pass in to
+another function or another method as an
+argument okay then so now we know what
+callback functions are I'd like to have
+a little look at one in action so what
+I've done is I've gone through the index
+dot HTML and I've already added this URL
+with a class of people and in sandbox
+jeaious we have this constant people
+which is an array of different people
+now what I'd like to do is use for each
+to iterate through each one of these
+elements each name and for each one
+we're going to fire a callback function
+because we pass that through as a
+parameter or an argument to for each so
+that function is going to generate some
+kind of HTML template for each one of
+these different elements and it's going
+to output that to the browser inside the
+UL does that make sense ok so then first
+of all let's come down here and say
+people dot for each and what we're going
+to do is pass a callback function into
+this and we'll convert this into an
+error function later on
+but for now let's just take in the
+person each time around we find this
+which is the element that we're
+currently iterating over so what I'd
+like to do now is create an HTML
+template for each one for each person so
+I'm going to say up here outside of the
+for each method let HTML equal to an
+empty template string so backticks now
+inside of what we're going to do is
+append to this HTML for each person so
+I'm going to say HTML plus equals which
+takes the current value of HTML and adds
+them all to it and what we're gonna do
+is concatenate a bit of a template
+string so Li will do first of all and
+this is going to have a style property
+set to color and we'll color these
+purple and then close that off then
+inside the LI we want to output the
+person so we'll do that right there and
+then after the person we close the Li
+tag okay so what we're doing for each
+person is we're adding this snippet this
+template onto the HTML so each time
+around each time we fire this callback
+function for each element we're adding
+this on to the HTML okay so by the end
+of it the HTML is going to look like a
+big list of Li tags so let me just love
+this to the console console dot log the
+HTML okay so let's save this and view it
+in a browser and we can see this is the
+final HTML code so we want to take this
+now which is a series of Li tags with
+the different names inside it and we
+want to output it to the browser now
+we've not covered any kind of browser
+interaction yet we don't know how to do
+this kind of stuff and I don't expect
+you to understand what I'm about to do
+but the first step is to get a reference
+to an element on the page well we want
+the UL that's where we're going to
+inject our HTML so I say u L is equal to
+document query selector and then I grab
+that ul by using a CSS selector dots
+people that gets the people class okay
+again I don't expect you to understand
+this much yet we're going to cover this
+later
+then what I'm going to do is take that
+Kewell because we stored it right here
+and I'm gonna set the inner HTML
+property to be the HTML that we just
+created which is this variable so when
+we do that it takes this HTML it grabs
+this URL and it places this HTML inside
+the UL okay so let me save that and
+preview and now we can see all of this
+stuff right here if I inspect that then
+we can see inside the UL we have all of
+these different Li tags so that is just
+one use of this for each and a callback
+function to create some HTML templates
+for data we're going to do much more of
+this stuff later on when we start to
+work with the DOM and the browser and
+this as well so again don't feel like
+you have to understand it all now I just
+wanted to give you a quick example of
+how we could use far reach and a
+callback function to good use one last
+thing I do just want to convert this
+into an arrow function so let's take
+away the function keyword we can take
+away the parentheses because we only
+have one parameter and we do our little
+arrow finally and that is absolutely
+fine we can leave it like that so save
+it let's see if this still works and it
+does

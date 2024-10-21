@@ -1,0 +1,600 @@
+what is going on guys welcome back in
+this video today we're going to learn
+how to do Financial text sentiment
+analysis in Python using a language
+model from hugging face so let us get
+right into it
+[Music]
+not all right so we're going to learn
+how to do Financial Tech sentiment
+analysis in Python today which means
+we're going to take a look at the most
+recent Financial article surrounding a
+specific topic and we're going to
+analyze these articles in terms of their
+sentiments so we're going to use a
+language model to tell us whether the
+articles are positive negative or
+neutral we're going to then aggregate
+the results for multiple articles and
+come up with an overall sentiment about
+this topic at this point in time now
+this can be used in a number of
+different ways one very simple way to
+use it is to just incorporate the
+information into your decision-making
+process into your analysis of a stock or
+a commodity for example uh so for
+example if you see that the sentiment is
+very positive but getting more and more
+negative over time that might be
+something that you might want to
+consider if it gets more and more
+positive over time if it stays the same
+but it's very positive or very negative
+this might also be interesting so that
+is one way to use that uh but in this
+video what I want to mention is that
+none of the things I'm saying here are
+Financial advice I'm not a financial
+professional so whatever I show you here
+is just programming advice how you can
+do that I'm showing you how you can
+build this tool for yourself whatever
+you do with it is up to you none of the
+information here is a call to action or
+a recommendation on how to invest I'm
+just showing you how to build a tool
+that could be useful maybe in your
+decision process or in your analysis so
+having said all that the model that
+we're going to use in this video today
+is called finbert you can find it on
+hugging face it's by process Ai and it's
+a pre-trained NLP so natural language
+processing model that analyzes the
+sentiment of financial text now this
+specialization here is very important
+because certain terms can have different
+meanings in different context different
+connotations so a term might be very
+positive or negative only in a financial
+context in it can be neutral or the
+opposite uh in another context so we
+want to have a model that is trained on
+financial text and not on text in
+general now if you want to play around
+with this model before actually using it
+you can use it here in the inference API
+or you can test it here in the inference
+API you can just type in some text and
+compute the sentiment in this case we
+have stocks rallied and the British
+pound gained which is 89.8% positive uh
+6.7% neutral and 3.4% negative all of
+this obviously adds up to one because it
+has to be 100% so you can uh play around
+with it to see how well it works and
+then if you want to use it you can click
+here on use this model to get some
+sample code for the Transformers package
+in Python in this case we're going to
+use uh this part here where we can
+import a pipeline um and uh load the
+model here as a pipeline so we just have
+to feed an text into the pipeline object
+in addition to that we need to have new
+sources so we need to have either an API
+or a feed or we need to do some scraping
+or something to get articles into our
+code so that we can analyze the
+sentiment of the Articles now for this I
+want to show you a um or I want to show
+you two different approaches just so
+you're not just familiar with one of
+them so you have a more
+versatile uh set of sample code here so
+the first one is going to be the Yahoo
+finance news um which is going to be an
+RSS feed so in the first example we're
+going to parse an RSS feed in the second
+one we're going to use news API for no
+special reason they're not sponsoring
+the video or anything it's just a simple
+API you can get a free API key and
+access to news data uh and in this case
+we're not going to parse an RSS feed
+we're going to actually use an API key
+to send requests and get results um as a
+response so these are going to be the
+two examples today uh what we're going
+to do first is we're going to open up a
+command line and we're going to install
+the packages necessary for these two um
+projects or codes uh the first one is
+going to be obviously Transformers for
+loading into using the model the second
+one is going to be feed parser which is
+only necessary if you want to use an RSS
+feed and the third one is going to be
+the requests package which is necessary
+for sending uh and processing HTP
+requests easily in Python so once you
+have these three packages installed we
+can start with the first script which is
+going to start by importing the feed
+parser package and then we're going to
+also use the sample code here so just
+use this model copy this paste it into
+your code and now you have the uh finish
+invert pipeline ready to use so what you
+can do now is you can actually also just
+copy this text here and see how this
+works we can just go ahead and say print
+pipe and then the text here from the
+example I can run this and I will get a
+response now you can see I get some
+warnings here because I have a messed up
+uh setup here when it comes to
+tensorflow and Cuda and so on uh but
+what you can see here is I already get a
+result with a label positive and a score
+of
+0.898 which which is exactly the same I
+get in the browser uh we only get a top
+result so we only get uh positive we
+don't get the score for the other
+options but um the first time you run
+this it will take some time it has to
+download all the dependencies or all the
+models onto your system and you also
+need to have Hardware that's capable of
+running all this but after the first
+time it should be faster and you should
+get a result quite quickly so in this
+case you can see I passed the text I got
+the label positive and the score 0.8
+898 um so this is what we're going to do
+instead of feeding in static text we're
+going to load text from the Yahoo
+finance RSS feed and we're going to feed
+it into the pipeline to get the
+sentiment we're going to do that for a
+couple of Articles and then we're going
+to aggregate the results to get an
+overall score so the first thing is we
+need to define the RSS URL so RSS URL is
+going to be equal to https
+colf finance.
+yahoo.com RSS slash
+headline equals or actually question
+mark s equals and then a term that we
+want to search for so we're actually
+saying I want to get the Articles from
+the RSS feed where the headline um
+contains a certain query now what we're
+going to do here is we're going to
+Define two variables first of all the
+ticker and second of all the
+keyword now for some reason um this only
+works when I pass an actual ticker
+symbol so if I pass something like like
+uh Nvidia it's not going to find it I
+have to pass nvda so the ticker symbol
+of Nvidia if I pass Goldman Sachs it's
+not going to work I have to pass GS I
+don't know why uh maybe there is some
+different setting that you can use here
+to get uh different results so what
+we're going to do here is we're going to
+provide a ticker symbol for example meta
+which is the name and a ticker symbol um
+and then we also can provide a keyword
+now this keyword will not be part of the
+URL it will be part of our filtering
+process because the problem is or not
+necessarily the problem but the thing
+with this API or with this RSS feed I
+should say is that some of the Articles
+um come up when you type a certain
+ticker symbol but they're not really
+about that ticker symbol so you might
+type meta as a ticker symbol and you
+might get an article describing the top
+20 AI companies right now uh which is a
+a post that is not really about meta so
+it might be not the best source to
+analyze the sentiment about about meta
+because 19 other stocks are in there
+with positive or negative statements so
+we might want to also check if a certain
+keyword is present um in the summary or
+in the title of the article so we can
+say meta here as
+well uh the important thing is here we
+only want to introduce our ticker symbol
+so we need to actually make this an F
+string we put an F before the string and
+then we put ticker in curly brackets so
+that it's part of the string now this
+RSS URL we now feed into a feed parser
+so we say that the feed is going to be
+equal to feed parser dop pars RSS
+URL and now what I want to do is I want
+to keep track of a total score which is
+going to start at zero and I want to
+keep track of the number of articles
+that I'm using because as I said we're
+not going to use all the articles that
+come up we want to filter them based on
+a keyword for example I'm going to say
+zero here as well and then we're going
+to iterate over the individual entries
+of the feed so I'm going to say for I
+entry in
+enumerate feed.
+entries and here I'm going to do the
+filtering now if keyword
+lower is part of entry.
+summary. lower so if the keyword that
+I'm looking for meta in this case uh
+regardless of the case occurs in the
+summary then I want to look at that
+article because if the article is top
+28i companies probably meta is not going
+to be necessarily part of the most uh
+dense summary of that article so in that
+case I don't want to in this case I want
+to look at the art or in this case I
+don't want to look at the article if it
+is in the summary I want to look at the
+article uh because I assume that the
+post is focused on metaden now you can
+also go and more extreme way and filter
+for the title so you can say if the
+keyword is in the title but then you're
+going to get uh fewer articles to look
+at so that's a trade-off here if that's
+the case however so if the keyword is um
+or I should say if the keyword is not in
+the summary I want to continue so I want
+to skip this iteration otherwise I'm
+going to do the following I can print
+some information here let's use an F
+string let's say the title is entry.
+tile and let's do that now for link and
+published and
+summary
+and let's also use the respective Fields
+here
+just so we can see what the article is
+about and then what we want to do is we
+want to calculate the sentiment uh from
+our or we want to get the sentiment from
+our language model so I'm going to say
+sentiment is equal to pipe
+entry. summary so I want to use the
+summary of the entry as basis here for
+the analysis and we saw earlier that we
+get a list of dictionaries even though
+it's just one dictionary in there we
+have to select the zero index to get the
+one object that's in the list and this
+sentiment object has remember a label
+and a score so we're going to print here
+uh sentiment is going to be
+sentiment label and score is going to
+[Music]
+be uh
+sentiment
+score all right uh and then we can print
+some some separator here so something
+like this 40 times
+um and this is just going to print
+information now what we also want to do
+is we want to add or remove from the
+total score now you can come up with
+some more reasonable metric here for
+demonstration purposes I'm going to keep
+it very simply I'm going to just look at
+the label so if it's positive I'm going
+to add to the score if it's negative I'm
+going to remove from the score uh or I'm
+going to subtract from the
+score uh and how much I add or subtract
+will just be the confidence so the score
+uh so I'm going to say uh if the
+sentiment
+label if that is equal to positive what
+I'm going to do is I'm going to say
+total score plus
+equals uh
+sentiment score otherwise if the
+sentiment label is equal
+to uh
+negative I'm going to subtract the score
+now we also have the possibility of
+neutral in this case I don't want to do
+anything uh but I want to make sure that
+I only increase the number of Articles
+um which I misspelled here um I want to
+increase the number of Articles only if
+it's either positive or negative I don't
+want to consider the neutral one so I'm
+going to say plus equals 1 here and plus
+equals 1 here and that's basically it at
+the end of the loop what I want to do is
+I want to calculate the final score I
+want to say final score is equal to
+total score divided by the number of
+Articles so an average score if you want
+and then I'm going to print print um the
+overall
+sentiment and for this here I'm going to
+say it's going to
+be
+positive if the total score exceeds or
+is equal to
+0.15 else I want to use
+negative I need to use double quotations
+negative if the total score is below
+or equal to netive
+0.15 and in all other
+cases it's going to be
+neutral and we also want to print the
+final score
+itself all right so that is our code um
+let's see by running it if it produces
+some problems if not I can go through it
+again to explain what we did um so there
+you go you can see it loads some article
+Les here is meta stock a buy as Facebook
+parent bounces back from July slum um
+now in this case here we have
+Magnificent Seven stocks but meta is uh
+part of the title and part of the
+summary which is why this is still
+included but you can see we get a
+sentiment for each of those and a score
+so how confident it is that it's that
+sentiment so this one is uh positive and
+very confident so it says meta stocks
+climbing back toward record highs from
+early July which is obviously very
+positive and so on and the overall
+sentiment is positive now I can do the
+same thing for a different ticker symbol
+for example for let's go uh Goldman
+Sachs or actually let's go with Boeing
+they had some controversy so I'm not
+sure if this is going to matter but
+let's go and look for uh
+Boeing which is
+ba um and here we get a negative
+sentiment at least right now um and you
+can also scroll through these articles
+to see why this might be the case uh
+yeah you can see that most of the
+articles are not very positive uh we can
+also go for something like gold which I
+think recently has decreased in value
+I'm not sure uh but for gold what we
+would have to do is um we would have to
+use the ticker symbol I have it here on
+my second screen GC equals F and the
+keyword would be gold uh these are just
+the ticker symbols of the Yahoo finance
+API you can look them up at Yahoo
+finance or you can just Google them or
+you know know them um but here now the
+sentiment for gold is slightly positive
+uh with
+0.07 actually this is a problem
+because actually we should go with final
+score not total score because the final
+scor is what we're interested
+in and then it should be neutral I guess
+because it was
+0.07 yeah uh a couple of days ago it was
+negative now it's neut so this is as I
+said this can also be used to analyze uh
+the development over time so if it's
+very negative for a long time and then
+it becomes positive this might be a good
+uh indication that uh yeah things are
+getting better maybe you want to buy
+again not Financial advice just
+exploring a possibility uh but this is
+how you can do that with the Yahoo
+finance API again you have an RSS feed
+you load the feed or you parse the feed
+you iterate over the individual articles
+you get the summary you calculate the
+sentiment and then we summarize it or we
+we aggregate it and and get an overall
+score uh which we divide by the number
+of Articles and yeah this can be used
+like this now the Second Source will be
+news API so news API is this website
+here again not in any way affiliated
+it's just a simple news API where you
+can get an API key for free um and I
+will probably have to censor the API
+Keys here which is unfortunate because I
+now showed the website it doesn't matter
+um but the idea here is that uh we're
+not going to load it from an RSS feed
+we're going to use a request to send an
+um an API request to
+this platform and we're going to analyze
+their news articles again the only
+reason I'm showing two approaches here
+is that you're not uh fixated on only
+one way to do that there are multiple
+new sources there also new sources that
+have their own python package so there's
+a number of different ways you can also
+download them you can scrape them
+yourself it doesn't really matter you
+just need some articles that you can
+look at and some text that you can
+perform sentiment analysis on some
+Financial text so what we're going to do
+now is I'm going to copy this I'm going
+to call this Main 2py and we're going to
+adjust the code so that it works with
+the news API now how how are we going to
+do that we're going to do that in this
+case by defining only a keyword and a
+date the reason here is that we're not
+using uh specifically just uh a finance
+API we're using actually a news API the
+text is still going to be Financial when
+we talk about stocks and go and so on
+for the most part but
+um yeah this is why we don't have a
+ticker symbol we just have a keyword
+that we search for and a date that we're
+interested in so I'm going to say the
+date here is going to be um the 18th of
+August 2024 the reason I'm using a past
+date is because with the free version
+where you have the API key for free uh
+you get the data delayed by one day so I
+could actually also go with uh 20th or
+21st but I'm going to just go with the
+18th
+um and what we need to change now is we
+need to change this part we're no longer
+going to use feed parser we're going to
+use the request package um and we're
+going to define the URL as a string as
+follows we're going to use this feature
+of python where we can use uh
+parenthesis to combine strings over
+multiple lines we're going to say
+https uh col newsapi.org
+SL verion 2 or V2 SL everything question
+mark and then we're going to use an F
+string where we're going to say Q equals
+and then keyword so this is our search
+query so to say um then we're going to
+use another FST string which is going to
+be
+from which is going to be the date so
+from the specified date then we're going
+to say sort by is equal to popularity so
+we want to have the most popular
+articles first and then we want to use
+an API
+key is equal to and then I'm going to
+load the API key here from a file API
+key is going to be equal to
+open I already have it in a file here
+API key
+re I'm going to pass it here um make
+this of course an FST string and then we
+have our URL now the response is going
+to be equal to
+requests.get
+URL and the articles are going to be
+part of the resulting Json object so
+articles is going to be equal to
+response. Json and then from here we
+want to have the field articles and then
+we want to say that the
+articles are going to be the following
+list comprehension article for
+article in
+articles if uh keyword
+lower is part of article
+title or keyword.
+lower is part of
+article uh
+description do
+lower we shouldn't forget
+that so we want all of this to be not
+case
+sensitive all right so we get all the
+Articles and then we say articles is
+equal to article for article and
+articles and uh when we have that the
+rest of the code is actually almost the
+same just at this time now we have for
+this In Articles and we change entry
+here we replace entry with
+articles or
+article and uh we also don't want to
+have title link published in summary we
+want to have article title is actually
+still
+valid uh then we also want to have
+article URL not link and
+article
+description here um and we obviously
+apply all of this not onto the summary
+we apply this time onto content so onto
+the full content of the article so
+sentiment is pipe article content um and
+that then is going to result in the
+exact same thing as before so we don't
+need to change anything else the only
+thing we Chang is how we get the
+information we use the news API we have
+an API key um what exactly is
+this from prepared I actually imported
+something from my prepared videos okay
+um but now we have the same process we
+just have a different format we have
+different keys and different values and
+now when I run this we're going to see
+that I get a similar result so it's
+going to load no I have no articles so
+let's use a different uh keyword let's
+go with something
+like or actually I I think that this
+should not be a problem so maybe the
+problem is somewhere else let me just
+see we have
+keyword oh sorry the problem is I need
+to use an and at the end of each of
+these uh F
+strings so now it should work
+no okay we're still using summary
+somewhere where is that oh we don't need
+this check here obviously because we're
+doing it in the list
+comprehension but
+now there you go we have the Articles we
+have the title and we have uh actually
+this should be called description not
+published but it doesn't really matter
+now uh and we get the overall sentiment
+at this particular point in time was uh
+negative quite negative now let's see if
+it changed if we look at
+yesterday
+maybe okay now it's neutral so it seems
+to have changed over the last couple of
+days but this is how you can do that
+with a different new source you can do
+that now with any new source you can do
+that with a Statics historic data set if
+you want to back test something uh if
+you want to build a trading strategy on
+based on this and you have a to
+financial historic data or uh Financial
+articles historic articles um but yeah
+this is how you can do Financial text
+sentiment analysis in Python so that's
+it for today's video I hope you enjoyed
+it and hope you learned something if so
+let me know by hitting a like button and
+leaving a comment in the comment section
+down below and of course don't forget to
+subscribe to this Channel and hit the
+notification Bell to not miss a single
+future video for free other than that
+thank you much for watching see you in
+the next video and
+bye for

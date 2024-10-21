@@ -1,0 +1,501 @@
+hello everyone and thank you so much for
+joining in and welcome to video record
+webinars so team today it's an
+interesting session on machine learning
+so we'll be discussing about the python
+libraries for data science that you have
+to know in this current year so this is
+the updated list so we'll go through one
+by one today
+so the agenda for today's session is
+like this so we'll understand what
+exactly is Python and then we will look
+into the important features of python
+which makes it so popular and so famous
+of the reason that it is and then we
+will look into the libraries that you
+have to learn for data science in the
+current year and we'll also have a quick
+hand transition about this topic of data
+science so that's the agenda for today's
+session so let's proceed ahead and let's
+get started
+so let's start by understanding the
+Python programming language now when we
+talk about this python see this python
+is a programming language which has been
+created by a person called Judo one
+erosum so this was created in the year
+of 1989 and the Python programming
+language our the name python was
+actually inspired by the Creator's
+favorite show that is the create an
+emails Monty Python so that's where the
+term python was actually used I mean
+when he started thinking about creating
+a programming language actually and here
+this best part about this Python
+programming language is
+it's a general purpose high level
+interpreted language with easy easy
+syntax and dynamic semantics
+so at that time before python one of the
+common issue that we had with other
+programming language was it was
+difficult to write so the reason it was
+difficult to write because it's not
+something it is very difficult to type
+it's because there were a lot of rules
+there were a lot of rules which were
+being involved in the other programming
+languages
+that was one of the main reason so the
+syntax was very difficult maybe to give
+you an example at the end of every
+sentence maybe you have to use a
+specific symbol or there are certain set
+of rules that you have to follow in
+order to write a computer program so
+what used to happen was as a beginner
+when you started to use that programming
+language in your project
+most of the time were actually involved
+in fixing these syntax issues rather
+than working on the real problem
+so that was a challenge that were being
+faced at that time so hence he decided
+to create a programming language which
+is easy to write easy to create easy to
+write the program with less syntax rule
+to learn for so this would in turn
+enable the people to focus more on
+problem solving rather than working on
+the rules and this python is a
+programming language which it has got
+some of the key ideas like key benefits
+of this programming languages one it is
+open source that means you can use this
+python interpreter for free and you can
+make the changes you can also publish
+your own version you can use it for
+industry purpose or everything is for
+free and it has got an amazing Community
+Support so whenever you have got any
+question you can post your query in the
+stack Overflow and the other famous
+famous sites where you can get the help
+from the community which is very active
+community of python and python has a
+very large standard Library using which
+you can actually get the library and use
+it in your program to complete the
+projects on time and it is it supports
+the object-oriented programming
+structures which is the classes and
+object and it's an easy to learn
+programming language because it has got
+the easy syntax and the way that you
+would write the program it is very
+simple and you can anyone can start
+coding it in an easier manner so that's
+the main idea about this Python
+programming language
+and here when we talk about this Python
+programming language it has some of the
+other important features so let's look
+into the important features of Python
+programming language one important
+feature is its Simplicity it is designed
+so that as I mentioned you can think
+more of a code that means think more of
+the problem that you are trying to solve
+rather than thinking about the syntax or
+the rules that's one of the important
+feature and that's one of the main
+reason where the data scientists prefer
+to use Python programming language
+because when we talk about data science
+it's all about generating the insights
+from the data set now when you want to
+get more information out of the data set
+it would make sense if you spend more
+time with the data rather than the rules
+isn't it so that's the main idea right
+now so which we're using this you can
+think more of a code and less of a
+syntax
+that's the key important feature and
+here this is an open source which means
+it is free for everyone to use
+it is portable so it can be written in
+one computer and executed in the other
+computer without any issue so as a
+result of this the sharing of code is
+very simple when we talk about the
+python codes
+and it is admittable and the extensible
+so it allows the code from other
+programming languages like C C plus plus
+can be embedded into this Python program
+so that certain functions can actually
+be performed so as a result of this this
+would make the python even more powerful
+and this python is a interpreted
+programming language and the best part
+is the memory management the CPU so all
+these things will be handled by python
+itself we don't have to worry about it
+and it does in a pretty good way and the
+python has a huge Library support
+it has called huge headset of libraries
+like numpy for numerical array data type
+and we have got matplotlib in c bond for
+creating the visualization we've got
+pandas library for the data processing
+so we've got various libraries that we
+have got which will help us in solving
+the problems in a better way
+and this python is based on object
+oriented programming structure so as a
+result of this this will help us to
+break down the complex problem into the
+code with the help of the security so
+that it can obtain the better solution
+so here when we talk about the
+object-oriented programming structure
+where we'll be dealing with the data
+types of classes and the objects so
+that's the overall idea about this
+object oriented programming approach
+and when we talk about this libraries so
+let's have a look into the important
+libraries for data science when we talk
+about this Python programming language
+the first and the important library that
+we generally use it whenever we are
+working with the data we see pandas
+Library it's a library
+which is written in for the Python
+programming language and this is
+specially used for data manipulation and
+the analysis that is the main idea right
+now it will help us to perform the data
+go to perform the analysis in an
+effective way and this library is well
+suited for various types of data set so
+it is suited for the tabular data it is
+suited for ordered and the unordered
+time series data and even this would
+work for any other types of
+observational or the statistical data as
+well so it is suitable for various types
+of data set and this is the most
+commonly used Library when we are
+loading the data set because this will
+help us to load the data set in a
+structured format which will enable us
+to perform the analysis on top of it
+so that's the main advantage of using
+this python that is the pandas Library
+okay the next library that we have got
+is the numpy library so numpy is a core
+library that we have got for scientific
+computing
+so when we say scientific Computing so
+one of the key thing that we want to do
+whenever we are working with the data
+set is we want to perform the operation
+it could be as simple as multiplication
+or it could be any complex mathematical
+operation that we want to perform on the
+data set now at that time okay at that
+time so here having a library which will
+help us to compute that calculation in a
+better way will make our life easy
+because the calculations will happen in
+a much better in a much better and an
+efficient way that's the overall idea
+and the importance of this numpy Library
+okay and then
+we have got the address Library okay so
+when we talk about this panel sorry we
+are talking then we have got this
+matplotlib library now when we talk
+about this matte naughty Library
+so this is actually a package that we
+have got for creating the 2D plots so
+here we use it for creation of various
+types of plot depending on the data that
+we are working we've got bar graph we've
+got histogram chart we've got scatter
+plot we've got pie chart we have got
+hexagonal pinchard area plot so these
+are the various types of plot that is
+supported by this matplotlib library and
+we choose the relevant type of plot
+depending on the type of data that we
+are dealing with
+okay so generally when we are working
+with this matplotlip Library we'll be
+importing the matplotlib especially by
+directly importing the its pipelot
+module so you will import people
+importing the matplot tube Library as
+import matplotlib
+dot Pi plot as PLT then the we will
+definitely call the various other
+plotting function the reason that we
+import this pipelot module because all
+the plotting functions are available
+inside this Pi plot module that's the
+main idea of importing this mat.lib
+library and then we have got selenium so
+selenium is a package or a library which
+we generally use it to automate the web
+browser interaction with the help of
+Python programming language
+so with this Webdriver API binding so we
+can actually write the code in the
+Python programming language and we can
+perform the action and that means we can
+actually perform the automated testing
+with the help of the selenium Webdriver
+by running the web testing on the
+various browsers
+moving on the next library that we have
+got is opencv Library so opencv is a
+python Library which is designed to
+solve the computer vision problems
+so here when we talk about the opencv so
+open EV array structures are converted
+to and from the numpy arrays
+here this is the library which is well
+known for computer vision based task so
+whenever we are working with the images
+or the video data you'll definitely
+start using this opencv library and yeah
+that's about the opencv libraries it's
+basically we use it whenever we are
+dealing with the visual data on our
+number five we've got the Sci-Fi Library
+so scipy is a free and an open source
+python library and this is also used for
+scientific Computing and Technical
+computing
+now this scipy library has various
+built-in functions which we can use it
+to perform the direct scientific
+Computing it has got Advanced scientific
+Computing functions which we can use it
+and apply it on the data set we don't
+have to create those function or Define
+those mathematical operation it is
+already available by default that's the
+advantage of using this scipy Library
+and the next library that we have got is
+the scikit now the scikit library
+psychic learn library is one of the
+important Library when it comes to the
+data science here
+this scikit Library we will we actually
+call this as
+the machine learning library for the
+Python programming language
+now this scikit-learn has got the
+machine learning models for various
+tasks like classification
+regression as well as the clustering
+algorithm so these are the common types
+of algorithms which are supported out of
+the box from the cyclic Library you can
+check out the documentation page as well
+so and it's not just the models all the
+other helper functions like splitting
+the data set into two parts or
+performing the pre-processing like the
+one hot encoder standard scalar and any
+mean Max scale so all the required types
+of data transformation that we want to
+do it is supported and once the model
+has been trade when it comes to the
+evaluation it has got the variation
+functions for regression as well as
+classification to name a few rmsc MSC R2
+score which comes under the irrigation
+and under the classification we've got
+Precision recall F1 score classification
+report
+so we have got these various metrics and
+all these are supported by scikitlan
+Library itself
+this Library which is an open source you
+can also publish your own model or you
+can create your own custom model by
+making use of the concept of subclassing
+from the model class
+okay these are some of the important
+features of this scikit-learn Library
+moving on we've got the spark Library so
+Pi spark so the pi spark is also known
+as the spark python API it actually
+exposes the spark programming model to
+the Python programming language
+so that's the importance of Pi spark
+Library
+and we've got a library that's called as
+Django so Django is a pythmic framework
+and this is a framework which provides a
+structure and the common methodologies
+to make the life of a web application
+developer a much easier one for building
+the flexible scalable and maintainable
+web application
+it's a high level and it has got the MVC
+mvt style architecture and it's a web
+framework which is written for quick and
+Powerful programming Python language and
+it has got the open source collection of
+libraries for building a full
+functioning web application that's the
+importance of this angle Library
+and on number one we've got the
+tensorflow so tensorflow is a python
+Library which we generally use it to
+implement the Deep learning neural
+network
+here when it comes to the computation
+the computation will happen as a data
+flow graph where we can switch on the
+data flow and every operation that we
+perform on the data set will be
+remembered so by remembering the
+operation we can also take the gradients
+that means we can go backward and
+extract the gradients and using the
+gradients we can update the parameters
+so these are some of the important
+libraries that we have got and Python
+programming language now to give you a
+better understanding about this Python
+programming language so let's take up an
+example uh task of the machine learning
+and you will be able to understand how
+easy it is to work with the same so I'm
+going to launch a new notebook
+see for showing you the demonstration
+I've got the code already written so
+here we've got a given data set okay I'm
+going to execute all the cells
+okay so what we are going to do is if
+you look into this scenario I'm already
+importing two imported libraries numpy
+library and the pandas library now using
+the pandas Library so as I've mentioned
+we generally use the pandas library to
+load the rate asset and work with the
+data set and even in this scenario I'm
+using the pandas library and
+specifically the function of read CSV
+function to read the file and create it
+as a data frame object which is a data
+type of pandas library and not just
+creating the data frame we can also
+modify the data set as well for example
+in this scenario okay so we have got the
+columns uh that means like a column
+called unnamed 0 and I'm dropping that
+column that means I am removing this
+column from the data frame
+and we can make use of the head function
+to display first few entries of this
+data frame
+and here we have got the other inbuilt
+functions to check whether we have any
+missing values in our data frame and in
+our case we have the missing value count
+as 0 which means
+we do not have any missing values in our
+data set now that's a good thing
+now once we have done the analysis maybe
+if I want to create any visualization at
+that time I'll be making use of the
+matplotlib library
+now once I've done the basic analysis on
+the given data set next we'll proceed
+ahead and apply this data set on a
+machine learning model now as I
+mentioned the library that we'll be
+using is the scikit-learn library for
+all the machine learning models so here
+to get started so I'm splitting my data
+set and inside this scale on the design
+kitlearn Library we've got a function
+that is called as the trained split
+function
+so this is a function which will help us
+okay so this will actually help us in
+splitting the data set into two parts
+okay so this is about this will split
+the data set into two parts
+and then once we split the data set into
+two parts so this is X and Y so so then
+we will use the split data and apply it
+on the machine learning model now in
+this example I'm importing the machine
+learning of linear regression and once
+this is imported okay what we are doing
+next is we are performing the fit on
+this given data set
+now as I mentioned python is an
+object-oriented programming language I
+am importing a class and once I'm
+importing the class I'm creating an
+object for that class
+and I'm calling the object method of it
+okay that is the reason that you see it
+in this way and then once we have
+performed the fit so the attributes of
+that object we can display to understand
+the overall working of the model
+now here in the scenario I'm importing
+The Matrix Matrix will help me to
+evaluate a machine learning model now as
+I as you can clearly see I'm using the
+evaluation metric of R2 score which is
+available inside the scikitlan Library
+itself
+I'm importing the metrics
+I'm gen I'm finding the R2 score and in
+this scenario the R2 score is
+0.5888 and not just that this also has
+the mean squared error and when we find
+the mean squared error value it is
+10.617 and mean absolute error is
+2.57 so like this we can go ahead and
+perform the analysis on the data set by
+making use of all the important
+libraries that are available to us in
+Python programming language and not just
+that here we have done the Improvement
+so instead of using a single data we are
+using the multiple data and we are
+working with this data set and here in
+this example I'm importing the c bond
+library mat.lib library in order to
+create the visualization and this
+visualization is called as heat map
+which will help me to understand the
+relationship between two variables
+so in this way the various libraries
+will be used whenever we are working
+with the data set
+okay so this is about the introduction
+to the important libraries that we have
+got in Python programming language and
+how it is used and the importance of the
+same whenever we are writing the code
+okay folks so with this we come to the
+end of today's session thank you so much
+everyone
+and all the very best I look forward to
+seeing you next time

@@ -1,0 +1,91 @@
+JavaScript an embarrassing toy language
+used exclusively to build things it's
+not supposed to it was created by
+Brendan Ike in 1995 who was given
+requirements to build a language like
+Java but for words it only took him
+seven days to execute flawlessly it
+became an overnight dumpster fire but
+ really hit the fan in 2005 when
+Ryan Dahl made the Epic mistake of
+bringing JavaScript to the server with
+node.js just like Alfred Nobel and
+dynamite he would go on to apologize for
+his invention many years later and it's
+my fault and I'm very sorry the language
+is designed for only one use case to
+annoy people with browser pop-ups but
+today it's used to build memory hogging
+desktop apps with electron janky mobile
+apps with react native and unreliable
+apis with express.js no matter what
+you're trying to build there are
+hundreds of different game-changing
+next-gen libraries to get the job done
+that's because whenever a JavaScript
+developer encounters a problem it will
+instinctively create a brand new
+framework and upload it to GitHub with a
+bunch of emojis in the readme in fact
+there are so many npm packages that Al
+Gore is now predicting the Arctic will
+be ice free by 2013 you have stolen my
+dreams in my childhood unlike languages
+people actually like JavaScript doesn't
+have a mascot but they are working with
+David Cronenberg to design one it's a
+Loosely typed language and by that I
+mean completely detached from reality
+when you add an array to an object
+obviously it returns a string that says
+object object now switch the order of
+the operands and predictably it returns
+zero if you want a good laugh for
+yourself try adding two objects together
+you'll get object object object object
+now with that knowledge what do you
+think two arrays will equal obviously an
+empty string that makes total sense
+because the number zero is equivalent to
+an empty array and also equivalent to a
+string of zero and that means the only
+possible same conclusion is that a
+string of zero is also equivalent to an
+empty array but amazingly it's not
+everybody knows you never go full retire
+it got this way because Netscape did a
+focus group in the 90s with some
+homeless web developers they found on
+the street who thought two plus two
+should equal 22 and of course that's why
+2 minus two equals zero when a language
+is this bad and this popular at the same
+time it creates an ecosystem where
+libraries like is odd which does exactly
+what the name implies can get over 400
+down or no 400 000 downloads per week
+the fun thing about packages is that
+there's multiple module systems like
+common JS and esm so you never know if
+the package you're installing is
+actually going to work now if you do
+manage to build something with
+JavaScript it'll probably never see the
+light of day because then you have to
+learn module bundling with a tool like
+webpack and it's just not worth it man
+this has been my cathartic release from
+over 10 years of JavaScript development
+despite its problems it's evolved into
+an awesome language in 2022 and I love
+programming with it today is
+Thanksgiving and I'm extremely thankful
+for JavaScript because it puts food on
+my family if you want to master the
+basics all this reverse psychology
+should motivate you to buy my JavaScript
+course and if you don't buy it I won't
+make any money thanks for watching and I
+will see you in the next one assuming
+I'm not entirely canceled after this
+video

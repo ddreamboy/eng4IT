@@ -1,0 +1,178 @@
+hello lovely humans jen fox here
+in this video we are going to look at
+how to do sentiment analysis
+in microsoft excel for free
+party time so this service is available
+in
+office 365. well in excel
+and so it's an add-in that you can
+incorporate from azure machine learning
+and it allows us to do sentiment
+analysis basically
+if i'm looking at some text the
+sentiment analysis
+will tell me if the text is a
+positive sentiment if someone is feeling
+you know positive about something
+or if someone's feeling negative about
+something
+it's keep in mind like most machine
+learning
+it's you know not perfect just like
+people
+and it tends to work on shorter text
+versus
+longer text so that said
+let's dig in to how we pull in
+sentiment analysis into excel and how we
+run it on
+our data yay all right so
+this is how to do sentiment analysis
+for free in microsoft excel woohoo
+i was really stoked when i found out
+about this feature
+um and even more stoked that it's free
+so to do this first we need some
+text i snagged reviews
+about the xbox um so i just i grabbed
+them from amazon
+uh yeah so let's see if we can get the
+sentiment
+of each review so we can better
+understand if folks
+liked it or they didn't like it so
+first go to the insert tab in excel
+and then go to my add-ins click
+see all and we want to add in this
+azure machine learning add-in if you
+don't have it
+highlighted you probably don't just
+search for azure machine
+learning and click enter and then you
+would click
+add and then we say continue
+and it will pop up woohoo so
+then we want to do text sentiment
+analysis
+okay so it's a little
+funky how it expects the data so the
+first thing
+is click on this view schema
+schema schema and we need to
+title our uh column header with
+tweet underscore text because that
+is how the sentiment analysis recognizes
+the text in this column is to be
+analyzed
+and i was running it at one point and i
+had an extra space in there and it
+gave me an error so make sure it's just
+like this
+actually let's do that as a well i'll
+show you after
+i guess so make sure it looks exactly
+like this
+then we can close that and
+then we want to give our input range
+values i was just
+testing this um so then we
+highlight whoopsies we can click on this
+oop
+come on click on this no
+what what is happening okay there we go
+okay
+so we click on this to highlight
+all of the text that we want to analyze
+and then we just need to give um a
+single output cell um so for some reason
+i can't see this
+button so i'm just going to be lazy and
+copy this
+and click this and say c1 so we'll skip
+column b and just put in c
+um and really quickly it has to just be
+a single
+column critical
+and make sure that my data has headers
+is selected
+um and i would also recommend selecting
+include headers
+okay so then we will say predict
+and hopefully everything's right yay so
+in the
+uh first column we have the sentiment
+output
+and then we in the right column we have
+the score so
+sentiment analysis is done on a scale of
+zero to one
+a 0.5 is considered to be neutral
+a score closer to 1 is considered to be
+positive
+and a score closer to 0 is considered to
+be negative
+so one thing that i want to point out
+and close this to give us more
+space is that this negative score
+is larger than this negative score
+so you might
+you might find that this review is
+more quote unquote negative than
+this review um so that's one way to
+interpret that
+another way to interpret it is just that
+the machine learning algorithm
+was more confident that this was a
+negative sentiment
+and so as we go down
+this one's kind of interesting this is
+actually a
+and it looks like the sentiment analysis
+didn't do great on it
+because the first sentence is positive
+um so
+yeah i would say that this is a positive
+review
+so this is you know it's a useful tool
+but i have
+found that it tends to work better on
+shorter
+text so one of the things that we could
+do
+is you know remove some of this text and
+run the sentiment analysis again
+so i'm going to click this and see if it
+changes this score
+all right and so we don't need to change
+anything here
+oh that's interesting
+it might be that the phrasing is a
+little funky um so
+it's not perfect but if you have a lot
+of text data this can give you a general
+understanding of sentiment um and then
+really quickly i just want to show you
+what error gets thrown
+if this isn't quite right so if you have
+an extra space and you click to predict
+[Music]
+i'm gonna laugh if it doesn't actually
+give me an error this time
+it's really funny predict there we go
+okay so message um
+input column name column names must
+match the schema
+column names only in schema
+tweet text and then um yeah
+so basically if you read that it it
+tells you
+in effect that your column header is is
+funky
+um so then i remove the extra space
+and i click predict again and no error
+all right cool so i hope that is helpful
+uh this is a free service that comes
+with
+office 365. go forth and enjoy it
+let me know if you have any questions
+happy making my friends

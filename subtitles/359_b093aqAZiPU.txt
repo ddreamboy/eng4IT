@@ -1,0 +1,1620 @@
+Hey everyone, Kevin here.
+Today I want to show you the 
+fundamentals of programming using Python.
+In this video, I'm going to assume that 
+you have no programming background at all.
+We're going to start from the very basics and 
+we're going to work our way up step-by-step,  
+and we'll get a little bit more 
+advanced. By the end of this video,  
+you'll be able to write your very 
+own source code and then run it.
+Now, how exciting is that?
+We're going to start with, well, why should you 
+even learn how to program and then why Python?
+There are so many different 
+programming languages out there.  
+Why should we choose Python? Then we're going 
+to start with how do you even get Python?
+Where do you write your code?
+Then we'll go through things 
+like operators, variables,  
+we'll create a function, we'll even jump 
+into things like creating an if statement,  
+creating loops, so your code will run or 
+execute until a certain condition is met.
+We'll even leverage others’ code 
+by importing libraries into Python.
+By the end of this, you'll have a very solid 
+understanding of how to get started with  
+programming. Think of this as a 100-level course 
+that'll give you all of the most essential tools.
+If you want to jump around this video, 
+I've included timestamps down below  
+so you can jump to the section 
+that interests you the most.
+To get started, you might be wondering, 
+well, why should I even learn how to program?
+How is this going to benefit me?
+Well, anytime you go on your phone 
+or anytime you go on your PC,  
+you're experiencing the output of 
+something that someone has programmed.
+So, you're realizing the benefit.
+Think of it this way. To program allows you 
+to take maybe an idea that's in your head,  
+you can turn it into a series of steps that 
+the computer can understand and execute.
+How cool is that?
+So, for example, maybe you have 
+a game that you want to create.
+Maybe you want to create an application at work 
+to help simplify what you do on a daily basis.
+By programming, you can do all of those things.
+It's an incredibly powerful 
+skill to learn how to use.
+OK, so you want to learn how 
+to program, but why Python?
+There are so many different programming 
+languages out there, you have C, C Sharp,  
+C++, Java, JavaScript, PHP, 
+and the list goes on and on.
+Well, recently on my YouTube channel, I asked 
+all of you what programming language do you  
+most want to learn about? And overwhelmingly, 
+far and away, Python was the clear winner.  
+It was something like 65% of you wanted 
+Python. And it kind of makes sense. When you  
+look at the lists of the most popular programming 
+languages, Python tends to be right near the top.
+It's been around for a while.
+It's also pretty easy to use and also understand.  
+When you code using Python, it tends to 
+be a very concise programming language.
+It's also a good general 
+purpose programming language,  
+and what I mean by that, is you can 
+write all sorts of applications.
+Maybe you want to write a web 
+app, an internal company tool,  
+a game, or maybe you just want to 
+conduct some scientific analysis.
+You can do all of that with Python.
+And all the things that you 
+learn today related to Python,  
+you can take these same concepts and you can 
+apply it to other programming languages as well.
+And really, fundamentally, you just 
+want to take some idea you have,  
+you want to turn it into a series of 
+steps that the computer can execute.
+And in a sense, it's kind of like a 
+different language or a spoken language.
+So, in English I say hello, 
+in German I'll say hallo,  
+and in French, I'll try my best, I'll say bonjour.
+And all of those communicate the same idea. 
+I'm just saying hello, but it's a slightly  
+different way of saying it or speaking it, and 
+that's the same with a programming language.
+They have different syntaxes. 
+They also have different rules,  
+but at the end of the day, you're simply trying 
+to communicate something to the computer,  
+because you want the computer to do something 
+for you. Now of course, each programming language  
+might have its strengths or weaknesses, but 
+you're really accomplishing the same objective.
+All right, so why don't we jump on the 
+PC and let's get started with Python.
+Here I am now on my PC and first off I want 
+to check if I already have Python installed.
+To do that on Windows 10, simply go down to your  
+taskbar and within the search 
+field type in command prompt.
+Once you type in command 
+prompt, click on the best match.
+This opens up your command 
+prompt, and to check for Python,  
+simply type in Python and then type in --version.
+If you have Python installed, it'll tell you the 
+version of Python that you have, and here you see,  
+I just typed this in and it says Python was 
+not found, so I need to go and install Python.
+If you already have it, you can skip the 
+next step. If you don't have Python like me,  
+stick around and I'll show 
+you how you can get Python.  
+To get Python, head to the website python.org 
+and that'll drop you on the Python home page.  
+Right near the top, you'll see a 
+button right here for downloads.
+If you click on this, it'll identify 
+what operating system you're on  
+and it'll recommend the best option.
+However, if you're on a different OS, you 
+can also choose it down here. Now I'm running  
+Windows today, so I'll download Python 3.9.2. 
+This is currently the most recent version. If  
+you're watching this video maybe a few months from 
+now, there could be an even more recent version.
+Go ahead and download whichever 
+one it recommends to you.
+I'll click on download and here it's 
+kicked off the download process.
+Once you finish downloading, click on the EXE.
+This opens up the install prompt 
+and right up here I could install.
+However, before we do that,  
+there’s an option right here at the 
+bottom that says add Python to PATH.
+Let's check that box and 
+then click on install now.
+This now runs through the installation 
+process, and it looks like the setup  
+was successful, so I'm going to click on close.
+Let's now go down below and just like we 
+did before, you can type in command prompt  
+and then launch the command prompt. 
+Once again, we can type in Python  
+–version, hit enter, and you should now see that 
+Python is installed. Here I have Python 3.9.2.
+OK, now that we've verified that Python is 
+successfully installed, let's close command  
+prompt and once again, let's go down to the 
+taskbar, except this time let's type in Python.
+And here you should see the best match for Python. 
+Here I see Python 3.9. Let's click on this.
+This opens up the Python terminal, and I'll 
+zoom in just a little bit, so it's a little  
+bit easier to see, and we can type in code 
+directly here and Python will interpret it.
+So, what's an example of that?
+So, what if we type in what is 1 + 2 and I'll 
+put a question mark in and let's hit enter.
+And this doesn't work.
+I see something that says 
+syntax error, invalid syntax.
+Now the syntax is the rules of a programming 
+language and when I typed in what is 1 + 2?
+This doesn't align with what Python is expecting.
+I need to type in a valid expression that 
+the Python programming language understands.
+So, instead of typing in what is 
+1 + 2, well I could just type in 1  
+and I'll type in + 2, and then I'll 
+hit enter and there gives me 3 back,  
+so this was a valid expression in 
+the Python programming language.
+Now, what's neat is when I type something 
+into Python, like 1 + 2, Python takes each  
+line of code that I enter. So the 1 + 2, 
+it interprets it, and then it evaluates it.
+So, it gave me 3.
+There are other programming languages 
+where you have to compile it first  
+and then you can execute it, but with Python 
+it'll interpret it as you’re going to.
+Now, now that we've typed in just a very 
+basic expression, and we've evaluated it,  
+why don't we try a built-in function 
+called print. Here I could type in print,  
+I'm going to open the parentheses, insert double 
+quotes, and then I'll type in Hello World,  
+and I'll close my quotes and close my parentheses.
+Now this is one of the go to examples anytime 
+you're starting with a new programming language.
+It's just hello world. Just testing it out.
+I'll hit enter and here it says Hello World, so 
+it's sending back exactly what we sent into this  
+function. Now as we go throughout this, our 
+programs are going to get a little bit more  
+complex, but this is just showing you the basics 
+of how you can already start executing some code.  
+To exit out of the Python terminal, 
+we can click on the X symbol up here  
+or we can type in another function called exit.
+Open your parentheses, close your parentheses,  
+then hit enter and that'll 
+close out the terminal window.
+Now we executed some of our first code directly 
+in the Python terminal, but you can also use  
+a text editor to write code. On Windows, 
+there's a text editor called Notepad.
+Once again, go down to your taskbar and 
+in the search field type in Notepad.
+I'll click on this right here.
+This opens up Notepad, and I'll zoom in 
+just a little bit more. Now you probably  
+never knew that you can 
+write source code in Notepad.
+It's actually a pretty powerful app. So right 
+here, just like we did in the previous example,  
+I'll type in print and then I'll open 
+my parentheses, put in a quote, and then  
+I'll type in Hello World once again, and then 
+I'll close my quotes and close my parentheses.
+So, here's my source code written in Notepad.
+Now of course I want to be able to run this, so 
+I need to save it as an appropriate file type.
+I'll go up to the file menu, go down to save 
+as, and this opens up the save as prompt.
+Now maybe I'll just call this file, let's call 
+it Hello World, and if I just leave it as that,  
+it'll save it as a .txt or basically 
+just a standard text document.
+Now I want this to be a Python file and it 
+turns out that the extension for Python is .py,  
+just like the extension for text files .txt, 
+Python is .py, so here I'll type in .py.
+Depending on the programming 
+language that you're using,  
+different programming languages 
+have different extensions.
+For example, JavaScript is .js and every 
+language will have its own extension.
+Now that I've typed this in, I'll save 
+it to my desktop and then click on save.
+And here now I see the file on 
+my desktop called Hello World.
+You'll also notice that it has the Python 
+logo on it. Because we installed Python,  
+it correctly identifies that this is a .py 
+file and so it sees that this is a Python file.
+Now let's test this out to see if we 
+can run this source code that we wrote.  
+Down below on the taskbar, 
+let's type in command prompt,  
+just like we did earlier, and 
+let's open up the command prompt.
+I've adjusted the command prompt 
+so it's a little bit easier to see,  
+and now I want to run this file 
+over here in command prompt.
+To do that, let me type in Python.
+So, this will let the computer know that 
+this is a Python file that I want to run.
+I'll put in a space, and I'll take my Python file,  
+and then I'll simply drag and 
+drop it over into command prompt.
+Now this is a really cool trick  
+where you can get the location of the file 
+simply by dragging and dropping it in.
+So here basically I'm saying I 
+want to execute this Python file.
+Next, I'll click on enter and here we see that 
+it prints hello world into my command prompt.
+This is exactly what I wanted it 
+to do, so Python went through,  
+and it interpreted the code in this file 
+and then it printed it here on my screen.
+You now know some of the basics of 
+both writing and running Python code.
+Congratulations, you just wrote your first 
+bit of source code, and you also ran it.
+You're making some good progress.
+Now, so far, we've just been writing 
+our code in a text editor like Notepad,  
+and then we've been running it, 
+and that works perfectly fine,  
+but it's not the most efficient way to write 
+code, and I just want to give a parallel example.
+Let's say that maybe you're 
+writing a document for school.
+You could write your document in Notepad. 
+Now of course it does have some downsides.
+You don't have a spell check.
+You don't have a grammar 
+check. You can't do formatting.
+So, although you can do it, it's 
+going to require a lot more work.
+And that same concept also applies to programming.
+Sure, you could write your code in Notepad, 
+or we can get what's called an IDE,  
+and that stands for integrated 
+development environment.
+It'll just make writing code a 
+lot more efficient and also easy,  
+and in a few moments, we'll see why that is.
+You have all sorts of IDEs 
+that you can choose from.  
+On Apple, you have Xcode. On Android, you have 
+Android Studio. With Ruby, you have RubyMine,  
+and there's also another one called Visual 
+Studio Code and that works very well with Python.
+It's a product made by Microsoft, so of 
+course I like it. I used to work at Microsoft,  
+but the great thing too is Visual 
+Studio Code is entirely free,  
+so let's go to Visual Studio 
+Code and let's get this IDE.
+To get Visual Studio Code, head to 
+the website code.visualstudio.com  
+and once you land on the homepage, you can 
+choose the operating system that you have.  
+Here when I click on the drop 
+down, you can get it on Mac,  
+Windows, or Linux, so it supports all of 
+the different major operating systems.
+I'm running Windows today,  
+so I'll click on download for Windows 
+and I'll go with the stable build.
+Once the download completes, down in the 
+bottom left-hand corner, click on the EXE.
+This opens up the setup process.
+I’ll agree, I'll Click to accept the 
+agreement and then click on next.
+I'll go with the default location.
+I'll click on next.
+You'll then get a screen that 
+says select additional tasks.
+I’d recommend checking all 
+of these different boxes.
+Next, let's go down and click on next. On 
+the last screen, let's click on install.
+This will now go through and install 
+Visual Studio Code on your computer.
+Once you're all done installing, let's click 
+on finish and launch Visual Studio Code.
+This now drops us into Visual Studio Code, and 
+by default, we'll land on the welcome screen.  
+If you ever want to get back to this screen again,  
+you can click on the help menu and then click 
+on welcome and that'll drop you right here.
+There are a few things we want to do before we 
+can start writing code in Visual Studio Code.  
+Over on the left-hand side, there's 
+an icon here for extensions.
+Let's click on that.
+This opens up extensions and up 
+here in the search field type in  
+Python. We want to install the Python extension.
+When you type it in, you should 
+see Python at the very top,  
+and when you click on this, you'll 
+see that it's Python by Microsoft.
+It should have something 
+over 30 million downloads,  
+and right here, if you don't yet have 
+it, you can install this extension.
+We're going to need this, so click on 
+install and make sure you add It. Once  
+you finish installing the extension, we 
+also want to select Python that we just  
+installed as the interpreter for Visual 
+Studio code, and this is really easy to do.
+On your keyboard, press control, shift, and P at 
+the same time, so that's control, shift, and P,  
+and that'll open up this screen right here and 
+up here, type in Python: select interpreter.
+This will allow us to select the 
+interpreter that we want to use.
+Now if you remember in Notepad, when we 
+wrote our code, it interprets that code.
+So, we basically want to tell Visual Studio 
+code what interpreter we want to use.
+So, I'll select this option right here  
+and now I can choose my interpreter, 
+and here you'll see Python 3.9.2.
+So, this is what we installed just a moment ago.
+So here I'll select this as my interpreter,  
+and now we're all set to start 
+writing code in Visual Studio Code.
+To get started, why don't we open up the 
+Hello World file that we created previously.
+Here I'll go up to the file 
+menu and I'll go to open file.
+This opens up my file picker and here 
+on my desktop I see my hello world file.
+Here you'll also see that this type of file 
+is now associated with Visual Studio Code.
+This is the Visual Studio Code logo.
+I'll select this file and then click on open.
+Now that I've opened the file, 
+you should recognize this.
+This is exactly what we wrote into Notepad,  
+except this time we have it open in Visual 
+Studio Code. Now you'll start to notice  
+some of the benefits of using an IDE or 
+an integrated development environment.
+First off, I have line numbers now, so 
+here if I add additional lines of code,  
+here I get all the line numbers 
+over on the left-hand side.
+In Notepad, we didn't get that.
+Also when I write in this function called 
+print, it highlights it in different colors  
+so I could identify what is the context or the 
+text that it's printing and what is the function.
+So here I get different colors.
+Also, when I hover over print, it 
+gives me some helpful suggestions  
+on the type of content that I 
+can enter within this function.
+So, this will make it a lot easier 
+as we start writing out our code.
+Now I can run this code 
+directly in Visual Studio Code.
+I'll simply go up here and I can now right click.  
+Right down here, there's an option 
+that says run Python file in terminal.
+When I select that, it'll open up a 
+terminal on the bottom of the screen,  
+and here I can see that it executed or interpreted 
+this file and here it prints out hello world.
+So, it gives me the output 
+of this code right up here.
+Along with right clicking on the screen and 
+running the Python file in the terminal there,  
+I can also go to the top right-hand 
+corner and I can click on this play icon.
+This will also run the Python file in 
+the terminal, so when I click on this,  
+here too, it ran this file and 
+here too I see hello world.
+So, this is just another way, probably a little 
+bit easier to see the output of your code.
+Now that we know some of the basics of how to 
+start writing code and how to run that code,  
+I want to show you how we can start working 
+with operators to work with numbers.
+And here I'm going to type directly into the 
+terminal down below, so I'll go down here to  
+the terminal and just like we did earlier 
+in the Python terminal, I can type in here.
+So here I'll type in 1 + 2  
+and I'll hit enter and here it interprets 
+that code, and it evaluates it to 3.
+So just like we saw earlier. One of the 
+things is you'll notice when I typed in 1 + 2,  
+I didn't include any spaces and spaces or 
+whitespace don't impact the calculation at all,  
+so I could also type in 1, space, and I'll type 
+in plus, and then another space, and hit 2,  
+and then hit enter and there too it also evaluates 
+it to 3, so using white space can actually make  
+your code more readable, so you could type it 
+in like this, or just include some white space.
+It won't affect what the outcome is. With 
+Python, I can use all of the standard  
+operators. Right up above, I showed you how 
+you can do addition, but here let's say 5 – 2,  
+I can also do subtraction, and here 
+it evaluates that to 3 as well.
+I could do a multiplication, so let's say 4 * 4.
+Now with multiplication, I enter in an asterisk.
+That's the multiplication symbol.
+Here I'll hit enter and it evaluates that to 16. I 
+could also do division. Here I'll take 10 / 5 and  
+here for division, division is the forward slash, 
+and then I'll hit enter and that evaluates to 2.
+Now with Python, let's say that 
+you start using multiple operators,  
+so maybe you're adding and 
+then you're multiplying.
+Python follows the default order of operations,  
+so let's say I enter in 2 + 2 
+and then I want to multiply by 5.
+What do you think this will evaluate to?
+Is it 2 + 2 which is 4 and 
+then times 5 which is 20?
+Or is it 2 * 5 which is 10, and 
+then you add 2 to that which is 12.
+Well here if I hit enter, it evaluates to 12,  
+because it's following the default order of 
+operations. Multiplication comes before addition.
+If you've ever heard PEMDAS or Please Excuse 
+My Dear Aunt Sally before, that's how you  
+know what the order of operations is. First 
+it'll evaluate whatever is in parentheses.
+Then it'll look at any exponents followed by 
+multiplication and division in the order of left  
+to right, and then it'll look at addition and 
+subtraction also in the order of left to right.
+Up above, I could also enter 
+in my expression up here,  
+so here I'll get rid of hello world and 
+here I'll say let's print out 2 + 2.
+Here I'll click on run and here 
+you'll see that it executes this  
+code Thanks for the suggestion! I’ve added this 
+to my list. Stay tuned. Cheers!and here this also  
+evaluates to 4. If I want to use an exponent, 
+I'll come up here. Let's remove the plus symbol,  
+and here I'll enter 2 asterisks, so 
+this will be 2 to the power of 2.
+And here if I click on the play button, 
+here that evaluates to four 2 * 2 is 4.
+But let's say I want to do a 2 to the 3rd.
+Here I'll evaluate and it comes out to 8. 
+I also have access to the floor operator,  
+so let's take an example here. Let's say I 
+want to calculate 5 / 2, and here I'll play  
+and right down here I see that's 
+2.5, so I have a remainder of .5.
+But let's say I don't want to 
+know what the remainder is.
+I just want to know how many times 
+it goes in without a remainder.
+This is also known as the floor.
+I could insert another forward slash and then I 
+could run it and here it tells me that it’s 2.
+But let's say I just want to 
+know what the remainder is,  
+I can use the modulus operator for that.
+I'll get rid of the forward slashes, and 
+right here, I'll type in the percent symbol,  
+then I'll hit go and here it 
+tells me that the remainder is 1.
+As I'm entering in numbers up above 
+and as I'm working with numbers,  
+let's say that I enter a very large number. 
+So, let's say I enter in maybe 1,000,000.
+Now I could go through here and I could 
+enter a comma and then I'll type in the zeros  
+and if I hit go here, you'll notice that 
+it doesn't print what I expect it to.
+That's because we don't want to use 
+commas as we're entering numbers.
+Instead, when you enter a number,  
+just enter it in as is and then hit go, 
+and here it prints exactly what we expect.
+So, you don't want to use commas 
+when you're entering in numbers.
+Now that we've entered in some numbers, and 
+we know a little bit about the basics of  
+how you can work with numbers and operators,  
+let's start working with some text 
+or what's referred to as strings.
+Let's say that I want to print what's up. 
+Now earlier, we printed out hello world  
+and it's the same concept here. I'll insert in 
+double quotes and then I'll type in what's up.
+So, here's what's up and I'll click on this play  
+icon and down below you'll see 
+that the output is what's up.
+Now I surrounded what's up with double 
+quotes. Now instead of using double quotes,  
+I can also use single quotes up here.
+So, if I enter in single quotes and then hit play, 
+here too, you'll see that I get the same output,  
+so I can choose whether I want to 
+use double quotes or single quotes.
+So why would I want to use 
+one versus the other? Well,  
+here, what's up should actually have a single 
+quote, so I'll insert a single quote there.
+Now one of the problems is when I enter 
+a single quote here, it thinks that this  
+is the end of the string, and so now if I try 
+to run it, I get a syntax error down below.
+So instead, I can use double quotes here 
+and I'll use double quotes at the end,  
+and I could use a single quote in the middle 
+and then here I'll run it and it works properly.
+Now let's say you wanted to use 
+double quotes within your text.
+Well, you could surround it with single quotes 
+and that way the double quotes would show up.
+Now here too, just like we saw before, 
+whitespace doesn't impact how the code runs,  
+so if I want to insert a space here and maybe 
+insert a space there and another space here  
+and I run this code, here you'll see 
+that I get the exact same output.
+So once again, by using white space,  
+that can help make your code more 
+readable as you're going through.
+We now know some of the basics of 
+working with numbers and also strings,  
+but what if you want to make sure you 
+explain what's happening in your code?
+How do we do that?
+Well, we can use something called a comment, 
+so let's say that I have this code here and I  
+want to explain to someone what this does. Here 
+I’ll bring this code down to the second line and  
+I can insert a comment by entering in the hash 
+symbol or the number sign or the pound symbol,  
+so I'll enter that and here I 
+can say this prints some text.
+I've now typed in my comment 
+and let's run this now  
+and here you'll see that this doesn't 
+affect at all what appears down here.
+I simply get what's up.
+So just like we got before. Now I could also take 
+a comment and I could put it on a line with code.
+So here I'll put it after my code,  
+I'll hit run, and here too you see 
+that it just gives me what's up.
+Now one of the neat things is,  
+let's say I start writing a lot of code 
+and it's starting to get fairly complex.
+I can comment out a line of code.
+I'll put the hash symbol in front of my 
+code and here you see it turns green,  
+so this is the IDE’s way of 
+telling me that this is a comment.
+And here now, if I hit run, you'll see that I 
+get no output. That's because I commented out  
+this line of code, so here I could bring it 
+back by removing it and now here if I run it  
+once again it shows me what’s up. So comments 
+are pretty valuable as you're writing code.  
+Not only to let other people know what's happening 
+in your code and what different blocks of code do,  
+but you can also use it when 
+you're troubleshooting to  
+cancel out certain areas of your code 
+until you're ready to test them again.
+Next, we're going to look at 
+how you can use variables,  
+and the easiest way to explain a variable is to 
+use this red bucket that I have here from my son.
+So, let's pretend that this red bucket here 
+is a variable and we can name the variable.
+Why don't we just call it red 
+bucket, just to keep things simple.
+Now I can assign a value to this 
+variable, so let's take for instance.
+Let's say I want the red 
+bucket to equal my name Kevin.
+So here I have my name.
+I can take this value and I 
+can assign it to this variable.
+So now if you say well, what 
+is the red bucket, well,  
+right here the red bucket is currently Kevin.
+So once again, I've assigned that value to it.
+And this is a string or basically 
+my name is referred to as a string.
+It's just a set of characters.
+Now I could assign other types of data to 
+this variable as well, so maybe I say, well,  
+actually I want the red bucket now to equal 
+a number, so maybe I want it to equal #8.
+So, I'm going to say red bucket, you're now 
+equal to 8, so I'm going to take my name.
+We're going to pull that out, and here I'll take 
+the number 8 and we'll put it in the bucket.
+So now if you ask me, well what is the red bucket?
+Well, it's currently the number 8.
+That's a general concept of a variable.
+The variable can hold different values.
+Let's jump in now and see how we can 
+use variables. To create variables,  
+there are some rules that we need to follow, 
+or this is the syntax that Python looks for.
+A variable should only contain 
+letters, numbers or underscores.
+And also, we just need to make sure 
+that we don't start with a number.
+We can't use any spaces in a variable name.
+We also can't use any known keywords 
+to Python like break or try.
+And ideally, we want to make sure that a 
+variable name is short and descriptive.
+Those work best.
+So, for example, with the red bucket, 
+we'll now simply call the red bucket,  
+so it's pretty short and also descriptive.
+Also, variable names are case sensitive, so if 
+I wrote red bucket with a capital R and another  
+one with a lowercase r, Python would view those as 
+separate variables, so case sensitivity matters.
+OK, so let's create our first variable 
+and just continuing the example,  
+let's say I want the variable to be called 
+red bucket, so I'll give it this name  
+and now I need to assign a value to this variable, 
+just like I did with the bucket. I'll type in  
+red_bucket and I'll type in the equal sign and I'm 
+going to assign it the value of Kevin, my name.
+And here I'm using just a single equals sign. So,  
+what this does is it will assign 
+this value to this variable.
+So now here I could hit enter and let me 
+run this and here nothing shows up yet  
+because I've assigned this value to this variable.
+The next thing we could do 
+is actually print this out.
+So here let me say print and 
+let's type in red bucket.
+What's nice is because I'm using 
+an IDE, it recognizes that I  
+created a variable called red bucket 
+and I can just click on it here.
+Now if I click on the play icon, 
+here it'll print out Kevin,  
+so it's printing out the value 
+that's assigned to the red bucket.
+Now let's take another example here, 
+let's say I add another line and  
+let me copy this first line and 
+I'll paste it into the second line.
+And here I want to assign 10 to the red bucket.
+So here I start out by assigning 
+Kevin and then I assign 10.
+What do you think will print out?
+Let's click on the play icon 
+and here it prints out 10.
+And the reason why is, well, first 
+it assigns Kevin to Red bucket,  
+and so that's the current value. But then 
+on the next line of code, it assigns a 10  
+to the red bucket. So, the 10 overwrites Kevin, 
+and then when I print out the red bucket,  
+it's taking the last value that was assigned 
+to it. So, the way to think of this back to  
+the bucket example is I put Kevin in the bucket 
+and then when I put 10 in, I have to take Kevin  
+out and then I put 10 in, so at the very end 
+when you ask well what's in the red bucket,  
+well, the number 10 is the in the red bucket 
+because that's the last item that I put in.
+One thing that's really neat about Python 
+is when you're defining your variables,  
+you don't have to assign your variable a type.
+So here for example, for the red 
+bucket, I assigned it my name,  
+and that's also known as a string.
+And next I assigned a number, which is an 
+integer, but I don't have to go and say,  
+well, the red bucket is a string 
+or a red bucket is an integer,  
+it'll automatically know what data type 
+that I'm assigning to that variable.
+So down here in print, I can type in type  
+and then I'll open and close the 
+parentheses around this variable.
+And so now let's run this and here 
+it's telling me that it's an integer.
+So basically here 10 is assigned to red bucket,  
+and so it's telling me that 
+that's currently an integer.
+Let's get rid of this line right here.
+So now Kevin will be assigned to Red Bucket.
+And when I run this, here you'll see that a 
+string data type is assigned to this variable.
+Now let's say that I want 
+to get rid of a variable,  
+so maybe I don't have a need 
+for the red bucket anymore.
+Down here I can type in del, basically 
+delete and this will delete a variable,  
+and here I can type in red bucket 
+again. I'll select the suggestion.
+Let me get rid of the type in the print, so I just 
+want to know what is red bucket? So if we run this  
+now, I'll get an error because it says red bucket 
+is not defined and that makes sense because here I  
+created the variable, I assigned the value, here I 
+deleted the variable, and here I try to print the  
+variable, but there is no variable anymore called 
+red bucket because I deleted it right up above.
+Next, I want to show you an 
+example of how you can request  
+input and then you can take that 
+input and assign it to a variable.
+So right here I simply typed in Kevin 
+and I assigned it to this red bucket,  
+but I want to allow input. So right up here, 
+let's delete Kevin or delete your name that  
+you entered in and here we'll type in the input 
+function. Here I'll open the parentheses and let  
+me type in double quotes and maybe I'll ask the 
+question what do you want to put in the bucket.  
+I'll enter a question mark 
+and then an additional space.  
+Now right down here, I don't want to delete 
+the variable, so I'll get rid of this.
+So right now, I'm going to ask for input and 
+then we'll print out whatever the input is.
+So here let's click on the 
+run icon and this will run it.  
+Right down here it says what do 
+you want to put in the bucket?
+And so maybe I want to put a shovel in,  
+so I'll click down in the terminal, 
+type in shovel, and then hit enter.  
+And here now it prints out shovel, because 
+that's now the value of the red bucket variable.
+Next, I want to show you how we can start 
+using conditional logic in our code.
+Basically, any expression that you enter 
+in breaks down to either true or false,  
+so let's just take an example.
+I'll go down a few lines and let me enter in 
+print and I'm going to ask is 5 equal to 4?
+One of the things you'll notice is when 
+I ask this question is 5 equals to 4,  
+I entered in two equal 
+signs and that's not a typo.
+Up above, I just entered in one equal sign.
+So why do I enter one here 
+and down here I enter two?
+Well up above, I'm taking this value or this 
+input and I'm assigning it to this variable.
+Here I want to run a test for equality.
+I basically want to check are these two equal,  
+and when you test or check for 
+equality, you use two equal signs,  
+so here let me remove the code up on top and 
+I'm simply going to print out is 5 equal to 4.
+Here when I run it, here 
+we'll see that no, it's false.
+5 does not equal 4.
+Now you might be saying, well 
+of course 5 isn't equal to 4.
+It's not equal to, so over here I can also 
+check are they not equal to one another.
+So here instead of the equal sign, 
+I'll insert an exclamation mark.
+So here I have an exclamation 
+mark followed by an equal sign.
+So, this is my way of asking the 
+computer is 5 not equal to 4?
+And I think we all know that's true.
+So, when I run it, here I get true back.  
+Along with equal to and not equal to, there 
+are many other operators that I can also use.
+I have less than, greater than, greater 
+than or equal to, and less than or equal to.
+And here you can see the symbol that you 
+can use for these different operations  
+and over on the right-hand side, you'll see a few 
+examples of how you could use this, so I could  
+insert any one of these into that print statement 
+and you'll get this corresponding result.
+We can now take these different 
+operations and we can combine it with  
+variables that we just learned about 
+and so let's type in an example here.
+So, I have a young son at home. His name 
+is Thomas and he's just three years old,  
+so let me create a variable and I'll call it 
+Thomas age and it's currently equal to three,  
+so I'm taking this value of three and 
+I'm assigning it to this variable.
+Now let's say I want to check, well, 
+is he old enough for kindergarten.
+So maybe I type in age at and 
+I'll type in kindergarten.
+And maybe age at kindergarten 
+is 5, so I'll enter in equals 5,  
+so I now have two different variables and I've 
+assigned a value to each of those variables.
+Now down here I can check the equality of these,  
+so maybe I'll say print and let's check is Thomas 
+age, is that equivalent to the age at kindergarten  
+and so then I'll hit run and here we'll see 
+that's false because basically Thomas age is  
+coming back as three, age at kindergarten 
+is 5, and those don't equal one another.
+So, we can do this same type of check 
+except we could do it using variables.  
+Now with this expression here, I'm simply checking  
+is Thomas’ age equal to the age at 
+kindergarten and it comes back as false.
+But what if I want to do something 
+a little bit more complex?
+What if I want to check, well if Thomas is 
+less than the age at kindergarten, well,  
+he should probably be in preschool or daycare. 
+And if he is 5, he should be in kindergarten.
+But if he's older than five, he 
+should be in some other class.
+And right now, this is just doing one 
+check, it's just looking at one point,  
+is he at the age for kindergarten?
+The easiest way to think of this is like 
+a flow chart, so here I have the current  
+age and depending on his age, any one of 
+these different scenarios could be true.
+Now I won't be able to do that with 
+the simple expression that we wrote.
+That's just checking one thing.
+If I want to check multiple different criteria, 
+this is when I can use an if statement.
+So, let's jump back into Visual Studio 
+Code and let's look at how we can use this.  
+Back in Visual Studio, I'm going to delete this 
+last line and I'll keep these two variables.
+The one with Thomas' age and the 
+other one with the age at kindergarten  
+and I'll enter down a few lines. Once 
+again, the white space doesn't matter,  
+so don't worry, you could enter 
+down a few lines and now we want to  
+enter in an if statement. An if statement is 
+really easy to write, you simply type in if.
+And here now I can do my check.
+So first I want to know is Thomas’ 
+age less than the age at kindergarten?
+So here I can type in my variable.
+Once again it gives me this helpful suggestion 
+of using Thomas’ age and first I can check if  
+he's younger than the age at kindergarten, 
+so let me enter in the age at kindergarten.
+So, this is going to be my first check.
+Once I finish entering in this 
+statement, I need to enter in a colon.
+And when I hit enter, this 
+drops me down to the next line.
+One thing you'll notice is it 
+automatically indented the line.
+What will happen is it will check this and if it 
+turns out that Thomas’ age is less than the age  
+at kindergarten. In this case, Thomas is 3, the 
+age of kindergarten is 5, so this would be true.
+It's going to evaluate this code, 
+so whatever code I enter in here,  
+it'll go through and it'll execute that.
+So, let's test this out and let me type 
+in print, so I'll enter in this function  
+and maybe we say something like 
+Thomas should be in preschool.
+Once I finish typing that in, I'll go to 
+the end of this line and hit enter again.
+Here you see that it continues to indent it.
+So basically, I can type in additional code 
+and whatever I type in in this indented space,  
+it'll go through and it'll 
+execute all of this code.
+Now I don't have anything else I want to run.
+I simply want to print out this message.
+Let's now test this out to see how it works.
+I'll go up here and click on run and here we get 
+the text that says Thomas should be in preschool.
+Now let's say that maybe Thomas is 10 now.
+So here Thomas’ age is 10 and that is 
+not less than the age of kindergarten.
+So, when I run, here I get nothing back because 
+it evaluates this, and it comes back as false,  
+so it doesn't execute this code.
+Now there's nothing else here, 
+so it simply returns nothing.  
+Now let's say I want some fall back, so let's say 
+if this is false, I want to say something else.  
+Down here I can use else, so it'll check 
+this, and it'll check if this is true,  
+but if it turns out being false, 
+then it'll fall back to else.
+So here I'll enter an else, a colon, 
+and here again it indents out.
+So here I could say, well if this isn't 
+true then execute this block of code.
+So here maybe I'll insert another print function.
+So let me type in print.
+I'll open up the parentheses and let me type in 
+Thomas should be in kindergarten or another class.
+So, I've now typed in my else statement, so 
+let's try running it to see what it will happen.
+So, it'll check the first if statement,  
+that'll evaluates a false, and 
+then it should fall back to else.
+Let's test this out. So when I hit 
+run, here it says Thomas should be  
+in kindergarten or another class, so this 
+logic is working exactly as we expect it to.
+Right now, I have two conditions here.
+I basically checked the first condition and if 
+this is false, it just falls back to this one.
+But let's say I want to check 
+for additional conditions.
+Here I'll enter down and let me get out of this 
+block of code, so I'll hit the backspace key,  
+and right here, I can enter something 
+called elif, basically else if,  
+so, you can go through and 
+check any number of conditions.
+It'll start at the top and 
+when it finds one that's true,  
+it'll display that message and then exit.
+But if this is false, it'll go to the 
+next one and check that condition,  
+and I can add any number of else ifs in here.
+So I'll type in elif and maybe for this 
+condition I want to know if Thomas is 5,  
+well he should be in kindergarten.
+So here I'll say Thomas age and here once again,  
+I want to check if it's equal 
+to the age at kindergarten.
+And remember, we don't enter in one equal sign,  
+we enter in two and here I'll enter in 
+the other variable age at kindergarten.
+So, this is going to be my check.
+And if this is true, we now want to evaluate 
+some code. Now just like we did before where  
+I entered the colon, let's make sure 
+we enter in a colon here at the end.
+That's part of Python syntax.
+I'll hit enter and this automatically indents me.  
+Here I'll type in print, and I'll type in 
+some text that says enjoy kindergarten.
+Now I've added this else if statement that 
+checks to see if he's in kindergarten.
+So, this last statement no longer makes sense 
+where I say Thomas should be in kindergarten or  
+another class, so maybe I simply remove this 
+and I say Thomas should be in another class,  
+so this will just be my catch all at the end.
+So, let's test this out to see how it works.
+So, let's say Thomas is 3 and I run it.
+In this case, the first condition here is true.
+So, Thomas should be in preschool 
+and here I get the text down below.
+Thomas should be in preschool.  
+Now let's say Thomas is equal to five, 
+or maybe he's five years old now.
+When we run it, here the first condition 
+is false, so it skips over that one.
+It looks at the second condition,  
+this elif, and here Thomas is 5 
+and that's the age at kindergarten.
+So here I get the text saying enjoy kindergarten.
+And let's say now that maybe Thomas is 10.
+So here when I run it, it evaluates 
+the first statement and, well,  
+he's older than the age of 
+kindergarten, so that's false.
+His age is not equal to the age of 
+kindergarten, so that's also false,  
+and then it falls back to the else statement, 
+and so Thomas should be in another class.
+So here we've just tested that this 
+is working just like we expect it to.
+Next, I want to show you how we can use 
+functions in Python and if you've ever  
+used any other programming language before, you 
+might know them as a subroutine or a method,  
+but it's all the same thing, so 
+we're going to use functions.
+And you've actually already been using a function.
+We used the print function. Right here you see 
+that we've been using print multiple times.
+This is a function. You call this 
+function, you pass in some text,  
+and then it prints it out on the screen.
+So that's just a basic example of a 
+function that we've already been using.
+Now the cool thing is we 
+can create our own function.
+So, what is a function?
+Well, it's basically a block of code  
+that you can package together 
+with a name and it does something.
+So, in this case anytime you call print 
+or input, it takes some action depending  
+on what that function is. The neat thing is it 
+makes your code more modular and also reusable.
+So here for example, every time we 
+want to print something on the screen,  
+we simply call this function 
+and then it takes that action.
+We don't have to enter in all the different code 
+associated with printing your text on the screen.
+We simply rely on this function.
+So, it makes your code a lot more reuseable.
+So let's go through and create our own function.
+Right now, I'll go through and delete all of this 
+code that we had and let's say just to show the  
+value of functions, let me just enter in print 
+and then Kevin Stratvert has a great channel.
+I'm going to enter this in three times.
+I figure the more I say it 
+maybe the more it sticks,  
+then the more you read it, 
+you might start to believe it.
+So here I've typed it in three different 
+times and now I'm going to run it.  
+Here I'll expand the terminal just so we 
+could see it and here printed out three times.
+Oh, but actually, look at that.
+It looks like I spelled Stratvert 
+wrong. Stratvert has a T in the middle,  
+and here I just say Stravord. Now because 
+I'm not using a function for this, well,  
+I'm using the print function, but I haven't 
+created a function to print this out three times,  
+so I'd have to go through, and I'd have to 
+correct every single Stravert throughout my code  
+to correct this and imagine that 
+you referenced something many,  
+many, many times in your code, and maybe you 
+make an error, you need to update something.
+It could be a pain to have to go 
+through all of your code to update it.
+So instead, you can create a function, and 
+I'll show you how we can create a function  
+to print this out multiple times, and 
+then we can call it whenever we want.
+OK, so let's create a function.
+I'll simply go down a few lines.
+To create a function, we have to type in def.
+This basically stands for define, so I'll 
+type in def and here we can type in a name  
+for our function, and I'm going to call 
+this function, let's say print Kevin.
+So, I've typed in my function name and then all 
+functions need to have parentheses at the end, so  
+I'll open the parentheses, close the parentheses, 
+and write down here, once again, just like we did  
+with the if statement, I'll insert a colon. So, 
+I now have my function. When I hit the enter key,  
+here too, just like with the if statement, 
+you see that it indents it automatically.
+So once again, it indents and any of the code 
+underneath here will be part of this function.
+Next, I want to enter in some code in 
+this function, so maybe I'll set up  
+a variable and I'll call this text and 
+let me insert some text here in quotes,  
+and maybe I'll say Kevin Stratvert has a 
+great channel, so that's going to be my text.
+And here maybe I'll just make the 
+error again where I don't have the T.
+Now right beneath that, here I could use 
+print and maybe I say let's print the text  
+and I want to print this three times.
+So, I'll insert it in three times right here.
+I'm going to delete this earlier example 
+here so we just have the function.
+So, I have my function now, can I run it?
+Let's try clicking on run. So I 
+click on run, and I get nothing back.
+And the reason why is right up 
+here, we've defined a function,  
+but we haven't actually called this function.
+So, I've defined what should happen when 
+I call this, but we haven't called it yet,  
+so here I'll go down and I'll backspace, 
+so I'm out of this block of code that's  
+associated with this function, and 
+here now I can call my function.
+So just like we called the print 
+function, here I could say print  
+and let's type in underscore Kevin and 
+then I'll open and close my parentheses.
+So right now, this will call the function. 
+So, when Python sees print Kevin,  
+it'll look up to this definition for 
+Kevin and then it'll execute this code.
+So, let's click on run to see what happens.
+Now look at that. Kevin Stravert has a great 
+channel and it printed it out three times.
+Oh, and look, there's that error in here.
+So right up here, I could go to my function.
+I could add the T and then 
+I can hit run and it looks  
+like that's now successfully updated in all cases.
+Now I could go through, and I could 
+call this function multiple times.
+This will really boost my ego.
+So now when I hit run, look how many times 
+it's printed out, Kevin has a great channel,  
+every single time I reference this 
+function, it'll go back up here,  
+it'll look at the function definition, and 
+then it'll run this code within that function.  
+Wth a function, to be able to call the function, 
+I first need to define it before I can call it.
+Here I'll remove these two 
+references to the function  
+and so let's take the call of the 
+function and I'll move it to the very top.
+So here I call the function and then I define it.
+So, if I hit run now here you get an error 
+because here it says we'll print Kevin.
+Well, it doesn't know about that function 
+yet because it comes up later on in the code.
+So once again, I need to make sure I call 
+this function after I've defined my function.
+So typically in code, you'll see all 
+the different definitions or all of the  
+different definitions of the functions at the top.
+One of the neat things too about 
+using Visual Studio Code is here  
+when I click over in the function and I 
+hover over, I can collapse this function.
+So let's say I'm writing code and I want to have a 
+whole bunch of functions that do different things.
+I can collapse it and then that way it 
+clears up my view a little bit and here  
+I could expand it if I need to jump into this 
+function and update any of the code within.  
+With this one function that I defined on 
+top, currently I don't pass anything into  
+the function and I also don't get 
+anything back from the function.
+If you remember the print 
+example, here with print,  
+I'm passing in certain text that I want to print.
+So basically, I'm sending in 
+an argument or a parameter,  
+and I can do the same when I create a function.
+So, let's say instead of entering the text here 
+within the function, let me actually get rid of  
+this line right here, and right up here as part 
+of my function definition, I'll type in text.
+So, as I define my function, it's 
+expecting me to pass in some value.
+So, let's now go down here and look at the 
+position where I'm calling my function.
+It says print Kevin and here I can now pass 
+in a value or basically pass in a parameter.
+So, I'll type in Kevin 
+Stratvert has a great channel.
+So here you'll see as I call this function, 
+it's passing in this parameter or this argument.
+When I pass this in, here in the definition, it 
+says it's expecting some text to be passed in  
+and down below the print is taking that 
+text that I pass into this function.
+So now when I hit run, here 
+you'll see the same result.
+Kevin Stratvert has a great channel  
+and this is just an example of how you 
+can pass values into your function.
+Next, I want to show you how we can 
+put an if statement within a function.
+So here again I'll type in def.
+This will define my function and I'm 
+going to call this school age calculator.
+So, I want to basically 
+determine based on a child's age,  
+where should they be in school, and 
+I want to get two different values.
+I want to get the child's age, 
+so I'll type in age as one of the  
+parameters or arguments I want to get, 
+and I also want the name of the child.
+Now, just like we did before, let's put in 
+a colon here and then let's press enter.
+Here once again, you'll see that 
+it automatically indents me and  
+so that shows that whatever code I 
+write here is part of this function.
+Now I want to insert my if statement, so I'm going 
+to check first off if the age is less than five.
+Once again, I'll insert the colon, and when I 
+press enter, here it indents me even more so.
+Now I'm within this if statement,  
+so if this evaluates to true, 
+we're going to execute this code.
+If it's true, I want to display some text, 
+so here I'll call the print function.  
+Here I'll open it up and maybe 
+I show some text that says  
+enjoy the time. You're still a young 
+guy, you don't need to be in school yet.
+So I've typed in some text. Now earlier 
+we've just been printing out text,  
+but I can also print out 
+variables together with text.
+So here I could enter a comma 
+and then I'll type in the name.
+Here I'll type in another comma and let 
+me enter in quotes again, and I'll say  
+is only, here I'll enter another comma, 
+and then I'll type in the variable age.
+So here you can see what it'll do, let's 
+say the age is 3 and the name is Thomas.
+It'll say enjoy the time, Thomas is only three, 
+so that's what will display if he's under 5.
+Let me hit enter and here now I 
+want to enter another condition,  
+so I'll hit back space so I go back, and 
+here I'll enter elif, basically else if  
+and I want to say if age let's 
+say, is equivalent to five,  
+then I'll enter the colon and here maybe I'll say 
+enjoy kindergarten, and then I'll show the name.
+So here I'll type in print and 
+then I'll open the parentheses  
+and I'll type in the quotes and 
+here we'll say enjoy kindergarten,  
+and here I'll type in a comma and let me type in 
+another comma here and then I'll display the name.
+So here it'll say enjoy kindergarten, Thomas.
+And lastly, I want to add one more condition, 
+so I'll hit enter, backspace, and here I can  
+say else, colon, and here, maybe I'll say print 
+and this one, I'll just display text and I'll  
+say they grow up so fast exclamation mark. 
+I've now finished defining my function and I  
+have all of the different conditions within 
+the function, so here I could enter down,  
+and I'll press backspace twice, so I exit out 
+of both the conditions and also the function.
+So now here I can call my function. So,  
+I'll call school age calculator and here 
+I need to pass in two different values.
+I'll pass in the age, I'll enter a comma, 
+and then I'll type in the name, Thomas.
+So now if I run this, here you'll see that it 
+calls the function and then it goes through  
+all of these different conditions, and so here, 
+while Thomas is less than five, he's only three,  
+so it says enjoy the time, Thomas is 
+only three, and here we can test it out,  
+here I'll change it to five, and if I run 
+it here, it says enjoy kindergarten, Thomas,  
+and let's say Thomas is now 10, and I'll run 
+it, and here it says they grow up so fast.
+So here now you see how we can call a function 
+and here we pass in values into that function,  
+and it uses those values to run an if 
+statement and to evaluate which one is true.
+Next I want to show you how you can also 
+get a parameter back from your function.
+So so far, we've looked at how you could just run 
+a function on its own, how you could pass values  
+into the function, and now we're going to look at 
+how you can get a value back from the function.
+I'm going to go through, let's remove this code 
+right here, and let's start again from scratch.
+For this one, it's just going 
+to be a really simple example.
+I want to know what is your age going to be in 
+10 years and we'll use a function to do this.
+So here once again, let's define 
+a function by typing in def  
+and here the function name will be add ten to age.
+Once I've typed in the function name,  
+here I want to get one bit of input 
+into my function or one parameter.
+Here I'll type in the age, so 
+someone will send in their age,  
+and then the function will add 10 to that age.
+At the end of the definition of the 
+function, let's enter a colon and hit enter.
+Here this automatically indents me and now right 
+now I want to figure out what the new age is.
+So here I'll create a variable called New Age  
+and I want to set that equal to 
+the age that's being passed in.
+So, I'll type in age and I'm going to add 
+10 to it, and right underneath that now  
+once the function runs through and it does 
+its magic, I want to return that value,  
+so here I'll type in return, and I want to 
+return the new age, so I'll select this.
+This will send the value back or return the 
+value once the function is done running.  
+Here now, I want to call my function, 
+and when I call the function,  
+I can assign that return value to a variable.
+So here maybe I create a new 
+variable called How old will  
+I be and I can set that equal to my function.
+So here I'll call the function add ten to age  
+and here I want to pass in let's say my 
+son who’s three, so I'll pass in three.
+So once again, if I run this right 
+now, it won't actually do anything.
+It's assigning the output, which is 13 to how 
+old will I be, but now I need to print it out.
+So right down here let me type in print and 
+I'm going to print in how old will I be.
+And now if I hit run, here we'll 
+see that that comes back as 13.
+Now once again, just to see how this 
+works, here I'm saying how old will I be?
+This is a variable and I'm assigning this value 
+to it, which is basically my function of add  
+ten to age, and I'm passing in three, so here 
+it gets the age of three, it takes 3, adds 10,  
+it assigns its new age and once it's done running 
+through the function, it returns the new age.
+So, the new age is 13 and it assigns 13 to how 
+old will I be and then here it prints out 13.
+So that's how it works, and that's how you can 
+get or you could return a value from a function.
+Next, we're going to look 
+at how you can use loops.
+What is a loop?
+Basically, it allows you to execute a block of 
+code multiple times, so think of it this way.
+Every single week my wife 
+comes to me and says, Kevin,  
+can you take out the trash, and 
+she asks me that every single week.
+So, in a sense, that's kind of like a loop.
+All right, let's jump on the PC and let's 
+see how we can create a loop in Python.
+So, let's now create a loop and there 
+are two different types of loops.
+One of them is called a while loop and 
+the other one is called a for loop.
+We're going to start with a while loop, 
+and it's actually pretty easy to do.
+I'm going to create a variable, just call 
+it X and I'll assign it the value of 0.
+And so here now I can type in a while loop.
+So, I'll say, let's say while and 
+let's say X is less than five.
+So, while this value is less than five, I want it 
+to execute some code, so here I'll insert a colon.
+We do this with our if 
+statements, with our functions.
+Here when I hit enter now, it automatically 
+indents me, so I'm now within the loop.
+And here I could just say let's say print X, so 
+I'll enter that in and then right after I print X,  
+I want to make sure I increment X, 
+otherwise it will be an infinite loop.
+So here I'll type in X = X + 1, 
+just a really simple example.
+We start out at zero and here it 
+will say if X is less than five,  
+in which case it starts at zero. It is, so 
+then it prints X, and then we add one. So  
+now X is 1 and X is still less than five, 
+so it'll keep executing until it reaches 4.
+So, let's run this to see how it works. So 
+here it prints out 01234 and then once X = 5,  
+well, it's no longer less than five, so 
+then we exit our loop and it's all done.
+Note, that's the basics of how you 
+can create just a very simple loop.
+There's also another loop called a for loop, so 
+I'll go down right here and let's type in for.
+And this is also pretty simple. Here I can type 
+in for and let's say 4 X in range, let's say five  
+through 10, and then here 
+I'll close the parentheses,  
+enter a colon, and here too, 
+I'll print the value of X.
+Let me delete the code up above, and here 
+what it'll do is it'll go through that range,  
+so when I hit run here, you see that it starts 
+at 5 and it goes all the way up until 10,  
+but it doesn't include 10, so this is 
+another form of a loop that you can use.
+You can do some pretty neat things with loops. 
+Here for example, I have the variable days and  
+I have an array assigned to it and 
+these are just all the days of the week.  
+Here I can use a for loop to write out all the 
+days of the week, so here I could say for d,  
+here I'm creating a variable, and I'll say in 
+days, so here I'm looking at this variable.
+Here I'll insert a colon and maybe I just want to 
+print out the value of d. So, as it goes through  
+each day of the week, and here I can enter run 
+and here it'll go through the variable of days,  
+and here it prints out every single 
+day of the week, so that's pretty cool.
+Now, one of the neat things too is you can start 
+using some of the logic that we learned up above  
+in your loops, so let's say that I want 
+to know what are all of the days before  
+Thursday, and once we hit 
+Thursday, I want you to stop.  
+Here I can insert an if statement, so I'll say 
+if and let's say if d is equivalent to let's say  
+Thursday, so I'll type in Thursday, and at this 
+point I want it to stop. So I'll type in break.
+So here if we click on run, here you'll 
+see it goes through Monday, Tuesday,  
+Wednesday and then it looks like it hits 
+Thursday, and at that point we stop the loop.
+So, at that point we break,  
+and we no longer print any of the other days. 
+With loops, we can also skip over items.
+So, let's say that once we get to Thursday, I 
+don't want it to include Thursday in the list,  
+but I still want it to continue 
+and look at Friday, Saturday,  
+and Sunday. Instead of using break, 
+I can use something called continue.
+So now when I run the code, here 
+you'll see Monday, Tuesday, Wednesday,  
+and then it found Thursday, and we 
+simply want to skip over that item.
+So, we added continue.
+So here you see it skips over and then 
+we get Friday, Saturday and Sunday.
+So once again you can use logic in your loops.
+You could also have it break and 
+continue. So far throughout this video,  
+we've been looking at some of the fundamentals, 
+and we've been writing all of our own code;  
+however, one thing you can do is you can 
+build on top of what others have already done  
+using libraries and also modules, and there are 
+lots of fantastic libraries that you can use.
+Let's say for instance that we 
+want to print out the value of Pi.
+It turns out there's an 
+existing library called math.
+We could simply type in import and type in math,  
+and right beneath that, let's use our standard 
+print function, and here I'll type in print.
+And why don't we say something like pi is,  
+and then I'll insert a comma and here now I can 
+refer to the math library and I'll type in .pi.
+So, I want to get the pi value back  
+and here as I'm typing that out, you'll see 
+all sorts of suggestions of what I could use.
+So here when I click on run now, 
+here it'll print out the value of pi.
+So once again, when you're programming, you don't 
+necessarily have to write everything on your own.
+Instead, you can build on top of what others 
+have done. If you were following along today,  
+you might have occasionally run into different 
+errors as you were trying to execute your code  
+and they can really be a pain to resolve.
+I want to go through three of the key errors that 
+you might run into and how you can resolve them.
+So, let's take one example.
+Here I'm going to type in print, 
+and I'll type in Hello World.
+Now if you've been following along, you probably 
+know that every time I type in this function,  
+and I type in text, I need to include my 
+quotes around this, but I haven't done that.
+When I hit run right now, here I get an error,  
+and this is referred to as a syntax error 
+and the reason why is, I didn't follow  
+the rules of the print function, or I 
+didn't follow the syntax rules for Python.
+The best way to troubleshoot these 
+is to simply look through your code  
+to find out where the error might be.
+So here I get name error 
+hello world is not defined.
+So here it thinks hello world is a variable.
+So, this is one way where you can look at the 
+error message down here and that'll help you  
+troubleshoot up above what the problem is. Now you 
+might run into another type of error, let's say I  
+take 10 / 0 and then I try to run this, and we all 
+know that you can't divide by zero. Right here I  
+get a zero-division error division by zero. This 
+is referred to as a runtime error. It just fails.
+Now you could look down here at the error 
+message to see what it was and that might  
+help you troubleshoot where the problem is in your 
+code, and typically when you get an error message,  
+you could go to something like stackoverflow.com 
+and you can look up your error message to see  
+if other people have encountered similar errors 
+and that'll help you get down to the root cause.  
+And lastly, there's another type 
+of error that you might encounter.
+Let's say I type in name equals. Let's say Kevin,  
+just like we did earlier and here now, let's 
+say I want to print, and I'll say hello name.
+So, let's say I want to print the 
+name that I assigned to this variable.
+Here let me insert the 
+parentheses and then I'll hit run.
+So down here, it just says hello name, and it's 
+not printing out Kevin. Now these errors here  
+these are referred to as semantic errors and 
+these are notoriously hard to troubleshoot and  
+the reason why is because everything is working 
+as it should based on how you programmed it.
+But you're not getting the expected result.
+So, for these you typically have to sit 
+down, look through your code, evaluate  
+is everything working how it should, 
+so these will tend to take more time.
+All right, well that now brings 
+us to the end of this video.
+Hopefully by now you understand the 
+fundamentals of programming using Python.
+If you enjoyed this video, please give it 
+a thumbs up. Also, if you enjoyed this and  
+maybe you'd like to see more content like this 
+in the future, please consider subscribing.
+Also, if you have any feedback or if you want to 
+see me cover any other video topics in the future,  
+please leave a comment down below.
+All right, well that's all I had for you today,  
+I hope you enjoyed and as always, 
+I hope to see you next time, bye.

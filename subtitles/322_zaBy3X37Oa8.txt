@@ -1,0 +1,614 @@
+so you're in the gym lifting weights
+hidden pbs doing deadlifts and
+occasionally staring over that massive
+dude in the squat rack but there's
+something missing you guessed it
+machine learning in this episode of code
+that we are going to be building our
+very own
+deadlift machine learning application
+with python in 15 minutes
+what's happening guys welcome to another
+episode of code that as i mentioned in
+this episode we are going to be building
+our very own python machine learning
+application now whilst we're going to be
+doing it for deadlifts you could extend
+this out to a bunch of different types
+of exercises in fact we recently did a
+live stream where i showed how to extend
+this out to different types of exercises
+as well as form tracking but back to
+code that in this episode we're going to
+be building out this app and as per
+usual we need a couple of rules first
+and foremost i'm not going to be allowed
+to take a look at any existing code or
+any documentation if i do it's a one
+minute time penalty
+now we need a couple of constraints
+namely the time limit for this
+particular task we are going to be
+setting a time limit of 15 minutes there
+is a ton of code to come into this
+so 15 minutes is going to be fun now as
+per usual we need a couple of penalties
+so what happens if i don't hit that 15
+minute time limit well it is going to be
+a 50 amazon gift card to you guys so
+without further ado ready to do it let's
+get to it alrighty guys let's get ready
+to do this 15 minutes on the clock
+let's go
+okay so the first thing that we're going
+to need to do is import tkinter so
+tkinter is
+a
+python library that allows you to build
+interfaces and we're also going to
+import custom ting tkinter as ck all
+right then we need to import some
+dependencies python so import pandas as
+pd so that's going to help us work with
+our data frame so we're going to import
+numpy and that's just going to help us
+with some data transformation then we
+are going to import pickle
+so we're going to use pickle to load up
+the machine learning model so it's
+called deadlift.pickle so we're going to
+be able to load that up okay so we've
+imported those then we're going to need
+media pipe the media pipe is going to
+allow us to do our pose tracking we are
+going to import
+cv2 which is open cv and then we're
+going to import some stuff from peel so
+our pillow so from pillow import uh
+image
+image tk
+i did a bit of practice for this one
+guys and it was cutting it close all
+right so then that's that done then we
+need to from landmarks import
+landmark this is just a set of column
+names so over here you can see i've got
+all of the different coordinate names
+there's nothing special in there okay so
+those are our base dependencies now
+imported now we need to create the
+window for uh
+tkinter so i'm going to set t window
+equals tk.t
+k
+and then we can go window.geometry
+really need to um do some
+typing practice a 480 by 700 that's
+going to be the size of the window and
+then we can set the title
+by setting window.title and we're going
+to call it swoo boy
+and then we're going to use custom
+tkinta to set the appearance mode to
+dark i think this just makes it look a
+little bit better and then we can type
+in window.mainloop
+it should start mean loop oh
+uh all right and then we can kick this
+off so this should give us a little pop
+up and down the bottom i cannot import
+landmark from landmarks
+could be from landmark
+oh
+[Music]
+no
+i don't have time for errors
+all right
+all right cool so that's our base app
+right so it's square magic right okay
+now what we need to do is create a
+couple of labels so we're going to have
+a class label
+counter label
+and a probability label
+so these are going to be the titles for
+our boxes and then class
+box counter
+box
+and then a prob
+box
+okay all right
+and then we need to do a little vs code
+magic multiple cursors boom boom boom
+boom equals ck dot ctk label
+and then we're going to assign window to
+that and then height equals 120
+this looks so cool i saw python engineer
+do this recently a python engineer one
+of those guys doing the scanner things
+oh wait with should be 120
+height should be
+40. so this just defines how big each
+one of these and then text and the score
+font is going to be equal to
+on
+arial
+and then size 20 and then text
+underscore color
+going to be equal to black
+then we can close that and then we need
+to run
+uh
+dot
+configure
+actually dot place
+this just dictates the position and
+we're gonna set y equal to i don't know
+like one to begin with
+and then we need to do that again and we
+need to configure i know why are they
+tabbing in
+dot configure and we uh so configure is
+basically going to dictate what we
+actually what shows up in those labels
+all right so we've got a couple of
+issues there
+let me zoom out a little bit so you can
+see that okay and then we're going to
+set pad x equal to 10
+for these three down here
+and i'll show you what this looks like
+in a sec so this is going to be the
+label for class
+it's going to be the reps actually we'll
+call this stage
+and this is going to be the label for
+probability
+okay and then
+uh we need to spread them across so this
+should be 160 i think
+vaguely spread out
+okay that looks good that looks good all
+right and then we need to set the
+foreground color fg color
+equal to blue
+beautiful all right kill that's looking
+good and then we need to spread these
+out as well so x
+so we'll put them in line with those
+labels you'll see this in a sec 300 and
+then we're going to tab bring these down
+a little bit so the
+place allows us to dictate the position
+so if it's height 40 so let's make it
+41.
+um boom all right cool that's looking
+good and then we can run this again
+right so you can see we've got three
+boxes there so stage reps prob and then
+we've got three different boxes we're
+going to be able to update these
+dynamically when we actually build our
+machine learning model all right cool
+next thing we need to do is we need to
+create a button to reset our counter so
+first
+to create a function so def reset
+counter
+and we're going to grab the global
+variable counter
+and set it equal to zero
+and then we need to create a button so
+button equals ck dot
+ctk button
+and then we can basically just copy
+everything from
+this particular label
+and that's going to be our button two
+button we need to pass through specify
+what the button is going to be called so
+we'll just call it reset
+so that will dictate the text and then
+we need to pass through what command we
+want to trigger when we go and hit that
+button so we can pass through command
+equals reset
+underscore counter
+boom okay uh and then we need to place
+it so place is really important because
+that dictates where it's going to be so
+x equals 10 y equals let's set that to
+like 600 so save that
+run that how we looking
+cool so we've got a button reset it's
+not doing anything at the moment because
+we're not updating anything
+and then what do we need to do so uh
+button and then we need to create a
+frame so this is going to be a
+placeholder for our image when we
+capture it from our webcam so
+frame
+equals tk.frame and then we're going to
+specify the height equals
+480 the width equals 480
+and then frame dot place
+and then x is going to be equal to 10 y
+is going to be equal to like 90 i think
+l main is going to be the updating label
+so tk.label and then we're going to pass
+through the frame to that
+lmain.place
+going to be x
+equals 0.0 i'll be completely honest i
+don't know what i managed to do to get
+the the frame to work but getting opencv
+to work with this is a little bit
+finicky but this seems to work
+all right let's run this
+cool so we've got a placeholder so
+you're not going to see anything just as
+of yet but that's fine it is working
+okay then frame then we need to import
+media pipe so uh
+mp underscore drawing so these are going
+to be our drawing utils
+mp.solutions.drawing
+utils and then we need to import the
+pose estimation model so mp.solutions
+oppose and then oppose equals
+oh my gosh
+mp.pose dot pose and then we specify min
+tracking confidence
+equal to 0.5 i really want to get to
+writer type and actually do
+some typing practice min detection
+confidence equals 0.5
+okay that looks good okay and then we
+need to import our deadlift models with
+open
+deadlift
+got pickle so we're going to use pickle
+to open this and then read binary
+as f model
+equals
+pickle dot load and then pass through f
+and then we need to
+get our video captures to cap
+equals cv2.video
+capture uh my webcams on video capture
+device three we're going to set a
+variable for current stage so this is
+going to be whether or not we're up or
+down in our deadlift we're just going to
+set that to a blank string for now we
+set up a counter and that's going to
+track how many dead lifts we've done
+using machine learning and then we need
+um body lang
+prob body
+body lang
+class
+and this is going to be a blank string
+so the class is going to be up or down
+and then we'll pass that to current
+stage so we need two holders um this
+should be a blank array so this is going
+to be the probability of each one of
+these specific poses do you see me use
+that a little bit in a sex or body lang
+class okay that looks good and now we
+can go and create a detect function so
+def detect so this is actually going to
+be running a loop so we're going to loop
+within a loop so
+we need to make all those variables
+global so global equals
+current stage
+global eco
+counter
+global
+bloody lang
+sometimes i wonder if i'd be able to
+smash these out so much faster if i
+could just type accurately body lang
+prob
+want to be like that dude from harvard
+that types like 250 words a minute okay
+cool so we've got all of our different
+variables instantiated how are we doing
+for time
+oh my god five minutes left there oh
+there is no way
+come on come on okay same thing all
+right so we need to go and capture our
+frame so red frame
+equals cap dot read
+uh then we need to convert it from bgr
+to rgb so image equals cv2 dot cvt
+color
+pass through the frame
+and then cv2 dot
+color uh equals a bgr underscore bg r2
+rgb
+and then we are going to process it so
+uh results so we're going to pass it to
+the pose estimation model because pose
+dot process
+pass through that image
+and then we can go and draw the poses so
+this one's a nightmare to type so mp
+underscore drawing go draw underscore
+landmarks
+and then we pass through the image
+uh results
+dot pose landmark
+i think pose landmarks yeah and then mp
+underscore pose
+the results up here and then mp.pose we
+pass through the pose connections
+and then we need this thing called a
+drawing spec so mp underscore drawing
+dot drawing
+spec you don't get typekins for um
+the media pipe stuff which is a bit of a
+pain all right so then we specify color
+equals and this is just an rgb key so
+zero zero two fifty five and then
+thickness
+thickness equals two and then circle
+radius
+so this specifies how big or small the
+circles are going to be in our
+when we draw our pose estimation model
+so i'm actually going to be doing that
+all right and then we need to specify
+the color it's too fused or just change
+it up
+cool so that's that done and then we can
+go and so then we need to try
+us
+and then accept
+and then so that's going to be where we
+do our detections then we want to make a
+update to our image so l main
+sorry image equals
+what is it what is so we're going to
+slice it so we're going to cut down our
+image size it's going to be equal to
+image and then we're going to grab 460
+pixels
+or 60
+and then we're going to convert it to an
+array so we can type in image or create
+a new variable imagery equals image
+dot from array so this is from pill or
+pillow pass through that image and then
+we're going to convert it into a way
+that we can use it with tkinta so we can
+go image tk
+dot photo
+image
+pass through our image array
+and then we need to pass through el
+main.image
+bk i'm going to pause it if we manage to
+get this done image
+image tk equals image
+tk and then lmain
+dot configure
+image equals image
+image tk
+and then l main dot after
+the 10 and we're gonna loop through okay
+all right and then we can run detect
+here
+i'm gonna pause it
+oh my god we have a minute 40 left
+alright so this is running it so i'm
+gonna pause so this should be the first
+phase ideally we should get some pose
+estimation happening here
+all right cool so that's at least the
+first bit done right so i've captured my
+face you can see that we're actually
+doing pose tracking we're looking kind
+of okay right but there's a minute 40 to
+get
+the stage reps and probability counter
+working so
+you can see that we've got all these key
+points right so we're going to be
+passing these key points
+to the deadlift model so we'll
+effectively flatten them into a big list
+and pass them to be able to track our
+deadlift so if i actually bring the
+green screen down and start doing dead
+lifts now you'll actually see that this
+is actually doing hardcore pose
+estimation hold on let's take a look
+you can see it's tracking me
+kind of okay right
+all right but we've got to finish this
+so now what we need to do is we actually
+need to go and take all those landmarks
+pass them through to our deadlift model
+and make detections as to whether or not
+we're going up or down okay all right
+let's close this
+all right minute four minute 40. come on
+we can do it we can do it we can do it
+all right let's go
+all right so then we need to finish up
+in here so what we're going to do is
+we're going to create a row
+and we are going to go
+for res in results dot pose landmarks
+landmarks dot landmark
+and then we are going to unpack this
+into a subset of array so res.x res.y
+res dot z i always used to screw this up
+when i was doing practice visibility
+i spelled that wrong so many times and
+then we're going to wrap this in a numpy
+array
+numpy array
+and then we're going to flatten it and
+then convert it to a list
+and then we're going to pass it through
+to a pandas data frame so x equals
+pd.data frame
+we're going to pass that row in
+and then this is where the columns come
+into columns equals
+then marks uh yeah it's lane marks it's
+from we imported it right back up there
+all right there we go so that should
+create our data frame and then we need
+to the body length prob
+equals model dot predict
+robot so this is a scikit-learn model
+we're going to pass through x
+grab the first value the body lang class
+equals model
+dot predict
+pass through x grab the first value oh
+no i don't want to run it yet no
+stop quit
+all right cool cool so those are our
+uh detections and then so that's
+then what we need to do is implement
+some logic so if body lang
+class equals equals down
+then we're going to set the current
+stage to down so then body lang prob
+oh we're getting there
+all right
+so that's the 15 minutes up all right so
+we clearly didn't make it but doesn't
+matter let's wrap this up but i don't
+actually think we've got that much left
+we've got maybe like i think 10-ish
+lines all right so body lang
+anyway all right well that's gonna be
+the uh
+we'll save it for the amazon gift card
+all right we'll do it in a sec so body
+lang prob and then body lang
+ah man
+uh all right so then we're going to if
+we detect the classes down we're gonna
+and the
+probability is over 70 that we're going
+to set the current stage
+equal to down we're so close guys
+uh alif and then we're pretty much gonna
+copy this line here oh let's write it so
+if current stage
+equals equals down
+and body length so if we're now
+detecting that we're going up
+[Music]
+and the probability is over seventy
+percent or we'll set it like yeah we'll
+leave that seventy percent for now then
+we're gonna set current stage
+equals to
+up and then we're going to increment the
+count as a counter plus equals one all
+right cool so that's our detection logic
+then we just need to go and make the
+updates to our different labels and that
+was pretty much it so counter box
+equal dot configure
+text equals counter
+and then propbox
+dot configure
+text
+equals
+body lang prob
+uh we actually need all of this
+so that's going to give us the highest
+probability value and then
+class box
+dot configure
+equals text
+and then we are going to pass through
+the current stage
+i think that was it
+save let's run that
+[Music]
+cross fingers all right cool so we're
+getting something there we're not
+getting our probability pass through so
+there's an issue there so it should have
+detected the probability
+all right so we're clearly making
+detections that looks like it's working
+fine so we've got an issue in here
+the mps res.x res.y res dot z
+b i s i b i
+l i t y
+[Music]
+whereas in results the pose underscore
+landmarks dot landmark
+got flattened to list
+then passing the row we're then passing
+x
+[Music]
+let's just print the error if we get an
+error
+ah we were so close guys
+something wrong with visibility
+v-i-s-r spelt it wrong hold on b-i-s-i
+oh man i was saying i was getting that
+error wrong
+okay i think i just had this spelt wrong
+dad viz
+visibility instead of visibility
+cue the nervous music all right it's
+cool so you can see that we're getting
+the probability there
+stage is not being set that's kind of
+weird
+hype uh i've spelt this wrong hold on
+get rid of that extra d there save that
+we're not oh there we go all right cool
+so you can see it so we're now in the
+stage up
+down doing wraps
+you can see we're now estimating down
+this is up
+down
+up
+down
+up
+here's covering it a little bit let me
+move this
+and then we can go and hit reset
+you can see that's resetting the rep
+counter there
+not too bad
+so not quite 15 minutes so we clearly
+didn't make the time limit but uh i
+thought we did okay anyway here's the
+amazon gift card whoever gets it first
+he manages to claim it claim it
+i'm getting tongue tied now from trying
+to power through this anyway hope you
+guys have enjoyed this one i'll share
+all the code as well as a bunch of the
+other modules inside of the github
+repository in the description i'll catch
+you in the next one peace thanks so much
+for tuning in guys hopefully you enjoyed
+this video if you did be sure to give it
+a big thumbs up hit subscribe and tick
+that bell and if you've got any
+additional ideas for code that please do
+let me know in the comments below
+hopefully you're enjoying this series i
+love making them thanks again for tuning
+in guys i'll catch you in the next one
+peace

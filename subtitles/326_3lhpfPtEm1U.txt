@@ -1,0 +1,331 @@
+[Music]
+hello everyone and welcome to this video
+on python frameworks by intellipaat
+all of us are somewhat aware of python's
+popularity among developers
+various stats show that python has
+beaten java and made its own place on
+rankings but when it comes to working
+with python one must be completely aware
+of which framework to use in order to
+create better applications that is
+exactly what i will be talking about in
+this video before we begin the session
+make sure to subscribe to our channel
+and press the bell icon so that you'll
+never miss any update from us hello
+everyone and welcome to this video bind
+telepath but before we begin do not
+forget to subscribe and hit the bell
+icon for more updates all of us are
+somewhat aware of python's popularity
+among developers various starts show
+that python has beaten java and made its
+own plays on rankings but when it comes
+to working with python one must be aware
+of which framework to use in order to
+create better applications that is
+exactly what i'll be talking about in
+this video let's take a quick look at
+the agenda firstly we'll see what is
+python then we move on to the benefits
+of using python then the disadvantages
+what does framework mean and then we'll
+see why user framework after which we'll
+see types of frameworks and then we'll
+see the important python frameworks now
+let's move on to our first agenda that
+is what is python python is a widely
+used and easy to understand
+object-oriented programming language
+created by guido van rossum in the year
+1991. this high-level programming
+language appeals to programmers because
+of its clear syntax adaptability gui
+support and portability features netflix
+facebook reddit google and nasa are
+among the top technology companies that
+use python for their application
+projects now let's move on to our next
+agenda that is benefits of using python
+the python scripting language provides a
+number of advantages to its users
+nonetheless here are some of the
+python's main benefits python is not
+only simple to read and write but its
+english-like scripting syntax makes it a
+popular language to learn and maintain
+python apps are also built at a rapid
+pace due to its simple coding structure
+python is also a versatile coding
+language that can be used to create a
+variety of online apps nonetheless many
+programmers believe it is the ideal
+solution for security focused apps
+another major advantage of python that
+developers can reap the benefit of is
+its portability its code runs smoothly
+on a variety of operating systems
+including mac os ios unix windows and
+linux other programming languages such
+as java ruby c javascript and c plus
+plus can easily be integrated with it
+its assimilation with c called c python
+is also accessible on github with over
+39.7 k stars and 19.8 k forks python is
+a free coding language which means that
+it may assist a wide range of
+organizations so whether you are a
+startup a large corporation or a little
+business you can benefit from this
+language's high efficiency python is
+also an established programming language
+with a knowledgeable and helpful
+community as a result if you have a code
+or project difficulty you may readily
+locate various answers on or resources
+on the internet databases browsers
+threads documentation cgi and robotic
+app testing are all supported by its
+broad library now let's move on to the
+disadvantages python has several
+advantages but it also has a few
+disadvantages let's take a look at them
+although python is quick to script
+applications due to its simple coding
+structure however when compared to other
+languages such as c plus javascript and
+java there are certain speed
+difficulties especially when developers
+compile code for large projects because
+it uses more memory it is a good choice
+for programmers with restricted capacity
+unfortunately python has limited support
+for mobile apps it may be an excellent
+choice for developing online
+applications but it lacks the
+functionality required to develop mobile
+applications as a result it is not
+suitable for mobile computing python's
+layer for dealing with databases can be
+improved as well and now that brings us
+to our next agenda that is what does
+framework mean a framework is a
+collection of software modules tools and
+artifacts that provide theoretical and
+technical essential assistance in the
+development of application software
+these frameworks could be utilized in
+the construction of many applications in
+the programming world yes frameworks
+eight coders and avoiding errors and
+repeating script the well-known
+frameworks for python based applications
+include django falcon web to pi bottle
+and cherry pie let's move on to our next
+agenda that is why use a framework
+application or software development is a
+lengthy process that includes numerous
+processes such as testing developing
+code designing apps and more programming
+frameworks are good for making these
+processes easier for software engineers
+as a result frameworks not only keep
+your development operations organized
+but they also give the necessary
+structural support for your coding now
+let's look at the main reasons to
+program with a framework less
+development time the ability of a
+framework to reduce development time is
+the primary register for its use by
+offering support for error session and
+data handling coders will save time and
+effort developers don't have to worry
+about authentic logic or data
+sanitization while using a framework
+because these functions are handled for
+them next we have improves the
+efficiency of the development process
+the framework also organizes the app's
+features properly the framework handles
+interface files and web directories
+autonomously using business logic so
+developers don't have to bother about
+arranging different files next we have
+safeguards the code frameworks also
+provide developers with excellent code
+security programmers don't have to worry
+about a cyber attack on the app script
+if they use a good framework frameworks
+in particular provide excellent security
+while designing web applications next we
+have community assistance the majority
+of frameworks like computer languages
+are open source and have large
+communities these forums provide answers
+and resources to aid fellow programmers
+who are new to the field next up we have
+crude the four core functions of crude
+are also included in framework you may
+easily create read update and delete
+data here in addition framework
+libraries make it simple to manage
+sessions approach databases manage
+cookies and html pages all the templates
+and so on next up we have productivity
+is increased frameworks encourage rapid
+development app deployment and code
+reuse as a result it accelerates the
+development of your software the
+ultimate benefit of fast app development
+that coders get while using frameworks
+is increased productivity and lastly we
+have here suitable for collaboration
+another advantage of adopting a
+framework is its ability to facilitate
+teamwork frameworks will provide several
+benefits especially if you're working
+with large teams of engineers remotely
+similarly your database professionals
+may handle data related duties and
+experienced developers can create long
+lasting plugins libraries and other
+softwares now let's move on to our next
+agenda that is types of frameworks
+python frameworks are usually classified
+into three groups we'll go over them in
+detail firstly we have full stack
+framework a full stack framework is a
+structure or system that is utilized to
+meet all development requirements this
+is essentially a one-stop shop for
+programmers who want to create and
+maintain client and server site
+interfaces because it addresses all
+development related difficulties this
+framework is often known as enterprise
+framework django web to pi and pyramid
+are all solid full stack python
+frameworks that businesses and
+developers should consider for their
+projects next up we have micro framework
+micro framework is a lightweight app
+development framework with a set of
+functionalities to create an application
+coders typically mix a micro framework
+with a full stack framework
+unfortunately these frameworks lack form
+validation database abstraction input
+cleanliness authentication and a web
+template engine the primary python micro
+framework such as bottle flask and
+falcon are only used by developers when
+they require critical development
+components lastly we have asynchronous
+frameworks although asynchronous
+programming is an old method of creating
+applications its use in python has
+increased in recent years in comparison
+to the underlying app threads it is
+essentially parallel computation that
+works independently it's typically
+utilized when programmers need to merge
+many networks that already exist aio
+http and sanik are reliable asynchronous
+frameworks that python programmers can
+employ in their projects with that we
+will move on to our last agenda that is
+important python frameworks let's take a
+look at the first python framework it is
+flask flask is a python micro framework
+that was released in the year 2010. it
+has robust api support in the ide as
+well as advanced capabilities like
+real-time visual debugging it also has
+back-end database administration
+features it is considerably easier to
+learn because it has a simple toolbox
+next we have django django is a full
+stack programming framework that is one
+of the most popular on the market it
+contains a lot of distinguishing
+features such as a large number of
+built-in libraries and the usage of the
+orm technique for database management it
+is also one of the most well optimized
+and speedy frameworks in the market that
+focuses on security next we have web to
+pi web to pi is a python framework for
+full stack development that has a lot of
+features a code editor debugger and
+deployment engine are included this
+python framework also includes a
+web-based development engine that makes
+it easy to add speed and flexibility to
+any project next we will talk about
+falcon falcon uses wsgi to make it
+simple to construct apis and code on the
+back end as a result it is one of the
+quickest ways to code within an app
+valden's design is based on http and
+rest making it a more straightforward
+solution for experienced programmers in
+this field next we'll talk about dash
+dash is a popular python framework for
+developing online apps because it works
+with flask to process requests over http
+dash is perfect for data management
+developers it can quickly deliver
+cross-platform apps and supports flask
+plugins next we have cubic web cubic web
+is a full stock python framework that is
+open source and freely available instead
+of using traditional methods cubic web
+employs a cubicle method which combines
+several components in one place and
+turns the program into a powerhouse
+complete with configuration a back-end
+database and a web server next we'll
+talk about aio http it is an
+asynchronous http client server for the
+python framework it uses the asynchro
+library and supports python versions
+higher than 3.5 it contains a variety of
+characteristics that aid in the faster
+and more efficient processing of
+requests and results next we have steady
+pi cheripai is a popular open source
+framework that has been around since
+2002 this was created with the intention
+of being a simple way to implement the
+python's framework vast capabilities
+because it is a mature framework it can
+handle previous python versions allowing
+developers to use old libraries next
+we'll talk about jotto joto is an mvc
+based framework that focuses on a
+functional application foundation it
+enables the coder to start from scratch
+concentrating on functionality and
+deploying alongside the front end this
+promotes a clean style which reduces
+code complexity over time it also aids
+in the development of a steady tempo
+prior to deployment lastly we'll talk
+about bottle bottle is one of the
+lightest python frameworks accessible as
+each project source code is
+substantially less this micro framework
+is useful not just for creating apis but
+also for developing smaller web apps and
+that's it for this video thank you for
+watching please don't forget to
+subscribe to our channel and hit the
+bell icon for more updates if you want
+to make a career in data science then
+intellipaat has iit madras advanced data
+science and ai certification program
+this course is of very high quality and
+cost effective as it is taught by iit
+professors and industry experts

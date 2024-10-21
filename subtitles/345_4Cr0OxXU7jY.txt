@@ -1,0 +1,535 @@
+[Music]
+let me ask you a question are you
+intrigued by the complexity of the tech
+world
+well at the roots of this tech world the
+two components that constitute every
+technology are software and hardware and
+these require vigorous development
+through a tested and approved cycle of
+processes hello everyone and welcome to
+this video by intellipaat in this video
+i will discuss the software development
+lifecycle but before we begin please
+make sure to subscribe to our channel
+and hit that bell icon for regular
+updates now let's take a look at the
+agenda firstly we will see what is meant
+by software then we will see what is
+sdlc then the need of sdlc then we'll
+move on to the steps involved that is we
+will discuss the sdlc life cycle and the
+phases then we'll see what models can be
+used for sdlc and lastly a conclusion
+now let's see our first agenda that is
+what is meant by software
+software is a collection of instructions
+data or computer programs that are used
+to run machines and carry out particular
+activities it is the antithesis of
+hardware which refers to a computer
+external components a device's running
+programs scripts and applications are
+collectively referred to as software in
+this context next we'll see what is sdlc
+well sdlc stands for software
+development lifecycle it outlines the
+numerous steps needed in creating
+software to produce a high quality end
+product the stages of the sdlc encompass
+the entire life cycle of a piece of
+software from conception to retirement
+following the sdlc process results in
+the software being developed in a
+controlled manner next we'll see the
+need of sdlc the development team must
+choose a lifecycle model that is
+appropriate for a specific strategy and
+then adhere to it the creation of a
+software product would not be systematic
+and disciplined without the use of a
+precise life cycle model there needs to
+be agreement among team members
+regarding when and what to do when
+producing a software product if not it
+would be an indication of disorder and
+project failure the criteria for
+entering and leaving each phase are
+described in a software lifecycle model
+only if the stage energy requirements
+have been met can a phase start
+therefore it is impossible to detect the
+entry and exit criteria for a stage
+without a software lifecycle model it
+becomes difficult for software project
+managers to keep track of the project's
+development without software lifecycle
+models now let's take a look at the
+development steps involved firstly we
+have planning and requirement analysis
+then we have specifying the needs
+following which we have creating or
+designing the software then project
+development testing deployment and
+maintenance let's have a brief
+description about each of these stages
+and this is the cycle that the sdlc
+follows so about stage one the level of
+sdlc that is most crucial and essential
+is requirement analysis with input from
+all the stakeholders domain experts and
+smes in the industry the senior team
+members carry it out at this point
+planning is also done for the
+requirements for quality assurance and
+for the identification of project
+related risks so a meeting is scheduled
+with the client by the business analyst
+and project manager to obtain all the
+necessary information such as what the
+customer wants to construct who will be
+the end user and what the products goal
+is a fundamental knowledge of
+understanding of the product is crucial
+before constructing it for example a
+client requests a financial transaction
+related application this approach
+requires specific requirements such as
+what operations will be performed how
+they will be performed in what currency
+they will be performed etc once the
+necessary task has been completed the
+analysis of the viability of a product's
+growth is finished there is a signal set
+up for additional discussion in the
+event of any ambiguity the srs that is
+software requirement specification
+document is prepared once the
+requirement has been comprehended this
+document should be carefully followed by
+the developers and should also be
+reviewed by the client for future
+reference next we have specifying the
+needs the process of representing
+documenting and getting the project
+stakeholders to approve the software
+requirements follows the completion of
+the requirement analysis this is done by
+using the srs document which contains
+all the product requirements that must
+be created and developed during the
+project life cycle
+stage 3 is creating or designing the
+software the knowledge of the software
+project's needs analysis and design will
+all be revealed in the upcoming phase
+this phase is the result of the previous
+two such as requirement analysis and
+client input
+stage four is project development the
+actual development phase of the sdlc
+starts here and programming is created
+coding represents the start design
+implementation programming tools
+including compilers interpreters
+debuggers
+and other similar tools are used to
+generate and implement the code and
+developers must adhere to the coding
+standards outlined by the management
+stage 5 is called testing
+following the generation of the code it
+is compared to the requirements to
+ensure that the solutions are satisfying
+the demands identified and acquired
+during the requirement stage
+unit testing integration testing system
+testing and acceptability testing are
+carried out at this level stage six is
+deployment when the software has been
+certified and no defects or mistakes
+have been reported it is put into use
+the software may then be delivered as is
+or with proposed improvements in the
+object portion depending on the
+assessment the maintenance of the
+software starts once it has been
+deployed state 7 is maintenance when the
+customer begins utilizing the
+technologies that have been designed the
+true problems and ongoing needs become
+apparent maintenance is the process when
+the developed product is given attention
+next we'll talk about the sdlc models
+namely there are seven
+and
+first one is waterfall model then we
+have v-shaped prototype spiral iterative
+incremental big bang and lastly the
+agile model
+let's have a brief description about all
+of these models
+the first model utilized in the sdlc is
+the waterfall model it is also known as
+linear sequential model the results of
+one phase in this model serve as the
+input for the following phase only after
+the preceding phase is finished
+developing can the new phase begin let's
+take a look at the cycle itself
+first requirements are gathered and
+analyzed only once the requirements have
+been set in stone can system design
+begin
+the srs document produced in this case
+serves as both an input and
+an output for system design phase
+then documents that serves as an input
+from the following phase implementation
+and coding are prepared throughout the
+system design and software architecture
+phases then coding is completed in the
+implementation phase and the software
+created serves as the input for the
+testing step that follows the developed
+code is rigorously tested throughout the
+testing process to find any software
+flaws when a fault is repaired it is
+retested and entered into the defect
+tracking tool
+bug logging retesting and regression
+testing continues until the software is
+ready for use following the customer's
+approval the developed code is put into
+production during the deployment phase
+the developers are responsible for
+fixing any problem that arise in the
+production environment
+and fall under maintenance
+now advantages and disadvantages the
+waterfall paradigm is an understandably
+straightforward one in which all steps
+are carried out sequentially each phase
+is deliverables are well specified which
+prevents complexity and makes the
+project simple to manage not
+disadvantages the waterfall approach
+requires a lot of time and cannot be
+utilized for projects with a short
+lifespan because a new phase cannot be
+started until the current phase is
+finished this model expects the
+requirement to be clear in the
+requirement analysis phase itself and
+any change in the latest stages would
+result in higher costs as the changes
+would be required in all the phases as a
+result it cannot be used for projects
+with uncertain requirements or whether
+requirements keep changing next we'll
+talk about the v-shaped model
+verification and validation model is
+another name for this specific model in
+this methodology development and testing
+go concurrently and verification and
+validation go hand in hand the only
+difference between the v model and the
+waterfall model is that in the v model
+testing and test planning begin earlier
+let's take a look at the cycle in this
+model we have two phases
+that is the verification phase and the
+validation phase under verification
+phase we have requirement analysis that
+is all necessary data is acquired and
+analyzed in this step examining the
+specifications is one of the
+verification activities then we have
+system design once the requirements are
+defined a system is designed or the
+product's architecture and its
+components are made and recorded in a
+design document then we have high level
+design the architecture and design of
+modules are specified by high level
+design it specifies how the two modules
+work together then we have low level
+design the individual component
+architecture and design are described by
+low level design
+lastly in this phase we have coding in
+this phase code development is completed
+in the validation phase firstly we have
+unit testing utilizing the unit testing
+cases created during the low level
+design phase unit testing is carried out
+in-house unit testing is done by the
+developer it is carried out on
+individual components which helps find
+effects quickly
+then we have integration testing
+during the high level design phase
+integration testing is carried out
+utilizing integration test cases the
+testing carried out on integrated
+modules is known as integration testing
+next up we have system testing during
+the system design phase system testing
+is carried out this step involves
+testing the entire system including
+every aspect of its functionality lastly
+we have acceptance testing acceptance
+testing is carried out in the customer's
+environment and is connected to the
+requirement analysis process now we have
+advantages and disadvantages for
+advantages it is a straightforward and
+simple model smaller projects with
+stated requirements that freeze in the
+early stages benefit from the v-model
+approach it is a disciplined approach
+that yields a high quality end product
+for disadvantages for ongoing projects a
+v-shaped model is not recommended later
+requirement changes would be
+prohibitively expensive now we'll talk
+about prototype model the prototype
+model is a model in which the software
+prototype is created first comparing
+prototype models to the actual software
+reveals that they perform poorly and
+have limited functional capabilities
+prototypes are built with dummy
+functionalities this is a useful tool
+for figuring out what the customer
+actually wants let's take a look at the
+cycle to obtain useful user feedback
+software prototypes are created before
+the final product
+after taking into account user feedback
+the prototype is once more examined by
+the client
+up until the consumer accepts the model
+this process continues after gathering
+requirements a rapid design is made and
+a prototype is developed
+before being delivered to the customer
+for review the prototype is modified in
+response to client comments and the
+clarified requirement then represented
+to the client for review the customer
+must accept the prototype before the
+genuine program can be developed the
+waterfall model approach is used to
+construct the actual software now let's
+see the advantages and disadvantages
+for advantages because flaws are
+discovered considerably earlier during
+prototype models develop costs and time
+are reduced a change in requirement a
+missing feature or a lack of
+functionality can all be found during
+the assessment process and added to the
+finalized prototype a customer's
+involvement from the beginning clears up
+any misunderstandings about the
+functionality's requirements and for the
+disadvantage the customer can alter the
+requirements for the finished product
+because they're involved in every stage
+of the process which makes the scope
+more difficult and could extend the time
+it takes to deliver the product
+next we will talk about the spiral model
+iterative and prototype approaches are
+part of the spiral model the iterations
+adhere to the stages of the spiral model
+the innermost loop in the model is for
+requirement collecting and analysis
+which is followed by planning risk
+analysis development and evaluation the
+loops in the model represent the phases
+of the sdlc process designing is the
+second loop followed by implementation
+and testing now there are four phases in
+this model let's take a look at the
+cycle
+we have planning risk analysis
+engineering and evaluation firstly
+planning gathering requirements is a
+part of the planning step during which
+the customer is asked for all the
+necessary information and it is recorded
+the following phase begins with the
+creation of software requirement
+specification document then comes risk
+analysis the best solution is chosen for
+the risks involved in this phase and
+analysis is completed by creating the
+prototype as an illustration there is a
+chance that the data access rate from a
+remote database will be excessively slow
+building a prototype of the data access
+subsystem will eliminate the risk
+then we have engineering coding and
+testing are completed after the risk
+analysis is done
+and lastly we have evaluation the
+customer assesses the system created and
+makes plans for the following iteration
+let's talk advantages and disadvantages
+for advantages the prototype models
+are extensively used for risk analysis
+and the following iteration can include
+any functionality changes or
+improvements and for disadvantages
+only huge projects are the greatest
+candidates for the spiral model and as
+it may require numerous iterations and
+take a long time to produce the desired
+result the cost may be substantial
+next we will talk about the iterative
+incremental model the product is divided
+into manageable pieces
+by the iterative incremental model for
+instance a feature that will be created
+during the iteration is chosen and put
+into practice phases such as requirement
+analysis design coding and testing are
+completed throughout each iteration
+iterations do not require extensive
+force let's take a look at the cycle
+after each iteration is finished a
+project is confirmed and sent to the
+client for review and feedback the newly
+incorporated feature is combined with
+customer feedback in the following
+iteration as a result the product gains
+features as iterations go and the final
+build has all of the products features
+now there are four phases in this model
+called inception
+elaboration construction and transition
+in inception phase
+the project's requirements and scopes
+are included in elaboration phase a
+product's working architecture which
+addresses the risks
+noted during the inception phase and
+also satisfies the non-functional
+criteria
+during construction phase
+the construction phase
+includes
+of the following the architecture is
+filled out with deployable code during
+the construction phase which is
+accomplished
+through functional requirement analysis
+design implementation and testing
+then comes the transition phase the
+product is introduced into the
+production environment
+during the transition phase
+now advantages and disadvantages
+any change in the requirement can be
+easily done and would not cost as there
+is a scope of incorporating the new
+requirement in the next iteration
+risk is analyzed and identified in the
+iterations
+defects are detected at an early stage
+as the product is divided into smaller
+chunks it is easy to manage the product
+now disadvantages to break down and
+develop progressively a complete grasp
+of a product is necessary
+now we'll talk about the big bang model
+the big bang model has no established
+process input and output consists of
+money and labor and the result is a
+developed good that may or may not be
+what the client requires
+let's take a look at the cycle
+big bang model doesn't need a lot of
+schedule or planning the developer
+analyzes the requirements writes the
+code and creates the product in
+accordance with this knowledge
+this model is only applied to modest
+projects the absence of a testing team
+and the absence of formal testing could
+lead to the project's failure
+now advantages and disadvantages
+for advantages
+it is an extremely basic model there is
+less need for scheduling and planning
+the developer has the freedom to create
+their own software
+now for the disadvantage
+large ongoing and sophisticated projects
+cannot be handled with big bang model
+and it is highly uncertain and dangerous
+lastly we have the agile model
+incremental and iterative models are
+combined to create the age oil paradigm
+this paradigm emphasizes flexibility
+throughout product development more so
+than requirements
+a product is divided into manageable
+incremental bills in age oil it is not
+created in its entirety in one sitting
+the number of features increases with
+each build the upcoming update expands
+upon earlier features
+let's take a look at the cycle
+sprints are the term used
+for iterations in age oil a sprint lasts
+about two to four weeks each print ends
+with the product owner verifying it
+before it is provisioned to the client
+with his or her permission customer
+feedback is used to make improvements
+and the following sprint will focus on
+his recommendations and enhancements
+now let's take a look at the advantages
+and disadvantages
+for advantages it gives you more freedom
+to adjust to the changes the new feature
+is simple to add customer satisfaction
+because consider their comments and
+recommendations at every level
+and for disadvantages there's inadequate
+documentation agile requires highly
+qualified and experienced personnel the
+project would fail if the customer was
+unsure of exactly
+how they wanted the final result to be
+now we have come to the conclusion
+for the project to be successfully
+finished adherence to an appropriate
+life cycle is crucial in turn this
+facilitates management
+each model of the software development
+lifecycle has pros and cons of its own
+the elements like requirement
+system complexity project size
+cost skill limitation etc can help
+establish the optimal model for any
+project
+spiral and agile models for instance are
+the best to utilize when a requirement
+is uncertain because the necessary
+adjustment may be easily accommodated at
+any stage
+and that's it for this video thank you
+just a quick info guys if you want to
+make a career in software engineering
+then intellipaat provides an advanced
+certification program on software
+engineering and application development
+by eni city council of iit guate and it
+is taught by iit guati professors and
+industry experts this course is designed
+to upskill and land your dream job
+you

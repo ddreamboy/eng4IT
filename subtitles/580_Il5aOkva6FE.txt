@@ -1,0 +1,71 @@
+[MUSIC PLAYING]
+TIMOTHY JORDAN:
+Ubiquitous computing,
+or the internet of
+things, is all about
+having technology
+wherever and whenever
+that you might want or need it.
+And that's so that we,
+as users, can focus more
+on what we're doing and less
+on how to start doing it.
+That could be anywhere;
+it could be on your wrist,
+in the living room, in your
+car-- anywhere and everywhere
+that makes sense.
+WAYNE PIEKARSKI:
+For developers, this
+means thinking less
+about developing an app
+and more about solving a
+user's problem, whatever
+they happen to be doing.
+TIMOTHY JORDAN:
+And the trick here
+is that there's new
+paradigms for all of this.
+It's not just about sitting
+down at a desk with a keyboard
+anymore.
+How can we use speech, gestures,
+context, and glanceable UIs
+to make an effortless experience
+for the user, whomever
+they happen to be.
+WAYNE PIEKARSKI: It used
+to be that you needed
+to build your own
+hardware, libraries,
+and infrastructure to build
+these kinds of experiences
+for your users.
+But now, the Google platform
+provides a ton of functionality
+so that you can build these
+experiences without having
+to reinvent the wheel.
+TIMOTHY JORDAN: In our DevBytes,
+blog posts, communities,
+and design sprints we're
+addressing these key issues,
+so you have all the tools you
+need to navigate the space
+and get the most out
+of your integration
+with the Google platform.
+WAYNE PIEKARSKI: So
+look for more videos
+on Android Wear, Google Cast,
+Android TV, Android Auto,
+and more on the Google
+Developers YouTube channel.
+Great experiences on Android
+TV are casual, cinematic,
+and simple.
+TIMOTHY JORDAN: In
+a cinematic app,
+the interface should fade
+away, putting content front
+and center.

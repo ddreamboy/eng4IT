@@ -1,0 +1,1193 @@
+what is software testing software
+testing is a process to identify the
+correctness completeness and quality of
+developed computer software it includes
+a set of activities conducted with the
+intent of finding errors in software so
+that it could be corrected before the
+product is released to the end-users in
+simple words software testing is an
+activity to check that the software
+system is defect free why is testing
+important this is China Airlines Airbus
+a300 crashing due to a software bug on
+April 26th 1994 killing 264 innocent
+lives
+software bugs can potentially cause
+monetary and human loss history is full
+of such examples in 1985 Canada's
+therac-25 radiation therapy machine
+malfunctioned due to a software bug and
+delivered lethal radiation doses to
+patients leaving 3 people dead and
+critically injuring 3 others in April of
+1999 a software bug caused the failure
+of a 1.2 billion dollar military
+satellite launched the costly us
+accident in history in May of 1996 a
+software bug caused the bank accounts of
+823 customers of a major US bank to be
+credited with 920 million u.s. dollars
+as you see testing is important because
+software bugs can be expensive or even
+dangerous as Paul Ehrlich puts it to err
+is human but to really foul things up
+you need a computer
+consider a scenario where you are moving
+a file from folder a to folder B think
+of all the possible ways you can test
+this pause the tutorial and think over
+the exercise apart from the usual
+scenarios you can also test the
+following conditions trying to move the
+file when it is open you do not have the
+security rights to paste the file in
+folder B folder B is on a shared Drive
+and storage capacity is full folder B
+already has a file with the same name in
+fact the list is endless or suppose you
+have 15 input fields to test each having
+5 possible values the number of
+combinations to be tested would be 5
+raised to 15
+if you were to test all the possible
+combinations project execution time and
+costs will rise exponentially hence one
+of the testing principles states that
+exhaustive testing is not possible
+instead we need the optimal amount of
+testing based on the risk assessment of
+the application and the million dollar
+question is how do you determine this
+risk
+to answer this let's do an exercise in
+your opinion which operation is most
+likely to cause your operating system to
+fail I'm sure most of you would have
+guessed opening 10 heavy graphics
+applications all at the same time so if
+you were testing this operating system
+you would realize that defects are
+likely to be found in a multitasking
+module and that needs to be tested
+thoroughly which brings us to our next
+principal defect clustering which states
+that a small number of modules contain
+most of the defects detected with
+experience you can identify such risky
+modules but this approach has its own
+problems if the same tests are repeated
+over and over again eventually the same
+test cases will no longer find new bugs
+this is another principle of testing
+called pesticide paradox to overcome
+this the test cases need to be regularly
+reviewed and revised adding new and
+different test cases to help find more
+defects
+but even after all this sweat and hard
+work and testing you can never claim
+your product is bug free to drive home
+this point let's see this video of the
+public launch of Windows 98
+plug it in it's going to say hey I see
+you live in a new device and it's going
+to load in the appropriate drivers
+you'll notice that this scanner build
+whoa
+[Applause]
+moving right along idea Leslie why we're
+not shipping Windows 98 you would think
+a company like Microsoft would have
+tested their OS thoroughly and would not
+risk their reputation just to see their
+OS crashing during its public launch
+hence the testing principle states that
+testing shows the presence of defects
+testing reduces the probability of
+undiscovered defects remaining in the
+software but even if no defects are
+found it is not a proof of correctness
+or a proof that no defects remain in the
+system but what if you work extra hard
+taking all precautions and making sure
+your software product is 99% bug free
+and the software does not meet the needs
+and requirements of the client which
+leads us to our next principle which
+states that absence of error is a
+fallacy finding and fixing defects does
+not help if the system build is unusable
+and does not fulfill the user's needs
+and requirements to fix this problem the
+next principle of testing early testing
+states that testing should start as
+early as possible in the software
+development lifecycle so that any
+defects in the requirements or design
+phase are captured as well we'll have
+more on this principle in a later
+tutorial and the last principle of
+testing states that the testing is
+context dependent which basically means
+that the way you test an e-commerce site
+will be different from the way you test
+a commercial off-the-shelf application
+before we close this tutorial here's a
+quick recap of the seven testing
+principles
+suppose you were assigned a task to
+develop a custom software for a client
+each block below represents a step
+required to develop the software
+irrespective of your technical
+background try and make an educated
+guess about the sequence of steps you
+will follow to achieve the task the
+correct sequence would be gather as much
+information as possible about the
+details and specifications of the
+desired software from the client this is
+nothing but the requirements gathering
+stage plan the programming language like
+Java PHP dotnet and database like Oracle
+my sequel etc which will best suit the
+project also determine high-level
+functions in architecture this is the
+design stage actually code the software
+this is the build stage next you test
+the software to verify that it is built
+as per the specifications given by the
+client this is the test stage once your
+software product is ready you may do
+some code changes to accommodate
+enhancements requested by the client
+this would be the maintenance stage all
+these levels constitute the waterfall
+method of a software development
+lifecycle as you may observe testing in
+the model starts only after
+implementation is done but if you are
+working on a large project where the
+systems are complex
+it's easy to miss key details in the
+requirements phase itself in such cases
+an entirely wrong product will be
+delivered to the client you will have to
+start afresh with the project
+or if you manage to note the
+requirements correctly but make serious
+mistakes in design and architecture of
+your software you will have to redesign
+the entire software to correct the error
+assessments of thousands of projects
+have shown that defects introduced
+during requirements and design make up
+close to half of the total number of
+defects also the costs of fixing a
+defect increases across the development
+lifecycle the earlier in the lifecycle
+of defect is detected the cheaper it is
+to fix as they say a stitch in time
+saves nine to address this concern the
+v-model of testing was developed for
+every phase in the development lifecycle
+there is a corresponding testing phase
+the left side of the model is the
+software development life cycle SDLC the
+right side of the model is the software
+test life cycle s TLC the entire figure
+looks like a V hence the name V model in
+this figure you'll find a few stages
+different from the waterfall method
+these differences along with the details
+of each testing phase will be discussed
+in a later tutorial apart from the V
+model there are iterative development
+models where development is carried out
+in phases with each phase adding a
+functionality to the software each phase
+comprises of its own independent set of
+development and testing activities good
+examples of development life cycles
+following the iterative method are rapid
+application development and agile
+development
+before we close this tutorial here are a
+few pointers you must note that there
+are numerous development life cycle
+models the development model selected
+for a project depends on the aims and
+goals of that project testing is not a
+standalone activity and it has to adapt
+with the development model chosen for
+the project in any model testing should
+be performed at all levels right from
+requirements gathering all the way up to
+maintenance
+let's consider
+to understand the testing lifecycle you
+work for an IT outsourcing company as
+part of the testing team and your
+company is hired by a bank to develop an
+online banking application to understand
+the testing lifecycle
+let's first quickly go through the
+development life cycle during
+requirement analysis phase after series
+of meetings the client decides he wants
+the following five functionalities into
+a system logon on valid credentials view
+current bank account balance deposit
+money withdraw money transfer money to a
+third party account next in the
+functional specification stage
+architecture database and operating
+environment design are finalized next in
+high-level design stage the application
+is broken down in module and programs in
+detail design stage the pseudocode for
+functions for each module is documented
+next actual coding begins this is the
+software development cycle of the
+v-model during all these phases the
+tester is not sitting idle for the
+coding to complete but is doing
+corresponding testing activities let's
+look at them one by one unit testing it
+is also called component testing it is
+performed on a standalone module to
+check whether it is developed correctly
+for the login module which may look like
+this after development typical unit test
+cases would be check response for valid
+login and password check response for
+invalid login and password
+check response when login is empty and
+login button is pressed unit test is
+done by developers but in practical
+world developers are either reluctant to
+test their own code or do not have time
+to unit test many times much of the unit
+testing is done by testers
+system 10
+concerned with behavior of the system as
+a whole unlike integration testing which
+focuses on data transfer amongst modules
+system testing checks complete
+end-to-end scenarios as the way a
+customer would use the system a good
+example of test case in this phase would
+be login into the banking application
+check current balance transfer some
+money log out
+apart from functional non-functional
+requirements like performance
+reliability etcetera are also checked
+during system testing except it's
+testing acceptance test is usually done
+at client location by the client once
+all the defects found in system testing
+phase are fixed focus of acceptance test
+is not to find defects but to check
+whether the software system meets their
+requirements since this is the first
+time the client sees their requirements
+which is plain text into an actual
+working system acceptance testing can be
+done in two ways alpha testing the small
+set of employees of the client in our
+case employees of the bank will use the
+system as the end user would beta
+testing a small set of customers in our
+case bank account holders will use the
+software and recommend changes
+integration testing in this phase of
+testing individual modules are combined
+and tested as a group data transferred
+between the modules is tested thoroughly
+integration testing is carried out by
+testers consider this integration
+testing scenario in a banking
+application a customer is using the
+current balance module his balance is
+1,000 he navigates to the transfer
+module and transfers 500 to a
+third-party account the customer
+navigates back to the current balance
+module and now his latest balance should
+be 500 the modules in this project are
+assigned to five different developers to
+reduce coding time kotor 2 is ready with
+the current balance module kotor 5 is
+not ready with the transfer module
+required to test your integration
+scenario what do you do in such a
+situation
+one approach is to use BIGBANG
+integration testing where you wait for
+all modules to be developed before you
+begin testing the major disadvantage is
+that it increases project execution time
+since testers will be sitting idle until
+all modules are developed also it
+becomes difficult to trace the root
+cause of defects alternatively you can
+use the incremental approach where
+modules are checked for integration as
+and when they are available
+consider that the transfer module is yet
+to be developed but the current balance
+module is ready you will create a stub
+which will accept and give back data to
+the current balance module note that
+this is not a complete implementation of
+the transfer module which will have lots
+of checks like whether the third-party
+account number is entered correct the
+amount to transfer should not be more
+than the amount available in the account
+and so on but it will just simulate the
+data transfer that takes place between
+the two modules to facilitate testing on
+the contrary if the transfer module is
+ready but the current balance module is
+not developed you will create a driver
+to simulate transfer between the modules
+to increase the effectiveness of the
+integration testing you may use a top to
+down approach where higher-level modules
+are tested first this technique will
+require creation of stubs or you may use
+a bottom-up approach where lower-level
+modules are tested first this technique
+will require creation of drivers other
+approaches would be functional increment
+and sandwich which is a combination of
+top to down and bottom to up the choice
+of approach chosen depends on the system
+architecture and the location of
+high-risk modules
+consider of scenario when after
+sects of integration testing the
+software is made available to the
+testing teams of a system testing you
+look at the initial screen system looks
+fine and delay system test execution for
+the next day since you have other
+critical testing tasks to attend to next
+day say you plan to execute the scenario
+longan view balance transfer 500 log out
+the deadline is 4 hours you begin
+executing the scenario you enter a valid
+login ID password click the login button
+and boom you are taken to a blank screen
+with absolutely no links no buttons and
+nowhere for you to proceed this is not a
+figment of any imagination but a very
+practical condition which could arise
+due to developer negligence time
+pressures test environment configuration
+and instability etc to fix this issue
+developer requires at least 5 hours
+and deadlines would be missed in fact
+none of your team members will be able
+to execute their respective scenario
+since the view balance is start point to
+perform any other operation and the
+entire project will be delayed have you
+checked this yesterday itself the system
+would have been fixed by now and you
+would have been good for testing to
+avoid such situation sanity also known
+as smoke testing is done to check
+critical functionalities of the system
+before it is accepted for major testing
+sanity testing is quick and is
+non-exhaustive goal is not to find the
+sex but to check system health
+you
+suppose in the current
+instead of just showing the current
+balance the client now wants customized
+reports based on date amount of
+transaction obviously any such change
+needs to be tested once deployed testing
+enhancements system changes or
+Corrections forms part of maintenance
+testing suppose in our banking
+application your current balance is
+2,000 using the new enhancement you
+check your balance for a year ago which
+comes out to be 500 you enter the
+transfer module and try to transfer 1000
+in order to proceed the transfer module
+checks for the current balance but
+instead of sending the current balance
+it sends the old balance of 500 and
+transaction fails as you may observe
+code changes were in current balance
+module only but still transfer module is
+affected regression testing is carried
+out to check modification in software
+has not caused unintended adverse side
+effects
+functional testing non-functional
+requirements like performance usability
+load factor are also important how many
+times have you seen such long load time
+messages while accessing an application
+I am sure many
+to address this issue performance
+testing is carried out to check in fine
+tune system response times the goal of
+performance testing is to reduce
+response time to an acceptable level or
+you may have seen messages like hence
+load testing is carried out to check
+systems performance at different loads
+that is number of users accessing the
+system depending on the results and
+expected usage more system resources may
+be added
+that's all two types of testing in
+general there are three testing types
+functional non-functional maintenance
+under these types you have multiple
+testing levels usually called as testing
+types you may find some difference in
+this classification in different
+resource but the general theme remains
+the same this is not the complete list
+as there are more than 150 types of
+testing no need to bother or worry you
+will pick them up as you age in the
+testing industry also note that not all
+testing types are applicable to all
+projects but depends on nature and scope
+of the project more on this in a later
+tutorial thanks for listening
+as a beginner it's easy to assume the
+testing is executing various section of
+code on the eddakath and verifying the
+results but in real-world testing as a
+very formal activity and is documented
+in detail the degree of formality
+depends on the type of application under
+test standards followed by our
+organization and maturity of the
+development process the importance of
+documentation will be highlighted in the
+succeeding tutorials for all hands on we
+will be using the flight reservation
+application which comes bundled with
+automation tool qtp to get this
+application either install QT p.m. use
+the link given below tutorials on this
+site for QT t and load one or use flight
+reservation therefore we have selected
+flight reservation to reduce your
+learning curve while studying QT t and
+loadrunner below find link to
+introduction video to flight reservation
+application do watch it
+a test scenario is any functionality of
+the application under test that can be
+tested it is also called test
+commissioned or test possibility for the
+flight reservation application a few
+scenarios would be check the log in
+functionality
+check that a new order can be created
+check that an existing order can be
+opened check that a user can fax an
+order check that the information
+displayed in the help section is correct
+check that the information displayed in
+About section like version program or
+name copyright information is correct
+apart from these six scenarios
+try and list all the other possible
+scenarios for the application pause the
+tutorial and complete the exercise I am
+sure you have identified many a more
+like update order delete order check
+reports check graphs and so on for the
+time being let's stick to the six next
+we have already learned that exhaustive
+testing is not possible
+suppose you have time to execute only
+four out of these six scenarios which
+too low priority scenarios of these six
+will you eliminate think your time
+startsnow
+sure most of you would have guessed
+scenarios 5 & 6 since they are not the
+core functionality of the application
+this is nothing but test prioritization
+now consider a scenario where the client
+gives a request to add send order via
+email functionality to flight
+reservation he also specifies the GUI
+fields and buttons he wants even though
+this functionality is yet to be
+developed try and create a few test
+cases for this requirement pause the
+tutorial and complete the exercise a few
+test cases amongst the many you could
+have thought of would be check response
+one valid email ID is entered and sent
+is pressed check response one in-flight
+email ID is entered and send is pressed
+check response one email id is empty and
+send is pressed you may have realized
+that to create test cases you need to
+look at something to base your test on
+this is nothing but test basis this test
+basis could be the actual application
+under test abbreviated as aut
+or maybe even your experience but most
+of the times like in this case tests
+would be based on documents in fact this
+is what happens during the different
+phases of e model where test plans are
+created using the corresponding
+documents and once the code is ready
+testing is done
+consider a test scenario to check login
+functionality there are many possible
+variations to check this scenario check
+response on entering a valid agent name
+and password check response on entering
+an invalid agent name and password check
+response when the agent name is empty
+and the login button is pressed and many
+more
+this is nothing but a test case test
+scenarios are rather vague and cover a
+wide range of possibilities testing is
+all about being very specific hence we
+need test cases now just consider the
+test case check response on entering a
+valid agent name and password it's
+obvious that this test case needs input
+values agent name and password this is
+nothing but test data identifying test
+data can be time-consuming and may
+sometimes require creating test data
+afresh for that reason it needs to be
+documented
+before we proceed consider a quote from
+a witty man to ensure perfect aim shoot
+first and call whatever you hit the
+target but if you do not live by this
+philosophy which I am sure most of you
+do not then your test case must have an
+expected result for our test case the
+expected result would be logins should
+be successful
+if expected results are not documented
+we may miss out on small differences in
+calculations and results which otherwise
+look okay consider this example where
+you are calculating monthly pay for an
+employee which involves lots of
+calculations the need for documenting
+expected results becomes obvious suppose
+the author of the test case has left the
+organization is on vacation is sick and
+off-duty or is just very busy with other
+critical tasks and you are recently
+hired and have been asked to execute the
+test case since you are new it would
+certainly help to have test steps
+documented which in this case would be
+launched the application enter an agent
+name enter a password and click OK
+you may think that for these simple test
+steps documentation is not required but
+what if your test steps look something
+like this I think the need will become
+immediately obvious
+that apart your test case may have
+fields like a precondition which
+specifies things which must be in place
+before the test can run for our test
+case a precondition would be flight
+reservation application should be
+installed also your test case may
+include a post condition which specifies
+anything that applies after the test
+case completes for our test case a post
+condition would be time and date of
+login is stored in the database during
+test case execution you will document
+the results observed in the actual
+results column and may even attach some
+screenshots
+down comparison of actual and expected
+results assigned pass and fail status
+this entire table may be created in Word
+Excel or any other test management tool
+that's all to test case design below you
+will find links to download a sample
+test case specification template
+consider a scenario where the client
+changes the requirement something's so
+frequent in the practical world and adds
+a field recipient name to the
+functionality so now you need to enter
+email ID and name to send a mail
+obviously you will need to change your
+test cases to meet this new requirement
+but now your test case suite is very
+large and it is very difficult to trace
+the test cases affected by the change
+instead if the requirements were
+numbered and were referenced in the test
+case sweet
+very easy to track the test cases that
+are affected this is nothing but
+traceability the traceability matrix
+links a business requirement to its
+corresponding functional requirement
+right up to the corresponding test cases
+if a test case fails traceability helps
+determine the corresponding
+functionality easily
+it also helps ensure that all
+requirements are tested
+we have already learned that exhausted
+thing is not possible
+so we need techniques to identify test
+cases with the most likelihood of
+finding a defect out of the possible
+many
+there are many test case designing
+techniques available let's look at them
+one by one
+equivalence partitioning it is a black
+box technique which can be applied to
+all levels of testing like unit
+integration system let cetera a black
+box technique is a technique where the
+code is not visible to the tester in
+this technique you divide a set of test
+conditions into partitions that can be
+considered the same to understand this
+with an example let's consider the
+behavior of tickets in the flight
+reservation application while booking a
+new flight ticket values 1 to 10 are
+considered valid and ticket is booked
+for these values values 11 to 99 are
+considered invalid and error message
+only 10 tickets made the order that one
+time is shown on entering values 100 and
+above the ticket member defaults to a
+two digit number on entering values 0
+and below the ticket defaults to 1 we
+cannot test all the possible values
+because if done number of test cases
+will be more than 100 to address this
+problem we use equivalent partitioning
+we divide the possible values of tickets
+into groups or sets where the system
+behavior can be considered the same
+these sets are called
+equivalence partitions or equivalence
+classes then we pick only one value from
+each partition for testing the
+hypothesis
+behind this technique is that a form
+condition or value in a partition passes
+all others will also pass
+likewise if one condition in a partition
+fails all other conditions in that
+partition will fail that is all two
+equivalence partitioning next technique
+is boundary value analysis in this
+technique you test boundaries between
+partitions as in our earlier example
+instead of checking one value from each
+partition you will check the values at
+the boundaries like 0 1 10 11 and so on
+boundary value analysis is also called
+range checking equivalence partitioning
+and boundary value analysis are closely
+related and are generally used together
+at all levels of testing
+decision table 10
+technique is a good way to deal with
+combination of inputs which produce
+different results to understand this
+with an example let's consider the
+behavior of flight button on different
+combinations of fly from and fly to when
+both fly from and fly to are not set the
+flight icon is disabled in the decision
+table we register values false for fly
+from and fly to and the outcome which is
+flights button will be disabled that is
+false
+next when fly from the set but fly to is
+not set flight button is disabled
+corresponding you registered true for
+fly from in the decision table and rest
+of the entries are false
+when fly from is not set but fly to is
+set flight button is disabled and you
+make entries in the decision table
+lastly only when both fly to and fly
+from or set flights button is enabled
+and you make corresponding entry in the
+decision table if you observe the
+outcomes for rule 1 2 & 3 remain the
+same so you can select any one of them
+and rule 4 for your testing the
+this technique becomes immediately clear
+as the number of inputs increases number
+of possible combinations is given by 2
+raised to n where n is the number of
+inputs for N equals 10 which is very
+common in web-based testing having big
+input forms the number of combinations
+will be 1024 obviously you cannot test
+all the combinations but you will choose
+a rich subset of the possible
+combinations using decision based
+testing technique
+state transitioning diagram is helpful
+where you need to test different system
+transitions to understand this with an
+example let's consider the behavior of
+login screen and flight reservation
+application consider you have entered
+agent name in the login screen on first
+attempt you enter correct password and
+you are given access to the application
+in case you entered incorrect password
+and error screen is shown and you are
+asked to enter the password again the
+second time you can make three attempts
+but if it's a fourth attempt you enter
+incorrect password the application will
+be closed in case you enter correct
+password at the second third or fourth
+attempt you will be given access to the
+application amongst these various system
+transitions the scenario of access at
+first attempt in close of application
+edge fourth attempt are important and
+need to be essentially tested but
+scenario of access at 2/3 and fourth
+attempt are less important and perhaps
+you can test one of them
+is called state chart or state graph
+components of the graph states that the
+software may occupy transition from one
+state to other events that cause
+transition actions that result from
+events state graph is useful for
+identifying valid transitions but if you
+want to determine invalid transitions
+you can use state table in a state table
+all the valid states are listed on the
+left side of the table and the events
+that cause them on the top each cell
+represents the state system will move to
+when the corresponding event occurs for
+example while in s1 state you enter
+correct password you are taken to state
+s6 or incase you enter incorrect
+password you are taken to state s2
+likewise you can determine all other
+states if you observe two invalid states
+are highlighted using this method which
+basically means what happens when you
+are already logged into the application
+and you open another instance of flight
+reservation and enter valid or invalid
+passwords for the same agent system
+response for such a scenario can be
+tested
+you
+use case testing
+this technique
+test cases that cover the entire system
+on a transaction-by-transaction basis
+from start to finish a use case is
+description of a particular use of the
+system by an actor also called user
+the technique is used widely in
+developing tests at systemö acceptance
+level in use case an actor is
+represented by a and system bias first
+we list the main success scenario
+consider the first step of an end-to-end
+scenario for login functionality of
+flight reservation application where the
+actor enters agent name and password in
+the next step system will validate the
+password next if password is correct
+access is granted there can be extension
+of this use case if password is not
+valid system will display message and
+ask for retry four times or if password
+is not valid at the fourth time system
+will close the application here we will
+test the success scenario in one case of
+each extension
+review in simple words reviews a meeting
+where people analyze a software work
+product and recommend changes with the
+objective of improving quality the
+software work product could be a design
+document system requirements
+specifications code test plan etc it
+helps in detecting defects early in the
+development lifecycle and reduces costs
+almost always the testing team is part
+of the review meetings to understand the
+review in detail let's consider the same
+example of earlier to add email
+functionality to flight reservation
+application for which the functional
+design document is prepared by the
+technical lead he approaches his manager
+and requests to initiate a review the
+manager will quickly go through the
+document and check whether the document
+is of acceptable quality to request a
+review by other people for example in
+this case he finds a few spelling
+mistakes and asks the technical lead to
+correct them once corrected the manager
+will send out a meeting request to all
+stakeholders along with meeting location
+information date and time of meeting and
+will mention the agenda for the meeting
+he will also attach the functional
+design document itself to the meeting
+request for reference this is the
+planning stage next stage is the kickoff
+meeting it is an optional stage here the
+goal is to get everybody on the same
+wavelength regarding the document under
+review it is beneficial for new or
+highly complex projects next stage is
+the preparation stage where review
+meeting participants individually go
+through the document to identify defects
+comments and questions to be asked
+during the review meeting this phase
+necessary to ensure that during the
+meeting participants focus on subject in
+hand instead of daydreaming this is your
+exercise for this functional design
+document think of the details missing
+required to help you test this
+functionality pause the tutorial and
+think let's continue with the next stage
+which is the actual review meeting here
+the meeting participants are assigned
+different roles to increase the
+effectiveness of a meeting the moderator
+is a role usually played by the manager
+who leaves the review meeting and sets
+the agenda the creator of the document
+under review plays the role of author
+who reads the document and invites
+comments the task of the reviewer is to
+communicate any defects in the work
+product suppose one of the reviewer says
+it would be nice to have a reset button
+the author agrees to the suggestion
+another review comment is there is no
+mention as to where in the menu item the
+email functionality will appear again
+the author accepts and agrees to make
+changes the meeting participant playing
+the role of the scribe also known as
+recorder will note down these defect or
+suggestions one young reviewer suggests
+the possibility of sharing a ticket via
+social networking sites like Facebook or
+'cut and so on the author strongly
+disagrees to this and the reviewer and
+the author enter into a heated argument
+at this juncture the moderator
+intervenes and finds an amiable solution
+which is to ask the client whether he
+needs sharing via social networking
+finally all comments are discussed and
+the scribe gives a list of defects
+comments suggestions that the author
+needs to incorporate into his work
+product the moderator then closes the
+review meeting
+then as all to the meeting phase of the
+review the important roles here are the
+moderator the author described the
+reviewers the moderator and scribe can
+also play the role of reviewer meaning
+they can give review comments to the
+author the next phase of the review is
+the rework phase where the author will
+make changes in the document as per the
+action items of the meeting in the
+follow-up phase the moderator will
+circulate the rework document to all
+review participants to ensure that all
+changes have been included
+satisfactorily that is all - a review
+process the various stages of a review
+process are this was a generic review
+note that there are three types of
+reviews walkthrough which is led by
+author technical review which is led by
+a trained moderator with no management
+participation inspection which is led by
+trained moderator and uses entry and
+exit criteria all these three types
+follow the same review process and the
+same stages as discussed earlier
+let's do an exercise for the flight
+reservation application prepare work
+breakdown structure of the various
+testing tasks like check login
+functionality check new order
+functionality check fax functionality
+and other similar functionalities and
+estimate the effort required to test
+these functionalities for example login
+functionality can be tested in few hours
+likewise prepare a list of all the tasks
+and corresponding effort pause the
+tutorial and complete the exercise I
+hope you made an educated guess on the
+effort required this is bottom up
+strategy for test estimation the
+technique is called bottom-up sense
+based on the tasks which is at the
+lowest level of the work breakdown
+hierarchy you estimate the duration
+dependencies and resources in bottom up
+strategy estimates are not taken by a
+single person but all individual
+contributors experts and experienced
+staff members collectively give
+estimates the idea is to draw on the
+collaborative wisdom of the team members
+to live at accurate tests estimates now
+since you have considerable experience
+on the flight reservation application
+use this experience to estimate the
+effort required for full functional
+testing of the website deuter's demo com
+this site is functionally identical to
+the flight reservation application just
+that it is web-based pause the tutorial
+and do the exercise
+I hope based on your experience you came
+up with him good estimate on the efforts
+required to test the website this is the
+top-down approach to estimation which is
+based on experience another technique is
+to classify application based on their
+size and complexity and then seeing how
+long a project of a particular size and
+complexity have taken in past
+another approach is determining average
+effort per test case in past for similar
+projects and then using estimated test
+cases of the current project and
+arriving a total effort more
+sophisticated estimation models involved
+complex mathematical models in practice
+majority of the projects use top-down
+approach for estimation test estimates
+can be affected by many factors like
+timing pressures people factors
+geographic distribution of the test team
+and so on that is all the estimation
+confused with test-case sweet to
+understand the nitty-gritty of a test
+plan let's develop a test plan for
+flight reservation application in the
+previous tutorial we have already
+informed that there more than 150 types
+of testing and you cannot possibly test
+your application for all the different
+types for the flight reservation
+application you might want to test the
+application to examine how it works when
+installed on different operating systems
+but testing it to check how it works for
+different browsers does not make sense
+since it is not a web-based application
+based on this contextual analysis you
+can make a list of testing types that
+are in scope and will be tested and
+testing types that are out of scope and
+will not be executed for flight
+reservation risk could be any future
+event with a negative consequence you
+need to identify the risks associated
+with your project risks are of two types
+first project risks example of such risk
+is senior team member leaving the
+project at roughly every risk is
+assigned a likelihood that is chance of
+it occurring typically on a scale of 1
+to 10 also the impact of that risk is
+identified on a scale of 1 to 10 but
+just identifying the risk is not enough
+you need to identify a mitigation in
+this case mitigation could be knowledge
+transfer to other team members and
+having a buffer tester in place the
+second type of risks are product risks
+an example of a product risk would be
+flight reservation system not installing
+and test environment mitigation in this
+case would be conducting a smoke or
+sanity testing accordingly you will make
+changes in your scope items to include
+sanity testing this is risk based
+strategy of testing there are many other
+testing strategies to help you select
+testing
+for your application under test most of
+the times you're out of scalp items will
+not contain out of context testing types
+but in context testing types excluded
+due to the test strategy chosen budget
+and timing considerations so for example
+if timing considerations do not permit
+performance testing it will move from in
+scope to out of scope lists that apart a
+test plan will contain information about
+the test estimates test team schedule
+and so on a test plan helps monitor the
+progress of various testing activities
+and helps take controlling action in
+case of any deviations from the planned
+activities that is a brief overview of
+how to create a test plan below find a
+sample test plan template for your
+reference
+while actually
+Tooting test cases you may find that
+actual results vary from the expected
+results this is nothing but a defect
+also called incident bug problem or
+issues in case you find a defect what
+information would you convey to a
+developer to help him understand the
+defect pause the tutorial and think your
+bug report should contain following
+information defect ID unique
+identification number for the defect
+defect description detailed description
+of the defect including information
+about the module in which defect was
+found version version of the application
+in which defect was found steps detailed
+steps along with screenshots with which
+the developer can reproduce the defect
+they raised date when the defect is
+raised reference where when you provide
+reference to the documents like
+requirements design architecture or
+maybe even screenshots of the error to
+help understand the defect detected by
+name or ID of the tester who raised the
+defect your bug report will also contain
+following information status status of
+the defect more on this later fixed by
+name or ID of the developer who fixed it
+they'd closed date when the defect is
+closed
+sample bug report for your reference
+this apart your bug report will also
+include severity which describes the
+impact of the defect on the application
+priority which is related to defect
+fixing urgency severity and priority
+could be high medium or low based on the
+impact and urgency at which the defect
+should be fixed respectively a defect
+could have a very low severity but a
+high priority for example if there is an
+error in the text of the logo of flight
+reservation application its severity is
+low sentence can be fixed very easily
+and it does not affect any functionality
+of the system but it needs to be fixed
+at high priority since you do not want
+to ship out your product with incorrect
+logo likewise a defect can be high
+severity but low priority suppose there
+is a problem with email functionality of
+flight reservation this defect has high
+severity since it causes the application
+to crash but the functionality is
+scheduled to release in next cycle and
+can be fixed later which makes it a low
+priority
+from discovery to resolution a defect
+moves through a definite lifecycle
+called the defect lifecycle let's look
+into it
+suppose a tester finds a defect the
+defect is assigned a status new the
+defect is assigned to development
+project manager who will analyze the
+defect he will check whether it is a
+valid defect consider that on the flight
+reservation application the only valid
+password is mercury but you test the
+application for some random password
+which causes logon failure and report it
+as defect such defects due to corrupted
+test data miss configurations in the
+test environment invalid expected
+results etc are assigned the state as
+rejected if not the defect is checked
+whether it is in scope suppose you find
+a problem with the email functionality
+but it is not part of the current
+release such defects are postponed next
+manager checks whether a similar defect
+was raised earlier if yes
+defect is assigned a status duplicate if
+no the defect is assigned to developer
+who start fixing the code during the
+stage defect is assigned a status in
+progress
+once code is fixed defect is assigned a
+status fixed next the tester will retest
+the code in case the test case passes
+the defect is closed if the test cases
+fails again the defect is reopened and
+assigned to the developer
+a situation where during the first
+release of flight reservation a defect
+was found in sacks order which was fixed
+and assigned a status closed during the
+second upgrade release the same defect
+again resurfaced in such cases a closed
+defect will be reopened that is all to
+bug life cycle
+[Music]
+Oh
+[Music]
+[Music]
+you
+[Music]
+I
+[Music]
+[Music]
+you
+you

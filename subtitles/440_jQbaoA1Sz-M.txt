@@ -1,0 +1,156 @@
+hi everyone welcome to tech in five
+minutes
+over the past decade the importance of
+the software testing life cycle
+or stlc has skyrocketed for us
+it is crucial as it helps engineers
+address bugs faster and more accurately
+before we start make sure you are
+subscribed if you don't want to miss our
+upcoming videos
+we share our team's insights into the
+tech industry
+let's now get back to our topic
+software testing lifecycle means a
+testing process which has specific steps
+to ensure that the quality goals have
+been met
+why do we need a software testing
+lifecycle the benefits of stlc
+are the following direct project and
+team organization
+quality assurance predictable
+development process
+and quick error detection before we
+analyze the stlc
+process let's observe the main models of
+software development lifecycle
+as they directly influence the testing
+process there are four common practices
+agile model waterfall model v-model
+spiral model let's review each of them
+the main focus of agile is to adapt to
+any changes and avoid long-term planning
+we value agile for the transparency of
+project delivery
+this model involves testing as early as
+possible
+let's summarize its advantages instant
+product delivery
+users involvement in product development
+constant communication
+continuous improvement process less
+planning
+2. waterfall contrary to agile
+methodologies
+the waterfall model is about long-term
+planning it works great for small
+projects
+don't you think that a stable
+traditional approach is better than a
+flexible one
+share your thoughts in the comments
+anyway the advantages of waterfall
+are its review process and persistence
+of linear testing
+three v model this model is about
+planning the expected results
+right at the verification phase the v
+model breaks down the testing phase into
+detailed steps to ensure the validation
+and verification process according to
+our team's experience
+the v model is rarely used these days
+v-model benefits
+include simplicity in use the test plan
+is specified before coding
+real-time error tracking defined user
+role in the verification phase
+and finally the spiral model this
+methodology focuses on risk analysis
+and spirals develop
+good for complex projects ability to
+manage risks at earlier stages
+would you like to learn more about
+software development methodologies
+check our guide in the description box
+let's now review the process
+of software testing life cycle phase 1
+requirements analysis after product
+requirements are set out
+jelvik's testing teams try to evaluate
+this information
+and ensure that it works for the project
+requirement analysis
+includes the following activities
+defining software features
+setting testing priorities preparing
+requirement traceability matrix
+rtm it is used to track the requirements
+and to check if the current project
+requirements are met
+and finally we perform identifying the
+testing environment details
+deliverable of this stage is requirement
+traceability matrix
+phase two test planning key activities
+in this stage include assigning roles
+and responsibilities
+risk evaluation test tool selection and
+cost analysis
+deliverables of this stage are effort
+estimation document
+and test plan strategy document to
+identify what we are testing
+how and what are our outcomes
+phase three test case development at
+this stage
+our team prepares and reviews test cases
+automation scripts and creates test data
+obviously deliverables here are test
+cases and scripts
+and test data phase four test
+environment setup
+once software build is deployed we
+execute
+environment setup software and hardware
+configuration
+and smoke test execution as a result
+we get the environment ready with test
+data set up and smoke test results
+phase 5 test execution testers carry out
+test script execution
+test script maintenance and bug
+reporting in case of bugs
+the build is moving back to the
+development team after bug fixing
+we carry out regression testing
+deliverables of test execution are
+completed rtm with the execution status
+test cases updated
+and defect reports and finally comes
+phase
+six test cycle closure this is about
+measuring results
+so we conduct test results analysis
+evaluation of test coverage quality
+costs time and objectives criteria
+and preparation of the final report
+deliverables of the final phase are
+test closure report and test metrics
+and that's it if you're looking for an
+expert qa team to secure your it project
+look no further jelvix offers the most
+advanced qa and testing services on the
+market
+we provide end-to-end software
+development services
+find our contacts in the description box
+thank you for watching this video
+and make sure you hit the like button
+subscribe to tech in five minutes if you
+don't want to miss our upcoming videos
+take care
+[Music]
+[Music]
+you

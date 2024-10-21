@@ -1,0 +1,1812 @@
+hi everyone thanks for joining us today
+this event is brought to you brought to
+you by data talks club which is a
+community of people who love data we
+have weekly events this is one of such
+events if you want to find out more
+about the events we have there is a link
+in the description go to the description
+check it out it has quite a few events
+that we plan so check it out
+if you see something interesting
+register sign up
+then if you haven't subscribed to our
+youtube channel for whatever reason now
+it's the time the best time to fix it
+there is this red button below the video
+click on this and you will get notified
+about all our future videos
+and we have an amazing slack community
+if you join it you can hang out with
+other data enthusiasts so i do suggest
+to do this you're missing out if you
+are not there
+last but not least we have an amazing
+course starting soon in september so
+this course covers the basics of machine
+learning engineering there is also a
+link in the description so if you're
+watching it right now and you want to
+learn want to learn more about machine
+learning engineering check it out it's
+totally free
+yeah
+you'll like it
+during today's presentation you can ask
+any question you want and i will be
+asking these questions and by the way
+how do you prefer should i
+ask you questions at the end or should i
+interrupt you if there is a relevant
+question and ask you the question um i'd
+prefer at the end if that's okay
+yeah that is totally okay so we will
+keep the questions at the end so there
+will be a q a session and there is a
+link been linked in the live chat that
+you can use for asking questions
+i think that's all you're probably here
+not for me talking about this stuff but
+for the
+fun stuff so now the floor is yours
+please start
+great uh just before i start i've
+actually got a fan on in the background
+because it's very warm here i just wanna
+make sure it's not interrupting the
+audio at all
+i cannot hear anything but also i have a
+fun that's why maybe i can hear it okay
+cool if anyone uh
+watching live can hear a fan in the
+background let me know and i will turn
+it off
+um great so firstly i'd like to thank
+both alexia alexian france for inviting
+me to to give this talk with datatalks
+club it's my first time hopefully not my
+last
+um and so today i'll be talking about
+feature engineering for time series
+forecasting
+and so this talk
+before we go on let me just quickly
+introduce myself
+so my name is kishan and i work as a
+data science manager for a luxury
+fashion e-commerce company called
+farfetch where i work on time series
+forecasting and pricing optimization
+before i entered data science i did a
+phd in physics working on building
+models
+of abnormal heart rhythms and doing
+large scale time series analysis on that
+i also like to contribute to open source
+when possible my most relevant recent
+contributions would be
+to stats models where i contributed some
+additional functionality to the
+time series decomposition methods there
+in collaboration with soledad girly i'm
+also building an online course on the
+same topic feature engineering for
+forecasting if you're interested please
+check it out and you can find all the
+slides today already on github in the
+link there
+maybe you can send me the links and i
+will post them in the live chat in the
+description so people can check them out
+right now
+let me
+just
+open and send that
+at least link to the slides and then
+where people will be able to so
+i've just sent the slides there in the
+chat
+did you do great uh
+yes have you received it in the live
+chat you should have seen someone ah in
+the live chat okay yeah maybe you should
+send it in zoom because in the live chat
+youtube might block links that are not
+coming from the stream owner okay one
+second sorry everyone but i think you
+might want these links now because later
+you will have to come back
+and then find it okay now i have the
+link and i will post it
+to live chat sorry for the interruption
+now you have the link
+okay perfect now on to the actual topic
+so what does this talk about this talk
+is all about how do we convert a time
+series forecasting task when we want to
+predict the future value of a sequence
+or a set of sequences and convert that
+into a tabular machine learning
+regression task where we have a table of
+features and a target variable and this
+allows us to use some of our favorite
+models like the new aggression random
+forest and so on and so there are two
+main themes to this talk
+one is how just how do we do forecasting
+using traditional machine learning
+models and then secondly how do we build
+good features when we start doing that
+and so we'll start about talking about
+how we can do time series forecasting
+using machine learning models
+so i just want to motivate why we'd want
+to use machine learning for forecasting
+by way of an example
+so a couple of years ago there was a
+kaggle competition called the m5
+forecasting
+competition where the objective was to
+predict
+the sales of a set of goods from walmart
+and this was an interesting problem
+because of some characteristics of the
+data set there was a very large number
+of correlated time series that we had to
+forecast
+there was over 30 000 product store
+combinations and therefore over 30 000
+time series to forecast the
+products lied in a hierarchical
+structure so a given product could
+belong to a particular department which
+belonged to a category the sales of a
+product belong to a store which could
+belong to a state and so on so there's a
+hierarchical structure in the data
+you can see examples of the time series
+here on the bottom right and as you can
+see they have a varying length so each
+time series can come online as it were
+at different points in time
+and just from looking at the time series
+you can see that there's a high degree
+of sparsity and intermittency there's no
+obvious seasonality or trend when
+looking at this data
+also we would imagine that exogenous
+variables or features like the price
+promotional activity would also be
+important in forecasting the sales of
+these products and then we would also
+expect multiple seasonal patterns so you
+might expect a weekly pattern because
+the weekend would be different from
+weekdays the summer will be different to
+the winter and so we have multiple
+seasonalities
+now what was interesting is for this
+type of data set it turned out that all
+of the top performing methods that won
+the competition were actually quote
+unquote pure machine learning models and
+they were better than all of the
+traditional statistical benchmarks used
+for time series forecasting such as
+exponential smoothing arima and so on
+and so in a lot of the top comp in the
+the top winning solutions we saw light
+gbm and it turns out that uh machine
+learning models like light gbm were able
+to learn simultaneously across multiple
+different time series and integrate
+these exogenous features and overall
+that allowed it to give you a better
+forecasting accuracy
+the other advantage of using machine
+learning is that it gives you access to
+other
+tools and options for example you could
+specify the sample weights which would
+allow you for example to give more
+weight to recent data than data in the
+far past
+you can also cust specify custom loss
+functions and actually in the in the
+winning solution
+a custom loss function was actually used
+and so you get all this for free just by
+using a machine learning models here
+that being said you should not neglect
+our simple traditional statistical
+baselines over 90 percent of the
+participating teams did not beat a
+simple statistical baseline model
+exponential smoothing and that means we
+should still use these as benchmarks and
+even the top 50 solutions only improved
+on exponential smoothing by between 15
+to 20 percent depending on the
+granularity of the time series we were
+looking at and so as a result we should
+still continue to benchmark against
+simple methods and not rule them out
+entirely
+now overall my advice is that we should
+use kind of simpler more traditional
+methods and we're dealing with what i
+would kind of call easy time series that
+is where you see a very strong
+seasonality or trend you have a very
+small number of time series they're not
+correlated with each other so you could
+just learn one model per time series you
+don't see a lot of sparsity or
+intermittency there's very little
+exogenous features in which case it's
+you're probably better off using
+something like arima or exponential
+smoothing or profit
+but you should consider using machine
+learning models when you have a much
+more complex problem that you might
+encounter in a business setting such as
+this and so that that kind of hopefully
+gives you some motivation of when to use
+what kind of method
+so how do we go about doing forecasting
+with machine learning
+so we start off with our time series
+here it's just a fake time series which
+i'm going to call sales and we have all
+of this information up to time t and we
+want to predict the sales at time t plus
+one
+and so we want to convert this time
+series into a table of features and a
+target variable so how do we create our
+target variable in this case we're just
+directly going to use our time series
+because that's what we want to predict
+and when we create these feature vectors
+we want to create features which only
+use information in the past and so we're
+only using the data that's known at the
+time of the target and this will allow
+us to avoid what is called lookahead
+bias this is where we use information
+from the future
+to predict the future which would result
+in data leakage
+and so i can show you what we do here so
+when we're constructing the feature
+vector for this uh target here perhaps
+in the future we're basically going to
+create some function from the previous
+values and the simplest thing we can do
+is just to directly use those past
+values and so we can create a feature
+vector here from the previous values of
+our time series and so here we're using
+what's called a lag of one a lag of two
+and a lag of three so lag one lag two
+leg three and so we can populate our
+feature vectors and associate them with
+our target in this way and it doesn't
+create any data leakage
+and so we go on and of course we're
+going to have some missing data at the
+start of the time series because we
+can't lag any further as we go back
+and so here we've derived some features
+from the past value
+of our target time series and these are
+called lag features and you can also
+create more complex features from the
+previous values and we'll get on to
+those later another class of features
+are those where you know the value both
+in the past and in the future one
+example might be advertising spend you
+might have observed the advertising
+spend in the past and you observe the
+sales and then you might have a budget
+and so you know what the advertising
+spend is in the future and so that's
+quite easy to create a feature from you
+just use it directly
+you might also have features where you
+know the value in the past but you don't
+know it in the future
+examples would be weather related
+features you might have observed
+rainfall in the past and that might
+affect the sales of your product maybe
+you're selling ice cream i don't know um
+and then in the future how do you
+populate this feature well there are a
+few things you can do one is you have to
+use an alternative forecast so you use a
+weather forecast um and you pull that
+from somewhere else and you use that as
+your feature
+alternatively you have to create your
+own naive forecast so you might
+extrapolate from the previous value and
+project that outwards
+and if neither of those work for you
+then you might have to also use lag
+features for these type of features so
+rather than projecting it out you'd use
+the lag value of rainfall so to predict
+the sales tomorrow you'd look at the
+rainfall today for example
+lastly we have a set of features which
+probably isn't discussed as much one
+which we'll call static features
+they're called static features because
+they typically represent metadata about
+your time series and they don't change
+for a given time series so you might
+have the sales in a particular country
+like the uk you might ask why is this
+useful
+it's useful when you start dealing with
+multiple time series because then that
+metadata can vary between time series so
+you might also have the sales in germany
+or in other countries and then you can
+try and have your model learn
+information about different groups of
+time series and that's where static
+features come into play
+and so now we have a group of features
+organized in a table and we have a
+target variable
+and so we can form our training data
+here we'll come on to later around how
+we can
+uh process our categorical features and
+dealing with missing data and that kind
+of stuff but essentially we have our
+training data which allows us to take
+whatever standard sk learn type model we
+have run dot fit and then we can predict
+one step into the future
+now in practice we will want to do
+multi-step forecasting we don't want to
+forecast just one step into the future
+typically we forecast multiple steps
+into the future
+and so there are two main methods that
+allow us to do this one is called direct
+forecasting and the other one is called
+recursive forecasting
+in direct forecasting we're going to
+directly predict the future values
+effectively we're going to use the same
+features built from the the past values
+but we'll we'll build models on
+different target variables which means
+we'll have multiple models for each
+different target variable but
+effectively the same features and so
+you'll have many models per forecast
+time step so let's just illustrate that
+so let's say you're creating your
+feature vector and you start at this
+this time point here you create your
+feature vector of lag values and you can
+associate that with your target variable
+for one step ahead now you also want to
+build a model that predicts two steps
+ahead so you use the target variable
+which is two steps after the time frame
+you're considering here and likewise a
+third time step so now we have the same
+feature vector but multiple different
+target variables
+and so we can then drag our time
+line forward here and construct our
+feature vectors and our target variables
+we can then effectively pass the same
+feature vectors to these different
+models and give them different target
+variables during training and so when we
+pass our input feature vector
+representing our most recent
+time horizon
+when we pass that input vector to our
+models you will then get a forecast for
+each model giving you a different
+forecast into the future so they have a
+model that gives you a one-step forecast
+another model that gives you a two-step
+forecast and so on this has the obvious
+downside that you're now going to train
+multiple models per forecasting step if
+you want to do 28 days into the future
+you'll have 28 models and that
+introduces a lot of complexity so is
+there a simpler way of doing this well
+this is what recursive forecasting tries
+to take into account and so with
+recursive forecasting you build your
+features and you fit the model once and
+then you're going to recursively use
+this model and i'll show you how so you
+build your model and you predict your
+one step ahead forecast as normal now
+you're going to append that forecast
+back to your original training data
+and now you recreate your features on
+the target variable with your forecast
+and then you plug that back into the
+model to get you your next forecast and
+so on and this way you can use one
+fitted model to predict multiple steps
+into the future
+now let me show you exactly how that
+works on our tabular data set so let's
+assume that we've already processed our
+static features our future unknown
+features and our feature future known
+features
+and so we're just dealing with our lag
+features here
+and now we have to build these
+iteratively so in the first step ahead
+we're just going to build our features
+from the past values as we as we've
+shown
+and then we predict one step into the
+future
+and now we append that prediction back
+to our target variable and now we
+recreate
+the feature vector from this augmented
+target variable here with our forecast
+and now we can do dot predict again on
+this feature vector append the forecast
+and continue and in this way we can do
+multi-step forecasting using just one
+model so let's just talk about the pros
+and cons of these methods so one of the
+advantages of direct forecasting is that
+each model you're building is directly
+optimized for each forecasting step if
+you're going to build a 10 step ahead
+forecast then you've built a model that
+does precisely that
+and this is to
+contrast it with recursive forecasting
+where you only built one model which
+optimized on building a one step ahead
+forecast and you might imagine that the
+way a model uses features to do a
+forecast in the near term might be
+different than in the long term and so
+that's
+some of the the advantages and
+disadvantages on that point
+the cons of direct forecasting obviously
+you're now having to use multiple models
+which involves a computational cost it's
+harder to maintain
+and also these forecasts are all
+independent the forecasting model to
+forecast one step ahead is independent
+from the second step ahead and third
+step ahead and so on so you can't
+guarantee that they'll be correlated or
+near one another
+so some of the advantages of recursive
+forecasting is that you only have one
+model which means it's less
+computational time and the forecasts by
+by definition they are dependent because
+you're using the forecast to generate
+your next forecast and so they're
+they're correlated
+one of the disadvantages is that you now
+have a lot of additional code complexity
+um to iteratively create your features
+append them to target variable and so on
+and i'll show you how you can overcome
+that with some open source libraries
+later
+also you'll have the propagation of
+errors if you're one step ahead forecast
+has a significant error then that will
+obviously propagate to your second step
+ahead your third step ahead and so on
+and so in that way these errors
+propagate and as we've mentioned it's
+only optimized for one step ahead and so
+these are some of the things to to keep
+in mind when you're considering whether
+or not to use direct or recursive
+forecasting
+now i just want to talk a little bit
+about how we would validate our
+forecasting model so traditionally when
+we work with tabular data and we want to
+do some kind of cross-validation or a
+train test split
+we could just randomly shuffle the data
+from our original data to a training and
+test set and we could do that in a
+random manner because we can assume that
+each row is independent and that way we
+can therefore randomly split the data
+the problem now is when we're dealing
+with time series data and despite the
+fact we're still working with tabular
+data you cannot split randomly because
+the time ordering in your data means
+each row is no longer independent from
+one another
+if you were to randomly shuffle this
+data set you might have values in the
+future land in your training data values
+from the past landing in your test data
+and then you're using the future to
+predict the past and so you will have a
+very inaccurate idea of how well your
+model actually performs in practice
+so instead you need to split by time to
+replicate the actual forecasting process
+what does that look like so in time
+series cross validation you'll arrange
+your data by time and you have your full
+data set and then you'll split the data
+by certain time horizons and then you'll
+train your data you'll train your model
+using data prior to that horizon and
+you'll forecast to some horizon in the
+future and then you move that window
+forward and so in this way you do get
+multiple folds that you're able to train
+your model and also test and so you have
+to take the time ordering into account
+that's how you do time series cross
+validation
+so just before we move on to feature
+engineering i really want to highlight
+the differences in the machine learning
+workflow between doing your standard
+regression and classification tasks
+versus doing forecasting whilst we're
+still operating with tabular data in
+both cases the workflow when it comes to
+writing your code will actually be very
+different
+so for a start when we want to do our
+trust our train test split
+um we could do random allocation when
+we're doing our typical random
+regression and classification tasks when
+we're doing forecasting we need to split
+by time
+when we're creating the feature and
+target variable we could actually
+pre-compute our features and target
+variable before predict time before we
+even touch the model when we're doing
+typical regression and classification
+tasks
+now some of our features are actually
+built from the target variable on demand
+at predict time those lag features when
+we did recursive for
+forecasting and this means that you
+can't just pre-compute all of your
+features prior to predict time when
+you're doing recursive forecasting for
+example
+this also changes the way that the model
+behaves at predict time so
+when you're doing regression and
+classification tasks you only need the
+trained model and then you could provide
+an input and then you get a prediction
+when we're doing forecasting you need
+the train model but you also need the
+training set at predict time because you
+need information from the training set
+to construct any feature that is built
+from the target variable and so that
+means that you can't just have the
+training mode the trained model when you
+put your model into production you also
+need to pass your training set as well
+so it changes the way that you put
+models into production
+and lastly the feature engineering looks
+quite different there are a lot of time
+series specific feature engineering
+issues which can cause data leakage
+where you have information flowing from
+the past from the future into the past
+that you want to avoid and i'll come on
+to that in the next section of this talk
+so now i'm going to talk about feature
+engineering
+so there's a lot of future engineering
+when it comes to time series forecasting
+and a lot of things just specific for
+time series
+and so this covers a wide area all the
+way from how do we impute missing data
+how do we identify outliers can we
+transform the data our time series to
+make it more forecastable for example
+by applying certain transforms like the
+log transform or deseasonalizing or
+detrending our data before
+passing it to our forecasting model can
+we encode how do we encode categorical
+variables now we're dealing with time
+series we can also extract a lot of
+information just from the temporal
+aspect of the problem for example from
+the calendar like the day the week the
+month are there any particular holidays
+we also extract a lot of features from
+past values of both the target and other
+features
+and lastly there's also a lot of
+information from the trend and
+seasonality in a time series for example
+are there change points is there a step
+change somewhere in your data is there
+some regularity that you can pick up
+from
+from the seasonality and project that
+forward so there's a whole host of
+methods to create feature features for
+time series forecasting and a specific
+to time series and we're going to cover
+some of the most important ones and
+these were also used in the
+m5 forecasting competition and so let's
+talk a bit about those and so one thing
+you might be asking is well what data
+can i use to build features and the
+answer is well any data that you know at
+the time of making a prediction
+including any knowledge you have about
+future values of a feature let's say for
+example your marketing spend but you
+have to be very careful not to leak any
+data from the future into the past and
+i'll show you how it's very easy for
+that to that to occur it's easier to say
+than it is to do in practice so i'll
+show you
+some points to be careful about
+so let's let's look at a concrete
+example imagine that we have multiple
+products and we want to which means that
+we have multiple time series and we have
+some global advertising spend and we
+want to predict the future value of
+these products now i'm going to
+represent that as a table here so you
+have your your time index you have your
+product id and for each time series we
+have a different product id we have our
+advertising spend which is the same
+across both product ids and we have our
+target variable which is just the sales
+and so we want to predict future values
+of our products and we might know the
+advertising spend going into the future
+let's say
+so the first question is is how do we
+build our target variable for this
+example so now we're actually dealing
+with multiple time series
+and what you can do is if the table is
+if your time series are concatenated in
+this way you can directly just use your
+sales value here as your target variable
+one thing to note now is that the target
+variable actually contains time
+sorry sales values from multiple
+different time series all within one
+target a vector and the model without
+without features doesn't know that one
+observation belongs to the same time
+series and it doesn't know that two
+different values belong to two different
+time series you have to try and encode
+that kind of information in your
+features
+so let's talk about the most simple
+feature that you can build and it's one
+that i showed earlier which are lag
+features and this is where you're
+directly using the past values of the
+target variable or feature to predict
+the future values the intuition here is
+that recent values of the target are
+likely to be predictive of future values
+likewise another trick you can do here
+is something which are called seasonal
+lags let's say you know that your time
+series has weekly seasonality
+then you can introduce this by just
+using a lag of seven days for example so
+it's a very quick and dirty and very
+easy way of capturing weekly seasonality
+and i'll show you in a concrete example
+where this works quite well later in the
+talk
+so you could also use the lagged version
+of other target time series to predict
+other ones so you could use previous
+values of one product to predict the
+future values of a different product
+now the only disadvantage here is that
+if you have lots of products you will
+end up creating lots of additional
+features so really this should only be
+considered where you have a small number
+of additional time series that you know
+to be correlated and this is a very easy
+way to model the codependency between
+your various different target time
+series
+and lastly we might also want to use
+lagged values of our exogenous features
+i'll give you a concrete example of that
+one might be for example advertising
+spend you the advertising spend might
+have an impact on your sales today but
+also tomorrow and the day after and so
+on
+the effect is distributed in time
+and therefore you might want to use
+lagged versions of your advertising
+spend so the advertising spend today
+yesterday the day before and so on and
+that's known as distributed lags because
+you're trying to capture this
+distributed effect in time and so that's
+another use case for for creating lag
+features from other features
+and so what does this look like when
+you're building that on on this kind of
+table so when you're creating your lag
+features from your target variable it
+looks very similar to what i showed
+before you're just using the the
+previous values and likewise for your
+advertising spend and so here we have
+the lag of one and lag of two for our
+advertising spend and then you create
+your feature vector you're associating
+it with your target value and you
+continue in this way and so on and then
+you can build out your uh your feature
+matrix like this now it might be very
+tempting looking at this that you might
+just use pandas and then just shift your
+time series to create the lagged
+features if your table does look like
+this however you just have to bear in
+mind that if you do just use shift then
+you might accidentally introduce values
+from which belong to one time series one
+product id and assign them to the wrong
+product id at the edges so ideally you
+want to group by your product id and
+then apply any transformation to an
+individual time series rather than
+operating on this table as a whole so
+just to warn you so that's one way that
+you might accidentally
+screw up your feature engineering there
+um now a question i had in the past was
+you end up building lots of lag features
+if you
+do this so how do you know which flag
+features to build
+and so there are three main methods that
+we can do to try and narrow down which
+lag features we build uh what is using
+domain knowledge another thing we can do
+is use feature selection and modeling
+techniques and lastly we could use what
+are called time series correlation
+methods
+so let's give a specific example where
+domain knowledge can be quite helpful so
+let's say we want to lag our target
+variable what should we do well the
+simple one is if you know the
+seasonality a priori then that will help
+you build your seasonal lag if you're
+working on a retail sales data set and
+you have monthly granularity you know
+that you will have yearly seasonality
+you have christmas you have black friday
+you have events which
+repeat each year and therefore using a
+lag of one year would be an obviously
+predictive candidate to create
+another example might be electricity
+demand here we have an hourly
+electricity demand data set and you'll
+have multiple seasonalities daily weekly
+and yearly
+and so in this case you might build a
+lag feature which can is that which has
+a lag of one day one week and one year
+so you can use any information you know
+about the seasonality ahead of time and
+also you might have some intuition about
+how many recent lags to use you might
+know that the your time series is highly
+correlated to the sales over the past
+one or two days but not to say 20 days
+in the past and so that kind of gives
+you some limit and that can take you so
+far using some domain knowledge
+but what if we want to use a more
+automatic method well another approach
+is using feature selection and modeling
+techniques so in this scenario you just
+create a bunch of different lag features
+for both your target variable and any
+features which you think might be
+reasonable for example if you are using
+advertising spend it's highly unlikely
+that the advertising spend from a year
+ago is going to predict your sales today
+and so you probably don't want to create
+lag features up to a year ago but maybe
+you choose several weeks
+and you create say i don't know 14 or so
+lag features for advertising spend and
+you do the same thing for other features
+and your sales
+what you can do is then just use
+standard feature selection and modeling
+techniques like greedy feature forward
+selection and those methods those would
+be very time consuming other things you
+could do is use modeling techniques like
+lasso so just build a lasso model to do
+a one step ahead forecast and let that
+automatically determine some of your
+most important features which also
+optimize on forecasting one step ahead
+so that's quite another easy way to try
+and narrow down which features you want
+to use
+and lastly we have what are called these
+time series correlation methods
+and this the main idea here is you want
+to measure how correlated are these lag
+features with your target variable and
+if a given lag feature is very
+correlated to a target variable then it
+might be helpful
+and so
+there are three main methods here one is
+called the autocorrelation function and
+another one is called the partial
+autocorrelation function and what they
+do is they measure how correlated your
+time series is to a lagged version of
+itself at different lagged values so
+here we have a retail sales data set
+where you have yearly
+seasonality and on this graph here we
+have what's called an autocorrelation
+plot on the y-axis we see the
+correlation of the original time series
+to a lagged version of that time series
+at different lags and you see these
+little peaks which occur at a lag of 12
+and a lag of 24 and what that means is
+that the time series at a lag of 12 is
+much more highly correlated to your
+original time series than other lags and
+so you can use these plots to try and
+identify is a given lag a potentially a
+good candidate to use for forecasting
+and then we also have the cross
+correlation function which allows you to
+measure how correlated the lag of
+different features are to your target
+time series so not measuring the
+correlation with the time series to
+lagged versions of itself but to lagged
+versions of other time series and so you
+end up getting similar types of plots
+where you look at these and say is the
+correlation high for a given lag okay
+then maybe i might want to use that as a
+feature
+so that can help you narrow down make
+sure you don't build too many features
+let's move on to another type of feature
+what we call window features and this
+generalizes the idea of lag features
+where rather than directly using past
+values we're computing some function or
+summary statistic over a window of past
+data so rather than directly using the
+past three lags we're going to look at
+the mean of the past three values for
+example or the standard deviation which
+gives us a measure of the volatility of
+our data and use that to predict future
+values
+and this can be helpful because for
+example by taking the mean you're also
+smoothing the data so if there's a lot
+of volatility in your data then that can
+also be helpful
+so what does this look like in practice
+so what you're going to do is you have a
+window of some size
+and then you apply a set of summary
+statistics for example the mean and the
+standard deviation and you roll that
+through your data
+to create your feature vectors one thing
+to note here is that we're actually
+lagging our rolling statistic we're not
+simply using pandas taking the rolling
+operator and then applying dot mean
+we're also doing a lag of one because if
+we were to not take the lag of one we
+would have then assigned the feature
+vector to this row over here i don't
+know can you see my mouse by the way
+yeah
+we would have assigned it over here
+which means that you're then lagging
+leaking information because you're using
+information at the time of prediction to
+create your features and so you create
+leakage so you also have to do some
+lagging here once again another easy way
+that you might accidentally
+leak data from the future into the past
+so
+one way of picking the window sizes
+is a technique called nested window
+features and this is where you'll look
+at window sizes on different orders of
+magnitude so you might look at window
+sizes on the orders of days weeks and
+months and in that way you create a
+feature which captures some information
+at different time scales and you let the
+model learn about some behaviors which
+occur in different time scales there
+and so next let's move on to static
+features so as i described before static
+features effectively represent metadata
+around your time series so we might have
+something like the product id and so we
+have different time series here which
+means that the static feature is
+different amongst these two different
+group of time series
+and we might also have other types of
+static data let's say we have some other
+metadata about say the product category
+maybe one of these time series
+represents shorts another time series
+represents watches
+and then if you have a whole group of
+time series you might realize that say
+the time series which are of type shorts
+have some kind of seasonality but the
+watches time series don't it'd be great
+if the model is able to learn these
+differences between these groups of time
+series
+and likewise to pass information that a
+time series that the data in the target
+vector comes from the same time series
+and so you can do this by finding ways
+of encoding these static features
+so the most common way of dealing with
+these kind of categorical variables in
+tabular data sets is what's called
+target encoding and this is where you
+group by your categorical variable and
+you simply take the average of the
+target variable
+for each category over the training data
+set here
+and so what we'll do here is we take for
+sku1 we'll take the mean of our training
+data and then we'll pass that value as
+our encoded value here and we'll do the
+likewise for sku2
+now this may look okay however there's a
+subtle data leakage going here so whilst
+there is no leakage between the training
+set and the test set because we only
+computed the encoding on the training
+set the target is being leaked from the
+future values to the past values in the
+training set and this can actually cause
+some degree of overfitting to this
+feature here and i'm going to show you
+why
+so if we plot our time series like this
+and see what it means to create the
+target encoding it'll become more
+obvious
+so imagine this is our time series we've
+split it into our training data and our
+test data
+if we take the target encoding by just
+taking the mean of our training data
+like we do here and let's say the mean
+is 14.4
+and now we impute our target our product
+id by 14.4
+well that means that the model when it's
+predicting values let's say
+at this value here at this point in time
+it has access to information in the
+future because the future values were
+used when computing the the mean
+and so now that the model is able to
+determine that oh well the time series
+is going to increase because there's an
+increasing trend and so there is still
+leakage from future values to past
+values by taking the target encoding in
+this manner so how do you overcome this
+well one
+simple adjustment you can make is to
+ensure that you only use the values you
+know at that point in time
+so when you create this uh this target
+encoding
+at this time point two
+you only use the values before time step
+two to create that encoding
+and then at time step three use all the
+values prior to that so effectively what
+you have is this expanding window going
+across your data set and you're taking
+the mean across that expanding window
+and in this case now there is no data
+leakage within this feature
+now you might have a question about how
+do we compute the encoding for future
+values
+so
+if you're doing one step ahead
+forecasting this is not a problem
+because we can still take the mean of
+the target
+to all uh at all points prior to that
+and so that's what we can do there
+if we're using recursive forecasting
+then we need to recommit recompute the
+encoding at predict time to ensure
+that the way that you've created your
+target at your um your encoding is
+consistent with how you've trained the
+model so
+in this case we would make a one step
+ahead forecast you append that to your
+target vector and then you recompute the
+encoding
+with your forecast in the data in this
+way so you have to adjust the way that
+you compute your encoding
+and likewise you'd have to make an
+adjustment for for direct forecasting as
+well so the way that you compute your
+your encoding depends on the method that
+you the forecasting method that you use
+so what are the key takeaways so far
+well data leakage is a huge risk when
+creating features from the target
+variable and future unknown variables
+and therefore you should only use data
+that you're going to know at the time of
+that target variable and this also means
+that handling features at predict time
+can vary depending on the forecasting
+method that we use and this introduces a
+lot of code complexity when implementing
+this in practice which is what would be
+helpful if there were some good open
+source libraries to help us with that
+which is what we're going to talk about
+now
+so what libraries are out there
+so if you're interested
+in just doing feature engineering that
+is just creating the features
+on some data set and not doing
+forecasting then there's some cool
+libraries out there ts fresh and feature
+engine are some and ts fresh computes a
+whole host of various different time
+series statistics so one time series
+goes in multiple statistics come out
+now if you're interested in that whole
+forecasting workflow on and using
+tabular data and machine learning to do
+that well both darts and sk time help
+you do that so these packages have a
+much larger scope than just doing
+forecasting with machine learning but
+they also offer these services and
+that's really really cool so they
+implement these direct recursive
+forecasting strategies they also contain
+transformers to help you build pipelines
+and so and so the advantage that they
+bring is all of the complexity in for
+example creating lag features
+dynamically recomputing your feature at
+predict time it takes care of all of
+that for you under the hood so that you
+don't have to worry about that and so
+that's one reason to use these open
+source libraries rather than
+implementing that logic yourself i just
+want to walk through a concrete example
+which i've implemented in darts
+no reason for that i would also highly
+recommend looking into sk time both of
+them are fantastic libraries to use
+now how do we do this with darts so
+imagine this is our panda series that we
+have we have our index we have our
+values
+and what do we do
+so from darts we have to use a wrapper
+around our pandas series of data frames
+and so we have to import
+a class called the time series class
+which is just a lightweight wrapper
+around a data frame
+and then what does the heavy lifting is
+what's called this regression model
+class
+built into darts and that's the the
+class that will do the construction of
+your lag features and all this kind of
+things under the hood
+and then we can use whatever regression
+model we like we could use random forest
+new regression whatever we want from
+sklearn
+you can also use gradient boosted trees
+from extreme boost and light gbm and so
+on so we import that here
+so we start off by uh converting our
+pandas series here to a time series
+object
+we might want to hold out the last 24
+data points so that we can treat that as
+our our test data
+and
+here we specify uh and train the model
+so we have our regression model and here
+is where we specify the lag features
+we're not creating the lag features
+separately and then passing them to the
+model we're specifying them as part of
+the model definition so here i'm saying
+uh lag the target by 1 2 and 12. and
+here we're going to see where we have a
+yearly seasonality um a lag of 12 be
+quite helpful the data is monthly here
+which is why it's a lag of 12. here
+we're going to pass a linear regression
+model as i said before it could also be
+a random forest whatever you want and
+then we fit the model and then we can
+predict 24 time steps into the future
+and as mentioned previously you now also
+have to pass the training set at the
+same time when you want to predict
+and so
+this is the forecast here and it's it's
+very fairly reasonable here this is the
+airline's passenger data set which is
+just a linear regression built off
+features which is the lag of 1 2 and 12.
+so that's how you do recursive
+forecasting using linear regression on
+one time series and only lag features
+what if you have uh external uh
+variables or other other features so
+let's say you've got advertising spend
+or you might also want to use the month
+or year as a feature as an additional
+way of capturing seasonality
+well you just create another
+time series object
+from your features so here let's say our
+features is the ad spend month and year
+we filter our data frame and then create
+a time series object and we store that
+in this variable called futurecon which
+stands for future covariates which is
+the parlance that
+dartz uses
+and then we just pass future covariates
+to our model.fit method
+one detail i'll mention is that you
+could also lag your future coverage so
+if you want to use the lag of the
+advertising spend you can specify those
+lags as part of the model definition
+here as well
+and over here i'm choosing not to like
+the advertising spend then we can just
+hit model.fit
+model.predict we pass our future
+covariates as well as our training data
+and then we can also get a forecast out
+so now we know how to do recursive
+forecasting using linear regression on a
+single time series uh with both lag
+features and exogenous features
+now let's deal with our last example
+here which is what we have a much more
+complex example we have multiple time
+series
+and we have exogenous features and we
+want to do lag features
+so here we have our timestamp a time
+series is defined by both country and
+product id so you have
+one time series per country product id
+combination our target variable is here
+y and we have our features
+so darts has a handy method called from
+group data frames which will convert a
+pandas data frame which looks like this
+into a set of time series objects so you
+specify
+the columns which define your time
+series the time index and the target
+variable and it returns a list of of
+time series and that's how darts handles
+multiple time series it needs to take a
+list of time series and we do the same
+thing for our features so we have a list
+of features and there's a one-to-one
+correspondence here so this time series
+here corresponds to the features
+associated with that um in this list
+here
+and then we can simply pass all of our
+future covariates now in our model.fit
+method and if we want to just for
+example predict a subset of our time
+series then we can do that so here we're
+going to say only predict the first two
+time series that we passed in our
+training set and therefore you're only
+going to need the future covariates for
+these first two time series and now we
+have one model which was trained across
+multiple time series simultaneously and
+then at predict time it was able to
+produce multiple forecasts for each time
+series
+which is pretty cool and also these time
+series they didn't need to be aligned
+the time series could have been um uh
+defined at different time points so here
+you can see this time series didn't even
+exist during this period of time and so
+these indexes don't need to be fine and
+so this is some of the advantages once
+again of using a tabular machine
+learning based approach
+so i'm just going to conclude now so
+that we can answer answer some questions
+so forecasting can be treated as a
+tabular machine learning task and it can
+be competitive with our traditional
+forecasting models
+the feature engineering and machine
+learning workflow is very different for
+time series forecasting even though
+we're still working with tabular data
+forecasting comes with its own set of
+feature engineering methods and concerns
+around data leakage
+and more and more support is
+increasingly becoming available for time
+series related tasks in the python
+ecosystem so i would continue to watch
+that space
+and if you'd like to learn more about
+this topic then do check out this course
+that i've created with solid garlic it's
+going to be launched in october feature
+engineering for forecasting
+um these are some of the references for
+some of the materials used to create
+this talk
+and i'll now stop for any questions
+you're probably tired of talking right
+100
+yeah i i do have a question um
+so yeah you need a small break right
+so if you can go
+can you go please to slide 24. so in
+this slide 24 you were talking about
+it's going to take a while to get back
+there yeah
+so you were talking about uh like using
+predictions for um some features you
+call them x so i don't remember this is
+a very complex word
+exactly yeah yeah so i i remember this
+from my econometrics class but in
+machine learning we just called them
+teachers right yeah
+uh yeah you're still coming back
+sorry one second yeah okay i'm gonna
+probably go over and i've pressed back
+too many times and my computer is now
+lagging sorry there we go
+okay cool can you still see why can you
+still see my screen
+yes
+okay perfect let's go to slide 24 okay
+yeah 24.
+okay this rainfall feature right so here
+you
+use a feature and then you don't know
+the value and then what you do is you
+predict the next value right using some
+forecasting tool so what i have trouble
+understanding uh here or i have no
+troubles understanding but like trying
+to figure out if it's
+okay or not so what happens here is that
+during train time we use the actual
+value but then during the predict time
+we use the prediction right wouldn't it
+be better during to use
+the prediction also the forecast during
+the train time
+yeah so that you're absolutely correct
+and this is this comes a very tricky
+topic because then the question is do
+you want to use lagged versions because
+that's what you're using
+at predict time
+um you can do that but it depends as
+well if you're trying to capture some
+degree of causality as well because then
+you know the advertising spend on the
+day or the rainfall on the day had an
+impact on the sales so if you're quite
+confident
+about what that value is in the future
+um then it should be okay if you're
+lacking a lot of confidence so other
+areas i see this is for example using
+page views right you might have page
+views of some product and you want to
+predict the future values but of course
+you don't know what the page views are
+going to be in like four weeks time
+uh in which case you're better off using
+the lag values because you don't want to
+build a whole other model to predict
+page views on the other hand if it's
+something like weather you might have
+more confidence about what that might be
+in the future um
+and therefore in that scenario it might
+be better off also it depends if you
+want to do scenario forecasting here as
+well that you're trying to answer the
+question um i want to know uh what my
+sales are going to be tomorrow uh if
+it's raining versus if it's not raining
+if it's sunny or cloudy and so you might
+actually
+plug in different values to try and
+assess different scenarios as well in
+that case you would also want to use the
+feature
+as as it was on the day rather than
+necessarily lagging it
+and yeah coming back to this wearer for
+the casting right so i i remember i was
+trying to
+think how to solve this problem and then
+it's very easy to find the actual
+weather on that day on the internet
+but it's very difficult to find the
+prediction the forecast that was for
+this day let's say one one day before
+and then like if you want to use uh
+you know to
+use the prediction for training your
+model then how do you get data
+yeah this is this is a very tricky topic
+okay so maybe what i'll do now is i will
+share my screen we have a lot of
+questions and it's probably easier for
+you if i just
+share my screen and then you can see
+them too
+okay and by the way sorry for the spam
+attack uh while during the
+stream i was googling like how to stop
+it so now there is a
+slow motion comments so now it's easier
+to handle spam anyways so the first
+question is do you have any resources um
+to learn time series forecasting both
+traditional and deep learning algorithms
+so one resource obviously is the course
+you just mentioned so the actually there
+is another question like how do i find
+the course so there's the link in the
+description i put the link it's the
+first link there click on this and there
+there will be a link to the course
+but do you do you have other resources
+that you could recommend
+absolutely yeah i mean there's also a
+fantastic review paper which came out
+relatively recently over the past few
+months which basically covers
+um forecasting using machine learning
+and forecasting more generally not just
+machine learnings also traditional
+statistical models it's a very chunky
+review paper several hundred pages long
+but if you're looking at just on deep
+diving into specific areas of
+forecasting i can
+link that um review page i think the
+review paper is also actually uh in the
+references section of this talk um if
+not i will i will add some references um
+i don't know is it possible for me to
+post additional links
+uh back to the youtube channel once we
+finish streaming yeah or you can just we
+have to link to this thing right so this
+is uh just to show people how to find it
+so this is the first link here
+and then you can just update your
+repo and put
+like all the links here yeah sure yeah
+definitely so what i can do is i'll i
+can update the repo there to
+try and provide some more of those
+resources um on deep learning for time
+series forecasting specifically i've not
+seen great introductory material
+typically you need to have had some like
+prior knowledge of deep learning rather
+than taking you from the very beginnings
+and therefore
+once again it's kind of more paper
+oriented
+there are some links which i found
+useful tutorial wise for example
+um google recently released today time
+series forecasting method called
+temporal fusion transformers i think
+like over some time over the past year
+or so that was quite interesting and
+they've got quite a nice little tutorial
+um explaining that um so that can also
+help a little bit with the deep learning
+stuff um
+as always i i if you're just getting
+into forecasting to begin with i'd
+recommend rob heinmann's book
+forecasting and i've got the full name
+of the book it's probably considered
+kind of the bible entry textbook for uh
+for forecasting um
+there we go forecasting principles
+practice yeah yeah and then it's free
+it's online uh yes it's an r but like r
+actually has a very nice ecosystem
+uh of like all these tools of libraries
+long before python had anything similar
+i think it's still like a few steps
+ahead i i definitely agree which is why
+i had to make some contributions to
+stats models because there'd be new
+stuff coming out in r which didn't exist
+in stats models so you have to implement
+them yourself if you want them in python
+okay thanks um
+if you forecast once a month should you
+retain every month before you run your
+forecast
+it's a good question it depends how much
+you expect the distribution the data to
+change month and month if it's only
+monthly i would still encourage it um
+just because you can then refresh the
+model
+so it picks up any recent changes in in
+your training distribution um i don't
+think it's computationally going to be
+too demanding to do that
+the only downsides is that you should at
+least check for model stability do your
+model coefficients jump around
+significantly every month by ending up
+with very different models if so you
+want to examine why and which features
+are moving around
+because you don't want to end up um
+using a very different forecasting model
+effectively every month by retraining um
+and so that's just a way of just kind of
+sense checking whilst your machine
+learning model is in production
+okay yeah and if you run it every day
+then maybe it's too cumbersome to
+retrain it right
+maybe you can retrain it like every
+month absolutely and also if you're if
+you're forecasting let's say one month
+ahead um your data may not have changed
+significantly i'm not sure having an
+additional forecast is actually going to
+be beneficial
+and that's actually a question from me
+so while you were talking about
+i think it was midway through your talk
+and then
+[Music]
+even during the half of the talk you
+said so many times that you should be
+careful you can introduce data leaks
+like you can accidentally use the data
+from the future
+and my question was like how to guard
+against that and i guess you've partly
+answered that you can use a library that
+you know i guess yeah
+i yeah i mean i guess from a practical
+perspective um there are some libraries
+which will kind of handle so okay when
+when does that data leakage appear um
+when you create new features it's
+typically when you're doing some kind of
+lagging or rolling window and using the
+past values right and so um there are
+methods both in for example feature
+engine uh sk time
+uh darts where you know this kind of
+behavior is covered for you in the
+transformers that are provided or in the
+model objects so that will hopefully
+help guard to that guard you against
+that to some extent um
+in other cases also for crossband the
+other example i was going to mention as
+well is when you're doing cross
+validation
+you have to rebuild your training set um
+as you're moving your time step forward
+during cross foundation right so that's
+another area where it can
+come into play but once again these
+libraries also help you with cross
+validation so i guess i'd say the
+easiest way is to use other libraries um
+if not and you're going to build your
+own package
+my other advice is use a lot of unit
+testing when you're building these so
+build unit tests for any transformations
+you're building where you're going to
+create some kind of feature that uses
+like values and then lagging them
+um
+i think there was another comment as
+well i had um
+sorry i've not had enough coffee today
+if it comes back to me i'll come back to
+this topic
+okay so in the meantime i think you will
+like this question oh yes okay i think i
+had okay it came back to me
+yes
+yeah absolutely so the other one is um
+if you notice that your model is
+unreasonably good
+if you notice that um your forecasts are
+just very accurate
+chances are you haven't suddenly built a
+crystal ball you've somehow leaked data
+from the future into the past and that's
+one reason why your forecast looks very
+very good
+and that's another sign that you might
+have actually leaked data from the the
+future into the past so that's another
+sanity check don't expect your
+forecasting models to look very good
+yeah thanks i accidentally marked one
+interesting question as answered so i
+clicked on this so this question was how
+would you deal with effects of events
+like covet or financial crisis where
+behavior of the time series going
+forward might be very difficult
+i think this is such a an interesting
+question and i think something that
+everybody is facing in machine learning
+where you're having to train on on past
+data where the distribution of the data
+has changed significantly so
+um what can you do some simple things
+you could try and do so with time series
+forecasting you would hope that the most
+important data is your recent data
+and so one thing you can do is
+potentially truncate your training data
+to only train over those time periods
+now you come into a more complex
+situation you had covered covet is kind
+of the behaviors of code probably are
+not as prominent now as it was during
+that period so would you be under
+forecasting if for example
+covid had
+was still having an impact
+and this is just very challenging to
+handle some things you can do is build
+two forecasting models one with covered
+data one without
+and then kind of take an average between
+the two you have to just be very
+pragmatic and caveat the outputs that
+you provide to your stakeholders other
+ways you can handle this is potentially
+by introducing a new feature
+um or just giving more weight to recent
+time series to recent data so i
+mentioned earlier you could use the
+sample weights option so one thing you
+can do is just give more weight to
+recent time periods um also i wouldn't
+be adverse to adding
+additional business logic on top of your
+machine learning output like review the
+forecast does it make sense has the
+business been growing this fast in the
+past are you sure that if your forecast
+says it's going to grow 200 and it's
+only ever grown 30 year and year
+maybe your forecast isn't so realistic
+and you might need to
+artificially constrain your forecast
+somehow right um
+so yeah this is the most practical
+advice i can give them on that on that
+question
+yeah this one i think you answered the
+course will be available in october am i
+right yeah so in october we're hoping to
+pre-launch with most of the material we
+have up until then which will hopefully
+be over 12 hours of material um it's
+quite a wide scape and we want to
+continue adding to the course so even
+after those those 12 hours of materials
+we'll still be adding more so we'll have
+a pre-launch in october which takes you
+quite a long way but even after that
+we're going to continue adding materials
+um on a monthly basis but um you can
+already subscribe to this and then be
+notified when it goes live right yes
+that's why you have this email box yeah
+exactly so since it's live you can get
+access
+so a question from video guido i have a
+problem like your example predict
+multiple series and i need to predict
+only one step but i have a lead time of
+30
+how would you hit predict and lead time
+like maybe i i'm not sure what lead time
+is maybe
+we can answer that
+um i'm trying to interpret the question
+so i can uh properly answer it so a lead
+times 30 days i'm assuming that means
+you're trying to predict
+30 days into the future
+or maybe it's a delay if it's a delay um
+i mean the only advice if it's a delay
+then you should i mean the the easiest
+things you do then is you have to lag
+your features right so you know the the
+basic premise is with the information
+you have at predict time if you need to
+predict um let's say t equals 31
+and beyond but you don't care about time
+t equals zero to 30.
+um then you will have to lag a lot of
+your features um and use um a lag
+feature let's say you're predicting
+whatever you have now up until 30 days
+and beyond
+i've seen this in practice as well so
+let's say you're doing recursive
+forecasting
+and let's say you're interested in
+predicting time t equals 30 to 60 so one
+month into the future you could still
+use recursive forecasting from time t
+equal 1 to 60 discard the first 30 for
+the first 30 predictions and then just
+use the remaining 30
+or just to use direct forecasting where
+you directly build the target as being
+day 31
+into the future as long as you're
+keeping to that principle that you're
+only using the information that you're
+going to have at time equals zero and
+then you're not using information
+between zero and 30 you'll ensure that
+you avoid leakage
+yeah i'm afraid we're running out of
+time but we have quite a few questions
+so maybe what i can propose i don't know
+if uh
+if you can do this uh but maybe we can
+move these questions to slack and then
+take them offline
+would it work for you yeah more than
+happy to do so okay so i will in a
+couple of hours uh i will
+put all these questions to slack we have
+a special channel i think it's called
+events q a something like this and i
+will make an announcement in our
+announcements channel so you will be
+able to see it
+and i'll put the questions there and we
+can take them offline great okay
+yeah amazing presentation packed with a
+lot of knowledge
+i am i'm sure many people will
+be watch it and
+use it and i will certainly do
+um yeah thanks a lot thanks for joining
+us today thanks for sharing all this
+knowledge and thanks everyone for
+joining us today as well for asking
+questions for being active i apologize
+that we couldn't cover all your
+questions but we will try to answer them
+anyways
+okay thank you
+yeah so yeah see you soon

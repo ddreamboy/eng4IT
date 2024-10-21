@@ -1,0 +1,333 @@
+[Music]
+foreign
+and welcome to today's video on python
+libraries related to data science I have
+a question for you dear friends and the
+question is are you a data science
+Enthusiast and a part of a python
+ecosystem are you wondering about the
+different python libraries to improve
+your efficiency how are they roughly
+differentiated into various sub domains
+and you don't want to miss out any of
+the important python libraries then you
+have reached the right place now before
+we dig deep more about into learning
+python libraries for data science do not
+forget to hit the Subscribe button and
+click the Bell icon so first we are
+going to start with python and its
+feature then we are going to discuss
+about applications of python moving
+ahead we are going to discuss about
+libraries related to data mining then we
+are going to discuss library is related
+to data processing analysis and modeling
+and at the end we are going to conclude
+our session with libraries related to
+data visualization
+so let's start with python and its
+features python is a most used
+programming language in data science
+python has many advantages over other
+programming languages like it is easy to
+debug it is object oriented it has high
+number of active developers it is open
+source and when it comes to data
+analysis and data visualization python
+libraries sit way ahead of many other
+languages
+now let's discuss the applications of
+python python provides a number of
+useful libraries and these libraries
+help in numerical analysis statistical
+analysis data modeling data
+visualization and whatnot
+these libraries assist in various
+domains like data mining data processing
+analysis and modeling and data
+visualization
+now we will look into some of the most
+important libraries and the first
+process is the data mining now if I want
+to discuss about the libraries related
+to data mining the first process in data
+science is getting the data from the
+various sources onto the system
+so that is data mining so first we look
+at the libraries that is used in Data
+Mining and the first one is Scrappy
+Scrappy is an open source Library which
+is used for data scrapping it is used
+for developing crawling programs to
+extract the structured data from the web
+it can also be used to extract you know
+data through apis
+I hope so it's clear to you what's the
+use case of Scrappy in data mining
+the next Library we have is Beautiful
+soap Beautiful soap is another python
+Library which is used for data scrapping
+and extraction
+the library gets its name that poorly
+marked up web pages are often called tag
+soup therefore the library is known as
+the Beautiful Soul
+it is far more flexible than any other
+scrapping library in Python
+the data scrapped through Beautiful soap
+can be arranged into various formats and
+not into only CSV
+now after the data is collected we
+process the data for analyzing and
+modeling purposes so the first Library
+which we are going to discuss is the
+numpy
+if I talk about numpy numpy stands for
+numerical python as the name suggests it
+helps in analyzing the numerical data it
+contains an array package this contains
+a multi-dimensional and extremely
+powerful array object
+numpy also provides various functions
+and operations that can be performed on
+the numpy arrays like add remove reshape
+indexing Etc
+numpy forms a base for other or more
+complex libraries like pandas scipy and
+scikit-learn the next library is pandas
+if I talk about pandas pandas is an open
+source library that is made mainly for
+working with relational or labeled data
+or both easily and intuitively
+it provides various data structures and
+operations for manipulating the
+numerical data and the time series data
+this library is built on the top of the
+numpy library
+pandas is fast and it has high
+performance and productivity for users
+if I talk about the advantages of using
+pandas are the first one it is fast and
+efficient for manipulating and analyzing
+the data data from different file or
+objects can be easily loaded
+there is a easy handling of the missing
+data which is represented as NAB and
+floating Point as well as non floating
+Point data then the factor comes up is
+the size mutability columns can be
+inserted and deleted from the data frame
+and they are also higher dimensional
+objects
+data set merging and joining is also
+present
+it provides time series functionality
+and finally it is a powerful Group by
+functionality for performing split apply
+combine operations on data sets
+now many of you would be wondering why
+pandas should be used for data science
+pandas are generally used for data
+science
+this is because pandas are used in
+conjunction with other libraries that
+are also used for data science it is
+actually built on the top of the numpy
+library which means that lot of
+structures of numpy are used or
+replicated in pandas the data produced
+by pandas are often used as input for
+plotting functions of matplotlib
+statistical analysis in scipy and
+machine learning algorithms in the
+scikit-learn pandas program can be run
+from any text editor but it is
+recommended to use Jupiter notebook for
+this as a Jupiter given the ability to
+execute code in particular cell rather
+than executing the entire file if I talk
+about the Jupiter Jupiter also provides
+an easy way to visualize pandas data
+frames and plot
+I hope so now you would have got answer
+that why pandas is used for data science
+with that let's move to the next Library
+our next library is tensorflow
+if I talk about tensorflow tensorflow is
+also an open source Library
+which was created by the Google brains
+team at Google
+for their internal research
+now tensorflow is also a python friendly
+open source Library which is generally
+used for numerical computation that
+makes machine learning and developing
+neural networks faster and easier
+machine learning is actually a complex
+discipline but implementing machine
+learning models is far less daunting
+than it is used to be and thanks to the
+framework such as tensorflow
+tensorflow can train and Run Deep neural
+networks for handwritten digit
+classification image recognition the
+word embeddings recurrent neural
+networks sequence to sequence model for
+machine translation and natural language
+processing
+it is also based on simulations best of
+all tensorflow supports production
+prediction at scale with the same models
+which are used for training it also has
+a broad library of pre-tained models
+that can be used in your own projects
+but the question is seeing this picture
+you would be wondering how does the
+tensorflow works tensorflow allows
+developers to create data flow graphs
+which are structures that describes how
+data moves through a graph or a series
+of processing nodes
+each node in the graph represent a
+mathematical operation
+and each connection or Edge between the
+nodes is a multi-dimensional data array
+or a tensor
+tensorflow applications can be run on
+most of the any Targets that is
+convenient which is a local machine a
+cluster in a cloud an iOS device or the
+Android devices the CPUs or gpus
+if you use Google's own cloud you can
+run tensorflow on Google's custom
+tensorflow Processing Unit which is the
+TPU
+I hope so you would have got idea about
+tensorflow now let's move to the next
+Library which is kiras
+if I talk about kiras kiras was also
+developed by Google
+it also runs on the top of tensorflow it
+acts as an interface for tensorflow
+Library
+is built for fast and hassle-free
+experimentation on the neural networks
+it provides a good option so if you
+don't want to Deep dive into tensorflow
+then you can use kiras for your projects
+now let's discuss the next Library which
+is pi torch
+if I talk about Pi torch it is also an
+open source Library which is developed
+by Facebook for developing and testing
+machine learning modules
+pie torch expertise lies more in deep
+neural networks tensorflow and pytorch
+are the major competitors of each other
+whenever you use deep learning
+Technologies like object recognition
+text recognition face recognition or
+chatbots there is a high possibility
+that the architecture was developed by
+either pytorch or tensorflow
+now let's move forward and discuss our
+next Library which is scipy
+scipy stands for Scientific Python it is
+used for complex scientific computations
+it is built on the numpy library it is
+extensively used for scientific and
+Technical operations like calculus
+linear algebra differential equation
+integration and statistical computation
+I hope so you would have got idea
+regarding the use cases for scipy
+now let's discuss our next Library which
+is related to data processing analysis
+and modeling and our final library is
+the scikit-learn
+scikit-learn is actually built on the
+top of many familiar libraries like
+numpy pandas and scipy it mainly focuses
+on data modeling scikit-learn is used to
+create models for predictive data
+analysis I hope so you would have got
+idea regarding the use cases for the
+scikit-learn
+so after the data is processed and
+modeled it is time to visualize the data
+to get the important insights out of it
+therefore now we will see the libraries
+related to data visualization and our
+first library is the matplotlib
+if I talk about matplotlip it is used
+for data visualization in Python it
+provides all the necessary graphs and
+charts for univariate and multivariate
+Analysis it is used to create industry
+standard and publication standard plots
+matplotlib contains an object-oriented
+API that can be used to integrate plots
+and charts into applications
+I hope so you would have got idea
+regarding the matplotlip now let's move
+forward and discuss our next Library
+which is C bone
+if I talk about C bone it is built on
+the top of the matplotlib library as it
+is built on the top of matplotlib it has
+higher interface level and provides
+cleaner plots than matplotlib for
+visualization
+it contains set of different built-in
+themes it provides extensive plots like
+heat Maps pair plots that are used for
+multivariate analysis I hope so you
+would have got idea regarding c bond
+now let's move forward and discuss our
+final library for data visualization
+which is bokeh bogey is fully
+independent of matplotlib bokeh is used
+to create interactive plots in the
+browser using JavaScript widgets like C1
+bokeh to assist us in creating complex
+visualization but at majorly focus on
+interactiveness its interactive
+functionalities help in creating complex
+visualization like dashboards Network
+graph Etc
+now after all discussing the libraries
+related to data visualization analysis
+and modeling and also for numerical
+computation
+I have come to certain conclusion that
+there are thousands to lack of python
+libraries available in the ecosystem
+today and the list only covers the most
+popular and the most know libraries also
+we covered the most important libraries
+from all domains to give you a brief
+idea about the areas of your interest
+these are the libraries which are used
+by professional to work on the
+day-to-day basis you got a good
+understanding of how these libraries
+function with each other and also how
+more complex libraries are built upon
+the core ones there are many more
+complex libraries that you can read
+about
+sky is a limit of knowledge and you can
+learn more and more as far as your
+interest
+that's all for today's video I hope so
+guys you enjoyed our today's video on
+python libraries for data science
+if you want to make a career in data
+science then intellipat has IIT Madras
+advice data science and AI certification
+program
+this course is of very high quality and
+cost effective as it is taught by IIT
+professors and Industry experts
+foreign

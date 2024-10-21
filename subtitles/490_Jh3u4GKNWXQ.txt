@@ -1,0 +1,70 @@
+the Internet of Things is huge seven
+point one trillion dollars of value
+generated and 30 billion connected
+devices by 2020 it's happening now and
+you can be a part of it
+IBM's IOT platform lets you connect
+sensors and devices through the cloud
+platform using IBM bluemix also you can
+collect and secure data run
+industry-leading analytics and gain
+insights in real time to make timely
+business decisions we help you build
+launch and manage IOT applications and
+solutions quickly securely and at scale
+whether you're a fast-moving startup or
+a global enterprise the IBM iot platform
+harnesses the power of the cloud
+open-source solutions and secure
+flexible technology you can shape IOT
+your way as you create new business
+models and revenue streams turn devices
+into points of transaction and value
+understand usage patterns and seamlessly
+manage logistics and physical assets you
+can quickly get started with the iot
+platform on IBM bluemix by connecting
+your IOT device a sensor gateway or
+other smart endpoint to the cloud send
+the data to IBM bluemix via a secure
+lightweight messaging protocol like MQTT
+now access everything in our convenient
+platform the iot platform manage your
+connected devices and access api's
+analyze the physical world in real time
+use predictive models to optimize
+servicing bring the power of Watson to
+your things choose from over 70
+additional IBM bluemix services to
+enrich the application
+it's all scalable adaptable and open to
+all device vendors so you control your
+data experience IOT for yourself with a
+free trial visit us online at ibm.com
+follow the try demo sign up for IBM
+bluemix and you're ready to go use your
+new IBM bluemix login to quickly deploy
+a sample application and your iot
+service connect your smart phone sensors
+to your own application open the iot
+dashboard to see the data streaming to
+the service now return to your bluemix
+dashboard and click services and api's
+here you'll find an ecosystem of
+services from data storage and analysis
+to cognitive computing to mobile the
+number of services are growing fast to
+help you evolve with the market demands
+for help head to our
+I owe t homepage for content including
+videos webcasts in our developerworks
+site where you can get answers from
+other developers this is an incredible
+moment with an exciting future imagine
+cognitive computing platforms like ibm's
+watson assessing IOT data delivering
+insights and helping you innovate IBM is
+making IOT simple secure intelligent and
+accessible to deliver on your business
+objectives get started today
+you

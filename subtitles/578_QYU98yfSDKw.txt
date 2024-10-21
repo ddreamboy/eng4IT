@@ -1,0 +1,55 @@
+Okay Google, send a message to Wayne.
+I'll be at our building in 20 minutes,
+can you get Josh and meet me there?
+Okay Google, start a run.
+[SOUND] Here's the message.
+I'll be at our building in 20 minutes,
+can you get Josh and meet me there?
+>> Reply.
+How about we make it five minutes?
+[SOUND]
+>> Got it.
+Here's your message.
+How about we make it five minutes?
+Do you want to send it?
+>> Cat videos.
+>> [MUSIC]
+>> I'll see you in 20 minutes, Timothy.
+>> [MUSIC]
+>> I'll see you in five minutes, Wayne.
+>> [LAUGH] Okay.
+One, two.
+>> Welcome to Ubiquitous Computing.
+>> I'm Timothy Jordan,
+a Developer Advocate at Google.
+>> And I'm Wayne Pakowski,
+also a Developer Advocate at Google.
+>> And I'm Josh Gordon, and you guessed
+it, also a Developer Advocate at Google.
+>> As you'll learn in this course,
+Ubiquitous Computing is simply a fancy
+phrase for technology that's accessible
+to the user, whenever and
+wherever they want or need it.
+>> Perhaps,
+they're outside going for a run.
+>> Or having some friends over to
+watch cat videos and play games.
+>> Or maybe, it's time for a road trip.
+>> Your users can be in any of those
+situations, and you don't want
+them to have to think about what device
+they need to get to your service.
+>> No, you want an experience that
+presents itself to the user wherever it
+makes sense.
+>> By building an app that runs
+on whatever devices they happen
+to have nearby.
+>> In this course, we'll teach you
+about the existing platforms and
+tools that can make your app available
+on a variety of form factors.
+But before we get started, I'll explain
+just a little bit more about what
+it means for your app to be ubiquitous.

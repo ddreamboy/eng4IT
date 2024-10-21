@@ -1,0 +1,600 @@
+[Music]
+so
+[Music]
+hi my name is professor don patterson
+and in this lecture i'd like to talk a
+little bit about the concept of
+ubiquitous computing
+and how it leads into the idea of cloud
+computing
+key points from this lecture are to
+recognize that ubiquitous computing is a
+paradigm for people's relationship to
+computers
+about the scale the invisibility and
+then what results from the changes
+when we get a mobile-first kind of world
+so let's start with the idea of what is
+ubiquitous computing let's give it a
+definition
+we can start by looking at what the
+definition of ubiquitous is
+and from this dictionary entry we can
+see that ubiquitous means present
+appearing or found everywhere and you
+might use it in a
+sentence like the air is ubiquitous it's
+all around me
+or like the one here in the dictionary
+cowboy hats are ubiquitous among the
+male singers
+okay in one sense then
+when we talk about ubiquitous computing
+what we mean is we mean a world in which
+computers are all around us
+they're part of our daily routine we use
+them when we're
+doing work and when we're doing leisure
+we use them to get places and we use
+them when we
+are still at home and at work all the
+different places where we are
+but ubiquitous computing is also an
+academic discipline as well
+so beyond just describing a kind of
+computing
+it also is a term that refers to a
+particular line of research
+and that research started with an
+article published in
+scientific american in 1991 called the
+computer for the 21st century
+by a guy named mark weiser he was
+working at xerox park at the time
+and he was thinking about the ways in
+which technology was advancing
+looking at the ways that different
+philosophers had been thinking about
+tool usage
+and putting together a prediction about
+what the world was going to be like
+his predictions were remarkably good
+considering they were made in 1991
+good 25 years before the iphone came out
+and yet he was predicting a kind of
+mobile environment
+or a mobile computing
+[Music]
+world that's very much like the one that
+we have today
+one of the things that he thought a lot
+about was about ways of
+waves of computing that go
+through different kinds of relationships
+that people have with computers
+and as a good computer scientist i'm
+going to start with wave zero which is
+one that wiser didn't really
+talk about but which i think is
+important to point out and i would call
+this one the zero wave of computer
+computing and this was the age of
+computerless computing
+and to give it a cut a rough timeline
+rough time frame i'd say that
+it was between about 1930 and 1940 when
+this was
+um happening at this point computers are
+theoretical technology
+and individuals like church and alan
+turing
+established some fundamental limits on
+computability
+they were kind a new kind of
+mathematician
+kind of mathematician that would
+eventually become a computer scientist
+but they existed at a time before there
+was actually a physical computer around
+to work on
+and using some abstract ideas of what a
+computer would be like
+they talked about some fundamental
+problems like the p
+equals np problem or whether a class of
+computing problems called polynomial
+time algorithms
+are really the same as another class of
+algorithms called
+called non-deterministic polynomial time
+algorithms
+this question if p equals np remains one
+of the most foundational
+theoretical theoretical problems that
+exist in computer science today
+i would say the zero wave of computing
+is a little bit like where we're at with
+quantum computing today
+while there are some small quantum
+computers and different approaches and
+different organizations that are taking
+steps
+trying to create them there's a much
+richer set of research that has been
+done
+thinking about what a quantum computer
+could do if we had a fully featured
+quantum computer that was much larger
+than a handful of
+qubits so the same way that we have sort
+of
+an idea of what a quantum computer might
+be like if it is fully realized
+in the zero wave of computing the idea
+of what the cur the computers that we
+have today
+are going to be like we're being decided
+of course we did end up with the
+computers that they were
+envisioning so wiser introduced an idea
+of the first wave and the first wave
+centered around mainframe computing
+giving it a rough time frame about 1960
+to 1970
+and in this world there were massive
+computers doing simple data processing
+but there were very few computers in the
+world um here's a picture of a mainframe
+with a dot ma
+it's with a printer i think it's a dot
+matrix printer in front of it one of the
+main ways in which you got output out of
+these computers
+many people use these computers so you
+couldn't afford very many of them
+organizations like maybe government
+agencies or scientific agencies
+would have them maybe a large
+corporation might have them
+they did relatively simple work by our
+standards today
+in the military context they computed
+various kinds of ballistics tables
+in a business context they might have
+computed simple spreadsheets or
+done accounting work and in scientific
+environments they might have been the
+first
+kinds of weather prediction sources of
+weather prediction at the time
+well wiser indicated that this would be
+the beginning and then predicted that
+the second wave would come around
+the second wave which we eventually came
+to know is desktop computing
+roughly the for the time frame from 1980
+to 1990
+time when microsoft really came to the
+forefront as a massive global
+corporation
+that did computing what drove it were
+business applications these were the
+primary applications of the desktop
+computer
+and the vision would be would be that
+there would be one computer per desk
+this was focused on the business
+environment and desktop computers looked
+a little bit like
+this one here although this is a desktop
+computer at home so
+pardon the slight mismatch in that way
+these computers were connected in
+intranets and they were in a massive
+global network but
+they weren't really in the internet as
+we know it today mostly they were um
+intranets that were isolated from one
+another they existed within particular
+academic institutions or within
+particular offices connecting the
+computers in those local areas
+with maybe very small or if any
+connections to the rest of the internet
+and all of these computers were wired
+the idea of a wireless computer wasn't
+really
+a thing that was was entering the market
+at that point
+eventually of course these computers
+moved into the home environment where
+they would be used for working from home
+and sometimes entertainment purposes
+games
+maybe learning educational context as
+well
+wiser than said the third wave would be
+ubiquitous computing as we know it today
+roughly from 2000 maybe to the present
+i'm not sure that we would say we've
+gone beyond the ubiquitous computing
+stage yet this is a stage of computing
+where
+it's not really business or government
+applications that are driving usage
+it's much more about information
+creation information
+access and communication that's driving
+the usage
+so here's an example of third wave
+computing this is someone with a
+early phone taking a picture of a lion
+taking it to share it with someone else
+or maybe just for their own memory
+but certainly not driven by a business
+application trying to get some sort of
+competitive advantage
+in this world though we're starting to
+think about the relationship between
+computers changing so there are multiple
+computers per environment or multiple
+computers per person
+terms like wan wide area network lan
+local area network
+pan personal area network and ad hoc
+networking
+came to the forefront and wireless
+networking was clearly
+a direction that the computers were
+taking at this point
+why is it predicted that computers would
+begin to disappear
+now when you first hear that you think
+oh computer's disappearing that's
+because they're getting smaller yeah i
+get that
+and while wiser was certainly talking
+about that in part
+he was also talking about computers
+disappearing in a very different way
+he was talking about computers
+disappearing uh from
+our awareness when we're using them so
+as an example you might think about
+something like
+a hammer a hammer if you know how to use
+one and it's functioning well
+you don't really think about it when
+you're using it to hammer in a nail
+you act through that hammer to build
+your
+birdhouse or your house or whatever
+you're trying to build or another
+example
+is a car once you've learned how to
+drive a car
+and you want to go somewhere you don't
+think very much about the controls of
+the car
+when you turn you turn the steering
+wheel but you're focusing mostly on
+where you're going when you want to go
+faster you hit the accelerator when you
+want to slow down you hit the brake
+but those controls become an extension
+of your will and an extension of your
+body
+as you move through the world as long as
+the car is functioning okay and
+you could just work through that those
+vehicle the vehicle or the hammer
+to accomplish what it is that you want
+to try and do
+in a similar way wiser anticipated that
+we would begin to work through computers
+in this way
+that we would stop thinking about the
+fact that we're using computers and we
+would start just working through them
+and they would become tools that we
+become very naturally attuned to
+in many cases the kinds of things that
+we do today maybe with
+instagram or instant messaging or
+computing
+or communications we're still kind of
+very aware that we're using computers so
+they haven't exactly shifted seamlessly
+into the background
+those things are pretty obviously front
+and center yet
+there are many computers that we
+interact with on a daily basis where we
+don't actually think very much about the
+computer
+the car for example is cars modern cars
+are filled with all kinds of computing
+devices appliances that we use are
+filled with all kinds of
+computing devices maybe in some of our
+voice enabled assistants
+like alexa or siri or google home
+we're beginning to get a sense we're
+beginning to lose
+uh focus on the computer and we're
+starting to be able to act naturally
+with our computers and
+not think so much about the technology
+that's supporting it along the way
+well the relationship to computers
+changes in these each
+each of these waves in the zeroth wave
+the relationship is just a thought
+experiment people are thinking about
+computers
+in the first wave there are many people
+working on one computer
+so a mainframe computer team of
+government scientists
+a team of corporate accountants all
+working together on one computer in one
+particular space
+in the second wave there's a one-to-one
+mapping
+between individuals and computers
+desktop computing paradigm being the
+predominant way in the third wave we
+start to get into a world that starts
+that seems a little bit more familiar to
+the one we're in now
+where one person has many different
+computers
+maybe a phone maybe a smart watch maybe
+a desktop maybe a server maybe a tv
+maybe kind of sophisticated appliances
+maybe you have a fancy
+interface on your car and now one
+individual has many
+many different computers that they're
+managing
+the relationship has changed in this
+third wave
+another thing that wiser brought out in
+addition to the relationship between the
+people and the computers in terms of
+scale and also in terms of the
+invisibility of the computers as they
+dropped to the background of our
+consciousness as we were using them
+he also wanted to draw a distinction
+between different kinds of computing
+that even at the time were people were
+very excited about that's the difference
+between ubiquitous computing and virtual
+reality
+one thing about ubiquitous computing is
+that when you do ubiquitous computing
+actions and when you're operating in
+that kind of paradigm you're thinking
+about
+the devices adapting to the way in which
+we live our life
+so here's an example of a phone and just
+in a very simple example
+as you turn the phone 90 degrees so it
+goes from portrait to landscape mode
+the screen layout changes this is a
+really simple example but it's a way in
+which the computer is aware of its
+environment and it adapts
+to the way that we're moving through the
+world likewise as this is a mapping
+application
+if that dot presumably is where i am
+it's also responding to my location
+and it's changing the way in which it's
+displaying that information
+in order to react to the world now a
+proper ubiquitous computing
+application would take some kind of
+action on behalf of the user when
+they're in a
+particular space and have indicated a
+need for some kind of
+computational support this is just
+displaying the location rather than
+actually doing anything in particular
+now on the other side though is virtual
+reality this is an example of someone
+using virtual reality gear
+a headset that's covering their complete
+vision gloves that have haptics in it
+through which they can control objects
+in the virtual
+world and receive feedback and what is
+it that they're experiencing
+well they might be looking at a virtual
+world like this virtual world from
+open simulator created by users
+completely
+covering the field of view of the
+individual and the user can move through
+it
+but they have to be careful because it's
+very easy to forget that you're
+connected to this gear and if you move
+too fast you might
+pull a wire or if you're in a more
+mobile environment
+you might hit a real wall as you try and
+walk through the virtual environment
+and don't see an actual don't see a
+virtual wall where the real wall is
+a third kind of thing like virtual
+reality is something that i would call a
+mirror world
+a mirror world is something maybe more
+like google earth or google maps
+where a virtual world is constructed
+that's designed to mirror the real world
+so that you can enter into the mirror
+world and use it as a proxy
+for exploring the real world in some way
+maybe for directions
+maybe to get a view of what a different
+location is like
+maybe to experience the landscape or
+real estate or something along those
+lines for
+a google map view these are two
+different very
+different ways of thinking about
+interacting with computing but then
+there in the middle is augmented reality
+augmented reality is a little of both
+sides and maybe we could think of this
+as being the boundary between ubiquitous
+computing and virtual reality
+what happens with augmented reality is
+you use some sort of device and you hold
+it up and a camera on the one side of
+the device
+takes a picture of the world in front of
+you and shows you what you could simply
+see if you didn't have the camera in
+front of you
+but the benefit of looking at the
+display is that the computer
+the phone in this case can overlay the
+the view on the camera
+with information relevant to the view
+that you're experiencing
+so in this case the application is
+location aware and as you look at
+different
+things in your immediate environment it
+will overlay it with icons
+recommendations and information about
+the places that you're viewing
+kind of a mix between virtual reality
+and ubiquitous computing in that way
+now the key thing about these two
+paradigms and the way that
+wiser differentiated them was that
+ubiquitous computing was really about
+computers entering the humans world
+computers getting out of the office and
+out of the labs and
+and starting to understand the world the
+sensing
+the temperature the experiences that the
+human was having and
+adapting to that virtual reality in
+contrast
+is a human entering into the computer's
+world
+accepting all of the input and sensory
+experience that the computer wants to
+generate
+the human then reacts to the computer
+instead of the computer reacting to the
+human
+different applications for both sides
+but also different ideas
+about what these kinds of paradigms of
+computing were
+or are all right so
+what's next what's next with our
+relationship with computers
+wiser really only saw ubiquitous
+computing as being
+the third wave it didn't really talk
+much about what the next phase might be
+one thing that's clear is that there are
+going to be more and more computers
+and that the relationship between people
+and computers might not be quite so
+distinct it might not be that computers
+are discretely
+owned by one particular individual you
+might have
+a home tv for example that's owned by
+multiple people
+or you might have phones that you share
+computers that you swap or different
+accounts so that now
+the ability to find these relationships
+between different
+computers and different people becomes a
+lot more muddied a lot more difficult to
+associate
+the computing resources with particular
+individuals
+and a real difficult question is how are
+we going to manage all of these devices
+how are we going to keep track of them
+how are we going to do work with them
+on top of that there's a whole lot of
+maintenance that has to be done
+how are we going to keep them operating
+how are we going to keep the software up
+to date
+how are we going to make sure that the
+networks are working how are we going to
+manage all of that infrastructure
+well this is something that i think is
+really drives us into cloud computing
+this requires professionals and what
+kind of professionals will professionals
+that run
+cloud computing infrastructures
+companies like amazon web services
+and apple computer businesses that are
+eager to
+find a way to provide value to different
+users and help them navigate
+this complex digital environment
+so the key points from this lecture are
+that ubiquitous computing is really a
+paradigm started by mark weiser in the
+1990s
+that described people's relationships to
+computers
+on the one hand it talked about scale
+talked about the scale of
+individuals to number of computers so
+one many people to one computer one to
+one
+and then many computers to one person it
+also talked about the scale of the
+computer in terms of its physical size
+are you working with a big computer or
+small computers mentioned in his vision
+as well
+he also talks about invisibility of
+computers yes getting physically smaller
+but more importantly
+becoming the in
+moving into the background of our
+consciousness as we work through them
+as as we stop to recognize that we're
+actually using computers to get work
+done and then finally he talked a lot
+about what was what's going to result
+from those changes
+and one of the things that we've seen is
+that cloud computing is a valuable tool
+for trying to manage
+this trajectory going forward
+thanks for listening to this short
+lecture on ubiquitous computing an
+academic discipline that i've done a lot
+of work in
+and how it leads into the current world
+that we're experiencing
+with cloud computing services being
+offered to us
+from a variety of different companies
+thank you
+[Music]
+you

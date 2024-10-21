@@ -1,0 +1,1106 @@
+[Music]
+hello everyone
+welcome to another exciting session on
+data mining today
+my name is rajan shaitri and in today's
+session i am going to share
+my understanding of data mining
+let us start with the agenda first of
+all
+so initially we are going to start with
+the introduction of what data mining
+is and we are trying to understand the
+basics of it
+once we understand the basics of data
+mining we'll try to understand data
+mining more in detail
+and after that we'll be understanding
+the various application areas
+of data mining let us start
+with the intro
+well before we start discussing what
+data mining is
+first of all let us understand the
+basics of why we need data mining
+and how it all started so in today's
+scenario
+one way of people's success is
+identified
+by how they are communicating and
+sharing the information
+with others that's where the concept of
+language comes into the picture
+however there are many languages in the
+world
+each has many standards and alphabets
+and the combination of these words
+arranged meaningfully resulted in the
+formation of a sentence
+each language has its own rules while
+developing these sentences
+and these set of rules are known as
+grammar
+in today's world according to industry
+estimates only 20
+of the data is being generated in the
+structured format as we speak
+as we tweet or as we send some messages
+on whatsapp
+email facebook instagram or whatnot
+and the majority of this data exist in
+the textual form
+which is a highly unstructured format in
+order to produce
+meaningful insights from this text data
+there
+we exactly need to follow something
+called text analysis
+now that's where data mining comes into
+the picture data mining is a process of
+discovering
+predictive information from the analysis
+of large databases
+for a data scientist data mining can be
+a vague and daunting task
+it requires a diverse set of skills and
+knowledge
+of many data mining techniques to take
+raw data
+and successfully get insights from it
+all right now as we have provided
+the introduction to data mining first of
+all let us start with why exactly we
+need to do data mining
+so let us answer some basic question
+here
+such as why data mining
+in order to understand data mining let
+us take some use cases here
+for example let's say credit rating
+or targeted marketing
+so what exactly this is let us suppose
+there is a database given of let's say
+hundred thousand hundred thousand names
+which persons
+are the least likely to default on their
+credit cards
+identify likely responders to sale
+promotions
+so that is basically one of the use case
+where we use data mining
+the second use case could be
+fraud detection now what exactly
+is the role played by data mining and
+fraud detection
+you know we can answer such questions
+for example let's say
+which types of transactions are likely
+to be fraudulent
+given the customer demographics and
+transactional history
+of a particular customer
+the third use case could be
+customer relationship management
+after all every company wants to have
+good relations with the customers
+we can using data mining we can answer
+such questions
+for example which of my customers are
+likely to be the most
+loyal and which are most likely to leave
+for a competitor now we can answer all
+these questions
+and solve all these scenarios by using
+data mining here now data mining helps
+extract such information
+all right so in data mining we process
+or semi-automatically we analyze large
+databases to find patterns
+that are valid that are novel
+useful and understandable
+now this process is also known as kdt
+kdd stands for knowledge discovery
+database
+now let's talk about the applications of
+data mining where we can exactly
+you know implement
+data mining techniques so the
+applications of data mining
+can be banking
+well let's let us understand banking in
+terms of loan
+or credit card approval you can think of
+you know predicting good customers based
+on old customers
+second example as i mentioned earlier
+could be
+customer or relationship management
+the use case could be identifying those
+who are likely to leave
+for a competitor
+third targeted marketing
+that we have already done
+well i invite likely responders to the
+promotion
+and four is basically fraud detection
+well from an online stream of events
+identify the fraudulent
+events as an application of data mining
+well we can use data mining in
+manufacturing
+and production
+well using data mining we can
+automatically adjust
+knobs when processes parameter changes
+we can use data mining and healthcare as
+well
+or in simple words we can use it in
+medicines
+for example for identifying the disease
+outcomes
+effectiveness of the treatment analyzing
+patients disease history
+finding a relationship between diseases
+all these things can be done
+using data mining well we can use
+determining for
+you know scientific analysis as well
+and we can use data mining in websites
+you know for design and promotion
+let us understand types of data mining
+well there are various types of data
+mining we have available
+so let us understand data mining can be
+performed
+in the following types of data so we can
+perform
+data mining on the data which is fetched
+from
+a relational database
+well if in case if you don't have any
+understanding of what your relational
+database is
+let me provide you with a small
+description here our relational database
+is a collection of multiple data sets
+formally organized by tables records and
+columns
+from which data can be accessed in
+various ways without having to
+recognize the tables itself
+table convey and share information which
+facilitates
+data searchability reporting and
+organization basically
+we can think of you know performing data
+mining
+on the data from data warehouses
+now data warehouse is in itself is a
+broader you know domain so what exactly
+is a data warehouse
+a data warehouse is basically a
+technology that collects
+the data from various sources within the
+organization to provide some meaningful
+business insights the huge amount of
+data which comes from multiple sources
+such as marketing maybe maybe finance
+you know is extracted and utilized for
+analytical purposes
+and help in making decisions you can
+call it
+as a decision science as well
+really we can you know uh do the data
+mining fetch from you know data
+repositories
+we can do the data mining fetch from
+object relational databases
+and we can also you know perform the
+data mining
+you know from transactional databases
+well uh there are various advantages of
+you know uh data mining that we have
+so for example the data mining
+techniques enables any organization
+to obtain knowledge based data the
+second advantage can be you know
+it enables organization to make
+liquidative modifications
+in operations and productions for
+attracting more customers
+compared with other statistical data
+applications data mining is a cost
+efficient solution well
+if you combine every aspect of data
+mining in simple words
+it is going to help the organizations
+for decision making
+well it is a quick process and it is
+easy for new users to analyze
+enormous amount of data
+all right now now we have a clear
+understanding of what data mining
+is and what are its applications let us
+understand how the data mining
+is implemented the implementation of
+data mining
+entirely relies on the kdd process
+in data mining so here we're going to
+spend some time
+on understanding what this kdd process
+and data mining is
+well i hope you remember the term kdd
+stands for
+knowledge discovery in databases
+well volume of information is increasing
+every day that we can handle
+from business transactions scientific
+data sensor data pictures videos
+or whatnot well
+we need a system that will be capable of
+extracting essence of information
+available
+and that can automatically generate
+reports views
+or summary of data for better decision
+making
+well data mining is used for business to
+make
+better managerial decisions
+we make better managerial decisions by
+automatic summarization of the data by
+extracting the essence of information
+stored
+or by discovering the patterns in the
+raw data
+for this let us understand what are the
+steps
+steps which are involved in the kdd
+process
+well in order to understand the steps in
+kdd process let us look at the
+phases here all right
+so here you can see a pictorial
+representation of how the kdd process
+is followed in data mining here we have
+various components here such as starting
+from databases
+to data warehouses then there's a data
+mining process
+and finding the patterns and pattern
+evaluation and then there is a knowledge
+here
+so let us understand all these phases
+one by one in a step-by-step manner
+so the very first phase that we are
+talking here about is basically
+the data cleaning so what exactly is
+data cleaning
+data cleaning can be defined as a
+removal of
+noisy and irrelevant data from your
+collection
+well we perform the data cleaning if in
+case if there are any
+missing values in the data we clean the
+noisy data
+where the noise is a random or a
+variance
+error we do the cleaning with data
+discrepancy detection
+and data transformation tools
+then the next phase is data integration
+now data integration is defined as
+heterogeneous data
+from multiple sources combined in a
+common source
+such as data warehouse now
+this data integration happens using data
+migration tools
+uh or we can also call them data
+synchronization tools
+well this data integration using extract
+transform load process is is the
+solution
+right so we use atl process for this
+data creation
+then there is something called data
+selection
+data selection and transformation right
+so
+let us discuss the data selection first
+of all
+data selection is defined as a process
+where
+the data relevant to the analysis is
+decided
+and retrieved from the collection or the
+data collection you can say
+well data selection uh can be done using
+neural networks
+it can be done you know using decision
+trees
+nav buys or clustering or regression
+etc so there are actually you know uh
+tons and tons of uh algorithms and you
+know
+techniques available for data selection
+well once the data selection process is
+done we move forward
+to the data transformation let us
+understand data transformation clearly
+here
+data transformation can be defined as a
+process
+of transforming data into an
+appropriate form which is required for
+the
+mining procedure right so data
+transformation is basically a two-step
+process
+one is basically let's call it
+data mapping and the second is
+code generation well in data mapping
+we assign elements from source
+base to a destination to capture the
+transformation
+well if we talk about the code
+generation it is based it is simple
+it is creation of the actual
+transformation program
+which is going to you know do the action
+or processing for us
+once we have done the data selection and
+data transformation process
+we move to the next phase and that is
+data mining
+data mining as i you know explained
+earlier it is a process
+of you know of clever techniques we can
+say right that are applied
+to extract patterns which are
+potentially useful for the businesses
+well then we move on to
+pattern evaluation pattern evolution is
+something which you know which is used
+for identifying strictly
+increasing patterns representing
+knowledge based
+on measures for example we can use
+summarization here we can use
+visualization of the data
+to make the data understandable by the
+user
+then finally knowledge representation
+and
+this knowledge representation is
+basically the technique
+right which is used for representing
+data or the mining results
+for knowledge representation we can use
+various tools
+such as you know we can use tables we
+can use reports
+we can use you know any classification
+or characterization rules
+there are tons and tons of processes
+all right so this is a gist of you know
+how the kdd process
+happens i know in a data mining process
+and the various components which are
+involved in it i hope you have
+understood the concepts clearly
+here
+all right so as we have understood how
+to
+implement the kdd process in data mining
+let us understand the various techniques
+that are used for data mining so here
+we are trying to understand data mining
+techniques
+there are various techniques available
+for implementing data mining
+here we are going to discuss these data
+mining techniques one by one
+first of all let us talk about the very
+popular data mining technique
+and that is classification
+well classification is used to retrieve
+important and relevant information about
+data
+and metadata this data mining method
+helps to classify data in different
+classes
+the second technique that we are
+learning here is class clustering
+clustering is the second data mining
+technique
+well clustering analysis is a data
+mining technique
+to identify data that are likely that
+are like each other
+this process helps to understand the
+difference and similarities between the
+data
+the third technique that we are talking
+here about determining
+is regression
+well regression analysis is the data
+mining method of identifying
+and analyzing the relationships between
+the variables
+it is used to identify the likelihood of
+a specific variable
+given the presence of other variables
+the fourth technique that we are talking
+here about
+is association rules
+now what exactly this is this is a data
+mining technique that helps to find
+the association between two or more
+items
+it discovers a hidden pattern in a data
+set
+the fifth technique here we are talking
+about is
+outer detection
+what is outer detection this type of
+data mining technique
+refers to observation of data items
+in the data set which do not match an
+expected pattern
+or expected behavior this technique can
+be used in a variety of domains
+such as intrusion detection fraud or
+fault detection etc auto detection is
+also
+called outlier analysis or outlier
+mining
+now the next technique here we are
+talking about is
+sequential patterns
+this data mining technique helps to
+discover or identify
+similar patterns or trends in
+transaction data
+for certain period
+and the next technique here we are
+talking about is prediction
+prediction has used a combination of
+other techniques of data mining like
+trends sequential pattern clustering
+classification
+basically what it does it analyzes past
+events or instances
+in a right sequence for predicting a
+future event
+well there are various data mining
+techniques which we can use here
+but when we use the techniques of data
+mining there are various challenges
+which are associated with the
+implementation
+for example there are various challenges
+such as skilled experts
+so skills experts are needed to
+formulate the data mining queries
+the second challenge is basically the
+overfitting
+due to the small size training database
+a model
+may not fit future states
+the third challenge is basically the
+data mining needs large databases which
+sometimes are difficult to manage
+while business practices may need to be
+modified to determine to use the
+information
+uncovered what if the data set is not
+diverse
+data mining results may not be accurate
+and finally the integration information
+needed
+from heterogeneous databases and global
+information
+systems could be complex
+now there were the various challenges
+which are associated with data mining
+let us talk about the data mining tools
+which we can use to implement the
+techniques
+so there are various data mining tools
+which are available in the market here
+the very popular data mining tools are
+our language
+so our language is an open source tool
+for statistical computing
+and graphics r has a wide variety of
+statistical classical statistical tests
+time series analysis classification and
+graphical techniques
+it offers effective data handling and
+storage facility
+the second technique is oracle data
+mining
+well oracle data mining popularly known
+as
+odm is a module of the oracle's
+advanced analytics database
+this data mining tool allows data
+analysts to generate
+detailed insights and make predictions
+it helps predict customer behavior
+develop customer profiles
+identify cross-selling opportunities
+and the third technique that we are
+third tool that we are talking here
+about is python
+well python is a popular
+programming languages which is widely
+used for you know machine learning
+or data science implementations it has a
+wide area of
+libraries available which can be used
+for
+implementing data mining
+let us talk about a very popular
+confusion
+or a subject which basically creates
+a misunderstanding between data mining
+versus
+machine learning
+it has been observed that many of the
+learners
+assume that both are same let us
+understand
+the difference between data mining and
+machine learning
+well later mining relates to extracting
+information
+from a large quantity of data data
+mining is a technique
+of discovering different kinds of
+patterns that are inherited
+in the data set and which are precise
+new
+and useful data mining is working
+as a subset of business analytics and
+similar to experimental studies data
+mining's origin
+our databases and statistics whereas if
+we talk about the machine learning
+machine learning includes an algorithm
+that automatically improves
+through database experience machine
+learning is a way to find a new
+algorithm from experience
+machine learning includes the study of
+an algorithm
+that can automatically extract the data
+machine learning utilizes data mining
+techniques
+and other learning algorithms to
+construct models
+of what is happening behind certain
+information
+so that it can predict future results
+data mining and machine learning are
+areas that have been influenced
+by each other although they have many
+common things
+yet they have different ends
+data mining is performed on certain data
+sets by humans
+to find interesting patterns between the
+items in the data set
+data mining uses techniques created by
+machine learning
+for creating the results while machine
+learning
+is the capability of the computer to
+learn
+from a minded data set machine learning
+algorithms
+takes the information that represents
+the relationship between
+items in a data set and creates models
+in order to predict future results these
+models are nothing
+more than actions that will be taken by
+the machine
+to achieve a result so i think
+this you know explanation should clear
+the difference
+between machine learning and
+determining well there are many other
+differences which we can discuss about
+data mining and machine learning
+for example let's talk about origin
+well if we talk about origin of data
+mining
+it is from traditional databases with
+unstructured data
+if we talk about the origin of machine
+learning here it has an
+existing algorithm and data
+well if we talk about the meanings of
+both the
+terms the data mining stands about
+extracting
+information from a huge amount of data
+whereas on the other side if we talk
+about the meaning of machine learning
+it introduces new information from data
+as well as previous experience
+new information
+from previous experience
+well if we go a little back
+in the history of both the terms
+this determining is is in existence
+since 1930s popularly known as
+kdt whereas if we talk about the machine
+learning
+this was very first introduced in the
+1950s
+well if we talk about the purpose of
+you know both the uh
+concepts of you know data mining and
+machine learning data mining is used to
+obtain the rules from the
+existing data rules
+from the existing data
+whereas if you talk about the machine
+learning here machine learning basically
+you know
+teaches a computer a computer
+about you know how to learn and
+comprehend the rule
+about how to learn
+and comprehend
+the role
+well if we talk about the applications
+here
+there are various applications of both
+the you know domains here
+so whereas where machine data mining is
+basically used
+for variety of use cases let's say
+the cluster analysis
+whereas the machine learning can be used
+to obtain
+you know the results from the large
+amount of you know data
+which are very precise and accurate
+the machine learning has its
+implementations or applications in web
+and you know uh computers and in you
+know in
+designs everywhere
+well there are various techniques you
+know available
+uh for data mining we have already
+discussed this and
+there are other you know libraries
+available for
+machine learning all right so it it
+looks like
+both have a very good scope of you know
+implementation for solving
+the real world problems
+all right this time let us understand
+the difference between data mining
+versus data warehousing
+well we have already explained what data
+mining is here
+this time we are going to understand
+data warehousing more in detail
+well data warehousing refers to the
+process of compiling and
+organizing data into one common database
+whereas data mining refers to the
+process of extracting useful data
+from the database the data mining
+process depends
+on the data compiled in the data
+warehouse
+phase to recognize meaningful patterns
+our data warehousing is created to
+support management systems
+a data warehouse refers to a place where
+exactly data can be stored for useful
+mining
+it is like a quick computer system with
+exceptionally huge data
+storage capacity data from various
+organizations
+systems are copied to the warehouse
+where it can be fetched
+and confirmed to delete errors here
+advanced requests can be made against
+the warehouse storage of data
+how a database housing process looks
+like basically
+we can think of data warehousing process
+in this way
+so let us suppose here we have the
+various sources of data
+so here this is the source of
+data
+now this source of data is basically you
+know from this source of data the data
+is basically extracted
+and transformed
+once the data is transformed the data is
+loaded
+at the target machine or at the
+destination or in the warehouse
+this is how the process our data
+warehouse looks like
+data warehouse combines data from
+numerous sources which ensures
+the data quality accuracy and
+consistency
+data warehouses boosts system execution
+by separating
+analytics processing from transactional
+databases
+data flows into a data warehouse from
+our different databases
+our data warehouse works by sorting out
+data into a pattern
+that depicts the format and types of
+data
+data warehouses and databases both are
+relative data systems
+but both are made to serve different
+purposes
+a data warehouse is a built to store a
+huge amount of historical data
+and empowers fast requests over all the
+data typically using
+olap or online analytical processing
+whereas on the other side a database is
+made to store current transactions and
+allow quick access to specific
+transactions
+for ongoing businesses processes
+commonly known as online transaction
+processing
+all right here let us try to understand
+the difference between determining and
+data analytics
+many of the learners have been observed
+considering both the same
+well data mining and data analytics are
+crucial steps in
+any data driven projects and are needed
+to be done
+with perfection to ensure the project
+success
+adhering to both fields closeness as
+mentioned earlier
+can make finding the difference between
+data mining
+and analytics quite challenging before
+we are in the state to understand
+do our data mining versus data analytics
+comparison
+we must first closely understand the two
+fields very closely
+well we have been discussing data mining
+for a while but let's
+give it a quick revision here data
+mining is a deliberate and successive
+cycle of distinguishing
+and finding shorter examples and
+identifying useful data
+in an enormous data set
+it's otherwise also called knowledge
+discovery in database
+which has been already told to all of
+you it's been trend since
+you know the 1990s and has been in
+existence
+since 1930s the improvement in computing
+pro is has although allowed data mining
+to become streamlined
+and mainstream whereas on the other side
+if we talk about data analysis it is the
+information
+analysis then again is a superset of
+data mining
+which includes removing cleaning
+changing
+demonstrating the data to reveal
+significant
+and valuable insights that can help
+determine
+the way to proceed forward and make
+choices
+pertaining to the company in question
+well data analysis as a cycle has been
+around since the 1960s
+it has only recently come into the
+mainstream
+and has proven to be an intense
+indentable tool to any significant
+global players arsenal now that we know
+the basics of data mining and data
+analytics
+we are positioned to pit data mining
+versus data analytics head to head
+and understand all the nuances and
+differences
+between data mining and data analytics
+well although data mining and data
+analytics are two different words in the
+field of data
+they are sometimes used in place of the
+others
+the usage and the meaning behind the
+terms
+depend highly on the context and the
+company in question
+to set up their individual identities
+such that you can easily differentiate
+between the two you will find the
+significant contrasting points
+here for example let us talk about
+the very first point here which is data
+mining
+well data mining is a criteria right
+it's a criteria
+the data collection and deriving crude
+but
+in essential insights
+so here in determining the criteria
+which is followed here
+is to you know it has to ensure that it
+collects
+the essential insights from the data
+data analytics
+then uses the data and crude
+hypothesis to build upon that the data
+create a model
+based on the data data mining is a step
+in the process of
+data analytics
+well data analytics is the umbrella
+which deals with every step
+in the pipeline of any data-driven model
+data mining shines its brightest when
+the data is questioned
+is well structured meanwhile data
+analysis
+can be performed on any data it would
+still be able
+to derive meaningful insights that could
+help in propelling
+the corporations to even greater
+height
+well when we are talking about data
+mining
+it is uh you know it's it is task
+oriented
+so data mining is tasked to accomplish
+the main job to make
+the data that is being used more usable
+whereas data analysis is used to
+hypothesize
+and in the end culminate itself in
+providing
+valuable information to help in business
+decisions
+all right so determining does not need
+any
+bias or any notion which are instilled
+before tackling the data whereas data
+analysis
+is majorly used for hypothesis testing
+data mining uses the scientific and
+mathematical models
+and methods to identify patterns or
+trends in the data
+that is being mined on the other hand if
+we talk about data analysis
+it is employed to task with business
+analytics
+problems and derive analytical models
+data mining usually does not depend on
+any visualizations or bar charts or
+graphs etc
+whereas these resolutions are the bread
+and butter
+for data analysis without a good
+representation
+of the data all the efforts which are
+put into the analysis of the data
+would not come to fruition
+well to give it a conclusion here you
+know we have been seeing
+both the terms that is data mining and
+data analysis
+for a long time these terms were
+palpable until the leap in the shear
+power computers
+made it possible for anyone with a
+computer to jump
+in and play with the data both data
+mining
+and data analytics are crucial to be
+done perfectly
+due to the very nature of the two
+following fields
+their names have been used
+interchangeably by
+individual business people meanwhile
+there are also people
+present who have appreciated the
+differences
+in the areas and made sure to respect
+the boundaries of the two fields
+in whatever camp you might side with you
+cannot deny
+the importance of both in a data-driven
+world
+of the 21st century other thing
+set in stone is the skill set required
+for these
+fields
+all right so let us talk about the top
+data mining algorithms here
+determine algorithms are applied through
+the algorithms behind it
+these algorithms run on the data
+extraction softwares
+and are applied based on the business
+need
+some of the algorithms that are widely
+used by the organizations
+to analyze the data sets are as follows
+the very first algorithm that we're
+discussing here is a very popular
+algorithm for data mining
+this algorithm is popularly known as
+k-means
+k-means is a popular cluster analysis
+technique
+where a group of similar items are
+clustered together
+let us talk about the second algorithm
+the second
+algorithm is also widely used for data
+mining
+and this is a priori algorithm
+well it is a frequent item set mining
+technique and
+association rules are applied to it on
+transactional databases it will detect
+frequent item set and highlight general
+trends
+the third is also very popular here and
+this is called
+k nearest neighbor
+this method is used for classification
+and regression analysis
+the k-nearest neighbor is lazy learning
+where it stores
+the training data and when a new
+unlabeled data comes
+it will classify the input data
+the fourth algorithm is basically naive
+bayes
+it is a group of simple probabilistic
+classification algorithms
+which assume that each data object
+features are independent of the other it
+is an
+application of bayes theorem
+and the fifth algorithm is basically add
+a boost
+it is a machine learning metal gotham
+that is used to improve
+performance at a boost is sensitive to
+noisy data
+and outliers
+all right so this brings us to the
+conclusion of today's session
+well before we conclude this conclude
+the session let us have
+a quick summary of what we have
+discussed
+well first of all let us start from the
+definition of data mining
+determining is all about explaining the
+past
+and predicting the future wire data
+analysis
+well data mining helps you extract
+information
+from huge sets of data it is a procedure
+of mining knowledge from data
+the process of this data mining includes
+business understanding data
+understanding data preparation
+modeling evaluations and deployment
+well important data mining techniques
+are classification
+clustering regression
+association rules auto detection
+sequential patterns and predictions
+our language and oracle data mining as
+well
+as python these are the prominent
+determining tools
+and techniques well data mining
+helps companies to get knowledge based
+information
+the main drawback of data mining is that
+many analytics software is difficult to
+operate
+and require advanced training to work on
+data mining is used in diverse
+industries
+such as communications insurance
+education
+manufacturing banking retail
+ecommerce and supermarkets
+in this video tutorial we have discussed
+the various data mining techniques
+that can help organizations and business
+find
+the most useful and relevant information
+well this information is used to create
+models that will predict
+the behavior of customers
+for the businesses to act on it
+by you know understanding all the
+information that we have delivered in
+this session about the data
+mining techniques one can determine its
+credibility
+and feasibility even better data
+extraction techniques
+include working with data reformatting
+restructuring
+and you know the various processings
+which are followed during the kdd
+process
+well finally all these techniques that
+we have discussed on the methods in data
+mining systems help
+in the discovery of new creative
+innovations
+well that's all that's all for today
+everyone
+so with this i would like to conclude
+the session and
+a big thumbs up to you for watching the
+video till here
+if you liked the video please do not
+forget to hit the like button
+press the subscribe button and don't
+forget to hit the bell icon
+for the latest updates thank you for
+watching the video
+i'll see you in my next video take care

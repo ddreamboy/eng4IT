@@ -1,0 +1,1368 @@
+hi i'm patrick from the python engineer
+channel and in today's video we learn
+how to build a machine learning web
+application from scratch
+we are going to use real world data from
+the stack overflow developer survey
+and in the first part of this video you
+will learn how we analyze and clean this
+data
+and then we build a machine learning
+model and train it with the scikit-learn
+library
+then later in the second part of this
+video we built a web application in
+python using the streamlit library
+this library will make it extremely easy
+and is really beginner friendly so you
+can follow along without much experience
+so now before we jump to the code let me
+show you the final application
+so here we are in my browser and i have
+the final app
+running and we're going to build a
+software developer salary prediction app
+so we're going to predict the salary
+based on a few information that the user
+has to put in
+for example the first thing we have to
+put in is the country and here we get a
+nice
+selection box so we can select between
+different
+options then we have to choose the
+education level
+so here i can say for example bachelor's
+degree
+and then we get a nice little slider to
+select the years of experience
+and then we click on calculate salary
+and get the estimated salary so in this
+case it's 97
+000 so let's increase the years of
+experience
+and click again and then we see we get a
+new
+higher value so this is what we should
+expect if we increase the years of
+experience so for this number in the
+background here we have our machine
+learning model running that has been
+trained on real world data and is now
+predicting
+this number based on these three
+information we give the model
+so in the first part of this video you
+will learn how to train
+and then save and reuse this model and
+then
+next to this prediction app we can also
+switch to a
+second site so here on the left we have
+a sidebar and we can choose the
+explore page and here we can explore the
+data that we used
+so in this case we used the real world
+data which is the stack overflow
+developer survey 2020
+so you can find this at this website we
+can put the link in the description and
+you can
+read through this if you're interested
+in this and you can also download this
+data set so this is publicly available
+so again we can put the link in the
+description
+and in this video we used the latest
+data from 2020 but you can also download
+the data from the past years
+so yeah on this website you should
+download this csv file and put into your
+project folder
+so let's get back to our web app and
+here i simply plot some information to
+get a nice little
+overview about this data and also learn
+how we do
+plotting in this web app so the first
+thing i plot is a little pie chart to
+plot the number of data from different
+countries
+so we can see the biggest chunk is from
+the united states
+and then we also have a lot of data from
+the uk germany
+and india and canada and then it's
+getting smaller and smaller
+then if we scroll down we get the mean
+salary based on different
+countries so this might be a little bit
+small for you to see but the biggest
+average salary
+is in the united states which we can see
+here
+and we can also zoom in and zoom out in
+this
+plot so this is really nice so this is a
+bar plot
+and then down here as last example i
+show you how to use a
+line chart so here we plot the mean
+salary based on the
+number of years of experience so this is
+starting at 0 years and goes up to
+50 years and for example we can see that
+at the beginning the salary is
+increasing almost linearly with the
+years of experience
+but then at some point it's stagnating
+and it's also
+jumping around so from this plot for
+example we learned that we
+cannot use the gears as only information
+for our model so we have to combine
+multiple data points and we will learn
+how to do this later
+so yeah this is the final web app that
+we're going to build and this is also
+fully responsive so we can make this
+smaller and then it still looks nice
+so to build this web app we are going to
+use streamlit
+this is a python library that makes it
+extremely easy to build beautiful web
+apps especially for machine learning and
+data science tasks
+so we will learn how to do this in the
+second part of this video and i promise
+you that this library is really beginner
+friendly so it takes care of all the
+back and stuff for us
+and we just have to write a little
+simple python script
+so yeah let's do this and now as first
+thing i want you to
+download this developer service so the
+2020
+csv file and put it in your project
+folder
+all right so here i have this public
+survey from 2020 open
+and this is a really large file so it's
+almost 100 megabyte
+so you will see that there is a lot of
+information in here for example if we
+scroll down all the way to the end then
+we see we have
+almost 65 000 data points so from 65
+000 different developers and then we can
+also scroll to the right so you see that
+there are a lot of different columns in
+here so a lot of different
+questions that they answered and also
+for a lot of data points we have
+n a in here so not available so we can't
+use
+all the information so yeah in the first
+part now you will learn how we clean
+this data and then use only the
+information we want
+so let's start with the project setup
+and here i'm in a new directory so i
+call this
+ml app and the first thing i recommend
+is to create a
+virtual environment so you can either
+use a python virtual and and i can
+display
+the commands for this here but in this
+case i want to use a conda and so we
+create a new
+conda environment and by the way if you
+don't know how to use anaconda then you
+can find a tutorial about this on my
+page
+so we say conda create and then minus
+n and then we give it a name so in this
+case i want to call this
+ml for machine learning and then i also
+tell it the python version so here i
+want to use the latest one
+python 3.9 and then hit enter and yes
+so now it created our environment and
+now we want to activate it so we say
+conda
+activate ml and now this is activated so
+in my terminal we can see this because
+we see this on the right side
+and now we want to install the packages
+we need
+so for this you could either say pip
+install
+and then the libraries i tell you and
+this is actually
+the recommended way for streamlet but in
+my case i'm on a
+m1 mac and i had some issues with with
+pip
+installs so i'm just using conda install
+this should be just fine and the first
+thing we want to say is
+conda or pip install streamlit and hit
+enter
+all right so this installed streamlit
+and all the dependencies for example it
+also already
+installed numpy and panda so we can
+verify this
+if we say conda install numpy
+pandas and hit enter then it should be
+there already so we see all requested
+packages already
+installed but we need some more so we
+want to say
+conda install and then we also want
+matplotlib for
+plotting and we also want scikit
+learn for our machine learning model so
+again
+if you use pip then this is just fine
+but here i use
+conda and let's hit enter all right so
+now we have everything we need and now
+we want to create a two-parter notebook
+and there we play around with the data
+and train our model
+so we also want to install a kernel for
+this
+virtual environment so for this we use
+this command
+i python kernel install minus minus user
+minus minus name equals and then the
+name of this environment
+so this is ml in this case all right so
+now we can start our two-parter notebook
+server by saying
+two-parter notebook and hit enter all
+right so here we see the folder and you
+can see that i already have the csv file
+with the survey data in this folder and
+i also already prepared a notebook
+but in your case you want to click on
+new
+and then select the environment so in
+this case ml
+and this is why we just used this kernel
+install command so that we can see this
+here
+so click on new notebook and then you
+can start
+so in my case i already prepared the
+notebook and now i will walk you through
+it
+so if this is too fast and you can find
+this notebook available on github we can
+again put the link in the description
+so we want to import pandas and
+matplotlib
+and then we want to read this csv file
+by saying
+read pandas.readcsv so let's execute the
+cell
+and then let's display the first five
+rows by saying dataframe.head
+so here we can see the first five rows
+so as i said this data set is very large
+so we have
+61 columns and also a lot of missing
+data
+so nan all right so let's start cleaning
+the data frame
+and we only want to keep a few columns
+so we want to keep the column
+country the add level which is the
+education level
+the years code pro which is the number
+of
+years of professional experience then
+the
+employment status for example if the
+developer is working full time
+and then the converted comp column so
+this
+is the salary converted to u.s
+dollars and this is a yearly salary so
+this is what we want to keep
+and then we rename this converted
+comp to salary so we can do this by
+saying dataframe.rename
+so let's run this and have a look at the
+head again
+and then we can see we only now have the
+country the education level
+years code pro employment and salary
+so here obviously you can also keep more
+data so the more columns or the more
+information we keep the
+better we should be able to train our
+model later
+but here we also want to do a trade-off
+because we don't want to
+bother the user with too much
+information that he or she has to fill
+out
+so yeah in this case i'm only using
+these these data points to predict the
+salary then
+so here we can see we already have a lot
+of missing
+information where the user didn't put in
+the salary
+so for our training data now we want
+only data where the salary
+is available so we want to drop all the
+columns
+where this is nan and we can do this
+by saying data frame equals data frame
+where the data frame salary is not null
+so if we execute this and have a look
+then we see the first rows
+already have a salary so now we have a
+salary for
+all the data points so let's have a
+quick
+look at the information by saying data
+frame dot
+info so here we see we have almost 35
+entries and we have these columns and we
+also see the data type
+so i think object means this is a string
+now the next thing we want to do is we
+also want to drop
+all the rows where one of those columns
+is and not a number so we can do this by
+saying data frame
+equals data frame dot drop n a
+and then if we inspect data frame is
+null dot
+sum then we should get a zero for each
+column
+so now we only use data points where we
+have data
+so of course just getting rid of all
+this
+data is a radical approach of cleaning
+the data
+there are other approaches you can use
+for example you can fill in missing data
+with the mean of this column
+but in this case we still have enough
+data points available so it should be
+fine to just
+drop them then the next thing we want to
+do is we only want to keep
+the data points where the user was
+employed full time so we can do this by
+saying data frame
+equals where data frame employment
+equals equals employed full time
+so we only keep these rows
+and then we want to drop the column
+employment so we don't need this for the
+prediction
+so let's run this and again print the
+info
+so now we see we only have these columns
+and
+drop the employment the next thing we
+want to do is clean the country data so
+if we say
+data frame country dot counts and hit
+enter
+then we see how many data points we have
+from each country so we have the most
+data from the united states
+and we also see that a lot of
+information
+that for a lot of countries we only have
+one data point
+so now we want to get rid of all the
+smaller countries
+and in no way do i want to offend these
+countries so i'm sure there are great
+developers there
+but the thing is just if we use for
+example only one data point from monaco
+then this might actually confuse our
+model because it can't really learn from
+this one data point
+so for this now we want to get rid of
+the countries where we have only a few
+values
+now in order to clean the countries we
+have this function here
+shorten categories which gets the
+categories and this must be these
+value counts here and then a cut off
+value where we can play around with this
+and if the number of samples we have
+here is
+greater or equal than the cut of value
+and we keep this
+and otherwise we combine this into a new
+category that we call
+other so the other countries and then we
+execute this function so we say shorten
+categories and then we give it
+dataframe.country.value counts
+and the cut of 400 in this case and then
+we
+change our data frame by saying
+dataframe country
+equals dataframe country dot map
+and give it this country map and now if
+we
+have a look at the value counts again
+all right so now here we can see we only
+kept
+these countries and united states is
+still the biggest one and now here we
+have the
+new other category and here this is the
+biggest
+chunk now the next thing we want to do
+is
+let's inspect the salary range and for
+this
+i want to plot the salary against the
+country
+so let's execute this and here
+this is a box plot so here you see the
+box plot and we see the different
+countries on the x-axis and then we have
+the salary
+ranging from zero all the way to
+two million so the way a
+box plot can be interpreted is that this
+small area here that you see this is the
+median value
+and now all these points are actually
+outliers so there are a lot of
+outliers in this data frame and now
+actually the most
+data points are in this median area so
+what we want to do here now is we want
+to
+keep only the data where we have the
+most information
+so we can see that none of these boxes
+here
+reaches over this line
+which is 250 000 so we define this as
+our cut off value and keep
+only salaries where this is smaller than
+this range
+so we can do this with this command
+and we also only want to keep salaries
+where this
+is greater than 10 000 so i think
+if you're working full time then you
+should earn more than ten thousand
+dollars
+in a year so let's keep only this
+and then we also want to drop the
+other categories so we can do this with
+this command
+and now let's plot the same again so the
+same
+box plot here and hit enter so now we
+can better detect these boxes here and
+see where the median range is
+and yeah so now we still have outliers
+but not so many anymore
+then the next thing we want to clean is
+the
+years code pro so if we inspect
+all the different values we get then we
+see we have this as
+a string value and we also have
+less than one year and more than 50
+years
+so what i do here is i want to convert
+this to a float
+and if it's less than one year then i
+just say this is
+0.5 and here we do a cut
+off so for more than 50 we just say 50.
+so for this we create a function clean
+experience
+which gets x and here we say if x is
+more than 50 years so exactly this
+string
+then we return 50 if it's less than one
+year we return
+0.5 and otherwise we convert it to a
+float
+and then we transform it by saying data
+frame years code equals data frame use
+code
+dot apply this function so let's hit
+enter
+and now we want to do a similar thing
+with the education level
+so if we have a look at all these unique
+values
+then we see we have all these different
+answers and here again we want to
+combine a few categories so i want to
+keep the
+bachelor's the master's degree then
+if it's a professional or a doctoral
+degree
+then i will say this is a post-grad
+and for all the other things that we say
+this is less than a batch class
+so for this again we create a function
+define clean education
+where we check if and then if this
+string is in x so if bachelor's degree
+then we return this is the bachelor's
+degree
+then we have the master's degree the
+postgrad
+and the less than bachelors and then
+again we apply this
+to the education level column so now hit
+enter and then let's inspect the unique
+values again
+and now we see we only kept these values
+all right so now we're almost done with
+cleaning the data but we still have one
+problem
+and this is because some of our data for
+example the number of years of
+experience this is a
+float but the education level and the
+country is a string
+and our model can't really understand
+the string
+so what we have to do is we have to
+transform the string values to a unique
+value a number that our
+model can understand for example for
+these four
+strings we can use the number zero one
+two and three
+and then in order to transform this data
+we can use
+the label encoder from
+sklearn.preprocessing
+so we import this and then create a
+label encoder education and
+now we fix this to the data and also
+transform it in the same step and then
+we assign it back to the education level
+column
+so now if we have a look at the unique
+values again
+then we see we no longer have strings in
+here but now we have the numbers zero
+two one and three so the order is not
+really important here but this
+label encoder here now knows which
+number belongs to which
+string and then later can convert this
+back again
+so yeah we did this for the education
+level and now we do the same for the
+country so we map
+each country to a unique number
+and for this we create a separate label
+encoder that we call
+le country and then we apply this fit
+transform again and now let's have a
+look at the unique
+values for the country and then again we
+see
+we have numbers here and no longer a
+string
+all right so now we have our final data
+that we can use
+and now we can finally start training
+our model
+so for this we have to split our data in
+the
+features x and the label so the label is
+the salary this is what we predict and
+the features
+are the rest of the columns so the
+country the education level and the
+years of experience
+so we get these columns by saying
+data frame drop the salary
+and the y is only the salary column
+so now we have x and y and now we want
+to
+try out different machine learning
+models
+and for this we use the scikit-learn
+library
+and in this case we deal with a
+regression problem
+and this means that here we don't
+predict a
+defined category like cat or dog but
+here we
+predict a number and the number can be
+anything from i don't know
+0 to 1 million so that's why this is a
+regression and not a
+classification and for this the first
+obvious choice
+is the linear regression model so we can
+import this
+and then we create a regression model
+like so
+and then like for all the models in the
+sk
+learn library first we have to fit the
+data so we can
+fit x and y dot values
+and run this and then to predict new
+values we say
+our model dot predict x
+and here we get the predicted values so
+let's do this as well
+and one node here so normally you want
+to split your data into
+training and testing or even training
+validation
+and testing data and then do the
+training or the fitting
+only on the training data but here for
+simplicity
+we do this on the whole data so now we
+get the predictions back and now in
+order
+to um evaluate how good
+our model performs so for the
+regression plot problem we usually have
+a look at the
+mean squared error or you can also have
+a look at the mean
+absolute error so you can import this
+and now we want to calculate the mean
+squared error based on the actual labels
+y and the new predicted label so to get
+the actual
+number back we calculate the square root
+of this with
+numpy square root and this will be
+our error so let's have a look at the
+error all right so this is the error
+39 000 dollars so this means that our
+model on average is off by this number
+and this is still pretty high if we
+think that the numbers range from
+10 000 all the way to 250 000
+and each time we predict the salary then
+on average we are off by this value
+then it's still pretty high so let's try
+out a
+different model so the next model we
+want to try out is the decision tree
+regressor so the concept is the very
+same we
+import this then we create a instance of
+this
+and then we fit the data like so
+and then we predict the values so let's
+call model.predict and again let's
+calculate the
+mean squared error and then the root of
+this and print this
+and now this time the root mean squared
+error is
+only 29 000. so it's already a lot
+better now let's try out one more so
+let's also try out the
+random forest regressor so this will
+basically
+combine multiple decision trees into a
+forest so again the same approach we
+import this we create one
+we fit the data and then we call model
+dot predict and calculate the error and
+have a look at this
+and this time the error is still 29 000
+so it's not really better than the
+decision tree
+so what we do here is obviously a little
+bit cumbersome we do this for every
+model that we find and then we try out
+the different values
+but now what we didn't consider yet is
+that for each of these
+models we also can use different
+parameter values that we
+can put in for example for a decision
+tree we can use
+the max depth parameter and then it
+might perform very differently for
+different parameters so in order to find
+the best model
+with the best parameters um there is
+a so-called grid search
+cv method which stands for grid search
+with cross validation and the way this
+works is
+we import this and then we define the
+set of different parameters we want to
+try out for example for the max
+depth parameter we can try out
+these different values then we create
+a dictionary with this and this has to
+be the same
+name as the keyword argument for the
+in this case the decision tree regressor
+so you can find this in the
+sklearn documentation and then we create
+a
+grid search cv with this regressor
+and the parameters and in this case the
+scoring
+is the negated mean squared error so
+this is just what we want to use for
+a regression problem with the grid
+search
+and then again we call the fit method
+with x and y
+and run this and now what is happening
+here so this will basically
+loop over all the different parameters
+that we
+put in here and try out all the
+different
+parameters and each time evaluates
+the error and then chooses the best
+model for us so now this has been
+executed and now we get the best
+estimator
+by saying grid search dot best estimator
+underscore so now let's use this best
+estimator here is our regressor and now
+again let's
+train it on the whole training data and
+then
+call calculate the error and see what we
+get so this is the final error we get
+for our
+final regressor and this is actually
+higher again than
+this one we used here and this might be
+a little bit surprising
+because actually we search for the best
+one here
+but what could have happened here is
+that in the decision trees there is some
+kind of
+randomness in it even though we said
+random state equals zero
+so it might be slightly worse again but
+that's fine so we still keep this
+regressor now
+and continue with this so now let's
+learn how to apply this to new data like
+we have to do in the app later
+so let's have a quick look at the data
+frame again and we see we have
+these columns country education level
+and years
+code pro so let's say in the app later
+we
+get a new array and it will have
+these values so here we start with the
+strings that the user puts in so the
+country
+the degree and the experience so now our
+x
+looks like this and now what we do here
+is we want
+to apply the label encoder for the
+country so the country is the
+first or the zero column then we want to
+apply the label encoder for the
+education
+and then we also want to have this as a
+float
+array so let's apply this and then we
+see
+now we get these values and we can put
+this
+in our regressor and then predict this
+so yeah with these information we get
+this
+predicted salary and now this is what we
+have to do in our
+app but before we can use this in our
+app first
+we have to of course save our model
+and for this we use pickles so we can
+say
+import pickle and then we want to save
+the regressor the label encoder for the
+country
+and the label encoder for the education
+so for this we
+create a dictionary then we open
+a pickle file and here we want to
+open this in right binary mode so this
+is important for pickle here
+and then we say pickle dump the
+data so this here in this file
+so now if we execute this then this
+should save
+this data in our directory
+and we can check this by loading it
+again
+in read binary mode and then say data
+equals
+pickle dot load and then we can access
+the model the label encoder
+for the country and for the education by
+accessing the key
+so let's get them back from the data and
+run this
+and then let's run the prediction with
+our
+loaded model again and then we see we
+get the exact same number that we get
+here from the
+original model so saving and loading
+works
+all right so now we are done with our
+two-parter notebook so now we have the
+complete pipeline here so we learned how
+we can clean the data
+and then create our model and train it
+and save it but now we have to convert
+some of the code from here to
+our app so let's do this
+so now let's create our streamlet app
+and for this let's open your editor of
+choice
+and you can see that inside this
+directory now we have the csv
+file and we also have the saved pickle
+file
+and we have the notebook so yeah this
+savings step here worked so now let's
+create
+three new files so let's create one
+app.pi
+file then let's create a separate file
+for the
+predict page so we call this predict
+underscore page dot pi and let's create
+another one and we want to call this
+explore underscore page dot
+pi so let's start with the predict page
+and first of course we want to
+import these things we need so we import
+streamlet
+sst then we also need pickle to load the
+data so import
+pickle and we need numpy so we import
+numpy snp and now we need
+some code from our notebook so the first
+thing
+is we want to load the model so let's
+create a function define
+load model and here let's go back to
+our notebook here we want to copy
+this part of the code so we
+open our pickup file and say this is our
+data
+and then here we return the data then of
+course we want to
+execute this so we say data equals load
+model
+and now we want to access the different
+keys
+like we did here so we create the
+regressor the label encoder for the
+country and for the education
+so let's simply call this regressor
+so now let's create the prediction page
+and i again wrap this into a function
+and later you will see why i do this
+so let's create a function and let's
+call this
+show predict underscore page
+and here now we will build our streamlet
+application
+and the way this works is we create
+different
+widgets for example we can say
+streamlets.title
+and then here we can say software
+developer salary
+prediction so now this will display a
+title and for example we can also simply
+write text by saying streamlet dot
+write and then here we can use a
+multi-line string and we can use
+a markdown syntax here for example if we
+use
+three hashtags then this will be a h3
+tag
+so let's say we need some
+information to
+predict the salary
+so now let's save this and now in the
+terminal so here again i want to say
+conda activate ml and now in order to
+run this file we say streamlit
+and then run and now for the first
+example yes
+let's use this predict page.pi
+so now if we execute this then this will
+start the server so now it will open up
+the app
+and as you can see we don't see anything
+and this is because we
+only defined the page but we didn't
+execute this so now in order to
+execute this actually i want to
+run this from the main app.pi
+file so here again we say import
+streamlet and then we import
+this show predict page so we say from
+predict page we import this function
+show predict page and then let's execute
+this here
+and now let's quit the
+server again by hitting control c
+and then let's say streamlet run
+and then we actually want to run the
+app.pi
+file and now if we go to this address
+again
+then now we see we have our app up and
+running so now this is working
+so now the next thing here is what we
+want to add
+is we want to add two select boxes for
+the countries
+and the educations so let me
+copy and paste this in here and this
+here is a
+tuple with all the different choices so
+all these countries
+and you can find them in your notebook
+for example at this position
+where we printed the value counts
+so all these different countries that we
+keep so we don't keep the other category
+so these are all the different choices
+for the countries
+and then the same with the education
+level so these are the
+exact names of the education categories
+that we keep
+and now in order to create a select box
+we can say
+country equals streamlets
+dot c lectbox and now this
+must get the number of choices so here
+the countries
+which can be a tuple or a list so here
+we use a tuple
+and we can give this a name as first
+argument so we can say
+country and then comma countries
+and now if we save this and go back to
+our
+app we can click on rerun
+and now here we see we have our select
+box so this
+is working so yeah pretty cool and now
+what happens here is
+if we choose a different value here for
+example
+germany then in our
+script this will be the value of this
+variable so now this will our country
+will be
+germany and then we can work with this
+so yeah let's
+copy and paste this in here and now we
+also want a select box for the education
+so let's call this education and then as
+a string we use
+education level and here we put in
+all the different education choices that
+we defined so
+education level so now we have this and
+now we want to select
+the years of experience so experience
+equals and for this we use a slider
+and we get this by saying
+streamlets.slider
+and then the name we say years
+of experience and then we can give this
+a
+min value a max value and a default
+value so let's say
+this should range from 0 to 50 and the
+start value is
+three so now again let's save
+this and let's go to our app and run
+this
+and then we see we have the education
+level
+as selection box and we have the slider
+with the default
+three so now this is working as well so
+let's add a
+button to start the prediction so we can
+add a button by saying streamlets.button
+and then the name for this button is
+let's say
+let's call this calculate salary
+and now again we can assign this to a
+variable
+so we can say okay equals
+streamlets.but so
+this means that if we don't click on the
+button
+then this is false and if we click on
+the button then this is true
+so now only if this is true if we
+clicked on the button
+then what we want to do here is we want
+to start the prediction so let's go back
+to
+our notebook and now what we want to do
+here is
+the same as i did here so we
+created this numpy array like we
+do here so let's copy and paste this
+then we transform the country the
+education
+wanted as a float like so
+and then we predict it so let's copy and
+paste this
+as well so now here we have the
+transforms for our numpy array
+and now here instead of these hard-coded
+values
+the nice thing is that we already have
+the information
+so the this is just the country variable
+that we get from this
+select box this is the education
+level and this is the experience level
+so now we have all the information that
+we need
+and now we simply need to calculate the
+predictions so we say
+salary equals and then we say regressor
+dot predict and we want to predict our
+x and now as last thing we want to
+display this so for this for example we
+can say
+streamlets.right or here i show you
+another
+thing so we can use the sub header which
+is kind of a smaller header and here
+let's use a
+f string and then let's say the
+estimated
+salary is and then this is in
+dollar and now let's use our variable
+here so this is
+the salary and this is a numpy array
+with only
+one value in it so we want to access the
+first
+value like so and we also want to
+display it with only two
+decimal values so we can format it like
+this so let's save this and let's go
+back to our app again
+and rerun this and then we have the
+button
+and now if we click this then we should
+see the results so let's try it out
+and yeah this is working so here we see
+we
+chose germany and we have less than a
+bachelor's and three years experience
+and this is our predicted salary
+now for example let's try this out so
+for example
+if we use the united states then this
+is higher than in germany so now we have
+the
+prediction page so let's add a sidebar
+and then let's also add the second page
+so for the sidebar what we do here is we
+go to the app
+dot py file and again we create a
+selection box by saying
+streamlets.selectbox
+and then here as first argument we give
+it the
+title so let's call this explore
+or predict and then a second argument
+as a tuple we give it the two choices so
+we want the predict
+page and we want the explore page
+so now let's first save this and have a
+look at the app again
+and here we see a error name error name
+st is not defined and this is by the way
+very nice in streamlit so we immediately
+see the error here in a nice way
+so if we go back obviously i have to
+import streamlet
+sst so let's save this
+again and check our app again
+and now we have this select box here
+explore or predict and now in order to
+create a
+sidebar the only thing we have to do is
+call
+st dot site bar
+and then dot select box so with this we
+can move
+any widget for example also a button or
+a slider to the sidebar
+so now if we go back then we should see
+the sidebar so yeah this is working now
+we have a nice little sidebar where we
+can choose between the different sites
+so now the only thing left to do is
+implement the explore page
+so let's implement the explorepage.pi so
+here again we
+import streamlet as st
+then we import pandas
+as pd then we
+import matplotlib dot
+pi plot as plt
+and now we want to load and clean the
+data the same way we did it
+in the notebook so let's go back to our
+notebook and let's copy all the things
+we need
+to clean the data so for this we
+want to for example want to
+copy these functions that we applied so
+we simply
+copy and paste this in here then let's
+have a look we also
+at some point we cleaned the experience
+like so so let's also copy and
+paste this in here then let me close
+this here
+and now let's also search for the clean
+education so we copy and paste
+this from our notebook so now we need a
+function to
+load the data so let's call this define
+load data and now here we
+load the data frame and then we apply
+all the transformations that we did in
+this notebook
+so here first of course we
+load the csv file and now let's go back
+through our notebook and apply
+all the transformations that we did here
+so only take only the columns we want
+then we rename the converted comp
+to salary so now we have to go through
+this notebook and copy and paste
+all the transformations that we apply so
+i will simplify this for you
+and just copy and paste all the steps
+that we used in here
+so yeah these are the exact same same
+steps that we used in the notebook
+and we apply them here and then we
+return
+the data frame from this function so now
+we have our load
+data function and of course we also want
+to execute this so we say data frame
+equals load data and now i want to show
+you a nice little tip
+that we can do with streamlit so
+now whenever we refresh the page
+then it will load the data again because
+it will
+execute this script from the top
+so in order to avoid loading this
+again and again and applying all these
+steps again
+we can actually cache this step
+simply by using a decorator and this is
+st dot cash so now this
+once we have executed this one time
+then it will cache it and it is
+available the next time again
+so this is a nice little trick that we
+can do with streamlet to improve the
+performance of our app
+so now we come to the actual page that
+we want to display and again
+for this we create a function and we
+call this
+show explore page
+and here again we give it a title
+and then a smaller title by saying
+streamlets.title
+and then streamlets.right and now for
+this little example i want to display
+three different charts one pie chart
+one bar plot and one line chart
+so for the pie chart we want to plot
+the value counts of the country so we
+can access
+the country like so and then we can get
+the
+value counts by calling value
+counts and now we want to put this into
+a pie chart and for this we use
+matplotlib and then let's simply copy
+and paste this for you
+so we create a subplot and then we can
+call
+access.pi with this
+data and the labels is data dot
+index and then here are some more
+arguments to get a nicer look
+and now in order to actually display
+this so
+first let's write a little
+heading first by saying streamlets.right
+and then here as a multi-line string in
+markdown format like so let's use
+um let's use a h4 tag
+and then we say number of
+data from different
+countries and now we want to actually
+plot this figure here and we can do this
+in streamlit by saying
+streamlets.pie plot
+and then the figure1 and here we can
+display any mudplot clip figure that we
+created so this is pretty nice
+so now let's save this and now let's
+actually
+show this and for this we have to do one
+change here in the app.pi
+so we also want to import this function
+so we say from explore page we
+import the show explore page
+and now from our select box we want to
+save the selection in a variable so we
+call this
+page and then we say if page
+equals equals if this is the
+predict value then we show
+the show predict page and otherwise we
+say
+sorry this must be here otherwise we say
+show explore page
+and now this should work so now if we go
+back to our app and rerun this
+and then we get a key error converted
+comp
+so let's have a look at where we load
+the data and
+here i renamed this to salary but then i
+access
+it here and here and here again so let's
+actually do the
+rename step at the very end so it
+doesn't really matter
+so like here and now let's go back and
+now this should work so let's rerun this
+and now let's select the explore page
+and i think we have one more typo so
+again
+let's go back and here we want the
+country of course
+so country and save it again
+and rerun it and now it's working so
+yeah here we have
+our pie chart so let me make this
+site smaller again so let's add two more
+charts
+the bar chart and the line chart
+so first let's again write
+a little heading so we say streamlit dot
+right the mean salary based on the
+country
+and now the data we want to plot
+is we get it like so so we want to
+group the data frame
+by the country and then access
+the salary for each country and
+calculate the mean value and also
+sorted in ascending order so we get this
+like so and then in order to plot this
+we can use the built-in bar chart of
+streamlit by saying streamlet.bar chart
+with the
+data like so and now this is all we need
+so now if we go
+back and again rerun this then here we
+see the bar
+chart so this is working pretty nicely
+and now we see we have
+all the different average or mean
+salaries for each country
+and now as last thing let's also use a
+line chart so for this let's again write
+some text streamlet.write the mean
+salary based on the experience
+and here we do the same thing we call
+this
+group by and but here we want to group
+by and this is called years
+code pro and then again the salary
+and we calculate the mean and sort it
+and now we create a
+line chart by calling
+streamlets.linechart
+with this data and save this
+and run it again and reload this
+and now yeah this is working as well
+here we have our line chart
+all right so yeah this is our final app
+and this is all that i wanted to
+put in in this example obviously you can
+play around with this and show different
+data as well so yeah i recommend that
+you do this
+and also i recommend that you play
+around with this
+model here and maybe try to improve this
+on your own for example you might try to
+use more than just the three information
+that we put in
+for example you can also try to use the
+age
+and use this as well for training but
+yeah that's it for now and hopefully you
+enjoyed this little tutorial and now
+know how you can build a machine
+learning web app from scratch with real
+data
+and then i hope to see you in one of my
+next videos
+bye
+you

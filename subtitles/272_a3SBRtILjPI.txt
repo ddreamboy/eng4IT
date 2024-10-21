@@ -1,0 +1,183 @@
+roboflow is a set of tools for building
+production ready computer vision
+workflows fast better data sets seamless
+model training easier deployment let's
+say you're a cashier and people often
+pay in your store in individual coins
+we want to build a model that's able to
+identify each of those individual coins
+sum them up and tell us how much someone
+has paid now while in this problem we're
+counting coins we could be counting a
+variety of things cars in our parking
+lot taking inventory in our back rooms
+maybe we're even a manufacturer and
+we're looking for defects on the coins
+that we're producing at any rate
+everything gets started with a workspace
+and a project let's dive in I've already
+created a workspace here called coin
+counting Inc I also collected some
+images earlier where I stabbed some
+photos of these coins on my counter I'll
+be creating an object detection problem
+because I only need to know the
+individual coins and what they are to
+sum up their value roboflow supports
+classification and segmentation as well
+I'll be detecting coins and then
+building a counter
+here is where I can upload my images
+note that Rebel flow supports videos and
+images alike so if I drop in a video it
+breaks it in individual frames for me
+I'll also drop in all of these images
+that I already have prepared
+notably these images aren't annotated
+but I did annotate a couple of them in a
+different tool earlier roboflow supports
+over 34 annotation import formats so if
+you already have annotated images from
+elsewhere you should add the annotations
+and robofo will automatically match them
+up I'll save and continue and create a
+training test split for later when we're
+prepping our model now I uploaded my
+images using the web interface but I
+could have uploaded them using an API I
+could also use open images or open
+source data sets to add here
+now I'm ready to annotate I'm only going
+to annotate alone so I'll assign all the
+images to myself
+for annotation I jump in to this
+individual image and I just start
+drawing boxes because I'm doing an
+object detection problem
+I'll create here a class 4 quarter
+here I see a nickel
+see another nickel over here so I'll add
+another box there this is a dime so I'll
+use the dime class here there's another
+dime
+a dime here
+and a dirty Penny but nonetheless a
+penny and over here a quarter I only
+have a small number of images here but
+it's good enough to get started I'll use
+a little uh movie Magic to fast forward
+let's pretend I was labeling for instant
+segmentations that have object detection
+so I needed to create polygons I could
+use the smart polygon tool to draw a box
+and then have that box snap to the shape
+I can click the areas that I don't want
+the polygon to include so it gets a
+little bit more fine-tuned
+and voila I have a much nicer polygon
+label since I'm only doing object
+detection I'll continue with bounding
+boxes
+because I've already labeled a lot of
+these images and trained a model I can
+use model assisted labeling to label
+things for me so to turn that on I'll
+turn on label assist all labeled with my
+money counter model that I already have
+it asks which classes I want to use and
+then it makes guesses based on the prior
+model that it might have already trained
+and it looks like here it nailed it
+Nickel Nickel Dime Diamond dime so I'll
+jump to the next image
+and there it's doing a really good job
+of filling these in here it looks like
+this was actually a quarter and this is
+how I'm going to finish labeling the
+rest of the images
+okay great I've annotated all of my
+images I'll go ahead and add all these
+to my data set when I generate a data
+set version I can do things like ad
+pre-processing and augmentation steps
+I'll add a few steps that I think will
+increase the variety of images that I
+think the model might encounter in the
+real world like flipped coins maybe the
+coins are sometimes closer further away
+maybe the Hue may vary sometimes the
+exposure could even be brighter or
+darker that looks pretty good now I can
+generate a data set version for a quick
+first check I'll just kick off a
+training job I'll kick off from the
+Microsoft Coco checkpoint so the
+training is faster and easier if I
+wanted to train my own architecture I
+could get the data in the format that I
+need for example maybe YOLO V5 and here
+robothole will automatically create the
+download code that I need I could then
+go to use Rebel flow's model Library
+while the model is training I get a
+training graph to see roughly if the
+model is learning the task let me show
+you another model that's out of the oven
+and already done baking it did a pretty
+good job it got 77.6 map which is a good
+starting point when a model finishes
+training in roboflow we can easily try
+out that model by clicking the deploy
+tab we have examples available to us
+that our model has never seen before in
+fact I have an example image that the
+model has never seen before here on my
+local computer and I can drop this in
+and see if the model finds those claims
+and indeed it does with the deploy tab I
+can also get ready to use my model in a
+wide array I could use on a webcam I
+could use it in real time I could use it
+via API I could deploy it to a Jetson I
+could use it on an iOS I could use it in
+my own Docker container and deploy that
+inside my own environment offline for
+this example I'll use the hosted API so
+I can make an API call with an example
+image and get back the responses with
+those responses Alden see which coins
+are present and do summing let's get
+started with our script so I'll go ahead
+and copy this python of course you want
+to keep your API key secret and I'll
+invalidate mine I'll drop this in I'll
+show you that I can load in my example
+image name here
+and it'll print out the predictions
+and you'll see below I get all the
+responses in this nice Json so for pred
+in response inside the predictions
+dictionary
+I will print the pred class
+this will print out all the example
+classes that the model sees in this
+image
+at 40 confidence it does see each of
+those classes I like to bump this up to
+70 just to be a little bit more certain
+though it depends on the problem that
+you're solving for each of those preds
+we actually want to do logic if it's a
+quarter at 25 cents if it's a dime at 10
+cents I've already written that logic so
+I'm going to just copy paste that
+directly into my script
+sum them up and print out the results
+and sure enough the sum is 68 now what's
+also exciting is I can use this model
+immediately on my webcam I'll take my
+phone here and I'll open up the webcam
+format and let me show you this work in
+real time
+over top of my coins
+so there you have it good luck building

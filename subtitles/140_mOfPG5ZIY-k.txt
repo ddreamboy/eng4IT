@@ -1,0 +1,78 @@
+looking for gold in a mine of
+information
+data mining can help
+[Music]
+like how mining for gold is digging
+through earth and rock for the valuable
+bits
+data mining is sorting through large
+data sets to find the valuable
+information
+the process of data mining involves
+using software algorithms and
+statistical methods
+to identify patterns and data to help
+answer business questions
+and predict future trends and behavior
+data mining techniques are used in
+business areas like marketing
+risk management fraud detection
+cybersecurity medical diagnosis and
+mathematics
+and research disciplines like
+cybernetics and genetics
+data mining is a means to drive
+increased efficiency in business
+operations
+but it can also set a business apart
+from the competition in combination with
+predictive analytics
+machine learning and other aspects of
+advanced analytics
+read more about how these processes work
+in tandem by clicking the link above
+or in the description below
+data mining is sometimes used
+interchangeably with data analytics
+but it's really a component of the
+overall data science and analytics
+process
+data mining focuses on finding relevant
+information and data sets
+which can then be used for analytics and
+predictive modeling
+there are five primary steps to data
+mining identification of business issues
+to analyze data sources
+such as databases or operational systems
+data collection and exploration
+including the sampling and profiling of
+data sets
+data preparation and transformation to
+filter
+cleanse and structure data for analysis
+modeling in which data scientists and
+other users create
+test and evaluate data mining models
+and deployment of the models for
+analytics use cases
+in general data mining uncovers hidden
+patterns and relationships and data
+that can ultimately impact business
+across all industries
+for example using data mining businesses
+can improve
+lead conversion rates in sales and
+marketing build risk models
+and detect fraud in finance and improve
+safety
+identify quality issues and manage
+supply chain operations and
+manufacturing
+does your organization use data mining
+what are some other benefits you've
+reaped from it
+share your thoughts in the comments and
+be sure to hit that like button
+[Music]
+you

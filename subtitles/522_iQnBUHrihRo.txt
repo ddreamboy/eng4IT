@@ -1,0 +1,744 @@
+uh hi guys my name is mohammed
+khalid and the topic of my presentation
+is
+introduction to semi supervised learning
+so i'm going to give you guys
+a 50 000 feet view of what semi
+supervised learning
+actually is so let's get into the
+presentation
+so what i aim to do in this presentation
+is tell you guys what semi supervised
+learning is
+how it is different from supervised and
+unsupervised learning methods
+which are conventional machine learning
+methods right
+why do we use semi-supervised learning
+like we have two perfectly good methods
+right
+why would you why would we fall to
+semi-supervised learning right
+what are some of the types of semi
+supervised learning there are
+a lot of types of semi supervised
+learning rights there are a lot there
+are even a lot of sub types of semi
+supervised learning
+but i would just touch on a very few of
+them because of the time restriction
+25 minutes is not a lot of time to
+explain the math of semi-supervised
+support vector machines and
+semi-supervised graphs
+so i'll just get into the theory and
+theory of most of them
+and just touch upon the graphs a little
+bit touch upon the statistics of them a
+little bit okay
+and at the end we will just discuss a
+few problems that
+actually use semi-supervised learning
+okay so
+um let's start with the presentation
+so um firstly let's have an overview
+let's have a revision of what's
+supervised and unsupervised learning are
+so
+in supervised learning we have
+uh label data like we have some
+data we have some sort of data and we
+have a label against it right so if uh
+if i
+for instance let's say i have a data
+images as you can see
+in this example right so if i have a
+data of images
+i will have a label against each of that
+image if i have this image
+i'll say that yep this is the dog if i
+have this image i'll say yep this
+is a cat so that so when we train our
+model using
+label data and then we can make uh
+predictions on some future data that was
+not a part of our test data
+that is not necessary but for the sake
+of understanding
+that is called as supervised learning
+right so we
+we uh train a function
+f of x using our training data x in our
+labels uh
+we train a function f of x that predicts
+the label
+y on some future data x right so that is
+the gist of supervised learning
+and for unsupervised learning it's the
+opposite for example if
+if we consider this data right we have
+just four images
+and we have no way to differentiate them
+like we have no
+labels that we can say are against these
+images to differentiate them
+from each other right so unsupervised
+learning in
+for example if i feed this to an
+unsupervised learning algorithm
+i will ask ask this uh ask the method to
+make
+clusters of my data and it will divide
+the data into clusters based on the
+information of each image
+right it will say yep there is a lot of
+black and white in this image
+in these images so i'll put them in one
+cluster and there's a lot of brown black
+and white in these images
+so it'll just put them in another
+cluster right so when we're classifying
+data without any labels that is called
+unsupervised learning okay
+so moving on to our topic what semi
+supervised learning is
+so uh as we just talked about supervised
+and unsupervised learning that
+it uses both label data and unlabeled
+data
+uh it uses a sorry supervised learning
+uses level data and unsupervised
+uh learning uses unlabeled data semi
+supervised learning uses both
+like for instance our data set would be
+something like
+this right so it will have
+some information about the weight of the
+animal
+and it won't have uh information on some
+other
+images like some images will have labels
+attached to them and some will not
+right and we will train our model based
+on that data set
+right so that is called semi supervised
+learning right
+so uh what i would like to do it i would
+like you guys to imagine
+um a spectrum right so imagine
+this is a spectrum in front of you okay
+and
+the these are points on that spectrum on
+the very far left
+we have supervised learning and on the
+very far right we have unsupervised
+learning right
+and this area is semi supervised
+learning okay and
+let's consider this the very center just
+for the sake of understanding consider
+this
+an equator of the spectrum okay so
+this area as you can see is very close
+to supervised learning
+and this area is very close to
+unsupervised learning so that means
+there are
+branches of semi-supervised learnings
+some of them stem from supervised
+learning
+and some of them stem from unsupervised
+learning okay
+and the type of the type that usually
+stems from supervised learning we call
+it semi-supervised classification
+or induction is something we use and
+some and what stems from unsupervised
+learning it is called constrained
+clustering or transaction uh
+transduction sorry as we're gonna
+learn later on in our presentation okay
+so before
+uh getting into what induction is what
+transduction is
+uh one question that arises is what is
+the need of semi supervised learning
+right we have perfect we have perfectly
+good machine learning methods to
+uh to do everything like we have um
+a supervised learning in case we have
+labels we can just label our data and
+you know
+feed it in the machine learning
+algorithm right why won't it work
+like that is what we usually do right
+what is stopping us from doing that
+so i'll give you guys an example of a
+data
+that i have personally used right so
+this is from a spacex data set like
+these images these are from
+a space x data set right and the
+resolution
+of the image that this sub image is from
+was 5000 into 5000 right
+that means it had 25
+million pixels in one image okay and it
+the data set had
+thousands and thousands of image right
+and
+when i wanted to semantically segment
+the image that means i had to assign a
+label
+to each and every one of those pixels
+it wasn't possible for me or it wouldn't
+wouldn't have been possible for
+anyone to create a label against every
+single one of the
+image so for reference let's consider
+this right
+so if we're talking about our images um
+this is the total number of images in
+one pixels that is 25 million if i'm not
+wrong
+right now consider i have a relatively
+small data set right consider i have
+only
+um 1500 images okay so this
+is 3 billion and 750
+million i think right that is the total
+number of pixels
+that you would have to manually label in
+order to get a label data set right
+and that is not a very realistic thing
+to expect right that is not something
+that i would think anyone can anyone
+would like to do or it would be
+feasible to do right so in those
+scenarios we work with
+both labeled and unlabeled data and then
+we mold it according to our needs right
+so that is why we use semi supervised
+learning the primary reason of using
+semi supervised learning right
+so um let's talk about induction and
+transduction
+okay so when we're talking about
+induction let's first discuss induction
+right
+induction is the part of uh semi
+supervised
+semi supervised learning it is that
+portion that stems
+from supervised learning right so what
+we do in induction is that we use our
+model
+uh the model that we have created right
+it then
+we generate this model
+then using this model we can predict on
+newer images we can predict our newer
+data like
+for instance if i have used if i go back
+to this example
+if i used these four images for training
+then i can use any fifth images for
+prediction
+like if my f x was trained using these
+four images then the x i i will i am
+going to use to predict
+the label y that is going to be from a
+fifth image right
+that is known as induction okay
+so and transduction is its counterpart
+transaction is what stems from semi
+supervised learning
+i'm sorry transduction is what uh
+originates from
+unsupervised learning okay so in
+transduction what we have
+is what we what we do is
+we make predictions on our training data
+set so
+uh what we have for instance let's say i
+have five
+million images okay and 1.2 million
+of those are labeled okay this is just
+an example
+so what i do is i run the model on the
+1.2 million
+and after that i make predictions on the
+rest of the 3.8 million of our images
+okay so now i have labels
+against five million of those images
+right and now
+in the model that i've trained what i'm
+gonna do
+is i'm gonna take an image out of the
+set of the five million images that i
+had right i will take
+one one image or one the point from the
+data
+and predict on that point like uh my
+test
+data is gonna come from the data that i
+used for training right
+that is called as transduction okay so
+that is the difference between induction
+and
+transduction okay another thing that uh
+some other differences between induction
+and transduction or inductive learning
+versus
+transductive learning would be that um
+in inductive law inductive learning we
+we test the
+train the model with vmware right so we
+can test the model
+on data that we have never seen like uh
+going back to the example in the first
+slide
+if we had four images we we trained our
+neural network or trained our machine
+learning algorithm
+using four images then we may test on a
+fifth image right
+same goes for uh the uh opposite goes
+for transductive learning
+that we will make a prediction on one of
+the
+uh one of the points that is already
+present in our database right
+so inductive learning we build a
+predictive model and transductive
+learning does not make a predictive
+model
+that means that we can we can use uh
+outsider data in inductive learning but
+we cannot do so introspective learning
+um inductive learning can predict any
+point like
+it doesn't matter if it's in the space
+or not it can
+um we can just feed it to the model that
+we have trained
+and it will give us a prediction whereas
+in translative learning it can only
+uh predict points that we have actually
+used in the training algorithm right
+so inductive learning has less
+computational cost as you can guess that
+if i have trained the model once i will
+not have to train it again but
+um so we can make predictions on
+the model that was trained once but
+transductive learning can become costly
+why because let's say i have a data set
+of 600 images okay and i trained my
+model on that
+like i had 250 label data
+okay and i had uh 350
+uh 250 and 350 or 600 yen so i had 350
+unlabeled data right
+so what i'm going to do is i'm going to
+firstly train the model
+this on the 350 250 images then i'm
+going to
+make a prediction on these 350 images
+then i'm going to clean the model on
+those 600
+labeled images and then i'm going to
+make a prediction on one of those images
+right
+but let's say i get 10 or 20 more images
+then i'll have to do this process again
+like i'll have to first train the data
+on those 20 images as well
+and then i'm going to make a prediction
+so that can become
+very computationally intensive right
+so going into a bit more detail about
+the types of
+uh models that are
+used in semi-supervised learning one of
+them is
+self training models right so okay
+one thing that i think we just skipped
+is
+while we're using semi supervised
+learning we have to make some assumption
+right so these without these assumptions
+semi-supervised learning is
+not possible so without going into too
+much detail of
+what these mean the gist of the main
+idea of these assumptions
+is the data that the data that we have
+is similar
+right the data that we uh if we are
+given
+a cluster or something like that
+similar like data that is closer to each
+other will be similar
+that is the gist of the assumptions that
+we have to make
+when we're using semi supervised
+learning okay so
+whatever algorithms we're gonna discuss
+whatever methodologies we're gonna
+discuss
+this is the main idea that we're gonna
+keep in mind
+okay so moving on to self training
+models
+um so we're using the same assumption
+that each cluster that we're going to
+get will have
+only similar data right and what we're
+gonna have is
+a very trace amount of label data and a
+huge amount of unlabeled data right a
+very
+trace amount of label data and a very
+huge amount of unlabeled data right
+so i'm gonna show this to you guys i'm
+gonna explain it to you guys better with
+an example
+right consider that you have to identify
+the gender of a hundred people
+right so you were given just
+the two uh genders of two people
+and you have to find out the gender of
+98 people
+right so what are you gonna do you're
+gonna apply one nearest neighbor okay
+so i know that this one point that i was
+given
+is a female this one point that i was
+given is a male
+right this is what i know now the model
+and now i'm gonna apply one nearest
+neighbor to this
+and the model is gonna train itself
+okay so what does it do in every
+instance it
+look at its most nearest neighbor and it
+will assign it the same label
+as it has like
+like it's its own label to its nearest
+paper right now
+if our assumption was correct that the
+data that is closer
+uh like uh the data that is closer on
+the plane
+is uh gonna be similar like it's gonna
+belong to the same class right
+so if we just like having a very of
+having just a look on this data we can
+see that this data is very close to each
+other
+this data is very close to each other
+this is very close to each other and
+this is very close to each other
+right so and if we had to divide it
+in if we decrease the number of cluster
+this is going to be one cluster and this
+is going to be
+another cluster right so assuming that
+this
+these were all the females and this was
+all the males
+or this uh or vice versa this means that
+our did that our prediction was totally
+correct when we use self-training models
+right but if
+if our assumption was correct let's
+assume that our assumption was incorrect
+and there was one outlier somewhere
+uh let me just change the color of the
+pen there was one outlier
+somewhere here and one outlier somewhere
+here
+right so that means that anything beyond
+these points upward is going to be
+predicted
+incorrectly right so that is one
+uh limitation of cell training models
+that we cannot have outliers in it
+if we have outliers that is just gonna
+mess things up for us
+okay so another thing
+another very interesting method that we
+use in semi supervised learning is
+co-training
+so co-training it uses the same
+assumption
+that um that our data is going to be
+independent
+and it will um similar
+similar data as we're not using graphs
+we're talking we're going to primarily
+talk about
+text mining and everything so i don't
+think that it'll matter for us that the
+data is
+in similar clusters or not but another
+assumption that we're going to make is
+the data is going to be conditionally
+independent given the class label
+okay so
+that two views are conditioned uh
+conditionally independent given the
+class therefore right
+so this is the formula for conditional
+independence we did that in the very
+first
+um lecture that our math review was so
+i'm just not
+i'm not gonna go into the details okay
+so let's
+uh consider an example of code training
+okay so um let's just consider
+that we have
+two point like we have a huge data set
+right
+and we have just two of these points
+that are labeled
+right so this is consider this a text
+corpus right
+so what it says is we will have will
+divide the data set based on commas or
+something
+and our x1 uh and x2 are obviously
+independent
+so what we're gonna do is we're gonna
+consider washington state
+is headquartered in locate that tells us
+that it is a location
+right so that makes our prediction for
+number three pretty easy
+like it's it sees this headquartered and
+it sees this headquartered in
+it sees that the sentence structure is
+the same so it can pretty easily
+uh guess that yep this is a location
+right so that is uh
+how this is going to go right now if we
+move on to example four
+so it says kazakhstan flute
+okay like it the sentence is gonna be
+like it flew to kazakhstan right now our
+original
+labeled data set it neither did have
+had flew to nor did it have kazakhstan
+right but we just made a prediction that
+kazakhstan is a location
+so using that it will say that yep it is
+a location as well
+okay so then our last one as
+mr smith is a partner right now the
+the three that we just discussed does
+not have do not have anything
+that is uh related to that right but if
+we look at example number two what
+mr washington and it sees mr smith
+right so it can make and make a
+prediction based on that
+that this is a person right
+so that is easy for it okay now let's
+consider that we have an example that is
+uh someone
+flew to china right if we consider if we
+come to this text here
+now then what happens now if we look at
+our original
+data set or even if we look at our
+predicted data
+sorry if if you look at our label data
+set
+we don't have flu to anywhere we don't
+have china anywhere right
+but on if we see line number four
+we see instance number four we actually
+um inferred that as flew to
+as with kazakhstan and kazakhstan was a
+location
+so china is also going to be a location
+right
+so that is the concept of core training
+right okay so uh
+that was co-training now i'm just gonna
+touch on graph page semi-supervised
+learning uh because
+uh as i said at the very beginning of
+the presentation that
+graph based supervised learning and um
+this svm based semi supervised learning
+light
+the semi supervised support vector
+machines as we call them
+they involve a lot of maths and
+explaining that would have not have been
+feasible in the 25 minute presentation
+so i'm just gonna go to a very basic
+uh basic overview of what graph base any
+supervised learning is okay
+so what we do is we construct a graph
+from our training data right and as i
+as i said at the very start of the
+presentation that um
+the gist of semi supervised learning is
+going to be the same thing
+that edges uh that sorry
+the some of the data will be labeled and
+some of that
+will be unlabeled right so that is what
+we're going to assume here as well
+that some of the edges of the graph like
+at the very beginning
+they were labeled right and using those
+labels
+we will connect the edges that do not
+have labels
+right so um let's consider
+an example for this i will just uh
+show you an example and come back to
+this slide
+if we see this slide right so let's
+consider that there was this little girl
+right and she was reading a book
+that had labels in it okay
+and some some of those labels like
+some of those uh
+after a few articles it stopped having
+labels
+right and it was very hard for the
+little girl
+who was reading the book to understand
+what
+uh like if she saw this topic comet
+light curve she had
+she had no idea what it belonged to
+right so
+making the assumption that the book had
+only
+uh the book had topics about only two
+things
+like it was either sky or earth and she
+she read only these two labels
+like bright sky asteroid
+so she read bright asteroid this had a
+label and she read airport bike rental
+this had the label right so and
+none of these things had a label right
+or what should what did she do
+okay she made an assumption that if
+this word has asteroid and it belongs to
+the sky then
+every other graph that we're gonna see
+that will have uh that will have a word
+uh that was con in that topic or in that
+heading
+it will uh be related to sky right so
+asteroid and comet
+if we go here then this has comet it is
+already like connect pretty connected
+and same boat goes for the ground right
+that if it is
+um this had the word airport in it so it
+belonged to the ground like that
+that much she knew so she said that yep
+this has airport so this is on the
+ground this has denali and this also is
+denali
+so just like that you can label the
+whole graph based on some assumptions
+that you made at the very start okay so
+um that is the gist of graph based
+supervised learning now getting into the
+formula of graph based supervised
+learning
+is we have a fully connected graph right
+where x i
+and x j are the vertices of the graph
+right so
+every single word is every single pair
+of vertices has to be connected by an
+edge right and the weight of
+each edge decreases depending on
+how far away we are from our original
+weight
+right well like that we can use any
+weight function right
+one of the weight functions that we can
+use as a
+is explained by this w i j is equals to
+exponent of x i minus x j mod square
+over two
+uh bandwidth square right where uh this
+is a bandwidth parameter and controls
+how quickly the weight decreases okay so
+this is just one
+one way one way of deciding how our
+how we can use our weight function how
+our edge weight
+increases or decreases based on how far
+we are from our original data
+right so uh ending
+on the note uh we'll just talk about
+where ssl
+is being used so speech analysis we just
+looked at an example as well that um
+that washington and headquarters and
+everything it is not possible
+to like predict or
+provide labels to each and every single
+word that a person is speaking
+or a person is writing right so we use
+semi supervised learning we use some of
+the data is labeled
+and some of it is not another thing that
+we use
+as ssl and as internet content
+classification
+of course there is huge amounts of data
+on the internet right
+so we can uh even google uses a semi
+supervised training
+to classify its website it is not
+possible for it to classify every single
+site differently right
+there is humongous amounts of data on
+the internet so that is also a place
+where
+uh ssl is used protein sequence
+classification
+like we know that one a single fiber of
+protein
+has like thousands and thousands of
+joins and
+everything so classifying every
+every single protein sequence
+individually
+that is not going to be possible for us
+right so we use protein we use ssl here
+as well
+right and some other types that we
+didn't discuss
+were semi-supervised
+based svm like semi supervised support
+vector machines
+men card which is a graph based semi
+supervised learning method and harmonic
+function which is also a graph based
+method right
+so if any of you want to discuss with
+them with me i have a paper on that i
+actually read it but i didn't think i
+had the time and
+also representation time is finished as
+well these are the references that i use
+and with that i will continue my
+presentation
+and your questions are welcome thank you
+guys

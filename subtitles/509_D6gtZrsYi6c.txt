@@ -1,0 +1,586 @@
+in this lesson you are going to
+understand the concept of unsupervised
+learning
+by the end of this lesson you will be
+able to
+explain the mechanism of unsupervised
+learning
+use different clustering techniques in
+python
+overview
+unsupervised learning is a machine
+learning technique used to train the
+machine learning algorithm using data
+that is either unclassified or unlabeled
+and allows the algorithm to act on that
+data without guidance
+unlabeled data is a designation for
+pieces of data that have not been tagged
+with labels identified by
+characteristics properties or
+classifications
+so the flow of unsupervised learning
+starts with training data that has no
+labels and depends on the feature vector
+the machine learning model defines the
+predictive model this is tested with an
+individual subset of data with its own
+feature vector
+here the predictive model defines the
+likelihood or cluster id or a better
+representation of unlabeled data
+let's look at the difference between
+unsupervised and supervised learning
+supervised learning technique deals with
+labeled data where the output data
+patterns are known to the system
+unsupervised learning works with
+unlabeled data in which the output is
+just based on the collection of
+perceptions
+supervised learning method is less
+complex the unsupervised learning method
+is more complex supervised learning
+conducts offline analysis unsupervised
+learning performs real-time analysis
+the outcome of the supervised learning
+technique is comparatively more accurate
+and reliable unsupervised learning
+generates moderately acute but reliable
+results
+while classification and regression are
+the types of problems solved under the
+supervised learning method
+unsupervised learning includes
+clustering and associative rule mining
+problems
+example and application of unsupervised
+learning
+let's understand unsupervised learning
+through an example
+consider a scenario where a child had no
+learning phase and is shown images
+without the labels now if the child is
+asked to identify if any range is a bird
+or an animal he will lack the
+information that can help him do so
+the best he can do is come up with the
+following groups based on common
+patterns wings and legs for example this
+explains how unsupervised learning works
+we show a lot of data to our algorithm
+and ask it to find patterns in the data
+by itself
+let's look at the application of
+unsupervised learning
+unsupervised learning can be used for
+anomaly detection as well as clustering
+to understand clustering let's look at a
+simple real-life example a mother asks
+her two children to arrange the pieces
+of playing blocks the children come up
+with two different groups as shown with
+different similarities in the blocks
+this is clustering
+each of our children came up with a
+different type of grouping one child
+grouped them based on the shape whereas
+the other grouped them based on the
+color there is no right or wrong way
+then how can you pick one set of
+clusters over the others
+this will depend on the similarity
+measure used by the mother in this case
+the arrangement of child 1 is better
+than child 2 if the similarity measure
+chosen by the mother was that blocks
+should have the same shape
+however the arrangement by child 2 is
+better if the similarity measure chosen
+by the mother was that blocks should
+have the same color therefore defining
+the similarity measure is important when
+performing clustering
+there may be different ways in which
+data can be arranged in different groups
+based on size shape color texture and
+other complex features
+anomaly detection is a clustering
+technique used to identify unusual
+patterns that do not conform to expected
+behavior
+anomaly detection has many applications
+in business such as intrusion detection
+system health monitoring and fraud
+detection
+clustering
+the method of grouping similar entities
+together is called clustering the goal
+of this unsupervised machine learning
+method is to seek out similarities
+within the data points and to cluster
+similar data points together
+need for clustering
+let's look at the need for clustering
+grouping similar entities together helps
+to merge the attributes of different
+clusters
+in other words this gives us insight
+into underlying patterns of different
+groups
+there are a lot of applications of
+grouping unlabeled data for example in
+order to maximize the revenue you can
+identify different groups or clusters of
+customers and market to each group in a
+different way
+another example is grouping books
+together that belong to similar topics
+clustering is needed to
+determine the intrinsic grouping in a
+set of unlabeled data organize data into
+clusters that show internal structure of
+the data partition the data points
+understand and extract value from large
+sets of structured and unstructured data
+types of clustering there are two types
+of clustering hierarchical clustering
+and partitional clustering
+hierarchical clustering can be
+agglomerative and divisive whereas
+partitional clustering can be k means
+and fuzzy c means a distinction among
+different types of clustering is whether
+the set of clusters is nested or
+unnested
+a partitional clustering is just a
+division of the set of data objects into
+non-overlapping sets or clusters such
+that every data object is in just one
+subset
+a hierarchical clustering is a tree
+structure that has a set of nested
+clusters
+hierarchical clustering the output of
+hierarchical clustering is a hierarchy
+how does the hierarchical clustering
+form a hierarchy assume you are going to
+create a three-layer hierarchy from six
+different data nodes
+so first combine a and b based on
+similarity and also combine d and e
+based on similarity combination of a and
+b is combined with c
+in the similar way combination of d and
+e is combined with f
+now combine c and f inside one cluster
+when you look at the final tree it
+contains all clusters combined into a
+single cluster
+let's understand the working of
+hierarchical clustering it works in four
+steps
+step one assign each item to its own
+cluster such that if you have n number
+of items you will have n number of
+clusters
+step two
+merge two clusters into a single cluster
+by finding the closest pair of clusters
+now you will have one cluster less
+step three compute distances between the
+new cluster and all old clusters step
+four repeat steps two and three until
+all items are clustered into a single
+cluster of size n
+let's understand the distance measure in
+hierarchical clustering let's look at
+the different kinds of linkage in
+clustering
+complete linkage clustering it finds the
+maximum distance between points
+belonging to two different clusters
+single linkage clustering it finds the
+minimum possible distance between points
+belonging to two different clusters
+mean linkage clustering it finds all
+possible pairwise distances for points
+belonging to two different clusters and
+then calculates the average
+centroid linkage clustering it finds the
+centroid of each cluster and calculates
+the distance between them
+what is dendrogram
+it is a tree diagram frequently used to
+illustrate the arrangement of the
+clusters produced by hierarchical
+clustering
+it shows the hierarchical relationship
+between objects it is most commonly
+created as an output of hierarchical
+clustering the main use of a dendrogram
+is to work out the best way to allocate
+objects to clusters
+the dendrogram also shows the
+hierarchical clustering of five
+observations and the relationship
+between each of them
+hierarchical clustering example
+let's understand hierarchical clustering
+through an example in the given example
+hierarchical clustering is used to find
+the distances between the different
+cities in kilometers
+the following matrix traces a
+hierarchical clustering of distances in
+miles between different cities the
+method of clustering is single link
+here as you can see from the given
+distance matrix the nearest pair of
+objects is t o and mi
+mi and tio are merged into a single
+cluster called mito as mi column has
+lower values than to column
+mito consists of mi column values
+mito column has one index with zero
+value this is because there is no
+distance between cluster m i t o and m i
+t o
+to get a new distance matrix we compute
+the distance from this new cluster to
+all other clusters
+now the nearest pair of objects is n a
+and rm these are combined into a single
+cluster called narm to get a new
+distance matrix we compute the distance
+from this new cluster to all other
+clusters in the similar way the nearest
+pair of objects is ba and narm these are
+combined into a single cluster called ba
+n a rm
+to get a new distance matrix we compute
+the distance from the new cluster to all
+other clusters
+similarly now the nearest pair of
+objects is ba narm and fi these combined
+into a single cluster called
+b-a-n-a-r-m-f-i
+to get a new distance matrix we compute
+the distance from this new cluster to
+all other clusters
+finally we merge the last two clusters
+this process is summarized by the
+clustering diagram on the right and the
+final distance matrix on the left
+demo clustering animals problem scenario
+consider the data set zoo dot data and
+look at the information provided in the
+first five rows
+the first column denotes the animal name
+and the last one specifies the high
+level class for the corresponding animal
+you are supposed to find a solution to
+the following questions
+one identify the unique number of high
+level classes
+two perform agglomerative clustering
+using the sixteen intermediate features
+three compute the mean squared error by
+comparing the actual high level class
+and the predicted high level class in a
+nutshell you just have to perform
+agglomerative clustering with the
+appropriate mse value
+let's import the required libraries and
+the data set
+since we have now loaded the data set we
+will extract some basic information from
+it as our first step with the info
+command it is clear that the data set
+has 18 columns in total and 101 entries
+also there are no null values let us now
+proceed towards the first question which
+is extracting the unique number of
+high-level classes
+most probably the unique function from
+numpy will help
+we can plot the unique number of labels
+obtained using the matte plot lib
+library
+create a figure and a set of subplots
+from the plot it can be seen that we
+have seven unique class labels now since
+we are about to group animals based on
+their features it's clear and quite
+predictive that clustering should be
+performed
+let's now extract the features leaving
+the labels column and store them in
+another data frame say features
+import the necessary modules for
+performing clustering
+specify the number of clusters as seven
+note that here we are specifying the
+total number of clusters as seven
+because there are seven unique class
+labels
+also specify the linkage method as
+average and the similarity method as
+cosine
+fit the agglomerative clustering model
+over the feature variable defined
+earlier
+let us extract the labels predicted by
+our model against the features
+we can see that we have predicted labels
+against all of our 101 animals although
+we have seven labels but it is numbered
+as six so in this case we can subtract
+one from our original label column such
+that it matches the predicted numbers
+now let us move ahead and predict the
+accuracy of our model considering the
+predicting parameter as mean squared
+error
+now evaluate the absolute error by
+applying square root operation on the
+mean squared error
+print the resultant error
+the root mean squared error we got is
+2.43 approximately which is quite
+acceptable
+now that we have clustered the animals
+let's quickly recap the steps we have
+covered
+import libraries in the data set check
+for missing values identify unique
+labels and plot them extract features
+necessary for clustering within a single
+variable
+fit agglomerative clustering model on
+the feature data
+predict labels for each animal print the
+rmse of the model k means clustering
+let's look at the steps involved in
+k-means clustering
+k-means is an iterative clustering
+algorithm whose goal is to find local
+maxima in each iteration
+this algorithm works in these four steps
+specify the desired number of clusters k
+randomly assign each data point to a
+cluster
+compute cluster centroids
+reassign each point to the closest
+cluster centroid and recompute cluster
+centroids in order to check if the
+convergence criterion is met
+consider the dots given in the diagram
+as the data points
+first k-means randomly chooses k
+examples data points from the data set
+the three colored points as initial
+centroids this is because it does not
+know yet where the center of each
+cluster is a centroid is the center of a
+cluster
+assign data points to the nearest
+centroid then all the data points that
+are the nearest to a centroid will
+create a cluster as you can see there
+are three centroids as red blue and
+purple and all the data points of the
+same color is one cluster so in total we
+have three clusters now
+now we have new clusters that need
+centers
+a centroid's new value is going to be
+the mean of all the examples in a
+cluster
+centers are moving because a centroid
+will have the value of the mean of all
+the data points in a cluster
+we'll keep repeating steps 2 and 3 until
+the k-means algorithm is converged that
+is until the centroids stop moving
+optimal number of clusters determining
+the optimal number of clusters in a data
+set is a fundamental issue in
+partitioning clustering such as k-means
+clustering
+this requires the user to specify the
+number of clusters k to be generated
+if you plot k against sse you will see
+that the error decreases as k increases
+this is because their size decreases and
+hence distortion is also smaller
+the basic idea behind partitioning
+methods such as k means clustering is to
+define clusters such that the total
+within cluster sum of square wss or the
+total intra cluster variation is
+minimized
+the elbow method looks at the total wss
+as a function of the number of clusters
+one should choose a number of clusters
+so that adding another cluster doesn't
+significantly improve the total wss
+it works in the following way
+compute clustering algorithm for
+different values of k
+for instance by varying k from 1 to 20
+clusters calculate the total within
+cluster sum of square wss for each k
+value according to the number of
+clusters k plot the curve of wss the
+location of bend in the plot is
+generally considered as an indicator of
+the appropriate number of clusters
+demo cluster-based incentivization
+problem scenario lithium power is the
+largest producer of electric vehicle
+e-vehicle batteries they provide
+batteries on rent to e-vehicle drivers
+drivers rent a battery typically for a
+day and thereafter replacing it with a
+charged battery from the company lithian
+power has a variable pricing model based
+on the driver's driving history
+battery life depends on factors such as
+over speeding distance driven per day
+etc
+you are supposed to create a cluster
+model where drivers can be grouped
+together based on the driving data and
+to group the data points so that drivers
+will be incentivized based on the
+cluster
+let's import the libraries numpy and
+pandas
+import visualization libraries namely
+matplotlib and seaborne
+import the warning module the warning
+module was introduced in pep230 as a way
+to warn programmers about changes in
+language or library features in
+anticipation of backwards incompatible
+changes coming with python 3.0
+import met plot lib library for
+visualization and an instance of rc
+params for handling default met plot lib
+values
+please note for the sake of simplicity
+we will take only two features
+mean distance driven per day and the
+mean percentage of times a driver drove
+higher than 5 miles per hour over the
+speed limit
+let us go through each of the columns
+first and understand them
+the id column represents the unique id
+of the driver the mean underscore dist
+underscore day column represents the
+mean distance driven by driver per day
+and the mean underscore over underscore
+speed
+underscore purse represents the mean
+percentage of the times a driver drove
+higher than 5 miles per hour over the
+speed limit
+let's start with using pandas to read
+driverdata.csv as a data frame called df
+we will now use the info command to
+check the number of columns in total and
+entries also this will let us know if we
+have any missing values in addition to
+it we will use the describe function
+here to check the count mean and median
+values for each column now we will
+import k means from sklearn dot cluster
+and run the algorithm with k equals 2
+which is the minimum number of clusters
+that can exist in a data set
+also let us create an instance of the
+k-means model with two clusters such
+that it becomes easier to call the same
+later
+please note that we have dropped the id
+column as it doesn't have any reference
+in forming clusters let's now fit the
+model to the data
+the algorithm is now fitted on our data
+and you can claim that it has created
+the clusters let us now use some
+commands to get some information on
+these clusters
+we will use the command cluster centers
+from k means to determine the cluster
+center vectors
+use the labels underscore command along
+with print to display the labels also we
+can go for the length of those labels
+now let us check how many unique drivers
+are there in the first and second
+cluster
+we will set the theme as white grid as
+it is better suited to plots with heavy
+data elements
+plot the clusters using the lm plot
+function from the seaborne library such
+that we have mean underscore dist
+underscored day feature on x-axis and
+mean underscore over underscore speed
+purse on y-axis
+we can clearly see from the graph
+plotted that there are two clusters one
+centered around 50 mean distance delay
+and the other around 175
+also we can see that there are more
+drivers in the cluster with the delay
+centered at 175.
+since k means clustering gives optimum
+results when iterated multiple times
+let's try out the same with increasing
+the number of clusters say four
+print the cluster centers with four
+clusters and track the four unique
+labels along with their frequency of
+occurrence
+zip the unique number of cluster and
+their frequency counts within a
+dictionary
+we can clearly see the difference now in
+cluster centers also here we have a
+distribution of data points in each
+cluster let's now plot the same
+such that we have mean underscore dist
+underscored day feature on x-axis
+and mean underscore over underscore
+speed purse on the y-axis
+from the four cluster plot we can see
+that it's denser compared to the two
+cluster plot and hence more optimal
+now that we have clustered the data with
+the k means let's quickly recap the
+steps we've covered
+import libraries and the data set fit
+the k-means model on the data set
+evaluate cluster centers into labels
+plot the clusters to see the
+distribution of data points
+iterate the same by changing the number
+of clusters to four
+again evaluate the cluster centers plot
+the clusters to see the distribution of
+data points
+draw inference out of both plots this
+brings us to the end of unsupervised
+learning you are now able to explain the
+mechanism of unsupervised learning use
+different clustering techniques in
+python
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

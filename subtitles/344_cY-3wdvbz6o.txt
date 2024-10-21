@@ -1,0 +1,371 @@
+today I'll walk you through the software
+development lifecycle first we'll review
+most common phases and then I will share
+several critical concepts that you must
+know about sdlc so software development
+lifecycle or as DLC is just a sequence
+of project phases that you need to gear
+free to create a software application
+yes there are common phases that we use
+to describe the process of software
+development however you can use
+different names for the phases as well
+don't focus too much on the names the
+work and its nature are of importance
+here usually a software development
+project starts with the pre-sales phase
+it's not actually a project management
+phase but it's important phase for you
+as a project manager because lots of
+initial agreements are made during this
+phase and you want to control them just
+keep in mind that before the actual
+project management phase start there is
+a whole process of finding clients and
+selling them your services in large
+enterprise companies the process isn't
+that far from the client vendor
+relationships it's just an internal
+process of selecting which projects to
+invest money after the contract is
+signed you get into the initiation phase
+here you need to identify what's the
+goal of a project and its access
+criteria even if you're under times in
+materials contract it's vital to get
+through this phase therefore you need to
+create a project charter Oh at least you
+need to define the key information that
+it has I have an in-depth video on the
+project chart and I strongly recommend
+you reviewing it next I'll leave you a
+link in the description second important
+step is to identify key stakeholders why
+you'll need a lot of input on many
+aspects of software development user
+interface user experience technical
+information hardware specifics
+development environment software
+architecture and so on again don't
+expect to get all these details from
+your clients and customers you will need
+to include internal expertise including
+stakeholders outside of your team well
+the result of this phase is usually
+assigned project charter once you have
+an understanding of the project and its
+goals you can continue to the next phase
+concept development phase there are many
+different ways to develop a software
+application I prefer to follow the
+design first approach so how does it
+work first of all you need to develop a
+conceptual design and wireframes for the
+future application it shouldn't be fully
+detailed but it should provide a
+framework for future requirements
+definition activities on the other hand
+it gives tangible results to your
+stakeholders they'll be more engaged in
+the whole project when a difficult
+process of software development is
+simplified to images of the future
+product another aspect of concept
+development is technical sometimes the
+required product is totally unique with
+his requirements that don't have
+existing examples and no available
+solution will provide the desired
+outcome so you need to develop a brand
+new technological concept you'll need to
+curate the top subject matter experts in
+your field to generate ideas and
+solutions at least at the high level for
+really big software development projects
+you can break this phase into several
+additional phases like actual concept
+development prototyping and feasibility
+phase therefore most of the times it's a
+gateway phase if you do have an
+acceptable solution you will continue
+the project if the solution requires
+resources and time beyond constraints
+you may need to cancel the project many
+projects die at this gate the most
+common tangible is also these phase are
+a decision to proceed a prototype or a
+selected approach to implement the
+project next comes the requirements
+definition phase so after you plan how
+to manage the project you need to find
+out what you need to develop in this
+phase you can use all the available
+options to define requirements like
+brainstorming interviews focus groups
+questionnaires and surveys document
+analysis mind mapping wireframes user
+stories and
+many other cool things there is no one
+specific approach that fits all possible
+cases of collecting requirements in the
+end unit requirements that software
+engineers understand however sometimes a
+simple tweak in the requirements can
+cause a significant change in the
+required efforts so you do want to keep
+an eye on on such opportunities to
+simplify the future product so after
+that you may want to incorporate
+high-level feasibility analysis here
+again and there is also the requirements
+phase are written specifications use the
+stories or any other type of
+requirements documentation once you have
+requirements you'll move into the design
+phase again there are at least two
+aspects here technical architecture and
+UI UX design if you didn't follow the
+design first approach you do it here
+otherwise you finalize your designs in
+these fates so during this phase you
+need to analyze the collected
+requirements after that develop an
+architecture that will support them also
+you need user interface that will make
+the application or service usable the
+results of this phase are mock-ups
+wireframes workflow diagrams
+architectural description documentation
+list of technologies frameworks and
+libraries with all requirements
+collected we can start the planning
+phase in large IT projects you will need
+to create a full project management plan
+so if you face such a task I recommend
+you to review my in-depth article on
+project planning I will leave you a link
+in the description however in the
+beginning you work on smaller projects
+and planning will be simple here so
+here's the truth for you many software
+development companies develop a custom
+project management approach it's
+naturally formed in the process of
+company growth so you'll need to follow
+either and utterly customized approach
+or a variation of scrum or Kanban in
+this case project planning boils down to
+identifying project scope estimation of
+time and cost and setting milestones and
+sometimes you'll need to identify
+required resources and X
+tee's all other aspects of project
+management will be predefined by the
+customs of this organization therefore
+at the end of this phase you either have
+a project management plan or just come
+into delivering specific score by
+specific deadlines well the rest is
+internal problem well your problem
+alright when you have the plane you can
+start writing actual code and test cases
+that's where we get into the development
+phase or implementation phase
+so in these phase you'll get into the
+day-to-day execution or the project plan
+so 21 opus will set up the working
+environment and will start writing the
+code so you'll do the actual work of a
+project manager here by organizing
+people to do the work under the selected
+framework for the sake of the better
+quality and engage stakeholders you can
+do it in iterative and incremental
+manner most of IT projects use scrum
+scaled agile framework or Kanban so what
+does it mean for you if you are notice
+of - a development project manager you
+develop a working piece of the
+application you'll show it to your
+stakeholders and after that your
+stakeholders will provide feedback
+you'll integrate the changes to the
+project scope and the cycle repeats
+until you get the desired application
+yeah it's different from construction
+projects in software development we do
+changes to the product in the process of
+development quite a lot however there is
+a catch such an approach doesn't exempt
+you from delivering the project on time
+and within budget
+your clients will have higher deadlines
+and constraints you need to meet them
+optionally next you may have an
+integration phase because nowadays you
+will really see an application that
+doesn't integrate with other services or
+applications in the enterprise
+environment you'll often see that in
+please data and credentials are stored
+in separate service you may need to
+integrate with it to get access to the
+databases of employees the storage space
+is often outsourced to one of the third
+party providers like Amazon
+the robots Microsoft and so on so you
+need to integrate with them as well you
+know you need to integrate your piece of
+software with the business processes of
+the company or a market in which you
+will sell your application this phase
+usually requires a lot of collaboration
+and it can be time-consuming so you
+better plan this one ahead of time do
+pay close attention to the possible
+risks and integration requirements of
+other services well quite often the
+integration is a part of development
+however if there are a lot of efforts
+involved it's better to get it done in a
+separate phase all right once you have
+the application ready you'll move into
+the testing phase you can call this
+phase as acceptance testing or the final
+testing you need to understand that you
+should be testing your application
+continuously from the beginning moreover
+you need to prevent defects in the
+process of development rather than
+fixing them ideally your application
+should be stable and without serious
+defects all the time so it's a matter of
+quality assurance that you planned and
+executed in all previous phases in this
+phase you need to certify that the
+version of application you are testing
+is of the required quality it doesn't
+mean that the application has no defects
+at all they are present but they do not
+prevent people from using the
+application and what's more important
+your clients agree to this statement so
+you do need to provide the list of all
+known defects in the application as part
+of quality certificate it's the main
+result of these phase after that we'll
+have a deployment phase the software
+doesn't work without hardware build at a
+server a PC or Mac or a mobile device
+you need to deliver your application or
+service there moreover the deployment of
+a big and complex application can be a
+project in itself you need to set up
+servers upload the application connected
+with all other services and servers and
+sometimes you need to migrate or update
+the existing data in regards to mobile
+devices and desktops
+you need to create an installer for the
+applique
+you may also need to submit the
+application package to the market like
+App Store or Google Play
+all you know the result of this phase is
+your application or service available to
+the end-users by the way if you find it
+her to understand all these concepts of
+development do check my article on the
+technical skills and IT project manager
+needs I'll leave you a link in the
+description ok after that the project
+doesn't end and it moves into the hyper
+care phase this phase takes place for a
+few weeks or months after an application
+hits the market large amounts of users
+start using the app and they do find the
+facts that you missed so your team will
+be on the standby to fix any critical
+defects next we'll have handoff closure
+or support phases the handoff process
+can also require a lot of efforts first
+you need to collect all the generated
+knowledge about the application and its
+specifics and then you need to transfer
+this knowledge to the support team also
+you may need to create some
+documentation and implement specific
+capabilities to administrate their
+service and so on so if this is the case
+you do need to identify such
+requirements early on and I always
+recommend that you think about handoff
+process at the beginning of the project
+ok here's what I want you to understand
+any application is maintained and
+supported throughout its whole lifetime
+it's a part of the product life cycle
+that goes beyond the project lifecycle
+so usually project team hands off the
+application to a small support team for
+ongoing maintenance hey by the way the
+sponsor this video is my free career
+change cheat sheet it's challenging and
+overwhelming to get your first project
+management role in a tea industry this
+cheat sheet gives you an action plan to
+get promotion to a p.m. in the nearest
+future if you want to become an IT
+project manager you need to get a copy
+of this cheat sheet link is in the
+description ok that's not all there are
+several crucial aspects of software
+developer
+life cycle that I want you to remember
+after this video first of all sdlc is
+not a waterfall model waterfall in
+project management describes actual
+approach of how to sequence and work
+through phases software development life
+cycle is just a set of these phases and
+the work you need to perform in them to
+create a software application so as DLC
+describe different in nature work that
+needs to be done you can shape an order
+this work in many different ways and
+Waterfall describes just one of the
+possible approaches to do it second
+phases who face DLC can overlap and go
+in parallel is I just told you
+Waterfall describes how to sequence the
+phases and in waterfall they go one
+after another in a different time driven
+project management approach phases can
+overlap this leads us to the point
+number three so what happens in agile
+frameworks even if you use some agile
+approach the SDLC stays in place you
+simply organize the work in a different
+fashion you take some phases and break
+them down into smaller pieces then you
+group these pieces from different phases
+and work on them in iterations rather
+than as a one big face so don't mystify
+it next what is an agile project
+management agile project management is
+just an approach in which some phases of
+a project are done using scrum or Kanban
+it usually means that you perform
+execution phases in an agile way if you
+want to become a project manager do
+check the link in the description and
+get your copy of the career change teach
+it and do review other useful resources
+if you are new here subscribe to this
+channel there will be more videos on
+project management and leadership now
+it's your time to talk
+do you work under scrum or Kanban right
+now
+leave me a comment below this video
+thanks for watching see you next time

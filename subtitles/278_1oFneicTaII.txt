@@ -1,0 +1,371 @@
+hello everyone
+and welcome to this session on modules
+in python
+today we are going to discuss this topic
+which is very important topic in python
+which helps you in reusability of code
+and you don't need to rewrite the code
+again and again
+so we will see what are the nitty
+gritties in writing modules in python
+now what's in it for us today
+we are going to discuss what are python
+modules
+why do we need to use them what are the
+different types of python modules
+and how differently in different ways we
+can import these modules in our code
+now a python module is nothing but a
+simple python file with dot py extension
+including the statements and the
+definitions
+so basically you need to prepare a
+module file with all the functions which
+you want to import into your
+regular python code across all the
+modules
+now it contains codes that you can reuse
+in several programs so it's like saying
+you write once a piece of code like
+common utility methods calculation
+methods rounding off addition
+subtractions or some common business
+rules which can be reused across your
+project then you keep it at one place
+now this helps in
+such a scenario where you have a large
+team different set of developers are
+working on different different modules
+different specifications but one single
+utility module file dot py file will
+contains all the common and reusable
+functions which not each and every
+individual developer can will go and
+change it's only few set of
+administrators or the senior developers
+can maintain and pass it on to the team
+now
+for example a file containing python
+code demo dot py
+is will be called as a module and its
+module name would be demo
+so you need to take care that whatever
+the name of the file is that is what
+will get imported in your
+python code so we will see that with
+their certain examples on our jupyter
+notebook
+now why do we need to use as i have
+reiterated it provides flexibility to
+organize the code in a logical way
+and it enables reusability which is the
+most important factor so one of course
+you can organize the code you keep the
+reusable code at one place or you can
+keep a modular approach and also
+reusable so no not all the developers
+have to go and rewrite that code and it
+is easy to maintain
+and helps in debugging the code easily
+so if you know that there is an error
+coming there is an issue coming uh in
+one of the modules which is imported or
+which is the grind lying in the common
+file then it becomes easy to debug you
+just have to go and check that
+particular function you don't need to go
+and check in each and every piece of
+code
+now there are two types of python
+modules definitely there are built-in
+modules which python library provides
+which you don't need to import
+explicitly
+but there are certain user defined
+modules which you create on yourself for
+your own custom development for your own
+custom programming
+so built-in modules are predefined
+modules and are part of this python
+standard library for example random date
+time sys so we will take a look at these
+examples also
+and of course the user defined modules
+which is the primary objective of this
+session where we're going to show you
+how do you create your own defined
+modules and then import them
+so the user creates the user-defined
+modules to ease complex tasks in a
+project so you program the complex piece
+of the code in a common module and give
+it to everyone
+you can define your own functions and
+classes
+now what are the different ways there
+are
+five different ways you can import
+modules so you can just say import
+module name and all the
+uh classes and functions within that
+module will get imported
+you can give an alias so basically
+giving an alias makes it simple
+and you can refer that alias throughout
+your code
+then
+if you want to import anything specific
+from the entire module you don't want to
+import
+all the functions and classes then you
+can just import the specific functions
+and classes and give their name then
+fourth is from module you want to import
+any address as an alias you can import
+and give an alias to the specific
+function name or the class name
+and then of course similar to the first
+syntax you can module all everything so
+first and the last syntax are almost
+having the same meaning to module to
+import everything in your module okay so
+with this background uh
+let's first
+take a look at the
+python file so we have what we have done
+is we have created a
+module calculations dot py so just
+please
+focus on the part where
+the name of the file is calculations
+and in this
+python file dot py file we have created
+a couple of functions uh and the
+relevant logic related to those
+functions
+so very simple functions like addition
+add you pass two variables and you send
+the result
+add the variables and send it back
+basically we are overriding uh the
+python internal operator add in our
+python module and we will be invoking
+this one so we'll show you how to invoke
+then you will have i have written
+multiplication
+division
+remainder so you do you pass two
+variables divide them and find the
+remainder
+then now a custom function where i am
+adding 10 to both the variables which
+are being passed to this function and
+returning the result
+then there is a function which checks
+whether the number is a prime and if it
+is not a prime number you will get this
+output and if it is you will get a is a
+prime number
+okay
+and then another function which says
+check anagram
+so we will just sort the two strings
+which we will send and check uh both are
+equal or not if both are equal then the
+strings are anagrams otherwise they are
+not
+so these are the set of functions which
+you have written now we will see how
+will we use them in our code
+now first syntax which i am writing is
+import calculations so this is the name
+of my dot py file which is residing in
+the same folder where i am writing this
+piece of code
+and now
+if you see in my
+dot py i have a variable y whose value
+is six so i'm just
+using that value and running it and
+printing it i'm just gonna
+uh show you how explicitly i'm invoking
+the functions
+in the calculations class in the
+calculations dot p by five okay
+now
+let's invoke
+another function remainder passing 140
+and then i should get 20 as an
+output
+okay
+so this has gone back and executed this
+particular function
+now what i'm going to do is
+another example of my addition i'm
+saying calculations.add
+i'm going to initialize and pass two
+variables
+and my expected output is 35
+okay
+so it has gone and executed
+this function
+now i'm gonna show you another syntax of
+importing so from calculations i'm just
+importing the add function
+so i'll
+ask for user input to enter for one and
+two numbers and then i'm just going to
+add it
+two and five so i got my output is seven
+now
+the difference to be noted over here is
+that in the previous
+uh syntax i was making a call like
+calculations.add
+but now i don't need to make a
+calculations dot add syntax
+uh invocation i just need to say import
+add
+and i just need to use the add function
+that's all
+now
+let's use another
+syntax to import
+modules so i'm using import calculations
+as cal so all the modules are imported
+but the alias uses
+cal and
+similarly like the previous example i am
+going to take two inputs
+and print the sum
+now the difference in this syntax in
+this syntax is i'm using the alias cal
+dot add
+but my output should be same
+okay
+similarly i can call
+prime
+whether it's not a prime or prime number
+i can call the check anagram using the
+same alias
+and i can call the
+remainder function
+okay
+so i hope you have
+noticed that the difference
+in importing the way of importing the
+module makes a lot of difference right
+now let's take another example of
+importing some functions or variables
+so i'm gonna explicitly i'm importing my
+variable y and functions multi-prime and
+check anagram explicitly
+and
+i'm gonna print
+y
+okay
+and i'm gonna multiply
+two numbers
+so if you see i'm using these aliases
+over here
+okay i'm using these variables directly
+as i've already imported
+now i'm going to say prime9
+now it's printing none if you see it's
+because of the statements which are not
+executed right so that's why you are
+seeing
+now let's check anagram
+and now
+another thing to be noted is i'm trying
+to invoke a function remainder which i
+have not imported over here so let's see
+how what error python throws okay so
+yeah so python has throws an error that
+name remind remainder is not defined
+because i have not imported it over here
+so now
+in order to import reminder what i am
+now
+doing different is importing all the
+functions
+now if i use reminder
+it should run
+okay
+i am using divide
+okay cool
+now
+i am going to show you another function
+which is a utility function
+directory function
+which will show me
+all the functions
+variables as part of the
+python file add at 10 check anagram
+divide
+multi prime remainder y and of course
+these are some inbuilt packages
+uh which are already there in the python
+file as part of the python loader but
+these are the ones which i have created
+so you can actually see the list of all
+those
+functions in one go
+okay
+now i'm going to show you an example of
+inbuilt
+modules so this import math math is an
+inbuilt module of python
+and i'm gonna show you
+how you can see all the relevant
+functions within the math module all
+these are the math module
+functions which are available for you
+to use i'm going to show you one or two
+so like
+print math 2 to the power 8
+and you get the answer 256
+print math remainder so i'm not invoking
+my
+module function and invoking the math
+inbuilt
+library function remainder
+and the remainder is 0 40 divided by 2
+remainder is 0
+and square root of 81
+9
+then
+very important another very interesting
+utilities of date time which you can use
+and you can print today's date and time
+then another
+utility is random utility
+and
+i am going to create a list l1
+and
+write a piece of code
+which will choose a random element from
+this list
+and
+just print it
+okay so if first time it has chosen oppo
+again if i run it it will choose one
+plus if i again run it it might choose
+something else so it will randomly pick
+okay
+okay so with this we have seen that you
+can create your own utility functions
+import it write it in a piece of code
+dot py file import it in your code as an
+alias or all the modules and
+use them or you can use the python
+inbuilt
+uh modules right i hope you all guys had
+a great learning session and i look
+forward to connecting with you next time
+thank you
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos turn it up and get certified
+click here

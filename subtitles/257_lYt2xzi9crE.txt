@@ -1,0 +1,180 @@
+foreign
+introduction to cyber security
+Frameworks in today's digital age cyber
+security has become a top priority for
+individuals and organizations alike with
+the increasing number of cyber threats
+and attacks it is essential to have a
+comprehensive cyber security framework
+in place to protect sensitive
+information and data cyber security
+Frameworks provide a structured approach
+to managing and mitigating cyber risks
+by outlining best practices guidelines
+and standards in this article we will
+explore three of the most widely used
+cyber security Frameworks this cyber
+security framework ISO 270001
+information security management system
+and CIS controls for Effective cyber
+defense by understanding these
+Frameworks you can better protect
+yourself and your organization from
+cyber threats and ensure that your cyber
+security measures are up to par with
+industry standards
+2. this cyber security framework
+the nist cyber security framework is a
+set of guidelines and best practices
+designed to help organizations manage
+and reduce cyber security risks it was
+developed by the National Institute of
+Standards and Technology NISD in
+response to executive order
+13636 which call for the creation of a
+framework that would help critical
+infrastructure organizations improve
+their cyber security posture the
+framework consists of five core
+functions identify protect protect
+respond and recover each function is
+further broken down into categories and
+subcategories that provide more specific
+guidance on how to implement the
+framework
+the identify function focuses on
+understanding an organization's cyber
+security risks and vulnerabilities this
+includes identifying all assets systems
+and data that need to be protected as
+well as assessing the potential impact
+of a Cyber attack
+the protect function involves
+implementing safeguards to protect
+against cyber threats this includes
+measures such as access controls
+encryption and security awareness
+training for employees
+the detect function involves monitoring
+systems and networks for signs of a
+Cyber attack this includes implementing
+intrusion detection and prevention
+systems as well as conducting regular
+vulnerability scans and penetration
+testing
+the respond function involves developing
+and implementing a plan to respond to a
+Cyber attack this includes establishing
+an incident Response Team defining roles
+and responsibilities and developing
+procedures for containing and mitigating
+the effects of an attack
+finally recover function involves
+restoring normal operations after a
+Cyber attack this includes developing a
+business continuity plan conducting
+backups of critical data and ensuring
+that systems can be quickly restored in
+the event of an outage overall the nist
+cyber security framework provides a
+comprehensive approach to managing cyber
+security risks by following its
+guidelines and best practices
+organizations can better protect
+themselves against cyber threats and
+ensure the confidentiality integrity and
+availability of their sensitive data 3.
+ISO 27001 information security
+management system the iso 27001
+information security management system
+is a globally recognized framework that
+provides a systematic approach to
+managing sensitive information it
+outlines a set of best practices for
+establishing implementing maintaining
+and continually improving an
+organization's information security
+management system the frame work is
+designed to help organizations identify
+and manage risk to their information
+assets including confidential data
+intellectual property and customer
+information it also helps ensure
+compliance with legal Regulatory and
+contractual requirements related to
+information security
+ISO 27001 consists of several key
+components including risk assessment and
+treatment security controls and
+continuous Improvement the framework
+emphasizes the importance of a
+risk-based approach to information
+security which involves identifying
+potential threats and vulnerabilities
+assessing the likelihood and impact of
+those risks and implementing appropriate
+controls to mitigate them one of the
+strengths of iso 27001 is its
+flexibility the framework can be adapted
+to suit the specific needs of different
+organizations regardless of their size
+industry or location it can also be
+integrated with other management systems
+such as quality management or
+Environmental Management to create a
+comprehensive approach to organizational
+governance
+overall the iso 27001 information
+security management system is a valuable
+tool for organizations looking to
+establish a robust and effective
+information security program by
+following the framework's guidelines
+organizations can better protect their
+sensitive information reduce the risk of
+cyber attacks and demonstrate their
+commitment to security to stakeholders
+and customers alike
+4. CIS controls for Effective cyber
+defense the center for Internet Security
+Cas controls is a set of best practices
+designed to help organizations protect
+their systems and data from cyber
+threats the controls are organized into
+three categories basic foundational and
+organizational
+the basic controls include measures such
+as inventory and control of Hardware
+assets inventory and control of software
+assets continuous vulnerability
+management and controlled use of
+administrative privileges these controls
+are considered essential for any
+organization that wants to establish a
+strong cyber security posture
+the foundational controls build upon the
+basic controls and include measures such
+as email and web browser protections
+malware defenses data recovery
+capabilities and secure configurations
+for network devices these controls are
+designed to provide additional layers of
+protection against common cyber threats
+finally organizational controls focus on
+the policies procedures and training
+necessary to maintain an effective cyber
+security program these controls include
+measures such as security awareness
+training incident response planning and
+penetration testing by implementing the
+sys controls organizations can establish
+a comprehensive cyber security program
+that addresses both Technical and
+organizational aspects of security the
+controls are regularly updated based on
+new threats and vulnerabilities ensuring
+that organizations stay up to date with
+the latest best practices in cyber
+security
+foreign
+[Music]

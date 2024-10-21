@@ -1,0 +1,28 @@
+so let's imagine that you wanted to
+start with data analysis with python and
+let's also imagine that you're very good
+with the you know basics of python so
+the very first test that would be given
+to you is to create your own data frame
+with it let's see how to do
+that so we start by importing pandas in
+our case so import pandas as we can take
+PD the data is in the form of a
+dictionary which has a key which is
+nothing but the column's name followed
+by a list of values that is supposed to
+be the values for that column and H we
+have like more columns the same way I've
+given four columns over here now how do
+I convert this dictionary in form of a
+data frame so we use uh make a variable
+DF use pandas and that's why we have
+imported it followed by data frame and
+in the brackets we pass the data which
+is our information and that I wanted to
+convert it so now I call DF to run so
+like let's run all the cells here the
+first cell second third so we can see
+now it in it's in the form of table
+right so good luck and check out the
+channel for more things

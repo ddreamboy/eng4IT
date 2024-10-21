@@ -1,0 +1,151 @@
+yeah i would just suggest the it
+fundamentals that's what you should
+learn all right so if you're an
+individual who wants to get started in
+the it or cyber security industry and
+you're wondering where should i start or
+what should i learn before in today's
+video topic i will be addressing my
+personal opinion on what you should
+learn why you should learn what you
+should learn and where you should learn
+[Music]
+alright so by now you should know it's
+the ic fundamentals that's what i think
+you should learn you can go ahead and
+click off this video but if you want a
+little bit more detail you can continue
+on what exactly are the it fundamentals
+well in my opinion they outline a few
+different surrounding categories
+including hardware which are the
+physical parts of a computer and
+computing devices you have the software
+which is a suite of tools and data which
+you know tell the computer how to work
+including operating systems software
+applications and more so think about
+like a windows 10 or linux then you have
+networking which is the exchange and
+transportation of data between computing
+devices so understanding how that works
+applications which is computer software
+or programs used to carry out specific
+tasks you know such as word processing
+or editing or email clients and then you
+have the security basics my favorite
+right understanding the added elements
+on top of the listed uh elements or
+categories that i just
+outlined now i personally believe if you
+started from the very beginning you're
+going to set yourself up for a better
+success and i'll tell you that reason in
+a moment now while learning the it
+fundamentals it's important to keep in
+mind some essential concepts and skills
+required within the it industry and this
+includes skills such as configuring and
+troubleshooting
+[Music]
+just like anything that you learn in
+school you gotta first understand the
+basics of course you could just throw
+yourself deep into the woods and have no
+idea what's going on and maybe yes you
+could complete the problem but let's
+just say you want to complete some
+complex math equation well you have to
+know the basics of the symbols
+subtraction addition such as this nice
+complex math equation i think you
+i don't know how to do this
+you know those or if you want to get a
+little spicy and you want to mix some
+elements together you got to know the
+periodic table i think i don't really
+know i'm not a chemistry major well the
+same goes for it in my opinion you get
+the point now sure you could provision a
+kali linux vm and you could use john
+ripper and start cracking those facebook
+passwords don't actually do that or you
+know you can throw yourself deep into
+the woods of a project and sometimes
+that method works but the question
+becomes if you have no technological or
+any i.t skills background how do you
+know you know what to secure in the
+context of cyber security if you don't
+even know how the technology tool
+principle concept works right if you
+can't understand what a layer 2 switch
+does from you know a high level overview
+how do you know you're going to need to
+apply port security you know in the
+context of a layer 2 switch well you
+won't know because you don't know how a
+layer 2 switch works in the high level
+and that's why i suggest the it
+fundamentals it's great way to get the
+basics down you can build those
+foundational skills and then you can
+throw yourself into the woods of you
+know kali linux if you want to
+[Music]
+there are hundreds of resources out
+there both free and affordable alright
+one moment of self promo you can skip to
+this time stamp if you don't care about
+this but there are free courses i have
+out there one is on udemy it's a
+complete introduction to cyber security
+right so this is going to be a very high
+level overview of cyber security in i.t
+and we address some of the very basics
+such as
+hardware and networking devices so why
+not just give away the course for free
+if you're watching this in the next
+three days of this upload you can go
+sign up for it
+for free but i do also have another
+course it's more of a very much so
+practical hands-on course that i had
+released last year and i added some a
+few updates to it this is a great course
+to get started and now enough for the
+cell promo all right so some platforms
+include free code cam they have a plenty
+of crash courses out there udemy has
+plenty of basic it courses you have
+plenty of youtube crash courses i'll
+leave some that i think are noteworthy
+including ones that are released from
+google itself which is a great way to
+start a humble bundle which is a book
+provider in the form of ebooks that you
+can see and find if there are any
+bundles out there one more thing to note
+and that is three is a great place to
+start with my beginners course it's a
+lot of theory not so much practical or
+hands-on you gotta get started with
+understanding the concepts
+but
+one thing to note is to have a hands-on
+practical approach once you've maybe
+started some of those basics i have a
+resources page with a complete list of
+projects you can just check out it's all
+free you don't have to worry about
+paying
+and you can just look at the different
+resources project ideas and how to go
+about solving those projects on that
+website this video has been short i hope
+it's been useful and helpful i did this
+video a few years ago and i thought i
+would go ahead and provide an update for
+2021 so i hope everything is well and
+until the next video have a good day

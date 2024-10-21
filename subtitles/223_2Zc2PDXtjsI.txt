@@ -1,0 +1,105 @@
+I'm Joel Young and I'm the CTO here at
+digi international at digi security is
+at the forefront of everything we do yet
+we see that in planning an IOT strategy
+it oftentimes isn't as well thought
+through as it should be I often hear
+questions like I want to know if the
+cloud is secure or how can i deploy
+applications in our data center but
+rarely does someone ask me to prove that
+a specific device is secure and it's a
+question that should be asked more often
+HP security research did an evaluation
+and found that 70% of what we call IOT
+devices are vulnerable to an attack
+today I want to cover five steps to help
+ensure a more secure Internet of Things
+approach through stronger device
+security the first one will call secure
+boot that means that only authorized
+firmware can be put on your machine so
+in essence you no matter who's updating
+your firmware no one can add a few lines
+of code here and there or install some
+malware because if it isn't authorized
+it's not making it onto that machine now
+let's take a look at authentication how
+many devices do you think are shipped
+with default password authentication or
+no authentication at all passwords are
+passe especially for machines strong
+certificate based authentication is the
+best way to secure access to a device
+you only have to look to the recent
+mirai ddos attack which took out
+companies like amazon spotify and
+twitter all because there is no
+authentication on home routers and
+set-top boxes often overlooked are
+protected ports this is physical
+security sometimes they're called JTAG
+ports essentially there are other ways
+of actually going in and physically
+debugging the system and since you have
+to physically have access to the device
+most people don't worry about it what do
+we know about the world of Internet
+well what we know is that machines are
+placed in places where people often art
+or people that care aren't right if I
+showed up in a maintenance suit and told
+you I was just doing some repairs you
+might not think anything of it but
+unless those debugging ports are
+protected you've just opened yourself up
+to being hat now let's talk storage many
+of us know that if we're storing data on
+a large enterprise system the data is
+secure but what about the flash storage
+on your embedded device it turns out
+embedded systems typically have
+something called flash storage and they
+might hold some information from time to
+time that's not immediately secured or
+encrypted and that can open you up to a
+security breach leaving all that
+information at risk last but not least
+there's secure connections secure
+connections have two components one of
+those components is actually encrypting
+the over-the-air data and the other is
+appropriate key exchange appropriate key
+exchange must include authentication and
+authorization upfront to set up that
+encrypted connection why are they both
+important because if you don't do the
+first part right then the keys are open
+and anybody can unencrypted and if
+you're not encrypting then someone could
+easily take a peek at your data but not
+all data is created equal right does
+anyone really care about your
+temperature sensor data well it turns
+out that things like IP addresses and
+port identification may also get sent
+and if you're not securing that whole
+communication pipe it leaves it open for
+an attack
+so what's included with digi trust fence
+secure booth that's the secure firmware
+authentication covers proper
+identification no default passwords
+protected ports those debug ports
+require authentication so that they're
+not open secure storage
+in other words encrypted storage even in
+an embedded device secure connections
+make sure that you have secured
+connections encrypted authorized and
+authenticated so when you think in terms
+of IOT security remember those five key
+areas and then look to digi trust vents
+to give you the security tools you need
+so that you don't have to worry and you
+can sleep well at night

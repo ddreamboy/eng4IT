@@ -1,0 +1,367 @@
+hi everyone I'm Jamie you and today's
+talk is going to be about speech
+recognition so I just want to introduce
+the history of speech recognition
+exactly how it works and why this is
+relevant to us today so just a simple
+definition of speech recognition as you
+see on the image it's a three-step
+process speech speech recognition and
+then speech transcription or simply
+known as speech to text and then our
+story starts in the 50s
+specifically in 1952 in Bell Labs they a
+pioneered speech recognition and a
+software called Audrey and Audrey is
+short for automatic digit recognizer and
+as you can see it's the same three steps
+as before where the human is outputting
+speech the software machine is
+recognizing speech to that microphone
+and through the actual software itself
+and it's transcribing that speech on
+that monitor to the right where you see
+that number two and Audrey is short for
+automatic digit recognizer because it
+recognizes ten digits and you can
+probably guess the digits a one zero to
+nine and we go to the 60s where in 1962
+IBM made its own software that could
+recognize speech called shoebox and it
+was a minor improvement so instead of
+recognizing only 10 words it could
+recognize 16 so 10 digits on top of 6
+command words such as plus minus
+multiply so we could also do
+mathematical functions so if you were to
+say in 1962 and you had a shoebox in
+front of you you could say 1 plus 1 and
+it would output 2 so how these
+technologies work back then was it has a
+speech unit and then these speech units
+are split up into tiny phonetic units so
+for example the word full-stack we could
+split that up into its tiny phonetic
+units that the computer would parse and
+input
+act together to be able to recognize
+that word so for example whole stack
+would be something like four step cook
+that's the very I butchered it but
+something like that and then put it back
+together to understand it and then we
+have the 70s and actually a lot of
+improvements came in the 70s at the
+Department of Defense and the US
+government really poured a lot of money
+into speech recognition and they built
+upon the pre-existing systems to build a
+more robust brute search force algorithm
+so it's basically the same system as we
+saw before with the phonetic units
+except these phonetic units are mapped
+with a node system and in during the 70s
+the size of this node map was about 15
+thousand nodes was the largest that they
+could get up get it up to you at that
+time and that enabled speech recognition
+to go recognize 16 words to a thousand
+words and it's basically just when you
+utter speech it just kind of maps it
+along the node map until it recognizes
+it and then it spits that back out and
+transcribes
+your speech and more improvements came
+in the 70s with the hidden Markov model
+so this algorithm really gave a huge
+boost to speech recognition and it's
+basically just complex mathematical
+system algorithm that uses probability
+and this hidden Markov model was the
+basis of speech recognition for from the
+1970s to the 2000s and how it works is
+basically you're given a word and it's a
+chain and then each if you notice this
+chain each node is yeah the phonetic
+units that the the word is made up of
+and then the nodes are connected by a
+link and this link is called a phenome
+and the numbers assigned to these
+phenome they're the probability that the
+algorithm spits out based on its
+mathematical algorithm
+probability and all that that they
+compute as well as the built-in
+dictionary that hidden Markov model used
+and using these numbers based on what
+they call see gnomes they use this to
+yeah improve speech recognition so what
+this does in the end in practical terms
+is that it accounted for differences in
+accents as well as different Cadence's
+so in the example of potato this speech
+a software system using this hidden
+Markov model would be able to recognize
+both potato and potato unfortunately
+though even with this advancement you
+still have to speak very unnaturally
+speak using pauses between words and
+this is called discrete speech so you
+can't speak naturally like like humans
+would and a continuous flow but you'd
+have to pause between each word and then
+we have the ATS and this is the first
+time that we have speech to text on a
+computer and just a company called
+cursor all technologies made by Ray
+Kurzweil on left just pioneered this the
+first commercial large vocabulary speech
+recognition software in the 80s and then
+the 90s there are more milestones then
+and this is a major breakthrough we're
+finally speech recognition went from
+recognizing discrete speech to continue
+in a speech and because continuous
+speech is closer to human speech it
+finally gave it a chance to become more
+commercial and more mainstream so a
+company called dragon came out with the
+first like really mainstream available
+to normal people kind of saw a speech
+recognition software but not too
+mainstream because in 1994 when it came
+out the program was about nine thousand
+dollars yeah so still kind of expensive
+but landmark nonetheless but
+in the background through all this time
+into eighties and nineties
+neural networks was another algorithm
+that was being pioneered and being
+researched to kind of replace the hidden
+Markov model and just to create like a
+new algorithm to compute speech and
+neural networks was pioneered by this
+man right here his name is Geoffrey
+Hinton and he's a cognitive psychologist
+and computer scientist most noted for
+his work on artificial neural networks
+and he is often called the godfather of
+deep learning and just to give
+demystified deep learning and machine
+learning and neural networks and just to
+demystify and break it down a bit the
+type of programming that we do more
+functional programming where we give
+given parameters and rules there's an
+actual programmer with expert knowledge
+who like kind of programs hard programs
+in like like rules so if you hit a
+certain case and this will happen and it
+tells the program explicitly what to do
+deep learning or neural that networks
+that Geoffrey Hinton pioneered is a
+totally different type of system where
+the the program is dynamic it's based on
+like models and based on the input it
+can actually learn and it's completely
+different than the type of programs that
+we give it where it's more of like an
+if-then that we hard code ourselves so
+the inspiration behind er all networks
+is our own human brain because Geoffrey
+Hinton noticed yeah babies basically
+understand languages at even the first
+year or like a two year old baby but the
+computers just don't have that
+capability and you want to kind of mimic
+the brain as much as possible on to
+computer so just to give a brief summary
+of human brain the human brain has 100
+billion neurons or 10 to the 11th of
+power neurons seven thousand seven
+thousand synapses or seven thousand
+connections between different neurons
+and at any given moment there's around
+20,000 70,000 different inputs of data
+between these different neurons
+so neural networking is basically just
+kind of using the same principle of
+neurons in our brain just using that as
+a model for the computer and each node
+is just a kind of like a metaphor
+representation of a neuron and the
+connections between each node is synapse
+sort of connection between neurons and
+yeah Geoffrey Hinton is noted as the
+godfather because kind of like given the
+thug status and the deep learning
+community because he worked on this for
+decades maybe around three decades I
+think and many people told him that he
+was wasting his time because often and
+within this entire time it was outpaced
+by the hidden Markov model but that's
+only because there was a limitation in
+the data the neural networking how it
+works and machine learning deep learning
+all these things how it works is that it
+needs a lot of data to be able to learn
+and to be able to grow and adapt well
+and to be able to perform well and just
+at that time while he was researching it
+there just wasn't enough data around and
+then so we hit the 2000s and this was
+not the advent of the Internet but I
+would say the first decade where the
+internet really just started gaining
+more speed Ella as well as the
+proliferation of the smartphone and the
+phone in general and Google had finally
+had enough information from the net from
+the internet just from different search
+queries and like a humongous pool of
+human speech samples collected by them
+to be able to really use neural networks
+on a better scale and they it was in
+2008 that Google Voice Search made its
+way to the iPhone and yeah this method
+of neural networking it effectively
+dealt with issues of data availability
+and a lack of processing ability that
+troubled speech recognition software in
+the past and then we come to 2000 2010s
+or the decade that we are currently
+living in and I would say that this
+the decade of the voice assistant and
+you guys will probably recognize these
+names probably really familiar to you
+right now going from left to right is
+Apple Siri Microsoft's Cortana Amazon's
+Alexa and Google's Google now and these
+four little caricatures on the
+PowerPoint are basically just
+representations of voice assistants that
+these different companies have made and
+particularly recently Amazon's Alexa is
+very popular if the image right here is
+a echo dot which is just a physical
+interface that you can use to interact
+with the voice assistant Alexa and it's
+a how it works is that you say Alexa and
+then a command and Alexa is kind of like
+the invocation word that it needs to
+kind of like start listening it was so
+popular this last December even just a
+couple of months ago that Amazon ran out
+of stock a couple of times just because
+of the high high demand so maybe some of
+you are wondering a speech recognition
+has been around for decades so why is it
+only just now hitting the mainstream and
+then the reason really is is that deep
+learning has finally improved so much
+and there's so much data available that
+it's accurate enough to be useful
+outside of carefully controlled
+environments so we can finally go
+commercial even though speech
+recognition has been around since the
+50s
+so us as developers uh why do we care we
+care because this means that we can use
+speech recognition in our own apps in
+our own code so I'm going to give quick
+demo of this web speech API so this web
+speech API is just as it says a web
+speech API given by Google it's free and
+we can use it it goes you don't use it
+in a Chrome bra
+though and stoners apparently is
+automatic there I don't know why but um
+if you just clicked this yeah it just
+works it picks up what you're saying and
+it types it out a speech-to-text so
+Google has github for this project so
+it's called web platform samples and
+then web speech demo and then we can go
+to F speech demo dot HTML this single
+HTML page has all the logic for what you
+saw right here and then if you just look
+at the documents just about to CSS HTML
+the real logic to this comes from right
+here WebKit speech recognition in window
+and what this is doing is just checking
+to see at the web speech recognition is
+in the window and that's as I said
+before this is only compatible with the
+Chrome browser so if it is available
+then it gives it invokes that websites
+WebKit speech recognition and then it
+gives an object called recognition and
+it's on recognition that kind of like
+all the magic happens and then we can't
+chain functions and put things on to the
+recognition object or activate the the
+functions that are already on it so
+recognition not continuous and
+recognitions interim results what these
+functions do is just enable the the text
+the box here the web speech API to not
+pause if I pause so as I even if I like
+pause for a second between words the it
+would still pick up and it wouldn't just
+stop and on star is when I start
+speaking recognizing set is it true and
+then it also sets this jiff to animate
+while I'm speaking so if you just see
+you if I click this and I'm speaking
+yeah it's just it animates and there are
+other various other functions on the
+recognition object on error on
+and just various things on results and
+these are all kind of like boilerplate
+things that you can just look and take
+for your own project and it's all on
+github already provided by Google and
+available for your Chrome browser and so
+speech recognition has come a long way
+and just various applications we can use
+it for it now is this idea of a smart
+home we could just say things and it
+would just happen just hooking up our
+our home or physical home with Internet
+yeah also another benefit possibility of
+speech recognition is people with
+disabilities if for some reason they
+can't type very well people can just use
+speech as an interface instead of the
+keyboard also with the advent and
+popularization of VR VR just lends
+itself to speech recognition and kind of
+you just kind of expect speech
+recognition to just work seamlessly when
+you're in the VR experience
+just imagine Siri just a digital Siri
+and you just talk to her and be are so
+opportunities for developers tons of
+opportunities for developers because
+machine learning and neural networks
+helping to improve the quality of speech
+recognition now is the time that it's
+really taking off and becoming even more
+mainstream we're really in a unique
+period of history where it's like really
+taking off and has it has a chance to
+integrate integrate with a lot of new
+technologies like VR
+for seamless experience
+contribute Twitter's help contribute to
+accuracy and also just use your
+imagination and creativity for how you
+can integrate speech recognition to
+whatever app that you want to create in
+the future so for the future maybe we'll
+come to a point where like Ironman we
+can come home and our own personal
+assistant voice the system can welcome
+us yeah thank you

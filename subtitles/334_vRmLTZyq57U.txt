@@ -1,0 +1,422 @@
+in this video i want to show you how you
+can create your javascript library using
+typescript then transpile it first of
+all the common js then to ecmascript 6
+modules and publish on npm
+[Music]
+so what is the problem in creating
+library actually publishing a folder
+with some scripts on npm is super easy
+but the main problem is that we have two
+module systems inside javascript we have
+common js and we have ecmascript 6
+modules and some projects might want to
+use your library inside node.js and in
+some projects maybe your library will be
+used on the client inside browser which
+actually means the main problem is that
+we must transpile our libraries into
+different versions and maybe later in
+even three or four if it will be needed
+it is all possible for this task we
+could use babel because it is really
+nice to transpile from babel in any
+possible modular system but i will use
+here typescript why typescript first of
+all because nowadays we're creating more
+and more projects by using typescript
+and secondly inside configuration of
+typescript we can simply provide in what
+modular system we want to transpile our
+typescript code this is why here as you
+can see i am inside empty folder and i
+want to create a new directory so here
+let's name it jslib and it will be our
+new javascript library now here let's
+open it and as you can see i don't have
+any folders at all so what i want to do
+here is open an editor and here create a
+new folder which is called source this
+is where all our code will be written
+and let's say that we want to create
+some library with helpers for any
+project let's say we want to implement
+just a single helper here for arrays
+which is called plug and the main idea
+of this method will be to map our array
+by specific field this is by here inside
+source first of all i want to create
+index.ts but here we won't store
+anything now here i want to create new
+folder array and inside i want to create
+blog.ts so the main idea is we have a
+nice structure inside source we can
+create different folders like array
+object string number and so on and here
+we're talking about array and we're
+implementing a new method plug inside it
+for this here we can export our new
+method which is called plug and here as
+in arguments we're getting first of all
+elements and secondly field and actually
+in this example i won't type anything
+with typescript just because the purpose
+of this video is different but obviously
+in a real scenario when i'm creating a
+library with typescript it will be typed
+fully so here we are getting our
+elements which is an array and the field
+that we want to get now here we can
+simply return our elements.map we're
+getting access to every single element
+and here we're just taking element field
+which actually means if we are getting
+array of users like this so we have our
+array with user and inside we have field
+for example name full and then we use
+our plug here so actually it will be
+plug inside by passing our elements and
+the next parameter will be name so this
+is the field that we want to map in this
+case what we will get back is array of
+names which actually means here will be
+just full so this is how our function is
+working and let's say that we
+implemented the first step of our
+library and now we want to prepare it
+for publishing now we want to leverage
+our index ts because actually this is
+our source of truth this is where we
+export everything which can be used
+outside of our library so here we can
+write export here we're getting our plug
+from array slash block this is really
+nice because in this case everything is
+private and only things which we're
+expecting here will be available for us
+now inside our root folder i want to
+create
+tsconfig.json and actually for
+typescript we must provide a
+configuration how we need to transpile
+our files from typescript to javascript
+for example we can transpile it by using
+different modular system we can also
+transpile it in different version of
+javascript this is the config that i
+want to paste inside ts config and
+actually here we have just two things
+first of all compiler options this is
+the configuration of typescript and
+secondly what files we must include and
+here we simply say include everything
+from source and inside compiler options
+the most interesting options for us are
+module ecmascript 6 which actually means
+we want to transpile our code using
+ecmascript 6 modules and secondly out
+directory and here we are providing dist
+slash lib slash ecmascript 6 which
+actually means inside this folder our
+library which will be generated for
+publishing will be generated inside
+library folder and then inside we will
+create two different folders ecmascript
+6 and ecmascript 5. ecmascript 5 will be
+used with common jazz and this is what
+we need to do now here near ts
+config.json i want to create one more
+file dsconfig.es5.json
+and here inside we want to generate
+exactly the same config but for common
+jazz here what we're pasting exactly the
+same include but here module is common
+js which actually means in this way
+we're using it inside node.js and here
+our our directory will be this
+libslash ecmascript 5. now here inside
+our root folder i already prepared
+package.json why is that because here we
+must provide some links as you can see i
+have a link to repository also licensing
+scripts why i did that because actually
+we will publish our library and we will
+publish this whole library inside github
+which actually means we must provide
+some information for people who will
+download our repository or use our
+library and actually here i don't have
+anything and we're just interested in
+scripts so what we want to create here
+is a new script which will be called
+compile and this script will prepare for
+us two builds once for common gs ones
+for ecmascript 6 modules so first of all
+i want to remove our dist slash lib
+because actually it might be that we
+generated something there previously and
+we must be sure that it will work this
+is why we completely remove this lib now
+and and here is tsc what is tc it is a
+command to run typescript and by default
+typescript will use this ts config.json
+which actually means the config for our
+ecmascript 6 modules so this command
+will transpile our sources to ecmascript
+6 modules but after this we must call
+this command again so here is and tsc
+and here we want to provide a build and
+after this we are providing config files
+so here will be ts config dot ecmascript
+5 dot json which actually means this
+part will generate for us our ecmascript
+6 module and this part will generate for
+us our common js modules and the last
+thing that we must do is install
+typescript here this is why inside
+console we can simply write npm install
+type script and we want to install it as
+a dev dependency this is by minus d as
+you can see now in package.json we have
+typescript this is why this command tsc
+will be available for us inside our
+package.json now let's try to use this
+command so npm run and here will be
+compile as you can see it took some time
+but now it is ready let's check what is
+happening first of all here we have now
+a dist folder and inside we have a lib
+folder with two additional folders
+ecmascript 6 and decma script 5. inside
+ecmascript 6 we have here index.js file
+which is just export plug which actually
+means it didn't change anything and here
+inside array we have our plug js which
+actually means it was successfully
+transpiled but now if we will jump
+inside ecmascript 5 this is for command
+js here inside index.js you can see this
+declaration and the most important part
+for us is that we can see here require
+word require will work inside common
+chest which actually means this module
+is prepared successfully and here inside
+array we can see our transpiled code so
+we don't have typescript anymore we have
+a plain javascript but it is not all we
+also must create a package.json for our
+library this is why inside of this
+folder i want to create package json why
+is that because actually this
+package.json here on the outside this is
+for our github repository and what we
+will publish inside npm is this
+package.json here so we will publish a
+package from this folder and it will
+have this slip inside and now inside
+this package json i want to paste a lot
+of stuff so here first of all is name
+and this is extremely important because
+this is our name for npm and as you can
+see here i have this nice prefix at mla
+why i am doing it like this because
+actually all names inside npm registry
+must be unique for example here i can't
+write utils because actually this
+library already exists and we can't use
+this name this is why the common
+practice is to prefix everything with
+add and some name and for example you
+can see it really often with angular you
+have here like add angular slash core
+for example this is why here we prefixed
+the name with add mla now slash and here
+is the name of our repository here is
+our version description main and module
+and these two lines are extremely
+important for us because actually when
+somebody will install our library as a
+node module then he will have these two
+lines inside main and module and
+actually main is used by command.js
+which actually means at the moment when
+he is writing require mla utils here
+we'll use this line and load this script
+which is here inside lib ecmascript 5
+index.js and here we have required this
+is totally fine but if he is using a
+modular system then this line will work
+and here we have lib ecmascript 6 slash
+index.js here we have normal imports and
+exports after this here i have a
+standard stuff like repository files
+keywords author license box url and
+homepage url and all this stuff you can
+see here on the right in any package
+inside npm our next step here will be to
+create a git repository and push the
+whole repository inside git but actually
+what i want to do first i want to create
+a gitigno file and we want to ignore
+here at least node modules but also this
+but not the whole test but only this
+sleep because we don't really want to
+ignore this test package json this is
+what we need to be pushed because we
+will use it every single time when we
+want to publish a package now i will
+jump inside console and right here git
+status as you can see i'm getting a
+message that this is not a git
+repository this is why i will open here
+my github and create here a new
+repository for example let's name it
+utils and we don't need to provide
+anything this is simply public i will
+hit here create repository and we are
+getting this information so this is what
+we need to do if we have a new
+repository and this is what we need to
+do to push to existing we already have a
+repository this is why i will simply
+write here gta need it will generate a
+new repository with master branch and
+after this we can write this line with
+git remote origin and here is the
+correct path after this we can check our
+changes as you can see here we have git
+ignore this package lock package.json
+and everything is fine so i will simply
+add all these files and commit so here i
+get commit minus am and here is created
+leap now we can push to our repository
+so here i am writing git push origin
+master and i'm hitting enter and as you
+can see my branch was successfully
+pushed now i can reload this page and
+i'm getting here our files inside github
+what is also important we didn't push
+our node modules and inside this we
+simply have this package.json this is
+exactly what we wanted our last step
+will be to publish a library to npm this
+is why inside console we can simply jump
+inside this because we are interested in
+this package.json and this library and
+here we can write now npm publish and we
+will for sure get an error because we
+are not authorized as you can see here
+we are getting a message need house
+these commands require you to be
+authorized and we can write here npm add
+user to be authorized this is why here i
+will simply paste this command and here
+we are getting first of all username as
+you can see here you must provide your
+username password your email and then
+you will get an email from npmgs.org
+where you must also get this number and
+paste it inside as a one-time password
+after this you are logged in and you can
+publish your package this is way here
+let's try again we're writing npm
+publish and we're hitting enter but as
+you can see it still doesn't work
+because we're getting a message payment
+required you must sign up for private
+packages but we don't want the private
+package this is why here we can write
+npm publish minus minor success equals
+public in this case we will publish our
+package as a public package which is
+totally fine you might get here an error
+403 forbidden and typically it happens
+if the name that you used inside your
+package.json already exists and actually
+here before i wrote at mla slash
+utilities and it was already taken this
+is why here i changed the name and after
+this published again and as you can see
+now i don't have any errors and here we
+are getting a message that it was
+successfully published and now we can
+copy paste this name and just put it
+inside searching packages i'm hitting
+here enter and as you can see this is
+our package that was just published here
+we don't have a readme but the links
+here on the right are totally correct we
+can hit here repository and we're
+jumping inside github but now the moment
+of truth is to install this package and
+try to use it this is by here i can
+write npm install and this is our
+package monster lessons academy
+utilities it is successfully installed
+and we can see it inside known modules
+monster lessons academy utilities and
+the main point is that here first of all
+we want to check it with commonjs this
+is why here i want to create new file
+server.js and then inside i want to
+require this package so here i want to
+get a plug method and here is our
+require from our node modules and here
+is add monster lessons academy slash
+utilities now let's just try to use it
+so here we will write console log and we
+want to call plug on our array of users
+and for example here we have a user with
+name full and the next one will be a
+user with name bar and the second
+argument after our array will be a name
+now let's try to start our server so
+here i simply write node server.js and
+we're getting our output which actually
+means our package successfully works for
+commonjs and here in every project we
+can simply require it and it will work
+inside nounches but we didn't test our
+frontend part this is why what i want to
+do i want to jump in console and write
+here npm install parcel
+and this package is successfully
+installed if you don't know what is
+parcel this is a zero configuration
+bundler similar to webpack which
+actually means it will prepare our build
+for the client so what we want to do now
+here we want to create new file and name
+it client.js now here inside i pasted
+exactly the same code like we had inside
+server.js but with usage of imports and
+as you can see this is exactly the same
+package and here inside console.log we
+have exactly the same plug but client.js
+is not enough we also need index.html
+and here is just a simple index.html
+where inside body we just have the
+script client chest that we just created
+most importantly we have here type
+module because we must tell parcel that
+we want to load the module and it will
+bundle it correctly now we can jump
+inside our package.json and here inside
+scripts we can create new script for
+example parcel and here we just call our
+parcel with
+index.html and it will do everything
+correctly for us so here i will simply
+write npm run parcel and as you can see
+it will compile everything correctly and
+after this start our web server for
+index.html as you can see it is
+successfully built we can open this page
+localhost1234 and here inside console we
+see our array which actually means our
+library is working simultaneously on the
+client and on the server and if you are
+interested to learn how to upload files
+to your website make sure to check this
+video also
+you

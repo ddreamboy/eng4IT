@@ -1,0 +1,167 @@
+"Where to begin in hacking, which 
+resources are the best to use,  
+what programming language to learn, how 
+to practically work in cybersecurity,  
+which studies to pursue, and what profession 
+to aim for—In Today's video we'll talk about  
+all that and more. By the end of this video, 
+you will know the steps to follow and have a  
+learning plan for your future in the field. In 
+fact, there is no one-size-fits-all path that is  
+stable and applicable to everyone, unlike a cake 
+recipe that everyone can follow step by step.
+So, I will help you choose a path that suits you,  
+rather than providing one that is not fitting. 
+It's important to know that I provide advice  
+based on my few years of experience in 
+the field, but it's nothing compared to  
+the scope of cybersecurity. The only thing I 
+am sure of is that you can progress with or  
+without a diploma. I learned on my own through 
+my mistakes and my passion for the field. So,  
+I will base my advice on my experience and what I 
+would have done if I had to start all over today.
+There are two things that will consistently be 
+your allies in your journey towards learning  
+hacking: firstly, practice. you progress 
+only by doing, even by making mistakes  
+through practice. Secondly, one or more 
+guides along the way will always be useful.
+There are 4 skills in cybersecurity and 
+they are programming, computer networks,  
+operating systems, including Linux, and 
+all the related skills. Your starting  
+point should be one of these four pillars, 
+and you will see that no matter what you do,  
+you will come across one or the other, 
+sometimes even intertwining. It's not  
+very important which one to start with; do 
+what feels right for you. Keep in mind that  
+there is no magical path. everything you learn 
+among these pillars will be useful regardless,  
+and you won't waste your time. You 
+will consistently gain experience.
+To help you choose, I'll give you the example 
+of my personal case. I started with programming,  
+more precisely, I got a guide on Visual 
+Basic.NET, installed Visual Studio,  
+and fried my brain to create my first 
+programs. They were horribly bad,  
+and any programmer would have mocked me, but it 
+doesn't matter. The goal is to start and practice.
+After learning Visual Basic, I learned 
+the C language, through online courses.  
+This language is important to understand the 
+functioning of systems because it requires  
+greater proximity to RAM. I downloaded Linux 
+virtual machines to learn C programming and  
+also how Linux works. This multi-pronged 
+learning approach was very effective. Then,  
+I learned web languages like PHP and 
+JavaScript to create and modify my website.
+Keep in mind that learning doesn't mean 
+becoming an expert. Learning means being  
+able to master the subject within 
+the scope of your projects and goals.  
+That's why you don't have to learn 
+programming languages from A to Z,  
+one after another. No one does that. Remember that 
+practice, time, and guides are your best allies.
+The best way improve your skills in hacking is 
+to have projects. For example, I wanted to know  
+how viruses work, how they hide in a system, and 
+more generally, how hackers operate. So, I wanted  
+to create my own parental control software, 
+among other more or less whimsical projects.
+With web languages, I wanted to build my website 
+to share what I've learned, and once in the web,  
+you're never far from networks and systems. I 
+rented a Linux server to host the site, learned  
+to use it, learned Linux commands, and learned 
+system and network administration. I wanted  
+to focus on web security to protect my site and 
+future clients' sites. So, I needed to understand  
+the functioning of certain network protocols 
+like HTTPS, DNS, ARP, IP, and many others.
+In the end, it brings us to the last pillar, 
+which is transversal to all others. Here,  
+you'll find skills in languages, 
+especially English, social engineering,  
+and knowledge of standards, 
+references, and laws in the field.
+You need to find your own path. Now, you 
+know everything you need to go fast and far:  
+a guide a project, and time to 
+practice gradually. If you start now,  
+you'll always be one step ahead 
+of those who start tomorrow.
+You don't need a budget of 1000 dollars, you don't 
+need a diploma. If you have an internet connection  
+and a computer, that's enough. You don't even need 
+to spend ten hours a day learning. Just start.
+If you want to start with programming, study 
+algorithms and data structures. If you don't  
+know which language to start with, choose 
+Python because it's one of the most popular  
+and essential languages. I'll provide all 
+the links to start in the description,  
+including a website that gives you all the basics 
+of a programming language in a single source code.
+If you want to start with networks, the best 
+place in my opinion is professor messer. learn  
+the basics of the OSI model and TCP/IP. Learn 
+the functioning of certain protocols like HTTPS,  
+DNS, ARP, IP, and more. You can move on 
+to vulnerabilities in these protocols and  
+Wi-Fi security. Tools like Wireshark will help 
+you understand the TCP/IP model in practice.
+If you want to start with systems,  
+download and install a Linux distribution like 
+Kali Linux. Learn the architecture of Linux,  
+the terminal, and commands. You can use 
+security tools or shell scripts in your  
+learning. and you can learn all this in this 
+amazing website that's called linux journey
+If you want to start with related skills, 
+strengthen your social engineering skills.  
+Learn to think like an attacker by discovering 
+various scenarios and attacks or scams that exist,  
+all with the appropriate defense measures. 
+If you work in the field later on,  
+your goal will be to fix all that. 
+There are always subdomains that  
+potentially involve other subdomains, 
+but you don't need to know all of them  
+before starting. You will naturally 
+come across them in your learning.
+In the end, a hacker is, above all, a person 
+who knows the details of computers. Knowing  
+computers translates into many jobs 
+and situations. A coder, for example,  
+is a programmer who will try to find flaws 
+in a code or build antivirus software.
+A tester is an expert in cyber-attacks who will 
+attack a company at its request to protect it.
+A hacker is also and above all, a person 
+concerned about ethics and laws. They have  
+versatile skills useful to many companies. 
+This is just a fraction of the possibilities,  
+not to mention the future of the Internet 
+of Things, artificial intelligence,  
+or bioinformatics. Cybersecurity jobs 
+of tomorrow don't even exist yet.
+Never forget that the true hacking community 
+doesn't want people trying to hack others.  
+Being a hacker is helping others, and not putting 
+on the Anonymous mask to ask how to hack your ex.
+Being a hacker is also being in constant 
+learning, even ten years after starting;  
+you will still learn. Cybersecurity is an exciting  
+and endless field. You've already made 
+the excellent choice to learn hacking,  
+a field that will take you far with prized and 
+indispensable skills. That's all I wish for you.
+If you're still a bit lost, that's normal. 
+you can do it. My goal is to help you reach  
+yours. So, if you have any questions, don't 
+hesitate. Thanks for watching and peace."

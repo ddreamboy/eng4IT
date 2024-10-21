@@ -1,0 +1,213 @@
+hello everyone my name is Alex zoos and
+today I'm going to talk to you about
+neurom machine
+translation the agenda for today why is
+this important why am I talking about
+translation what was before
+nmt how does it work I want to break
+that down into
+two um I want to focus on Google
+Translates model the encoder coder
+portion of it and this model of zero
+shot
+translation I'm going to go through some
+examples for you to give you a better
+understanding of the progress made with
+it and finally wrap up with a
+conclusion why is this
+important the translation industry is a
+$40 billion industry I never really
+thought about how important or how big
+of an industry this actually was also
+according to New York Times Google
+translate alone serves more than 500
+million monthly users and translates
+about 140 billion words per day that
+sounds insane um that's probably a
+portion of not everybody's just going to
+Google Translate but in your email and
+everything like that it has Auto
+translate um as a part of it so I'm sure
+the numbers were inflated a little bit
+there but it's nevertheless important
+government military Community
+needs maybe here in the US our
+government right now as Congress doesn't
+need translation so much but you think
+of the UN the European Union Asia not
+everybody has to not everybody is
+speaking English you have to communicate
+with people from in different
+languages military our Armed Forces who
+are going overseas we have to be able to
+communicate to the locals over there and
+our community
+here in New York every day I'm sure you
+hear a different language that's not
+English so it's really important that
+we're able to communicate with one
+another and
+globalization if you want to start a
+business abroad I don't think you'll be
+able to just speaking English especially
+if you go somewhere in
+Asia before
+nmt so before neurom machine translation
+Google especially used this phrase-based
+model which was pbmt
+where as you can see it's translating
+this sentence word by word so he goes to
+the curry restaurant was translating he
+to he goes to goes two to two the curry
+restaurant was grouped as a phrase and
+then translated into Japanese and
+reordered based on the Japanese grammar
+structure you may think that this is
+fine I mean you get a
+translation not any of you I don't think
+can understand translation can
+understand the Japanese but it's a fine
+translation but what happens when you
+get to more complicated sentences is you
+lose context you don't if you don't
+remember the previous words beforehand
+you're going to get an inaccurate or
+poor translation and that's where nmt
+comes
+in so nmt is a new approach to machine
+translation that uses a large neural
+network to enhance performance in other
+words the computer uses deep learning to
+build an artificial neural network to
+teach itself how to translate between
+languages it uses these neural networks
+to translate entire sentences without
+breaking them down into smaller parts so
+I'm going to come back to this visual
+let me restart it because I don't think
+you're you have to pay attention here
+because each Chinese character is
+being read in this top encoder once the
+entire sentence is read it is then
+finally decoded word one word at a time
+in English and one more time you'll see
+this
+attention you'll see this
+attention here come
+up where that is giving a weighted
+distribution over the encoded Chinese
+words most relevant to generate that
+English
+word and and the important thing about
+this is it keeps the context of the
+sentence and as I mentioned
+before about this zero shot translation
+model this was one of the coolest things
+I thought when I was doing my research
+so this computer is being trained
+trained to translate from English to
+Korean Korean to English English to
+Japanese and then Japanese to English
+and without seeing any training data for
+Japanese to Korean it has taught itself
+how to translate from Jaan jaanese to
+Korean and Korean to Japanese so I
+thought that was a fascinating and huge
+advancement for uh translation in
+general and now I want to move on to
+some examples just so you guys can
+really get an understanding of what's
+Happening here so I have this Japanese
+sentence up top and Microsoft
+translator gives you two different
+translations one is the old statistical
+model or what Google translate called
+the phrase based model the other is the
+new neural model so this Japanese
+sentence up top translates down below
+the morning 5:00 the evening paper 500
+p.m. should
+arrive that doesn't sound great and then
+you have the other translation the
+morning paper will arrive at 5:00 a.m.
+and evening paper at 5:00 p.m. that
+seems like a lot more a more of a proper
+translation to the left is is our
+statistical old
+model it's you can see almost how it's
+word by word in that model how it
+was let me show you
+with my
+pointer here so the morning five evening
+five will arrive and it's broken down
+word by word this neural translation
+just sounds more natural or more
+appropriate when speaking to someone
+else quick Japanese lesson for you guys
+one of my favorite phrases is this word
+is this phrase called
+Ichigo and it's not always easy to
+translate to English but using this
+Japanese English dictionary that I use
+online a lot it's translated as a once-
+in a lifetime encounter and hence it
+should be cherished as such so as I was
+doing my research on nmt and seeing the
+progress I was like wow I want to see
+what Google came up with for this I want
+to see the difference and I was really
+surprised and shocked actually when I
+got Forest Gump as the
+answer
+um I had no idea what was happening and
+was very confused until I dug a little
+deeper and found out that this is
+actually this is also the um subtitle to
+the Japanese version of forest gum
+so as it was going through the neural
+network it probably saw this more than
+it saw that more difficult
+translation and another interesting
+thing about it was when I put this
+through Microsoft translator the
+statistical model was actually
+closer as you can see one is gum and the
+other is once in a lifetime so it's
+still difficult and maybe there are
+times when we should be using we should
+be going back to that statistical model
+but the neurom model has made huge
+progress and that's what I want to
+conclude with neural machine
+translation is really
+important for our communities for the
+world to be able to communicate with
+people in in foreign
+countries it's made significant progress
+just in the last year I'm I believe it
+was last September September 2016 when
+Google
+um release this and overnight Google
+translat um Google Translates results
+improve significantly but it's not yet
+perfect as you can see it's getting
+there but the most difficult thing you
+can think about with translation is if
+you have a technical sentence you can
+give five human translators that
+sentence and you might get a different
+sentence back so it's not an easy topic
+but it's very important
+and I'm really excited to see
+the to see where this goes in the next
+year or a few years and if you are
+interested I highly recommend Stanford
+has a um YouTube course uh on natural
+language processing where one of the
+lectures focused on neurom machine
+translation Google has their research
+blogs and there's different various
+articles online about it so thank you
+for taking the time to listen to me
+[Music]
+[Applause]

@@ -1,0 +1,484 @@
+my name is bettina warburg i'm a
+researcher of transformative
+technologies and co-founder of animal
+ventures today i've been challenged to
+explain one concept at five levels of
+increasing complexity
+my topic is blockchain technology
+blockchain is a new network and it's
+going to help us decentralize trade
+allowing us to do a lot of our
+transactions much more peer-to-peer
+directly and lower our use of
+intermediaries like companies or banks
+may be i think today everyone can leave
+understanding something about blockchain
+at some level
+do you know what we're going to talk
+about today
+it's called blockchain what's blockchain
+that's a really good question it's
+actually a way that we can trade
+do you know what trade is
+it's like it's when you take turns every
+time that's when you give a most of what
+you want right when you give up most of
+what you want well sometimes that
+definitely happens for sure what if i
+told you that there's a kind of
+technology that i work on that means you
+could trade with any kid all over the
+world really yeah if i could trade with
+any kid i would trade
+well i would chase something i don't
+like so much that's probably a good idea
+maybe somebody else likes it more than
+you do so normally when people trade
+they have to go to the store or they
+have to know the person so that they can
+get what they asked for with blockchain
+you can make that exact same trade but
+you don't need the store and you don't
+even necessarily need to know the other
+person
+really really
+so ian do you know what blockchain is no
+have you ever traded or sold anything
+actually i'm selling my computer on ebay
+right now that's amazing what made you
+decide to trade on ebay um well i mean
+i've heard of it and i trust it a lot
+because there's they have like all their
+guarantees so i i know that i'm gonna
+get money and the person's gonna get
+what they want so what if i told you
+that blockchain technology is basically
+a tool where you can do the exact same
+thing but it goes to you and i directly
+you wouldn't need an ebay or a brand in
+between that's cool and there's a lot of
+those kinds of middlemen
+in our society today right we have a lot
+of banks we have a lot of
+companies that sort of
+help us make sure that our trades happen
+but if we could guarantee the same trade
+using technology
+as sort of like a technological trust
+then we wouldn't really need all those
+middlemen in between so how does it work
+it's basically a network of computers
+that all have the same history
+of transactions and so instead of sort
+of there being one company with one
+database that holds all the information
+the same sort of list
+is held by all these different people
+like you could have it on your computer
+and then it gets validated by everyone
+and basically that turns into the next
+part of the list so it's sort of
+constantly updating itself so like how
+do you make sure that it's secure so it
+uses cryptography and that helps it
+basically encode all of the transactions
+so you can't really see exactly what
+happened but you know it happened
+because it's like a marker so you could
+kind of like i don't know say trade you
+trade apples but you would just see like
+random letters yeah for it so you
+wouldn't be able to like track it i
+guess exactly that's cool so it's kind
+of this like really big ledger or
+accounting system for all sorts of
+things that get traded but instead of
+being owned by one company
+it's owned by everybody that's cool yeah
+we're going to talk about blockchain
+technology have you heard of blockchain
+i've heard of the words blockchain but
+i'm not sure i know what it is so when
+we were much smaller societies you and i
+could trade in our community pretty
+easily but as the distance in our trade
+grew we ended up inventing institutions
+right if you use uber or you use
+airbnb or you use amazon even these are
+just digital marketplaces and platforms
+that help us facilitate an exchange of
+value
+but today we actually have a technology
+that allows us to trade one-to-one but
+at scale and it's called blockchain
+technology there is some kind of
+interface for it you could have an app
+or you could use your computer to do it
+but instead of there being a company in
+the middle or what's helping you make
+that transaction is a bunch of software
+code and so it's being run by all of
+these different computers
+that have like a node so they're all
+running the same software and
+guaranteeing your transactions
+um as they happen i mean i would assume
+this technology is taking away business
+or activity from these middlemen in some
+cases yeah it is and a lot of people in
+the financial industry in particular are
+looking at it from the banking side of
+how do we use
+this technology to trade things like
+bitcoin or other tokens that um
+are easier to use instead of today's
+currency you know a lot of people think
+about blockchain as bitcoin
+because it's sort of in the news a lot
+and it's this new cryptocurrency and
+it's kind of exciting but we're actually
+seeing a lot more use cases for
+blockchain that aren't around the
+currency side they're more around how do
+you take any asset
+and be able to trade that using the same
+technology is there a mechanism for
+verifying
+that person a is a legitimate
+seller or producer of the item
+so today a lot of people are working on
+how to create identity structures that
+leverage blockchain and one of the tools
+for doing that is being able to
+cryptographically sign
+for
+a given attribute so your
+government could sign that you have a
+u.s passport or a university could sign
+that you are a currently enrolled
+student and you could then dole out that
+information
+and control it yourself and be able to
+show people those certifications on an
+as needed basis
+so today we're going to talk about
+blockchain technology okay have you ever
+heard of blockchain i have whenever we
+have a transaction and let's say i buy
+something from you this information gets
+logged and it gets verified by a third
+person or third party and then
+if like all this information verified
+and it all matches right the transaction
+goes through without any intermediary
+basically right and it gets stored
+and when we make further transactions
+this information is already embedded
+it's in the in the ledger yeah that's
+exactly right and you can append it you
+can sort of add new information that's
+more current but you can't actually go
+erase anything absolutely right the way
+the technology is changing nothing's
+gonna be like it used to be and there's
+no like firm and then the buyer and the
+seller and it's basically we'll have to
+rewrite a lot of rules and economics as
+well for sure a lot of the assumptions
+won't hold true same with who are the
+who are the actors it's not just people
+anymore it's machines absolutely we're
+going to have to create entire new
+concepts of how they do trade and how
+they work with us too what kind of
+barriers or roadblocks would you
+imagine
+are going to happen in the blockchain
+space so at least when we we talk about
+bitcoin there are some trust issues
+there have been some hacks and uh
+so there is obviously a need to to work
+on on trust and feeling that it's uh
+it's the safe technology yeah one of the
+problems that bitcoin has faced is
+bitcoins getting stolen or lost but a
+lot of that actually comes from
+people trying to recentralize bitcoin in
+different ways making themselves
+actually a pretty easy target absolutely
+so education will be a big part before
+we actually can use the technology very
+in in the wide sense right yeah to
+actually transition into the mainstream
+and and make it useful for average
+people to use we're going to need to
+make sure we have
+a lot more education a lot more
+standards and probably work with a lot
+of enterprises to create sort of the
+user experience around this being a
+technology that is safe and usable and
+understandable what is the current state
+of blockchain in your understanding
+what's going to have to happen next the
+current state is in this the research
+state and it's being
+developed to to be applied in many many
+areas it might be used almost everywhere
+to where like we won't even imagine how
+we lived without it but i'm not sure
+where it's going to go i mean no one
+really knows right well we have a lot of
+uh public blockchains
+like we have bitcoin we have the
+ethereum network
+nxt but a lot of companies and
+consortiums are getting together to
+build
+private blockchains so ones that are
+more closed off at first and then may
+evolve into a public network when people
+feel comfortable using it and some are
+also proof of concepts out in the real
+world projects in energy and in
+pharmaceuticals and in
+retail and lots of different fields are
+starting experiments and we'll see in
+the next few years how all of those
+interact and what we learn about the
+best use cases for blockchain and what
+it means for trade
+so tell me your version of a technical
+definition of blockchain
+a technical definition of blockchain is
+that it is
+a persistent transparent public
+append-only ledger
+so it is a system that you can add data
+to and not change previous data within
+it
+it does this through a mechanism for
+creating consensus
+between scattered or distributed parties
+that do not need to trust each other but
+just need to trust the mechanism by
+which their consensus has arrived at
+in the case of blockchain
+it relies on some form of challenge
+such that
+no one actor on the network is able to
+solve this challenge consistently more
+than everyone else on the network so it
+randomizes yes yeah it randomizes the
+process and in theory ensures that no
+one can force the blockchain to accept a
+particular entry onto the ledger that
+others disagree with one that
+relies on a mechanism for a peer-to-peer
+network that can maintain
+updates to the ledger and then verify
+those updates in such a way that it is
+impossible to defraud and impossible to
+alter after the fact and do you see it
+as defining a new discipline of kinds or
+where where are we going to see
+blockchain emerge in the real world
+first i mean just so like as an example
+one thing that i think about a lot in
+terms of possible blockchain
+applications is electricity right the
+next generation of distributed smart
+grid technology effectively sure and
+people are working on that already yeah
+yeah exactly and it's this very fruitful
+area of research and you can find
+yourself looking like 20 years out right
+where you have an enormous number like
+of electric cars you have all of these
+batteries like that's essentially
+um a distributed
+peak load power grid right like the cars
+are getting plugged in and unplugged at
+different times if you have a mechanism
+that is able to
+automatically and autonomously
+be distributing power based on batteries
+that are scattered throughout the grid
+that are being used for other purposes
+their owners don't even necessarily need
+to be aware you begin to have something
+that looks like a much more viable
+society that still has a lot of
+electricity needs but is able to base
+that much more on renewables is able to
+make up the difference during peak load
+periods or during differences in weather
+that is able to have power much closer
+to where it's needed rather than having
+to be distributed over great distances
+like
+that's something that would be an
+enormously hard problem to solve and
+it's not that the blockchain makes it
+easy but it makes it possible a lot of
+people are seeing blockchain in the news
+and maybe seeing a lot of sort of
+initial coin offerings this sort of
+monetization opportunity around
+blockchain and are getting very excited
+about it and some of that excitement is
+is real and should be you know
+encouraged but some of it is also hype
+how do you feel about the hype cycle
+around blockchain today i'm glad you
+mentioned initial coin offerings um
+because for me those really exemplify
+the sort of the the problem that we're
+having at this exact moment they are a
+an idea with enormous potential
+significance down the road however the
+promise of the initial coin offering has
+been kind of hijacked into this string
+of like basically pump and dump scams or
+sort of desperate gold rush schemes the
+faster that we can we can shift from
+this this fantasy that it is going to
+make you rich in a sort of you know
+1920s tulip bubble kind of way um
+is is that is the sooner that we can get
+into people honestly and i mean this
+like with all the hope in the world
+people being disappointed in blockchains
+like oh i didn't get rich it's just
+being used now to make it easier to
+transact goods and services safely
+across borders this isn't exciting at
+all and then we'll see that like become
+part of the everyday infrastructure of
+the world in a way that i think will be
+very significant but i think it is now
+almost every aspect of it that's
+connected with the concept of money is
+wildly overhyped um and
+it also creates a problem which is
+people get a lot of excitement around it
+and then they're waiting for
+[Music]
+the world to change yeah right where
+where is this technology why haven't i
+seen anything changing yes yes because
+we've had a lot of pr a lot of proof of
+concept but yeah truthfully this is more
+like a science right it will develop it
+will take five years it will take 10
+years that kind of time is necessary one
+of the areas that brought me to supply
+chain research is the fact that we're
+we're not just going to see blockchain
+emerge we're going to see artificial
+intelligence continue to evolve we're
+gonna see connected devices and this
+sort of growing internet of things
+machinery that can do a lot more and
+have a wallet and transact on their own
+and so
+i actually think a lot of where
+blockchain and other technologies are
+headed is this interesting synergy that
+will help us elevate the kinds of
+institutions we've used in the past and
+cobbled together to create that
+identifiable
+verifiable trust yes and one of the most
+interesting ideas to me that came out of
+the currency side of the blockchain
+project was the notion around like
+coloring coins right assign properties
+to a particular coin
+and in particular to assign those
+properties in ways that would allow you
+to do things like bring in the graph of
+previous transactions you know there's
+sort of an obvious application for this
+which is something that would look a
+little bit like an extreme version of
+like a boycott divestment and sanctions
+kind of approach right a model where
+it's sort of like i will not touch money
+my wallet will automatically not touch
+money that has been exchanged with the
+following as a sort of very extreme way
+of cutting those things out but there's
+also ways in which i think that could be
+applied to to clearing out the entire
+logistics process of many kinds of bad
+actors but trying to make a supply chain
+better in some ways relies a lot on
+whose version of better that is and
+exactly kind of what gets qualified but
+also how that is quantified
+within say some kind of like smart
+contract system there's multiple ways
+that i could see this backfiring and one
+is the ways in which that is implemented
+for example
+leaving certain kinds of bad behavior
+untouched or unanalyzed or one that
+feels even more dire to me in some ways
+is creating an extremely inflexible con
+like because human contracts legal
+contracts are actually very flexible
+like there's a lot of kind of room to
+move and renegotiate yeah but we we
+already have
+real world versions of some of these
+nightmare scenarios right where like
+your kid has a medical emergency and you
+can't unlock your car because you're two
+days behind on payments for it and so
+the car system will no longer respond to
+the app mechanism that you're supposed
+to be able to use to drive it barrier
+being sort of a rigidity in structures
+that maybe don't accommodate real life
+scenarios very well as you and i have
+been talking one of the things that
+keeps coming up is that we tend to hold
+novel technologies to an unrealistically
+high standard in terms of what they are
+supposed to deliver rather than
+comparing them to actually existing
+systems where we can begin to see the
+possibility that even like a slight
+incremental improvement would still be
+an enormous gain the system we have
+today is also broken
+right
+it's it's hard to compare it to some
+perfect future just like we compare
+um you know autonomous vehicles to this
+very high standard because machines are
+doing it should be perfect right there
+should be zero car deaths
+and when you say well there's hundreds
+of thousands millions of you know car
+deaths on the road due to human error
+today i think we're in a similar place
+we're going to see problems with this
+technology and we are going to need to
+develop
+multiple kinds of standards that also
+have some flexibility
+but it's it's going to also be a
+version a system that
+allows us to fix some of the things that
+are broken today
+blockchain may sound complicated but at
+its core it's just another tool for
+humans and eventually robots and other
+kinds of identities to trade at scale
+and make that trade more decentralized
+and it's part of our future so it's
+important that people have these kinds
+of conversations and start to learn
+about it

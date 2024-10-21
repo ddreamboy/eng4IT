@@ -1,0 +1,337 @@
+AWS Amazon web services is one of the
+oldest and one of the leading Cloud
+providers in the market today offering
+close to 200 100 plus services and it's
+very easy for us to get lost in these
+different 200 plus services so today in
+this video I will talk about 24 most
+popular AWS products uh under these
+different categories uh we will have a
+very quick overview of what exactly
+these services do to enable you to
+understand and whether you should use
+this service or not so we'll take a very
+quick sneak peek into what exactly these
+24 services do and how you could use
+these services in your Solutions so
+let's get started so these are those 24
+Services which are according to me the
+most used obviously you could differ on
+certain services but let's quickly
+understand uh what exactly these
+services do so the bread and butter of
+AWS has been its compute from the very
+beginning so the very first and the most
+popular service is ec2 elastic compute
+Cloud it is the is offering from AWS and
+you using ec2 you could create your
+virtual machines you can spin up your
+virtual machines and you could add scale
+uh you could downgrade the machines very
+easily so this is the basic the most
+important and the strength of AWS which
+is it easy to service the second in the
+list is Lambda which is a very important
+and widely used Services it is an event
+driven comp compute service serverless
+compute service and under Lambda you
+could write your custom application code
+to do certain task which are very small
+which are which are required to do a
+specific activity suppose you take a
+photograph you upload it somewhere and
+then you run a Lambda function on top of
+it so that it could be resized into a
+tablet or for a tablet or a laptop so
+those kind of small things suppose you
+want to upload an Excel file you can run
+the Lambda to convert that Excel file
+into a CSV I'm just giving you examples
+so if you want to create your end to
+endend web application Lambda functions
+could be used at certain places to uh
+you know to create those event driven uh
+functions so very important serverless
+offering under comput the third in the
+list is elastic beanock and sometimes we
+get confused between Lambda and beanock
+because there are lot of similarity you
+could deploy your code into beanock and
+create your web application beanock
+would deploy and run your web
+application without any compute uh
+facility being managed by you
+specifically so the difference between
+Lambda and bean stock is Lambda is
+created for specific tasks which are
+smaller in size wherein for bean stock
+you could deploy your whole website on
+beanock so it is to deploy your full
+full scale web applications you could
+deploy your code and then rest is taken
+care by
+AWS Hello friends a quick reminder AWS
+for dummies course which is for
+beginners on cloud especially on AWS is
+now live we have more than 12 plus hours
+of content on the course with Hands-On
+exercises and quizzes so do check this
+offer it's for limited time I really
+want you guys to get onto this Cloud
+Journey so link is in the description
+check it out and I really want to see
+you there now back to the video another
+very important service in AWS is AWS S3
+which is an object storage which is
+called as simple storage Services it is
+an object store where you could store
+all kinds of data structured
+unstructured semi-structured data and
+potentially this becomes your Landing
+Zone when whenever you're starting any
+kind of work in AWS S3 bucket you need
+to create an S3 bucket upload your files
+it could also create become your data
+link Amazon S3 could also host a website
+with static content there are plenty of
+uses you so you could upload your log
+files analytics data video music files
+Twitter feeds whatever you call it
+simple storage service S3 bucket is the
+object storage which you need to use the
+next in the list is elastic Block store
+which is also called as EBS so this
+actually provides the block storage or
+block volume for your ec2 instance you
+can attach your SSD or your HDD uh Block
+store uh for your ec2 instances and
+these are very high performing block
+storage so reads and writes become
+really fast if you attach ec2 and EBS so
+your elastic Block store becomes your
+backbone of your ec2 instance and you
+could store all the data into this block
+store so under database the first
+product offering is uh Amazon Aurora
+which is the rdbms relational database
+Management Service and it offers full
+compatibility with mySQL and post SQL
+databases and with 5x and 3X throughput
+speed so if you need a postra or a MySQL
+data database instance you don't have to
+provision it on ec2 you could simply use
+this serverless uh service and rest all
+will be managed by AWS while you
+leverage all the benefits of MySQL and
+post address and the second one is
+Dynamo DB which is a nosql database if
+you want to know more about no SQL
+database there's a specific video I have
+created but this particular service is
+again uh offered by AWS as a serverless
+service wherein you could provision
+key value or document databases so this
+is the nosql database offering so the
+next in the list is RDS relational
+database service which consist of six
+different data uh databases offered by
+AWS Amazon Aurora comes under this then
+postgress SQL uh MySQL Maria DB um SQL
+Server Oracle all these kind of
+different databases could be provisioned
+under relational database service and
+again everything is managed by AWS so
+the last one is elastic cachier which is
+an inmemory DB offering by AWS you could
+get microsc performance using inmemory
+caching uh use cases like gaming
+streaming data hosting content which
+needs high performance all that can be
+cashed in memory and for that you use
+elastic caching so the next category is
+network and content delivery and under
+this the first product is VPC virtual
+private cloud
+it's an offering which you might have
+heard of in Google and Azure as well
+with the help of VPC you could
+understand how you would manage your
+resources how one resource would connect
+to the other resource within that
+virtual Network environment how you
+would secure your Cloud environment all
+that happens through VPC and generally
+your networking team would be doing this
+work for you the second offering is
+cloudfront which is a Content delivery
+uh Network offering Whenever there is a
+requirement to access certain content
+from a certain geographical location
+this cloudfront service could provide
+that particular data into that
+particular Edge location AWS Edge
+location so that the user who's sitting
+closer to that particular GE location
+could fetch the data using Cloud front
+from that particular Edge location so
+it's a CDN offering so Route 53 is a
+very fancy name for a simple DNS service
+domain name service if you don't know
+what is DNS go check out my video
+there's a complete playlist for
+networking so DNS domain name service
+helps you get the IP address of any
+website you want to navigate so Route 53
+is the component which you need to
+configure if you want to use the DNS
+service within
+AWS elastic load balancing again it
+implements load balancing for uh you
+know application load balancer Gateway
+load balancer Network load balancer all
+these kind of different load balancing
+activities can be done using elastic
+load balancing service I have created
+two part series for understanding load
+balancing in depth so you can check that
+as well API Gateway is all about
+managing creating publishing securing
+apis testing apis so if you want to
+connect two different systems with the
+help of API and you want to transact
+between the two systems using API then
+you need to use API gateways so under
+analytics the first product is Amazon
+Kinesis which is which helps collect
+process store realtime streaming data
+from um for example streaming video
+games for example from iot devices
+anything wherein we need streaming data
+to be captured and processed immediately
+we need uh Amazon Kinesis as a service
+and then there are multiple offerings
+within that so you for example you have
+Amazon Kinesis video streams which is
+specifically built to capture uh any
+kind of realtime video which is coming
+in live for example there's a football
+match which is going in live you want to
+capture that and process information out
+of it then you'll plug in Amazon Kinesis
+video stream offering uh to process it
+so this is something which you need to
+consider if you are if you are working
+on processing real time streaming data
+so the second in the list is Amazon red
+shift which is AWS answer to Google big
+query AWS red shift is AWS reply or a
+competitor product to Big query Google
+big query it also helps you run
+analytics workload meant for your data
+warehouses and data Lakes it is SQL
+based so you can use uh red shift for
+running all kind of your analytical use
+cases an analytical workloads and then
+you can store the data in red shift and
+then process it in your machine learning
+in your AI or ml models you could do
+pretty much everything uh because it's
+really really fast you could process xab
+of data in seconds so yeah it is one of
+of the very important service if you're
+coming from a data analytics and data
+data warehousing background AWS glue is
+purely an ETL product it is a data
+integration service which helps you
+connect with various kind of different
+sources it could be real time it could
+be badge it could be iot whatever and
+then you could use AWS glue to create
+ETL workflows to process the data
+analyze the data extract transform and
+load the data into the target systems
+this is a very important piece if you
+designing your data Pipeline and if you
+want to know more see or check out my
+data pipeline video under machine
+learning one product which I have
+highlighted is Amazon Sage maker because
+this product can be used to build train
+and deploy all types of machine learning
+models it can help you implement machine
+learning operations which is also called
+as mlops so while working on these ml
+models you don't have to care about any
+backend infrastructure needs because AWS
+process it for you so if you are a data
+scientist if you are an ml engineer you
+need to understand more about Amazon
+Sage maker so the next category is
+security and in security the main
+service which is used across all clouds
+is I am identity and access management
+so as the name suggest IM am goal is to
+understand who can access what where who
+is the user can access is the policies
+which you uh you know which you enforce
+and what is the actual resource which is
+coming into the picture so you could
+create fine grain access controls using
+identity and access management this is a
+very important area and that's why we
+have Cloud admins IM admins managing the
+security of the platform managing the
+access and authorization authentication
+and authorization of uh the cloud
+platform so Cloud IM is a very important
+service kmsk Management Service lets you
+create manage and control all kinds of
+cryptographic keys which you use to
+encrypt and decrypt your data so KMS is
+a very important service coming to
+Containers eks elastic cuber service is
+a manage service provided by Amazon to
+run all kinds of your kubernetes
+workload if you don't know much about
+kubernetes or containers you could check
+my videos on the same the second in the
+list under containers is fargate fargate
+is the serverless compute offering to
+run all kinds of container workloads so
+if you have a container image you could
+simply deploy it using fargate and rest
+all regarding the infrastructure needs
+will be taken care by this service and
+then this fargate can also integrate
+with eks so the 24th and the last
+product in our list is Amazon Cloud
+watch which comes under monitoring as
+the name suggest it's the Watchmen of
+our whole AWS platform because you with
+the help of cloud watch you could
+collect you could process you could
+analyze and then eventually act on all
+kinds of logs which gets generated by
+different uh Services which we have
+discussed and other services as well so
+it gives you uh systemwide observability
+as far as AWS is concerned so if you are
+working in Sr devop support roles then
+cloudwatch would be one of the very
+common Services which you would use guys
+with this we come to the end of this
+video and I hope you know something
+about these 24 Services which are quite
+common in AWS but I'm sure you know
+other services which are better than
+these services so do let me know in the
+comment section the service name and
+what exactly it does in one line and it
+will help the audience to learn more
+about AWS platform if you have anything
+which you want me to make on AWS like I
+did in gcp let me know and I will learn
+it and I'll share with it so until next
+time guys keep learning keep sharing all
+the knowledge and yes keep hustling bye
+for now

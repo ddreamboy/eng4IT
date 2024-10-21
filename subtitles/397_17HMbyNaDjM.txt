@@ -1,0 +1,583 @@
+[Music]
+all attendees and welcome to another
+glorious day of learning by ed Eureka it
+is so good to see that so many of you
+are keeping up with the trends of
+technology today my name is Adan and
+after our previous sessions on the
+Internet of Things I thought it'd be
+only fair to talk about the devices that
+enable the inner of things to sense and
+respond using the powers of computing to
+autonomously come up with the best
+solutions for any industry today so let
+us dig deeper into these devices that
+mark the beginning of every IOT
+ecosystem and look at the best ones in
+use today in different domains but
+before we start though let me quickly
+run you along the outlines of today's
+session so that you have a clear idea on
+the topic that I'd be covering so first
+I'll be telling you how you can identify
+any object to be an IOT device then I'll
+tell you what they can do for you and
+site some of the major use cases in it
+and then I'll tell you how I ot devices
+are shaping the entire world and code
+some leading examples and then I'll tell
+you how secure is a device in IOT and
+finally I'll be telling you all the
+important things that you need to know
+to build an IOT device so without
+putting it off any further let us begin
+our session today now these devices that
+play the role of things in IOT are
+what's make the smartest systems
+possible today we just a smart appliance
+or an entire smart city it could be
+complete computing devices design
+keeping the portability in mind or tiny
+electronic components operating on
+minimal device software for data
+transfer and connectivity without any
+computing abilities at all and there are
+also objects that are not made up of any
+electronic hardware at all and can still
+become the things in IOT by having these
+smart things attached to them in some or
+the other way so what I'm basically
+saying is that even we humans can become
+a thing in the Internet of Things but
+again that is a contextual term and
+you'll understand why as we move on with
+the session today so for now we can just
+say that any device however puny or
+powerless with the ability to receive or
+send data allowing it to communicate
+over networks can be called a thing or
+an IOT device also it should be serving
+a purpose like either collecting some
+information or delivering some outcome
+now that is the least any IOT enabled
+device or thing in IOT will require
+today even though the bigger devices
+have diverse features and can be more
+powerful it is the miniaturizing of
+coming
+hardware that has truly given the
+internet-of-things its edge in the
+market today it has made it possible for
+these IOT devices to even function at
+microscopic levels in the remotest
+corners of our world and has also bought
+in focus on more target oriented
+features specific to their goals plus
+with devices running on incredibly low
+power levels and operating with such
+minimal resources the things in IOT come
+with the promise of implementing
+solutions in the most cost effective way
+possible without compromising on the
+system's accuracy this is because are
+the smallest levels these things are
+embedded with just enough technology for
+them to communicate over the internet
+and other networks to get the data
+analyzed stored and processed over that
+network or over the cloud rather than
+physically housing all those
+technologies on themselves also such low
+powered levels are perfect for the
+little chips sensors and other
+low-energy components that these devices
+used for the operation but like I said
+they're substantially equipped to
+connect wirelessly for exchanging data
+and performing actions based on them
+also such low energy modes of
+connectivity make it easy for these
+things to operate just about anywhere
+while letting us control and monitor
+them remotely for almost any part of the
+world so it is as if the British
+technology pioneer Kevin Ashton who
+coined the phrase integral of things
+back in the 1999 somehow knew of these
+potentials that IOT brings out in
+devices today ok I can see that somebody
+has a question
+so Thomas wants to know if it is only
+these small devices that are a part of
+IOT or even the larger devices can be
+called things well Thomas any device
+that has the ability to connect to
+networks and can solve a purpose like
+performing some operation or collecting
+data can be called a thing in IOT
+although in turn of thing aims to be
+available for even the smallest devices
+so I hope that answers your question so
+let us move on
+[Music]
+let us see what things can do for you so
+one of the most popular implementation
+of these things and their applications
+have been in the sector of home
+automation today the use of Internet of
+Things in this industry has got the
+world closer to achieving a dream home
+powered by the smartest systems using
+these IOT devices and these systems have
+been built such that all its devices can
+inter communicate to allow owners a
+customized access to all aspects of your
+home like your lights your logs or the
+inside environment or security cameras
+or even your total energy consumption
+with the brand specific IOT platforms
+and clouds behind them these IOT devices
+are now capable of exhibiting ambient
+intelligence and also stay connected to
+the Internet for driving real-time
+operations so let us get into some
+examples of IOT devices using more smart
+homes today and we must begin with the
+tunable smart lighting systems like
+Philips hue smart home lighting or the
+tp-link multicolor smart Wi-Fi that can
+be easily controlled using your smart
+phones with the option of creating
+custom lighting automations from
+anywhere in the world by just being
+connected to the internet with smart
+lights like these you could turn them on
+or off any time and tune the color and
+the brightness of lights in your homes
+remotely no matter wherever you are
+moving on did you know that locks and
+keys are getting old fashioned nowadays
+for all job smart locks are a part of
+almost every smart home today and the
+August smart lock third generation is
+one of the newest and the hottest phones
+on the market today what makes it stand
+out among its peers is that it comes
+with bluetooth support so that you won't
+need to worry even if your internet is
+down somehow with a device like this
+then attaches to your existing deadbolts
+you'll always know if your door is
+completely closed and alone with its
+door Sense technology it will even
+remind you to lock your doors when
+you're leaving or tell you if they were
+properly closed or not based on the
+location of your phone you can even
+create secure virtual or temporary keys
+for your neighbors and guess just in
+case now the next IOT device is the Nest
+Learning Thermostat
+it is one of the best examples of an IOT
+device today as a part of your home
+automation system this intelligent
+device learns your schedules and
+preferences over the first couple of
+weeks to smarten the cooling and heating
+systems in your home and then regulate
+your home temperature automatically to
+save your electricity by 20% among a ton
+of other features
+so to reduce your energy bills it uses
+sensors and your phone's location to
+realize the weather the time or the
+environment inside and when nobody's
+home it will shift into energy-saving
+mode apart from the thermostat nest also
+provides smart cameras with smoke and
+carbon monoxide alarms to better manage
+your home's atmosphere and its security
+plus it lets you manage and monitor each
+of them through its dedicated app or
+even build your old revenue channels
+upon them there is also one more device
+that I think is worth the mention in the
+home automation systems of today it's
+mostly just a doorbell for your front
+doors only a lot smarter the video
+doorbells by ring is a modest name for
+all the things that it can do it's like
+you're always home as it lets you answer
+your door from just about anywhere it
+will in fact even a lot U of motion
+within 30 feet of your door and stream
+its life footage onto your phone and if
+somebody rings a bell you can let them
+know that you not home and even have a
+word with them with its night vision
+the wide-angle high-definition
+recordings get simultaneously saved work
+loud for you use anytime now before I
+tell you what else i ôd devices can do
+for you
+virtual or home assistants like the
+Amazon Alexa the Google assistant CD and
+G book are also a trending application
+of the Internet of Things and have made
+it big in the home automation systems of
+today now other than making your home
+smart IOT devices are also capable of
+intelligently tracking your health and
+fitness and as far as Fitness goes the
+Fitbit tracker or the Apple watch and
+other such smartwatches have been a
+revolutionary success and along with
+your fitness aspects they also solve
+your day-to-day healthcare needs like
+checking your heart rate and
+perspiration levels and tracking your
+body temperature to predict a cold or a
+flu on the way and you'll be amazed to
+know how the other IOT devices are
+saving more lives and making health care
+better like the Philip Health Care's
+medication dispensing service or the
+hero smart pills dispenser are the most
+successful use cases today and exemplify
+the potential of IOT in the healthcare
+sector it is the perfect reminder for
+your medications and is a convenient
+measure for the elderly and the sick
+alike the option to remotely manage it
+with your smartphone you could also
+monitor the medication of your near and
+dear ones and be notified upon running
+low on any medication at all plus you
+could also get info on the right
+medication
+for common health hazards and now with
+how integral smartphones and internet
+have become in our lives
+health and fitness solutions using IOT
+will only get more and more prominent in
+the recent years to come
+[Music]
+so apart from the personal benefits that
+you can get as a consumer or a user IOT
+also aims to impact the greater good the
+talk of smart cities is prevalent these
+days while the waste management system
+is more efficient pollution in the
+environment is checked and even the
+outer lighting and traffic signals are
+equipped with motion sensors to ensure
+energy conservation by turning on only
+upon detecting traffic updates and its
+route or upon sensing pedestrians and
+vehicles nearby now let us look at some
+of the other sectors of service and
+civic amenities that these IOT devices
+are powering to up the efficiencies of
+our world today one of the most visible
+smart systems in place is in the domain
+of Transport and automotive today and
+along with more and more connected car
+platforms today there has also been a
+lot of hype around smart incent driving
+vehicles hitting the lines of transport
+very soon plus with the maps providing
+real-time Intel and the modern vehicles
+housing numerous sensors in them you
+could always tell which way to go or
+what parts need to be looked at like say
+tracking the fuel consumption altitude
+and maintenance issues of flights in
+real time without waiting for it to land
+every time can help in anticipating
+problems to schedule maintenance prior
+to its arrival
+so that delays and mishaps are minimized
+in the aviation industry another major
+area of application for IOT devices is
+in the field of Agriculture a sector
+that is often neglected despite its
+utmost importance can now be brought up
+to speed with IOT with several cheap and
+minimal sensors that monitor the best
+climate and soil quality for the right
+kind of crops or other smart devices
+that ensure the efficiency of automated
+irrigation systems even the gardens in
+your home or the trees in smart cities
+or even the plant life and vegetation in
+the agroforestry or wildlife habitats
+could be kept in check the most
+innovative IOT devices today include the
+smart watering system blossom which can
+create optimal watering schedules for
+all the plants in your home based on
+real-time weather data and focus and
+will regulate all your sprinkles
+accordingly and allows you complete
+control over them through Bluetooth or
+the internet and also the clean gross
+carbon nanotube Pro
+is one of the best IOT devices for
+farmers and gardeners all around the
+world today with sensors to monitor the
+intake of nutrients in the crops to
+better manage farming resources and
+improve the quality of their fields
+farmers can now alter the maturity rate
+and the color of crops for better yields
+and faster rates of production now it
+might be a little ironical of me to talk
+about one of the very first industries
+to be made smart on such a late note in
+today's session but I really just wanted
+to save the best for last and believe me
+the sector of retail and logistics is
+where the internals thinks promises the
+most astounding results with IOT devices
+already being extensively used in
+shopping restaurants hospitality
+industries and many other businesses to
+control the supply chain effectively and
+obtain valuable insights based on them
+and manage their logical or
+merchandising expenses in the best
+possible ways now the cue hop is one of
+the leading examples of internal things
+being used in the retail today typically
+designed to bring in seamless autonomous
+checkout technologies to all retail
+verticals by digitizing the checkouts
+through RFID tags that only unlock after
+its payment is processed the sole
+purpose behind it was to allow users to
+self checkout in stores although it is
+mainly used for security reasons today
+to inhibit petty thefts in stores but
+guess what
+that was before the inception of Amazon
+go earlier this year now the technology
+inside this convenience store will
+really seem like it was pulled out from
+the future somewhere although it is so
+new that there are only three locations
+with this futuristic store so far so
+pretty and managed by the online
+retailer Amazon these stores can give
+you a shopping experience unlike any
+you've ever had before with the idea
+essentially being grab-and-go these
+stores will just need your Amazon go
+apps for you to enter and then employees
+computer vision machine learning and
+sensor fusion to automatically add items
+that you pick instantly on to your
+virtual cart and we'll also remove them
+off just as promptly if you keep them
+back now once you grab all the things on
+your shopping list and are ready to exit
+all you need to do is just walk right
+out of the store yes no more lining up
+in busy queues of the usually limited
+checkout counters to wait your turn for
+the purchase you can exit the store
+without even having to pull out any cash
+or a card and you will find the amount
+for all the things that you walk out
+with
+simultaneously from the balance in your
+Amazon account such a smart system could
+also check the inventory regularly to
+notify retailers on the need for
+restocking and even helps to manage the
+supply chain and a better way now there
+are also other promising areas in
+logistic that IOT devices have started
+to impact like in the case of shipping
+cargo or fleet management smart
+Bluetooth low-energy tags are attached
+to the items being moved for remotely
+tracking their exact locations speed of
+transport and storage conditions for
+instance the things dot IO is a simple
+IOT platform that provides a dedicated
+cloud-based dashboard for better
+logistics by enabling access to
+real-time and reliable inputs from its
+connected smart sensors and parent
+location trackers irrespective or
+wherever they might be so all the use
+cases and the respective IOT devices or
+things we just went over are only a
+select few out of the countless
+applications of the internal things that
+can drive almost any sector today and
+these IOT devices could be things
+themselves or even attached to someone
+or something to make it a thing in IOT
+like even a person with a heart rate
+monitor could be your thing in IOT as it
+connects and provides information they
+can act as inputs to other smart systems
+to operate on so the baseline for
+anything to become an IOT device could
+be laid out as any object with a unique
+IP address for communication over
+networks and the ability to gather and
+transmit data or receive data and
+perform tasks based on it and the Ameri
+technology in these devices are what
+interact with either the internal States
+or the external environment to capture
+all data and drive decisions made upon
+them
+[Music]
+now with the internet-of-things being
+such a large community of different
+devices the challenges of IOT devices
+mainly start with communication as the
+protocols and languages used by each of
+them vary hugely due to the lack of
+common standards for all of them here
+and this lack of a uniform and secure
+standard across all IOT devices uses
+great security risks making them highly
+unreliable on most important operations
+and Inter operations today also without
+customers being assured of the privacy
+and security of their data there is just
+no reason for them to risk using or
+adopting such insecure solutions but do
+you really understand what the role of
+security in IOT devices is today well
+let me tell you about a major cyber
+attack that happened back in October of
+2016 a large distributed
+denial-of-service attack dubbed Mirai
+affected DNS servers on the east coast
+of the United States which disrupted
+services all across the world upon
+further investigations this issue was
+tracked back to the hackers that
+infiltrated smart networks through the
+IOT devices being used in them like the
+routers or the camera so that brings
+about the situation wherein our devices
+and data are all remotely connected and
+stored upon these networks and its
+security gets compromised
+we might even not know it over the first
+few days or weeks and it might be just
+too late by the time we do realize
+another way in for these hackers were
+undoubtably a result of poor practice at
+some end like say the use of default
+passwords rather than changing them
+hence the adoption of better practices
+and the reinforcement of proper
+authentication networks segmentations
+encryption and cryptography can still
+make the things and its systems quite
+secure given that we start making sure
+of building them up securely from our
+end as well plus the issue of overall
+connectivity is also a feat that our
+world is still striving to achieve but
+hasn't been able to accomplish it
+[Music]
+that brings us to the last topic for
+today
+so let me tell you the important things
+that you should know to build an IOT
+device so building an IOT project or
+device or solution must be done thinking
+about the relevant purposes that it
+concerns and the ways in which they can
+be prepared to work for at least the
+next couple of decades along with the
+option and space for quick
+improvisations and upgrades and just
+like we saw in all our examples today
+you must have understood the two
+important categories that IOT devices
+are mainly made up of the first is the
+hardware aspect and the underlying rule
+is to aggregate the hardware in the most
+minimal way you can without compromising
+on the primary features that you want
+your device to use now these features
+are mostly due to Bluetooth Low Energy
+sensors or beacons connected to the
+Internet or a customized product with
+probably a combination of these on a
+circuit board made up of a semiconductor
+like Silicon and may also house or the
+components like transistors resistors
+receivers transmitters actuators an
+integrated circuit or a microchip
+so most devices like a smartphone or a
+result of such combinations on a little
+more complex level with proper casing
+and with the second most important
+aspect of these devices so the second
+important category in IOT devices is the
+software aspect on the device level the
+size of your software would depend on
+how minimal or bulky your device is and
+what are the components that your
+housing on it on the most basic note the
+device software only needs to be enough
+for handling the operation of your
+device driving components to collect
+data and converting them into
+transmissible form connecting to
+networks driving the transmitter to send
+data and the receiver to receive data to
+and from the network and converting it
+to the machine understandable form for
+driving components to perform some task
+or display some outcomes based on the
+received instructions now all this will
+require very minimal
+software unlike the software on your
+phones that come with entire mobile
+operating systems all the other
+important software for intelligence and
+smartness in these devices will be
+provided by the underlying cloud
+infrastructure and even by the mobile
+apps or web dash boots the software
+aspect of IOT devices is in fact what
+controls the hardware aspects to sense
+some information or perform an
+instruction while both aspects are the
+most into
+parts of an IOT device you might also
+need to overcome a few more hurdles
+before you I Oh TA device is truly ready
+to implement smart solutions and power
+smart systems of our oil today these
+hurdles could be connectivity issues or
+compatibility problems or security and
+privacy concerns but don't let the
+obstacles dishearten you instead just
+consult people with knowledge on the
+same for any and all questions that you
+have or just post it in the comment
+sections below and I'll get you all the
+help that I possibly can so that will be
+all for today
+I hope to see you all again until then
+happy learning and Cheers
+I hope you have enjoyed listening to
+this video please be kind enough to like
+it and you can comment any of your
+doubts and queries and we will reply
+them at the earliest do look out for
+more videos in our playlist and
+subscribe to any Rekha channel to learn
+more happy learning

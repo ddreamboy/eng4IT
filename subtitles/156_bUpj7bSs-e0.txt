@@ -1,0 +1,145 @@
+Hi I'm Gary. Sentiment analysis, part 
+of natural language programming or NLP,  
+is very common very popular, and a very powerful 
+tool. For example we can see the sentiment the  
+positive or negative sentiment of someone when 
+they interact with a help desk many help desks  
+use NLP to see how their customers interact 
+with their staff and their staff interact  
+customers also social media, we might be able 
+to tell how positive or negative people are  
+talking about our brand but let me show you how 
+simple it is to do sentiment analysis in Python
+first of all on my screen you're going to see my 
+data these are media releases I'm going to create  
+sentiments analysis on these media releases these 
+are media releases from various state governments  
+in Australia over the last few years Health 
+media releases health related media releases  
+so I'm going to look at the sentiment of 
+this text column okay I've got State I've  
+got the date I've got very it's a few years it's 
+several thousand rows it's not a huge data set  
+so what I'm wanting to get to what I'll show 
+what we'll get to so that's what I'm going to  
+analyze for sentiment I want to know how positive 
+and negative every one of these media releases  
+are every single one of these rows so just to 
+show you where we're actually going with this  
+we're going to get to here so you'll notice 
+it's the same as before that's the text I'm  
+going to analyze that text column and we 
+can get we can see whether it's positive  
+or negative now the various things that happen 
+in this analysis it gives a positive score how  
+positive or what it is each each of these text 
+rows for example how neutral or how negative  
+is it and a compounded or an overall score 
+so generally we would look at this overall  
+score so for example anything above zero zero to 
+one would be positive and anything from zero to  
+minus one would be negative so here you can see 
+that's minus 0.8 so that's a negative sentiment  
+um critical workers from certain sectors sectors 
+isolating as close contacts will be and on it goes  
+so that was deemed as negative and so on so let's 
+see how we do this I'm going to go across two  
+Jupiter notebook I do have if you haven't used 
+Jupiter before if you need to install python I  
+do have a a tutorial and I'll leave I'll create 
+a link for that also the script I'm running uh  
+in this video I will in the description of the 
+video I'll create a link where you can copy this  
+um uh sorry this the script and use it if 
+you if you want to so we're going to run this  
+let me just go through What's Happening Here 
+so we're saying first thing we're going to do  
+is import NLTK that's an NLP or natural language 
+programming package in Python we're going to be  
+using the VADER lexicon. VADER is what does the 
+sentiment analysis which is part of the NLTK and  
+we're going to use Pandas so good old Pandas which 
+if you're a data scientist or data analyst you  
+you probably use Pandas a lot if you use Python 
+it creates data frame or we can work with data  
+frames let's put it that way so we're going to 
+load up the CSV file into the Pandas data frame  
+I'm then going to do a little bit of work 
+on it for example I'm going to drop in now  
+or drop all columns all with a date column is 
+empty I'm going to drop those I just want to  
+get rid of those empty empty columns that's just 
+something that's probably a good practice to do  
+and then also going to define the various 
+data types you don't necessarily need to  
+do this but I will just to show you so I've got 
+a date column a text column and a state column  
+date is day text is text or a string 
+and a state is actually categorical
+in Pandas particularly if you're working 
+if you're a researcher for example and  
+working with large data sets several 
+million rows for example that would  
+destroy Excel for example you're going to use 
+far less memory if you define the data types  
+generally what happens is using Pandas 
+it Imports the data as an object type  
+some string and you'll notice that you will have 
+me or you may well have memory problems but if  
+you define the data types your memory usage 
+will go down so I've just gotten the habit of  
+doing it so I'm going to do it in this case you 
+don't need to do it with smaller lots of data  
+so let me just run this and we should see because 
+I've said here print the head show the first few  
+in the last few rows we can see here um I've got 
+it's not quite Lan but date I've got text and  
+I've got State okay so I've loaded it up now we're 
+going to create that magic we're going to run that  
+sentiment analysis and create those extra fields 
+in my Excel file CSV file saver to a CSV file  
+so I'm going to go through it very very quickly 
+we're going to load up the analyzer we're then  
+going to create three sorry four different columns 
+compound negative neutral and positive and VADER  
+is going to calculate that for us the different 
+scores based on the text column in our data
+um my different columns I'm going to create 
+as well a sentiment column because I want to  
+just summarize these so what I'm going to say 
+is if the positive score is greater than 0.5
+then make it positive sorry if the sentiment 
+score is greater than 0.5 add positive into  
+the sentiment field if in the sentiment field the 
+compound value is less than 0. negative 0.05 then  
+add negative it's just a very quick way of then 
+seeing positive and negative scores and we'll  
+just print it out to the screen and we'll save 
+it to a CSV file ending in demo.csv just so I  
+can show you that it's done so let's run this now 
+this does take a little bit of time to run for the  
+amount of data that I have which is um uh uh 2000 
+204 rows it'll take I'm guessing three minutes or  
+so on my computer which is pretty slow if you have 
+several million uh rows it'll obviously take a lot  
+longer it's quite a complex thing but I'll get 
+back as soon as this is finished we'll carry on  
+okay so the sentiment analysis or the script 
+has now run and you can see here I've printed to  
+the screen the first value there 52 is there 52 
+neutral comments 1572 positive and 580 negative  
+so in general the media releases at the health 
+departments in in these uh in the data that I have  
+were inherently mostly positive but let's go now 
+to that CSV file and just make sure that it's into  
+the data as we expected so going across to that 
+file this is the one there I'll just open that up  
+we'll just wait for that to load up and Excel
+I'll just make a little bit bigger so 
+we can see so there my column here is  
+r and you'll notice that now it's added 
+the compound negative neutral positive  
+and the general sentiment of course now you 
+could create a chart if you want to in Excel  
+or even using python but please subscribe to 
+my Channel please like this video. I'm Gary.

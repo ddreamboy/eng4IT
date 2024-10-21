@@ -1,0 +1,580 @@
+welcome to this Splunk tutorial for
+beginners if you've ever felt
+overwhelmed by Machine data struggled
+with logs or wondered how to monitor
+your systems effectively you're in the
+right place today we're diving into
+Splunk a powerful platform that
+transforms raw data into actionable
+insights whether you're an IT
+professional a security Enthusiast or
+simply curious about unlocking the
+potential of machine data Splunk is here
+to help in this video I'll walk you
+through the basics from installation to
+reporting and monitoring so by the end
+you'll be well on your way to mastering
+Splunk with its real-time monitoring and
+log analysis you'll soon wonder how you
+managed without it so grab a cup of
+coffee get comfortable and let's make
+data analysis less intimidating and a
+lot more fun stick around till the end
+where I'll share Advanced tips and
+tricks you won't want to miss but before
+we get started I'm Jasmine and this
+channel is all about showing you how to
+become a highly paid cyber security
+ethical hacking or Cloud Pro
+fast what is Splunk and why is it
+important Splunk is a platform designed
+for real-time searching monitoring and
+analyzing machine generated data from
+servers and applications to networks and
+devices machine data like logs and
+metrics is created constantly and
+managing this data manually is nearly
+impossible that's where Splunk comes in
+Splunk acts as a central Hub collecting
+indexing and processing machine data so
+you can easily search through it to
+extract valuable insights whether it's
+web server logs or network security
+events splunk's powerful capabilities
+make it simple to sift through massive
+data sets quickly system requirements
+and
+prerequisites before diving into Splunk
+ensure your system meets the necessary
+requirements for local setups you'll
+need a decent CPU 8 to 16 GB of RAM and
+plenty of storage for logs Splunk runs
+on Windows Mac OS and Linux But be sure
+you have the necessary user permissions
+for installation in larger environments
+scaling up resources is essential to
+maintain performance and don't forget
+network configurations especially if
+you're setting up a distributed
+environment Splunk can be resource
+intensive but once it's running it'll
+handle real-time data monitoring and
+analytics like a pro installation of
+Splunk to work with Splunk you first
+have to download and install the Splunk
+Enterprise Edition on your computer
+locally for this purpose open any
+browser on your system just like I have
+opened Google Chrome here search for the
+splunk.com website and hit enter it'll
+take some time to open the web page as
+per your internet provider speed once
+opened the main page of Splunk will be
+visible from here you can find find
+various resources for your team and get
+a quick overview of Splunk moreover this
+page contains several beneficial links
+that can help you understand more about
+the security and Observatory provided by
+Splunk it is highly recommended to
+explore each section of the main page
+and gather as much information as
+possible to prevent any future bugs or
+faulty results on scrolling to the
+bottom of the page or on reaching the
+footer section you'll see considerable
+quick links from here select the free
+trials and downloads link once clicked
+the free tools and downloads page will
+open and from here you have to find the
+Splunk Enterprise download section and
+then hit its get a free trial button
+this will divert you to a Splunk
+Enterprise account creation page on this
+page you have to provide your
+credentials like email password first
+name last name job title phone number
+company country and zip or postal code
+after entering the credentials check the
+below to boxes and hit the create your
+account button after the creation of
+your account login to Splunk Enterprise
+here provide your email along with the
+password that you provided during the
+creation of your Splunk account after
+logging in you'll be redirected to the
+Splunk Enterprise downloads page here
+the current version available for
+download will be available along with
+the packages that you can download
+specific to your operating system like
+Windows Linux or Mac OS as I am a
+Windows user I am downloading the Splunk
+Enterprise version for Windows by
+clicking on the download now button
+after that you'll be directed towards
+the rules and policies page which you
+have to read and scroll down at the
+bottom until you find a checkbox once
+found check the box and click on the
+access program button after accepting a
+new download page will appear and the
+location is asked from you where you
+want to install the installer provide
+the path and click save to start the
+downloading of the
+installer after the completion of a
+download open the Splunk installer and
+accept the license agreement it shows
+you some default installation options
+you can either go with the defaults or
+customize them by clicking on the
+customize options button next click on
+the next button to start the
+installation process and enter the
+username password confirm password field
+and hit the next button your password
+needs to be hard level so you must use
+the combination of alphabets numbers and
+special characters lastly check the box
+and select the install button and the
+installation procedure will start once
+the installation process ends which is
+going to take some time hit the Finish
+button to exit from the installation
+wizard next the Splunk Enterprise login
+page will open on your default web
+browser here you can read the
+instructions if it's your first time
+then enter the username and the
+corresponding password in the men
+mentioned fields and hit the sign in
+button this will open the Splunk
+Enterprise dashboard and some rules or
+tips will appear which you can read if
+you want and hit the got it button this
+is what your Splunk homepage looks like
+and as you can see it is divided into
+multiple sections namely bookmarks
+dashboard search history recently viewed
+created by you and many more these
+sections or tabs help you in analyzing
+data more easily and quickly to get
+started navigate to the dashboard Tab
+and select choose a home dashboard from
+the drop- down menu you can choose from
+various pre-built dashboard components
+depending on the metrics or Services you
+wish to monitor for instance you might
+opt to track system performance service
+health or even specific security related
+data points once you've made your
+selection click the save button and your
+dashboard will start displaying realtime
+data feeds
+this allows you to instantly view
+visualizations like time charts bar
+graphs and line graphs which provide
+immediate insights into how your systems
+are performing to further tailor your
+dashboard to your specific needs you can
+easily modify its components by clicking
+the change button you can add additional
+elements such as single value
+visualizations which are great for key
+metrics like CPU usage or uptime
+statistical charts or even custom data
+views that fit your operational
+requirements these components offer
+flexibility in how you want to represent
+your data whether you need a quick
+overview or an in-depth analysis of
+certain kpis after making adjustments
+the dashboard updates in real time
+giving you an evolving picture of your
+system's health for more granular
+insights each dashboard component
+includes an open Button which allows you
+to dive deeper into specific data sets
+this feature is invaluable for it
+administrators or security teams who
+need to troubleshoot issues or monitor
+critical services for example clicking
+into a CPU usage component will provide
+detailed metrics logs and historical
+data enabling teams to identify
+performance bottlenecks or pinpoint the
+source of an issue these in-depth views
+are essential for maintaining smooth
+operations and preemptively identifying
+potential risks if certain dashboard
+components are no longer relevant or you
+want to simplify your view you can
+remove unnecessary Elements by clicking
+the remove button this helps keep the
+dashboard clean and focused ensuring
+you're only looking at the most critical
+data points at any given time over time
+as your monitoring needs evolve you can
+continually adjust and refine your
+dashboards making Splunk an incredibly
+versatile tool for dynamic real-time
+data management Splunk dashboards are an
+essential tool for monitoring platform
+Health visualizing key data points and
+maintaining service performance in real
+time by utilizing Splunk dashboard
+features effectively you not only gain a
+comprehensive understanding of your
+platform's health but also position
+yourself to respond proactively to any
+potential issues this flexibility and
+depth in monitoring capabilities makes
+Splunk a powerful asset for anyone
+managing complex it environments
+providing a centralized real-time view
+into the performance and security of
+your services
+now let's create some event log
+collections by clicking the settings
+option from the navigation bar and from
+the drop-down list select the data
+inputs option from the data inputs web
+page select the first data input type
+named local event log collection on the
+new page select the events or categories
+whose event logs you want to retrieve
+just like I am selecting the logs of
+application security and system you can
+also Choose Or set the destination index
+for the source for the logs to be
+retrieved or you can go with the default
+just like I am going once done hit the
+save button and a confirmation alert
+message will appear as well next move
+back to the data inputs web page by
+clicking on the data inputs Link at the
+top left side of the web page to confirm
+whether our custom set log collections
+are built or not choose the second
+option of the remote event log
+collections option here you can see that
+our log collection is available and is
+enabled
+from this page you can also create more
+event logs by clicking on the new event
+log collections button and you can also
+filter the collections using the filter
+field now select the app tab from the
+navigation bar and from the drop-down
+select the search and Reporting option
+using this option you can search for
+specific logs or events and can analyze
+your event logs in multiple ways if you
+enter the asterisk symbol in the search
+bar all collected logs will be retrieved
+and displayed on the screen this screen
+is divided into four tabs events
+patterns statistics and
+visualization once the events are
+retrieved a success message will also
+appear like this in the event tab all
+events are displayed along with their
+time and short descriptions or details
+about the event you can also customize
+the overview or formatting of retrieved
+logs using the provided options from
+here you can choose the number of logs
+to display on each page and the
+formatting of logs to make them display
+in the list table or in raw format
+moreover by choosing the format option
+you can select the max lines and the
+type of selection to perform on clicking
+which can be inner outer or full Above
+This section the timeline section is
+available that showcases the event logs
+in terms of graph and there are some
+options available to customize the
+appearance of this timeline moreover you
+can choose the fields if you want to
+make their data also retrieved on on the
+screen to get all Fields select the all
+Fields button and from the retrieved
+Fields you can check or uncheck to
+display the log data regarding the
+specified Fields just like I am enabling
+the account domain and account name
+fields you can also filter out these
+fields list or resort to specific
+criteria to make searching fast moreover
+you can select or unselect fields in
+bulk as well using the available options
+at the top of the page now let's open
+the start menu by hitting the window key
+available on the taskbar and then search
+for The Event Viewer which is already
+installed on all systems once appears
+click on the open Button from The Event
+Viewer screen click on the Windows log
+to open the logs for the windows here
+you can pick any field or folder at
+random just like I am choosing security
+next right click on the security folder
+and from the appeared option select the
+clear logs option to clear the logs for
+system It'll ask for the confirmation
+you can either save these logs and then
+clear or simply clear just like I am
+doing next move back to the Splunk
+Enterprise web page and display the data
+in list format for better visualization
+and add some Fields into the search bar
+to filter out the desired result to add
+a field in the search bar click on that
+field like I am clicking on the event
+code and from the drop- down options
+click on the first option namely add to
+search search as you can see once
+clicked it will render now you can also
+add a filter of event code having a
+specific value for this insert the equal
+to symbol and insert code inside the
+double quotation you can see that now
+all event logs having specified event
+codes are
+retrieved in the same manner add other
+fields like computer name Source host
+date and time or any other if you want
+these fields narrow down your result
+just like I have reached my required
+event log the result also appears
+graphically on the timeline as well you
+can alter the timeline graph as per your
+need using the displayed options now I
+am copying the search query by
+right-clicking on the field and then
+selecting the copy option after that
+select the create table view button to
+create a new table a new table page will
+appear if it is your first time you can
+click on the continue to tour button to
+start the tour for this page or you can
+simply click on the skip button on this
+page the table gets created according to
+your saved search query as you can see
+you can customize the fields to be
+displayed in your table using the panel
+situated at the left side of your screen
+from here you can add or remove Fields
+just like I have added the host and
+keywords fields and also added then
+removed the message field you can also
+filter out specific Fields by mentioning
+their names and selecting the summary
+button to view the summary of each table
+column you can tweak the options
+available on the table page to customize
+the data and filter out the unrequired
+data as per your needs if you have more
+than one table you can also sort them in
+ascending and descending order using the
+sort option finally let's now move
+toward the creation of a dashboard from
+the navigation bar select the dashboard
+option
+the alert message will appear asking you
+to take a tour if you want Splunk to
+tell you about the dashboard then go
+ahead and take the tour if you already
+know about the Splunk dashboard then
+select the skip button on the dashboard
+page multiple already created dashboards
+are displayed you can either select or
+edit one of them or click on the create
+new dashboard to make your own new
+dashboard after that a dialogue box will
+appear that takes data for the creation
+of a dashboard here you have to enter
+the title of the dashboard descriptions
+and can set the permissions moreover you
+are also asked to set the styling of the
+dashboard and the layout which I am
+going to choose as the grid once you're
+done select the create button after that
+the dashboard creation page will open
+where you can find various tabs and
+options using these you can insert
+multiple elements or fully customize
+your dashboard according to your needs
+you can also switch the dashboard theme
+between light and dark
+modes click on the first column graph
+image type button and from here you can
+find various methods of inserting data
+we are going to pick the first one named
+table because we want to insert the
+table in our dashboard for now after
+clicking on the table the settings or
+data sources will appear on the right
+side of a page next open the search data
+source and click on the create search
+button to create a new data Source enter
+the data source name or just go with the
+default one and paste the copied search
+query inside the SPL query section
+scroll down and enter the table name
+along with its short description next
+open the visibility option and check or
+leave empty the option to hide elements
+when data is unavailable then open the
+data display option and from here you
+can choose the number of rows to be
+displayed or can add row numbers and
+internal Fields as you like after that
+open the color and style option to set
+the background and text color or to
+change the font style and font size to
+enhance the visibility factors these are
+options that you can choose as per your
+preferences you should try all of them
+on your own if these settings become
+invisible due to some factors or because
+you have clicked on the dashboard
+section then you can bring them back by
+clicking on the table and the settings
+for that table will become visible again
+moreover using the source code option
+you can see the XML data or source code
+for your table and you can also o tweak
+here as per your personal needs or
+requirements of the client once you're
+done click on the save button to save
+the dashboard along with its containing
+data after saving you'll notice that now
+your created dashboard is available next
+to the already created dashboards along
+with its owner permissions and other
+data now click on your dashboard to see
+it in a print or final layout next click
+on the actions button to perform several
+operations on the dashboard like
+downloading of a dashboard in PDF or PNG
+cloning of the dashboard view on mobile
+screens edit permissions and many more
+from these options click on the set as
+home dashboard option to set this
+dashboard as a default dashboard on your
+Splunk account homepage now when you
+move back to your homepage and open the
+dashboard tab you'll notice that your
+recently made dashboard is already set
+as a default dashboard as required
+splunk's realworld use cases Splunk is
+widely used across Industries offering
+immense flexibility for various use
+cases in it operations it serves as a
+centralized hub for machine data
+enabling teams to monitor performance
+detect issues early and even predict
+failures for example when an e-commerce
+company experiences a traffic Spike
+Splunk can identify bottlenecks and
+optimize performance in re real time
+ensuring minimal disruption in cyber
+security Splunk is invaluable for
+detecting unauthorized access and
+malware activity by analyzing logs and
+events across networks financial
+institutions rely on it for fraud
+detection and compliance monitoring
+processing millions of events per second
+to stay ahead of potential breaches for
+business analytics Splunk helps
+organizations extract insights from
+customer and operational data retailers
+for instance can use Splunk to analyze
+shopping Behavior identify peak times
+and monitor product Trends driving data
+informed decisions that boost
+profitability in short Splunk
+versatility in it cyber security and
+business analytics makes it
+indispensable for improving operational
+efficiency security and business
+intelligence best practices for managing
+Splunk effective Splunk management
+ensures you're getting the most out of
+your data start by setting up data
+collection thoughtfully filter out
+irrelevant logs to avoid overloading the
+system and driving up costs focus on
+actionable data from critical systems
+like firewalls or authentication servers
+optimizing searches is crucial use
+splunk's search processing language SPL
+wisely by narrowing queries and applying
+filters this not only improves relevance
+but also reduces load and boosts speed
+techniques like field extractions and
+indexed Fields help further enhance
+performance managing indexes is key as
+data grows Implement retention policies
+to clean up old data and allocate
+storage wisely to prevent system
+slowdowns regular maintenance such as
+patch updates and system health checks
+ensures your Splunk environment remains
+efficient and scalable extending Splunk
+with add-ons and apps splunk's
+capabilities can be expanded through its
+ecosystem of addon and apps the machine
+learning toolkit mltk allows you to
+build predictive models enabling
+insights into future trends like
+potential security vulnerabilities or
+system degradation for instance it teams
+can forecast Hardware failures and
+address them proactively Splunk
+Enterprise security transforms the
+platform into a comprehensive security
+information and event management
+solution essential for detecting
+Advanced threats and ensuring compl
+clients Industries like finance and
+Healthcare with high security demands
+heavily depend on this tool Splunk it
+service intelligence offers Advanced
+dashboards for monitoring complex it
+infrastructures providing a holistic
+view of system health and service kpi
+it's crucial for minimizing downtime and
+maintaining seamless operations
+additionally Splunk integrates
+seamlessly with major cloud services
+like AWS Azure and Google Cloud this
+integration makes it IDE deal for hybrid
+Cloud environments offering unified data
+monitoring across on premise and Cloud
+systems that wraps up our Splunk
+tutorial now that you understand what
+Splunk is and how to use it for it
+Operations Security and business
+insights you're ready to explore its
+full potential remember Splunk is like
+an all- knowing friend ask the right
+questions and you'll get the answers you
+need if you found this video helpful
+give it a thumbs up and share it with
+others don't forget to subscribe for
+more deep dives into splunk's advanced
+features have questions or tips drop
+them in the comments below and let's
+keep the conversation going thanks for
+watching keep your logs in check and
+your data flowing
+[Music]
+smoothly check out the video on the
+right for more content to help you
+develop your it career
+[Music]

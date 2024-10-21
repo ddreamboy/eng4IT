@@ -1,0 +1,112 @@
+feature engineering is a very important
+process in the field of data analysis
+and machine learning and I am very
+excited to announce this new series of
+tutorials where I will be going over
+different feature engineering techniques
+and we'll be writing Python code along
+with the exercises with that let's first
+understand what exactly is feature
+engineering there was a study published
+by Forbes magazine on what data
+scientists spend most of their time on
+and from this chart it was very clear
+that they spend majority of that time in
+data cleaning because in the real world
+the data looks pretty messy as shown in
+this funny picture here and you need to
+clean that data so that you can feed
+that clean data to your machine learning
+model machine learning model will not
+work if the data is messy even if you
+are not using machine learning and doing
+simple data analysis still you need to
+clean data so data cleaning is very very
+important and that's where data analyst
+and data scientist spend most of their
+time on and feature engineering is
+something that helps you with data
+cleaning let me give you example let's
+say you are studying the home prices and
+these are the home prices in the city of
+Bangalore in India to do the analysis on
+this one of the things you can do is you
+can create a new column which will be
+price per square feet just to kind of
+get a feel of your incoming data set now
+this data set can be coming from
+internet from the variety of sources and
+it can have errors okay
+it can help problems so by creating this
+new column you are trying to analyze if
+you have any data errors all right and
+once you have this new column now you
+can use either your domain knowledge so
+if you have a business manager that you
+are working closely with he would say
+that in Bangalore you cannot get a home
+at a rate of price per square foot equal
+to 3,500 square foot so when you see
+this particular data point highlighted
+which has price per square foot as 500
+it clearly looks
+lion like an error okay and this error
+you detected by using a domain knowledge
+you can also use visualization and by
+plotting this bar chart this data point
+clearly comes out to be different than
+the rest of the data point you can also
+use mathematics and statistics where you
+can use techniques like to standard
+deviation or to detect these kind of
+spatial observation now this data point
+here is called outlier and these three
+techniques listed on the right hand side
+are all basically the outlier detection
+techniques if you have followed my
+pandas tutorial we also looked at how to
+handle missing values sometimes when you
+receive your incoming data set it might
+have missing values here for these two
+data points the bedrooms are missing so
+what you can do is just take a median
+which will be three and fill those
+missing values okay so handling missing
+values is also very important during the
+process of data cleaning we also had a
+tutorial on one hot encoding in my
+machine learning series where we replace
+the text data with numeric data here the
+text data is down so these are the
+property prices in different towns in
+the state of New Jersey and when you
+want to build a machine learning model
+the model doesn't understand text so you
+have to convert that into numeric values
+and we converted this text column into
+these three numerical columns and this
+process is called
+one hot encoding so these three
+techniques that we covered which is
+outlier detection one hot encoding and
+handling missing values these are the
+few examples of feature engineering so
+feature engineering is basically a
+process of extracting useful features
+from raw data
+using mathematic mathematics statistics
+and domain knowledge we have seen
+advancements especially in the area of
+neural networks where you can auto
+detect the features the meaningful
+features all right so the examples that
+I showed you we use domain knowledge
+mathematical statistics to extract
+meaningful features out of our data set
+but these processes were manual but
+there have been some automated ways of
+detecting these features and we'll be
+covering all of that in this feature
+engineering tutorial series so I hope
+this gets you excited enough and I will
+see you in the next tutorial thank you

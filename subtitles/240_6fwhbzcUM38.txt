@@ -1,0 +1,114 @@
+hello and welcome back to my channel
+you know as artificial intelligence
+becomes a bigger part of our everyday
+lives we really need to think about the
+ethical side of things AI has the
+potential to do some amazing stuff like
+making Health Care better or improving
+schools but without the right ethical
+guidance AI could also cause some
+problems we didn't expect like making
+biased decisions or invading our privacy
+so in today's video I want to give you a
+rundown of AI ethics why it's important
+and the main ideas behind developing
+ethical AI
+AI ethics the need for ethical
+considerations
+when it comes to AI there are quite a
+few ethical challenges we need to think
+about because they can have a big impact
+on society one of the main concerns is
+that AI systems might make existing
+biases even worse leading to unfair
+treatment and discrimination for example
+facial recognition technology hasn't
+been great at recognizing people with
+darker skin tones which raises concerns
+about racial bias
+another big ethical issue we need to
+think about is how AI affects our
+privacy you see AI systems need a lot of
+personal data to work well and that can
+potentially mess with our privacy rights
+plus AI is used more and more in making
+decisions and that's got people worried
+about transparency and accountability
+AI algorithms can be kind of like black
+boxes where it's hard to figure out how
+they're making their decisions
+this lack of transparency can make it
+tough to trust AI systems and might lead
+to unfair or just plain wrong results
+because of these ethical challenges it's
+super important to make AI systems that
+follow ethical principles and focus on
+fairness transparency and accountability
+to tackle these concerns a bunch of
+organizations and researchers have come
+up with ethical guidelines and ideas for
+developing AI main principles guiding
+ethical AI development
+fairness making sure AI systems don't
+treat some people or groups unfairly is
+a really important ethical idea to make
+AI Fair developers need to think about
+possible biases in their algorithms and
+do something about them this might mean
+using all kinds of different data for
+training checking AI systems for bias
+now and then and using machine learning
+techniques that are built to be fair
+transparency AI systems need to be clear
+about how they're making decisions so
+that we can trust them and hold them
+accountable
+this idea of transparent AI sometimes
+called explainable AI is all about
+making AI algorithms easy for us regular
+folks to understand creating transparent
+AI systems might involve using models
+that are easier to interpret or
+explaining AI decisions after the fact
+privacy keeping our privacy safe is
+another big ethical idea when it comes
+to AI
+AI developers have to think about
+privacy when they're designing and using
+AI systems and they should use
+techniques that help protect our privacy
+like differential privacy and Federated
+learning these methods let AI systems
+learn from data without actually getting
+their hands on our sensitive personal
+info accountability
+AI systems and the people who make them
+need to be held responsible for what
+they do that means we need ways to keep
+an eye on check up on and judge AI
+systems and we need to know who's
+responsible for AI related decisions
+plus it's super important to have a
+culture where AI developers feel a sense
+of ethical responsibility so we can be
+sure AI systems follow ethical
+principles
+conclusion
+so folks as AI becomes more and more a
+part of our Lives we really need to keep
+a close eye on the ethical side of
+things yes AI has the power to do some
+incredible things like making our health
+care better or giving our schools a
+boost at the same time if we don't pay
+attention AI could also cause some
+unintended problems like creating biased
+decisions or stepping on our privacy
+that's why I wanted to share some
+thoughts of AI ethics the reasons it
+matters and the main ideas that help
+guide the development of ethical AI
+and there you have it thank you for
+watching and if you have not already
+please like And subscribe have a great
+day

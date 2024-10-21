@@ -1,0 +1,425 @@
+hello everyone welcome again in this
+software testing tutorial
+we are going to understand what is
+software development lifecycle
+or sdlc so software development
+life cycle is the setup process that
+you follow if you're working in any
+software development team
+to basically start developing the
+software and deliver it
+until the software is deployed and
+maintained right
+so the whole process is known as
+software development lifecycle
+now that process you need to understand
+step by step what all phases are there
+to develop any software or analyze the
+requirement and then develop the
+software and deliver it to the customer
+or deploy in the production right so we
+need to understand
+if we want to work in the software
+testing team we need to also understand
+what software development life cycle is
+and based on different you know
+approaches will understand how
+software development life cycle you know
+is in different software development
+approaches say for example waterfall
+development approach how
+sdlc is there and then if you are
+following the
+model how software development lifecycle
+is in the viewmodel or in the agile
+approach for example strong so let's
+start with the software development
+lifecycle
+um so here i'll totally cover sdlc
+and in the next tutorial i'll cover
+software testing lifecycle which is sort
+of
+a subset of software development
+lifecycle sdnc
+fits within software development live
+site
+so the first phase in software
+development lifecycle is
+the requirement gathering okay so
+requirement
+gathering
+and analysis
+okay so what does the requirement
+gathering means right so we'll
+understand first requirement gathering
+and then analysis so say for example
+there is an organization uh abc
+and this is the organization which takes
+the software development project okay so
+you will be you know having certain
+teams there development teams
+so team one two three and these
+teams basically work on different
+development projects
+now any organization or any person
+who is the customer who wants to build
+something say for example
+i am a customer and i want to build an
+app
+okay so what i'll do is i'll either if
+i'm a big organization i'll
+you know have a tendering and then i'll
+announce that i want to build something
+like this there will be multiple
+organizations that will build and then
+based on those bids i'll choose
+the organization or the team that i want
+to
+give the project right so uh
+now if i want to build an app or a
+website
+uh in the simplest form okay so
+i'll provide some requirements to the
+organization right so what
+requirement gathering is basically once
+this abc organization gets the project
+and if i am the customer
+then i will provide the requirements or
+you know there will be team of people
+basically in the customer
+you know team so who will
+provide the requirement to the
+organization who wants to
+build the software right or who will be
+building the software for us
+so those requirement when gathered by
+this particular organization is known as
+requirement gathering
+okay so all the features that i want to
+be in my app or in my website i will
+provide those details and then
+all the details will be documented okay
+so all the details will be documented
+and this is what the requirements
+document is
+in the waterfall approach this was a
+lindy you know requirements document
+but in agile it's in the form of user
+stories or epics basically so epic will
+be the high level user story
+that is what captures the high level
+requirement of the customer
+okay so this is what a requirement
+gathering
+phase is when you gather the requirement
+about the software what customer is
+actually looking for
+in or in terms of feature what the
+customer is looking for into
+the software or the app that you're
+trying to build
+then the analysis phase is basically
+once you gather the requirement you also
+analyze the requirement whether those
+requirements are feasible or not
+right so feasibility analysis is very
+important so
+once the customer provides a certain
+requirement there might be some
+limitations in terms of technology
+support or any other
+you know issues because of that
+you might not be able to fulfill those
+requirements or not be
+able to implement those requirements so
+in that particular case
+what you need to do is you need to
+basically analyze and understand that
+whether those requirement implementation
+is possible or not
+if not you need to communicate that to
+the customer about
+the analysis and then there will be
+discussion and
+updates accordingly to the requirement
+okay so this is about the requirement
+gathering and analysis phase this is the
+first phase of software development life
+cycle
+the next phase is the design phase all
+right
+what this design phase is all about so
+once the requirement
+are available in the design phase what
+the technical architects do
+is in the team you have the requirement
+and based on those requirements you want
+to basically
+lay the foundation of how the software
+will be built
+right so say for example you want to
+build a house okay
+so the first thing you do is you design
+how you want to build
+right you don't directly start building
+the house without
+having a design and understanding how
+the house will look like
+so if a customer said that i want you
+know three rooms in my house two
+bathrooms
+um you know two kitchen living room
+so all those things need to be designed
+properly
+first and shown to the customer and uh
+clarified from the customer
+is this how you want to you know um is
+this where you want your room to be
+is this where you want your kitchen to
+be right so same
+is true with the software you need to
+basically
+first design based on what you have got
+gathered as the requirement
+and then analyze with the customer the
+design that that's what exactly he's
+want he wants
+or she wants so similar is the case like
+the car case
+so i have the car a customer asked to
+you know build a car with four wheels
+and i have put four wheels here
+right so this is not fit for you so i
+need to basically have the design and
+show it to customer whether you want
+wheels here or whether you want wheels
+here right so customer will say no no
+this is not what i want
+this car is not going to move right so i
+want a car that moves so this is how you
+clarify the requirement with the
+customer
+okay so in the design you design how the
+overall
+software is going to you know what the
+design will look like
+so technical architects do it and then
+this is what the design
+phases and in design there are different
+phases
+as well so high level design low level
+design um
+that is within the design phase
+so that's the second phase third phase
+is develop
+now what happens in develop is
+so development the development phase is
+actually the coding phase
+right so once you have the design ready
+and you know what you are
+going to build then you start the
+development work or you start building
+the house right so you have the design
+you have the foundation laid
+and then you know you start
+putting the bricks and same is the case
+with the
+software so once the design is ready the
+next phase is the development of coding
+phase wherein the development team will
+start
+writing the code to implement those
+requirements
+okay the fourth phase is the
+test okay so once the development is
+done
+and a development team has you know
+created certain features or developed
+certain features they will
+provide those features or they'll deploy
+those features
+into the test environment for the
+testers
+to test okay now if you're you will be
+working as a test
+uh tester within team you will go to
+that particular you know test
+environment and
+launch the application or the app and
+verify
+that whatever features or whatever
+requirements are being built in this
+particular release
+they are working as expected right so
+this is the
+testing phase so in testing phase you do
+the testing work for the
+application or the app okay
+then after the testing
+is successful everything is fine and
+stakeholders have agreed
+to release the software the next phase
+is
+to basically deploy right
+what does deployment so deploy means
+deploying to production
+so you won't be having all the code into
+the testing right you have to basically
+move it to production where the customer
+can access or if it is for the public
+user for example
+gmail is the application which is used
+by everyone right
+all the public whoever has the gmail
+account or wants to create a gmail
+account
+now if gmail google would have developed
+and
+just kept it there in their testing
+environment and not available
+over the internet then that's just
+within their organization it's not
+available to the public
+now if it wants the the
+customer for gmail are the people like
+you and me
+right so they have to move it to the
+production over the internet
+and this is what deployment is so in the
+deployment they move the code to the
+production
+and make it available to the relevant
+customer for
+whom that software is being built so in
+in gmail case it is for
+us and that is why it is you know
+deployed in the data centers
+or the whole code and it is available
+over the internet for us to
+access the gmail emails all right so in
+the deployment phase the actual code is
+being deployed
+for the customers who are going to use
+it
+it might be a set of customers or it
+might be the wider public
+all right so it depends what the context
+is of that particular
+software so after the deployment phase
+the next phase is the maintenance
+all right so in maintenance phase
+once the deployment happens okay in the
+production
+the software needs to be maintained
+right so for example you
+buy a car you bring it it's a new car
+after every six months you have to
+service it right so it is required
+because if you want to use
+the car without any issues you have to
+basically
+take care of it you have to maintain and
+you have to see that there are no issues
+or there are there are every every
+functionality or machinery is working as
+expected
+similarly in software you have to
+basically ensure that you do that
+maintenance or regular maintenance
+um uh for the software so that it is
+not it doesn't crash so say for example
+the software
+uh might try to do you know hardware
+issues or
+there might be you know issues within
+the software itself so as we have
+already understood about the seven
+principles of software testing
+so 100 testing is not possible and even
+though
+if you still can't find any more issues
+in your software
+it doesn't mean that the software that
+deployed
+that is deployed in the production is
+100 defectory right
+so you can't say that so in maintenance
+phase what happens is you basically
+regularly maintain the software
+and you also fix any of the production
+issues that come through right so once
+the software is in the maintenance
+you keep a watch on
+what all issues are being reported by
+the customers
+and if there are critical issues or any
+issues that are being reported by the
+customer they
+are being fixed and redeployed in the
+production so this is what what happens
+into the
+maintenance phase right so these
+are the key six uh so basically six
+phases of software development life
+cycle
+and you need to understand the software
+development life cycle
+before you understand the software
+testing life cycle
+in the next tutorial that i'll cover
+right so requirement gathering and
+analysis
+design development testing deploy and
+maintenance very simple
+it's a phase or a life cycle that
+any development team will follow to
+develop any software or application
+right now these phases
+this is uh you know will remain
+true for waterfall for v model for an
+even for agile right so in
+agile uh you know you will have the
+requirement gathering so this
+is this won't happen in each and every
+sprint but it will happen in you know
+say for example two to three months or
+in in a one
+increment of program increment so there
+will be requirement gathering phase
+and then design development testing
+testing will happen
+design development testing happens in
+very short iterations two to four week
+cycle
+but phases are still same so phases will
+still be there
+the only difference which happens
+between these development approaches
+is the timeline that you follow in
+waterfall approach
+it will be longer timelines in a child
+it will be smaller timelines
+in agile maintenance you know like
+deployment
+and maintenance or deployment to
+production uh can happen every month
+okay so it depends how the organization
+wants to deploy to the production
+okay but in waterfall it was usually
+like six months to one year so it
+depended
+uh how the organization wants to deploy
+the production waterfall approach
+right so this is the basic software
+development lifecycle
+um understand it very well
+if there are any doubts please comment
+in the comment section
+and i'll clarify all those doubts so
+that you are good enough
+to go ahead and explain it to any
+interviewer
+in the software testing interview so
+that's all for this tutorial
+please do share and subscribe and thank
+you very much for watching

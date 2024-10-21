@@ -1,0 +1,1066 @@
+what's going on guys hope you're doing
+awesome so in this tutorial we're gonna
+do the coolest project ever basically
+what we're gonna do is we're gonna
+create our own Google Translate well
+sort of specifically we're gonna
+implement a sequence of sequence model
+using LS themes on a data set with
+German and English sentences but before
+that we do that let's play that
+beautiful intro so I went through the
+sequence sequence paper in my last video
+but for those of you who didn't watch
+that one let me do a quick 30 second
+recap and let me bring out this figure
+right here so this beautiful figure what
+we're gonna have is we're gonna have two
+LS DM s so we're gonna have this left
+one this left one right here which is
+gonna which is called the encoder and
+it's gonna take the German sentence and
+it's gonna produce this this red box
+right here which we're gonna call the
+contacts vector or Zed and this is gonna
+be input to the other LS diem which is
+going to be called the decoder and
+essentially this one is gonna take a
+star token and then it's going to start
+predicting these words these translated
+words and cell by cell it's gonna
+produce the output sentence alright that
+was a bit longer than 30 seconds but
+never mind let's get started with the
+code alright so let's start with our
+imports and I'm gonna cheat don't be mad
+I'm gonna copy those in right here so we
+just have you know torch and we have
+torch text which I've made tutorials of
+if you wanna watch those and we're gonna
+import the multi 30k data set which is
+as I said in an intro a German to
+English data set and then we're going to
+import field and bucket iterator for the
+pre-processing we're gonna have numpy
+we're gonna have Spacey for a tokenizer
+and then we're gonna have tensor board
+just to get some nice cost plots or loss
+loss plots so anyways let's first do the
+space eager to be Spacey dot load of
+de which is gonna load the the German
+tokenizer and sorry for those who watch
+my tour text tutorials I'm gonna go
+through basically the same thing
+so Spacey English its Spacey that load
+in the air so this is gonna be our
+English tokenizer and we're gonna define
+tokenizer in German it's gonna take some
+input as text then we're gonna return
+tokenizer text for toke in space see
+germ tokenizer of some text
+alright so it's just gonna take some
+text I don't know some text in German
+and it's gonna output so basically if I
+have hello my name is and it's gonna
+output basically a list of hello my name
+it's something like this so it's a
+tokenizer and that's what it does so I'm
+gonna do the same thing for the English
+one also gonna take aim put some text
+and let's just copy this in right here
+so taupe text for Spacey underscore
+English tokenizer alright so let's now
+construct our field which is gonna we're
+gonna define how the pre-processing of
+the text is done so we're gonna do field
+and we're gonna do tokenize equals
+tokenize German and then we're gonna do
+the lower equals true to make everything
+lowercase and we're gonna do in its
+token to be start-up sentence like this
+and and token to be end of sentence like
+this and then we're gonna need one for
+our English text as well so we're gonna
+do English equals field
+yes I'm rushing this a bit because I
+have made this in my previous tutorial
+watch this if you want watch those if
+you want more info about this this is
+kind of just coding it for the sake of
+coding it I guess so then we're gonna do
+lower equals true and we're gonna do
+tokenize English so now that we have
+those we can use the multi 30k dataset
+so we're going to use train data
+validation data and test data to be
+Multi 30k dot split and then extensions
+are we're gonna have dot de for the
+German one and then I'm gonna have dot
+en for the English one and then we gotta
+define our field and our fields are
+gonna be German first to match the first
+in the extension which is de for German
+and then we're gonna have English okay
+now that we have our training data all
+that we need to do or ASR two things we
+need to do first we need to build our
+vocabulary alright easy enough we're
+just gonna do German that build vocab on
+our training data and we're also gonna
+define sort of a max size of the
+vocabulary so I don't know ten thousand
+something like that and we're gonna use
+a minimum frequency of two so
+essentially if a word is only repeated
+once in the entire data set it's we're
+not gonna add it to a vocabulary it
+needs to be at least two times and then
+we're gonna do English dot build vocab
+of training data and max size is equal
+to a thousand yeah it should have copy
+pasted this so minimum frequency is two
+and yeah alright now we come to the fun
+part we have one more thing to do with
+the torch text which is define our
+bucket iterator but we're gonna do that
+later on and that's the only thing we
+have left so what we what we we have is
+actually you know implementing the model
+so we're gonna have class encoder and
+then module let me just do a pass so we
+can see sort of the overview of what
+we're gonna do we're gonna have an
+encoder right the first lsdm and then
+we're gonna have decoder which is also
+gonna hurt an in module that's the
+second ellis IAM and then we're gonna
+have another so sequence to sequence
+it's also gonna import and in module and
+so essentially this sequence of sequence
+is gonna combine the encoder and decoder
+okay and is there anything else no so
+okay that's this is gonna take a little
+bit of time but we're gonna go through
+it step by step so first thing we're
+gonna do is we're gonna have in it self
+and we're gonna define
+we're gonna have some input size and
+let's see the input size yeah so the
+input size is basically going to be the
+size of the vocabulary in this case the
+German vocabulary right because this is
+going to be the input to the encoder
+then we're gonna have some embedding
+size so that each word is mapped to some
+D dimensional space okay basically and
+then we're gonna have hidden sighs and
+we're gonna have a number of layers of
+this lsdm and then we're gonna have
+dropout and so first gotta call super of
+encoder self in it like this and so I
+guess we can do self that hidden size is
+equal to hidden size and self letting on
+layers is just equal to num layers and
+then we can sort of define all of the
+modules that we're gonna use so we're
+gonna use dropout we're gonna do self
+that dropout is and then that dropout
+with some value empty of the parameter
+of how many nodes to drop so we're just
+gonna send that in as a dropout that's
+maybe a bad name
+maybe we should name it like I don't
+know like P or something and then self
+dot embedding is gonna be an endowed
+embedding of some input size and it's
+gonna be mapped to some embedding size
+all right and then we're gonna have self
+at RN n it's gonna be N&L STM and the
+Ellis Amy is gonna take his input so
+we're gonna run the embedding on the
+input and then we're gonna run the RN n
+on those embeddings so this side the
+input of the other serums is the
+embedding size and then the output let's
+see so the the output from the LS M is
+just gonna be the hidden size and we're
+gonna have num layers and then we're
+gonna have dropout equals dropout which
+well dropout equals P so this is a what
+is it called key a key argument yeah key
+argument so then we're going to define
+forward self comma X so we're gonna
+write we're gonna send him
+I guess a long vector of of you know all
+of the indexes of the word that is in
+the vocabulary well that was a poor
+explanation so basically we're gonna
+have a sentence first of all it's gonna
+be tokenized and it's gonna be mapped to
+some index corresponding to where it is
+in the vocabulary and then that's gonna
+that vector is gonna be sending to the
+lsdm so this is a vector of indices so
+what we're gonna do first so basically
+this shape of X is sequence length comma
+n right where where n is the batch size
+and then we're gonna do the embedding to
+be self dot drop out of self dot
+embedding of X and so when we have the
+embedding we're just gonna call the RN n
+on this embedding like this and so we're
+gonna have some outputs and we're gonna
+have some hidden and cell output and the
+only thing that we care about is the
+hidden and the cell right if you
+remember that figure I showed in the
+beginning all we care about is a context
+vector and the context vector is the
+hidden in the cell so the output from
+this is a irrelevant and so we're gonna
+just return hidden comma cell and let me
+just also explain the shapes of this so
+nothing is missing in this tutorial so
+we're gonna say like embed the shape of
+the embedding is gonna be sequence
+length right comma n which is the shape
+of X but then each of those so each word
+is also going to be mapped to some so to
+some embedding size okay so we basically
+added another another dimension to our
+tensor so that I know we can define the
+embedding size but let's say it's 300 so
+for each word there's now a mapping to
+some 300 dimensional space okay so now
+that we have the let's see we have the
+encoder and we know that we got the
+hidden in the cell we're gonna start
+with the decoder and let's do the same
+thing define in
+and we're also gonna take self input
+size the embedding size hidden size and
+then we're also gonna have some input
+output size which so you know the the
+input size here is going to be the size
+of the the English vocabulary right but
+if you think about it the output size is
+going to be the same as input size okay
+so we're gonna output some some sort of
+some vector which corresponds to values
+for each word which is in our vocabulary
+so basically if we have a I don't know
+like if we have 10,000 in our vocabulary
+in English vocabulary
+so we're gonna have like a like a a
+output which is 10,000 dimensional where
+each node represents sort of the
+probability that it is it's it's that
+word in the vocabulary
+okay so then then the input size is
+gonna be the same as the output size but
+so we could have just written this as a
+seed like output size or input size but
+just to be very clear and then we're
+gonna have the same the number of layers
+and we're gonna have some drop out and
+as usual we gotta call the super and
+self dot in it and so let's see what did
+we do with the self dot hidden size to
+be hidden size and then cellphone on
+layers to be num layers and self that
+drop out like this is gonna be an entire
+op out and yeah so we did and drop drop
+out of P and and yeah so we got to do
+the embedding which is gonna be a nun
+dot embedding of some input size and map
+to some embedding size and yeah so let
+me also well actually let's do that in
+the forward let's just define all of the
+the methods that we're going to use
+or the modules and then separate RNN is
+gonna be n n dot L STM and the input to
+the LCM is gonna be the embedding size
+map to some hidden size number of layers
+and then dropout equals P and yeah also
+one thing that's important is that the
+hidden size of the encoder and the
+decoder are the same so just one thing
+to keep in mind and then we're gonna
+have also a fully connected which is
+going to be a nun linear of hidden size
+to some output size and again the output
+size is just going to be the length of
+our in this case or English vocabulary
+we're all gonna define all of those
+later
+but we're gonna do this forward self dot
+X but it's also now gonna take in the
+hidden and the cell okay so the context
+vector we talked about and then one
+thing to I need to say here is that the
+shape of X is going to be n like this
+but we want it to be you know so but we
+want one comma N because what the
+decoder is gonna do it's gonna predict
+one word at a time
+okay so given the the previous hidden
+and the cell state and sort of the the
+previous word it's gonna or I guess yeah
+the previous predicted value the
+previous predicted words let me bring
+out this figure again so sort of it
+predicts good and then it's gonna take
+in good right here and then sort of also
+the previous hidden cell and then it's
+going to output a one word so sort of
+this is gonna work a word by word and if
+so this one here represents that it's
+just a single word we have n batches of
+a single word at the same time and this
+is in contrast to you know the encoder
+which had sequence length of words at a
+time because in the encoder we can just
+sending the entire German sentence but
+when we actually do the prediction we're
+doing it one word at a time
+so so this is easy in pytho we're just
+going to do X ton squeeze of zero so we
+just added one dimension and now we can
+send it to the the embedding so we can
+yourself that dropout of self dot
+embedding of X and this is gonna just be
+called our embedding and then yeah so I
+can do these shapes again so embedding
+shape it's just gonna be 1 comma n coma
+and
+[Music]
+embedding sighs yeah then we're ready to
+send it in through the lsdm so we're
+gonna do self dot RNN and we're gonna do
+and betting it's gonna take the
+embedding as input and then it's also
+going to take the hidden and the cell
+right the hidden in the cell we sent in
+here so this is gonna be we're gonna get
+the output but then we're also gonna get
+the hidden ins and the cell and we got
+to keep track of all because all of
+these are important now because we're
+gonna use the hidden in the cell for the
+next prediction sort of the next word we
+predict and the outputs of course is
+just the the output for this well we
+think this next word should be so the
+McGinn shape of outputs is gonna be 1
+comma n comma hidden size hidden side
+and is there anything else I want to say
+here
+no we're gonna do one more so we're
+gonna do self-thought fully connected of
+outputs and this is gonna be called our
+predictions and so basically so put the
+shape of predictions is gonna be 1 comma
+n comma you know the the length of
+vocabulary so our English vocabulary and
+this is then gonna be sent to you know
+our loss function later on but what we
+want to have the shapes is that we want
+to remove this one now so so you know
+let's just do predictions dot squeeze of
+0 and then call this our prediction and
+then we can just return let's see why
+did we want to remove this dimension I
+think it was because when we send it to
+the C when we send it to the
+[Music]
+when we send it to the loss function
+later on let's see let's keep that in
+mind let's see if we if I remember why
+we wanted to remove that one but
+essentially you know all of these things
+are like we need to make sure that your
+shapes are the way that PI torch wants
+it and sort of it's kind of a guess and
+try like you you try something in the
+shape scene and work ok what does it
+want and then you just adapt it until it
+works so that's yeah so there's nothing
+like major major thinking behind these
+shapes right here I'm just trying to
+explain the top pattern behind why I'm
+doing the shapes and what the shapes are
+currently at so you sort of follow every
+step yeah I just wanted to add some
+words on this why we squeeze the first
+dimension so it is nothing to do with
+loss function directly
+so essentially you know we're predicting
+one word at a time
+but we of course want to predict all of
+the words in the target sentence so what
+we're gonna do later on when we well
+you're going to see in the sequence the
+sequence model we're going to sort of
+add the output from the decoder one step
+at a time and then having this shape
+makes sense yeah that's the best
+explanation I can have it's gonna make
+sense later on anyways moving on anyways
+then we're going to return the
+predictions but we're also going to
+return the hidden and the cell and let's
+see so now that we have we have our
+encoder and we have our decoder now
+we're ready to combine those two so
+we're ready to create our model
+essentially and our model is going to be
+this sequence of sequence so we're going
+to define in it I'm going to self and
+we're gonna send the encoder and the
+decoder then we're going to do super of
+sequence sequence of self dot in it and
+we're gonna do self that encoder is just
+gonna be encoder so if the decoder it's
+gonna be you guessed at decoder and then
+we're just gonna do the forward one so
+let's see what are we gonna send in here
+so we're gonna send in our we're gonna
+send in the source sentence like they
+did the German sentence and then we're
+also going to send the
+the the correct target sentence and I'm
+gonna explain that a little bit more so
+we're gonna first we're just gonna send
+in the source and we're gonna send you
+the target so the correct translation
+and then I'm gonna use one more thing so
+I'm gonna use teacher force ratio we're
+gonna set this to 0.5 so let me explain
+this what this is used for so you know
+as I said let's bring out this figure
+again so as I said it's going to run at
+the beginning it's gonna have a star
+token and it's gonna predict one word
+and then it's gonna you know take this
+word and it's gonna be the input to the
+next I guess
+cell okay for then so that it can
+predict in the next word well sometimes
+you wanted to use you know this
+prediction is not always correct and you
+don't want it to send in the like the
+incorrect one for the next cell because
+that would just like that would ruin a
+lot of sentences so for training phase
+so what you want is you probably want to
+do some prediction right here that can
+later be on used for creating the you
+know calculating the loss and so on but
+then for the next cell you actually send
+in the target one like that the real one
+or what it should translate to and
+that's why we send in the target and
+then for the let's say the teacher force
+ratio is that sometimes we're gonna use
+the correct one right here and sometimes
+we're gonna use a fake one I mean not a
+fake one so the predicted one the
+predicted one from the previous cell
+okay so sometimes we're gonna take the
+prediction some and sometimes fifty
+percent of the cases we're gonna choose
+the target translated word but it should
+have been so sort of the reason why we
+do this is we don't want to talk teacher
+force ratio to be one I to be the
+correct target words all the time
+because then a test time the words that
+it predicts might be completely
+different than what it sees a training
+time all right I talked too long about
+that one so anyways we're gonna do batch
+size and this is going to be sourced
+that shape of one
+and yeah that's just shape of it so
+we're gonna send him let's see
+source I think yes the source is gonna
+be don't quote me on this but I think
+it's gonna be target link , the the
+batch size if I remember correctly or
+comma n so yeah anyways the batch size
+is gonna be the the second dimension of
+the source shape and then target length
+is gonna be target dot shape of 0 and
+unless you target a vocabulary size is
+gonna be the length of the English
+vocabulary all right and we created B
+let's see let me scroll up here we
+created the English vocabulary so we can
+just do length of English vocabulary and
+then let us start with doing the output
+to be well actually it's 2 so remember
+what we're gonna do now is that we have
+an encoder and we have the decoder and
+we're gonna run through the encoder to
+get our hidden and the cell and that's
+gonna be the input to the decoder and so
+the first thing we're gonna do is we're
+gonna kind of build up those hidden and
+cell state so we can do you know hidden
+comma cell to be self that encoder of
+source that my cell phone right now
+alright I'll be right back alright so
+don't people know when I'm making videos
+anyway so where were we
+we have target vocabulary size and then
+hidden itself from the self dot encoder
+alright what's the next step well the
+first thing we're gonna do is we're
+gonna have the star token so we're gonna
+have so we're gonna do x equals target
+of 0 so that this will be the grab start
+token and then what we're gonna do is
+we're gonna send in this to the decoder
+right and we're gonna do this word by
+word so it's the give 40 in range of 1
+comma target Len and target length and
+then so we're gonna do output he didn't
+call my cell so we're gonna call the
+decoder
+safe the decoder of X and we're gonna
+use the hidden and the cell from the
+encoder so we're gonna also input hidden
+and the cell and then so the output from
+this is gonna be the next hidden in the
+cell which is going to be reused in the
+loop right so then we're gonna do
+actually I forgot one thing alright so
+what we're gonna do also is we're gonna
+add here outputs to be torched at zeroes
+of target length batch size and then
+target vocabulary size then we're going
+to also do dot two device so essentially
+we're gonna predict one word at a time
+right and for each word we we predict
+we're gonna do it for an entire batch
+and then every prediction is gonna be
+you know sort of that that vector of of
+the entire vocabulary size so when we do
+one output right here it's gonna be
+batch size comma and then target
+vocabulary size that's going to be the
+size of the output tensor and then we're
+going just gonna sort of put that on
+this dimension right here alright so
+that was a poor explanation it's gonna
+make more sense so we're gonna do output
+of T and then we're gonna equal that to
+output all right and we're adding it
+along that dimension the first dimension
+okay and then we're gonna do so we're
+gonna get the best guess which is going
+to be the output and then the Arg max of
+one right since it's outputting in the
+second dimension right so it will be so
+the output will be wait I didn't mean to
+run that so output will be n comma and
+then English vocabulary size and so for
+each batch if we take the Arg max of
+this dimension we'll get the index of
+the best guess that the decoder output
+it all right so then what we're going to
+do we're going to do
+so the next input to the decoder is
+going to be target t if random dot
+random is less than teacher force ratio
+else best guess
+okay so we're gonna the next input to
+the decoder will be the target word if
+this random dot random which is between
+will be between zero and one is less
+than this this teacher force ratio that
+we input to the model so 50% of the
+times it's gonna get the actual one and
+the rest is just gonna get the guests
+from the decoder then at the end of this
+loop we're just gonna return outputs
+okay is there anything else I think
+that's it's actually so now we've come
+to a to the point where we have the
+model and we have done the encoder and
+decoder now we just gotta set up the the
+training phase right so let's do now
+we're ready to do the training
+well that was alive we need to define
+everything first so we need to do
+training hyper parameters we gotta do
+motto
+yeah model high parameters I guess so
+we're gonna do like the number of epochs
+let's do like 20 learning rate its to
+0.001 and then batch size let's do 64
+it gets pretty standard so far and then
+we could do like load model equals false
+and then the device torch that device
+CUDA if torch CUDA is available else
+we're gonna use the CPU and yeah so the
+input size to the encoder it's just
+gonna be the length of the German
+vocabulary and then the input size to
+the decoder will be just the length of
+the English vocabulary the output size
+is gonna be the length of the English
+vocabulary as well and then we can
+define the encoder the embedding size so
+let's say I don't know 300 and then the
+decoder embedding size 300 as well I
+think 300 might be actually a large
+dimension for the embedding size so I've
+seen people use like a hundred for the
+embedding size but I think that's on the
+smaller end so I guess somewhere around
+100 to 300 is a good number I know
+you're gonna do the hidden size let's do
+a thousand 24 and I think so the paper
+review on the sequence is sequence
+though they use the hidden size of a
+thousand twenty-four thousand or
+something like that
+but I think that's small for today
+standard since that paper was from 2014
+I don't know it's I guess a medium size
+today so then we're gonna do the number
+of layers and let's do just two layers
+thinking the paper they did for let's
+just do two so it doesn't take too long
+and then let's do encoder drop out to be
+0.5 decoder drop out to be 0.5 and one
+more thing let's do something for the
+tensor board so we're going to do
+writer by the way check out my video on
+tensor board if you're unsure about this
+but we're just gonna do summary writer
+runs loss plot so what we're gonna do is
+we're just gonna essentially we're gonna
+just do it to get a loss plot so that we
+can see sort of how the loss is
+decreasing and also we're gonna do step
+equals zero all right all right that was
+a lot to do and then we got also do the
+get iterator from what I said in the
+beginning of the video we also got to
+use the bucket iterator to split the
+data so we're gonna do training iterator
+validation iterator and then that this
+test iterator is bucket iterator dot
+split and we're gonna send in the train
+data validation data and the test data
+and one note on this make sure that they
+match the training reduced first and
+then this will be the train data
+validation iterator is second and the
+validation data a second okay so then
+we're gonna do the batch size which is
+just going to be equal to batch size and
+I guess one thing that I didn't talk
+about that much in my torch text
+tutorials is that you can do sort within
+batch we're gonna use that since it will
+be true and let me write this line and
+I'll explain what it does we're gonna in
+short key is lambda X and then we're
+gonna do the length of X dot source
+alright so what this does is that we
+have all of these sentences right and
+they vary in length what their what the
+bucket area is gonna do when we have
+sort within batch true and then they
+sort key right here is that it's gonna
+prioritize to have examples that are of
+similar length in a batch right and why
+we want to do this is because we want to
+minimize the number of padding so that
+we can sort of save on compute all right
+and then we're going to do device equals
+device and all right and then I think
+we're just going to call so we're going
+to encoder net to be the encoder and
+we're gonna send all these arguments in
+so we're gonna send an input size of the
+encoder encoder embedding
+we're also attending the hidden sighs
+I'm gonna sing the number of layers
+we're gonna send encoder dropout and
+then we're gonna make it to CUDA if it's
+available and let me just copy this
+because we're gonna do I guess pretty
+much the same C decoder net and then
+we're gonna call the decoder
+this should be the coda right here and
+also the coder embedding sighs hidden
+sighs this should be the output size and
+the number of layers and then decoder
+dropout dot two device all right we can
+do the model we're gonna do sequence to
+sequence and we're just gonna send them
+the encoder and a decoder and lastly
+we're just gonna make it to device all
+right we're almost there I promise we
+got some more things to do so we're then
+gonna do this is gonna be a long video I
+think anyways we're going to pad index
+to be English that vocabulary dot string
+to index of the pad in the end the pad
+string and then we're gonna do the
+criterion and we're just gonna use the
+cross entropy loss and we're gonna input
+one keyword argument here we're gonna
+use ignore index is equal to pad index
+so that we don't if we have padded it
+cuz it's gonna so that all the examples
+in the batch are saying similar lengths
+then we don't want to pay anything for
+that in our cost function all right and
+then we're gonna use if load model we're
+gonna do load checkpoint torch that load
+and then my checkpoint dot P th star and
+then model optimizer right I think so
+yeah I think I forgot let's see I got a
+load that as well and so I'm gonna do
+from utils and this is a a separate file
+that I created and I just brought some I
+guess nice functions to have like we're
+gonna do translate sentence we're gonna
+calculate a blue score I'm gonna do save
+checkpoint and load checkpoint
+so the to save the model and load the
+model I've made a entire separate video
+on that if you wanna check that out and
+then for the blue score and the
+translate sentence that's just too nice
+util functions that we're gonna we're
+gonna use I'm gonna probably talk about
+show the implementation in a separate
+video just now to make this like over an
+hour because I don't know how long this
+video is gonna be right now so then if
+it's we're gonna use false yeah the
+beginnings we don't have a model then
+we're gonna do for epoch in range of non
+a pox and we're gonna do print we're
+going to be Park epoch out of number of
+epochs like like this
+and then we're going to do checkpoint is
+state licked and we're gonna do model
+that state dick and then optimizer and
+this is just standard code too so that
+we can save the model state ticked I'm
+gonna have all the parameters and then
+we're just gonna call it to the save
+checkpoint of checkpoint alright then
+what we're going to do is we're going to
+do for batch sit for patch in fact comma
+batch in enumerate train iterator
+then we're gonna do input data is equal
+to batch source and then we're gonna
+just make it to CUDA and then the target
+is gonna be the batch dot target dot 2
+device and so one thing we got to do now
+is that the we gotta just send this to
+our model write the input data and the
+target and then the output right here is
+gonna be so the output shape is gonna be
+the target length and it's gonna be bash
+size and then output dimension okay
+so there's a problem here is that in
+that cross-entropy loss wants to have
+sort of a matrix this would be a
+three-dimensional tensor but so for
+example let's say that we would have the
+M nice data set we would have n comma 10
+to be the output sort of n examples at
+the same time in each example outputs 10
+for you know each digit and the output
+so and and then and then the you know
+targets would be would be just this
+shape right and we got to do similar
+here in that so you can sort of view
+that we have a batch right and for each
+batch we sort of have 20 outputs from
+this model well one thing we can do is
+that we can concatenate or we can yeah I
+guess it's called catenate we can sort
+of put these dimensions together so that
+each batch has I guess like the target
+length amount of output that's going to
+be sending to cross-entropy loss yeah I
+don't know if I confused you right there
+but anyways all we're gonna do is we're
+just gonna do output and we do some
+reshaping so we're gonna do upward and
+we're gonna do dot reshape then we're
+gonna do minus 1 and then output shape
+of 2 right so we're going to keep the
+output dimension which would be the size
+of the vocabulary and
+just gonna sort of put everything else
+together so we're just gonna I don't
+what is the word not concatenate but
+like anyway so I lost the word and then
+we're gonna do target is target oh one
+more thing actually we're gonna do one
+see we're gonna do one and then rest so
+essentially the first output right here
+is gonna be the the star token but we
+don't want to send that to our to our
+model so we're just gonna remove that
+and we're gonna do the same for the
+target and we're gonna do reshape for
+this one as well and so that this one is
+just a single dimension so that this
+would take target length times the batch
+size and that would be the shape of
+target then we can do optimizer dot 0
+grad loss is going to be the criterion
+of output and target then we can do law
+start backward we can also do another
+thing which is sort of to to avoid that
+the gradients become too large so that
+we avoid exploding gradient problems we
+can do torch and then you tailstock clip
+grad norm and then model dot parameters
+and then we can do max norm equals 1
+this is just to sort of make sure that
+the gradients are in a healthy range I
+guess and then we do optimizer dot step
+and yeah I promise we're almost done we
+just have like two more lines so we're
+gonna do brighter dot add scalar
+training loss loss and then the global
+step is equal to step and then we're
+just gonna just step plus equals one all
+right
+so now believe it or not we've created
+the entire thing we've basically created
+google translate all that we're gonna do
+now is we're gonna run this for twenty
+parks we're just gonna take a while but
+that's the best part
+you know when you've created everything
+now it's just time to relax it back
+drink some coffee just have a good time
+and so I'm gonna press the button and
+whoa okay I thought I was gonna have a
+good time
+tokenized Jerry not to find that's like
+in the beginning to see tokenized dirt
+right here tokenizer alright tokenizer
+if that was the only air then I'm very
+happy right now
+and it seems to work alright I'll see
+you guys in a bit
+in about one hour be right back okay so
+we did did we did get one more error
+which is that this is not valid ish this
+is gonna be validation they don't know
+the value data all right
+let's rerun this and believe it or not
+we got one more error so let's see we
+get we've got to do our optimizer as
+well so we're gonna do optimizer equals
+opt-in Adam model dot parameters and
+then the learning rate will just be
+learning rate and hopefully that was the
+last one unless we run this all right so
+it's it's training now and it seems to
+work but I got one more idea that I
+would like to do so I took one sentence
+here from the see right here sentence so
+I took this quite a long sentence right
+here and let's keep it on one line or we
+could do like yeah we can keep it all in
+one line anyways this very long sentence
+here I don't know it was something like
+I don't know German but it's like a boat
+was pulled by a large team of horses or
+something like that so this is in the
+training data and I thought it would be
+interesting to to just like see how how
+this translated sentence would improve
+as epochs go on so I was thinking we
+could do like we can do model dot
+evaluate and then we can do this
+translate sentence that I used that I
+created and I'm gonna show that one
+probably the next video but anyways we
+can send it to translate sentence and we
+can do model and then this sentence and
+we gotta send in the the fields as well
+and then the device and then the maximum
+length of the prediction so this will be
+just purely a we're just gonna sending
+this string and we're just gonna get
+what does the model predict that it's
+gonna be and that we can do sort of like
+print translated example sentence and we
+can do a new line and then we can do
+translated sentence and
+then we can do mala train again alright
+so the model that eval is just gonna I
+guess turn off the dropout in this case
+yeah I just thought that would be
+interesting let's now run this and let
+it rain alright I gotta just show you
+what this sentence was actually saying
+so the center's were here that I took
+from the train data it said about with
+other men is pulled to the shore by a
+large team of horses okay and I trained
+the model so I'm gonna bring this over
+here and yeah I trained it on a couple
+occasions so I just printed it too I
+just wrote it or not nope add plus plus
+file so anyways on the first epoch it
+said actually there's another epoch that
+I forgot to copy and that was
+essentially like just random words and I
+guess this is also random words but it
+was more random words so it didn't have
+this end of sentence token but yeah so I
+guess this is the second epoch
+technically so then it was like a young
+player is a AAA and you you'll see a lot
+of these a and their or is or those
+words since they they are very similar
+in the data so it's not uncommon to just
+see like a AAA and that's all the model
+predict alright and then let's let's see
+for the next epoch a runner in a with a
+in the background alright it doesn't
+really make sense like there's nothing
+to do with boats or anything like that
+but at least sort of doing something
+that makes I guess some sort of sense a
+baseball player with a is is the the I
+guess that doesn't make any sense a
+football player in a is being ready to
+AAA okay and then it comes a both with
+with his men is being pulled by a large
+building I mean it got something's right
+in this one and then a boat with a full
+of a is being pulled by a large so we
+can sort of see you know the model is
+actually progressing he's doing
+something that makes sense right hey
+both both is being pulled by a large
+large large large large in the sentence
+and then a both both is being pulled by
+a large building building again
+both with with a a is pulled by a large
+being pulled by a large okay they both
+both with two men being pulled by a
+large large okay both with no passengers
+is pulled by a large Ford by a large
+okay I mean what is interesting here is
+that it's being pulled by something and
+then I guess by something again a both
+boat with two men being pulled by a
+large cable I'm not sure how it arrived
+at that one but anyways you know you can
+sort of see let's see this last one here
+a boat boat with several men pulled
+pulled by a large cable all right so
+it's sort of getting there right and I
+should have copied all of them but like
+I trained it for like 50 bucks more and
+I didn't copy it so we don't see it but
+at least we can see how it does now so
+when I rerun it now with these saved
+parameters it's a boat carrying several
+men is pulled by shore by a large team
+of horses and alright you might be
+saying like well this data isn't it's in
+the training data it's of course going
+to learn those sentences all right it
+doesn't prove anything
+well I'm gonna prove hopefully I'm gonna
+prove you wrong so we're gonna do
+something like we're gonna use Google
+Translate we're gonna write an English
+sentence and we're in translated in
+German and see if we get the English
+sentence back one thing to keep in mind
+is like this sentence has to be like a
+description of something because there's
+there's like I don't
+I tried first like writing like I really
+love peanuts and it didn't get it at all
+because there's like no sentences that
+written in that sort of that I guess uh
+what is it called in that form like
+something that I like it's more like a
+description like that person walked
+there and then yada yada yada to people
+walking walk in and to the store to buy
+very cold ice cream sort of something
+like that and then we can copy this we
+can go back right here and we can do our
+scent
+is going to be we're gonna copy that in
+and we can do I have never done this
+let's see if this makes sense
+so either you're right and this makes no
+sense or we just created Google
+Translate to people going to a cross
+getting ready to to end of sentence all
+right I'm gonna defend myself right here
+it's two people and that was exactly
+what we wrote and they're going
+somewhere and they're not getting ready
+but at least like it's getting some
+things right we have to just train this
+for a longer time and it would make
+perfect sense
+probably so one thing you could also do
+as they did in the in the paper we we
+read is that you can calculate this blue
+score and I'm gonna copy that in so we
+can probably do that at the end of
+training like this and I'm gonna do that
+and I'm gonna see so we can do like this
+and we're gonna see what kind of blue
+score we get on the test data that it
+hasn't seen before right and yeah I'm
+gonna run this it's gonna take a while
+and I'll get back when it's done so
+there was something wrong with the
+kernel and I had to restart it but
+running it again we get a blue score of
+about 21 which is you know it's not that
+bad it's all right it's not that good
+either but it's not terrible so you know
+we need to you know we're not creating
+Google Translate yet right we have some
+work to do which is awesome because then
+we got some more stuff to learn so
+basically I guess in the next video I'm
+gonna review sequence sequence with
+attention which is AI an idea that you
+like when you see it you're like oh of
+course
+but then again every idea is I guess
+easy or simple in retrospect so in the
+next video we're gonna do sequence
+sequence with attention probably review
+the paper and then we're gonna do
+implementation of that and we'll see how
+much does that improve the blue score
+and yeah so this will be the start of a
+of a nice series I guess so hopefully
+you enjoyed the video if you have any
+questions and leave them in the comment
+section below
+I think I said thank you for watching
+but yeah thank you for watching hope to
+see you in the next video
+[Music]

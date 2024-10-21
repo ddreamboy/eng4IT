@@ -1,0 +1,65 @@
+hello everyone and welcome to today's
+session on top 5 cyber security tools
+that you should be aware of do you know
+friends that a cyber security software
+is required for companies or individual
+cyber security and privacy
+cyber security is a mean of protecting
+network system application from cyber
+attacks it is employed in order to
+prevent illegal data access cyber
+attacks and identity theft so the first
+tool that we are going to study about is
+kali linux kali linux is among the most
+common tools used in cyber security this
+operating system consists of range of
+tools that are used in security auditing
+network and system scanning for
+vulnerabilities one of the main
+advantages of this platform is that
+cyber security expert with different
+levels of understanding can use it
+making it an ideal choice for even an
+entry level professional the second tool
+that we are going to discuss is
+metasploit metasploit has an excellent
+collection of tools that are perfect for
+penetration testing professionals often
+use it to meet a wide range of security
+objectives such as discovering
+vulnerabilities of system and networks
+designing strategies to improve the
+company's cyber security defenses and
+many more
+let's discuss the third tool that is
+johnny ripper security experts use john
+the ripper to test the strength of
+passwords it designs helps in exposing
+weak password that pose security threats
+to a particular system in the beginning
+it was only designed for the unix
+platform but the new version allow it to
+work on the other operating systems as
+well such as stars windows open beams
+and etc the next tool that we are going
+to talk about is wireshark
+wireshark was earlier called ethereal it
+is among the best tools for cyber
+security based on the console it is a
+packet sniffer tool that allows
+professional to allows network protocols
+and sniff real-time networks in search
+of any vulnerabilities that can be
+exploited moreover it collects necessary
+information related to the levels of
+network traffic and the last tool that
+we are going to discuss is nikto nekto
+is an open source software tool that is
+used in cyber security to determine
+vulnerabilities in the web and take
+necessary actions
+professionals use this tool to scan for
+identifying managing web vulnerabilities
+nico's database consists of
+approximately 6400 distinct types of
+security threats

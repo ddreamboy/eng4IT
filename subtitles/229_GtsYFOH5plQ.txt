@@ -1,0 +1,1193 @@
+hi I'm Casey feastler I am an associate
+professor of information science at
+University of Colorado Boulder and a lot
+of the research that I do is around
+technology ethics and especially
+research ethics
+I am part of a big project on Research
+ethics for pervasive data in
+computational research and that's a lot
+of what I'm talking about today how do
+we think about research ethics for
+computational social science especially
+when we are collecting data that is
+publicly available like from social
+media
+I'm Casey and uh my training is actually
+in human-centered Computing and law I'm
+going to talk very sparingly about law
+because as I will say at some point uh
+law and ethics are not the same thing
+and we are fortunate when they overlap
+[Music]
+um
+so
+I think it's a really great thing that
+we're starting off uh with the topic of
+Ethics because what you really hate is
+to get it at the very end now you've
+been learning how to do this for a
+couple of weeks and here's the stuff you
+should have been thinking about all
+along
+sometimes I joke that being someone who
+studies technology ethics means that I
+just make slides that look like this
+over and over until I retire
+um and you will see some of these come
+up again at various points
+we might start off with is what is
+ethics anyway in this context I am not
+going to try to answer this question for
+you at all in fact during the course of
+all of this
+I'm not really here to give you answers
+I'm here to give you questions
+so sometimes people will ask me Casey so
+you've you've finished teaching ethics
+to the computer science students when
+you're done with that are they more
+ethical
+which is a very hard question to answer
+but I also tend to think of instruction
+around things like ethics
+as not being about creating a more
+ethical person but in assuming that you
+all want to do the right thing everyone
+in this room everyone wants to do the
+ethical thing right it's that we often
+don't know how to spot the problems or
+the issues and sometimes what we should
+actually do about it is a bit elusive
+but what I'm hoping is that through the
+course of this I can give you a lot of
+things that you should be thinking about
+as you go about your work
+I'm also going to give you a wrong
+answer to this question though which is
+that ethics for researchers with the IRB
+tells you you can do
+when I say IRB here I mean this is a bit
+of shorthand because I happen to be
+standing at a university in the United
+States so an Institutional review board
+is what academic institutions in the
+United States use to do ethics review
+you might see similar things in other
+countries sometimes they're called
+ethics review boards or ethics
+committees and in some places there
+isn't this kind of review at all
+but in the United States specifically
+the purview of an IRB is very narrow
+right so ethics review at U.S
+institutions is about human subjects
+research
+and this is defined in federal law
+and human subjects research
+means either
+directly interacting with a person a
+human
+or collecting identifiable private
+information
+um and or
+um a lot of what you'll be talking about
+here most of the research that you just
+heard about in that introduction would
+not fall under this definition right
+um
+I do a lot of actual human subjects
+research interviewing people surveys
+this sort of thing but I also do uh what
+one might consider computational social
+science or even qualitative
+work on Trace data I'm going to talk to
+you actually about some work that I did
+at some point that was analyzing
+comments on news articles as a data
+source
+I did not get IRB approval for this
+project because it does not fall under
+the the definition of human subjects
+research but that doesn't mean that
+there are no ethical issues with this
+kind of research right so for example
+all of these are are things that made
+headlines
+um we have uh data from dating sites
+YouTube videos uh tweets more dating
+sites uh facial recognition from images
+found online so these are often the
+kinds of data that you're talking about
+and often we'll hear about research
+sometimes even that Sparks controversy
+and it might not even be immediately
+obvious what the data source is like the
+the famous gaydar
+study out of out of Stanford where they
+use off-the-shelf facial recognition to
+show that they could with some accuracy
+predict sexual orientation from a
+photograph
+okay
+how did they do that where did the data
+come from where do you get labeled data
+with sexual orientation because they
+didn't ask people right so that data
+came from a dating site I don't think
+that it was tender actually
+but the point is there is a lot of data
+like this that's just it's just there
+right and you'll be thinking about a lot
+of different sources of data
+and we've seen this kind of research for
+years now right and when I was finishing
+up my PhD in 2014 2015 we were just
+starting to think about this stuff like
+I was in a lab
+where we talked about research ethics a
+lot and these conversations around like
+oh well what about what about the ethics
+of using tweets like we were just
+starting to have these conversations
+like less than than 10 years ago
+frequently right and actually since then
+since uh starting in 2015 I've been
+running
+workshops at a lot of different
+conferences mostly in computer science
+around research ethics especially
+research ethics that falls through these
+cracks of human subjects research so
+especially like research ethics for
+using public data
+and we just talk about the same
+questions over and over again and having
+and and having conversations about
+research ethics especially for public
+data
+what is public anyway
+um when is or is ever consent
+appropriate what about violations of
+terms of service
+how do we account for the fact that even
+if we might think this is unreasonable
+most people don't think that researchers
+are using or using their data what about
+things like stolen or leaked or deleted
+data anonymization practices how do we
+even create shared expectations in a
+single discipline or 150 disciplines
+what kinds of precautions should we be
+taking for vulnerable populations in
+particular
+and what are our obligations to those
+communities and these are just again
+questions that I hear over and over and
+I'll address some of these but I don't
+necessarily have answers
+uh to any of these again but things to
+think about but one of the big questions
+that we often start talking about when
+having this conversation is okay so I
+want to do a research project using
+Trace data
+how do you decide whether it's okay
+for your definition of okay
+to collect data I hear two answers most
+commonly when you ask someone this
+question the first one
+is well what are the terms of service
+say
+I'm guessing that some of you might have
+read terms of service at some point
+perhaps even for this exact for this
+exact reason
+I'm going to be talking a little bit
+about some work now that I did with
+Brian Keegan at my University and Nathan
+beard who's a PhD student at University
+of Maryland now I want to point out
+something real quick before I continue
+this conversation about terms of service
+which is
+legal and ethical or not the same thing
+I'm actually not going to be talking
+much about the legal issues here
+um in part because they tend to be less
+interesting to me and and mostly less
+important
+to me
+um
+but for what it's worth
+recent court cases suggests that it's
+probably not a Computer Fraud and Abuse
+Act violation to scrape against terms of
+service I also
+um
+perhaps not my not the area of expertise
+that I am known for now but my
+dissertation was all about copyright law
+I also think that copyright law is not
+the interesting part of what's Happening
+Here but I'm happy that to talk about uh
+to talk to you guys about fair use in
+copyright law and that sort of thing
+during the breaks if if you want to
+um but what I want to think about here
+is
+ethical issues in violating terms of
+service so
+for example if a website says
+do not do academic research here
+and FetLife which is a social network
+for Kink and fetishes is the only
+website I've ever seen that has this
+explicit prohibition and you can imagine
+why that might be
+right
+so if we want to talk about the legality
+of violating terms of service this is
+basically the same as as any other
+website when that might have a
+Prohibition on
+unscraping or research
+but you might think that the ethical
+issues are a little bit different here
+because of the very specific prohibition
+for you as academic researchers
+and you might have seen many Provisions
+that look just like this right or
+variations thereon and so as part of a
+research project a few years ago we
+analyzed the data scraping Provisions
+for over a hundred different social
+media and social networking websites
+I use Yik Yak as an example here
+actually because this is a website that
+started my interest in this topic
+because when I was a PhD student at
+Georgia Tech Yik Yak was actually based
+in Atlanta we were one of the first
+universities to have it
+and we were talking about
+how interesting it would be to get data
+from Yik Yak in my research lab and me
+being the buzz kill lawyer I went and
+read the terms of service and I said hey
+you know technically we're not allowed
+to do this
+and my advisor said well we know them
+we'll just ask them and they said no
+and then guess who didn't study
+and meanwhile other researchers are
+publishing Yik Yak papers and we're just
+but I wouldn't use this as an example
+real quick actually because I think this
+is an interesting one because
+uh if you're not familiar with Yik Yak
+it is a location-based
+um ephemeral social networking site it
+went away for a while and then it came
+back last year uh but it's very very
+popular on college campus and around
+2015.
+Anonymous location-based ephemeral the
+data goes away
+so you can imagine
+why yukak might not want people to be
+creating Archives of data from a website
+where the expectation of the users is
+that it's going away
+right and this is not the only site
+that's like that but do they say that
+here do they say this is why no they
+don't and they almost never do
+um I don't expect you to take any
+meaning from from this table
+um this is a way that we coded all of
+these different data scraping Provisions
+for things like whether they prohibited
+uh only automated scraping or manual
+scraping as well or anything and whether
+they had any kind of like special
+Provisions whether it was just for
+personal anyway the point of this is
+super inconsistent
+if you read the terms of service for
+Instagram that tells you nothing about
+the terms of service for Yik Yak right
+when it comes to data scraping but
+they're also super vague like
+don't scrape
+things that don't matter include
+what kind of data for the most part what
+you're going to do with it who you are
+what the expectations of the nor and the
+Norms of the users are are basically all
+of the kinds of things that you think
+might matter for an ethical decision
+like what I just mentioned with respect
+to Yik Yak
+um
+so that answer to Is it okay for me to
+collect data here
+if you are making a decision solely
+based on terms of service
+so if the terms of service prohibit it I
+cannot collect data if the terms of
+service say nothing about it I can
+collect data
+that strategy has two major problems
+one is that it assumes that violating
+terms of services inherently unethical
+I would argue that that is not true
+and one of the reasons I say that that I
+don't think that's true is in part
+because
+you can put whatever you want in a terms
+of service you might in fact put in a
+terms of service anyone can scrape data
+here
+unless you're an academic researcher and
+you're going to say bad things about our
+platform
+um
+there's actually a provision that is
+like getting very close to saying that
+in parlors in terms of service
+um
+and the other thing is that
+there are some reasons for perhaps the
+good of society where we might want to
+make sure that not only
+people who have
+the access that data are the only ones
+who can study it right this conversation
+has come up a lot with respect to
+Facebook in particular
+um
+Facebook is not the only platform for
+which this is relevant but we've just
+had a whole lot of conversations about
+them in particular
+and there are a lot of amazing
+researchers at Facebook
+a lot of amazing researchers and our
+community who are doing really cool work
+and they're publishing papers
+lots of them and the data that they have
+access to is amazing
+but
+they're still
+a company with corporate interests
+and this is true
+for any platform
+honestly this is true for if you build a
+new platform
+what's your incentive
+to want to know how that platform harms
+society and then tell everyone about it
+I will give some sort of rare kudos to
+uh Twitter
+Twitter did an audit on one of their
+algorithms a couple of years ago and
+published a scientific paper about how
+it was biased
+you don't see that very much right so
+the argument is that
+we might want external researchers
+to be able to study
+the data that comes from platforms to be
+able to look at their impact on society
+Etc and a lot of and and a lot of
+platforms including Facebook are trying
+to find ways to open up access to data
+in part for that for that reason
+Facebook has run into some problems with
+this
+more movement even recently in trying to
+make this happen and in fact right now
+in the EU there's a proposed law the
+Digital Services act that if passed
+might require platforms to open up data
+to researchers more
+of course this becomes complicated when
+you consider that also Facebook in
+particular has gotten into some hot
+water when it comes to research
+happening on their platform and so
+there's actually a really fine line uh
+to walk here and a lot of the different
+things that I'm going to talk about
+today have these tensions the tension
+for example between protecting people's
+privacy and open science would be a
+great example
+but also
+we don't want to think that violating
+terms of service is the only thing that
+could make data collection unethical and
+so actually now let's put aside in terms
+of service for the rest of this and and
+think about these other kinds of things
+so
+the answer that I actually hear a lot
+more than talking about terms of service
+as well is the data public
+right these These are the magic words
+when it comes to trace data is it public
+so for example
+um OkCupid the dating site technically
+public right
+um and in 2016 there was
+a big controversy because a researcher
+scraped all of OkCupid and put the data
+set online
+without any anonymization
+um I don't know if any of you use
+OkCupid or have in the past but the way
+that the matching algorithm on that site
+works is that you answer many many many
+many many questions about yourself
+and from uh what's bigger the Sun or the
+Earth
+kind of question to like extremely
+detailed question about people's sexual
+preferences
+um and at the time people were pointing
+out you know
+you've got people's usernames here
+you've got their locations it would not
+be hard to identify a lot of people in
+this data set and when called out about
+this on Twitter the researchers said uh
+but the data's already public
+and this is such a common response that
+this was the title of my collaborator
+Michael Zimmer's paper in 2010
+and he has a Google a Google alert set
+for this phrase
+the data is already public
+and publicness of data is one of those
+like get out of IRB free cards right
+and so this is often the sole ethical
+heuristic
+for using Trace data so now I'm going to
+spend like an hour and a half telling
+you why that should not be the case
+um so
+again this this paper was written in
+2010 uh you know in early paper about
+this kind of thing and it was with
+respect to Facebook uh
+even at that time Facebook data was
+pretty hard to get
+but we started getting data it was much
+easier to get
+um
+in 2014 zainab tufeki wrote a paper
+about social media big data and made a
+point that I think is very important
+which is why do we use Twitter data so
+much
+is Twitter so great like is Twitter what
+most people are using is Twitter the
+representation no
+we use Twitter data because it's easy to
+get
+um and in this paper she talks about
+Twitter as essentially the fruit fly
+of academic research
+that Twitter has the model organism
+problem we know people don't study the
+fruit fly because the fruit fly is like
+the organism that's most like every no
+it like has a really short lifespan so
+it's really easy to study
+same thing right you know if we were
+going to study social media data based
+on uh like Global representation we
+would have thousands and thousands and
+thousands of papers each year using
+Facebook data not Twitter data right but
+Twitter is one of the big ones
+regardless of the reason
+um and the point made earlier about how
+this has some representation issues uh
+is important as well the exclusions of
+Big Data
+but this is the state of the world I'm
+also going to talk about Reddit later
+but in
+uh 2017 when I started doing research in
+this area Twitter was definitely the big
+one and myself and my collaborator Nick
+perferas who's at Arizona State
+University now wanted to answer a pretty
+simple question which was how do Twitter
+users feel about this
+because we weren't talking about this a
+lot at the time because it wasn't people
+it was just data like a data set of 10
+million tweets
+that's not people it's it's data it's
+public right so we conducted a survey of
+Twitter users about how they feel about
+the use of their tweets and research and
+in particular the contextual factors
+that might influence that now you might
+be thinking about the totally obvious
+selection bias in this study right
+we surveyed people about how they feel
+about research so people had to opt in
+to take a survey we cannot survey people
+without their consent
+and when we did the study we're like
+there is a very good chance that we get
+the survey results back and everyone's
+like yeah research is great
+um because why would people who hate
+research participate in our research
+study about how they feel about research
+um
+that wasn't her finding but I bring this
+up because a I want you to realize that
+I recognized the selection bias but B I
+actually think that
+the attitudes that you're gonna see here
+are better than if we were able to get a
+to get a sample without that kind of
+selection bio so first of all
+61 of the people we surveyed had
+absolutely no idea this was a thing
+um
+and and anecdotally I hear this a lot
+right I talk to people about my research
+they like I'm like yeah you know I study
+like research topics of scientists using
+tweets or YouTube videos or Reddit posts
+or whatever and they're like wait what
+why would scientists read my tweets
+um this might seem obvious to you but
+like this is a data source but to the
+average person
+no
+um
+we also asked people well
+do you think that's allowed
+like our researchers permitted to use
+tweets without permission and almost
+half were like no definitely not they
+must be breaking some kind of rules here
+and of those people who thought that
+this has to be against the rules uh 61
+thought thought well they're clearly
+like breaking some kind of ethical rule
+for researchers
+um it also 23 were like yeah this is
+also definitely a violation of Twitter's
+terms of service
+um and that one's interesting because
+Twitter's uh actually not their terms of
+service their privacy policy is like hey
+just so you know University researchers
+might be using your tweets of course
+people don't read terms of service right
+which is another reason why if we're
+thinking about the ethical issues with
+like following terms of service
+you can't assume that well their terms
+of service doesn't prohibit research so
+therefore people must know there's going
+to be research there
+um terms of service are not a
+particularly good proxy for knowledge of
+anything
+because people don't read them
+we also asked people
+well regardless of
+you know whether you think it's allowed
+and actually regardless of how you feel
+about your tweets specifically
+should researchers be able to do this
+um and Moe said no
+actually but more interestingly
+we asked people to explain
+why they felt this way and this is where
+the contextual factors started to come
+up
+well does the research serve a greater
+purpose
+was I told about it
+is it a large-scale study or is it my
+individual tweet being picked out of
+this
+right we went into this study not like
+our our question wasn't
+should researchers use tweet I am not
+going to do a study where I tell
+researchers they can't use tweets like
+if I thought there was any chance that
+was going to be the answer like I was a
+second year Professor I was not going to
+go that there right
+and actually throughout the course of
+all of this I'm not I'm never suggesting
+that we should not be doing this kind of
+work the important thing is how do we do
+it so this is where contextual factors
+become really important and I don't
+expect you to take meaning quickly out
+of this chart but we asked people about
+all these different things like were you
+informed was it analyzed along with
+millions of tweets was it a protected
+account was it deleted was it analyzed
+by a computer program or a person
+these kinds of things
+and the point of this is that these
+kinds of things matter
+and so let me give you a few examples
+so the purpose of the study is one thing
+that matters on someone on the previous
+slide said does it serve a greater
+purpose we also saw a number of people
+who
+were unhappy that like this this work
+was probably being done by like evil
+liberal academics
+um which I which is a point that I'll
+come back to later as well so but to
+these people it mattered who they were
+who's doing the research
+also the content of the tweet and this
+seems really obvious
+right
+um well is it personal is it
+embarrassing is it identifying what's
+the tweet
+people thought about anonymity is it
+tied to their name
+and also issues with
+dissemination
+well do I get to read the findings of
+the paper
+was I
+credited with my handle in there people
+feel differently about that as well
+um but I think the big Point here
+and this looks similar to a slide that I
+have a moment ago is that data
+collection decisions should not be
+context agnostic like these things
+matter what's the data what are you
+going to do with it who are you what are
+the Norms of the users and the big Point
+here is that all of these things are not
+just publicness
+publicness is a a floor not a ceiling
+when it comes to like
+no we do not want to be studying not
+public data right so an example of this
+would be like a private health related
+Forum where you have to have a login to
+read it uh you're not
+I hopefully think that most people would
+not think it was okay to just use that
+kind of data without consent like not in
+public data or like the slack Channel
+for this institute like just taking the
+data from that without people's
+permission
+but if we consider publicness
+as a floor as a bare minimum there are a
+lot of other things we should be
+thinking about as well
+um and I'm going to go through a few of
+these this is not a comprehensive list
+of all of the types of things that you
+might want to be thinking about but I'm
+going to go through a number of things
+that have come up specifically in my
+research and specific cases that I that
+I've heard about so I'm going to go
+through a couple of these before before
+we take a break
+so first of all
+it's important to not think of data as
+just data
+if that data comes from people so I'm
+mostly thinking about social media data
+and the kinds of stuff that I'm talking
+about here because that's such a common
+piece of Trace data for human behavior
+you could imagine some other categories
+of data but the important thing here is
+that it's not all the same
+so here's a tweet
+a tweet that I got when searching for
+breakfast
+and Twitter in 2018 when I first gave a
+talk like this
+um so here's someone tweeting about what
+they had for breakfast at the time I
+also looked for some tweets on some
+other topics and another tweet that I
+found had someone talking about being
+HIV positive
+and I was able to find this by doing a
+search for HIV positive in Twitter
+this is actually an obfuscated tweet
+it's paraphrased I don't even remember
+what the original tweet was at this
+point but why would I even need to use
+that tweet on a slide
+um let alone
+published in an academic paper where
+someone could search for it and find
+that person again pretty easily
+the idea that these two tweets are
+equivalent and should be treated exactly
+the same as absurd
+right these are not the same
+there are some types of data that
+requires more care the same would be
+true if you were doing human subjects
+research right so like I've done many
+many many many
+protocols for the IRB from the ethics
+review board at my University and
+sometimes I do projects where I'm asking
+computer science students hey what did
+you think about this assignment in this
+class
+uh very recently I've started doing a
+project about uh type 1 diabetes talking
+to people about very personal Health
+Data the Hoops that I have to jump
+through for the IRB are different which
+is completely appropriate because some
+kinds of content is more sensitive than
+others
+so there was a study conducted that was
+published in 2018 where they looked for
+tweets in PubMed articles so PubMed is
+all medical health published papers
+lots of public health research uses
+tweets
+so 72 percent of the articles that use
+Twitter data quoted tweets directly and
+they could lead back to the Twitter user
+84 of the time
+and these are tweets about medical stuff
+right these are not what did you have
+for breakfast
+tweets
+um so again these these things are
+different this reminder that data does
+come from people and here's people
+talking about their health conditions
+let me give you another data as people
+example
+um
+this is from a published paper
+that is matching these photographs to
+BMI body mass index so there's a data
+set that that was based on helping
+AI to be able to determine BMI from a
+photograph of just your face
+so in order to do that
+what do you need you need photographs of
+faces
+and you need BMI so there are a couple
+of different ways you could do this one
+you bring in a bunch of people you ask
+them their height and weight and you
+take a photograph of their face and you
+create a data set which would be a lot
+of work or you can go to the subreddit
+where people are sharing their weight
+loss Journeys and they're saying here's
+my height and weight and here's my
+photograph
+right
+so
+I have no idea if the people in the
+subreddit ever found out about the study
+or have any idea uh that it happened
+even the people who were shown in a
+paper with the bar over their eyes but I
+want you to think for a minute about the
+people in this data
+why do you share a photograph of
+yourself with your height height and
+weight this is a very vulnerable thing
+to decide to show this to a bunch of
+strangers on the internet
+and these are often folks who and we
+know this based on the stories that
+they're sharing here as well
+don't even want to talk to their doctors
+about this people often lie about their
+weight to their doctors
+um or you know don't want to be weighed
+or or whatever it's a very vulnerable
+thing to show weight loss photos to
+strangers on the internet and probably
+weren't expecting
+that to be used in any other way right
+um my understanding is actually that
+this data set has been removed in part
+because of these kinds of
+ethical concerns
+um
+but let me give you another example of
+this kind of thing
+there were researchers who were
+using YouTube videos of people sharing
+gender transition stories to train
+facial recognition
+to be able to
+still be able to do facial recognition
+for for gender
+um depending on where some where someone
+was in a gender transition
+um and
+this was a story in Verge about this at
+the time and this part here particularly
+struck me so there was someone who's
+transition picture was in a scientific
+paper just like the example that I just
+showed you
+um and she didn't know about this until
+it came to her attention much later and
+talked about how it felt like a
+violation of privacy
+um so there was no consent
+uh here but also this is another example
+of
+why would someone share this on YouTube
+right
+very vulnerable you're doing this to
+help your community if you're make
+putting up a YouTube video about your
+gender transition you are not doing that
+for science right
+um
+I do think that Norms around these
+things are changing this is another data
+set that is gone
+um this data set was retracted
+again because in part because of of
+ethical concerns and I think these are
+things that are changing but these are
+really important examples of remembering
+the humans in the data
+so I want to talk now a bit about
+informed consent or rather not informed
+consent but informing and consenting
+um so I'm gonna talk now a little bit
+about
+a particular research ethics controversy
+that you might have heard about the
+Facebook emotional contagion study
+so this happened in 2014 actually as I
+was finishing up my PhD and I mentioned
+that people were starting to talk more
+about these kinds of things and this was
+one of the flash points in the social
+Computing research community that kicked
+off conversations about research ethics
+that we were not having before
+the short version of this is that some
+academic researchers worked with
+researchers at Facebook and they wanted
+to test the psychological phenomenon of
+emotional contagion which is basically
+if you're around people who are happy
+you're happier if you're on people who
+are sad you're sadder so the question
+was does this happen on social media and
+so
+as you all I'm sure know Facebook has an
+algorithm that is constantly tweaking
+the kinds of stuff that you see on your
+news feed so it's just a matter of
+putting people into experimental
+conditions where their news feed was
+tweaked based on sentiment analysis to
+show uh more positive or less positive
+content and then doing that same kind of
+analysis on what that person posted
+afterwards
+and
+the initial press release and the first
+couple of news stories about this was
+researchers show that emotional
+contagion happens on social media I mean
+it was a very small effect but it was
+significant
+and then
+the headlines after that were
+Facebook researchers are manipulating
+you to make you sad
+um
+and exercise that you might find useful
+and we'll talk a little bit more about
+this kind of speculation as I go on in
+this talk
+um
+it was a good idea to imagine
+the worst possible headline someone
+could write about your research
+I sometimes have my students do this
+um
+now whether these sort of outcry about
+this was appropriate or not
+it was an interesting way to look at how
+people reacting to research so I talked
+about the selection bias in my study
+earlier how do you find out how people
+feel about research they don't want to
+participate in your research study about
+how much they hate reading yeah
+um so I did my own study of Trace data
+we wanted to find out what people were
+upset about when it came to this
+particular study and so we analyzed
+comments on news articles
+about it
+um and there were a lot of interesting
+findings here a lot of which aren't
+particularly relevant to issues of Trace
+data which is what I'm mostly talking
+about here but I wanted to bring up one
+thing that came up in our findings that
+I think is relevant generally
+which was this idea of
+I didn't come here to be your science
+experiment
+I'm not on Facebook to jump in a petri
+dish
+I'm not a lab rat
+um
+the findings that we got here and a
+little bit out of that survey like I
+gave you the example of like the person
+who said they didn't want liberal
+academics studying them
+um there are some people who
+fundamentally
+do not want to be part of your science
+experiment
+they do not want their Trace data in
+your study
+now I'm not saying this as a way to
+suggest that this means no more
+computational social science using Trace
+data ever but this is an important thing
+for you to know
+because there are then certain types of
+content that you might want to treat
+differently or certain ways that you
+might want to be careful
+to assuage potential
+concerns that people might have like
+this
+um and in this case
+we actually saw also a lot of
+disagreement about how people felt in
+this case and it was in part because
+they had different ideas of like what
+Facebook is for and what their
+relationship is to it
+and also
+to be frank there are just a lot of
+people who think that Facebook is evil
+and will absolutely ascribe worst
+possible intentions to anything ever
+um and again in the survey that we did
+about Twitter there was a someone who
+said like well is this for the greater
+good right I feel differently if this is
+for science versus if this is for like
+uh market research or something like
+that so these kinds of things matter
+as well
+and then of course we have the examples
+of like data where
+someone explicitly will not give you
+their consent or in this case and this
+is the FetLife data scraping provision
+Provisions again
+they said you can get consent from the
+platform
+so I am not going to suggest that anyone
+should try to get individual consent
+from a million people on Twitter
+like you're going to do public health
+research about covet or whatever I'm not
+I am not suggesting that you need to be
+tweeting out a consent form
+to every person in your data set
+um but there are some things that you
+might consider
+um if any of you have ever used Reddit
+data
+a thing that you might do is get consent
+from the subreddit for example
+um this is a message that was posted to
+our drugs
+um which was
+uh well actually here they they the
+moderators on our drugs knew that
+research was happening based on their
+subreddit
+and they basically said we know that
+because of reddit's terms of service and
+the fact that they have an API and all
+that we can't stop you
+from scraping data
+but we would really ask that you
+announced yourself
+to the moderators
+because it's the right thing to do
+ethically now
+this is something that someone could do
+anywhere
+there there are some subreddits also
+that just say don't research us
+and you might be thinking also but what
+if I ask the moderators and they say no
+and the question you might ask yourself
+is why do they say no
+right so this goes back to the sort of
+like legal versus ethical thing
+um and then you might ask yourself well
+but what if I want to do it anyway
+and then the question I would ask you is
+why
+so something that I want you to be
+thinking about sort of throughout all of
+this
+and in some ways this is a simplistic
+way of thinking about research ethics
+but it's appropriate
+um
+harm versus benefit
+there's a lot of research
+that people do
+because it's never been done before
+have any of you ever
+reviewed a paper where that's literally
+the only justification
+for the project at all like there's
+absolutely nothing about why this should
+be done except we are the first to do X
+there are a lot of things that haven't
+been done because they're not worth
+doing
+um and there is research that absolutely
+might have benefit that might outweigh
+something
+um like the comfort of the people who
+are being studied
+an example I might give actually is
+looking at arguably like toxic
+communities
+so there are a lot of people who do
+research on say
+explicitly racist online communities
+Community there used to be I mean I
+think they're mostly gone now
+go Reddit but like there were subreddits
+that were explicitly devoted
+to racism and misogyny and fat shaming
+and these sorts of things
+there might legitimately be really
+important things that we need to learn
+about these kinds of interactions and if
+they are happening publicly
+I think that you can make
+um a benefit versus harm analysis in
+part because
+if this were not our drugs if this were
+one of those communities
+a researcher
+might be actively putting themselves in
+danger
+by telling the community right but in
+these cases you need to be thinking
+about the benefits and you need to be
+thinking about the way that you're doing
+the research and we'll talk about some
+of those things as well I think we have
+all right I have one more Point
+um on this topic and then we're going to
+take a break before I go into some more
+things
+this was another Finding from the
+Twitter study
+we asked people what would you want to
+know if your Tweet was in a research
+study and the answer is yes most people
+want to know and 83 percent of people
+said they'd want to read the paper now
+is this actually true would they really
+want to read the paper Maybe
+um
+but this is an interesting point
+inform and consent are not the same
+thing
+you can potentially inform people
+without consenting them
+and again I don't necessarily mean
+you know contacting sending an email to
+everyone who's in your data set of a
+million tweets
+but let's say for example you study a
+subreddit
+you could post the paper in that
+subreddit when you're done with it again
+if it's not going to be something that's
+going to put you in in danger or or
+something like that
+or you might
+tweet to a hashtag
+one of my PhD students did a study at
+black Twitter recently
+tweeted about it to the black Twitter
+hashtag I write I have done a bunch of
+studies of fandom I write Tumblr posts
+about them I've made tick talks about
+research
+we very often study communities without
+giving anything back to them at all not
+even the knowledge that we gained from
+that community
+um
+and I will talk more about that a bit
+again later
+from
+one of the most important things is to
+be thinking about it at all
+sometimes this means
+speculating about possible harms
+thinking through the kinds of questions
+that I just took you all through
+and also writing about your ethical
+considerations when for example you
+publish a paper this is also how we
+learn from each other if you want to
+learn more about my work and the work
+for my collaborators you can find out
+more about the pervade pervasive ethics
+for computational research project and
+also I am of course all over social
+media so that everyone can study my
+tweets you can find me on Twitter at
+cfisler and on Tick Tock at Professor
+Casey
+foreign
+[Music]

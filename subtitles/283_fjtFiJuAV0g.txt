@@ -1,0 +1,128 @@
+so guys here you can see one more video
+has been came and in today's video of
+python I'm telling you about in the
+python what are like in the video we
+learn about the scope and in today's
+video we are learning about in the
+python what are modules if we don't know
+what our modules in Python so in today's
+video your whole concept will be clear
+about it so see video start and please
+hit the like button share Friend And
+subscribe to my channel do don't forget
+to all the notification B also so I miss
+our future latest videos so now I do
+take a long time so let's move to
+computer screen and let's about in the
+python botom module so let's move to
+computer screen and let's do a coding
+with Ling what is module consider a
+module to be the same as a code Library
+a file containing a set of function you
+want to include in your application this
+is called a module how to create a
+module to create a module just save the
+code you want in a file with a with the
+file extension.
+py in the example we save this code in
+the file name by the name the file name
+is my module. py let me paste it erase
+it
+now use a module now we can use the
+module we just created by using the
+import statement in this example we
+import the module is and the module name
+is my module and call the grating
+function C now note that when you're
+using the function from a module use the
+syntax module name. function name
+variables in module the module can
+contain functions as already described
+but also variables of all types arrays
+dictionary subjects and
+Etc in this example we save this code in
+the file by mod. py in the
+example and if I write print person one
+save it and then it should give me name
+John H 36 country Norway why because I
+write that like country Norway AG 36 and
+name John here you can see it example in
+the example we import the mod name my
+module and access the person one uh
+dictionary and it is giving the error
+because
+okay and then it should give me okay my
+okay when I go on my command prom and I
+write like pip
+install my module I've in the previous
+video I have already told you about the
+PIP uh uh pip what is the PIP so I do
+not told you another
+time and now like that you can do it so
+now let's come on here naming a module
+you can name the module by whatever you
+like but it must have the file
+extension. py renaming a module you can
+create an allias when you port a module
+by using the S keyword in this example
+we create an allias for my module called
+MX in this
+example it not give you any such type of
+output give you the error obviously
+because I do not that such type of
+things it give you the output buil-in
+modules there are several buil-in
+modules in Python which you cannot which
+uh you can import whatever you like in
+the example we import and use the
+platform module in the example we import
+and use the platform
+model like that Windows it give me the
+windows here you can see it why because
+I like tell me the platform if you are
+using the Mac it give you the mac and if
+you are using a Linux give you L Linux
+I'm using the windows to give me Windows
+use the dir function there is some
+built-in function to list all function
+name of variables name in the in a
+module the DI function list in the
+example we list the all definite names
+belonging to the platform module in this
+example when I save it in it should give
+me like that many thing have been G what
+what type of these things it give me the
+list of all defined names belonging to
+the platform module note that the Dr
+function can be used on all modules also
+the one you once you create yourself
+import from module you can choose to
+import only part from a module by using
+the from keyword in the example the
+module name my module has a one function
+and one dictionary paste it save it and
+it should give me nothing output because
+I do not that type of such thing it give
+you the output
+Import in the example we import only the
+one person person one dictionary from
+the module in the
+example so it give me error but because
+I do not write that type of thing it
+give me the
+output note that when you importing
+using when you're importing and using
+the from keybord do not use the module
+name when referring to the elements in
+the module example like that like that
+here you can see it like person one8 not
+my module. person8 it g the error and
+here you can see it so you can see in
+today's video of Pon I told you about
+the Pyon module so I hope you can enjoy
+this class if you enjoy so please hit a
+like button share friend subscribe to my
+channel don't forget to all the
+notification Bell also so never miss our
+future latest videos so but for today go
+bye

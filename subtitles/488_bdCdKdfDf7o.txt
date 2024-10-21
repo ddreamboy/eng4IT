@@ -1,0 +1,248 @@
+what's the room temperature
+it's currently 32.5 degrees and the wall
+mounted type is off
+turn on air conditioner
+got it turning on the wall mounted tight
+decrease the temperature okay
+cooling down the wall mounted tight
+switch off air conditioner
+sure turning the wall mounted type off
+hi everyone i hope that introduction was
+enough
+to let you know what you're going to see
+in this particular video few weeks ago i
+posted a challenge
+on how to design iot and i wanted you to
+contribute to the system design so that
+i can review that
+himanshu had created a pull request with
+this particular design i'm going to
+review this particular design and i will
+also explain
+the same diagram with my own transition
+and i will also let you know what can be
+improved and what is missing and things
+like that
+let's get started
+[Music]
+press the bell icon on the youtube app
+and never miss
+any update from tech primers i'm going
+to assume the cloud platform which we
+are going to leverage
+is going to be aws cloud and i have a
+wi-fi connection at home
+where i have an air condition installed
+with an iot hardware device
+something like raspberry pi embedded
+within this particular device
+so i am assuming that there is a
+hardware control board which is already
+equipped in the hardware
+we are going to create a mobile
+application or a mobile client
+and we are going to see how the backend
+is going to be designed within the aws
+infrastructure
+we are going to expose apis to this
+particular mobile application so we are
+going to create an api gateway which is
+amazon's api gateway
+which in turn is going to be connected
+to amazon sqs
+and sqs is going to trigger a lambda if
+you ask me why
+sks is being leveraged here can we
+directly connect from
+api gateway to the lambda you can
+definitely do that but you can add sqs
+to add some
+resiliency inbuilt within this whole
+flow
+what if the lambda application resulted
+in a failure response
+and you want the user to trigger the
+request again in that case you can
+definitely leverage sqs and you can
+retry stuff
+based on your response code from the
+lambdas that's another reason i think
+himanshu has used sqs here which is a
+good thought
+so from excuse we are going to trigger a
+lambda function the lambda function is
+going to persist the
+metadata of what the user is going to
+trigger into a dynamodb
+data store and it is also going to call
+an iot core
+service so this is awss iot interaction
+layer where you can use iot core to
+connect to different devices
+and you can get responses from them so
+we are going to use
+dynamodb from the lambda to store some
+metadata information and from the lambda
+to the iot device we are going to use
+something called as iot core which can
+connect to your
+device applications here assume that we
+have a raspberry pi
+installed within the hardware and it's
+going to get the response back from that
+device since we have used an air
+conditioner we are going to leverage
+features which are specific only to the
+air conditioner so as a part of this
+flow
+the user let us say is requesting for
+the temperature of the
+room for example when i showed in the
+demo initially i requested for the room
+temperature
+so this flow will request the room
+temperature
+from the lambda to the iot core layer
+and iot core knows that the
+air conditioner is off however using the
+hardware interaction board
+which has sensors inbuilt within that so
+you can definitely get
+the climate sensor or the temperature
+sensor to get to know what is happening
+within the room
+and you can get the response back from
+the iot core
+you can push that into something called
+iit events so iot events is another
+service from aws
+using which you can interact with
+different aws services you can connect
+to
+for example we can connect it to uh
+kinesis fire host
+so that you can store whatever event is
+coming in into a data store like s3 and
+you can use
+that to archive information you can use
+it to query
+information for analytics purpose etc
+using athena
+from the iot events what we are going to
+do is we are going to trigger a lambda
+from the lambda we are going to store
+the metadata information into the
+dynamodb because when we requested we
+know what we requested and
+when the response came back we can store
+the state of that
+particular response inside the dynamodb
+database so that we don't have to retry
+if something happens
+for the response let's say there is a
+timeout and we did not get the response
+within a stipulated timeout we can
+trigger
+lambda to go and fix those stuff
+so you can leverage dynamodb streams to
+trigger
+lambdas if there are any timeouts which
+are happening
+for this particular end to end flow once
+that is done we are going to get the
+message and push it into
+sns so himanshu has mentioned here as
+sns
+sns can connect and send email
+notification or
+mobile notifications into your mobile
+device however we want to connect it to
+the application right so in that case
+i would have leveraged sqs because using
+sql you can push that message into your
+mobile specific queue but then how will
+you
+register each of the device into sqs
+right so that's the next question which
+arises and
+that's why i think human shoe had
+leveraged
+amazon sms so that you can push a
+notification and the notification can
+send the response back to the mobile
+client one another alternative what we
+can do for this particular architecture
+is
+instead of having this as an
+asynchronous four you can have a
+synchronous flow embedded
+by leveraging the response from the iot
+events and you can have a timeout
+embedded so that you can just give a
+response error or maybe you can retry on
+your own
+we can also integrate this whole api
+gateway into the alexa enabled devices
+like eco or
+alexa device itself directly most of the
+apps these days support a unified way of
+integrating
+with iot devices so if you had seen
+earlier i was able to connect my
+google assistant with the think queue
+app from lg
+so google assistant has a plugin which
+you can leverage to connect to the
+thinkq app
+so that you can get the same features
+whatever the app provides into the
+google assistant by default some things
+which were missing from this
+architecture was
+the monitoring aspect of this
+application i would add cloud watch for
+monitoring the logs and raise alarms
+if there are any failures or if we want
+to retry some things and i will leverage
+amazon x-ray to do distributed lock
+tracing so what if i want to trace
+what happened to my request right if
+something went wrong so i can definitely
+leverage amazon x-ray for that
+also to keep things secure i'm going to
+leverage the amazon kms so that you can
+encrypt your data when you are storing
+it within the amazon
+dynamodb or even with s3 so you can
+leverage your own
+keys to store or encrypt the data
+finally since it is all exposed to
+internet and you have lot of
+internet connectivity we can leverage
+the aws shield
+to protect our account or services from
+denial of service attacks this is one
+way of designing a system
+for an iot device there are n possible
+ways of designing
+your system if you have a different
+thought and you think that might fit
+well
+do raise a pull request in this
+particular github repo i will leave the
+link for that in the description below
+however thanks himanshu for providing
+this architecture
+and i hope lot of people would have
+learned different kinds of ways in which
+you can interact with iot devices and
+how you can retrieve data from iot and
+then show that in your mobile
+application or your web application
+i hope you found this particular video
+interesting
+as always if you like the video go ahead
+and like it if you haven't subscribed to
+the channel go ahead and subscribe to it
+meet you again in the next video thank
+you very much

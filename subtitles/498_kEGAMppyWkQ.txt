@@ -1,0 +1,173 @@
+hi everyone i'm patrick from the
+assembly ai team and in this video we
+learn about reinforcement learning in
+the previous two videos we already
+covered supervised and unsupervised
+learning and now reinforcement learning
+is the third area in the field of
+machine learning so today you will learn
+about the definition of reinforcement
+learning of states actions and rewards
+and then we dive into q-learning and
+deep q-learning with neural networks
+this area has gotten a lot of popularity
+in recent years especially with video
+games so maybe you have seen how an ai
+learns to play snake or chess or the
+breakout game but now you're wondering
+how this works so the idea behind
+reinforcement learning is that a
+so-called software agent will learn from
+the environment by interacting with it
+and then receiving rewards for
+performing actions and then the agent
+tries to improve its behavior so
+essentially it teaches itself how to get
+better this idea is inspired from our
+natural experiences
+imagine you're a child and you see a
+fireplace for the first time you like
+that it's warm it's positive so you get
+a positive reward but then you reach out
+with your hand and try to touch it and
+now it's too warm so it hurts so you get
+a negative reward or a punishment so to
+say but now you might have understood
+this and learned that fire can be a good
+thing but that you should be careful and
+not get too close and this is exactly
+how reinforcement learning works it's
+the computational approach of learning
+from actions in an environment through
+rewards and punishments one specific
+implementation of this approach is the
+q-learning algorithm it's a value-based
+approach based on a so-called queue
+table the q table calculates the maximum
+expected future reward for each action
+at each state and with this information
+we can then choose the action with the
+highest reward let's look at a concrete
+example to make this more clear let's
+say we want to teach an ai how to play
+the snake game in this game the snake
+tries to reach and eat the food without
+hitting the wall or itself we can list
+the actions and states in a queue table
+the columns will be the four possible
+actions the snake can do turning left
+right up and down and the state can be
+the current direction so also left right
+up and down these are the rows but of
+course we can add more states to
+describe the current situation for
+example we can describe the location of
+the food and at the states food is left
+of the snake right up or down we could
+also do the same thing with the walls
+and describe the danger but for
+simplicity i leave this out here but you
+see the more states we add here the more
+information we have about the
+environment but also the more complex
+our system will get okay so now we have
+all rows and columns and now the value
+of each cell will be the maximum
+expected future reward for that given
+state and action we call this the q
+value so far so good but how do we
+calculate this q value here's the
+interesting part we do not implement
+this q value calculation in a fixed way
+instead we improve this q table in an
+iterative approach this is basically our
+training or learning process the q
+learning algorithm works like this first
+we initialize all q values for example
+with a 0 then we choose an action a in
+the current state s this is based on the
+current best q value we perform this
+action and observe the outcome so we get
+a new state we also measure their reward
+after this action and then we update q
+with an update formula that is called
+the bellman equation and then we repeat
+steps 2 to 5 until the learning no
+longer improves and we get a nice q
+table in the end now a few questions may
+appear first how can we choose the best
+action in the beginning when all our
+values are zero this is where the
+exploration versus exploitation
+trade-off comes into play in the
+beginning we choose the action randomly
+so that our agent can explore the
+environment but the more training steps
+we get the more we reduce this random
+exploration and use exploitation instead
+so we make use of the information we
+have this trade-off is controlled in the
+calculations by a parameter that is
+usually called the epsilon parameter now
+the next question is how the rewards are
+measured this is actually up to us so we
+can come up with a good reward system
+for the game in case of the snake game
+for example we can give a reward of 10
+points if the snake eats an apple and a
+reward of -10 points if the snake dies
+and zero for every other normal move now
+with all these elements we can inspect
+the bellman equation the idea here is to
+update our q value like this the new q
+value is calculated by the current q
+value plus a learning rate times a
+reward plus a discount rate times the
+highest q value between possible actions
+from the new state and then minus the
+current q value the discount rate is a
+value between 0 and 1 and determines how
+much the agent cares about rewards in
+the distant future relative to those in
+the immediate future so now we have
+everything we need and coming back to
+our iterative learning approach we can
+now come up with a good q table by using
+this q learning algorithm now deep q
+learning takes the q learning idea and
+takes it one step further instead of
+using a q table we use a neural network
+that takes a state and approximates the
+q values for each action based on that
+state and we do this because using a
+classic q table is not very scalable it
+might work for a simple game but let's
+imagine a more complex game with dozens
+of possible actions and game states then
+the q table will soon get far too
+complex and cannot be solved efficiently
+anymore so now we use a deep neural
+network that gets the state as input and
+produces different q values for each
+action and then again we can choose the
+action with the highest q value the
+learning process is still the same with
+this iterative update approach but
+instead of updating the queue table here
+we update the weights in the neural
+network so that the outputs get better
+and this is how deep q learning works if
+you're interested to see a concrete
+coding tutorial with deep q learning let
+us know in the comments and then we can
+try to create a future video about this
+alright i hope i could give you a good
+introduction to reinforcement learning
+if you enjoyed the video then please
+leave us a thumbs up and consider
+subscribing to our channel for more
+content like this also if you want to
+try assembly ai for free then grab your
+free api token using the link in the
+description below and then i hope to see
+you in the next video bye

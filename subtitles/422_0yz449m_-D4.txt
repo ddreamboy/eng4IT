@@ -1,0 +1,414 @@
+all right good morning good afternoon
+good evening everybody wherever you are
+watching this live session from my warm
+regards and welcome to this live session
+on AI ethics that is responsible Ai and
+um this program is hosted by Machine
+learning you also in collaboration with
+the me for um machine learning Aban and
+today we have our speaker already
+am who is going to take us on this
+session on responsible AI so we have
+been building a lot of machine Learning
+System we have been using AI systems in
+our lives
+and but how does this really um affect
+our lives and have we taken into
+consideration the ethical concerns of
+these systems so in this tutorial we are
+going to
+because we are going to look into AI
+ethics as well as responsible
+ai ai is the new trange in the world
+from Health Care to energy through
+Insurance
+Transportation marketing and
+more this integration requires many more
+processes that need to be paid attention
+to because the final custo customer is
+human so most of these Services we are
+bu and most of this most of these
+Integrations the final consumer is
+actually human and regarding the process
+AI ethics and responsible AI comes in
+first and it helps to prevent harm and
+make better decisions so in this session
+we will learn how to use AI ethics and
+what are the responsible AI practices in
+the AI project so trust me and in this
+live session we have a lot to cover and
+I mean thank you very much our speaker
+am from machine
+Le I think
+it's yeah yeah come
+on yeah hello hello Victor thank thank
+you very much can can
+can yeah yeah I wanted to
+your okay okay okay let's go let's
+go is a tech blogger is a machine
+learning expert and also a deep learning
+expert or you can also find him as
+DJ info and he has a masters in B he's
+currently a master student in B
+information B informatics he's currently
+a b informatics student at udm
+University I'm also a certified tens
+flow developer so um I'm well yeah thank
+you very much for finding time to join
+the session today and
+with
+session ah thank you thank you thank you
+to intr introduce me um hello everyone
+uh welcome to the session and uh thank
+you to machine learning Q for invitation
+to speak about
+um oh uh you remove me okay
+um to talk about uh responsible Ai and
+the AI ethics my so you know my name is
+machine learning Aion leads and data
+scientist at VD
+info um what about a effect um a effects
+um is a some process uh to to allow
+people or maybe um machine learning
+teams to identify the hars to decide if
+you can breed or not the this AI system
+yeah you know um is very important
+before to breed and the AI system to
+know
+um what's the goal of the AI you want to
+build that is very important you
+know because uh
+sometimes um you don't need to bre I
+think
+system to address some problem you have
+uh you facing so uh maybe traditional
+meth method is
+um is
+[Music]
+cor is um maybe you need what's
+about
+okay to address some so every time um AI
+system uh is
+not okay is not
+um uh I can say is not um appropriate to
+to use it but when you decide
+to to bre the AI system and uh we have a
+problem
+to know if
+the
+me okay
+one thing you you you should know about
+uh hega ethic is about human cens design
+uh when you build your system um you
+need to know um why you you want to
+build a system design system to save
+people in needs first of all is very
+important um people
+human uh should be in the center of your
+design or your AI uh system design that
+is very important for people who follow
+the course on kle you know about human
+Cent
+design secondly you need to identify
+bias um use a ethical AI or ethic of AI
+in the when you bre uh something machine
+learning system or machine AI system um
+identify buers um is a model that
+identify a toxic text apply the process
+of maybe
+Pro the things about a EIC help you to
+investig in uh to identify buyers and
+build a system a model that identify
+stes text that's
+that is a very very important uh for the
+people want to build um AI
+system what is about uh responsible AI
+uh best way responsible AI apply the the
+practics of responsible AI is the best
+way to build a fairness interpretability
+prevy and safety in AI
+system um when you talk about AI system
+you you need to focus on machine
+learning model because the that is the
+main
+um um the main subject the main topic in
+um machine learning when so sometimes
+when you talk about a syst you talk
+about machine learning models you
+know finess AI what is about finess um
+finess AI so when you talk about
+finess um
+you talk about build the AI system you
+can address the goals uh yeah you know
+and uh you can
+um you can identify the main goals uh
+for what you want to build a AI system
+and at the end of the of the building of
+the conception of the of the AI system
+the model the machine learning model uh
+should be um capable to address the
+goals not uh to use for another goals
+because sometimes when you you use the
+AI system for another
+G instead the gos for what is
+building it can harms uh can brings hars
+in the in the in the results on the
+performance of of a model so it's very
+important um to use it AI system
+according Google AI system are enable
+new um experience and ability for people
+um around the the globe Beyond Recs
+short videos in TV show a have been used
+for more critical tasks such as BR
+presence or severity of medical
+condition matching people to jobs and
+partner or identify if a person if a
+person is crossing the
+street um such compe as or decision Mak
+c um have a potential to be more F or
+more inclusive at
+broader you know that SCS theoric design
+making
+process based on hard
+any
+bias equal opportunity equal that
+is some um techniques to which we can
+question understand and cross a
+AI um sometimes uh when you have uh
+interpretability automated prediction
+decision making can improve life uh in
+number of ways from recommending music
+you like to monitoring a patient Vital
+Signs consist this is why
+interpretability or level of which you
+can question understand and Trust in an
+AI system
+yeah
+um
+also interpretability also reflects our
+domain knowledge you know um and
+societal values provide scientist and
+engineer which better yeah you know
+means of Designing developing and de
+models and help to ensure that a system
+are working as
+intent uh some techniques uh to breath
+uh a machine learning can be
+uh can be used interpret that is a
+pushing interpret before during and
+after breing the AI system inability
+trat ability has a core of user
+experience you know that design the
+model to be interpretable and choice of
+a metrix is that very important
+sometimes uh when you build a AI system
+you we we forgot this um techniques or
+we forgot this practice uh to make a uh
+our model to be um um to reach out the
+level of you can question understand
+interest in AI system
+privacy uh what about privacy in
+responsible AI uh that is um an AI
+system which the mod can be quite
+sensitive well what does that mean about
+that um when you say about privacy uh
+you can say m mod ml model um learn from
+training data and make prediction on
+input data you know sometimes we tring
+data input data or both can be quite
+sensitive Al for um there may be
+anonymous uh benefits uh to breed a
+models that operate sorry that operate
+on sensitive data like concer detector
+training or responsibility Sal data set
+of B biy image sometimes and deployed on
+individual passion case scans is
+essential to consider the potential
+privacy implication in using sensitive
+data this
+include this include um not only
+respecting the legal and reg regulatory
+uh requirement but also consider social
+norms and typical individual
+expectation uh some practics uh to make
+or maybe to
+um to have a system privacy that a COR
+and handle data
+responsib leverage on device
+proing way appropriate appropriately
+save for the privacy of mods and for
+that uh you can see in
+um in the K course uh about uh human C
+design you have on
+the I think on the
+six on the sixth Point breed a safety
+measure they say that safety measure
+protect user against harm they seek to
+limit uned behavior and accident by
+ensuring that a system will be deliver
+high quality outcomes this can only be
+this only be um only be ACH from fruit
+extensive and continuous Evolution and
+texting design process around your area
+system to continue continuously monitor
+performance delivery of inchange
+benefits reduction of arms air fairness
+metric and any change in our people are
+actually using it the kind of safety me
+measures your system needs to needs
+depend on um it P purpose on the type of
+arms you can CL start by rev reviewing
+the list of safety measure built in into
+similar no a project or service then
+review your every analysis of potential
+har of you using a system um of using a
+in your system that is very important uh
+to to to do that uh when you you
+bre your your privacy on the on privy on
+AI system Safety and Security um in Ur
+AI system be
+have intend regardless
+[Music]
+of our attack try to interfere in the
+system um it essential to consider in
+address with safety and of on a syst
+before is widely R in point safy
+critical application there are many um
+there are many challenge un need to to
+the Safety and Security of AI system for
+example is ADS is hard it is hard to
+predict all
+scenario the time when machine learning
+is applied to problem that's that
+difficult for human to solve and
+especially so in the area of generative
+AI you know is also hard to build system
+that provide both necessary proactive
+rtion for safety as well as the
+necessary flexibility to generate uh
+creative solution of or adapt to un
+input so as AI technology evolves so we
+security use as attacker we Sur find new
+means to attack and the new solution we
+need to develop in
+tendem um internet below um our below
+her our current current recommendation
+from what you have learn so far
+um many practics to for Safety and
+Security a that is identify potential
+threats to the system develop an
+approach to combat threats keep learning
+to say he heard the the curve is about
+that you need
+to is um in French they say that uh that
+is a technology um the technology R
+technology surveillance um you know that
+stay up stay up to to date on the latest
+um on the latest um research Advantage
+Advance Research into adversor machine
+learning continue to offer improved
+performance for defense on some defense
+technique are beginning or to Pro
+guarantee Beyond interfer with input is
+possible is possible to make the holder
+vulnerability and the Machine learning
+apply supply chain supply chain while um
+to our knowledge uh such in attack has
+not yet occurred it's important uh to
+consider um the possibility and be
+prepared is very important for
+people so um what is the main uh things
+you I want
+to I want you
+you I want uh you want to to to keep uh
+before the the end of of the session um
+before you want to build uh AI system
+you need
+to to use some process to apply uh a um
+ethic of ethic AI uh process techniques
+um in your in your process of breathing
+um or building of AI system after that
+during building uh your a system you
+need to apply responsible AI techniques
+you need to practice them uh to make
+sure um
+the AI
+system uh for you want to bre people um
+address
+specifically the goal for what is
+building for what is
+build is very important because actually
+you have um a war around uh machine
+learning Ai Ai and the big company big
+tech company um have a lot of money to
+invest in the breed to get Innovation or
+maybe to to control the AI in the many
+space or maybe to to reach the top of
+the top of AI company so it's very
+important um to apply EIC of EIC AI in
+during before to build a u a AI system
+and during um and after uh breeding AI
+system you need to use responsible AI
+some practics that is a very important
+for people because um had the hand
+of of of the chain of produ of the CH on
+the chain of um AI building you have a
+human you have a people and uh you know
+people are very
+complicated you have people across the
+the world with different culture
+different habit um different idea
+different FS so it's very important to
+have a AI system to address
+specifically um or maybe to to have in
+the in the process
+um or maybe the model machine learning
+uh can be aware about that about um
+people tradition uh people culture
+people habit people food and um that is
+a very important uh to
+big company or maybe for
+developers uh AI team in the company to
+use um AI uh EIC Ai and the responsible
+AI to build the system so you can find
+some resource uh on Google
+responsibility area practice uh online
+or maybe Carle on the last uh course
+lesson of the machine learning challenge
+um is about AI ethic that's the
+introduction of AI ethic
+so um that is my presentation if you
+have uh some question or maybe you have
+uh some um some point to add to my
+presentation um you can reach me on
+um for my mail AR Aras AR Aras vino.com
+or maybe on L AR on X for Twitter AR
+Aras
+AR um thank you very much
+uh thank you very much to attending my
+sis and uh I expect you you learn and
+the to practice uh AI uh EIC Ai and
+responsible AI in your
+and maybe enterpr on team on AI team
+thank you very
+much thank you very much I'm Y for the
+um for the session today
+on AI ethics and responsible AI talked
+about uh you know talking about AI
+safety responsible Ai and ensuring
+privacy of these systems so um if you
+are watching us on YouTube Do Well to
+drop your question in the chat section
+below or send an email to um T
+Community
+gmail.com and your question will be
+responded to if you want to join our
+community the links are in the comment
+section below or check the
+description I'm hope to see you soon and
+um thank you our speaker today and see
+you now for
+thank you very much Victor thank you
+invitation have a good
+day thank you
+[Music]

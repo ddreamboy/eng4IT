@@ -1,0 +1,195 @@
+last week versell unveiled NEX js15 and
+it's got some awesome new features you
+don't need like partial pre-rendering
+however this is just the tip of the
+iceberg for gamechanging new JavaScript
+framework updates in the last few months
+the good news is that web developers
+have all sorts of shiny new tools to
+play with but the bad news is that any
+web app you built before watching this
+video contains totally obsolete Legacy
+code and will need to be Rewritten
+immediately in today's video we'll look
+at not one not two but a ridiculous 15
+new features in frontend JavaScript
+Frameworks that you probably don't know
+yet it is May 28th 2024 and you watching
+the code report but first we need to
+talk about react 19 and its new compiler
+feature I made a full video about this a
+few weeks ago but basically it takes a
+hint from Frameworks like spelt and
+solid to compile code ahead of time
+instead of using the virtual Dom which
+allows the framework to eliminate hooks
+like use memo and use callback because
+now it already knows what needs to be
+rendered and you don't need to jump
+through these hoops to do it in your
+code that's a huge win for react and
+brings us to the updates in nextjs 15
+next1 15 already has support for the
+react 19 compiler but I think the most
+interesting new feature is something
+called partial pre-rendering normally
+when you render a web page in next it's
+either static when the data doesn't
+change very often or it's Dynamic when
+the data is uncashed and it's constantly
+changing but sometimes you might have a
+page that requires both like maybe you
+have a blog post that could be
+statically rendered but then it has a
+bunch of comments below it that should
+be dynamically rendered well now you can
+put static content and dynamic content
+on the same page but handle everything
+from a single HTTP request but if if
+you're not using nextjs there's a good
+chance you're using its arch nemesis
+remix or react router well a couple
+weeks ago they announced that these two
+tools are now becoming one and the same
+it's called remix for a reason in the
+future you'll get to remix your remix
+code back into react router code but if
+that exceeds your tolerance for
+Ridiculousness another routing option
+can be found in the tan stack it
+provides a variety of tools that work on
+multiple Frameworks including react but
+what's interesting is that it's cooking
+up a new project called tan stack start
+that provides features like server side
+rendering thus making next JS and remix
+completely obsolete now speaking of
+react another hugely awesome new feature
+is million lint this comes from the same
+guy who figured out how to make react a
+million times faster and basically it's
+an editor plugin that can analyze your
+code to find performance issues it's
+really a no-brainer for any react
+project but you know what screw react
+it's time to move on to post react
+Frameworks like solid JS which just
+released solid start version 1.0 it's a
+meta framework like nextjs 4 Solid but
+everything is served minimal and all a
+cart like you can even take the default
+file system routing and customize it to
+work the way you want it to pretty cool
+but spelt has even bigger changes in
+store a few weeks ago they dropped the
+spelt version 5 release candidate with a
+radical new RuneScape like experience
+instead of using plain JavaScript to
+identify reactive data you now use runes
+which are like compiler macros that tell
+spelt how to identify reactive data
+under the hood these are backed by
+signals just like solid JS but another
+big framework also just got signals
+angular 18 was released a few days ago
+and now officially supports zoness
+change detection you take advantage of
+it by writing signals which make your
+code easier to read and debug while also
+reducing the bundle size thus making the
+greatest JavaScript framework of all
+time even better vue.js is also cooking
+up some new vaporware called Vue Vapor
+mode it's a new compilation strategy
+that vaporizes the virtual Dom and
+instead surgically updates the regular
+Dom to squeeze out every last bit of
+performance from an already very fast
+framework another big update is the
+release of quick 2.0 a highly underrated
+JavaScript framework however if you're
+having a hard time keeping track of all
+these Frameworks an adjacent tool you
+should know about is mitosis it comes
+from the same team that built quii and
+basically it allows you to write
+components using a subset of jsx then
+compile them to any framework like react
+view spelt Etc it's a JavaScript
+framework for Frameworks for Frameworks
+for Frameworks and can even turn your
+figma components into framework code
+pretty cool but we also have a huge
+update from the anti-f framework HTM X
+they just drop version 2.0 and this
+changes everything it's a JavaScript
+framework update where literally almost
+nothing changed at all but if you're a
+real OG who never bought into the
+JavaScript framework hype you're likely
+still using jQuery and they just
+released version 4.0 this release
+doesn't add a bunch of new unnecessary
+features instead it removes a bunch of
+bloat which is the final phase of
+Enlightenment for a JavaScript framework
+but I'm still on this side of the bell
+curve and just updated my Astro project
+to use the react 19 compiler which
+enables a cool new feature called Astro
+actions with actions we can submit an
+HTML form then write a function that
+handles that form submission on the
+server making it easy to handle the form
+State as well as UI updates on both the
+back end and front end but one of my
+favorite new backend JavaScript
+Frameworks is hono I used it in my new
+stripe course for fireship pro members
+but the framework authors just released
+a new project called hono X which
+provides serers side rendering like
+nextjs with client side hydration for
+your frontend components but allows you
+to bring your own renderer to truly
+customize the way the framework works
+but in order to use any JavaScript
+framework you'll likely need a package
+manager like npm well there's a new
+package manager in town called jsr and
+it comes from the team behind Dino it
+automatically transpiles all your
+typescript code and generates the API
+documentation but most importantly it
+finally puts JavaScript developers on a
+registry so you can identify where they
+live in your neighborhood and keep your
+children away from them and there you
+have it 15 awesome new JavaScript
+framework features for 2024 but if you
+really want to learn how to build cool
+web apps it's far more important to
+learn how to problem solve like a
+programmer you can start making that
+happen for free thanks to this video
+sponsor brilliant as I've said many
+times before the best way to learn is to
+learn by doing Brilliance platform will
+introduce you to essential programming
+Concepts but most importantly the
+Hands-On exercises will develop your
+brain to recognize and solve complex
+problems that developers need to
+overcome on a daily basis best of all
+every lesson is concise and rewarding by
+investing just a few minutes each day
+you'll develop habits that can level up
+your programming skills for the rest of
+your life and you can do it anywhere
+even from your phone to try everything
+brilliant has to offer for free for 30
+days visit brilliant.org fireship or
+scan this QR code for 20% off their
+premium annual subscription this has
+been the code report thanks for watching
+and I will see you in the next one

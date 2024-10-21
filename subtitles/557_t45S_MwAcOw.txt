@@ -1,0 +1,264 @@
+hi I'm sanjana Reddy a machine learning
+engineer at Google's Advanced Solutions
+lab
+there's been a lot of excitement around
+generative Ai and all the new
+advancements including new vertex AI
+features that are coming up such as gen
+AI Studio model Garden genei API
+our objective in this short session is
+to give you a solid footing on some of
+the underlying Concepts that make all
+the Gen AI magic possible
+today I'm going to talk about
+Transformer models and the Bert model
+language modeling has evolved over the
+years
+the recent breakthroughs in the past 10
+years include the usage of neural
+networks to represent text such as word
+to whack and engrams in 2013.
+in 2014 the development of sequence to
+sequence models such as rnns and lstms
+helped improve the performance of ml
+models on NLP tasks such as translation
+and text classification
+in 2015 the excitement came with
+attention mechanisms and the models
+built based on it such as Transformers
+and the bird model
+in this presentation we'll focus on
+Transformers
+Transformers is based on a 2017 paper
+named attention is all you need
+although all the models before
+Transformers were able to represent
+verbs as vectors these vectors did not
+contain the context
+and the usage of words changes based on
+the context for example Bank in
+Riverbank versus Bank in bank robber
+might have the same Vector
+representation before attention
+mechanisms came about a Transformer is
+an encoder decoder model that uses the
+attention mechanism
+it can take advantage of parallelization
+and also process a large amount of data
+at the same time because of its model
+architecture
+attention mechanism helps improve the
+performance of machine translation
+applications
+Transformer models were built using
+attention mechanisms at the core
+a Transformer model consists of encoder
+and decoder
+the encoder encodes the input sequence
+and passes it to the decoder and the
+decoder
+decodes a representation for irrelevant
+task
+the encoding component is a stack of
+encoders of the same number the research
+paper that introduced Transformers
+Stacks 6 encoders on top of each other
+six is not a magical number it's just a
+hyper parameter
+the encoders are all identical in
+structure but with different weights
+each encoder can be broken down into two
+sub-layers
+the first layer is called the
+self-attention
+the input of the encoder first flows
+through a self-attention layer which
+helps the encoder look at relevant parts
+of the words as it encodes a center word
+in the input sentence
+and the second layer is called a feed
+forward layer the output of the
+self-attention layer is fed to the feed
+forward neural network
+the exact same feed forward neural
+network is independently applied to each
+position
+the decoder has both the self-attention
+and the feed forward layer but between
+them is the encoder decoder attention
+layer that helps the decoder focus on
+relevant parts of the input sentence
+after embedding the words in the input
+sequence each of the embedding Vector
+flows through the two layers of the
+encoder
+the word at each position passes through
+a self-attention process then it passes
+through a feed-forward neural network
+the exact same network with each Vector
+flowing through it separately
+dependencies exist between these paths
+in the self attention layer
+however the feed forward layer does not
+have these dependencies and therefore
+various paths can be executed in
+parallel while they flow through the
+feed forward layer
+in the self-attention layer the input
+embedding is broken up into query key
+and value vectors
+these vectors are computed using weights
+that the Transformer learns during the
+training process
+all of these computations happen in
+parallel in the model in the form of
+Matrix computations
+once we have the query key and value
+vectors the next step is to multiply
+each value vector by the softmax score
+in preparation to sum them up the
+intuition here is to keep intact the
+values of the words you want to focus on
+and leave out irrelevant words by
+multiplying them by tiny numbers like
+0.001 for example
+next we have to sum up the weighted
+value vectors
+which produces the output of the
+self-attention layer at this position
+for the first word you can send along
+the resulting Vector to the feedforward
+neural network
+to sum up this process of getting the
+final embeddings these are the steps
+that we take
+we start with the natural language
+sentence
+embed each word in the sentence
+after that we perform multi-headed
+attention eight times in this case and
+multiply this embedded word with the
+respective weighted matrices
+we then calculate the attention using
+the resulting qkv matrices
+finally we concatenate the matrices to
+produce the output Matrix which is the
+same Dimension as the final Matrix that
+this layer initially got
+there's multiple variations of
+Transformers out there now
+some use both the encoder and the
+decoder component from the original
+architecture some use only the encoder
+and some use only the decoder
+a popular encoder only architecture is
+Bert
+Bert is one of the trained Transformer
+models Bert stands for bi-directional
+encoder representations from
+Transformers and was developed by Google
+in 2018.
+since then multiple variations of bird
+have been built today Bert Powers Google
+search
+you can see how different the results
+provided by Bert are for the same search
+query before and after
+it was trained in two variations one
+model contains bird base which had 12
+stack of Transformers with approximately
+110 million parameters and the other
+bird large with 24 layers of
+Transformers with about 340 million
+parameters
+the bird model is powerful because it
+can handle long input context
+it was trained on the entire Wikipedia
+Corpus and Books Corpus
+the bird model was trained for 1 million
+steps Bert is trained on different tasks
+which means it has multi-task objective
+this makes Bert very powerful
+because of the kind of tasks it was
+trained on it works at both a sentence
+level and at a token level
+these are the two different versions of
+Bert that were originally released one
+is bird base which had 12 layers whereas
+bird large had 24 layers and compared to
+the original Transformer which had six
+layers
+the way that bird works is that it was
+trained on two different tasks task one
+is called a masked language model where
+the sentences are masked and the model
+is trained to predict the masked words
+if you were to train bird from scratch
+you would have to mask a certain
+percentage of the words in your Corpus
+the recommended percentage for masking
+is 15 percent
+the masking percentage achieves a
+balance between too little and too much
+masking do little masking makes the
+training process extremely expensive and
+too much masking removes the contacts
+that the model requires
+the second task is to predict the next
+sentence
+for example the model is given two sets
+of sentences Bert aims to learn the
+relationships between sentences and
+predict the next sentence given the
+first one
+for example sentence a could be a man
+went to the store and sentence B is he
+bought a gallon of milk
+bird is responsible for classifying if
+sentence B is the next sentence after
+sentence a
+this is a binary classification task
+this helps Bert perform at a sentence
+level
+in order to train Bert you need to feed
+three different kinds of embeddings to
+the model
+for the input sentence you get three
+different embeddings token segment and
+position embeddings
+the token embeddings is a representation
+of each token as an embedding in the
+input sentence
+the words are transformed into Vector
+representations of certain dimensions
+bird can solve NLP tasks that involve
+text classification as well
+an example is to classify whether two
+sentences say my dog is cute and he
+likes playing are semantically similar
+the pairs of input texts are simply
+concatenated and fed into the model how
+does bird distinguish the inputs in a
+given pair the answer is to use segment
+embeddings
+there is a special token represented by
+SCP that separates the two different
+splits of the sentence
+another problem is to learn the order of
+the words in the sentence
+as you know bird consists of a stack of
+Transformers Bert is designed to process
+input sequences up to a length of 512.
+the order of the input sequence is
+incorporated into the position
+embeddings this allows Bert to learn a
+vector representation for each position
+vert can be used for different
+Downstream tasks although Bert was
+trained on mass language modeling and
+single sentence classification it can be
+used for popular NLP tasks like single
+sentence classification sentence pair
+classification question answering and
+single sentence tagging tasks
+thank you for listening

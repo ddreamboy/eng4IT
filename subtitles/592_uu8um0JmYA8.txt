@@ -1,0 +1,1657 @@
+welcome to the module on feature
+engineering it is one of the most
+fascinating modules and aspects of the
+machine learning Paradigm but before we
+dive into it and move ahead let's
+quickly take a look at what we've
+covered so
+far we used some data to build a machine
+learning model where the model is
+basically a function that tries to learn
+the Rel relationship between the
+dependent variable and independent
+variables for instance we covered the
+following basic algorithms like K&N
+linear regression logistic regression
+and decision tree and if you recall
+linear regression is a function y is
+equal to Beta not + beta 1 X1 + beta 2
+X2 and so on where betas here are
+essentially the coefficients of variable
+similarly a decision tree is a
+combination of multiple F statements
+where we've tried to find pure
+nodes here you might have noticed that
+I'm not talking about any coefficients
+because decision tree is a nonparametric
+algorithm whereas linear regression is
+parametric note that all the methods
+we've looked at so far were around
+optimizing the ml algorithms of finding
+the optimum model but we have not
+majorly worked on the data that we've
+given to the modu we've just used the
+existing data and just train the model
+on that we can add more data to the
+model so that it is able to make better
+predictions we can do this broadly in
+two ways first we can add new features
+or more information to the existing data
+for example if you're trying to predict
+the daily sales of a product let's say a
+cold drink in a college campus or our
+office complex we've been given data for
+past sales and using that we need to
+estimate the sales for the next step 10
+days in this case introducing a feature
+like the list of holidays for the next
+10 days might help to estimate the sales
+more correctly or how about having a
+variable like the daily average
+temperature because the sales of a cold
+ring might vary from Winters to Summers
+Etc it will add more value to our model
+and will help us in estimating the sales
+effectively here you can see that the
+addition of these two variables is
+actually helping us to estimate the
+sales for the next 10 days another way
+to improve our models performance is by
+using the existing data more effectively
+here I'm saying that we can generate
+more information or signal using the
+existing features to predict the
+relationship between independent
+variables and the dependent variable
+suppose you want to predict whether a
+customer will be able to pay a loan or
+not and we have the details of the
+customer like the birth year gender
+salary income Etc so let's take
+application date and birth year these
+these two features can help us generate
+the age of the customer this new
+variable age might impact the
+performance of the model and we'll be
+able to estimate the default ratio of
+customer
+right we can also use the income
+variable to generate a brand new
+variable currently income is a
+continuous variable and we can divide
+the income into categories or you can
+say different bands for example low
+income band High income average and so
+on so in this case we've seen that we
+can use existing variables to generate
+new variables like age and income band
+this technique of generating new
+features using existing features is
+called feature engineering let's now put
+a formal definition to feature
+engineering feature engineering is the
+science of extracting more information
+from existing data we not adding any new
+data here but we're actually making the
+data we already have more useful with
+respect to the problem at
+hand I've said that with respect to
+problem at hand so having a fair
+knowledge of the domain will always help
+us to build better features so I'll
+recommend understanding the problem
+statement and the domain well enough as
+this will help us to build better and
+relevant features in this module we will
+look at various feature engineering
+methods for different type of data sets
+like date time continuous categorical
+text and others
+here is a small but very interesting
+exercise for you on this slide we have a
+subset of the two data sets that we've
+been using so far Titanic survival
+prediction and bigm sales now I want you
+to take a while and think about what new
+features you can create from the given
+set of features for respective problem
+statements in the next section we've
+shared the problem statement and data
+dictionary again for both these problems
+so please go through it and share the
+list of features on the discussion
+portal it's a very interesting exercise
+and will help you understand what
+feature engineering is and how it
+works I hope you have a good
+understanding of the term feature
+engineering at this point now before we
+look at the different techniques we can
+use for feature engineering let's
+quickly look at some basic features we
+can create with the examples you saw
+before here is the bigm sales data set
+you can see that we have a feature item
+identifier it's the First Column here it
+has a large number of unique categories
+if you look at the original data set
+this data set is a few sample records
+but even here you can see that all the
+categories or all the rows are
+unique but if we explore the entire data
+set the first two characters in all
+these categories seem to have three
+unique categories it's either FD Dr FD
+again NC and after this it's all FD now
+look at the item type against them NC is
+against household Dr is against soft
+drinks and FD seems to be against food
+items like Dairy meat snack foods frozen
+foods Etc so we can conclude that FD Dr
+and NC represent food drink and
+non-consumable respectively using this
+information we can have a new column
+having values like FD Dr and NC only and
+this might help us to build better
+models let's look at another data set
+let me pull up the Titanic
+one this data set also has a lot of
+variables again as I mentioned before
+you should read the problem statement
+and the data dictionary well before
+starting the model building process this
+will help you to think of new features
+you can generate so if you've gone
+through the feature description of this
+Titanic data set you would know that the
+two variables sib SP and Par represent
+the count of siblings or spouse and
+parents or child on board using this
+information we can generate the total
+number of family members on board we can
+add these two values sib SP plus p + 1
+where one is for that observation or
+person there's another feature I want to
+discuss the name it's a text field if
+you look closely at the name column
+you'll see a title with each name like
+Mr Mrs Miss there's a master as well
+these titles can be useful features in
+making predictions because these titles
+in a way represent the age bracket of
+passengers this might help us to impute
+missing values in the age column as well
+similarly we can create many more
+features using the given data now let's
+look at what we'll be covering in this
+module you've seen a few examples of the
+problem statements in the data set like
+the Titanic and the bigm sales here we
+had some numerical features categorical
+features and some text or string based
+features as well these are the most
+common variable types we usually find
+ourselves working with another type of
+feature that we might encounter is the
+date time column we learn how to deal
+with all these features in this module
+or in other words how can we generate
+more signal from a given data set for
+now we'll turn our Focus to numerical
+and categorical
+variables in this video we'll discuss
+about the different methods of feature
+engineering we can broadly divide
+feature engineering into two categories
+feature pre-processing and feature
+generation let me briefly Define these
+two
+subcategories feature processing refers
+to changing updating or transforming the
+existing features in this case we not
+creating any new features but making the
+same features more informative we'll
+talk about different feature
+pre-processing methods in the later part
+of this
+video the other category is feature
+generation this is where we generate new
+features from the existing
+features but then how is feature
+pre-processing different from feature
+Generation Well feature generation
+refers to creating new features from the
+existing data and not simply transform
+forming the values of existing features
+for example in the Titanic data set that
+we saw we've created family size and
+extracted title from the name these are
+examples of feature generation let's
+look at each of these categories in more
+details specific to numerical and
+categorical
+variables let's start with feature
+pre-processing there are various methods
+to perform feature pre-processing and we
+look at them one by one the first method
+we look at is called feature
+transformation feature transformation as
+the name suggests is a method used to
+transform the
+features using mathematical operations
+for example for a given feature value
+you can take the log of the value square
+it or take a square root take reciprocal
+and so on but I'm sure you're wondering
+why is this important and how can we
+decide when to use which technique well
+it varies from case to case for example
+look at this plot it shows a
+relationship between a Target variable
+and a feature this shows that the
+relationship is
+nonlinear and we know that for some
+models like linear regression it's good
+to have a linear relationship between
+the dependent and the independent
+variables so in this case we should
+transform a variable in a way such that
+the relationship between the target
+variable and the feature becomes
+linear so this method is very model
+specific let's look at another case
+where feature transformation will help
+us to model
+better take this plot for instance this
+represents a right skewed or positively
+skewed distribution this could be due to
+the presence of some outliers in the
+data having a normal distribution is
+preferred of a skewed distribution
+because it makes things easier it makes
+it easier to model the
+relationships also some modeling
+techniques perform well when we have a
+normal distribution of variables so
+whenever we have a skewed distribution
+we can use Transformations which reduce
+the
+skewness now note that for right skewed
+or positively skewed distribution we
+take the square or cube root or log of
+variable and you can call that the nth
+root as well and for left skewed or
+negative skewed we take Square Cube or
+exponential of variables this is called
+feature transformation
+now there's one more thing you should
+note if we taking a log of the variable
+that has a negative value or a value of
+zero it might show an error can you
+guess
+why it's because the log of0 is not
+defined so instead you can use a simple
+trick and take
+log of x + C where C is a
+constant the objective is that the input
+of the log must be greater than Zer
+right now let's go ahead and look at an
+implementation of future transformation
+in
+Python in this notebook we'll be
+implementing feature transformation on
+the bigm sales
+data so let's start with importing the
+libraries and of course loading the data
+set so let's go ahead and do that we've
+rigorously worked with this data set in
+the last modules and I'm sure you'll be
+familiar with all the features by
+now so here are all the columns in the
+data set the continuous variables among
+these are the item weight item
+visibility and item MRP I'm going to go
+up and I'm going to take up the item
+visibility variable here you can try the
+same exercise with other variable so
+let's go ahead and look at the
+distribution of the item visibility
+feature so here we go here's the
+distribution plot or the histogram plot
+for the feature as you can see this is a
+right skew
+distribution let's take a square root of
+this and check the distribution
+again so we'll create another variable
+item visibility square root that will
+store the square root value of this
+variable here I'm using the np. sqrt
+function to calculate the square root
+value so I'm going to go ahead and
+Implement that and look at the
+distribution
+again this distribution looks more
+symmetric we can also see that there are
+a large number of values which have
+visibility zero here so we'll need to
+deal with them
+separately now as you've discussed
+previously we can either take the root
+or the log in case of a right skew
+distribution so let's go ahead and use
+the log function now
+here's another variable we creating
+called item visibility log that will
+store the log values for the item
+visibility
+feature now when I run this I get a
+warning can you guess why that is here's
+the warning that we're
+getting well look at the variable
+distribution so let me go ahead and run
+this as you can see we have a minimum
+value of zero at least one value I'm
+sure there could be more
+but the log of 0 is not defined that is
+why we getting an
+error one way to deal with this is that
+we can simply add a constant to every
+value in the
+variable here I'm going to go ahead and
+add
+0.1 and when we see the distribution
+again look at this plot we have mostly
+negative
+values and the distribution is not
+exactly perfectly
+normal this is because the values in the
+column are less than
+one let's increase the scale of the
+values and keep in mind that increasing
+the scale will not affect the
+distribution at
+all here I've multiplied all the values
+with 100 so let's go ahead and run this
+code so the new range of values have
+changed from 0 to 0.3 to 0 to
+30 I'm going to go ahead and use the log
+transformation
+again and just plot it out this plot is
+a normal distribution and the values as
+you can see here are also
+positive now let's move to another
+method of Feature pre-processing Feature
+scaling take a look at this data set it
+is related to loan applications here we
+have variables like loan amount Emi
+and the income and these are all in
+different units if you'll notice so loan
+amount is in thousands income is in
+hundreds and Emi is in dollars only and
+we've discussed that for distance-based
+algorithms like KNN features should be
+in the same scale else we'll get
+ambiguous results and that's not what we
+want in this case we need to perform
+scaling with features either scale up or
+down to bring all the features to the
+same
+scale the two most common ways of doing
+feature scaling are min max scaler and
+standard scaler let's first talk about
+minmax
+scaling in this method we first
+determine the minimum and maximum value
+in the
+column then for each value we first
+subtract minimum value from
+it and then divide by the difference of
+Maximum and minimum value of the feature
+which is range
+the minmax scaler scales down the value
+of the feature between 0 and 1 you can
+check that yourself if you
+want now if you
+replace XI with a minimum value the
+numerator will of course become zero
+right and when you replace it with a
+maximum value both the numerator and
+denominator will cancel themselves and
+the ratio becomes one here you can see
+in the second table all values of these
+three features are now in the range of 0
+to 1 one after applying min max
+scaling now let's look at the second
+method called standard
+scaling in this method we first
+determine the mean and standard
+deviation of the column then for each
+value we first subtract the mean from
+the value and divide it by the standard
+deviation let's apply this on the same
+example here you can see that all values
+of these three features are now at
+similar
+scale let's do one thing let's Implement
+what we have learned so far in
+Python in this video we'll go through
+some feature scaling methods let's go
+ahead and import the libraries pandas
+and numpy and we'll read the big Mar
+sales data set now we going to focus on
+two features item visibility and item
+MRP as you can see there's a huge
+difference between these
+values so let's bring these features to
+the same
+scale we are going to work with the min
+max scaler here it scales down the
+values between 0 and 1 you can see the
+formula here but we don't have to use
+this we'll rely on python to do it for
+us but it's always good to know and
+understand what's going on underneath
+the code that's where the formula
+helps so let's first import the minmax
+scaler from the SK learn. preprocessing
+Library perfect now we'll create an
+instance called
+scaler which will'll apply on the data
+which stor the two variables item
+visibility and MRP as you can see here
+and we're going to store this in a new
+data frame called scaled uncore data
+let's print out the first few rows as
+you can see here the variables now have
+the same range perfect now I'm going to
+use the do describe
+function to see the minimum value for
+both the
+variables as you can see it's zero the
+maximum is one perfect our minmax scaler
+worked exactly as we hoped it
+would let's try scaling these variables
+using the standard
+scalar we'll pick the same two
+variables and we'll first import
+standard scaler from the SK scalar
+pre-processing Library let me do that
+now we'll create an instance called
+scaler and fit it on the
+data again we'll store it in a new data
+frame called scale data and let me print
+out the
+results
+interesting as you can see here the mean
+is close to zero and the standard
+deviation is one so these are the two
+methods very popular methods that we can
+use to scale our
+data we've covered some pre-processing
+techniques for continuous variables so
+far let's move ahead to the feature
+pre-processing techniques for
+categorical variables we'll start with a
+very popular one one hot encoding it's
+often also called as dummy
+encoding remember this data set it's
+from the bigm sales problem we have
+three categorical variables highlighted
+in the red here note that most machine
+learning models cannot deal with
+categorical variables especially in
+python when we use pyit learn so we need
+to convert these categorical variables
+into numeric
+values let's pick the outlet size for
+now Outlet size column we can replace
+this Outlet size column with three
+columns Outlet medium Outlet small and
+Outlet
+high now the first row has the outlet
+size medium so we put one in the size
+medium column as you can see here and
+zero in the other two columns similar
+similarly we will perform this step for
+the rest of the rows against respective
+Outlet size here you can see for item
+identify NCD 19 the outlet size is
+pretty high so we have one in the size
+High column and zero in the remaining
+two columns the same method can be
+applied for the other categorical
+variables in our data set like the item
+type and the item fat content but just
+hold on there is a problem with this
+type of encoding the item type does not
+have an order as you can see it just say
+names of items like dairies soft drinks
+meat and we can't really say that
+there's an order to them but the
+categories in Outlet size and the fat
+content do have an order out size small
+medium and high have an order in them
+right and by using one hard encoding we
+are actually losing this
+information such variables which have an
+order between them are called ordinal
+variables in this case instead of
+creating three different columns we'll
+just replace the categories in the same
+column by numbers as you can see in this
+example we have numbers 1 2 and three
+for small medium and high respectively
+one for small two for medium and three
+for high in this way we actually
+preserving the order information of the
+variable as well along with encoding in
+numbers so let's go and open our jupter
+notebook and try these techniques one
+hot encoding and label
+encoding in this notebook we'll
+implement the concepts of one hot
+encoding and label encoding on the bigm
+sales data set of course you know what
+the first steps are we'll import the
+Panda's library and we'll read in the
+bigm sales data set let me just bring up
+the first five rows here we go we very
+familiar with these variables by now
+we've looked at them plenty of times
+before so let's just check the shape
+perfect we have 8500 plus rows and we
+working with 12 Columns of
+variables let's use a do D types
+function to bring up the data
+types so the categorical variables here
+we can see they have the data type as
+object all of these are the categorical
+variables and we need to convert these
+categorical variables into numbers
+before we train a machine learning
+model so let's start by encoding a
+single variable Outlet
+type we can determine the total number
+of categories in this variable using the
+dot value uncore counts function and as
+you can see in this output we have four
+categories we have Supermarket type 1
+grocery store Supermarket type 3 and
+Supermarket type 2
+perfect now let's use one hot encoding
+on this performing one hot encoding is
+actually very simple in
+Python all we have to do is use the
+pandas getor dummies function so in this
+code block I've applied this getor
+dummies function on the outlet uncore
+type
+variable and as you can see in this
+output We have replaced one column with
+four columns which have binary
+values since the first row had the
+category Supermarket type one we have
+one in that column and all the other
+columns have
+zero similarly for the second row we
+have one under the column so Market type
+2 and zero in the rest and so
+on but you might be wondering if there
+are 10 20 such variables do we have to
+write this code line for every single
+one of them well no you can simply use
+get dummies on the whole data set
+together so let me go ahead and do
+that
+perfect we can use the pd. getor dummies
+function and give the data set name like
+we've done here it will automatically
+select the categorical variables and
+perform one hot encoding now we faced
+with two problems since we've used one
+hard encoding here first is that all the
+categorical variables are converted into
+zero and one which results in a loss of
+some important
+information for example the variable
+Outlet size had categories high medium
+and small right which of course have an
+inherent order
+but now look at what's happened when
+we've done this we missing out on some
+very important information because the
+order between these variables has now
+been
+destroyed the second problem is that the
+number of features have drastically
+increased from just 12 to 1,600 plus
+let's see the shape you can clearly see
+we have 165 variable that is a humongous
+amount and if we look closely the
+variable item identifier has a number of
+of unique values it's essentially like
+an ID variable and hence there are more
+than 90% of the rowes which have a zero
+against them look at this so this
+information is not really useful for the
+model in this notebook we will address
+the first problem and we look at the
+solution to the second problem in an
+upcoming video so to maintain the order
+among the categories and variables
+instead of using one not encoding we'll
+go for label encoding so let's go ahead
+and do that we'll import the labor
+encoder class from SK learn.
+preprocessing let me look at the value
+counts in the outlet size variable
+perfect we have medium small and high
+and we have the value counts in front of
+them now we'll create an instance called
+Le and use the fitore transform function
+from the label encoder class it will
+transform small as two medium as one and
+high is zero now the problem here is
+that label encoder considers the
+alphabetical order to assign values that
+might not be what we're looking for
+every time if we need an alternative
+solution to this where we can decide the
+number we want to assign for each
+category manually then we can use the
+dot map function here's the example
+mention the variable name which you've
+done here Outlet size then we'll use a
+DOT map function and write the number
+against each category here I'm assigning
+0er to small 1 to medium two to high so
+let me just run that perfect so that SS
+the first challenge that we've
+encountered in one hard
+encoding so far we were dealing with
+categorical variables having less number
+of categories now imagine if your data
+set has a categorical column with a 100
+different categories and it quite often
+does happen in the industry do you think
+one encoding is a good idea not
+really for example here we have a sample
+data set with a column sit
+imagine if this column has 500 unique
+Cities Performing one hot encoding will
+create 5 100 different variables with
+zero and one value that's going to be an
+absolute nightmare to deal with so what
+can we
+do well here's the trick we can combine
+sparse classes but wait what are sparse
+classes classes with relatively low
+frequency are known as SP classes here's
+the value count for different
+cities cities having very low frequency
+like ghati rur and indor are less
+frequent in the data set compared to
+other cities in the data since these
+cities have a very low frequency we can
+combine these cities under a new
+category other to reduce the number of
+unique
+categories and this will not explode the
+dimensionality of the data set as
+well so to reduce this number of
+categories we can simply combine a few
+categories and hence reduce the overall
+number of classes for the variable based
+on the frequency count of
+variable there can be different ways of
+combining as well if you have that
+domain knowledge for example in this
+case I can combine similar cities
+together and similarity can be
+Geographic based or type of City based
+like Tier 1 tier 2 tier 3 and also
+create a region variable which is one
+level up in the geographical hierarchy
+but this is only doable if you have the
+geographical
+information let's go ahead and look at
+an example in Python we'll continue
+working on the same notebook which we
+saw in the last video so here we used
+the bigm sales data
+set and we looked at what are the
+different categorical columns we first
+used one hot encoding on the whole data
+set and discussed that we essentially
+have two problems that we're working
+with some variables might have an
+inherent order that was the first
+problem and the second was that the size
+has increased drastically remember we
+started off with 12 variables but after
+using one not encoding we ended up with
+over
+1600 to solve the first problem we use
+the label encoding method and now we can
+look at dealing with high cardinality or
+the high number of Dimensions to do this
+we'll be reducing the number of
+categories so let's first see which
+variable has the highest number of
+unique categories we can do this using
+the Dot N unique functions out of all
+the categorical variables item
+identifier has the maximum number of
+unique values now this might be because
+each store has given a certain number or
+identifier to each individual item let's
+look at the value count for this
+variable the maximum frequency is 10 and
+actually there are many values which
+occur just once or twice
+so what we'll do is we're going to
+combine these low frequency classes so
+we'll first store the frequency count of
+the variable in temp and let me print
+out the first few rows okay here we go
+now we'll create a new column in the
+data frame item identifier count which
+will store the value count for each
+category we'll do this with the help of
+the apply function the apply function
+performs a given task for every Row in
+the data frame so so here I've used the
+apply function on the item identifier
+column for each category in the item
+identifier it will return the frequency
+from the temp that we created here so
+let me go ahead and run that and
+finally we want to combine the sparse
+classes so for all the categories which
+have frequency less than four I've
+replaced the category with other so let
+me run this for Loop it might take a
+couple of moments so
+let's just uh wait for this to
+run all right now let's look at the
+first seven rows perfect now when we
+look at the value counts we'll see that
+the least values we can see is four so
+the one and two values we saw earlier
+have now been combined all right so we
+have so far covered numerous methods to
+perform feature
+pre-processing in this video we'll
+discuss the different methods for
+feature
+generation feature generation
+essentially means creating new features
+from existing
+data let's take an example to understand
+this suppose our problem statement is of
+stroke prediction and we given this data
+set you can see that we have features
+like the person's
+age we have gender work type
+hypertension
+Etc and based on these featur we have to
+predict whether the person will have a
+stroke or not which is essentially this
+column the target variable now let's
+look at the relationship between the
+independent variables and the dependent
+variable first we have the age of the
+person it's more likely that adults will
+have a stroke rather than kids so we can
+create bins using this age column such
+that we classify adults in one bin and
+young people in the other now this can
+be done in various ways the simplest
+method thir is the one we just discussed
+where we set a cut off at a value say 35
+and create two bins the rows which have
+age greater than 35 will be marked one
+and others will be zero so here we've
+created two bins we can generate
+multiple bins in a similar
+manner for example set age 0 to 12 in
+one bin 12 20 in another and so on in
+this case we will have a new variable
+which will be categorical or you can
+even say it'll be ordinal in
+nature look at the example shown here we
+have four categories child teenager
+adult and senior citizen since the
+variable here is age we were easily able
+to decide the range values based on our
+experience this cut off value or
+threshold value can also be decided
+using a simple decision
+tree they have built a tree using age as
+the only feature and stroke as my target
+variable the decision tree decides the
+best split of age such that it is able
+to classify that person will have a
+stroke or not here we have threshold
+values as
+49.5 66.5 and
+77.5 you can see here the first
+split has happened on
+66.5 then in the left branch of the
+decision tree the split has happened on
+49.5 and for the right Branch it is
+77.5 and we can now generate bins
+accordingly look at the bins again we
+have on this slide here are the cut off
+values obtained using a decision tree
+model we saw in the previous
+slide let let me bring up another
+example of
+binning in this data set we have BMI
+values for each person which as you can
+see are in
+decimals here we can round of the
+decimal values for example 17.6 here and
+17.7 which will both become 17 in a way
+we're creating bins at a whole number
+level right let's now move to the python
+notebook and take a quick look at the
+implementation of binning in
+Python let's implement this concept I'll
+go ahead and import the pandas library
+and we'll be working with the same
+stroke prediction data set that we saw
+in the video
+so we have all sorts of variables here
+we have the age gender
+hypertension heart disease if the person
+was ever married or not work type
+residence type all sorts of things and
+of course we have the final uh Target
+variable
+stroke so what I'll do here is I'll use
+the age variable to create
+bins we'll first store the range for
+each category here in the bins
+variable and this will be in the form of
+of a list these are basically the bin
+edges or the lower and upper values of
+the range then we'll store the names
+which we want to give these ranges as
+you can see I've given the following
+labels child teenager young adult
+middle-aged and senior citizen and
+stored it in a group list in a list
+called
+group finally we've created a new
+variable age uncore category and we use
+the pd. cut function to bend The
+Continuous values into
+categories we give the variable age as
+input and along with that we specified
+the bin edges and the labels or the
+names for each group so I'm going to go
+ahead and run this code block and let's
+look at the first five rows perfect as
+you can see here our binning strategy
+has worked out
+perfectly first row has age three and
+has been categorized as a child the
+Third eight again a child age 58 falls
+into the middle-aged category 17 into
+senior citizen and 14 as a teenager
+perfect now the same can be done using
+the bin edges from a decision
+tree we'll create a new list storing the
+new bin edges as you can see in this
+code block and the rest of the steps
+will be the same that we saw earlier we
+create a list group that will store the
+labels we saying B bin 1 bin 2 bin 3 and
+Bin 4 here and again we're creating a
+new variable agore category using the
+pd. cut
+function to bend the continuous values
+into
+categories by giving the variable age as
+input along with that we specify the bin
+edges and again the labels of the names
+for each group I'll go ahead and
+implement this and as you can see our
+binning strategy yet again has come up
+trumps the first row which had age three
+for the person is in bin 1 58 is in bin
+2 8 is in bin 1 17 bin 3 14 again in bin
+1 so I hope you got a sense of how
+binning works and how we can implement
+it in Python very interesting wasn't
+it all the examples that we' have
+discussed so far we're using a single
+variable let's look at some examples of
+how we can use more than one variable to
+generate new features because that's
+essentially what you'll face in the
+industry or even when you're competing
+in a data science
+competition here we have the loan
+prediction data set the target variable
+is the last column here and we have to
+determine whether a loan should be given
+to the person based on the person's
+income education property area
+Etc now look at these two variables the
+applicant income and the co- applicant
+in adding up these two values will give
+us the total earning of the family which
+as you can imagine could very well be an
+important factor in deciding whether a
+loan should be granted or
+not since we have constructed a new
+feature which represents the interaction
+of these two features this is called
+feature
+interaction similarly we can construct
+other mathematical features like taking
+the ratio of loan amount and applicant
+income or the ratio of loan amount and
+total income the idea is that if a
+person a group with a high loan amount
+and low income might have higher chances
+of defaulting here again having some
+domain knowledge will help you to think
+about these features moreover we can use
+the difference of income and loan amount
+as well and so on it's not necessary
+that we use only two variables you can
+go ahead and play around with multiple
+variables as
+well in this notebook we going to go
+ahead and Implement what we have just
+learned
+I'll import the Panda's Library first
+read the data set and look at the first
+five rows of our Loan Data set and here
+we go now after we load the data set we
+need to go through every feature and
+understand what each of these features
+mean and try to identify the interaction
+of which feature would be useful for the
+model so I've taken two examples for you
+in this
+notebook first since we trying to
+predict if a person should be given a
+loan or not apart from the person's own
+income the income of the spouse could
+potentially be an important
+factor in our data set we have two
+features applicant income and the co-
+applicant income which you can see here
+we can add these two to get the total in
+so I'm going to go ahead and do that and
+print out the first five rows here we go
+you can add this up and it's perfectly
+visible in the total underscore income
+column awesome we can create another
+feature the loan income ratio here we
+dividing the loan amount by the
+applicant income so let me go ahead and
+do that perfect and we have the loan
+income ratio in this column and we've
+just created an entirely new
+feature don't you just love feature
+engineering it's one of the most awesome
+aspects of a data scientist role in the
+same manner that we have seen here I
+would encourage you to go ahead take up
+this data set and think of whatever
+features you can come up with there are
+multiple ones I can guarantee you you
+can if you just spend 10 minutes
+wondering which features you can create
+you can come up with at least 20 25 new
+ones in this video we'll generate
+features based on available missing
+values let's say that we're doing data
+exploration in a data set and and we
+find that the column smoking uncore
+status has a large number of missing
+values now our first intuition might be
+to delete this column but missing values
+in the data might have a
+pattern and in fact quite a lot of times
+tend to be useful for instance in this
+case a missing value in that column
+might indicate that a person does smoke
+but is actually reluctant to say so I
+mean I'm sure a lot of us can relate to
+this
+hence we can create a separate column
+that indicates whether this row has a
+missing value or not there might be a
+chance that the missing value is not
+random at all and there is some hidden
+information then this variable will
+capture that
+information you can see here that I have
+created a column called smoking uncore
+status
+n it has one in a place where smoking
+status is missing after this you can
+impute the missing values like always
+so let's move to the jupyter notebook
+and implement this method we're going to
+use the stroke prediction data set again
+I'm going to go ahead and import the
+libraries and uh load the data
+set here the first fire rows we've
+already looked at this before so what
+I'm going to do is I'm going to use the
+do isal do su functions to look at the
+number of missing values in each
+variable here we go as you can see the
+BMI and the smoking status variables
+have a ton of missing value especially
+the smoking status here so what I'll do
+is in the next CoD line here we are
+creating a new variable smoking status
+NE which will store one if there's a
+missing value and zero if there are no
+missing values I'll go ahead and
+implement it and look at the first five
+rows of these two
+variables
+perfect so one remember was when there
+was a missing value and the smoking
+status confirms that yes there is indeed
+a missing value here zero means there
+are no missing values which again we can
+confirm against the smoking status
+variable and that is how we can create
+new features using missing values pretty
+intuitive and straightforward wasn't
+it in this video we'll cover another
+very commonly used feature generation
+method called frequency encoding for
+categorical variables it's often used in
+data science competitions and has proved
+to work really well it's even helped me
+out quite a lot of times so let's
+understand what it
+is here we have a categorical variable
+workor type now we can determine the
+frequency of the categories in this
+variable and normalize the
+values the idea essentially is that a
+category that has a higher frequency
+would of course have a higher number
+against it and and hence will get more
+importance for example suppose there's
+an insurance company and they have
+various products but they've not given
+information about the most selling
+product or so in this case frequency
+count will help us to give this implicit
+information to model using frequency
+encoding let me just do this in Python
+to give you a better idea of how
+frequency encoding works
+let's spend some time understanding how
+we can Implement frequency en coding in
+Python so I'm going to import the
+Panda's Library first and let's go to
+the bigm sales data
+again here we have a variable item type
+as you can see in this column and I'm
+going to apply frequency encoding on
+this
+variable now when we look at the
+frequency of categories in this variable
+you can clearly see that fruits and
+vegetables here
+have the highest frequency followed by
+snack foods so I'm going to go ahead and
+store the item type count in a variable
+called
+temp here we go
+perfect now we'll create a new variable
+item type count using the dot apply
+function the apply function works like
+this and you've seen this before it will
+check the item type for every single row
+and against the given category of item
+type it'll return the frequency value
+from the temp variable we've just
+created so I'm going to go ahead and run
+this perfect so we've got the item type
+count against the item type so DA has
+682 instances meet has 425 and so on
+like we performed frequency encoding
+here there's another commonly used
+method it's called mean encoding and
+this is often done using the target
+variable again we have the item type
+variable and we're going to use the
+target variable
+sales so let me just print out the first
+five rows here we go so now against each
+category in item type we can calculate
+the mean sales in the training
+data here we go this shows us which
+variable or which item type has the
+highest sales it's a brilliant way of
+understanding the different item types
+you have what Revenue they're bringing
+in and not only have we just created a
+new feature we can now analyze a lot of
+the things that we have in the bigart
+sales data set using just this
+function we've covered feature
+engineering with numerical and
+categorical variable so far in this
+video we'll be focusing on the datetime
+variable and we learn how to generate
+more information from a datetime column
+it's a very interesting
+concept can you think of a few examp
+examples where we'll find a Time
+variable in our data set here are a few
+of the top of my head suppose a
+particular hotel is collecting the data
+of the past bookings and they want to
+predict the number of room bookings For
+an upcoming
+month a data set for this problem
+statement would have features like the
+booking ID booking date the time of the
+booking what kind of room was booked the
+number of days and nights it was booked
+for the number of people who stayed in
+the room Etc I mean there are are a lot
+of variables that can factor in so here
+we have two datetime features booking
+date and booking time another example is
+of predicting the price of flight for a
+particular Airline as you can imagine
+the price would be higher during the
+time of vacation or during the weekend
+while it should be lower during non
+holiday seasons what are the possible
+factors that can affect the price of a
+flight ticket here are a few I could
+come up with the time of arrival and
+departure of the flight or the source
+and destination also the date of travel
+is off season or a holiday season also
+can be an important factor we have three
+datetime based features date of travel
+time of arrival and
+departure note that using the time of
+departure and time of arrival you can
+determine the travel duration of the
+flight as
+well another example and a very common
+one could be of stock market analysis
+where having the date of course is of
+utmost
+importance using the date we can find if
+there is any pattern in the increase and
+decrease of the price for instance is
+the closing price more on Mondays and
+low on Fridays or vice
+versa well now that we understand that
+there are number of problems where we
+can have the datetime feature let's see
+what valuable information we can extract
+from these datetime VAR
+tabls using the date we can determine
+which day of the week it is is it a
+Monday is it a Wednesday and so on we
+can also find out if the day is a
+weekday or a
+weekend any guess why this information
+would be
+important well recall the example of the
+flight ticket price we discussed just a
+few moments ago the ticket price would
+be considerably higher on weekends than
+on weekdays so do you see where this
+fifth in we can also determine if the
+day is a national holiday or not simply
+by looking at the date feature this
+again would be useful when we work on
+problems like predicting the flight
+price or the number of bookings for a
+hotel using the date we can also extract
+the month for example flight ticket
+price might be higher in December since
+it's close to
+Christmas a summer vacations fall in
+June and the number of room bookings in
+a hotel during that month could see a
+significant
+rise similarly we can determine the year
+from a given date for instance from a
+given data of the past five or say 10
+years the recent values would usually be
+given more
+importance now considering the time
+feature we can determine the r from the
+time
+variable how will this be
+useful well the price of flight tickets
+at odd hours like 1 a.m. or so are
+usually significantly lower and once you
+have the r value we can create more
+features like is it morning is it
+afternoon evening is it midnight for
+instance if you're trying to predict the
+sales of a product in a retail outlet it
+would be more during the peak hours
+right in the same way we can determine
+if it is the first or second half of the
+day we can also calculate the difference
+between time like calculating the light
+duration and the same goes with dates
+calculating the days of stay in a hotel
+or calculating the age of a person using
+the date of birth and today's date or
+the date Hoshi applied for a loan
+application or Insurance there can be a
+lot more features that you can create
+using the date variable apart from the
+features that we've discussed you can
+see a lot of additional features here
+such as the day of the week the day of
+the year what week of the year it is I
+mean there are a lot of variables here
+is a table that shows a list of features
+we can extract from a datetime column
+we've taken this from the Panda's
+documentation and we've shared the link
+just after this video so apart from the
+features that we've already discussed
+you can see a lot more features here
+like the day of the year the week of the
+year which essentially represent the day
+number out of 365 and week number out of
+52 total weeks in the year
+using the date we can also find out its
+month start month end quarter start
+quarter end same for year or is it a
+leap year or not and so you can see the
+sheer amount of insight we can
+generate now let's look at an
+example we have to predict the amount of
+NO2 nitrogen dioxide in the air at a
+given day and time how can we use the
+date and time variable here I want you
+to pause the video and just think about
+it for a second before you
+proceed NO2 primarily gets in the air
+from the burning of
+fuel NO2 forms through emissions from
+cars trucks buses power plants and offro
+equipment so intuitively a higher amount
+we should expect to see in the morning
+between say 7: to 10:00 a.m. and in the
+evening between 5: to 8:00 p.m. when
+people generally travel from office to
+work and vice versa
+also during the afternoon NO2 reacts
+with sunlight to form no o and O but
+during the night this reaction does not
+take
+place let's do one thing let's jump into
+a jupyter notebook and spend a few
+moments working with this data set which
+will give you a better idea of what we
+covered in this
+video in this notebook we'll go through
+the same example we saw in the slides so
+let's go ahead and read the data
+you can see we have dates in the First
+Column and NO2 content in the second
+column so here's a look at the different
+data types we have in these two
+variables so date time as you can see
+here is being read as an object data
+type is that right it's not the first
+and most important step when dealing
+with the date time column is to convert
+the data type into date time by default
+as you can see here it is taken as an
+object and that can give us pretty
+random
+results so what we'll do is we'll use
+the pandas pd. 2or datetime function we
+have to give the column name and the
+format as input format depends on the
+structure of your date column here we
+have date month year followed by R
+minutes
+seconds so this is how we can do it so
+let me just print it out and then look
+at the data types again perfect here are
+a few examples of the different uh so
+let me print the maximum and minimum
+values of our date time column we get
+the minimum to be uh 10th March 2004
+which is the first row of the data set
+and you can verify from your end that
+the max value which you see here is
+actually the last value in the data set
+to do this use the data frame. tail
+function that's right data frame. tail
+now let's see what are the features we
+can extract from this column first you
+can extract the r and minute values by
+simply using the command column
+name do dt. R so let's do that and look
+at the first five values here we go
+these are the R so 18 would be 600 p.m.
+7 p.m. and so on we can also extract the
+minutes so let's do that and print it
+out it's zero because it's 6 p.m so you
+can just go through the entire data set
+to understand this in more detail we can
+also extract which day it is whether
+it's Monday Wednesday or so on we can do
+this using the column name dt. day of
+week so here I'll print it out what do
+you think two and three here
+means well this gives us the number
+where zero is for Monday and six is for
+Sunday if you want to get the name then
+we can use week daycore name instead of
+day of week so I'll print that out here
+we go to get the month we can use the
+dt. month function so I'll print this
+out here we go it's the third month of
+the year so we can similarly determine
+the year using dt. ear that's something
+that you can do additionally we can also
+find out if the given date is at the end
+of the month or the end of the year
+using the dt. isore monore end so none
+of the dates at least in the first seven
+rows are at the end of the month you can
+always try other features yourself in
+fact I strongly recommend taking up this
+data set or any other data set that has
+a datetime feature and experimenting
+around using what we've learned here or
+exploring other things that you can do
+with datetime values that's how you
+learn new
+things finally what I'm going to do is
+I'm going to bring all of what we've
+learned so far together so we'll create
+a new data frame called newor DF using
+the pd. dataframe function here the
+First Column is the ear which stores the
+Year from the date we have the month day
+hour basically what we have just seen
+and we also have an additional quarter
+here we'll just put all of that together
+in a new data frame and print it out
+here we go here are all the new features
+that we've just created how cool is that
+now I'll add all these features right
+back to our original data frame using
+the pd. concat function basically
+concatenation and here we have the new
+data set isn't it amazing we just had
+date unor time and NO2 when we started
+and now we have all sorts of very useful
+variables got to love feature
+engineering so far we've discussed
+features we can directly create using
+pandas now there are some additional
+features we might want to add to the
+data like whether the given date is a
+weekday or a weekend since we were able
+to extract the day of the week we can
+check if it's a weekend using this value
+this is the code to do this we've
+created a new column called isore
+weekday and then we've run a for Loop to
+check the value at each row when the day
+of the week is five or six the value is
+zero
+otherwise it's one one meaning weekday
+zero of course meaning weekend so I'm
+going to go ahead and run this again
+this is a computationally heavy for Loop
+so we'll just give it a couple of
+minutes to run and then we'll look at
+the first five rows of our new data
+frame and here we go so day of the week
+2 as isore week day one one remember is
+that it's a weekday so clearly this our
+for Loop has worked out pretty well
+these are the first five rows of course
+you can look at the entire data set to
+verify all the values but I can assure
+you our for Loop has worked to
+Perfection we can also determine the
+difference between two dates for example
+I've taken up a new data set which I'll
+just read that has two columns
+application date and a date of birth of
+the applicant so application receipt
+date here and the applicant birth date
+so I'll quickly print out the head these
+two columns for easier use perfect using
+these we can determine the age of the
+applicant first to do this we need to
+convert these variables into the that's
+right datetime format so let me go ahead
+and run this all right now hit here is
+the difference of the two variables it's
+12,902 days divide this by 365 and
+you'll get the year to do this for each
+row I will again use the apply function
+this this code might look a bit
+complicated but is actually very simple
+and efficient for each row dot applyer
+Returns the difference of the two
+variables and this value returned by the
+function is stored in new variable which
+we calling applicant H so I'm going to
+go ahead and run this perfect so this is
+how we can work with a datetime variable
+so many things we can do with a simple
+column again as I mentioned earlier go
+ahead experiment with it we have a Time
+series data set on analytics with this
+data hack platform go ahead use that
+data set apply what we've learned here
+and you'll be amazed at the accuracy you
+get using these simple datetime
+features is there any way we can
+automate this whole process of creating
+new
+features yes we can there's a library
+called feature tools which is an
+open-source library for performing
+automated feature engineering let's
+understand how it works there are three
+important components of feature tools
+entities feature Primitives and deep
+feature synthesis to thoroughly
+understand these let's take up an
+example data set and it's one you've
+seen before can you recognize this it's
+the big Mar sales data set in this data
+set we have quite a few number of items
+like item weight we have item type we
+have the item MRP Outlet identifier
+among other things and of course the
+last column here the item Outlet sales
+that's a Target variable now in feature
+tools this data set is called an entity
+for now we only have one data frame here
+but there can be more multiple for
+instance if we have a data set that
+holds only the variables that you can
+see in the red border here like item
+identifier Outlet type Outlet size Etc
+while we have another data set that
+contains a details about things like
+item weight fat content type and so on
+in that scenario we'll have two data
+sets and each of these individual data
+sets would be called an entity so an
+entity is basically a single table or
+data frame all the information of the
+entity or entities is stored in an
+entity set in other words we can say
+that an entity set is a collection of
+tables let's now talk about feature
+Primitives remember we studied about
+feature Transformations such as log or
+Square before as well as feature
+aggregations like additions and ratio
+previously well these aggregations and
+Transformations are called feature
+Primitives here are a few examples of
+the various Transformations and
+aggregations that we can Implement using
+feature tools you can go ahead and pause
+the video for a second and just go
+through this list if you
+want so if I have the following two
+features item weight and item MRP from
+the bigm sales data set we can take the
+sum or difference or multiplication and
+so on but that's not the limit of what
+we can do we can even add more variables
+for example item weight into item MRP
+plus item weight you can think of the
+Limitless things you can do using these
+options this is the beauty of feature
+engineering now this also is where the
+concept of deep feature synthesis comes
+into play deep feature synthesis Stacks
+multiple transformation and aggregation
+operations although feature tools is
+able to create all these mathematical
+features
+automatically but there's one thing you
+should keep in mind it does not have
+domain knowledge which as we've seen
+previously can play a critical role in
+building a better
+model I would recommend using feature
+tools for generating new features but
+you should also focus on domain
+understanding and apply that knowledge
+to create more domain specific features
+as
+well let's move to the notebook and
+implement this in
+Python in this notebook let's go ahead
+and understand how feature tools can be
+implemented in
+Python now before we run this notebook
+you'll need to install the feature tools
+library on your machine simply use this
+one following command and do that so
+let's go and import the feature tools
+library and pandas all right we're going
+to be working with the bigm sales data
+set so I'll load that and I'm going to
+store all the independent variables in
+the features variable and the target
+variable which was sales in a variable
+which we'll call Y all right now first
+we'll create an empty entity set using
+the function ft. entity set I've said
+the name of this entity set as big Mar
+as you can see here you can of course
+set any name whatever you see fit so let
+me just run this code block here we
+go now we can add multiple entities to
+this entity set remember each data frame
+is an
+entity in our example we only have one
+data frame and hence yes we only have
+one
+entity now in this cell We'll add an
+entity to the empty entity set we
+created earlier how will we do that by
+using the entity _ frommore data frame
+function we'll name this dataor one and
+as I said you can use any name and we'll
+add all the features the independent
+variables to this entity set also uh we
+need to specify the parameter
+index because in our data set we don't
+have a unique ID against each row so I'm
+going to go ahead and run this perfect
+all right now we've prepared the data
+according to feature tools time to
+create some new
+features we will use ft. DFS function
+which is the Deep feature synthesis
+function it returns two things the newly
+created features which we are storing in
+feature uncore Matrix and the feature
+definitions which we'll store in feature
+_
+deps to the function ft. DFS we have to
+give the entity set the target entity
+which is dataor 1 in our case Target
+entity means which is our parent data
+frame on which we want to perform
+feature Engineering in case we have
+multiple data frames we'll have to pick
+one of them as the target entity then we
+specify the function we need to perform
+on the features of data set using the
+TransCore
+Primitives parameter I have specified
+two for now add numeric and multiply
+numeric basically add all the numerical
+variables and multiply all the numeric
+variables and we've set the depth to one
+we'll understand what the maxor depth
+parameter does in just a moment when I
+run this cell we'll see that we have new
+features that we've added to our
+original entity so let me go go ahe and
+do that all right now these are all the
+new variables starting here that we've
+now engineered out of our original
+entity so let's see the complete list
+using the feature undor deps code here
+we go here's the complete list you can
+see a sum of two features you can see
+the multiplication as well here of two
+features with all possible combinations
+and when we look at the shape we can see
+that now we have 23 variables and we
+started with 12 so we created 11 new
+features now if you look closely each
+new feature is created by performing one
+operation either addition or
+multiplication this why why do you think
+this is this is because we set the max
+underscore depth to one so only one
+operation is being
+performed let's experiment and change
+the depth to two which we'll do that so
+run these cells
+all right so we get all sorts of new
+features again let's look at the
+complete list using the feature defs
+code as you can see here the new
+features have a combination of two
+operations and using this we've created
+about 50 new features in a matter of
+seconds incredible feature tools is a
+very powerful library for creating new
+features but just a word of caution not
+all the features will be useful for the
+model so just keep that in mind when
+you're using it thank you

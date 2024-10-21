@@ -1,0 +1,440 @@
+which python web framework is the best
+flask is considered the most popular
+beginner framework django is the most
+popular full stack framework offering
+the most functionality and is used by
+many companies in production and fast
+api has only been around for three years
+but it took the hearts of the python
+developer community by storm
+facilitating rapid development and
+offering a tremendous web app speed when
+comparing google trends flask is on top
+closely followed by django but fast api
+is rising quickly based on github stars
+django is the winner but also closely
+followed by flask and fast api catching
+up quickly and in the speed benchmark
+test fast api is the clear winner
+outperforming the other frameworks by a
+factor of two or even three so which one
+should you use it's hard to give one
+clear recommendation because as always
+the answer depends each framework has
+its own strengths and weaknesses and all
+of them are great so in this video i
+created the same to-do app with all
+three frameworks in the process you
+learn how to use each framework and
+hopefully get a better feel for the
+trade-offs between each of these so in
+the end you can make the best choice for
+your next project the project we are
+going to build is a simple to do app
+providing functionality to add update
+and delete to-do's for each app you'll
+learn how to use a database use html
+templates and implement the api routes
+so let's get started let's start with
+flask flask is well established in the
+python community it is loved by
+beginners and experts for its simple
+syntax while still being capable of
+managing full-blown production-ready web
+apps so let's see how to do it first i
+recommend to create a virtual
+environment and then activate it then we
+need to install flask and also flask sql
+alchemy to work with a database then we
+create one file app.pi and import all
+classes and functions from flask that we
+need the convention is always to create
+an app instance with a double underscore
+name and then creating a route is as
+simple as defining a function and using
+the appropriate decorator here we say
+app.get and then a simple forward slash
+since this is our home page this would
+now display hello world on the website
+in order to use the database we import
+sql alchemy now we have to set some
+configuration variables for example the
+name or path to the database here we
+simply use a sqlite file and then we
+create a database instance by using sql
+alchemy and passing the app to it now we
+create a model for the database so we
+create a class to do that inherits from
+db.model and we give it three columns
+with the appropriate data type we want
+an id a title and a complete flag for
+the to-do item and then we call
+db.createall to create and initialize
+our database
+now of course we want to use this so in
+the home route we call
+db.session.query2do to retrieve all
+to-do items and then we use the render
+template function from flask with a
+template file name and the to-do list is
+additional arguments so that we can use
+it in the html code of course we need to
+create the template so we have to create
+a folder named templates and then a file
+that we call base.html
+and here we can use normal html code
+that displays a form and all to do items
+now what is special here are these curly
+braces with percent characters this is
+special ginger 2 template syntax that
+basically allows us some python-like
+logic for example we can have a for loop
+where we iterate over all to-do's and
+show the id and title for each to-do
+then we have an if-else statement to
+check the complete flag and show the
+label in a different style and then we
+also need closing statements for the if
+and also for the for loop we also create
+two links that are the buttons to update
+and delete a to do and the important
+part is that the ahref points to the
+update and delete route for this
+particular to-do id please note that
+these will be get requests which is not
+a best practice for updating and
+deleting data but it works and for
+simplicity i will use it like this now
+we go back to the app.pi and can
+implement the remaining routes first
+let's create a route to add a new item
+this has the
+app.postdecorator since it should be a
+post request we get the title
+wirerequest.form and then we create a
+new to-do item and call
+and db.session.add.com the changes as
+last step in here i use the redirect
+function together with the url4 function
+to redirect and load the updated home
+page the update route works similar here
+we query the particular to-do item with
+the id remember that we also specified
+the id in the html code then we update
+the complete flag commit the changes and
+again redirect to the home page and the
+delete route is the very same code
+except that here we delete the to-do and
+that's it 49 lines of code is all we
+need super simple and straightforward
+this is where flask really shines it
+won't be that quick with the other two
+frameworks now to run the app we can
+export the environment variables flask
+app equals app.pi and flask n equals
+development to get hot reloading and
+then we say flask run to start their
+development server and now we can add
+new to-do's update them and also delete
+them
+next let's use fast api it's one of the
+fastest python web frameworks out there
+right now it also provides an easy
+syntax allows for rapid development and
+offers some more nice to have features
+like automatic interactive documentation
+and type validation that's why
+developers love it and it's rising so
+fast in popularity that i think it will
+soon catch up with flask and django
+let's create a new virtual environment
+for this project then we need to install
+fast api we also need an asgi server for
+example uv corn and for the template
+files and database support we need
+python multipart sql alchemy and ginger
+2. these are essentially the same
+dependencies as we get with the flask
+and flask sql installation here we
+create three files app.pi models.pi and
+database.pi we need a little bit more
+code for each compared to flask and we
+want to maintain a clean project
+structure the basic app will be very
+similar to before we import fast api
+create an app instance and create a
+function that we decorate with app.get
+here we return a dictionary which will
+be automatically converted to a json
+response one cool thing to mention here
+is that we could also declare the
+function as async dev since fast api
+supports asynchronous programming out of
+the box and allows for an extremely fast
+web app but for simplicity i'll stick
+with a normal function here fast api
+heavily relies on tie pins so if we want
+a dynamic route we use this syntax we
+put the argument in curly braces in the
+route and then we use the same name as
+function argument together with a type
+hint in this case it should be an
+integer this is concise reduces bugs and
+gives us automatic type checking which
+we will see later so let's continue with
+our to-do app we need a few more imports
+from fast api we also import a few
+requirements from starlet this is the
+asgi framework that fast api is built on
+top of then we specify our template
+directory and use a template response in
+the home function we pass the request as
+argument and also the database which is
+a session object that depends on another
+function don't worry about this syntax
+yet it will become clear in a moment but
+note that again for each argument we are
+using typins here and then again we
+query the database for all to do's and
+return a template response that needs
+the html file the request and the to-do
+list in this case the arguments for the
+template file are passed as dictionary
+now we also create a template directory
+and the base.html file and here we can
+use the exact same code as before since
+we are also using ginger 2 templating
+syntax now let's set up the database we
+get the imports and set up the path to
+the sqlite database then we need to
+create an engine we also need to create
+a session instance and lastly we declare
+the base class from which the model will
+inherit in the next step for the model
+we import the database and this base
+class we just declared and then we
+create a to-do class that looks very
+similar to the one from the flask app
+but now we inherit from base then we
+define a table name and use the same
+fields as before now we can go back to
+app.pi and make use of all of this we
+import the session class so we can use
+it as type hint we import the models the
+session local object and the engine then
+we create all database tables and then
+we create a helper function to access
+the data by session this will now be
+passed to the home function as a
+dependency which means if the database
+cannot be accessed then also the request
+to this route throws an error and this
+is already handled for us by fast api so
+you can see we need a little bit more
+code here but in return we get a lot
+more functionality already and a safer
+code now inside the function we can use
+the session object and query the
+database with the same syntax as in the
+flask app let's continue and add the add
+route which must be a post request
+as parameter we also use the request and
+the database and now as new argument we
+also put in the title which is a string
+that comes from the form and then again
+we create a new to-do added to the
+database and commit the change and then
+i get the url of the home page and
+return a redirect response i also
+specify a particular status code which
+is needed because we now change from a
+post route to a get route very similar
+we now add the update route and as
+mentioned before we use the to do id as
+dynamic argument with a tie hint then we
+query the to do change the complete flag
+commit the change and again redirect to
+the home page and finally we use the
+same code for the delete route but here
+we delete the to-do item and that's it
+we can now start a server by saying
+uvicorn app colon app the first is the
+file name and the second is the app
+instance we also use minus minus reload
+while we are in development mode and
+then we can go to this address and have
+a working to-do app one more cool
+feature we also get out of the box with
+fast api is automatic api documentation
+so we can go to the slash docs route and
+here we see all the different api
+endpoints together with the type for
+example we can click on the add post
+endpoint and then we see more details
+like that it needs a title as string we
+can also try this out enter a title and
+execute the command and then we can
+inspect the result so here we see we get
+the response code 200 so all is good and
+we see the raw template response that is
+visible on the page we could also try
+another route so let's test the update
+route this needs a to-do id as integer
+so if we try to send a string here then
+it wouldn't let us and on the page we
+would see an error code and again all of
+this is handled for us by fast api and
+this is possible because we used the tie
+pins all right and that's the to-do app
+with fast api i hope i could demonstrate
+some of the cool features here now for
+the final app we use django while flask
+and fast api are considered to be more
+like a micro framework change is a full
+stack framework with many batteries
+included it's the backend framework of
+choice for many fortune 500 companies
+while the learning curve might be
+steeper than with the others it offers
+so many features that it makes your life
+easier once you know your way around it
+again i start by creating and activating
+a virtual environment then we only need
+to say pip install django this comes
+with all the requirements that we need
+now we say changu admin start project
+and give it the name to do app this
+creates a new folder and inside the
+folder we have the manage.py file and
+another subfolder with the same name and
+all the starter files we need we cd into
+the first folder and can run python
+manage.pi run server this starts the
+server and we have the initial app up
+and running for now we quit the server
+again and say python manage.pi start app
+and the name to do list an app is a
+component inside a project that is
+responsible for certain things like here
+for managing the to-dos in this simple
+project this is the only app we need but
+imagine if we add authentication then we
+could put this in another app to keep
+the logic separate and clean after
+creating an app we also need to add the
+app name to the installed apps in the
+settings.py file now we want to add the
+views so inside to do list.views pi we
+add a function that gets a request and
+then we return the render function with
+a template name and this dictionary all
+items we want to pass the missing to-do
+part will be implemented in a moment for
+each view we need to register a url so
+we create a urls.pi file inside the
+to-do-list folder import the path
+function the views module and then we
+define all url patterns we want to add
+in this case we leave the route of the
+path empty since this is our home page
+and then we use the corresponding
+function and can also give it a name now
+we go to the to do app.urls.pi
+and use the include function to include
+all urls from the to do list app you can
+see that there already exists an admin
+path this is because django gives us an
+admin panel out of the box which we will
+see in a moment now we will need to
+create the template file so let's create
+a new templates folder in the top
+directory and then we again create the
+base html file and put in the same code
+django uses its own templating language
+which is similar but slightly different
+than the ginger 2 template but in this
+case we only have a for loop and an if
+statement and this is actually the very
+same syntax but there is one thing we
+need to change in the form part we need
+to add the csrf token this is a security
+mechanism that prevents attacks to the
+form but we don't need to do more than
+adding this here now we need to go back
+to the settings.py and add the templates
+folder to the directories key now we
+implement the model class so inside the
+to-do list models.py we create a class
+that inherits from models.model and then
+we again create the same fields with the
+correct data type and we also implement
+the string method to see an accurate
+description here we don't need to create
+an id since django does this for us now
+in the console we say python manage.pi
+make migrations followed by
+pythonmanage.pi migrate then we also
+create a super user because i want to
+show you the admin panel so we say
+python manage pi create super user we
+follow the instructions and put in a
+name and email and the password as next
+step we go to the admin.py and register
+the to-do model and now we go back to
+the views.pi import the to-do class and
+then query all to-do's in the index
+function let's run the server again and
+test this we see the home page with zero
+to-do's for now if we click on the add
+button we get an error since we haven't
+implemented this view yet but one cool
+feature that is already available is the
+admin panel so if we go to the slash
+admin route we can log in with the super
+user we created and here we can see
+different groups and users if we would
+add authentication we also see the to-do
+models with all the fields we specified
+and here we can interact with our
+database so we could add or modify the
+database entries right from the admin
+panel this is one very cool built-in
+feature that you don't get with the
+other frameworks so now let's log out
+again and implement the missing views so
+we import two more functions and then
+implement the add route we require that
+this should be a post method by using
+this decorator we could also check the
+type of the request inside the function
+but i wanted to show you this second way
+of doing it inside the function we then
+create and save a new to-do and redirect
+to the index page now we implement the
+update function this gets an additional
+parameter to do id which is then be used
+to query for this to do and then we
+change the complete flag and save it and
+again redirect the syntax for working
+with django models is slightly different
+than before but in my opinion it's even
+more simple and straightforward and the
+last view we need is the delete view
+which is very similar but here we delete
+the to do and now we only need to add
+all these views to the urls.py
+so in here we add all the paths with the
+corresponding route and view function we
+can use this syntax with a data type and
+parameter name to add dynamic views and
+that's it we can now go back to our app
+and we should be able to add new to-do's
+and then update and delete them awesome
+alright that's it you can find the code
+for all apps on github the link is in
+the description this video was a lot of
+work so if you enjoyed it please hit the
+like button i'm also interested to hear
+what's your favorite framework so please
+leave me a comment below and as always i
+hope to see you in the next video bye

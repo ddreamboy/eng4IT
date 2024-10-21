@@ -1,0 +1,561 @@
+data visualization encompasses all
+aspects of the visual representation of
+data in today's world we are dealing
+with huge sets of data where there is a
+need of visualization for sure in such a
+scenario tools become prominent to eight
+people in understanding the significance
+of data through visual aids like
+patterns Trends dashboards and charts hi
+all I welcome you to this session and
+today we are going to list the top 10
+most popular data visualization tools
+but before we begin let's look at our
+agenda for today so first of all we're
+going to talk about data visualization
+as a concept as in what it means to
+visualize data what are the different
+parts of data visualization the
+components which form data visualization
+and why do we need it next we're going
+to talk a little bit about data
+visualization tools the purpose that
+they serve and what is it that all the
+best data visualization tools have in
+common it will also give you a fair idea
+of how we've come up with our list we're
+going to talk about the different areas
+in which we are charging these tools
+then finally we are going to enlist the
+top 10 visualization tools according to
+us for the year 2020. here we are going
+to be talking about the pros and cons of
+said tool along with the open source
+availability and pricing of the tool so
+with that we come to the end of our
+agenda so without much to do let's get
+started so what is data visualization in
+definitive terms data visualization
+combines scientific visualization
+information visualization and visual
+analytics to Encompass designing and
+Analysis of the visual representation of
+data it is basically a technique or a
+set of techniques of communicating
+information through a graphical or a
+visual medium Now understand that
+consuming large sets of data isn't
+always a straightforward method
+sometimes these data sets are so large
+and so unstructured that its downright
+impossible to discern anything useful
+from them and this is where data
+visualization techniques come in
+you have thousands of different entries
+all of different formats and you have to
+create one visualization from scratch
+show it's possible but definitely not
+simple so generalized data visualization
+involves different disciplines such as
+Information Technology Natural Sciences
+statistical analysis Graphics
+interaction and geographic information
+but three in particular that I want to
+talk about is scientific visualization
+information visualization and visual
+analytics which are the three main
+disciplines which contribute to data
+visualization
+so scientific visualization is basically
+an interdisciplinary research and
+application field in science it focuses
+on visualization of three-dimensional
+phenomena such as architecture
+meteorology medicine or biological
+systems its purpose is to graphically
+illustrate scientific data which in turn
+enables scientists to understand explain
+and collect patterns from data then we
+have information visualization which is
+the study of interactive visual
+representations of abstract data to
+enhance human cognition abstract data
+includes both digital and non-digital
+data such as geographic information and
+text
+Graphics such as histograms Trend graphs
+flowcharts and tree diagrams all belong
+to information visualization and the
+design of these Graphics transforms
+abstract Concepts into visual
+information and finally you have visual
+analytics this is a new field that has
+evolved with the development of
+scientific visualization and information
+visualization this has an emphasis on
+analytical reasoning through interactive
+visual interface basically this is what
+aids your drill down processes in any
+data visualization platform now I want
+to discuss for a little bit why do we
+need data visualization now the amount
+of information that humans gain through
+vision is far beyond that of other
+sensory organs data visualization is the
+use of your human natural skills to
+enhance data processing and organization
+efficiency so visualization can
+basically help us deal with more complex
+information and enhance its place in our
+memory now most people do not know much
+about statistical data and basic
+statistical methods are not in line with
+human cognitive nature one of the more
+famous examples is the and scombius
+quartet it is difficult to see the law
+according to the statistical methods but
+the rules are immediately cleared when
+this data is visualized and technically
+the simplest understanding of data
+visualization is actually mapping
+straight from data space to your graphic
+space a classic visual implementation
+procedure is to process and filter the
+data transform it into an expressible
+visual form and then render it to a user
+visible View and that's where data
+visualization tools come in
+data visualization tools provide you
+with an easier way to create visual
+representations of enormous data sets
+when dealing with data sets that include
+hundreds of thousands of millions of
+data points automating the process of
+creating a visualization at least in
+part makes your job significantly easier
+these data visualizations can then be
+used for a variety of purposes such as
+dashboards annual reports sales and
+marketing materials investor slide decks
+and virtually anywhere else information
+needs to be interpreted immediately
+now what do the best data visualization
+tools have in common now the best data
+visualization tools on the market have a
+couple things in common first is their
+ease of use there's some incredibly
+complicated apps available for
+visualizing data some have excellent
+documentations and tutorials and a
+design in ways that feel intuitive to
+the user others are lacking in those
+areas eliminating them from the list of
+best tools regardless of their other
+capabilities the best tools can also
+handle huge sets of data in fact the
+very best can even handle multiple sets
+of data in a single visualization these
+tools can also output an array of
+different charts graphs and map types
+most of the tools that I have enlisted
+here can output both images and
+interactive graphs there are exceptions
+to the variety of output criteria though
+some data visualization tools focus on a
+specific type of chart or map and do it
+exceedingly well those tools also have a
+place among the vegetables out here
+finally there are cost considerations of
+costs while a higher price tag doesn't
+necessarily disqualify a tool the higher
+price tag has to be justified in terms
+of better support better features and
+overall value now there are dozens if
+not hundreds of applications tools and
+scripts available to create
+visualizations of large data sets many
+are very basic and have a lot of
+overlapping features as well but there
+are standouts that either have more
+capability for the types of
+visualizations they can create or
+significantly easier to use than other
+tools that are listed here now when I
+say tools I mean applications and
+software platforms and I'm not going to
+be including libraries
+we're going to keep that for another
+session
+so let's go ahead with our list
+at number 10 we have infogram now this
+is a web-based data visualization and
+infographics Tool which permits users to
+create and share digital charts
+infographics and Maps it has an
+intuitive editor known as what you see
+is what you get which transforms your
+data into shareable infographics
+now couple of Pros that stand out are
+that you need absolutely no coding
+skills to use this tool it is available
+in a free version it allows you to
+connect your visualizations to live and
+public data sources as well as gives you
+a choice of over 35 types of charts and
+200 different types of maps that's
+impressive isn't it apart from that it
+is also a great platform if you want to
+handle complex data however there are a
+couple of pitfalls here mostly
+pertaining to the free version of this
+tool
+firstly the free version mandates you to
+include the Instagram logo in your
+designs as well as lacks the rich text
+editing feature also I feel that it
+lacks in a few data integration features
+when compared to others on this list now
+the basic version of this tool comes
+free of cost and pro versions cost
+around 19 a month the business version
+will cost you 67 and the team version is
+priced at 149 for the Enterprise version
+you can customize it by contacting the
+vendor also both free and licensed
+versions are available in the store
+at number nine we have citizens now this
+provides instant insights for anyone and
+anywhere in your organization it allows
+you to create visual dashboards and
+reports to State any piece of data
+uncover unlying Trends and patterns to
+make data-driven decisions now certain
+pros of having is that it has an
+extremely user-friendly interface while
+also providing great analysis
+performance on larger data sets along
+with that it has excellent support easy
+upgrades and integrates extremely well
+with different data sources this product
+is very flexible and allows for easy
+customization its cons include
+difficulty to maintain and develop
+analytic cubes and also if a cube is
+rebuilt it is required to become
+inaccessible during that period it also
+does not have any inbuilt data type to
+support the time format and has limited
+type of visualization now pricing is not
+disclosed by assistance however it
+offers a no surprise pricing package
+where the cost is determined on a
+case-by-case basis depending upon the
+data size and number of users it also
+has a free trial available at number
+eight we have find report so this is an
+Enterprise level web programming tool
+written in pure Java it combines data
+visualization as well as data entry and
+is designed based on a no code
+development concept
+with find report users can make complex
+reports and cool dashboards and build a
+decision-making platform with simple
+drag and drop operations it also is one
+of the connoisseurs of this sort of easy
+UI now find report can be directly
+connected to all sorts of databases and
+it is convenient and quick to customize
+various complex reports and dashboards
+the interface is similar to that of
+Excel and IT provides 19 categories and
+over 50 styles of self-developed HTML5
+charts it also gives you these really
+fun 3D and dynamic effects to go with it
+and the most important thing is that its
+personal version is completely free
+however it is only a sample and does not
+allow intuitive views and will also
+leave you wanting to learn more about
+using Advanced tools such as
+incorporating JS and Java which in case
+if you do not know much about Java will
+be difficult for you to use use at
+number seven we have Google charts now
+this is a very powerful easy to use and
+interactive data visualization tool for
+browsers and mobile devices it has a
+rich gallery of charts and allows you to
+get it customized as per your needs
+now the rendering of these charts are
+based on the HTML5 SVG technology and it
+provides you with Pros such as its
+Simplicity to learn user friendliness
+it's speed and accuracy great
+interactivity three years of backwards
+compatibility as well as cross browser
+compatibility and cross-platform
+portability with any additional plugins
+and all of this completely free apart
+from that it supports iPhone iPad and
+Android and can read from multiple data
+sources including Excel SQL databases
+CSV Google spreadsheets so on and so
+forth this tool is completely free but
+comes with his own set of pitfalls which
+include a mandatory network connection
+while using the tool the absence of
+demos on Advanced features along with a
+lack of sophisticated statistical
+processing working with API for complex
+presentations is also sometimes
+difficult to learn
+next we have grafana now this is an open
+source visualization software that lets
+users create Dynamic dashboards and
+other forms of reports it supports mixed
+data sources annotations and
+customizable alert functions it can also
+be extended via hundreds of available
+plugins and that makes it one of the
+most powerful visualization tools out
+there you have export functions which
+allow designers to share snapshots of
+dashboards as well as invite other users
+to collaborate grafana supports over 50
+data sources via plugins it's a
+completely free to download and there's
+a cloud hosted version for fort nine
+dollars a month there's also a very
+limited free hosted version
+now if you have a downloadable version
+there are support plans available
+something a lot of other open source
+tools don't offer but then again it
+definitely is an overkill for creating
+simple visualization does not offer as
+many visual customization options as
+some of its competitors and is not the
+best option for creating visualization
+images and the final con would be its
+inability to embed dashboards in
+websites though it is possible for
+individual panels
+and hence it is not higher on our list
+having said that grafana is one of the
+best options for creating dashboards for
+internal use especially if you're using
+mixed or larger uncategorized data
+sources
+at number 5 we have Dundas now this is a
+very old and popular data visualization
+tool and thus definitely stood the test
+of time and for good reason it offers
+super interactive visualizations which
+Aid the users to understand data faster
+and better its other visualization
+features include Rich scorecards smart
+tables numerous chart types gauges Maps
+data labels sparkline indicators
+diagrams and relationships this tool is
+grounded on responsive HTML5 webtech
+which allows the users to connect
+interact and analyze their data on any
+device from anywhere apart from that it
+has great ETL capabilities while
+allowing us to write direct SQL against
+data sources that we choose it has
+amazing flexibility in design and comes
+with really good support and let's not
+forget it's amazing library of
+visualizations the cons of Dundas are
+few which is why it is so high up on our
+list it does not offer predictive
+analysis which most newer data
+visualization tools do and it also lacks
+support on 3D charts apart from that it
+follows a one-time license and
+subscription-based pricing model but has
+a free trial available however Dundas bi
+pricing and details are based on a
+flexible licensing model that adapts to
+your needs and that of your business
+which is why it is not disclosed by the
+vendor at number 4 we have adaptive
+insights
+specifically being designed for business
+users the Adaptive Discovery tool
+adaptive insights allows focusing on
+your analysis and decision making on
+what is important to you with
+interactive drill down and visual
+storytelling you can identify the root
+causes answer questions on the Fly and
+spot Trends to address the issues ahead
+of the curve it gives you a complete
+perspective that you shall need to drive
+for financial sales and operational
+performances it also allows you to model
+plan and forecast to make Better
+Business decisions some of the things we
+like about adaptive Discovery is the
+ability to connect to any data source be
+it Erp CRM or HCM it has personalized
+dashboards modular metrics as well as
+shared metrics and the information is at
+your fingertips from anywhere with
+analytics delivered completely on the
+cloud while this tool equips you with
+out of the box planning budgeting and
+focus costing processes sometimes the
+responsiveness is extremely slow due to
+the use of java initially it is a bit
+difficult to learn this tool mainly
+because of setting up your reports but
+once you get the hang of it you should
+be fine
+apart from that it's actually pretty
+difficult to modify reports without
+creating a new one on this tool and the
+overall reporting functionality in our
+opinion could be improved like many
+others on this list you need to contact
+the company for pricing details it has a
+subscription based pricing model and the
+price will be determined by the number
+of instances that you want to opt for
+the tool is available in two editions
+which is the Adaptive Discovery
+professional and the Enterprise version
+now though it is a licensed tool it does
+have a free trial version available with
+that we've come to our top three tools
+at number three we have Microsoft power
+bi now this is one of the more commonly
+used bi tools which allows you to
+connect to a wide variety of data
+sources design customize dashboards and
+detailed reports and supports both
+mobile and web-based analytics it has
+Pros such as being cloud-based giving a
+single view of the dashboard its
+affordability and since it's a Microsoft
+tool it has a very strong brand
+integration with other Ms tools a lot of
+documentation about this tool is also
+freely available online along with a big
+and active Community Helping you resolve
+your doubts a wide variety of charting
+options for data visualizations are
+available with consistent upgrades and
+an extensive database connectivity which
+hopefully will cover up for how
+difficult it is to learn and its
+inability to handle bulk data you shall
+sometimes face a certain lag when you
+are using huge volumes of data sets also
+the cloud version does not have all the
+features available in the windows
+version but the good news is that it is
+available in both free and pro versions
+and has two Enterprise pricing plans the
+first one is totally free with 1GB data
+storage limit and the second plan which
+is the Pro Plan costs less than 10
+dollars per user per month which also
+has its own data storage limit of 10 GB
+at number 2 we have water graph now this
+tool is different from the others and
+provides marketing agencies with an easy
+way of reporting marketing campaign data
+to their clients this platform creates
+visual data that is easy to comprehend
+no matter who your reporting results to
+certain features include its seamless
+integration with over 40 of the top
+digital marketing platforms such as
+Google analytics Facebook ads and
+MailChimp it has endless customization
+options and you can have your pick from
+virtually hundreds of different pre-made
+reporting widgets or create your own
+methods of presenting data now on the
+stool cross-platform data analysis is
+extremely simple and it gives you a
+great way to compare different marketing
+platforms and their performance in one
+report automated report creation and
+delivery is also brilliant when you use
+the service and when managing a variety
+of clients automation features can help
+process and deliver data to the right
+clients with minimal input on your
+behalf along with this it comes with
+something known as white label reports
+which helps you customize the report the
+way you see fit add your own images or
+logo and let your branding shine through
+with each report you create
+water graph is a feature-rich marketing
+data reporting platform for agencies to
+use it makes easy work of managing
+multiple clients while aiding you with a
+plethora of Integrations and automation
+functionality not just that the water
+graph pricing differs based on the
+features you want to use there is no
+need to overpay for the features that
+you are never going to use
+the only con that we see here is the
+lack of Versatility
+it is more of something that marketing
+agencies would use for marketing
+campaigns and less of everything else
+which is why it's not on the top of our
+list but then what is
+finally at number one we have Tableau
+now Tableau is a business intelligence
+service that aids people in visualizing
+as well as understanding their data it's
+also one of those very widely used
+services in the field of business
+intelligence which allows you to design
+interactive reports dashboards and
+worksheets to obtain business Visions it
+has outstanding visualization
+capabilities and has a great performance
+despite the size of data sets it is easy
+to use and comes with a healthy
+community and forum and offers great
+connectivity to multiple data sources it
+is mobile friendly it has powerful
+computation and quick insights but it
+comes at a price of 70 dollars per user
+per month billed annually you have no
+option for scheduling and auto
+refreshing of reports and it has
+restrictive visual Imports static
+parameters need to be updated manually
+each time when the data gets modified
+and a lot of users find column table
+formatting extremely difficult to do
+however it comes in a public version
+which is an open source version where is
+absolutely free and has almost all the
+features of the paid version and the
+licensed version also has a free trial
+available for two weeks having said that
+this software allows data mixing and
+real-time collaboration it doesn't Force
+users to write custom code and all in
+all is one of the simplest business
+intelligence tools in the desktop system
+which is why it tops our list of the top
+10 data visualization tools of 2020 data
+visualization is a huge field with many
+disciplines it's precisely because of
+this interdisciplinary nature that the
+visualization field is full of Vitality
+and opportunities with that I come to
+the end of my session my name is upasana
+thank you and have a great day

@@ -1,0 +1,815 @@
+Many of us can code to some capacity
+whether you're completely self-taught
+whether you have went for  a
+one-day crash course or boot camp or
+whether you went for four years at
+college. You know at the end of the day
+it all seems to be the same, it's all
+coding right? So does that mean that any
+one of us can just go out and be a
+professional software developer? Surely
+that's too easy,
+and as it turns out, you're right it's
+not just like that. So what sets apart a
+hobbyist programmer from a professional
+developer? The answer is software
+engineering! Hello and welcome back to
+another random Wednesday episode. So as
+you would have imagined today's episode
+will be about software engineering and
+the reason why we're talking about
+this is because more often than not if
+you enter the computer science
+degree in a university or college, well,
+chances are at least some emphasis will
+be placed on this, and for very good
+reason. So first and foremost what is
+software engineering? Well, you can think
+of it as a standardized, structured and
+thorough approach to writing code, to
+basically treating the whole
+development process from start to finish
+in a standardized manner. Of course the
+question is why do we want to do things
+this way? Why do we want to actually
+formalize things if you know programming
+is something you can do sitting at home?
+Well there are a couple of reasons why.
+First and foremost we have to be sure
+that we are building the correct product
+don't forget now that you're working as
+a professional developer you're going to
+have to actually deliver what the
+customer wants to them! So that's one
+very important point. Secondly you want
+to ensure that you're writing code to a
+certain standard. Again this is only sort
+of really useful in a professional
+environment, when you're writing
+code that you expect to maintain over
+months or years, or when you're working
+together in a team. Certain conventions,
+certain coding styles now become
+important. And thirdly you want to ensure
+that your code meets a certain level of
+rigor,
+and what that means is it needs to be
+correct, it needs to be efficient, it
+needs to be secure, and software
+engineering actually defines some
+techniques in which you can actually
+boost your confidence on these things. So
+yeah, in the real world software
+engineering is a very important skill
+and that is why today we'll be taking a
+look at some basics of software
+engineering. We'll be taking a look at
+what it really is how we really
+go about doing it, as well as how it all
+fits together.
+Hopefully with this idea in mind when
+you actually start off with your
+software engineering course at school
+well it makes things slightly easier for
+you
+So yeah let's basically be long and
+short of it, let's jump into our first
+part: While software engineering is often
+sorta mixed up with
+programming, really software engineering
+starts before any development even
+begins and we start off by actually
+understanding what the customer wants
+first. Now as a hobbyist programmer we
+normally don't do this part we just sort
+of jump in, write code, and hopefully the inspiration comes to us as we
+are doing it. However, again, when you're
+developing in a professional context you
+can't quite do things that way. Instead
+the first thing you need to do is
+requirements gathering. It's interesting
+how much time is actually devoted to
+this and it's so important because if
+you develop the wrong product, you've
+just wasted a whole bunch of time! You
+don't want that! You want to make sure
+that you've actually developed something
+that is useful. And here's the deal, at face value
+this sounds simple, right? Sit down with your
+customer, ask them what they want.
+Except a lot of the time, they don't know
+what they want either! And that's why there
+are actually many interesting
+approaches to requirements gathering as
+well as requirements analysis, that gets
+us to a point where we can write a piece
+of software that, will ensure
+that a customer is satisfied to a certain
+degree. Let's take a look at some of
+these techniques as well as how they can
+be useful. Of course the simplest way to
+understand your customers requirements
+is to simply get them to provide a list.
+However there are many shortcomings of
+doing things this way. I mean the list
+could be very long and yet because it is
+actually constructed by them, non-programmers, it
+may not be something that is perfectly
+useful for you. So usually it's for the
+best for you to actually go out and
+gather your own requirements, and here
+are some ways of doing so: Of course the bulk
+of the methods involve, you going
+to them and seeing what they actually
+want, but there are many structured ways
+of doing it. Some examples include surveys, interviews,
+and focus groups. These are of course as
+you expect mostly conversational in
+nature but well at least you're one
+taking down the notes, you are the one
+conducting the entire session, so the
+results will certainly be more
+productive. Alternatively if an existing
+software suite is already available you
+can also observe your users actually
+using that. By taking note of the things
+that they're used to, as well as their pain
+points, you can create a better program
+for them. However what's probably the
+most interesting of the lot is use case
+analysis so let's take a look at that!
+Use case analysis is a very interesting
+way of actually expressing what
+a user wants because the approach is to
+actually describe a real usage scenario,
+and we're doing this from the point of
+view of the user, not from our
+point of view as the coder. There generally
+is a pretty specific format for doing
+this and most notably what we have is a
+main success scenario, expressed as a
+series of steps. Remember that there is
+no jargon here and what this means is,
+everything is sort of very
+intuitive, very descriptive of what user
+sees on screen, and how they interact
+with it. So what we have here is just a
+very kinda contrived example
+for a Sales System. In order to
+add a sale you want to actually initiate
+that. Your program will require you to
+specify some information namely the name
+and quantity, and when you do supply the
+information, well the information gets
+stored onto the system, and that is
+basically from start to finish
+what's going to happen when you do this
+this - this is your success scenario. Now usually
+we expand use cases by talking about
+other kinds of scenarios that could
+possibly happen.
+For example this would be an error
+condition - if you actually give it a
+quantity less than 1, how does the
+software react? Well in this case it
+basically gives an error and then
+returns back to step 2, to wait for the
+user to  correct their mistake.
+So as you can imagine a use case could
+get quite long when there are multiple
+expansions. In addition to this, some
+extra information we can include are
+preconditions, which are the
+conditions that have to be true before
+we can actually start with this scenario,
+as well as the postconditions and that
+is what will happen at the end of the
+day. In this case we only have a post
+condition for the main success scenario,
+but that of course is not the only
+outcome. For example if the user closes
+the dialog box, we can have a different
+postcondition as well. There is another
+way of expressing the same thing and
+that is true user stories. Now, these tend
+to be less detailed but they really put
+you in the shoes of the user, because
+well, usually user stories are expressed like
+this, as a statement. The statement needs to 
+contain three important pieces of
+information - Firstly that is, who
+this pertains to, what they want to do, as
+well as why they want to do that. So this
+last part is something that may be
+missing from your use case.
+We do all
+this for the purpose of getting good
+requirements that we can work with, and
+so the next part is to actually analyze
+these requirements. Usually the first
+step will be to actually generate two
+kinds of requirements - namely functional
+and non-functional requirements, so let's
+take a look at what this means. A
+functional requirement basically says
+what we need the system to do, right? It
+describes a function of the system.
+Conversely a non-functional requirement
+usually describes a characteristic, so
+these could be say a performance
+requirement. it doesn't actually say what
+the system needs to do, but instead
+describe something about the process
+during which that is done. Once you have
+all your requirements in order, you can
+then begin to build a prototype.
+Now usually prototypes are
+non-functional. In fact I've done
+prototypes that are just powerpoint
+slides. The idea is you're gonna have to pitch
+that to your customer to show
+them what things look like, how
+everything is laid out, how one part of
+its program actually links to another...
+and basically this gives them a very
+good feel of how things are going to
+work at the end of the day. Of course
+this is the point where you have to go
+back and forth to tweak a
+prototype to make sure that your user's
+needs are actually being met, and only when
+this part is done
+when requirements are certain,
+can we actually delve into serious
+development. Moving on to our second
+stage - Planning. Now to be honest planning
+actually sorta runs concurrently
+with your requirements gathering and
+analysis, but the whole point of planning
+is that you now have to start to
+think about how you want to do things
+in your coming weeks and months. Again,
+this is something we tend to not do a
+lot when we are just a hobbyist
+programmer and we are sorta doing
+things on an exploratory basis. However
+when we are working with a large project,
+you know tens of thousands of lines of
+code interacting with each other, it
+would be good to have say a roadmap or a
+plan of some sort so we know how the
+different parts actually interact with
+each other, as well as how we're going to
+approach developing them. So yeah the
+planning process can be quite an
+in-depth process as well and here are
+some of the considerations we need to go
+through during this part. One big aspect
+of planning is actually modularization,
+and that is how we're are actually going
+to break down our large program into
+smaller parts. Here's a sample of
+modularization in action. Basically we
+have a game and we've sorta split it
+out into these components. In this
+particular breakdown we also have sorta
+the user in the equation and
+basically how modules actually
+link up to each other. There are many ways of 
+formally representing this idea, but the
+main point is, thought needs to go into
+how things are going to be compartmentalized
+so that when you
+build things, it's more organized. Usually
+during modularization we have two huge
+goals, and that is to achieve high
+cohesion and low coupling. Here's what
+this means firstly cohesion
+refers to how much the elements within a
+module are actually related to each other.
+We can think of this in terms of what
+the module actually does, or what data it
+works with. High cohesion comes about
+when everything is strongly related, so
+one example I have here is a records
+module, in which all the functions
+actually involve working with the
+records, either retrieving them, or manipulating
+them, and well, that is a highly
+cohesive module. One that has low
+cohesion is one in which the tasks don't
+really have anything to do with each
+other. Usually we have the temptation to
+create, say a utilities or tools module
+in which really they are just kinda
+grouped together because they have
+nowhere else to go, and that is low cohesion. Now coupling on the other hand
+actually deals with how modules interact
+with each other.
+If modules are highly dependent on each
+other then we can say they are highly
+coupled, and one good way to test this is,
+if we modify one module, how much effect
+does that have on another module? How
+much do we have to actually modify the
+other module, before everything works
+again. In the best case when there is no
+coupling at all, modifying one module
+does not require modifications to other
+modules. You can just replace it, the
+programs still works, so that is our
+best case. Usually in situations of low
+coupling which is the good case, two
+modules only pass messages to each other.
+They don't care about the inner workings
+of each other, and as a result they're
+not really dependent on each other. If
+you swap out a different module, as long
+as it speaks the same language, then
+everything will work perfectly. So going
+back to our game engine example, here is
+a low coupling situation in which we can
+test if an enemy has hit the player. We
+start with the game engine checking the
+position of the player by sending a
+request to the player module. It complies
+by giving the location back. The game
+engine can then test against the enemy
+module, again to see where that is.
+After getting the information back, it
+can then perform a comparison
+If the two are really colliding, then the
+game engine sends another message to the
+player module telling it to actually
+deduct from the health. So yeah, this is a
+situation in which we're just passing
+messages around and so well there is
+very little dependence. We can easily
+expand the situation to have multiple
+players or multiple enemies, and things
+will still work the same. We can easily
+extend the situation to well a case of
+multiple players even multiple enemies
+of different types, and everything will
+still work the same way and that's the
+beauty of setting things up like this.
+High coupling on the other hand is when
+two modules highly dependent on each
+other. Going back again to our game
+engine example, that is when
+everything actually shares a game state
+variable. That is, we actually store our
+state somewhere, and everyone just talks
+to that state object. This creates a
+large amount of dependencies everywhere
+and yeah basically any modifications is
+going to confuse everything. So yeah
+please don't do this! When we correctly
+achieve high cohesion and low coupling,
+we achieve what is known as a separation
+of concerns. Each module does its own
+thing, it doesn't care about the other
+modules, and this actually increases code
+readability as well as maintainability.
+If you ever need to go in and fix or
+upgrade something, you know to go just to
+that one place, and you know for sure
+that making changes here
+firstly will not break anything else, and
+secondly it's the only place you need to
+modify, to be guaranteed that
+things are going to change the
+way you expect it to, because nowhere else
+in the code is handling the same task. So
+yeah great advantages for actually doing
+things this way, especially when
+you're working on a huge project or when
+you're working in a team. And finally,
+only after all this legwork is actually
+complete can we actually delve into
+development. Now again, this is slightly
+different from developing as a hobbyist,
+because there are certain structured
+ways in which you actually go about with
+the development. For example one very
+common thing in software engineering is
+what is known as patterns.
+Now the idea is this, generally 
+the same kind of problem comes up a lot,
+and so to make things simple we can
+solve it using a more or less
+standardized approach. This is highly
+encouraged since it creates code that is
+more intuitive and easy to read, as
+opposed to some creative way
+in which you are trying to solve a
+common problem. Also if you follow a
+structured pattern you'll be more
+confident about its correctness because
+well, again, it's a tried and tested thing.
+Let's take a look at a common pattern
+called Model View Controller or MVC for
+short. The MVC pattern is particularly
+significant because of how it applies to
+basically any program, basically any
+program that has you know a storage or
+logic component that interacts with a
+user interface can benefit from using
+this pattern. So here's how it works:
+Essentially we start off with a model
+which, as mentioned, contains our data and
+logic. One key point to note is that this
+model is completely abstract. It is the
+low-level representation of your data, as
+well as the functions required to tweak
+them, or retrieve them. However your user
+cannot directly you know look at this
+model and make any sense out of it.
+Instead if you want to show you user the
+content, it needs to go through a view.
+This view knows how to actually
+take the data from the model, and present
+it in whatever way to the user. Of course
+right now everything is just one way. If
+the user wants to actually modify the
+data, chances are they need to poke at some controls, and this allows the user
+to either change up what they are seeing,
+or make some modifications to the data
+in the back-end. So yeah this is how Model
+View and controller actually links
+everything together. To make things more
+concrete, going back to our
+sales example, this may be how everything
+can be laid out. So the information held
+in our model are the sales records, the
+view for it is to actually display
+everything in a table. For the user to
+actually interact with the various
+features, we have a bunch of buttons in
+the sidebar and basically well, that is
+the controller. Having things in this
+manner gives us
+the additional advantage of
+substitutability, and that is perhaps if
+we don't like the table view, well we can
+easily replace that with a chart.
+Notice that in doing things this way, we
+don't actually require any modifications
+to either the controller or the model.
+The model, the data stays
+exactly the same. The controller as well
+doesn't change, we are only changing up
+how we are presenting the same data.
+So yeah when MVC is done correctly,
+substitutability is something we achieve.
+Similarly perhaps the user now
+is an administrator, and we want to give
+them more tools to work with. Again all
+we have to do is to replace the
+controller. The view and the model are not
+affected, but now the user actually has
+more controls. Don't forget of course
+that now you are, number one, working in a
+team, number two, working on a project
+that may be quite huge, and yet
+needs to be iterated upon over time. This
+is why one huge area of emphasis and
+software engineering is writing readable
+code - Code that you can actually go back
+and modify, and not have to spend too
+much time trying to understand what you
+meant writing the code the first time. This
+is why many good practices are actually
+put into place, and if you follow these
+good practices you can make your code
+easier to read. Let's take a look at some
+of them. One very common good practice is
+to avoid magic numbers, and it so happens
+that I have a very good real-world
+example to show you. Basically I've
+been creating an Arduino project that
+involves an infrared sensor, so when you
+press buttons on say, your TV
+remote controller, my project is actually
+able to pick it up and my code can
+understand which button is pressed, and
+actually, well, reacts accordingly.
+However the button pressed is actually
+read in as some weird numerical code
+like this.
+Imagine if I just left it in my code
+like that. If I came back two months
+later, no way in hell am I going to
+remember what all these numbers actually
+represent, and yeah this basically is
+extremely harmful to code readability.
+Usually magic numbers are not quite
+arbitrary as
+this, perhaps they're things like the 
+screen width and height, or maybe they're
+just numbers that are preset by the
+programmer. However it remains that just
+having a number hanging out here isn't
+good, because you don't understand what
+it means, and usually the workaround to
+this is to actually extract them to a
+variable. Or in this case because I'm
+using C++ I can also use a macro. By
+assigning it to a meaningful name, this
+code becomes much more readable. This
+tells me that this is the previous
+button on my infrared remote control and
+well that is infinitely more readable
+than just having a bunch of numbers like
+this. So yeah they call this magic
+numbers, as if the number was magically
+selected. Another good practice is
+variable naming now. They're actually a
+lot of rules for this, but the one I find
+the most useful is just, well, picking
+names that make sense. For example when
+you have a function, you don't want to call it
+something like database, that really
+doesn't say a lot about what this
+function actually does. Instead what it's
+usually preferred for function names are
+actually verbs, something that you know
+implies that an action will take place.
+For example, queryDatabase now tells us
+that okay, this function actually hooks
+into the database, and runs a query. So it
+is a verb, it describes an action and
+that makes things so much clearer. Similarly for things like boolean
+variables, we want to make sure that well
+you know when you look at it you know
+what it means. For example isOn
+actually describes a state, and this is
+even more useful when we use it in
+conjunction with if-statements. if(power)
+is not a statement that makes a lot of
+sense, but we can basically read this one
+as if we were reading English because
+well saying if (isOn) is very clear.
+right, if it's on, this is true,
+we do something. Apart from knowing how
+to code well, there are also some tools
+that it will be good if you
+could get familiar with, and one huge
+example of this our revision control
+systems. You're probably heard of github. Github is a place in which people
+upload their code through a revision
+control system.
+What these do is they help you keep
+track of changes, so you can easily jump
+back and forth between versions. At the
+same time they also help you collaborate
+with other coders because well, everybody
+can actually commit their code, and
+everything gets merged together, to create
+your final product. And finally testing!
+Again something very different from when we actually do our own
+hobbyist development, because well the
+way we normally test our programs is to
+just open it up, you know randomly click
+around and if things work then that's
+all good. But again when it comes to
+software engineering, we need to be a
+little bit more confident than just
+saying, well I sorta poked around in
+there for five minutes and everything
+seemed okay. Usually for larger scale
+projects what we do is automated testing.
+That's right none of that mucking
+around, trying to find bugs by
+just clicking around. Instead you use a
+tool and you basically tell it what to
+test, so it goes from your code function
+by function, and yeah ,runs a set of test
+cases on each one of them. This is often
+known as unit testing, and it's quite an
+important part of software engineering.
+We've actually gone quite in-depth about
+unit testing in an earlier video, but I
+will quite quickly summarize what are
+some of the important concepts. If you want
+to know more you can always check out
+that video itself. What probably deserves
+the most emphasis is that testing is not
+for finding bugs. When we're
+testing a system, what we
+are really doing is to check the real
+world, you know what's happening in our
+program, against our expectations. So yeah
+with that in mind we can think about how
+we can actually perform testing, and most
+commonly we use a technique called unit
+testing, which is automated in nature. Now
+let's say we want to test this module, we
+can actually use our testing tool to
+basically poke at it. So for example we
+can actually test a function of
+it, and critically along with that, we
+actually give the expected results. Then
+we run the actual module itself,
+it gives us back the answer, and we can
+check it against our expectation.
+If the two things match, all as well! You
+know that the module is actually working
+the way you expect to work. Well not
+with just one test, right. If we were to
+actually perform a subsequent test and
+there is a mismatch, in other words the
+test fails, then not only do we know that
+there is a problem in the module we know
+exactly what sort of operation
+it fails on, and how it violates our
+actual expectations. So for example in
+this case we could perhaps infer that
+hey it's actually accidentally adding
+the two numbers instead of performing a
+subtraction. So yeah usually when we have
+a bunch of unit tests and we run it and
+some of them fail,
+it allows us to very quickly pinpoint
+the error. On top of unit testing we also
+perform what is known as integration
+testing, and this is basically when we
+use automated testing to test multiple
+modules instead. So instead of testing
+one module to see if it's working
+correctly,
+we are now testing to see if multiple
+modules working together are still doing
+their job correctly. This is quite
+important because modules can work
+correctly individually, but if they are
+linked in a way that doesn't make sense
+things could still be broken at the end of the day, so
+it is still very important to actually
+test the integration between modules.
+Going back again to our sales example, we
+can actually attempt to edit a record
+via the controller and then check to see
+if the model has changed. If it has then
+it implies that this particular linkage
+is working correctly. So these are our
+testing methods. In terms of testing
+methodologies there are generally two
+different approaches. First there is what
+is known as black box testing, and that
+is when we treat our module as a black
+box,
+we don't care what's happening inside it.
+Instead we just work with its
+specifications, we just supply it
+particular inputs, expect it to do its
+magic, and ignoring what it does, we just
+check its output and see if that meets
+our expectations. That's black box
+testing. Alternatively we can also do
+what it's known as white or glass box
+testing, when we actually care about the
+internal implementation. This can range
+from
+just crafting our input strategically so that
+they actually exercise the
+internal implementation, to actually
+delving deep and testing internal-use
+features, that may not be exposed when we
+look at it as a black box. So yeah two
+kind of opposite approaches and both
+have their pros and cons as well as
+their values. In the best case we want to
+test both ways. Of course, so far we're
+just testing our functions for
+correctness. There are the things we can
+do as well, for example GUI testing, where
+we actually make sure that 
+everything that appears visually to the
+user works the way we expect. Again
+the methodology is very similar because
+well, what we are doing is still giving
+it an action and then testing the
+outcome against the expectation, except
+now, we're talking in GUI terms. So GUI
+testing in a real world could involve
+screen capture and screen reading tools,
+as well as some automated method to
+generate keystrokes on your program.
+Security testing is another one. While
+our basic methods do actually work as
+well, we can also use some randomized
+methods, for example on a login box we
+can repeatedly send random values to
+see if the system holds up, if
+the system actually doesn't exhibit any
+flaw. This is important because when we
+are doing our basic testing we
+are feeding it values, we're actually
+coming up with values to test. However
+when it comes to something like
+security, we have to kind of expect the
+unexpected, to use a very cliche term. And
+that's why using random input can be
+quite valuable. When it comes to testing
+one metric is code coverage, and that
+is a measure of how much code is
+actually being tested. As your program
+gets complex, your code is
+everywhere - it's in functions, it's in loops,
+it's in if statements, so getting 100% code
+coverage is very difficult. This actually
+made worse by things like, say, loops. To
+really thoroughly test your program you
+have to test to make sure it works
+correctly when a loop runs once, when it
+runs twice, when it runs three times...
+Basically every possibility needs
+be covered and that is close to
+impossible. Similarly if your program
+actually has some kind of state, you need
+to make sure that things are working
+correctly regardless of whatever state
+your program is in, and again that is
+very difficult, especially when
+programs have many possible different
+states.
+Despite that, of course the greater code
+coverage you have the better, and in fact
+some programming methodologies
+completely surround the concept of
+testing, and one example of this is
+test-driven development or TDD. As its
+name implies, TDD surrounds writing tests
+first
+so in fact before you actually write
+code, you write your tests, you watch your
+tests fail, and then you basically fix
+the failing test. You write just enough
+code to fix the test - No more no less. To
+continue you're going to have to write
+another test, and basically you rinse and
+repeat, and this is one way in which
+your program can get very good
+coverage. And there you go! Today we've taken
+a look at our four general phases of
+software engineering. Now it's important
+to note that  even though we lay
+it out as sort of phase 1, phase 2, phase
+3 and so on, it's not really 
+completely separate. A lot of the time
+these phases may overlap, and in fact sometimes become completely concurrent,
+so that's an important thing to think
+about. Also what we've seen here is one
+cycle - Sort of the development process
+from start to finish.
+Except usually development doesn't
+really end there. When you're
+done with your product, your customer is
+happy, you deploy it. Chances are after a
+while they might ask you for certain
+improvements, certain enhancements, certain
+bug fixes, and basically the whole
+process starts again because again you
+have to ask them what they want, go ahead and plan how to do it,
+prototype it and then test it. So it's
+the entire cycle all over again and for
+larger scale projects, this
+could basically go on and on
+continuously. Now today I've barely scraped
+the surface of software engineering as a
+subject. Really these are things that
+people go on full university
+courses to learn, so there is certainly
+no way I can actually do this in just
+one video. However hopefully what this
+has given you is a good overview of
+the different phases, as well as
+what are some of the considerations in
+general, and I think all these things are
+good to know, seeing as that
+computers are becoming a bigger and
+bigger part of our lives, even in
+businesses, in administration, even in our
+personal lives. So yeah if you ever have
+the interest of doing development
+especially on a large scale, software
+engineering is definitely something you
+need to know. It's something that
+preferably you could be comfortable with,
+and yeah if you have that sustained
+interest, definitely consider
+taking a degree program in this area.
+When you actually graduate
+with your degree, you are armed with very
+powerful skills putting you in very high
+demand. Computers aren't going
+anywhere for a very long time,
+so yeah, good the software engineering
+skills can bring you a very long way. Mow
+this episode let's run a little bit long
+so let's go ahead and wrap things up.
+Thank you very much for watching I hope
+you've gained some insight today, but
+until next time, you're watching 0612
+TV with NERDfirst.net.

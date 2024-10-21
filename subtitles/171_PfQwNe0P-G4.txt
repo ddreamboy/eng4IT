@@ -1,0 +1,913 @@
+hey my name is Felipe and welcome to my channel, in 
+this video I'm going to show you how to train an  
+object detector using your own custom data with 
+yolo v10 and I'm going to show you the entire  
+process, from how to do the data collection, the 
+data annotation, how to train the model in your  
+own local computer or in a Google collab so it's 
+going to be 100% free, I'm also going to show you  
+how to evaluate the model you trained and how to 
+make predictions so this is going to be a super  
+comprehensive tutorial and now let's get started,
+so let's get started with the data collection  
+let me show you the data I have downloaded to 
+use in this tutorial and this is the data I'm  
+going to use to train the object detector so 
+I'm going to train an object detector to detect  
+ducks so you can see these are many different 
+images of ducks, right, and the first thing you  
+need to keep in mind when collecting data to 
+train your object detector is that you are going  
+to need a good amount of data. You know I work 
+as a computer vision engineer, I work as a  
+freelancer, I provide my services as a freelance 
+contractor, and you would be surprised with how  
+often clients approach me and tell me they have a 
+problem with the object detectors they trained in  
+their projects and when I ask them how many images 
+they use to train the object detector they tell me  
+something like 'oh we used a lot of data, we 
+used like 20 images', right, they usually tell me  
+something that that they use like 10 images or 
+20 images and that's the first thing you need  
+to keep in mind, in order to make it work you are 
+going to need a good amount of data, using only  
+10 images or 20 images something like that is not 
+going to work, right, you are going to need a lot of  
+data to train this object detector and the exact 
+amount of images you need is going to depend on  
+many different factors and it's going to depend 
+on your specific project but I will recommend you  
+to have at the very least a few hundred images, 
+a few hundred perhaps a few thousand images, and  
+if you do so then it's going to be more likely 
+that you are going to train a very robust object  
+detector then another recommendation I can give 
+you regarding the data collection is that you need  
+to make sure you have a very diverse dataset, let 
+me show you some of the images I have downloaded  
+to train this object detector, you can see that 
+all of them have ducks but you can also see that  
+all the ducks in these images are very diverse are 
+very different from one another, right, you can see  
+that their colors are different their sizes are 
+different the background is different absolutely  
+every single thing is different, right, all these 
+images are completely completely different, we have  
+different type of ducks and absolutely everything 
+is different, some some images are in black  
+and white other images are like cartoons so this 
+is definitely a very diverse dataset, this is also  
+something very important because remember that 
+when you are training an object detector you are  
+teaching the object detection technology what's 
+the generic structure of the object you want to  
+detect so you want to have a very diverse dataset 
+because this is going to help the object detector  
+a lot to understand what exactly your object is, 
+this is going to teach the object detector what  
+are the most important features of your objects, 
+right, if you have many different images and in  
+absolutely all your images the object is always 
+of the same color for example then that may be a  
+little confusing because that may teach the object 
+detector that your object is always of that given  
+color or perhaps if the background is always the 
+same that may be a little confusing too because  
+the object detector may learn that the background 
+always has to be the same so you always want  
+to have a very diverse dataset and you want to 
+have many different samples and you want to have  
+your object from many different perspectives 
+and from many different point of views and  
+many different sizes colors backgrounds and so on 
+make sure your dataset is very diverse and that's  
+going to help you a lot in order to train this 
+object detector so these are the most important  
+considerations regarding the data collection, make 
+sure you have a good amount of data to train this  
+object detector and also make sure your dataset 
+is very diverse, and in my case I am going to use  
+500 images to train this model and I already 
+show you the good amount of diversity I have  
+over here so this is going to be an amazing dataset 
+to use in this project, now I'm going to show  
+you a very generic process and I'm going to give 
+you some very generic recommendations you can use  
+with whatever dataset you want, right, everything 
+I'm going to show you in this tutorial is going  
+to work exactly the same for whatever dataset 
+you may want to use but if you want to follow  
+along this tutorial and you want to use the 
+same dataset I am going to use right now you  
+can download exactly the same dataset from the 
+Google open images dataset version 7 so if you  
+want to use exactly the same data I am going to 
+use in this tutorial the only thing you need to  
+do is to go here and then you need to click in the 
+download section and you just need to follow the  
+steps which are provided over here and you will 
+be able to download the same dataset I'm going  
+to use in this project, but remember this is also 
+going to work for whatever other dataset you may  
+want to use in this project so you can just use 
+whatever data you want, now let's continue now  
+let's move to the next step in this process which 
+is the data annotation and this is very important  
+this is amazingly important, this is perhaps 
+one of the most important steps in this process  
+because the data annotation is where we are going 
+to define what exactly our object is, right, where  
+exactly our objects are located and this is 
+what's going to tell the object detection  
+technology where our objects are located within 
+the images I'm going to show you exactly how to  
+do it in a few minutes, we are going to use cvat 
+which is a computer vision annotation tool, this  
+is an amazing tool I have used it many times in 
+many projects and we are just going to use this  
+tool in order to annotate this object detection 
+dataset, so the first thing you need to do is to  
+log in into your account, if this is the first time 
+you're using cvat then it's going to be completely  
+empty obviously so let's create a new project we 
+need to click here on projects and then create a  
+new project I'm going to name this project duck 
+detection and I'm going to add a label which is  
+'duck'... okay... and I'm going to click here on submit 
+and open okay everything's okay this the label  
+we created and now I'm going to create a new task 
+and I'm going to upload a few images so I can show  
+you how the annotation process works I'm going to 
+name this task task 00001 the name doesn't really  
+matter you can just choose whatever name you want 
+and I'm going to select a few images to upload  
+over here perhaps I can just drag the files over 
+here in order to show you how this process works  
+I'm going to annotate only a few obviously it 
+doesn't make any sense to annotate all the 500  
+images because it's going to take me a lot of time 
+and it doesn't really make sense, right, I'm just going  
+to show you how the overall process looks like and 
+I'm going to annotate something like I don't know  
+I'm going to select these images over here and 
+I'm going to select them and I'm going to  
+drag and drop over here okay and then I'm going 
+to click on submit and open so this the task we  
+have created and now I'm going to click over here 
+so let me show you how to draw a bounding box  
+around each one of the objects in all of these 
+images this is very important because this is  
+how we are going to produce the annotations we 
+need in order to train this object detector so  
+the first thing I'm going to show you is how to 
+draw all his bonding boxes, we're going to click  
+over here in this rectangle and then I'm going to 
+click here where it says shape and now I'm going  
+to enclose each one of these objects like this... 
+for example this one over here so I'm going to  
+something like this and like this... okay so this 
+is the first object I have annotated and now  
+I'm going to do exactly the same for these two 
+ducks over here I'm going to press the letter  
+N and this is going to be a shortcut in order 
+to draw new bounding boxes now I'm going to do  
+the same for this duck over here and I'm going 
+to do the same for this other duck over here  
+okay so the bounding boxes don't need to be 100% 
+perfect for example something like this will work  
+just fine... right, and over here for example if we do 
+something like this it will work just fine too... so  
+the bounding boxes don't need to be 100% perfect 
+just make sure you are enclosing the object, right,  
+now let's continue what I'm going to do now is 
+to go through all these images one at a time and  
+I'm going to annotate all of them and every time 
+I see something which I think it's important I'm  
+going to pause the annotation and I'm 
+going to give you my my recommendations and  
+I'm going to show you a few things which are 
+very important because the annotation process,  
+defining exactly where the objects are located, 
+although it seems like it's very easy and it's  
+very straightforward trust me it's not as easy 
+as it sounds, and there are some cases in which  
+you need to have a very well established criteria 
+in order to annotate your data but I'm going to  
+show you with a few examples so I'm just going 
+to pause the video here, the recording here, I'm  
+going to keep on annotating more images and I'm 
+just going to resume this recording when I see  
+something interesting, right, because I'm going to 
+show you a few recommendations I'm going to give  
+you a few insights which are going to help you 
+a lot in your annotation process, okay, for example  
+over here there's something very interesting, 
+very important, you can see we have two ducks here  
+and also we have another duck which is over here 
+and perhaps we have another duck over here I'm going to...  
+I'm going to delete it for now I'm going to 
+do it again in a few seconds but only for you  
+to see this part over here which I'm not sure if 
+this a duck, this is a duck for sure, but this  
+thing over here may be a duck too I'm not sure 
+but regarding this one you can see that we are  
+not really seeing this duck at all we have like a 
+huge occlusion and we are not really seeing it at  
+all so my criteria in this case is to not annotate 
+this duck over here and I'm just going to focus on  
+these other ducks we have over here right there 
+will be many cases in which you are going to have  
+some huge occlusions and you are not going to see 
+a few of your objects and also there will be a few  
+cases in which there would appear to be an object 
+in the background but you're not 100% sure so in  
+those cases you need to have a criteria and and 
+you need to make a decision for example in my case  
+I'm just going to annotate those objects which are 
+very well defined and I'm not going to annotate  
+everything that's like in the background with a 
+huge occlusion and this is another example because  
+you can see that we have many ducks over here 
+which are very well defined but then we also have  
+other objects over here which have like a huge 
+occlusion and we are not really seeing the duck  
+at all right I can see that there is something 
+over here and this is a duck but I don't really  
+see the object right and if I go over here you 
+can see that there are many other ducks in the  
+background which are very small very pixelated so 
+in my case over here too there's a huge occlusion  
+in my case I am not going to annotate all these 
+objects over here and I'm just going to focus  
+on all these other objects which are much more 
+noticeable, right, like this... and then like this... like
+this... and like this... okay so remember mic criteria 
+in this project is to only annotate those objects  
+which are 100% visible and without this huge 
+occlusions right this is what I mean regarding  
+the annotation process is not as easy as it 
+sounds because there will be many cases in  
+which you are not going to be 100% sure if 
+this is the object you want to annotate or  
+not and you're going to make a decision right 
+and it's very important whatever decision you  
+make this is super important because now it's 
+the time in which which we are defining exactly  
+what's the object we want to detect so if 
+our definition is not clear it's going to  
+be very challenging for the object detector to 
+understand what our object is right see what I  
+mean this is why the annotation process is one 
+of the most important steps in this process and  
+it's perhaps the most important step in this 
+process we are going to define exactly what's  
+the object we are going to detect, over here 
+for example I see I have many ducks over here...
+over here...
+and over here but then I have other birds in 
+the background but according to my criteria to my  
+thoughts to what I think these are not ducks 
+right this is like other type of bird but this  
+is not a duck so I'm not going to annotate it at 
+all and then over here there's like something but  
+I don't really see what the something is so I'm 
+not going to annotate it either and that's pretty much  
+all yeah that's pretty much all so I'm just 
+going to continue in some cases you are also  
+going to find a lot of objects, right, for example 
+like this what I usually do when I'm annotating  
+my data is to have a different bounding box 
+for different objects, right, like this but I  
+have seen other annotation criteria which is 
+just drawing a huge bounding box enclosing  
+absolutely all of the objects or a few of the 
+objects together right once you start having like  
+a lot of objects which are very close together 
+something like this, I have seen some criteria  
+which involve just drawing a huge bounding box 
+enclosing everything right something like this and  
+like this and like this right and basically you 
+are telling the object detector everything that's  
+here is a duck everything that's over here is a 
+duck right and this potentially could be okay too  
+if you decide to annotate some images like this 
+then once you are making predictions once you are  
+making inferences then you will have some cases in 
+which you are just producing only one bounding box  
+that encloses a lot of objects, right, so it all 
+depends on your project it all depends on what  
+exactly you are trying to achieve, in my case 
+I really like to have different bounding boxes  
+for different objects, it takes much more time to 
+annotate but the results are much better... from my  
+perspective for the type of projects I usually 
+work with, I like to have a different bounding  
+box for different objects, right, so I'm just going 
+to keep an annotating this image and I'm going to  
+pause... and I'm going to resume the video again 
+once I have something interesting to show you  
+now this is another very interesting thing you 
+can see that these two ducks over here are very  
+well defined everything it's perfect I have 
+already drawn a bonding box around each one of  
+them but we also have this other structure over 
+here which if I'm honest I don't really know if  
+this is a duck or not perhaps this is a duck or 
+perhaps this is just like something in the water  
+right, I think it is but I'm not completely sure, 
+in these cases you need a criteria and you need  
+to decide what you are going to do because if 
+you are going to tell the object detector that  
+this object over here is a duck that's going to 
+teach the object detector that this type of structure  
+over here is a duck so it's it's all up to you 
+is this the object you are trying to detect? this  
+is something you need to ask yourself, is this the 
+object you are trying to detect? because if it  
+is then go ahead and annotate it if it's not then 
+don't do it in my case my criteria for these type  
+of situations is to just not annotate it, right, 
+when I'm not 100% sure if this is the object I'm  
+interested in or not I do not annotate it at all 
+remember that you are going to have a lot of data  
+you're going to have a few hundred images or a few 
+thousand images and in all of these images you are  
+going to have a lot of objects and hopefully all 
+these objects or most of them like most of them  
+the vast majority of them are going to be 
+very well defined like this so if you only have  
+a few objects which you are not really sure it's 
+not going to be a big deal if you don't annotate  
+them, nothing happens, so yeah this is also my 
+criteria in this situation and that's pretty much  
+all now let me show you something else which is 
+showing you how to download this data right once  
+you are done annotating all of your data all of 
+your images remember you are going to click save  
+you're going to save the changes and then the only 
+thing you need to do is to go here to your tasks  
+you're just going to select the task you have 
+annotated and then the only thing you need to do  
+is to export annotations and you are going 
+to select this format over here which is yolo 1.1  
+and then click okay you could also save the 
+images but if you have uploaded the images then I  
+guess that doesn't make any sense to download the 
+images again right so if you want to download  
+the images click here and if you don't then don't 
+click there then you click okay and this is going  
+to take some time but eventually you are going to 
+download this data over here okay now the export  
+is finished and the only thing you need to do 
+is to click here and then here download, okay,  
+and is going to download all the annotations like 
+this okay now let's move to the next step in this  
+process which is preparing the data into the exact 
+format you need to train the object detector let me  
+show you so now let's go back to this directory 
+I have created for this project and let me show  
+you something, this has to do with how you need 
+to structure your data in order to be able to  
+train this object detector, this has to do with 
+the location of all of your files your images  
+your labels and so on and this also has to do with 
+all the directories you need to create in order to  
+locate all of your files, let me show you, so you 
+can see I have these two directories one of them  
+is called images and the other one is called 
+labels I'm going to open the images directory  
+and you can see I have two additional directories 
+one of them is called train and the other one is  
+called val, if I open the train directory this is 
+where I have all my training images, right, the 500  
+training images I'm going to use in this process 
+and now if I open the val directory you can see I  
+also have some images over here and these are the 
+validation images these are the images I'm going  
+to use in order to validate the training process 
+so we have these two directories over here and if  
+I go back and if I open the labels directory 
+you can see I have exactly the same structure  
+I have two folders one of them is called train 
+and the is called val, train has all the labels  
+all the annotations for all the training images 
+and then val has all the annotations for all  
+the validation images now something that 
+it's very important it seems like only a detail  
+but actually it's very important and it has to do 
+with the names of all these directories, in order  
+to save you some time and in order to make sure 
+everything works as expected just make sure you  
+name everything exactly the same as I'm showing 
+you over here, just to avoid any potential issue  
+in your training process just make sure everything 
+is named exactly the same as I'm showing you over  
+here images labels and then this one is called 
+train and this other one is called val, later on  
+when I show you the training process I'm going to 
+show you a file which is a configuration file and  
+this file has some paths to the location of 
+your data and your images so as long as you  
+name everything exactly the same as I'm showing 
+you over here everything should work as expected  
+right, now let me show you something else if I 
+open the images directory again and now if I open  
+the training images and I'm going to do the same 
+for the labels directory, the training labels, you  
+can see that for every single one of my images 
+in the in this directory if I order everything  
+like this, okay, you can see that for every single 
+one of these files we have a given name a given id,  
+and then the extension is jpg and then if I 
+go to the annotations directory you can see that  
+the file names are exactly the same but with a 
+different extension right you can see that the  
+file names are exactly the same I'm referring 
+to this id over here, this id, right, this id over  
+here is exactly the same as this other id over 
+here and the only difference between these two  
+file names is the extension right and you can see 
+this is exactly the same for absolutely  
+every single file so this file over here contains 
+all the annotations, all the bounding boxes 
+for this image over here, this is 
+also very important because it has to do with the  
+how your data set works and this is going to help 
+you a lot to understand exactly what's going on  
+to understand exactly what you are doing in this 
+training process and is going to help you a lot  
+to know more about your data to be more familiar 
+with your dataset and this is also going to help  
+you to solve whatever issue may arise when you are 
+training your object detector and then about the  
+annotations you can see we have the annotations 
+which are given in this format this is the YOLO  
+format the first number is the class id, in my case 
+I have only one class in this dataset which is  
+duck so in my case this number is always going to 
+be zero but in any other case this depends on the  
+number of classes you have have in your dataset 
+and then this is the location of the bounding box  
+the first two numbers are the X and Y coordinates 
+of the center of the bounding box and then this is  
+the width and this is the height of the bounding 
+box and you can see that everything is given in  
+relative coordinates so this number and this 
+number over here are divided by the image width  
+and this number and this number over here 
+are divided by the image height, right, these are  
+relative coordinates so this is only to show you 
+super quickly how the annotations look like and  
+also to show you how you need to structure your 
+dataset and how you need to... where you need to  
+locate all the files and so on in order to make 
+this training process work as expected and now  
+let's move on to the training process now it's 
+the most fun part of this tutorial because now  
+it's the time to train the object detector so let 
+me show you I'm going to show you how to train  
+this object detector in your own computer and 
+also I'm going to show you how to train it in a  
+Google collab so let's get started with Google 
+collab and the first thing you need to do is  
+to create a zip file from this directory right 
+remember this the data directory this is where  
+I have located all my data and the only thing 
+I'm going to do is to zip the entire directory  
+I'm going to compress the entire directory in my 
+case I have already done it is this file over here  
+you can see it's called data.zip but in your case 
+please remember to do so before you continue with  
+this tutorial and once you have compressed the 
+entire directory and you have created this file  
+the only thing you need to do is to upload this 
+file into a directory in your Google drive this  
+is a directory I have created in my Google Drive 
+it's called YOLO 10 object detection full guide  
+and you can see that this is the data.zip file I 
+am showing you over here so this is what you need  
+to do next please remember to upload this file to 
+a directory in your Google Drive and now in order  
+to train this model we are going to follow all the 
+instructions which are given here in this Google  
+collab, right, in this Jupiter notebook actually, 
+so the only thing I'm going to do is to execute  
+each one of these cells one at a time and this is 
+going to take care of the entire training process  
+so let me show you the first cell is going to 
+connect my Google collab to my Google Drive  
+I'm going to select my account continue continue 
+and that's pretty much all okay now I have  
+connected my Google Drive with Google colab and the 
+only thing I need to do next is to execute this  
+cell over here which is going to copy the file 
+we have uploaded over here into this Google colab  
+environment so the only thing I'm going to do 
+is to press enter and you can see that this is  
+not only going to copy the entire data but it's 
+also going to uncompress this file over here and  
+you can see that we have already uncompressed 
+all this data into this Google colab environment  
+so now let's continue now the next step in this 
+process is to install all the required packages  
+so the only thing we're going to do is to clone 
+this directory clone this repository which is  
+the YOLO 10 official Repository and then we are 
+just going to install all the required packages  
+like this right we are just going to cd into this 
+directory and then we're just going to pip install  
+the entire repository so the only thing I'm going 
+to do is to press enter and this going to take  
+care of the entire process okay everything seems 
+to be ready and we can continue over here this is  
+the most important part of this process because 
+this is where we are going to train the object  
+detector so you can see that the only thing we 
+are doing over here is a couple of imports we  
+are importing os and then we are importing this 
+library and we're just importing YOLOV10 then  
+you can see I have this path over here which is a 
+path to a configuration file let me show you how  
+this configuration file looks like if I open this 
+file you can see I have three keys one of them is  
+the location of the root directory of our dataset 
+which is over here and then the other two  
+keys are related to where the training images 
+are located and where the validation images are  
+located this is why I told you that as long as 
+you name all the directories exactly the same  
+as I showed you in this tutorial and if you use 
+exactly the same configuration file everything  
+should work as expected and then all the four 
+classes you remember that the only class I'm  
+going to use in this dataset is 'duck', I'm going 
+to train this object detector to detect only one class,  
+duck, so in my case this is how it looks like and 
+that's pretty much all once I have the file over  
+there in my Google Drive the only thing I need to 
+do is to press enter and this is going to train  
+YOLOv10 from these pre-trained model weights and 
+it's going to train this model for 200 epochs, so this  
+is going to take some time so what I'm going to do 
+now is to pause the recording here and I'm going to  
+resume this recording once the training process 
+is completed okay now the training process is  
+done and let me show you how to download all 
+the results from this training process you  
+can see that the results have been saved here 
+in this directory and let me show you how to  
+download these results into our local computer I'm 
+going to execute this cell over here which says  
+download results and this is going to take care of 
+downloading all these results you can see I have  
+an error I'm not sure why this error happens once 
+in a while but if you encounter a similar error  
+when you train this model then the only 
+thing you need to do is to restart the session  
+and then you just need to press enter again and 
+this is going to fix the issue so basically we  
+are compressing the entire runs directory we are 
+creating this file which is runs. zip and then  
+we are downloading this file over here running 
+this command over here you can see that this is  
+in progress and once this is done we are going to 
+download this file into our local computer okay I  
+am just going to download the file in my desktop 
+and then I'm going to open the file like this you  
+can see I have a lot of directories and over here 
+I have all the results from the training process  
+this is where the weights have been saved, you can 
+see we have two files best.pt and last.pt and  
+then these are all the results, this is how you 
+can train this model using a google colab but remember I  
+I told you that I am also going to show 
+you how to train this model using your own local  
+computer so let's go to pycharm and I'm going to 
+show you how to do it locally in your own computer  
+and this is going to be exactly the same process 
+as we did over here in Google collab so the first  
+thing you need to do is to create a new virtual 
+environment obviously because that's always a  
+very good practice when working with python so you 
+can see over here I have already created a virtual  
+environment and in my case I created this virtual 
+environment using python 3.9 but in your case  
+you can just use pretty much any other version of 
+Python 3 if I'm not mistaken pretty much any other  
+version will do as well so once you have created 
+this virtual environment you need to clone yolov10  
+official repository by executing this command 
+over here I'm referring to this repository YOLOv10  
+repository you can see I have already cloned the 
+repository and it's over here and then the only  
+thing you need to do is to cd into this repository 
+something like cd yolov10 okay and then you need  
+to install the requirements so pip install and 
+then this character over here pip install... like this...
+and then press enter in my case nothing is 
+going to happen because I have already installed  
+all these packages but in your case please 
+remember to do so otherwise nothing is going  
+to work and now let's continue once everything is 
+installed and everything is okay the only thing  
+you need to do is to execute this code I have 
+over here you can see this file is called train.py  
+and these are the instructions we need to 
+execute in order to train YOLO 10 in our local  
+computer you can see it's exactly the same code I 
+showed you over here exactly the same code the only  
+difference is the location of the configuration 
+file which now is going to be located here but other  
+than that everything else is exactly the same and 
+let me show you that now this configuration file...  
+there's something different as before because 
+now this is the path to the data right and this is  
+the path to the location of the data in my local 
+computer if I copy all that value over there  
+and I paste it over here you can see that this is 
+this current directory and this is where the data  
+is located, right, I'm going to paste it over there 
+and this is 'data' so please remember to update this  
+value to whatever location you have your data in 
+your file system right this is the absolute path  
+to your dataset and then this is exactly the same 
+and this is also exactly the same so then the only  
+thing I'm going to do now is to just execute 
+this file and this going to take care of the  
+entire training process let's see if it works, okay 
+there's a very small mistake actually this is from  
+pre trained... like this okay let's see now, we may 
+need to install a package you can see I have an  
+error over here in case you have a similar error 
+in your computer this install over here may fix  
+it, so I'm going to run pip install safetensors 
+and I'm going to run the same file again okay  
+and you can see that everything is going well and 
+the training process has started over here... so I'm  
+not going to train the model again because I have 
+already did it in Google collab but this is only  
+to show you how to train the model in your local 
+computer now let's move on and let's move to the  
+next step in this process which is evaluating 
+the model we trained it's very important every  
+time you train a computer vision model or any type 
+of machine learning model it's very important you  
+evaluate the training process so let me show 
+you how to do it I'm going to take all these  
+results which we have produced from Google collab 
+so the only thing I'm going to do is to get this  
+directory over here and I'm going to paste this 
+directory over here something like this remember  
+these are the results from the training process 
+we did from Google collab so in order to evaluate  
+this training process we are going to do it super 
+quickly and we are going to do it in only a few  
+minutes we could spend hours analyzing a training 
+process because this could be a very detailed  
+evaluation but I'm going to show you a very 
+easy way to do it which is just looking at some  
+of the plots you can see over here so basically 
+just make sure that the loss functions are going  
+down as you increase the number of epochs you can 
+see that I have trained this model for 200 epochs  
+and something that's very important every time you 
+train a model is that the loss function goes down  
+as you increase the number of epochs in this case 
+we have many plots and if I'm not mistaken the  
+loss function we care about the most in this project, 
+in this evaluation, is this one over here because  
+this is the loss function which is related to 
+the bounding box detection and basically long  
+story short if you want like a very quick way 
+to analyze if this is working well or not just  
+make sure the loss function is going down as we 
+increase the number of epochs, if the loss function is  
+going down it's likely everything is going 
+well, it's not a guarantee, I mean everything  
+could happen and maybe the loss function is 
+going down and you are not training a very  
+good model, it could happen, but at the very least 
+you need to make sure the loss function is going  
+down. If the loss function is not going down I 
+can tell you for sure something is wrong with  
+your project I can tell you for sure without 
+any doubt whatsoever you have made something  
+amazingly wrong with your training process. If 
+the loss function is not going down... if the loss  
+function is going up something is amazingly wrong, 
+right, so at the very least you need to make sure  
+the loss function is going down as you increase 
+the number of epochs, and then also take a look at  
+these plots over here which are related to the 
+accuracy, with the performance of your object  
+detector, and for these plots over here you need 
+to make sure they are going up as you increase the  
+number of epochs, so this is a very quick evaluation 
+a very dummy evaluation but trust me this type  
+of evaluation is going to take you very far, only 
+by looking at the loss function and only by looking  
+at all these plots which are related to the 
+performance you are going to be able to know a  
+lot about the performance of your object detector 
+and then another way to evaluate what's going on  
+with your object detector another way to evaluate 
+the training process is to see how it performs  
+with a few examples, so there are going to be 
+a few files, as you can see over here, which  
+are called val batch zero labels and val batch zero pred and 
+also there will be other files which will be val  
+batch one labels and val batch one pred and you may 
+have even more files and basically these files  
+are going to tell you how the models performs on some 
+very specific images from the validation set and  
+you can see that here we are looking at the ground 
+truth, at the annotations, the labels, and then if I  
+show you the other image, these are the predictions 
+we got with our object detector, right, this is the  
+ground truth, and this is the performance of our 
+object detector and you can see that basically  
+it performs pretty well I would say it's not 
+perfect but I would say it performs very well  
+there are a few miss detections over here this duck 
+over here we are not detecting it and then there's  
+also another miss detection over here we are not 
+detecting this duck and also over here all these  
+ducks over here are very small but nevertheless 
+we should be able to detect them and we are not  
+detecting them with our object detector now let's 
+take a look at these other examples and you can see  
+that in this case we are not detecting these 
+ducks over here... actually these are not ducks  
+these are penguins! this is the validation 
+data I downloaded, so yeah it is what it is, but I  
+think these are not ducks at all but it doesn't 
+matter we're not detecting these two birds and  
+it seems we are not detecting these two other ducks 
+over there right and we also have a miss detection  
+over here because we are detecting something which 
+is not a duck as if it were a duck right we are  
+detecting like this entire structure over here 
+and this is not a duck the only duck over here  
+is this one... I think this is also some other type 
+of bird! I think this is not a duck either but it  
+doesn't matter this is the validation data we 
+used to validate our training process so after  
+this quick evaluation my conclusion is that the 
+object detector performs very well but it's not perfect now  
+the next step in this process will be to train 
+a more powerful model right because training  
+an object detector is always an ongoing process 
+and we will need to go once and again through the  
+same steps. Once we evaluate the training process 
+if we are not satisfied with the performance of  
+the object detector then we should go back to the 
+data preparation, to the data annotation, the data  
+collection, whatever, and this is where we should be 
+trying to understand exactly what is going on with  
+our object detector and we should be trying to 
+decide what are we going to do different next time  
+right perhaps we are going to do some changes with 
+the images we used to train the model or perhaps we  
+are going to do some changes with the annotations, 
+with the way we annotated the data, remember when  
+I was walking you through the annotation process 
+I told you that that we need a criteria in order  
+to do the annotation process, in order to annotate 
+all the images and different criteria are going  
+to produce different annotations so this is where 
+we are going to decide the changes we are going  
+to do next time we train this model and one of the 
+changes could be our annotation criteria and we  
+could try again annotating the data differently, 
+right, so training an object detector is not an  
+easy thing to do actually, I mean if we are 
+looking for perfect results then training an  
+object detector is not easy but you need to think 
+about it as an ongoing process, we need to iterate  
+once and again once and again through the same 
+steps until we are happy with our results now  
+like this is only a YouTube video I cannot show 
+you how this iteration works I cannot prepare  
+the data again and train the model again and so 
+on because this is only a YouTube video but if  
+you really want to go much more deep into the 
+creation of an object detector, if you want to take  
+your computer vision skills to the next level then 
+I invite you to take a look at the computer vision school, 
+this is one of my products where I show you 
+how to create AI prototypes, in this school I walk  
+you through the creation of computer vision based 
+MVPs, and when I say MVPs I mean minimum viable  
+products so each one of these projects involves 
+the creation of an entire product an entire  
+minimum viable product but a product at the 
+very least so if you really want to know how  
+to train an object detector which you could 
+potentially use in a production environment,  
+in a real project, then I definitely invite you to 
+take a look at the computer vision school, to take  
+a look at our memberships and to just choose the 
+membership you like the most. Now let's continue  
+with this project and I'm going to show you how 
+to make predictions with the model we trained  
+now let me show you how to make predictions so 
+let's go back to py charm and let me show you  
+this script over here which is called predict.py, 
+this is the script we will be using in order  
+to make inferences on a video we're going to make 
+inferences on all the frames of a video and we're  
+just going to draw all the bounding boxes on all 
+the objects we detect on this video so let me show  
+you how this script works, basically we are 
+creating a new model of yolov10 you can see here  
+I'm importing from ultralytics import yolo v10 
+as YOLO and then I am just creating a new model  
+like this, I am specifying what's the location of 
+the model weights I'm going to use in order to  
+make inferences, remember that I have copied the 
+entire runs directory over here and if I go to  
+runs detect train weights, these are the weights 
+we have produced with this training process, and  
+this is the location I have over here runs detect 
+train weights and last.pt, a very quick comment  
+regarding these two files you can see over here 
+best.pt means this is the best model which was  
+produced through the entire training process 
+and last.pt is the model we produced at the  
+end of the training process, there are different 
+criteria to choose either the best model I mean  
+the best model in the entire training process 
+or the last model, the one that's produced at the  
+end of the training process, my criteria what 
+I usually do is taking the last model, so I  
+am going to use last.pt and this is exactly 
+the location of these model weights now let's  
+continue then the only thing we are doing over 
+here is loading a video, which is located  
+here in video.mp4 let me show you what's 
+the video we're going to use in this example
+we are going to use this video over here which 
+is as just a duck which is doing nothing... right,  
+it's just being there... this is the video we're 
+going to use in this example so this is video.mp4  
+and then we're going to save the results here 
+in out.mp4, then basically we are just defining  
+these variables and we are creating this object 
+over here which we are going to use in order to  
+produce the output, right, to produce the video 
+which we are going to save over here, and then  
+the only thing we're doing is iterating through 
+all the frames in the video and for each one of  
+these frames we are applying the object detector 
+over here and we are just iterating in all the  
+results we get from this object detector and then 
+for each one of these results if the confidence  
+score is greater than 0.5 then we are drawing a 
+bounding box around this object we have detected  
+and that's pretty much all and then we just save 
+this frame to this... video we're going to save at  
+the end of this process and that's pretty much all 
+so this is a very simple process the only thing  
+it does is going through all the frames detecting 
+objects and saving the result in out.mp4, now let  
+me show you how the result looks like I'm going to 
+run this video this is going to take a few minutes  
+so I'm just going to resume this recording once 
+this is done. Okay everything's completed you can  
+see the video was saved here in out.mp4 so 
+let's see what's the video we have produced  
+so this is the duck and now we are seeing all the 
+bounding boxes which are drawn on top so basically  
+regarding the performance of this object detector 
+we can see something very similar as in the in the  
+evaluation when we were evaluating the training 
+process because the results are okay but are not  
+perfect right with we have a few miss detections 
+we have a few detections which are not correct  
+for example there we are detecting something over 
+here and there's nothing over there I'm referring  
+to this over here... right, you can see there was a 
+bonding box there but there's not really any duck  
+whatsoever so the object detector is performing 
+okay but it's not perfect, in order to make it  
+perfect, we would need to iterate and we would 
+need to improve the data improve the annotations  
+we would need to do it again, so this is going to 
+be all for this video this is exactly how you can  
+train an object detector using yolov10 on your own 
+custom data, this is the entire process of how  
+you can train this object detector, and remember 
+to take a look at the computer vision school if  
+you want to take your object detection skills to 
+the next level, if you want to take your computer  
+vision skills to the next level, please remember 
+to take a look at the computer vision school and  
+you are going to learn... oh my God you're going 
+to learn so much about computer vision and about  
+making products! right, you are going to learn how 
+to make MVPs which stands for minimum valuable  
+products so this is a completely different 
+teaching style and this is going to teach you  
+much more valuable skills. So, this is going to be 
+all for this video and see you on my next video.

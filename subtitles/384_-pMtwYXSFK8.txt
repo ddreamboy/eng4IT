@@ -1,0 +1,4951 @@
+hello everyone welcome to this
+interesting video on Google Cloud
+platform full course in this video we
+will explore and understand all the
+important Concepts revolving around
+Google Cloud platform starting with the
+basics of what is gcp and its following
+concepts like gcp domains comprising
+various services like compute storage
+networking iot Etc with a proper
+Hands-On demonstration on these
+Services following that we will have a
+comparison between gcp AWS and ashard
+and we'll see how they differ from each
+other and how they hold their
+individuality and then at the end we
+will understand some of its depth
+Concepts like gcp web hosting and gcp
+Cloud
+emo and towards the end we will take you
+through gcp fundamentals and
+certification training that will help
+you gain the
+certification so for this training with
+me I have our experienced gcp specialist
+together we will take you through the
+various important Keynotes of Google
+Cloud
+platform so let's start with with an
+exciting video on Google Cloud platform
+full course before we begin make sure to
+subscribe to our YouTube channel and hit
+the Bell icon and never miss an update
+from Simply learn good morning and good
+evening everyone so welcome to this
+session on Google Cloud platform my name
+is AJ and I'm an instructor with simply
+learn and also working as a big data and
+Cloud architect for various clients
+across globe in this session we learn
+about Google Cloud platform wherein we
+will learn about what is cloud computing
+why Google Cloud platform what is gcp
+that is Google Cloud platform Google
+Cloud platform domains about a use case
+that is ferero use case and also a quick
+demo on using services from Google Cloud
+platform so when we talk about Google
+Cloud platform we also need to know what
+is cloud computing so cloud computing is
+the use of hardware and software
+components to deliver a service to a
+network users can access these files and
+applications and services provided by a
+cloud provider from any device that has
+access to Internet in short cloud
+computing is a way where cloud provider
+provides access to different services
+such as resources and when we talk about
+resources here we talk about Computing
+we talk about about memory we talk about
+processing power we talk about storage
+and we also talk about different
+Services which Cloud providers make
+available for the users now that allows
+us for automatic software integration
+backup and restoring data unlimited
+storage capacity having a reliable use
+of different services and having a cost
+efficient solution now we know that
+cloud computing models there are
+different service models so you have
+platform as a service you have
+infrastructure as a service and you have
+software as a service and these are the
+prominent models which are offered by
+different Cloud providers such as Google
+Cloud such as Google you have Amazon you
+have Azure and also some organizations
+build their own private clouds using
+open Source open stack let's focus more
+on Google Cloud platform and what it has
+to offer and how it is gaining
+popularity in the market with different
+organizations which would want to work
+on a cloud platform or which would want
+to work on an infrastructure which is
+modernized so when we talk about cloud
+computing this is one of the approach
+which organizations can take to instant
+mously benefit from modernization using
+different Services different platforms
+and also newer Technologies for their
+various requirements such as scalability
+or dynamic businesses before we get into
+Google Cloud platform it is also good to
+understand where you can find some
+useful resources about Google Cloud
+platform and here you have a website
+which is from your Google Cloud so this
+is cloud
+academy.com librarygoogle and here you
+can create a free account now that would
+give you just 7 days trial but that has
+a lot of videos which talk about your
+Google Cloud platform and Essentials and
+it has various certification related
+videos which you can access and then
+after 7 days after you have tried you
+can obviously go for a paid account
+where you can take detailed learning
+from here now this is your training
+Library which shows your different Cloud
+providers such as Amazon Microsoft asure
+gcp and then you have various other
+topics which are specifics to
+organization you can obviously look at
+the pricing and you can also look at
+resources which will give you a good
+experience in learning from these videos
+you can also create a free account which
+I will walk you through later so you can
+create a free account on
+cloud.google.com now when I say free
+account that basically means it allows
+you to create an account and every user
+who creates an account gets a $300 free
+credit which can be used to practice
+brush up your skills and also explore
+and learn about different Google Cloud
+products which are offered by Google now
+coming back to our Google Cloud plat
+platform let's understand why Google
+Cloud platform so Google Cloud platform
+is popular for many reasons now let us
+see few of most important reasons why it
+stands out when you talk about pricing
+pricing is one of the significant
+factors that make Google Cloud Stand Out
+Among the other Cloud
+providers it offers a monthly pricing
+plan which is build according to monthly
+usage and when we talk about billing
+here the billing can can be in hours it
+can be in minutes and it can also be in
+seconds there are different options when
+you talk about your pricing which can be
+found from your Google Cloud web page
+now pricing could be based on preemptive
+machines pricing could be based on
+reserved instances or reserved resources
+I'll show you the link where you can
+find more details on pricing part of it
+so Google Cloud really has various
+pricing options which help customers in
+their different requirements whether
+they would go for any of the service
+models such as infrastructure as a
+service platform as a service or even
+software as a service one more
+attractive thing about Google Cloud
+pricing is that it provides committed
+use discounts for example under this
+scheme you can purchase a specific
+amount of virtual CPU course and memory
+for up to 57% discount off regular
+prices if you commit usage for either
+one or 3 years now this is just one
+option there are various such options
+which you can learn about from the
+Google Cloud's page and that really
+suits different customers for their
+different
+requirements now when we talk about
+speed we don't need to really challenge
+this aspect when it comes to Google
+services so Google provides its Google
+cloud and Google app customer speed up
+to 10 tbyt because of its faster cable
+system there are different kind of
+machines which can be used if you're
+talking about computation if you're
+talking about memory hungry applications
+or even storage intensive workloads all
+in all speed is one of the defining
+characteristics of Google cloud services
+the cable has connections over us West
+Coast main cities in Japan
+and even major hubs in Asia this speed
+enhances performances and leads to
+customer satisfaction now when we talk
+about customers any or every customer
+would prefer to have low latency High
+throughput Based Services they would
+want to use higher speeds to process
+their data in as less time as possible
+Google provides a low latency Network
+infrastructure in fact you can say that
+when you are using Google cloud services
+you are using the services from the same
+infrastructure which Google uses for its
+popular services such as Google search
+or even YouTube which is one of the
+second largest repository which can be
+accessed for videos now when we talk
+about Big Data big data is data which is
+very complex has lot of other
+characteristics such as your volume you
+have velocity you have variety you have
+veracity validity volatility virality
+and so on so if an organization has is
+working on Big Data Google Cloud can be
+a better choice because Google has many
+Innovative tools for cloud warehousing
+for example such as big query and even
+realtime data processing tools such as
+data flow big query is a data warehouse
+that allows massive processing of data
+at high speeds basically working on your
+structured data Google also has launched
+some new machine learning from
+artificial intelligence tools now there
+are various other services which we can
+which we can use from Google Cloud
+platform but let's understand what is
+Google Cloud platform and what are some
+of the services even the services which
+are not listed here can be found in your
+console from Google Cloud so what is
+Google Cloud platform gcp it is a set of
+Cloud Computing Services provided by
+Google that runs on the same
+infrastructure as I mentioned that
+Google uses for its end user products
+like YouTube Gmail and even Google
+search the various set of services
+offered by Google Cloud platform are so
+you have Services which are specific to
+Computing requirements and again in
+Computing you have various different
+options available you have machines
+which are compute optimized machines
+which are memory optimized machines
+which are storage optimized and also we
+have certain machines such as preff
+which basically means that you could get
+a machine to work on at a far lesser
+price than any other machine but when we
+talk about preemptive these are the
+machines which can be requested on
+demand and they can be taken back by
+Google at any time you have networking
+related Services which can be very
+useful when you are setting up your
+applications or your services across
+Globe you also have different Services
+which are specific to machine learning
+and organizations which would be
+interested in working on machine
+learning or artificial intelligence
+would be really interested in using
+these Services there are also innovative
+solutions to work on big data and Big
+Data related Technologies now when we
+talk about Google Cloud platform domains
+so we can break down these Services into
+specifics such as you have compute now
+the compute service allows for computing
+and hosting the cloud now when you talk
+about Computing here there are different
+services such as app engine you have
+compute engine you have kubernetes you
+have Cloud functions and Cloud run when
+you talk about storage and database so
+the storage and database service allows
+application to store media files backups
+or other filik objects now various
+Services Under This are as follows you
+have cloud storage Cloud SQL Cloud big
+table for unstructured data you have
+Cloud spanner cloud data store
+persistent Diss and Cloud memory store
+when we talk about networking the
+networking service allows us to load
+balance traffic across resources now as
+I mentioned earlier resources could be
+your different resources which you would
+be using from a cloud platform such as
+your devices your instances memory
+optimized or CPU optimized instances or
+other resources creating DNS records and
+much more so various Services Under This
+are VPC that stands for virtual private
+Cloud you have Cloud load balancing
+Cloud armor Cloud CDN you have Cloud
+interconnect DNS and network service te
+when we talk about the big data service
+this allows us to process and query big
+data in Cloud now various Services under
+these are as follows you have big query
+cloud cloud data proc Cloud composer
+cloud data lab cloud data prep Cloud Pub
+sub which is publish and subscribing
+system you have cloud data studio now
+you also have the developer tools and
+developer Tools service includes tools
+related to development of an application
+now various Services under these are as
+follows that is you have Cloud SDK
+software development kit you have
+deployment manager Cloud Source
+repositories and Cloud test lab when we
+talk about identity and security which
+is one of the primary concerns for any
+organization or any user who would be
+interested in using a cloud platform
+Google Cloud really has taken care of
+this so when you talk about identity and
+security domain this deals with Security
+Services now various Services here are
+Cloud identity you have identity and
+access management that is cloud am you
+have identity aware proxies you have
+cloud data loss prevention API security
+key enforcement key Management Service
+and many more you also have cloud
+services which are related to internet
+of things so very much would be used by
+organizations who would be working on
+iot devices or the data generated by
+these devices so various Services here
+are Cloud iot Core you have Edge TPU and
+Cloud iot also when we talk about Cloud
+AI that is artificial intelligence this
+comprises of services related to machine
+learning and much more so you have Cloud
+autom ml Cloud TPU Cloud machine
+learning engine job Discovery dialog
+flow Enterprise natural language Cloud
+text to speech and much more if you
+would be interested in Services related
+to API platform then there are different
+Services Under This category or this
+domain so you have Maps platform you
+have APG API platform
+monetization developer portal analytics
+that is API analytics APG sense Cloud
+endpoints and service infrastructure so
+these are some of the listing of
+services under each Cloud platform
+domain now let's look at Ferrero use
+case and let's also understand what was
+done here so ferero is one of the famous
+chocolate and ranks third among
+worldwide chocolate and confectionary
+producers it was found in 1946 in Italy
+I'm sure you would have seen the ferero
+chocolates when you would have gone out
+to buy some chocolates so the challenges
+here was that ferero as we know is sold
+in every supermarket and is known for
+its quality once the business grew some
+issues arrows right and that's what
+happens when the business grows you have
+issues popping up which could be related
+to the volume of data the speed with
+which the data is getting generated the
+variety of data and also looking at your
+platforms which support different
+Dynamic applications or your scalability
+requirements performance requirements
+and so on so it needed data storage
+processing and Analysis system for a
+wide customer database there was a huge
+gap between the company and the people
+who bought its goods because the company
+relied on data given sales outlets now
+that's one of the challenge Ferrero
+wanted to create a digital ecosystem
+where there was a point of contact with
+its customers and also a foundation for
+an Innovative datadriven marketing
+strategy what was the solution here so
+one of the service of cloud platforms or
+Google Cloud platform is Big query and
+this was an answer to fero's challenges
+since it was capable of hyper fast and
+efficient data analysis as a solution
+now as I mentioned big query is a data
+warehouse which allows you to store
+structured data now this could directly
+be used as a service where you could
+store in any amount of data and you
+would not be paying for storage so there
+are different pricing models and for
+data up to 1 terabytes you would not be
+charged anything and if you would be
+accessing the data that is reading the
+data or processing the data from
+bigquery that's where the pricing model
+kicks in now using Google Cloud's big
+query business analysts of ferero were
+able to store and analyze massive data
+sets in a very reliable fast and
+affordable
+manner consumer behavior and sales
+pattern data reports were easy to build
+and
+automate and and the analysis also
+followed ferero to adopt advertising
+across various marketing channels to
+serve the customer needs in a better way
+what was the result they could divide
+their database into realtime actionable
+consumer clusters to generate more
+accurate user profiles fero was also
+able to personalize its marketing
+strategies to match the user needs now
+Google Cloud platform completely
+tailored the website mobile content and
+advertising and created a very
+costeffective media by strategy now
+these were some Basics on Google Cloud
+now as I said you can always find lot of
+details about pricing about services and
+also all the services are accessible in
+your free trial account now let me just
+walk you through here so one is you
+could always find Details on
+documentation on each of these services
+so if I would click on getting started
+you have quick start which basically
+shows you short tutorials you have
+trainings and you have also
+certifications now if we click on quick
+start now that takes me to this page
+which shows me quick starts or if you
+would want to understand about different
+projects if you would want to look into
+the documentation of creating a Linux
+what ual machine or storing a file and
+sharing it deploying a container Docker
+container image and so on so you have a
+lot of quick starts here you can also
+look at Cloud
+minute on the same page on the right
+side you have docs and once you click on
+that it takes you to these links now
+this shows you build Solutions which
+shows you top use cases best practices
+all the solutions it's always good to
+learn from these use cases which are
+available and here
+you have different feature products and
+all the different Services which Google
+Cloud offers now you can click on
+featured products and that basically
+shows you a list of these products now
+here we have all the solutions which you
+can look at architecture database
+Enterprise level big data and Analysis
+gaming related internet of things and so
+on now if you go down here it shows you
+featured products and that shows you
+some of the important products such as
+compute engine which is belonging to the
+compute domain you have Cloud run you
+have anthers which is for
+migration and basically Cloud adoption
+when organizations would want to move
+from on premise to cloud-based Solutions
+you have Vision AI you have cloud
+storage now that basically allows you to
+store any kind of data whether that's an
+object so this is acting as an object
+storage you have cloudsql which is basic
+basically a ready to use service where
+you would be using MySQL post or any
+other SQL Server database Services you
+have big query which is a data warehouse
+which basically allows you to store your
+structured data and then you have your
+AI and machine learning related products
+so you have automl Vision AI video AI
+text to speech speech to text and so on
+now you also have different platform
+accelerators which can be used and in
+any of these cases for example if I
+would click on compute engine which is a
+featured product from Google Cloud now
+that shows you basically your quick
+starts using your Linux machines how to
+guides which tells you completely
+working on a VM instance or working on
+storage working on persistent Diss and
+so on and it shows you the documentation
+here now you also have products and
+pricing option
+which you can see for GCB pricing and
+you could straight away go to the
+pricing you could be looking at
+Solutions which talks about
+infrastructure modernization now this is
+something which organizations are
+interested in when they would want to
+move from their on premise solution to
+your Google Cloud now here I can say for
+example I click on infrastructure
+modernization you can always find some
+case studies what are the different
+solutions we have here right when you
+talk about Google Cloud so you can
+always click on C Solutions and you can
+look at VM migration or SCP Cloud right
+by Google Cloud what it can be used for
+VMware as a service or HBC that is high
+performance Computing and about these
+Services we will learn in detail later
+now I can go back on the same page where
+I was clicking on the services so you
+have quick starts you have how to guides
+you have deep understanding of different
+concepts right and here if I click on
+all how to guides so that shows me what
+are the different ways in which you can
+work with compute engine and working
+with different instances although it's
+quite exhaustive content but then if you
+follow steadily then you can learn a lot
+about Google Cloud now here I can just
+go back so this is just giving you some
+idea on the different products which are
+available from Google Cloud looking into
+different sections finding right
+documentation here right and you can
+always look into each one of these in
+detail for each product which Google
+Cloud
+offers now if we scroll down we could
+see all the options or all the domains
+which we see here right let me just go
+back because we got into Solutions now
+we have quick starts right and and then
+you can basically scroll all the way
+down to look at Cloud SDK which can be
+set up on your Windows machine like I
+have set it up on my Windows machine
+plus when you use Google console you
+have a GUI which I'll show you in couple
+of minutes and also a cloud shell where
+you can use your command line options to
+work with Google Cloud platform you have
+Cloud console which is nothing but your
+GUI to access your resources
+now you can also look at in-depth
+tutorials pricing and you have different
+other options so let's just click on
+pricing here and then we have your price
+list which basically gives you details
+of different Services what are available
+and what are the services or what are
+the prices so for example if I click on
+computer engine right and this shows me
+the pricing aspect of compute engine
+which belongs to compute domain and and
+here you can see you have VM instance
+pricing you have networking pricing sold
+tenant noes which are specific to
+particular organizations or if
+organizations would want to have
+dedicated nodes you have GPU based
+pricing right so General processing
+units you have dis and image pricing and
+you can click on any of the links and
+you can see pricing which also shows you
+your different kind of machine types so
+here you have different kind of machine
+types which says N1 N2 N2 D E2 you have
+memory optimized machine types you have
+compute optimized you have premium
+images and you can basically look at all
+the categories you can look at disk
+pricing which involves your persistent
+disk pricing for ssds or sgds what are
+the kind of images what are the
+different network Services right and you
+can always look at your machine types
+you can choose a particular region right
+there is the concept of region and
+availability zones here and as per
+region you could look at the prices you
+can also look at standard prices you
+could be looking for what are the free
+tier machines if I'm specifically
+looking for VM instance pricing I can
+click on this one and that takes me to
+the VM instance pricing what is the
+bilding module what is the instance up
+time what is the resource based pricing
+and then you can also look at different
+kind of discounts such as sustained use
+discounts committed use discounts
+discounts for preemptable FM instances
+and so on and this is how you can be
+looking at pricing for all different
+resources and you can choose the
+resource which you are interested in and
+then look for the pricing benchmarks
+reservations if you would want to use
+and you would want to benefit if you
+would want to look at what are the
+quotas and limits and so on so please
+explore this link and you can find lot
+of information when it comes to
+technical options looking at different
+different Google Cloud products which we
+briefly discussed when it comes to
+domains and what each product can be
+used for you can always come back to the
+main page where I was showing you
+different Services we went into pricing
+straight away right now you can always
+come back to this page on your
+cloud.google.com and then you have your
+Solutions which talks about different
+products right and you can click on
+these or you can look into technical
+documentation so this talks about your
+different featured Solutions
+infrastructure Solutions you have data
+center migration related and so on so I
+could be talking more and more about
+Google Cloud platform it's a ocean it's
+a huge chunk of different services for
+different organizational requirements so
+look into this link and also what you
+can do is create a account on Gmail I
+mean you could create a free account or
+you could go to cloud.google.com
+and then you could create a free account
+like I have created here and I can just
+click on Console now that's my GUI or
+Google Cloud console which basically
+allows me to work with Google Cloud now
+there are a lot of options here by
+default when you create an account now
+in my case on the top it says it's a
+free trial account I have $300 credit
+and out of that $251 is left and 237
+days out of a year are left for my
+account now here I can basically see the
+project right and by default we can
+create an project or by default there is
+a project existing for any user so when
+you login it creates a particular
+project and you could create a new
+project and project would be to dedicate
+your different services or different
+resources per different project so this
+is your dashboard which basically shows
+your project which shows you a project
+number and a project ID which is always
+unique now you can click on this and
+this if you would want you can hide this
+information you can also look into the
+documentation part of it then it shows
+you the different services or a
+graphical information of services which
+you might have used in past so you have
+compute engine which shows you how much
+percentage of CPU was used you can
+always go to compute engine as a service
+you can look at your Google Cloud plat
+form status and look at the Google Cloud
+status now this is billing now since
+this shows me the billing period for
+April month and I can always look at
+detail charges I can look at reporting I
+can look at different apis which Google
+offers and for your different kind of
+work you can always go to the API
+overview or the API link and enable or
+disable any API now once you enable or
+disable any API then you can use that so
+you have news section you have
+documentation and you have getting
+started guides which tells you how to
+work or enable different apis if you
+would want to deploy a pre-build
+solution at Dynamic logging monitoring
+errors deploying a Hello World app and
+so on now this is your dashboard I can
+click on activity and that would show me
+what kind of activity I would have done
+in my cloud platform I can always choose
+the kind of activities by saying
+activity type I can choose the resources
+now it shows me that I created some VM
+instances I deleted them I updated some
+metadata I basically worked on instances
+I changed some firewall rules here I
+have then also worked on some other
+services or apis so I created some
+buckets which is for object storage and
+again I have been working with some
+instances and creating some firewall
+rules here I have granted some
+permissions I am setting up a policy
+right so this activity gives me a
+history of what things I have done over
+the past couple of months while working
+on Google Cloud platform now on the top
+left corner you have the hamburger menu
+which you can click on this so that's
+your navigation menu and when you click
+on this this shows you home it takes
+takes you to the marketplace it
+specifically takes you to billing you
+can always look at apis and services so
+here in API Services I can pretty much
+go to a dashboard and I can see a report
+on the traffic or errors or latency and
+the kind of apis which are available so
+you have compute engine API you have big
+query API big query data transfer API
+big query storage cloud data proc so
+these are some of the apis or Services
+I've used in p
+might be I was evaluating a product
+might be I was using a particular
+product so you have whenever you would
+want to use a particular service from
+Google Cloud platform you would be
+enabling these apis so here we see some
+apis for data proc you have logging
+monitoring you have resource manager API
+you have cloudsql which allows you to
+directly use MySQL or postgress you have
+cloud storage right and so many apis so
+if I would want to enable a particular
+API which is not right now required but
+then it's good to know you can always
+click on this one you can search for an
+API so for example if I would say data
+proc right and that shows me the cloud
+data proc API which manages Hadoop based
+clusters and jobs on Google Cloud
+platform so I can spin up a Hadoop
+cluster and I can start running some
+jobs on a Hadoop cluster on demand and
+as I'm done with it I can just get rid
+of of it so this is an API which I would
+have to enable and then for every
+particular service you also have an
+admin API which you would enable now
+going back so coming out from this API
+Library I got into API and services now
+there is you can look into the library
+you can look at credentials and you can
+also look at different time intervals
+for which you can see the usage of your
+different apis now going back to the
+menu you have support wherein you can
+always reach out to the Google support
+team if you are using a paid version
+even with free trial you can try to
+reach out and you will find someone to
+help but it is always good when you have
+a billing cycle reaching out the
+customer care you have identity access
+management in admin and this is required
+when you're working with different apis
+or Services when you would want to have
+relevant access you have getting started
+you have security related options you
+have anthos which is mainly for
+migration now here you can look at your
+different domains such as which we
+discussed so you have compute and in
+compute you have different services so
+you have app engine you have compute
+engine kubernetes you have Cloud
+functions and Cloud run you can look
+into the storage aspect which shows you
+big table which is usually and mainly
+for your unstructured data big table
+which is something which gave rise to
+popular nosql databases like hbas and
+cassendra you have data store which can
+be used you have fire store file store
+storage which can be used to put in data
+of any kinds you have SQL for structured
+data you have spanner as a service you
+have memory store and you have data
+transfer now when it comes to the
+networking domain you have all these
+services such as VPC virtual private
+network network related services for
+your load balancing for using a
+cloud-based DNS or Cloud defined Network
+you have hybrid connectivity network
+service tis security and intelligence
+then you have other options for your
+operations which can be used and here
+you have different other tools which can
+be used such as Cloud build you have
+Cloud tasks container registry
+deployment manager and many more big
+data specific you have the services here
+so you have data proc which can be used
+to spin up your clusters you have
+published subscribe messaging system
+such as now Kafka which you might have
+heard of originates its idea from here
+so Pub sub you have data flow you have
+iot core big query which is a data
+warehouse package or data warehousing
+solution from Google Cloud now then you
+have your artificial intelligence
+related services and other Google
+Solutions so you can always find a huge
+list of services or you can say at high
+level Solutions offered by Google cloud
+and we can use these to basically test
+some of the solutions use them and work
+on them so I'll give you a quick demo on
+different Services which can be used
+here from your Google Cloud platform now
+this is your Google Cloud platform and
+this is your console now this also gives
+you a cloud shell which can be activated
+so that you can work from command line
+and you can always find lot of
+documentation on that so you can also
+set up your Cloud shell that is SDK on
+your Windows machine and if you have set
+it up then basically you could be doing
+something like gcloud right if the cloud
+has been set up so in my case I had set
+up the cloud SDK and basically I can get
+into that by looking at what path I have
+set up so Cloud SDK and then I can be
+using using it from my Windows machine
+as per my comfort I can also activate
+the cloud shell here which will
+basically open up a terminal and at any
+point of time you can open up this one
+Cloud shell in a different window it is
+preparing the cloud shell where it will
+by default set up your project it will
+set up the metadata and now I am logged
+into my Google Cloud account from
+command line and here I can basically
+use gcloud right and that basically
+shows you the different options which
+are available which you can be using so
+if you would want to use a particular
+service you can also try giving a help
+and that shows you how do you manage
+your Google Cloud platform right so you
+have different options for billing to
+work with your different services and
+basically you could be working on Google
+Cloud using this Cloud shell from your
+command line usually for people who are
+learning Google cloud in the beginning
+it is always is good to go for console
+and use your different services from
+here in an easier way but as I said you
+can always use the command line for
+example if I would just go ahead and
+type
+gcloud create
+instances and that will directly take me
+to the cloud console documentation which
+shows you different options which you
+can use to work with instances so I
+could do a g-cloud compute instances
+create and then I can give my instance
+name and so on and I'll show you some
+examples on that so you can be using
+your Cloud console right that is your
+Cloud shell and you can straight away
+start working from command line however
+I would suggest using console in the
+beginning and when you are well
+experienced then you can start using
+Cloud shell to do things from command
+line and when you are fully experienced
+you can always switch and certain things
+are usually useful or easier when done
+from command line and some are are
+easier when you do it from the console
+and you can use any one of these options
+now we can go to Google Cloud console
+now as of now I can close this one I
+still have my cloud shell open if I
+would want to look into it I can click
+on this one and I can straight away go
+to compute engine where I would want to
+work on creating some instances on
+Google Cloud platform using the compute
+engine service and then basically
+connecting to those instances and and
+basically trying out some basic things
+so you can click on VM instances and
+then once this comes up I can always
+create some instances now if you see
+here I have some instances already
+created right and I can continue working
+on those I can create new instances I
+can use different options while creating
+instances and I'll show you that in a
+demo in quick seconds so let's have a
+quick demo on setting up gcp instances
+now before that let's have a quick recap
+so when you talk about instance or a
+virtual machine it is hosted on Google
+infrastructure right and you can create
+your Google Cloud instance using this
+Google Cloud console that is by clicking
+on this and then going to compute engine
+and clicking on VM instances now you can
+also do that from Google Cloud command
+line tool that is cloud shell and you
+can be doing that using compute engine
+API so compute engine instances can run
+the public images for Linux or Windows
+servers that Google provides you also
+have option of creating or using custom
+images that you can create an import
+from your existing systems you can
+deploy Docker containers which are
+automatically launched on instance
+running containers optimized OS now when
+you talk about instances and projects
+always remember that in each instance
+belongs to a Google Cloud console
+project and a project can have one or
+more
+instances when you talk about instances
+and storage options each instance has a
+small boot persistent disk which I will
+show you in further screens that
+contains the OS you can add more storage
+space if needed and when you talk about
+instances and network a project can have
+up to five VP C networks so VPC network
+is virtual private networks wherein you
+can virtual private Cloud networks where
+you can have your resources within your
+own subnet and each instance belongs to
+one VPC Network now instances in same
+network can communicate with each other
+through local area network protocol an
+instance uses internet to communicate
+within any machine so that could be
+virtual physical or outside its own
+network when you talk about instances
+and containers you should remember that
+compute engine instances support a
+declarative method for launching your
+application using containers now you can
+create a VM instance or a VM instance
+template you can provide a Docker image
+and launch the configuration so there
+are different ways in which you can
+create these instances and once you
+create these instances you can say for
+example you're creating a Linux instance
+you can associate SSH keys with your
+Google account or your G Suite account
+and then manage your admin non-admin
+access to the instance using IM roles if
+you connect to your instance using
+gcloud or SSH from console which we will
+see later compute engine can generate
+SSH keys for you and apply that to your
+Google cloud or G Suite account now what
+we can do is we can see how we can
+create your Google Cloud instances from
+your console or from the command line
+let's have a look in creating instances
+using GCB console now that we have
+learned on some basics of Google Cloud
+platform what are the different Services
+what are different domains basically
+looking at your Google Cloud console or
+even Cloud Shell let's go ahead and
+create some VM instances now that's from
+your compute engine service and let's
+try connecting to these instances and
+see how this works let's also see what
+are the different options which are
+available when you would want to create
+the virtual machine instances here so
+when you click on your drop down from
+the top left and choose compute engine
+so it brings you to this page so I can
+show that again so you can click on
+compute engine click on VM instances and
+that basically brings you to this page
+now here it tells you compute engine
+lets you use Virtual machines that run
+on Google's infrastructure so we can
+create microv VMS or large instances
+running different distributions of Linux
+or Windows using standard images that is
+public images and you can also have your
+own image so let's create a VM instance
+by clicking on create now that's
+basically helping me to create an
+instance here so it shows me the
+instance name I can give it some things
+so let me say C1 now I can add labels so
+what is label it basically allows you to
+organize your project add arbitrary
+labels as key value pairs to your
+resources this so this is basically
+categorizing your labels in projectss if
+you have multiple projects now remember
+if you have your Cloud console and if
+you have created your free trial account
+it will allow you to do these things if
+not you may have to go back to the
+billing section and see if the bill is
+enabled which also means that when you
+are creating your Google Cloud account
+it will ask you to ke your credit card
+details but they do not charge anything
+or they might charge might be $1 or one
+rupee depending on your location and
+that's also refunded but that's just to
+verify your card now once I've given the
+name I can choose a region so I would
+basically choose Europe since I'm in
+Europe I would be clicking on Europe
+West 3 and here I can choose an
+availability Zone availability zone is
+basically to make your services or
+instances or any other resources highly
+available so you can choose one of the
+availability zones now I would choose
+savs 3 now this one we can scroll down
+and here it says machine configurations
+you have general purpose machines you
+have memory optimized machines which is
+M1 series and you can always go back to
+the Google Cloud page and see what a
+particular kind of machines specializes
+in so I would click on General's purpose
+and in general purpose you have
+different categories so you have N1
+which is powered by Intel Skylake CPU
+platform or you have E2 which is CPU
+platform selected selection based on
+availability so let's have N1 selected
+now this one shows me the machine type
+and if you are using your free tier
+account then you can start with
+correcting a micro machine which is one
+virtual CPU core you can you can go for
+a G1 small which is one virtual CPU code
+and 1.7 GB Ram you can even go up to a
+high-end machine and then you can
+basically see if you're using a free
+account how many of these machines you
+can use if I would be selecting eight
+virtual CPU CES and 32 gab of memory
+then it would allow me to create at
+least two instances by this
+configuration we will use N1 standard
+which is one virtual CPU core 3.75 GB
+memory now then we can also deploy a
+container image to this VM instance if
+you would be interested in deploying a
+container image let's not get into that
+right now here it shows you the boot dis
+and it shows you dbn gnu 9 Linux 9 what
+I would do is I can go for this
+distribution or I can choose a Linux
+distribution of my choice so here you
+have public images you have custom
+images you also have snapshots if you
+have created backup of your previous
+images here I can choose for example
+ubben 2 and then I can choose a
+particular version so let's go for to
+18.04 you can go for the latest one also
+18.04 would be good enough and here it
+tells me what is a boot dis so you have
+ssds or you have standard persistent
+discs now ssds are little expensive in
+comparison to your standard persistent
+discs or your sdds but then ssds are FAS
+so as of now we can choose standard
+persistent disk as it is and we can let
+the gigabyte be 10 now depending on your
+requirement you can increase this you
+can even add diss later that's not a
+problem click on select now here I have
+access Scopes so here I will say allow
+default access you can also set access
+for each API or you can give full access
+to all Cloud API so that BAS Bas on your
+requirement you can anytime change later
+also we will also say allow sttp traffic
+and we can also choose allow https
+traffic that basically allows me to
+access this machine or Services which
+are HTTP based accessible from this
+machine now I can just click on create
+however it would be good to basically
+enable connectivity to this machine now
+we can do that in different ways one is
+when you bring up your machine it will
+have an SSH access ACC which you can log
+in from the cloud platform here itself
+or what you can do is you can create a
+private and a public key using some
+softwares like puty or puty gen so for
+example if you do not have that on your
+machine you can download you can just
+type in download puty that takes you to
+the putty. org page and here you can
+click on download puty and scroll down
+which shows you for your 64-bit machine
+which I have in my case you can download
+putty.exe which is basically your SSH
+andet client to connect to your machines
+you can also use puty gen which will be
+allowing you to create a private and a
+public key which I have done in my case
+let me show you how so what you can do
+is you can go to puty gen to begin with
+and here you can click on generate now
+then to have this key generated just
+move your cursor on the top here in the
+empty space and that creates your key
+you can give it a name so for example
+let's give a username I would give hdu
+now I can give a password for this one
+so let me give a simple
+password and what I can also do is I can
+copy this public key from here and for
+my later usage I can just keep it in my
+notepad file which I can use later and
+I'll show you when so now we can save
+this private key and this will basically
+allow me to save my private key I can
+choose desktop and I can give it a name
+so let's say new key new key and that
+will be getting saved in a PPK file so
+let's save it and that's done so we also
+have our public key and we have saved
+our private key now we know that when
+you would want to connect using SSH you
+need your private keys to the client and
+public key also has to be existing so
+let's take this public key so so let's
+do a contr a I'm going to copy this and
+I'm going to come back to my Google
+Cloud console and here you can click on
+security so you can click on the
+security tab here scroll down and just
+give your public key once you give that
+it resolves and shows you the name and
+this is good enough so that I can use my
+SSH client to connect to this machine I
+can click on Create and this will
+basically create my VM instance it will
+take some time and then your instance
+will have an internal IP which will show
+up here external IP and it will also
+show you options to connect to these
+machines so this is my internal IP this
+is my external IP which I can use to
+connect from a client I can easily
+connect from the option here which says
+SSH and I can say open in a browser
+window I can even open this in a custom
+Port I can look at the g-cloud command
+which you can give from cloud shell or
+you can use another SSH so let's first
+do a open in browser window and let's
+see if this connects so we can easily
+connect to our instance the UB 28
+instance which I just set up here easily
+in couple of seconds now this is trying
+to establish a connection using your SSH
+keys and when you do that it also
+basically brings up this web browser so
+I'm already connected it shows my
+username which is my cloud account
+account username and I have been
+connected to this machine here using SSH
+it did not ask me for any password and
+basically now I can just check what do I
+have in my Linux file system right and I
+can anytime log in as rout by doing a
+pseudo Su for example let's try
+installing a package and I can say app
+get install whm or AP get install WG get
+or app get install open SS edch and all
+these packages are already existing so
+not an issue now I can start using this
+instance I can just look at the disk
+what is available okay now we gave
+around 10 GB out of which we see 8.3 GB
+here for the dev SDA 1 and then 1.8 GB
+available and you can continue using
+this machine this was the easiest way of
+connecting to a VM instance using
+SSH now what we can also do is I can
+just leave this and I will now try to
+connect using an external SSH client
+right and here you can copy the public
+IP so when you want to connect to an
+instance you will have to get the public
+IP also remember that if you select and
+stop this machine which will stop your
+billing counter and if you start it
+again the internal IP will remain same
+but the external IP is the one which
+will change I can obviously select this
+machine anytime and I can do a cleanup
+and I can delete it I can do a start of
+the machine if it is stopped and I can
+even import the virtual machine to be
+used later so there are different
+options which you can always use so this
+is my instance and if you would want to
+look at the details click on this one C1
+and that should basically allow you to
+look at the details so it shows you what
+is the instance ID what is the machine
+type is it reservation specific what is
+the CPU platform what's the zone and all
+the other details at any point of time
+if you would want to edit you can always
+click on edit and you can change the
+details as you need now you can also
+look at the equivalent rest command to
+basically use the rest API to connect to
+this instance for now I have copied the
+public IP and I would want to connect it
+using puty so let's go in here and let's
+give it the host name so I can give ubu
+I can give my IP address so that's in my
+session now I will click on SSH I would
+go into authentication I'll click on
+browse and this is where I need to
+choose the PPK file so this is the one
+which we created new key let's select
+this and then I can come back to session
+I can even save this and I can call it
+as my instance one let's save it and you
+can create any number of instances so
+you see I have created different
+instances here for my Google cloud or
+Amazon related instances and I can click
+on open it says the service host key is
+not cast in the registry that's fine
+just click on yes and basically it says
+no authentication method supported now
+this could be because we have not
+enabled your SSH access so let's look at
+that so now let's see if we were trying
+to connect using puty what was the issue
+here so if I go back to my puty select
+my instance load it it says Port 22 I'm
+giving the user name which is window or
+sorry that's the wrong username we gave
+and that might be the reason we had set
+up the user as sdu so let's save this
+again and now let's try connecting to
+this one and it asks for my password and
+you are able to connect this right now
+if there was any other issue related to
+network connectivity then we could look
+at the rules the inbound and outbound
+rules which allow us to look into the
+machine now we are connected to our
+machine here using hdu user I can log in
+as root and I can continue working so
+not only from the SSH within the cloud
+console but you can use an external SSH
+client and connect to your machine so
+this is your wi to machine and we can
+basically look at the space and that
+basically confirms we are connecting to
+the same machine machine which shows 8.3
+GB here and 1.8 GB here which we were
+seeing from the ssh in the browser now
+let's close this and let's go back to
+our instance page now here you can
+always look at the network details and
+this will show you your different kind
+of rules that is ingress or egress rules
+which basically allows to connect to
+this machine from an external network or
+for this machine to connect to an
+external network so here we have
+different firewall rules which shows
+default allow HTTP that's your Ingress
+Rule and it tells you apply to all it
+shows me what are the IP ranges where I
+can specifically give the IP of my
+machine it shows the protocols it shows
+what are the different ports which you
+have used for these services for example
+RDP or SSH which shows 22 you have icmp
+HTTP and https now anytime if you would
+want to make a change to these rules
+that can be done by going into your
+network details and say for example you
+would want to work on firewall rules so
+we have these firewall rules here you
+can click on this one so right now we
+are looking into the network domain and
+we are looking into VPC Network right
+and this shows me what are the different
+rules we have now if I would want to
+create a different firewall rule for a
+different protocol I can always click on
+create firewall rule I can give it a
+name okay I can say what if you would
+want to turn all the firewall logs you
+can basically say what is the kind of
+traffic so Ingress applies to incoming
+traffic and egress applies to outgoing
+traffic and you can then basically
+choose what are the IP ranges from where
+you want that connection to be coming in
+or to going out you can choose a
+particular protocol you can give a
+protocol here with Comm ated values and
+you can create a firewall rule so this
+might be required depending on the
+services which you are running wherein
+you might want to enable your access to
+your machine from an external service or
+to an external service so you can always
+go to network details from here you can
+then go into firewall rules create a
+firewall rule apply that to your
+instance and restart your instance so as
+of now we don't need to create any
+network details here because my Ingress
+or egress rules are already available
+right now I can basically then have my
+instance stopped and removed so I can
+just do a stop or since this is running
+the ideal way would be to do a stop I
+could also do a reset now what does
+reset do reset does not basically delete
+the machine what it does is it does a
+cleanup of the machine and it brings it
+to the initial state so sometimes we
+might have installed certain things on
+our machine we would want to clean them
+up and at that time reset can be useful
+I can basically click on delete right
+and I can select this and I can do a
+cleanup and this is good always when
+you're are using a free trial account
+try to use different Services play
+around with them and then you can clean
+up so that you do not waste your free
+billing credit right and you can use it
+for Meaningful stuff now I have clicked
+on delete and within few seconds my
+instance which I had created will be
+deleted also to remember is if you are
+creating multiple instances then you can
+connect from one machine to other
+machine using SSH by using the private
+file so for that we can learn in detail
+later so this is just a simple example
+of using your compute engine creating
+your instances connecting to it from an
+internal SSH or from an external SSH
+client such as
+where you have already created your
+private and public Keys now I can click
+on the browser here and then I can
+basically come out and I can basically
+be looking into any particular service
+so we just looked into compute engine
+right you have different other options
+you have instance groups you have
+instance templates for example let's
+click on instance templates here and
+that basically shows you that you don't
+have any instance template and this
+basically facilitates say for example
+example you are working as a admin and
+you would want to create an instance
+template so that using that you can
+describe a VM instance and then you can
+basically use this template to create
+different instances you can go for soul
+tenant notes you can look for machine
+images you can also look at your discs
+you can create a snapshots and you can
+look at different options here now let's
+come back here and let's click on home
+and that should take you back to your
+homepage page which basically shows you
+if a particular API which you have used
+recently which shows me in the graph
+here so I can go to the api's overview
+right and that basically shows me if
+there were any errors if I was using the
+compute engine API to basically create a
+VM instance and that's why we were
+seeing some spike in the graph so this
+is a quick demo of using your compute
+engine service provided by Google Cloud
+wherein you can create create VM
+instances and use those VM instances for
+your application installation for any
+other purpose now that we have seen how
+you use your Cloud console to create an
+instance and also clean it up let's also
+understand how you can do using your
+command line options and let's see what
+it takes or what are the different
+commands which you can use to create
+your instances now you can always always
+when when you're creating an instance
+you can use compute engine which
+Provisions resources to start the
+instance so instance basically has
+different states which we can see when
+we are creating the instance so you
+basically start the instance instance
+moves into staging that is prepared for
+your first boot finally it boots up and
+then it moves into running so when you
+look at instance states which we will
+create instance and C it will basically
+have different states such as
+provisioning where resources are being
+allocated for instance but instance is
+not yet running then it goes into
+staging where resources have been
+acquired an instance is being prepared
+for your first boot then instance is
+booting up and running and if you are
+stopping an instance it goes into being
+stop status and it would be moved to the
+terminated option you can also do a
+repairing of instance and finally you
+can terminate your instance or clean it
+up by stopping and then deleting it now
+when you say stopping and resetting an
+instance you can stop the instance as I
+showed earlier if you no longer need it
+but if you need for future use you can
+just use the reset option which will
+basically wipe the contents of instance
+or any application State and then
+finally you can stop it and have it
+terminated now when you would want to do
+that using your Cloud console uh we have
+seen the options now let's also see from
+the command line tool how you can do it
+so here I have the cloud shell which I
+brought up from here and I basically
+opened it in a new window so command
+line tool enables you to easily manage
+your compute engine resources in a
+friendlier format than using your
+compute engine API now gcloud which is
+part of cloud SDK is the main command
+here and then you can always
+autocomplete the different options here
+so when you would want to create or work
+on gcloud you can just type in gcloud
+here and then for example I could just
+say help to see different options of
+g-cloud which will show me different
+options which you can use here now we
+would be interested in compute instances
+so I could also do a gcloud
+compute compute instances and then I can
+basically say create and then I can do a
+help now that should show me different
+options which work with gcloud compute
+instances create command which is
+expecting an instance name so your
+Google Cloud SDK which we can set up on
+our Windows machine or even on your
+Linux machine is set of tools that helps
+you to manage resources and applications
+hosted on your gcp that is your Google
+Cloud platform now here you have options
+such as gcloud which I'm showing you
+right now you have Gs util and then you
+have BQ so that also can be used so you
+can set up a Google Cloud compute if
+using g-cloud now what we can do is if
+we are setting up our SDK on our Windows
+machine then we would have to do a
+g-cloud in it
+which basically initializes your
+configurations for
+gcloud now here we are using a cloud
+shell which was started from the console
+and we don't have to basically give your
+gcloud init command because it's already
+initialized now you can always look at
+your default Zone you can look at your
+region what is being used all those
+things are coming from the metadata
+which is being used so for example I
+could be looking at the metadata for my
+particular project by just doing a
+gcloud and then I can say
+compute and I would be interested in
+Project info so I can just do a project
+minus info and then I can do a describe
+and then I need my project ID so I can
+say minus minus project and I can get my
+project ID ID from here so you can click
+on this one and that's my project ID so
+I can click on this one and here I can
+just do a right click and if it does not
+paste then you can do a control V and
+then I can try to look at my project
+info so this basically will give me the
+metadata which is by default set and we
+can always look at what are the regions
+or what is the Zone which has been set
+so if it has been set so I'm looking at
+my details it is showing me my SSH keys
+and then it can be using your default
+region and your default available zones
+it also shows my username and other
+details so this is basically to look at
+the metadata which is available now at
+any point of time I can basically say
+add metadata I can basically choose
+metadata option and I can say my default
+region should be Europe which I was
+choosing earlier so I can just bring up
+this command again and what I can do is
+I can say here where I have g-cloud
+compute project info where I did a
+describe earlier now what I can also do
+is I can just say add
+metadata and then I can specify what is
+the metadata I would be interested in
+adding I can then say Google
+compute
+default region
+and then I can basically give a region
+for example Europe and then I can say
+West
+3 and if you are not well experienced
+you can always do it from console or you
+can be doing it from here so I'm giving
+Google Cloud compute Google compute
+default region then I can also give a
+Google compute default
+Zone and then I can pass in a value for
+default zone so I can say Europe where
+three and then basically I can give an
+availability zone so if it is basically
+giving me some error where I'm trying to
+pass in these values so I can just give
+it this way and then it basically says
+that if you can look into particular
+help to see what is the command which
+you would have to do now I can basically
+do a
+gcloud in it here initial configuration
+and this basically says that it is
+initializing my default configuration it
+says reinitialize this configuration
+from cloud shell you want to create a
+new configuration so if I had updated my
+metadata then basically I could just do
+a cloud in it and I could be
+reinitializing my default configuration
+or properties which I have passed in so
+as of now I will not activate or change
+is the default region let's go for a
+simple way in which you can create your
+compute engine so for example I'll just
+say one and it is reinitializing it asks
+me what is the username and let's select
+that it says what is the project and
+let's select that and do you want to
+configure a default compute region and
+zone right and I will just say Yes And
+basically then it shows me different
+options which we have here so there are
+too many options here and then here we
+were interested in Europe West 3 so
+let's choose 21 right and then that
+basically allows me to choose my region
+and my zone so it also gives you some
+specifications so it says your project
+default compute Zone has been set to
+Europe West 3A you can change it by
+running g-cloud config set and you can
+give a compute zone right so I can
+always give these commands I can get
+help information here so I can just say
+gcloud config set and I can be
+specifying the compute zone so I can say
+compute SL Zone and I can give a Zone I
+can say compute SL region and I can give
+a region name if I would want to do it
+or the easier way is like what I did
+right now so you can basically do a
+command gcloud in it and then basically
+it allows you to change your
+configuration or set default things here
+you can all the times you can say gcloud
+config unset to basically remove a
+compute zone or a compute region now
+there are different ways so if you were
+working on a Linux machine you could
+always use an export command something
+like this so you could do export compute
+sorry Cloud
+SDK and then you you can say compute
+uncore Zone and then give your Zone name
+or compute uncore region and give your
+region or you could add it in your bash
+RC file right now that is when you have
+your Cloud SDK set up on your Linux
+machine or on Windows machine and you
+would want to specifically set a Zone
+and a region for all your computer
+related resources so we don't need to do
+that the default settings are already
+given here right and and what we can do
+is we can start by quickly looking into
+g-cloud compute instances options so I
+can say g-cloud compute
+instances and then I can just do a list
+at any point of time if you would need
+help you can just do a g-cloud compute
+and then say minus minus help or I could
+just do a g-cloud compute and that shows
+me different options which I have here
+from which I use instances I can always
+type instances and again hit enter and
+it shows me different options what you
+would want to do so I can initially just
+type list which should show me what are
+the list or what are the instances
+available and as of now we don't have
+any instances I can always do a list and
+then I can specify minus minus format
+and then try to get the information in a
+Json format or EML or minus minus format
+text
+so you can always do a list you can do a
+filter so there are different options
+with your list and you can you can try
+doing a help here and that basically
+shows you what are the options so for
+example if I do a help and it shows me
+with list what are the things you can do
+so you can give a name you can give a
+regular expression you can say in
+particular Zone you can use a minus
+filter so there are different commands
+which are available and you can always
+find all those options here as I showed
+you earlier so now what we would be
+interested in is basically going for
+your compute instances I can always do a
+SSH and I can create an instance I can
+add and remove metadata right for my
+instances by giving a particular Zone by
+giving a particular region and if you
+would want to do that now here what we
+can do is is we can basically create an
+instance by just giving a name to that
+particular instance and we can then go
+back to our console and see what has it
+done so I can say here create so that's
+an option let's see what does the create
+do so it says okay you are giving a
+create option but you would have to give
+a name so let's say let's call it E1 and
+that will be the name of my instance and
+this one is an easy command from your
+Cloud shell which basically creates an
+instance you see the Zone which has been
+set it is the standard machine type it
+is not preemptable it has an internal IP
+and it has an external IP now I have
+created an instance and here I can just
+go back and then I can just do a Refresh
+on this page and that already shows me
+the instance which I have created and
+then you can use the same method to
+connect to it using an SSH so I have an
+instance created from my cloud shell and
+what I can do is I can basically look
+into instances and see what are the
+different options with instance so if we
+did a create right you have an option
+delete we did a create you have an
+option delete you can be then deleting
+the instance from the command line or
+you can use other options so you can do
+a list you can do a stop you can start
+so I can basically do a stop and let's
+say even let's go ahead and do a stop
+commands are pretty easy here to
+remember or you can always use the help
+option and now I'm trying to stop the
+instance and then basically I can go
+ahead and delete it so this is a simple
+way where I created a instance from the
+command line or from the console which I
+showed earlier and similarly you can be
+working with other options so now I've
+created stop the instance let's do a
+listing to see if my instance shows up
+it shows up right and it says the status
+is terminated so you have stopped it
+it's in the terminated status and now
+what I can do is I can go ahead and
+delete
+it so it says this will be lost are you
+sure you would want to continue just say
+yes and that should take care of
+deleting your instance so this is a
+quick demo on creating your instance we
+have already seen how you can connect to
+these instances using SSH now that we
+have created instances let's also see
+how to use Google Cloud's storage
+service which can be used to load data
+or upload data so for this we will have
+to look into your Google cloud storage
+options and here you can look in cloud
+storage so let's go back here on the top
+which shows me different Services which
+we have here and let's look into storage
+so this one shows me your storage option
+now you can click on browser and that
+basically shows me your storage browser
+which shows me on the top you have
+options for creating a bucket now Google
+Cloud Storage allows you to store any
+kind of data here the easiest and the
+simplest way would be by using Cloud
+console although you can again use cloud
+shell and in that you can use your GS
+util command and GS util basically has
+different options where you can be using
+say for example I would want to work on
+buckets so I can be using MB and then I
+can use my command line option to create
+buckets I can put in data there I can
+browse it and I can access the data from
+command line so let's create create a
+bucket here let's click on this let's
+give it a name so let's say my data
+important that's the name now I can
+click on continue straight away I can
+look into all of these options if I'm
+interested in so you can basically be
+looking at your monthly cost estimate in
+the beginning now I can click on
+continue or you can say choose where to
+store your data and this one shows you
+different options so you have region
+specific
+so let's also give the bucket name with
+all lowercase that's what is required
+yeah so coming back to the location type
+you can choose multi- region which
+basically allows High availability so
+your bucket or your storage option will
+be accessible across regions you can
+also give dual region and high
+availability and low latency across two
+regions I can also say region specific
+so for our use case we can just give
+region specific which can keep our cost
+low but in business use cases you would
+be going for multi- region now here you
+have location and I would again go for
+say Europe and let's choose Europe west3
+Frankfurt it is always a good practice
+that when you create your instances when
+you create your storage or you use
+different Services try to have a
+geographical region Chosen and then you
+would try to put things or your services
+within the particular region within a
+particular Zone unless you would want to
+make it accessible and available across
+regions now I can then choose a default
+storage class so when you say default
+storage class there are different
+storage class and each one is for a
+different use case so you have standard
+which is best for short-term storage and
+frequently accessed data you have
+nearline so this is basically best for
+backups and data access less than once a
+month you can also have cold line l so
+these are basically like your cold
+storage or freezing storage which you
+might have heard generically as terms so
+you can choose one of these storage
+classes depending on what will be the
+use case for this particular storage
+bucket so let it be standard now how to
+control access to objects so you can
+basically say specify access to
+individual objects by using object level
+permissions now you can give permissions
+to the bucket you can just say uniform
+access to all objects in the bucket by
+using only Bucket Level permissions so
+you can choose that you can also go into
+Advan settings and here you can see
+different ways in which you can have
+configuration set up now you can also
+have a retention policy to specify the
+minimum duration where that this buckets
+object must be protected from deletion
+and you can set a retention policy we
+will not get into all that we will just
+first try creating a bucket so just
+click on Create and that should create
+your bucket wherein I have my bucket now
+I can click on overview to see the
+details what is the region which region
+it belongs what is the storage class
+anytime you can always click on edit
+bucket and make some changes here you
+can look at the permissions so bucket
+uses F Grand access allowing you to
+specify access to individual objects and
+then you can basically look at who has
+access to this so in my case editors of
+the project they basically are the
+bucket owners owners of project viewers
+of the project right and you can
+basically choose what kind of access you
+need so for this you can always go into
+cloud storage and then you can decide
+what kind of access you would want to
+give whether that's a storage admin it's
+an object admin object Creator object
+viewer and so on you can always look at
+storage Legacy
+and for any other services depending on
+what apis you have enabled right you can
+always control your permissions so right
+now it is storage Legacy bucket reader
+and that's fine and this one is bucket
+owner and then might be I was using some
+other services like data proc which uses
+cloud storage and that's why I've given
+data proc service agent also so these
+are some of the members you can remove
+you can view by specific members you can
+view by roles so what are the different
+roles which have access to this so it
+says storage Legacy bucket owner there
+are two owners based on this particular
+project so these are autocont controlled
+but then you can add or remove machines
+you can save storage cost by adding a
+life cycle rule to delete objects after
+the duration of current retention policy
+so you can add different policies and
+you can basically control your bucket
+now my bucket is already created
+right so I can go back and then I see my
+bucket is already here I can click on
+this option and you can anytime edit the
+bucket permissions you can edit the
+labels the default storage class you can
+just go ahead and delete the bucket you
+can export it to Cloud pup sub so
+basically if you would want to have the
+content from this bucket being
+accessible in a message queuing system
+you can go for Pub sub you can process
+with Cloud functions and you can scan
+with cloud data loss prevention so there
+are different options which are
+available we can always select this
+bucket and delete it now I can click on
+the bucket and that basically shows me
+different ways in which I can upload
+some data here so I can just click on
+upload files and here then I can choose
+some files so for example I'll go in
+here I'll go into data sets and I have
+different data sets so for example let's
+choose this one which is a CSV file and
+then I'm just uploading this to my cloud
+storage right it's as simple as this so
+you can drag and drop your files or you
+can just upload your files and my file
+is uploaded here now I can basically
+edit permissions for this one right so
+this is in the bucket so anyone who has
+access to this bucket can basically
+download this file it can they can copy
+move or rename this you can export it
+and you can look at the permissions of
+this file so let's look at edit
+permissions and it says
+for this project whoever is the owner it
+has access I've also given a specific
+user my Gmail ID and I've given access
+so at any point of time you can just say
+add item and then you can start giving
+different kind of accesses so let's
+click on cancel here now my data is
+already uploaded into this particular
+bucket and that's a simple usage of your
+cloud storage now what we can also do is
+I can basically select this and I can
+delete it I can also create specific
+folders and then basically uh load data
+into it I can click on this one I can
+just do a download and then I can
+download it anywhere on my machine so
+let's go to desktop and let's download
+this file so we not only uploaded some
+content in the bucket but we also
+downloaded that in a different location
+which will be accessible now what I
+could have also done is I could have
+created a folder here and I could have
+specified say for example immediate
+immediate
+data okay and I'm clicking on this one
+so that's my immediate data I can click
+on this one and now I can upload my data
+specifically to this particular folder
+by using the same mechanism you can just
+do upload file let's choose air
+passengers let's do a open and and my
+file will be
+uploaded so you can always choose what
+is the retention expiry date for this
+one so as of now there is nothing right
+but you can be deleted objects can be
+deleted or modified until they reach
+their minimum duration you can control
+all of that you can basically download
+it right you can copy it and you can
+move it and rename it so this is a
+simple example where I created a
+particular bucket right now if for
+example you click on this transfer so it
+says cloud storage data transfer
+products have moved you can now find
+storage transfer service on premise data
+and transfer Appliance in new data
+transfer section right so you can always
+go back to cloud storage you can also
+look at transfer options which are
+mainly when you are using a on premise
+service and you would want to upload
+data in a Google Cloud right so this is
+my bucket here now I can go to Cloud
+console
+and here what I can do is if I would be
+interested in working so I can just say
+GS util right and then we have uh for
+example let's try a help okay and that
+basically shows me my gsutil now you can
+always go to Quick Start GS util tool
+and this is one more way wherein
+basically you can do it from the command
+line so working with buckets so you can
+do a GS util MB minus B and then then on
+a particular Zone if you would be
+interested in and then you can say GS
+colon and give a name so my awesome
+bucket this is how you will create a
+bucket which will show you it is
+creating a bucket and then basically you
+can upload an image or some data from
+internet you can just do a wget download
+the file and then you can just do a GS
+util copy command and that basically
+will pick up the file from your Cloud
+shell location put it in your bucket
+once you have done that you can always
+do a copy right so here you're doing a
+copy from your local machine that is
+your Cloud shell machine to your bucket
+and you can do the reverse of that that
+is you can do a copy and you can point
+your bucket and the file and download it
+to your desktops so you can just
+download that using the command line and
+you can copy the object to a folder in
+the bucket so that is by creating a
+particular folder and you're pushing the
+file into a particular bucket you can
+list the contents of a bucket using LS
+and then give your bucket name so GS
+colon so we can just try this one to be
+simple and rest you guys can try so here
+you can just do a GS util you can do a
+LS GS colon SL slash and then I need to
+give my bucket name so in my case the
+bucket name was my data important so
+let's try that so let's say my data
+important and I'm trying to list the
+bucket and the content it has right and
+then you have a folder and then you can
+look into the folder and look into the
+files so this is a simple quick option
+wherein you can use your Cloud shell you
+could be using your Google Cloud SDK
+from your local machine or you can be
+using Cloud console to create a bucket
+upload some data on it download the data
+see if the data is accessible and that
+basically shows you the power of cloud
+storage where you can easily upload any
+kind of data now what we can also do is
+as you're using a free account or even a
+paid account unless and until you would
+want to keep the bucket you can select
+it and you can just go ahead and delete
+it so this will basically ask you to ke
+the bucket name and let's say my data
+important you need to confirm your
+bucket name click on confirm and you
+could have done that using gsutil and a
+delete command from the command line
+that is from cloud shell so we have now
+created a bucket we have uploaded some
+data into it we saw how you can download
+it or create a folder and upload some
+specific data into it and also you can
+do the same thing using GS util tools
+wherein you can list your bucket create
+your buckets delete it create some
+folders into it and do everything from
+the command online so this is in simple
+way you can use your gcp where either
+you can spin up your machines or you can
+use cloud storage to basically use a
+storage or a easy to use instance on
+Google Cloud platform welcome to this
+tutorial about Google Cloud platform and
+here we will learn about cloud computing
+what is cloud computing what is
+gcp that is your Google Cloud platform
+what are the benefits of Google Cloud
+platform and what are its different
+Services a little bit about Google's
+infrastructure a comparison of different
+Cloud providers such as Google offering
+gcp that is Google's Cloud platform
+Amazon offering Amazon web services and
+Microsoft which offers Azure we will
+also learn about Domino's Piza use case
+and then have a quick demo on using some
+of the services on
+gcp before we begin let's understand why
+cloud computing and it would be always
+good to learn about cloud computing
+based on a use case there are varied use
+cases where organizations are adopting
+or moving their Solutions or their
+infrastructure into cloud or I can
+simply say integrating with Cloud now
+here is one use case Nina started a
+company that relates to website
+development the challenges which Nina
+was facing were low memory space
+whenever required for processing or for
+any other kind of application related
+work high traffic to website that
+crashed it and also less number of
+servers now with these challenges she
+was then referred to concept of cloud
+computing
+and how that could benefit and help her
+in solving her issues most of her issues
+were solved when she started using cloud
+computing and with cloud computing she
+could increase her memory space as
+required that is on demand control the
+load to the website that is basically
+load balancing and handling more
+requests on the website or request per
+minute buying servers at a lower price
+that is is scaling up or down based on
+the
+requirement when we talk about cloud
+computing cloud computing is use of
+hardware and software components which a
+cloud provider offers as a service which
+can be accessed over Network cloud
+computing is use of these resources
+which could be either dedicated
+resources or coming from a pool of
+resources which cloud provider offers to
+deliver a service to clients users can
+access these different Services
+applications files from any device which
+can basically access
+Internet cloud computing allows
+automatic software
+integration it allows backing up and
+restoring of
+data it basically offers unlimited
+storage memory or computation
+capacity it gives access to reliable
+sources which usually the cloud provider
+themselves are using for their use case
+and it is a cost efficient model which
+helps organizations to quickly integrate
+or basically modernize their
+infrastructure cloud computing is
+usually used with it or within it space
+wherein there are five traits if there
+is a requirement of
+resources as the business dynamically
+changes or grows so for this cloud
+computing offers on demand
+self-service so users could be using on
+demand Computing
+resources or memory resources storage
+Network and so on provided by cloud
+provider and also do a self-service
+all this is possible using a simple
+interface and users can be using
+processing power storage Network as they
+need and pay as they go so there is
+least or no human intervention required
+when it comes to projects which might
+need scalable network access cloud
+computing offers broad network access
+that is accessing resources over Network
+across geographical regions or what we
+call as availability zones which might
+be multiple sites within a particular
+geographical region Cloud providers also
+have what we call as resource pooling so
+this basically provides a huge pool of
+resources which are shared and can be
+accessed by customers at a lower cost
+now there might be customers which are
+interested in not sharing the resources
+and would be interested in dedicated
+resources and in this case cloud
+provider also have so tenant offerings
+which help such customers if an IT
+business or any other business needs
+rapid
+elasticity then Cloud providers also
+have resources which are offered which
+are elastic you can get more resources
+rapidly as needed and thus you can scale
+up and down think of a gaming company
+which would be interested in launching a
+new game and they would have predicted a
+certain number of users which would get
+onto the portal playing the game and
+what happens if the request per minute
+or if the number of users who are
+joining in might increase now in this
+case organization would want an
+underlying solution which handles this
+dynamism scales as needed on demand and
+once the demand is done scales down this
+is possible using a cloud computing
+solution cloud Computing Solutions also
+include measured services that is pay as
+you go model for the usage or for the
+reservations which a user or
+organization would have made for
+resources offered by cloud computing so
+when we talk about cloud computing one
+of the question which always arises is
+why is this model so compelling why is
+this so interesting for organizations or
+users who would want to use one or many
+services from cloud computing so first
+wave of trend which brought storage
+cloud computing was what we call as Colo
+that is collocation it shops that have
+been using or managing huge amount of
+data from decades basically wanted to
+build their infrastructures to handle
+their business needs now instead of
+building costlier data centers they
+would rent space or share facilities and
+this was being done by organizations
+even in past thus they would free up the
+capital for other use cases now this was
+more of user configured managed and
+maintained by them later organizations
+started thinking of virtualization so
+that was again user configured but
+provider managed and maintained so
+components of a virtualized data center
+matched that of a physical Data Center
+and organizations would have virtual
+devices separately managed from
+underlying devices then later came
+container based architectures or
+basically automated services so within
+Google services are automatically
+provisioned and configured letting your
+infrastructure scale on demand there are
+various reasons why an organization
+would think of integrating with cloud or
+benefiting by using cloud and thus
+instantaneously reaping the benefits of
+modernizing their
+infrastructure now few famous Cloud
+providers are here so you have Amazon
+which offers Amazon web services and a
+huge list of services which come in with
+this you have Microsoft's aure you have
+Oracle Cloud you have Sap's Cloud
+Solutions G PCP which is offered by
+Google Salesforce and so on there are
+many other small players which are also
+providing different Services which are
+cloud-based or organizations which are
+partnering with these main Cloud
+providers thus offering cloud services
+to their
+customers when we talk about why Google
+Cloud platform there are various reasons
+why someone would choose Google Cloud
+platform gcp has better pricing compared
+to its
+competitors when it comes to Speed and
+Performance it is very fast and
+increases the performance of the
+project live migration of apps and there
+are huge number of solutions which I
+will show you further in further screens
+which help an organization to adapt to a
+cloud platform or integrated with Cloud
+platform or even completely migrate into
+a cloud platform none of Google's
+competitors provide live migration of
+apps when we talk about Big Data AI
+machine learning kind of solutions gcp
+provides lot of innovative solutions in
+comparison to other Cloud providers such
+as AWS Azure and so
+on so what is Google Cloud platform it
+is a set of Cloud Computing Services
+provided by Google that runs on the same
+infrastructure that Google uses
+to and for its end user products like
+YouTube Gmail and so
+on let's learn about benefits of Google
+Cloud
+platform such as high productivity
+working from anywhere quick
+collaboration high security fewer data
+stored on vulnerable devices reliable
+resources which can be used across
+organization across geographical regions
+across countries
+very flexible which allows organizations
+to scale up and down as the demand Rises
+or as the demand declines and cost
+effective solutions for various use
+cases these are some of the benefits and
+if we look into different Services which
+Google Cloud platform offers we could
+look into detailed benefits which each
+service offers in a different use case
+which basically helps organiz iations
+working in different domains handling
+different kind of small mid or larger
+businesses and with different business
+goals when we talk about Google Cloud
+platform Services here is a list of
+services or I could say high level
+domains or categories of services so you
+have compute related Services you have
+storage and database you have networking
+Big Data developer tools identity and
+Security Management Internet of Things
+Cloud AI management tools and also data
+transfer
+Solutions when we talk about Google's
+infrastructure Google has one of the
+most powerful infrastructure in the
+world the infrastructure is available in
+two levels the physical and the abstract
+layers you have physical infrastructure
+and then you have the abstract
+infrastructure physical infrastructure
+consists of data centers extensive
+development of high efficiency backend
+data
+centers you have a very strong backbone
+Network which is used by Google itself
+and also offered as services to
+customers via gcp platform services so
+you have Global mesed redundant backbone
+Network points of presence when we talk
+about Google it has 110 plus Edge points
+of presence in more than 200 countries
+and when we talk about Edge caching Edge
+caching platform at periphery of their
+Network so this is what defines the
+physical infrastructure of Google now
+there is much more to it rather than
+just these four points when we talk
+about abstract infrastructure that is
+divided in global regions and zones when
+we talk about Zone a zone is roughly
+equivalent to a Data Center and a single
+point of failure so you could have your
+compute engine which is within a zone or
+you could say computer engine is a zonal
+resource you have regions which are
+geographical areas which contain
+multiple zones so you could have a
+region for us Central or Europe Central
+Europe West and so on and within a
+region you would have one or multiple
+zones
+and zones basically would allow High
+availability of
+resources so you have Cloud load
+balancer is an example which is regional
+resource then you have global resources
+and they are available and shared across
+the planet so you have various global
+resources such as Network which could be
+even your IP addresses and so
+on now let's do a quick comparison of
+AWS W aure ws gcp and let's look at what
+each cloud provider offers later we will
+also look into different services in
+detail when it comes to Google Cloud
+platform what each service does what you
+can benefit from which service should
+you use in what case we will learn about
+those in later slides if I compare your
+different Cloud providers when we talk
+about Amazon and its Cloud offerings
+that is Amazon web services or AWS as we
+well know it Amazon web services has 69
+availability zones within 22
+geographical locations and soon it will
+have 12 more in future so this number
+keeps growing based on the spread of the
+services which a particular cloud
+provider offers here we are talking
+about availability Zone specific
+information when we talk about
+Microsoft's azure it has 54 regions
+worldwide and is available in 140
+countries across the globe when we talk
+about Google Cloud Google Cloud platform
+is available in 200 plus countries
+across the
+globe when we talk about virtual servers
+Amazon's ec2 that is elastic compute
+Cloud it is a web service which
+basically helps to resize your compute
+capacity where you can run your
+application programs on a virtual
+machine so using ec2 service you could
+launch virtual instances that could have
+any distribution of Linux Windows you
+could have different specifications when
+it comes to Ram or CPU cores or disk you
+could also decide on what kind of
+storage a particular instance should use
+whether the storage should be local to
+the instance or whe whether that should
+be a elastic file system or even an
+object storage
+when it comes to Azure or Microsoft's
+offering Azure virtual machine that is
+infrastructure as a service gives a user
+the ability to deploy and manage a
+virtual environment inside a virtual
+Network on the cloud and this virtual
+Network on the cloud would be managed by
+cloud provider Google cloud or the
+offerings from Google Cloud platform
+that is gcp VM instances enables users
+to build deploy and manage virtual
+machines in order to run different kind
+of workloads on the cloud now when we
+talk about compute engine here it would
+be good to discuss a little bit more
+about compute engine and what are the
+different options which Google Cloud
+offers so when you talk about your
+compute engine you have scalable high
+performance virtual machines computer
+engine delivers configur
+virtual machines which run in Google's
+data center with access to high
+performance networking infrastructure
+and block storage and you could select
+VMS for your needs that could be general
+purpose or workload optimized and when
+we talk about workload optimized you
+have predefined machines or you have
+custom machine sizes you can integrate
+compute with other Google cloud services
+such as AI or ML and go for your data
+analytics you have when we talk about
+your gcp VM instances just to expand on
+that you have general purpose instances
+which we call as
+N2 which provide a balance between price
+and performance and they are well suited
+for most workloads including line of
+business applications web servers and
+databases Google Cloud also offers
+compute optimized instances which we
+call as C2 instances which offers
+consistent high-end virtual CPU
+performance which are good for AAA
+gaming Eda HBC and other applications
+now when we talk about compute optimize
+your general purpose how would we leave
+memory optimized instances those are M2
+machines which Google offers so these
+offer highest amount of memory these VMS
+are well suited for inmemory databases
+such as sap Hana real time analytics and
+inmemory caches so if I would summarize
+this when we talk about different
+instances
+AWS also offers different kind of
+instances which are memory or compute or
+dis optimized you have general purpose
+and each category of machines has a
+different pricing model you can always
+go to an AWS website look for the
+pricing models and that will give you an
+idea of on demand in instances or
+dedicated instances reserved instances
+and so on similarly if you talk about
+Google Cloud Google Cloud also has
+instances with various options which
+become the key features of why customers
+would choose Google Cloud platform such
+as live migration for VMS so computer
+engine within your gcp can live migrate
+between host systems and when I say live
+migrate it basically means without
+rebooting which keeps your application
+running even when the underlying host
+systems require maintenance you also
+have preemptable virtual machines
+wherein you can run bad jobs and fault
+tolerant workloads on preemptable VMS to
+reduce your virtual CPU and memory cost
+by up to 80% while getting the same
+performance so these are your preemptive
+or preemptible virtual machines the only
+demmin is these can give you a really
+cost efficient resource usage however
+can be taken off the shelf anytime and
+that's why we call them preemptible
+virtual machines you also have soul
+tenant noes which are physical compute
+engine servers dedicated explicitly or
+exclusively for users use case and when
+we talk about Soul tenant nodes these
+are usually good when you are dealing
+with or when you're working with your
+application s which we call as bring
+your own license applications so Soul
+tenant nodes give you access to same
+machine types and virtual machine config
+options as regular compute instances so
+there are different options which Google
+Cloud offers when it comes to these
+instances which we are talking about and
+it takes care of different use cases in
+comparison to other Cloud providers
+which are also offering these services
+such as you can have predefined machine
+types you can have custom machine types
+preemptable VMS as I said live migration
+of VMS you can use persistent diss which
+could give you durable high performance
+block storage you have local ssds you
+also have GPU accelerators which can be
+added to accelerate computational
+intensive workloads such as machine
+learning simulation medical analysis and
+so on and you have features such as
+Global load balancing which makes Google
+Cloud a unique
+Choice when we talk about platform as a
+service Amazon has platform as a service
+offering which we call as elastic bean
+stock among one of its services it's an
+orchestration service for deploying
+applications and helping in maintaining
+these applications as your cloud service
+provides a platform to write the user
+application code without without
+worrying about the hardware resources
+Google app engine is a service used by
+Developers for building and hosting
+applications on Google's data centers
+when we talk about serverless Computing
+so Amazon's AWS Lambda is a serverless
+compute service it is used to execute
+backend code and scales automatically
+when required when we talk about aure
+you have something called as functions
+which allow users
+to build applications using serverless
+simple functions with a programming
+language of their choice when we talk
+about Google cloud gcp has Cloud
+functions which is easiest way to run
+your code in the cloud and it is highly
+available and Fa tolerant so in these
+days when we are talking about
+microservices architecture which
+organizations are preferring when we are
+talking about organizations which can
+scale which can dynamically
+change their underlying architecture
+organizations would be interested in
+serverless Computing where they do not
+have to have a infrastructure set up a
+planned in advance before going for
+their use case and this is where
+monolithic applications are really not a
+Preferred Choice lot of organizations
+are decomposing their applications into
+microservices based on business
+capability or decomposing based on
+subdomains we can learn about
+microservices architecture later but
+just to know that serverless Computing
+which basically helps any organization
+if for example if you have a web
+application that receives nonlinear
+traffic and you cannot keep an eye on
+your server always it would be good to
+have someone to autoscale your
+application serverless is basically a
+Computing model where cloud service
+provider is responsible for managing the
+piece of code without the developer
+having to bother about infrastructure
+setup management maintenance and so on
+now when we talk about applications
+being serverless or benefiting from
+serverless Computing one of the key
+things would be zero Administration so
+deploying application without any
+provisioning and management autoscaling
+capability that is let the service
+provider worry about scaling the
+application up and down you have paper
+use model which any customer would want
+to benefit from that is pay only for the
+resources that you have used or that you
+are continuing to use right shorten the
+time between idea implementation and
+employment and this is something which
+any organization would want that you
+would want a faster bring to the market
+solution timeline in comparison to
+getting entangled with deployment
+management and maintenance of your
+underlying infrastructure when your
+applications are facing a high demand so
+when we talk about serverless it is a
+function as a service because each part
+of your application is divided as
+functions and can be hosted over
+multiple service providers you have
+serverless apps which are usually
+divided as separate units or functions
+based on functionalities or domains and
+so on so serverless Computing is ging
+quite popularity these days in
+comparison to the traditional three tier
+architecture where you had a
+presentation layer you had an
+application layer you have a database
+layer now that kind of infrastructure is
+not really preferred in today's modern
+times when organizations are working on
+different kind of newer applications
+when we talk about object storage Amazon
+has simple storage service that is S3 it
+provides object storage which is built
+for storing and recovering information
+or data from anywhere over the Internet
+aure comes up with blob storage that is
+binary large objects storage offers
+large amount of storage and scalability
+it stores the object in the T and
+depending on how often the data is being
+accessed now same thing applies to a S3
+which is from Amazon so S3 also has
+different kind of storage classes which
+can be selected when a user or
+organization intends to use a storage
+service and when I speak about storage
+classes it basically means having a
+frequent access storage or a infrequent
+access storage or what we call as just
+an archival
+solution Google cloud has cloud storage
+and provides unified object storage for
+live or archive data this service is
+used to store and access data on gcp
+infrastructure when it comes to
+advantages Amazon web services has
+Enterprise friendly Services easy access
+to resources increase in Speed and
+Agility and that to on demand and takes
+care of your security and reliability of
+resources which are offered when it
+comes to aure it has better development
+operations strong security profile
+provides lot of costeffective solutions
+and operation execution friendly when we
+talk about Google Cloud one of the key
+features here is better pricing than
+competitors live migration of virtual
+machines which really interests lot of
+organizations would want to modernize
+their infrastructure without having any
+kind of disruption in their existing
+Services improved performance redundant
+backups and so on when it comes to
+disadvantages in AWS you have
+limitations when it comes to ec2 service
+well there are different options in the
+kind of machines which you can choose
+which you can work on you have a
+technical support fee which is incurred
+network connectivity and then also
+downtime which might be in case when
+you're migrating as your it has
+different code base for cloud and
+premise platform as a service ecosystem
+is not really as efficient as
+infrastructure as a service poor
+management of GUI and tools integrated
+backup when we talk about Google Cloud
+support fee is quite Hefty it depends on
+what kind of solution or support you
+would or organization would be
+interested in it has a complex pricing
+schema although it has different use
+cases for which any user or any
+organization can benefit from
+downloading data from Google cloud
+services is an expensive option storage
+might not be however uploading data or
+downloading data would be an expensive
+option when we talk about Domino's Piza
+use case now while we were discussing
+about these features I would really want
+to spend more time in discussing each of
+these features or services in detail
+such as you have compute engine you have
+storage you have big table you have data
+proc and so on so there are huge list of
+services now before we get into your
+Domino's Piza use case let me show you
+this page on Google Cloud where you can
+look at different services so if you go
+to cloud.google.com and if you look at
+get started option under doc so here you
+can find build Solutions look at
+different use cases learn from basics of
+what is your Google Cloud what are Cloud
+Basics then you can look at different
+Cloud products so here you have products
+in different categories such as Ai and
+machine learning API management compute
+containers data analytics databases
+developer tools and so on and you can
+always click on any one of these to look
+into different solutions which are being
+offered what are the different use cases
+what are the best practices when it
+comes to migrating VMS to compute engine
+or operating containers or building
+containers and so on you can always look
+at featured products and that gives you
+a quick snapshot of what are the
+different products such as you have
+compute engine you have Cloud run big
+query which is a data warehouse you have
+cloudsql which is a managed MySQL or
+postgress you have cloud storage to
+basically Bally pushing any kind of data
+there you have security key enforcement
+Ai and machine learning and so on so you
+have different feature products now if
+you scroll down to the lower end of this
+page you can again look at different
+solutions and that would be really
+interesting to read and learn from so
+you have infrastructure modernization
+you have application modernization you
+have data management and so on so if I
+look at INF structure
+modernization you could basically look
+at the solutions which Google Cloud
+offers and what it does when it comes to
+having your infrastructure modernized or
+benefiting by integrating with cloud and
+having immediate benefits of
+infrastructure modernization you can
+look at different use cases what they
+are doing how Google Cloud really helps
+when it comes to migrating the workloads
+to cloud and how your different Cloud
+Solutions such as VM migration you have
+sap on Google Cloud vmw as a service and
+so on and you could learn from these
+different solutions which are offered
+you can also look at application
+modernization so not only infrastructure
+modernization but organizations would
+also be interested in relooking at their
+applications relooking at how these
+applications could be moved from
+monolitic to microservices architecture
+or how applications can benefit from
+modernization and cloud computing
+offerings so you have again different
+use cases here H which talks about
+different ways in which Google Cloud can
+help how you can modernize your
+applications how you can use different
+solutions which Google cloud is offering
+now when we talk about Cloud Computing
+Services you can always go into
+cloud.google.com
+if you have created a free account then
+you can just login and every user by
+default gets a $300 free credit so
+wherein they can try out different
+products where they can use different
+services so here if I click on Console
+where I'm already logged in with my
+Gmail account or my Google Cloud account
+wherein I have $300 free credit out of
+which some is being used you have a
+Google Cloud console and here from the
+hamburger menu you can click and you can
+look at different services within
+different domains so you have compute
+domain which has different services such
+as app you have compute engine and that
+basically allows you to use your VM
+instances which we were talking about
+previous slides different instance
+groups create your templates use Soul
+tenant notes create snapshots or backup
+of your data use different zones you can
+go for kubernetes which is containerized
+based engine you have Cloud functions
+you have Cloud run and then you have
+storage related different options such
+as big table you have data store fire
+store file store storage and so on and
+for each of these Services you can read
+about from the Google's documentation or
+anyways I will be explaining that later
+you can also look at networking related
+operation related and other tools which
+are offered by Google Cloud so these are
+huge list of services which Google Cloud
+platform offers in different ways for
+different use cases now let's look at
+this Domino's Piza use case and see what
+it helps us learn about so you can
+always access this page by going to this
+link which talks about customers and
+then which shows you different use
+cases so Domino's increasing monthly
+Revenue by 6% with Google analytics
+premium Google tag manager and Google
+big query so this is basically when
+Domino started using gcp and what was
+the result of that now let's look
+further into
+this so we all know that Domino is most
+popular Piza delivery chain operating
+across the globe but how was that
+possible let's take a look so the
+challenges were they wanted to integrate
+marketing measurement across various
+devices connecting CRM and Digital Data
+to create a clear view of customer
+Behavior to make cross Channel marketing
+performance analysis easy and efficient
+now for these challenges which Domino's
+was facing the solution was using Google
+analytics premium Google tag manager and
+big query which were used to integrate
+digital data source and CRM data
+reporting was made easier and more
+efficient by implementing Google
+analytics premium because it had the
+ability to access a single Google
+analytics account to evaluate web and
+app
+performance by using the new Google tag
+manager implementation dominas were able
+to act fast they were able to connect
+CRM data with digital analytics which
+basically provided Domino with with
+greater visibility on customer Behavior
+what was the result there was an
+immediate 6% increase in monthly Revenue
+80% of costs in ad serving and
+operations were saved increases agility
+with streamline tag management they
+obtained easy access to powerful
+reporting and customized dashboards now
+that was just one simple use case before
+we go on to handson we can also talk a
+little bit back about about the services
+which Google Cloud offers as we
+discussed and some of these Services
+which can really make you think why not
+Google Cloud platform so when we talk
+about your different Cloud platform
+Services let's learn about some of these
+services in brief in what each service
+is what it does and how it can help us
+in handling our use cases or working
+with different
+products so let's learn briefly about
+different Services which Google Cloud
+platform offers now one of the domains
+is compute and then let's look at the
+compute Services which gcp offers now
+here I can log into the console and this
+hamburger menu on the top left corner I
+can click on this one and go into the
+compute engine section so this is the
+compute domain which has app engine
+kubernetes engine Cloud Factory
+functions and Cloud run so these are
+your different Services which are
+offered within the compute domain and
+here we can get into compute engine by
+clicking on this one and then basically
+going to VM instances so before we see
+how we can use this compute engine let's
+understand about some of the features of
+compute engine which basically offers
+scalable high performance virtual
+machines which are configurable and
+which runs in Google's data center with
+access to high performance networking
+infrastructure and block storage so from
+here you can select VM for your needs
+for your general purpose or workload
+optimized predefined or custom machines
+now here you can integrate compute with
+other Google cloud services such as AI
+ML and other data analytics Services you
+have different machines which are
+offered here such as general purpose
+which provide a balance between price
+and performance which are well suited
+for most workloads including line of
+business applications web services and
+databases you also have compute
+optimized machines which offer
+consistent high-end virtual CPU core
+performance and which are mainly good
+for gaming Eda High process Computing
+and other such applications apart from
+general purpose compute optimized you
+also have memory optimized machines
+which offer highest amount ount of
+memory and these VMS are basically well
+suited for inmemory databases such as
+sap Hana realtime analytics and inmemory
+cache now we can see these options here
+you can click on VM instances while
+you're logged in into your Google Cloud
+console here you can even create an
+instance template which can be used to
+spin up instances for example if I click
+on new VM instance from a template there
+are some templates which have already
+created for my usage now here I can
+basically use one of these templates or
+what I can do is I can go back I can go
+into instance templates and this
+basically allows me to create a template
+so you can click on create instance
+template which basically allows you to
+create templates which can be used to
+spin up different instances we can give
+a name to the template for example we
+can say template instance now here I can
+choose choose machine configurations and
+this is where you have different options
+so you have general purpose as I
+mentioned which provide a balance
+between price and performance you have
+memory optimized which are large memory
+machine types for memory intensive
+workloads you also have compute
+optimized which basically give you high
+performance machine types for compute
+intensive workloads so you can choose
+any machine configuration which is
+available here based on your
+requirements now if you click on general
+purpose that has different options here
+so you look into the series where you
+have N1 series you have E2 which are CPU
+platform selection based on availability
+you have N2 and n2d so let's just have
+N1 selected now you also have here which
+talks about machine types and here we
+can choose the configuration which we
+are interested in depending on the
+applications which will run within the
+machines we can choose a ma machine so
+by default it shows one virtual CPU core
+and 3.5 GB of memory or Ram you could
+choose a higher end machine so as of now
+I'll just say N1 standard now that
+basically allows me to choose these
+machines so there are different features
+which your computer offers such as you
+have live migration for VMS you have
+preemptable virtual machines you have so
+tenant nodes and all those options can
+be seen here now in this machine for my
+boot dis I can select SE a distribution
+which I would be interested in for
+example I could be going for public
+images and I can choose for example u 2
+and then I can choose a version so it
+shows me
+16.04 and you also have latest version
+such as u220 you can choose one of these
+and here it asks you to choose the boot
+disk type so that could be standard
+persistant disk which is hdds which are
+low in performance and uh um you can say
+low in cost in comparison to ssds so
+ssds give you better performance but
+then they are little expensive than
+using standard persistent disk we can
+choose this and we can give a disk size
+for example 20 gab and I can click on
+select before clicking on select I can
+click on custom images and that shows me
+if you have any other images created in
+your project you could use those you
+could also learn about images by
+clicking on this link so we'll click on
+Public Image es we have chosen this
+distribution let's do a select and now
+here you have identity and API access
+management so let this be default you
+can say allow default access and what
+you need is depending on the services we
+can choose it allows HTTP and https
+traffic now we would also need some way
+to connect to these machines so when you
+set up an instance by default you can do
+SSH into it using the Google Cloud
+console or from cloud shell you can also
+give a private and a public key so here
+you have the option where you can give
+all these details so when it comes to
+management it tells you would would you
+want to go for reservations and you can
+say automatically use created
+reservation you could also say no you
+would not want to use a reservation you
+can also set up or provide a startup
+script which you would want to give
+whenever your machines come up and here
+you have the options of preempt ability
+so compute offers preemptable virtual
+machines so that is mainly when you
+would want to run bad jobs and fault
+tolerant workloads on these machines and
+you can benefit with a reduced cost for
+your virtual CPU and memory by
+80% so these are virtual machines which
+would be lasting less than 24 hours now
+by default this is off and it purely
+depends on your workload what you would
+want to run on these instances I I could
+just go ahead and select preemptible
+being on that and use this feature of
+compute you also have on host
+maintenance which talks about what would
+be happening with this compute engine
+instance so when compute engine performs
+periodic infrastructure maintenance it
+can migrate your VM instances to other
+hardware and this is one of the features
+which compute engine offers which we
+call as live migration for VMS here your
+computer engine can live migrate between
+host systems that is the underlying
+systems on which these VM instances are
+based on without rebooting which will
+keep your application running even when
+host system require maintenance and here
+it says migrate VM instense recommended
+and let that be as it is you can also
+say that if there is a maintenance
+happening you can terminate the VM
+instance now it also talks about
+automatic restart which is on which
+basically means computer engine can
+automatically restart VM instances if
+they are terminated from nonuser
+initiated reasons so these are all the
+settings which are available in
+management and it also tells us the
+different features which we have there
+is also a feature called sold tency
+which basically means sold tenant sold
+tenant nodes which can be chosen so you
+can have physical compute engine servers
+dedicated exclusively for your use and
+this is usually good when you're talking
+about bring your own license
+applications so soul nodes give you
+access to same machine types and VM
+configuration options as regular compute
+instances however these might be a
+little expensive we can choose this one
+we can also look into networking which
+basically shows the default setup which
+goes for auto subnet you can also choose
+a particular IP if that is required but
+that would cost more you can click on
+diss which talk about what do you want
+to do with the boot dis when the
+instance is deleted what is the
+encryption mechanism you would want to
+use and here finally you have security
+so basically as I said you can SSH into
+instance using the cloud console option
+and you can also provide a public SSH
+key so one way of doing that if you
+intend to use an external SSH client
+such as puty to connect you can create a
+key so for example I can go into puty
+gen and here I can say generate just
+move my cursor over here and that will
+create a key I can give a name to this
+one so I'll say sdu will be username
+I'll give a simple password which I will
+use to login to this machine and then I
+can save this private key which will get
+saved so let's say hdu new key and this
+gets saved in a PPK file which is
+usually used when you use an external
+SSH client to connect so save this one
+and that saves a PP PK file on your
+desktop what you can also do is you can
+copy this public key content from here
+and this is what we would want to give
+in our instance here so so that the
+public key gets stored on the instance
+and private key is what we will use to
+connect so once I paste it here it
+resolves the name to hdu and we have
+given the public key now in certain
+cases you may want to use a software
+which uses s Ed to connect to the
+machine and that software might not be
+such as your puty so in that case you
+may want a pem file or a private key
+which is saved as a pem file so you can
+also do that by going to conversions and
+do a export open SSH key and then save
+it so I'll say hdu new key but then this
+one will be saved as a pem file on my
+machine so you have PPK file which
+allows you to use puty to connect to the
+instance you have a pem in case a
+software needs directly SSH to these
+machines you also have the public key
+which we have already provided in the
+machine now once this is done I can
+close puty genen I can go back to this
+page where I'm creating an instance
+template and then I can just click on
+create so this has created a instance
+template which I can use to spin up my
+instances any number of instances using
+the same template only thing which I
+would have to do is change that region
+where I would want the instance to run
+so now that we have created instance and
+that's my this one the third option I
+can go back to VM instances now I can
+click on Create and here I can either
+create an instance from scratch by
+giving all the details again or I can
+just use my template so I can click on
+new VM instance from a template choose
+my template click on continue and once
+this is done I can give my instance name
+so let's say c one I can choose the
+region so I will choose Frankfurt and
+then rest everything is autop populated
+based on the template what you have
+given and you click on create now this
+basically allows you to spin up an
+instance and you can create any number
+of instances using your template you
+could have already created a new
+instance right from scratch now once the
+instance is created this has a public IP
+and a private IP private IP will not
+change unless you would want to set up a
+new machine but public IP will change
+every time you stop and start the
+machine now this is what we need to
+connect to this machine I can also do a
+SSH from here by doing this in open in a
+browser window let's click on this so
+this is an internal way of connecting to
+your instance using SSH let's wait
+because it would be transferring the SSH
+keys to the VM it establishes a
+connection and I'm connected to my
+machine what we can easily do is to
+confirm firm if we are in the right
+machine we can just do a LS to look at
+the file system what we can also do is
+we can basically log in as root by doing
+a pseudo Su and that allows you to get
+into the machine as root and from here I
+can switch to hdu user which will have a
+SSH directory in home and that basically
+has authorized keys and if we would want
+to see if this one contains my public
+key I can just to a cat. SSH and then
+look into authorized keys and this shows
+me the public key which we had initially
+added to our instance so this confirms
+that we are logged into the machine
+which we created now I can close this
+and what I can also do is I can copy
+this public IP so let's do a copy to
+clickbuy and here I will say host name
+where I'll say hdu give my public key
+I'll click on SSH and in SSH I'll go to
+authentication now here we need to give
+our PPK file so the PPK file was sdu new
+key select this one come back here come
+to the session give it a name for
+example C1 save it and then you can just
+say open and say yes and you are logged
+in to your machine now once you're
+logged in you can always do a minus SSH
+and that shows you the file so this is
+how you have just used the compu engine
+to spin up an instance but we used a
+template which basically allowed me to
+create this instance and then I can
+connect to this instance and then I can
+start working on this so when we talk
+about features of computer engine it has
+predefined machine types as we saw so
+computer engine offers different
+predefined virtual machines and this
+they have configurations for every need
+from small general purpose instances to
+large memory optimized instances with up
+to 11.5 tab of ram you can have fast
+compute instances optimized up to 60
+virtual CPU course you also have custom
+machine types so you can create a VM
+that best fits your workload and by
+tailoring a custom machine type to your
+specific need you can realize
+significant savings there are
+preemptible VMS which we saw there is
+also a facility which allows you to take
+the benefit of live migration for VMS
+you have durable high performance block
+storage for virtual machine instances in
+the form of persistent diss where data
+is stored redundantly for integrity
+flexibility and to resize storage
+without interruption and you could be
+choosing sdds or sdds for your instances
+now you also have option such as GPU
+accelerators so for example if I just
+click on create instance and I can look
+into that so here let the instance name
+be instance one and what I would be
+interested in looking at this one which
+says CPU platform and GPU so CPU
+platform configuration is permanent you
+can also do add GPU so gpus can be added
+to accelerate computationally intensive
+workloads like machine learning
+simulation medical analysis and virtual
+workstation applications so you can add
+and remove gpus to a VM when your
+workload changes and pay for GPU only
+while you using so these are some of the
+features which basically compute engine
+offers and we already know that Google
+bills in second level increments so we
+only pay for the compute time now there
+are different savings which are possible
+so you have commitment savings which
+basically means you can save up to 57%
+with up upfront cost per instance type
+lockin you have container support so you
+can basically run manage and orchestrate
+Docker containers or compute engine
+instances so here when we are setting up
+our instances there is an option which
+basically allows you to use or deploy
+Docker images now that can be done you
+can also benefit from sustained use
+savings that is sustained use discounts
+which are automatic discounts for
+running compute engine resources for
+significant portion of the billing month
+you can create a reservation for VM
+instance in a specific Zone which is
+basically seen under your management
+section here and you can ensure your
+project has resources for future
+increases in demand and if no longer
+needed delete the reservation so these
+are some of the features of compute
+engine what we have done is we have
+created computer engine using the
+console now you can go back you can also
+do that using Cloud shell and you can
+click on this one which activates Cloud
+shell you could also have the cloud SD
+cas support on setup on your machine
+which can be used now I can just open
+this in a new window and from here I can
+start giving commands if I would be
+interested in setting up an instance
+from my command line so here you have
+different options now to begin with you
+can just do a gcloud and just hit enter
+and that will show you different options
+which are available which can be used so
+you have g-cloud compute here which
+shows an option to create and manipulate
+compute engine resources now I can just
+do a q to quit I can do gcloud compute
+and that basically will again show me
+different options which are available if
+you would be interested in setting up
+instances from the command line so here
+I can say gcloud compute and then go for
+instances and if you do not know the
+commands you can just hit enter that
+will show you all the different options
+which we have so here we have different
+options such as list or create or start
+or update for example I can just do a
+list here to see what instances I have
+and the instance which we just created
+shows up here it says that say status is
+running I can just stop this instance I
+can delete this instance I can even
+create an instance by using a create
+command here and you can just do a
+create help which will show you what the
+different options you can give so it
+says instance name is what you need you
+can choose an accelerator you can choose
+the boot dis and various other options
+so I can just say create and then I can
+give a name for example C2 and once I
+click on this one it says did you mean
+Europe West for zone so it is asking me
+for the region and the zone and I can
+say yes and these settings are coming
+from my default profile I can always
+change those by changing the metadata so
+now we have created an instance it says
+running if we do a list again to see we
+see two instances created one was in
+Europe West 3 one was in Europe W West 4
+both of them have internal and external
+IPS now you can do a describe to look at
+the different options here so g-cloud
+basically allows you different commands
+which you can use to to work with your
+instance to create instances to change
+the metadata if you would want to change
+the region if you would want to add a
+startup script all those options are
+possible from the command line which we
+can learn in detail in later sessions so
+this is your compute engine as a service
+now that we have learned about the
+compute domain and G compute Services
+which is offered by gcp let's also learn
+about about storage and databases that's
+again within the storage domain and the
+services which are offered by Google
+Cloud platform now you can go back to
+console and here you can click on this
+one and here you can just scroll down to
+see what are the different options in
+storage so you have options such as big
+table you have data store fire store
+file store you have SQL Based Services
+you have storage which is object storage
+and then you have other options which
+are available so Google Cloud platform
+offers different storage Based Services
+out of which storage which is your
+object storage is quite popular one
+click on storage and that basically
+shows you an option which talks about
+storage browser so this is your Google
+Cloud's object storage so when we talk
+about object storage it is basically a
+storage where you could store any kind
+of data and when we talk about Object
+Store storage it is a bunch of bytes
+which we address wherein every object
+will have a unique key these unique keys
+are in the form of URL which allows you
+to access the object so cloud storage is
+comprised of what we call as buckets
+which are used to store and hold your
+storage objects the storage objects are
+immutable and every change creates a new
+version now you can also have control
+access via IM am that is identity access
+management or via Access Control list so
+there is also an option called object
+versioning which basically says if it is
+on every time you try to store the same
+object a new version of the object would
+be created otherwise newer option will
+override old one as we cannot archive
+the old version so let's see how we work
+with this object storage so here you can
+click on create bucket now once you
+click on create bucket it needs a name
+so let's say test bucket and here I can
+just give say number one so that says
+this is the name of my bucket now I can
+directly click on continue or it would
+be good to look at different options
+which are available here so when you
+click on choose where to store your data
+so it already gives me an option it says
+the bucket name is already taken so let
+me give it a unique name so let's say
+test buck and let's call it AUA so that
+should be unique now here it says choose
+where to store your data so this one
+gives you location type so you can have
+region specific buckets which give you
+lowest latency that is fastest response
+time within a single region however it
+does not make your storage highly
+available you can make a dual region
+which is basically allowing your bucket
+or storage to be accessible across
+regions you can also make it multi-
+region which is highest availability
+offered as of now we can choose region
+specific and now it asks you to choose a
+location now as always I will choose
+Frankfurt now I can click on continue
+and rest all the rest let all the
+storage options be default or you can
+click on a default storage class now
+that tells you based on your storage
+class there are variant costs when it
+comes to storing retrieving or doing any
+kind of operations so you have a
+standard option which says best for
+short-term storage and frequently Access
+Data you can also go for Cold Storage
+such as near line which is best for
+backups and data access less than once a
+month you can go for freezing storage
+such as cold line best for disaster
+recovery and data access less than once
+a quarter or you can go for archiving
+where the data is accessed less than
+once a year let's go for standard as of
+now and now you can choose how to
+control access to objects so you have
+fine grained or uniform let it be fine
+grained wherein you can give additional
+permissions at Bucket Level using IM am
+or object level permissions using access
+control list in advanced settings you
+can choose the encryption and you can
+also choose a retention policy so a
+retention policy to specify the minimum
+duration that this buckets objects must
+be protected from deletion or
+modification after they are uploaded you
+can always learn about this more by
+clicking here now once I've chosen all
+the relevant options I can click on
+Create and that basically will create a
+bucket by the name I have given I can
+click on overview to basically see brief
+details about my bucket such as region
+what is the default storage class and it
+also shows you the link URL which can be
+used to access your bucket it also gives
+you the link for GS util now GS util is
+a command which can be used in your
+Cloud shell to basically work with your
+buckets you can click on permissions to
+basically see what kind of permissions
+are already in place and you can then
+make changes you can basically add
+members you can view by different roles
+so for example here by default it shows
+other services such as data proc or your
+bucket owner or bucket reader related
+permissions which have been already
+granted now once I've looked at my
+bucket I can start using it I can drag
+and drop and push in files here so as of
+now there are no live objects in my
+object storage that is in my bucket what
+I can do is I can click on upload files
+and then I can choose a location from my
+machine for example I'll go into data
+sets and what I can do is I can choose
+some of the files here in any format
+let's choose CSV or text and just do
+open so this one will basically upload
+my data sets here now once I've uploaded
+the files I can basically close this one
+I can look into options here which says
+edit permissions edit metadata if you
+would want to download it if you would
+want to copy move or rename it if you
+would want to export to a different
+service called Cloud Pub sub which is
+publish subscribing messaging system you
+can scan the data now you can click on a
+particular file and that basically shows
+you the URL which basically allows you
+to access this file you can try copying
+this you can click on download and
+download this file you can even try
+accessing this from public and that
+basically shows you the content of this
+file based on the permissions so this is
+B basically your object storage which is
+one of the service which is offered what
+you can also do is you can create
+folders and within folders you can then
+upload your data so this is your Google
+Cloud Storage option which is for your
+object storage that is you can add
+different items you can give different
+permissions and you can use this Google
+Cloud platforms storage service offering
+now you also have other options such as
+big table and we can go into that by
+clicking here and click on big table so
+big table is one of the service which
+kickstarted nosql databases today in
+Market we see different nosql databases
+such as cassendra hbas mongod DB couch
+DB Neo 4J and many others so you can
+basically use big table which was the
+Pioneer when it comes to your no SQL
+databases or not only SQL databases so
+the problem initially faced by Google
+was that uh the web indexes behind
+search engine were taking too long to
+build so company wanted to build
+database that would provide realtime
+access to petabytes of data and that's
+where big table began so big table
+powers different other Google services
+such as Gmail Google Maps and other
+services and in
+2015 it was launched as is a service for
+customers so when it comes to
+scalability with use of big table you
+can increase your machine count without
+any downtime and you can handle admin
+tasks like upgrades restarts and so on
+which are basically taken care by the
+cloud provider data present in Cloud big
+table is encrypted and you can use IM
+roles to specify access so data written
+to or from big table is through data
+service layer
+such as managed virtual machines hbas
+rest servers Java Services hbas client
+and so on here if I would want to use
+big table I can click on create instance
+and that basically tells me Cloud
+bigtable instance is a container for
+your clusters now here you can give a
+instance name so for example I will say
+AUA and then say for example test and
+let's say big table so that will be the
+name of instance this will be permanent
+you can choose the storage type again
+you can go for lower latency more rows
+red per second typically used for
+realtime serving use cases or you can go
+for sdds which have higher latency for
+random reads good performance on scans
+and typically used for batch analytics
+so let's go for ssds as of now here you
+have cluster ID which is autop populated
+you can choose a region so let's go for
+our favorite one here where I can say
+Europe West 3 I can choose a Zone here
+and I can then choose how many nodes
+would I want to use for my big table so
+when you talk about big table service it
+will have a cluster underlying which
+will have various nodes which will
+control your data throughput storage and
+rows read per second so as of now let it
+be just one node and that's enough for
+our demo when we talk about performance
+it basically tells you based on the
+current node and storage type it tells
+you how many reads can happen at
+millisecond so it says 10,000 rows per
+second at 6 millisecond you have rights
+which are 10,000 rows per second or you
+have scans which are 220 megabytes per
+second storage which is taken care here
+would be 2.5 tabt and I can then
+basically click on create now there is
+also some option called replication
+guidance which basically says replic for
+cloud table big table copies your data
+across multiple regions enabling you to
+isolate workload and increase the
+availability and durability of your data
+depending on your use case you can have
+big table which can be used to have your
+data across regions now you can click on
+create with all your specifications
+Chosen and that's going to set up a
+cluster or you can say a fully managed
+nosql database which will give you low
+latency and replication for High
+availability now once we have a new
+instance you can connect to it with the
+CBT command line tool and for
+instructions you can click on learn more
+here you can just click on this instance
+ID to see the details again if you would
+want to look into your big table setup
+so it tells me here that we have one
+instance what is the CPU utilization
+time how many rows were read or written
+what is the throughput and this is autop
+popular ated based on your usage you can
+click on monitoring and that basically
+will give you different widgets which
+will display information for your CPU
+utilization what is your hottest node
+depending on how many nodes you have
+system errors automatic failovers
+storage utilization and so on you can
+click on key visualizer which will allow
+you to look into your table if you have
+already created some data here and you
+can click on tables to see how many
+tables you have added here here so
+that's in brief about your big tables
+which is one thing which we need to
+remember is it's not good for all use
+cases so should be used for low latency
+access that is fast access and good if
+at least data is greater than 1 terabyte
+for smaller amount of data the overhead
+is too high so big tables performance
+will suffer if you store individual
+elements larger than 10 megabytes if you
+want to store bigger objects such as
+images video files then go for object
+storage and that would be a better
+option so always remember big table is
+not a relational database it's a nosql
+database and when you talk about multi
+transactions or online transaction
+processing big table is not the right
+choice so it can be used for wide range
+of applications especially when you talk
+about your olap that is online
+analytical processing so it is designed
+to store key value Pairs and there can
+be different use cases so for example if
+you're using something like cloud data
+flow or cloud data proc where you would
+want map reduce kind of operations big
+table can act as a good storage because
+it has very high throughput and
+scalability and the best thing is that
+it supports hbas API thus allowing easy
+integration with Apache Hadoop and Spark
+clusters which you can bring up using
+one more service which Google Cloud
+platform offers which is called cloud
+data proc so big table is good for
+realtime analytics it's commonly seen in
+financial services iot and others and if
+you are thinking of running interactive
+SQL then big table would not be the
+right choice but the other choice would
+be big query you should also remember
+that this has a cluster running and you
+would be charged if this cluster kept on
+running so you have to be very careful
+in your free account when you're using
+such Services now we have clicked on
+this one so I can select this one and
+basically I can look at the permissions
+I can look at the labels I can look at
+inherited permissions here I can also
+click on my
+instance which we created and either you
+can edit or you can just do a delete so
+as of now we will just delete this which
+needs you to give the name so we'll say
+AUA test BT and then click on delete so
+whenever you are trying out different
+Services the first approach should be
+setting up these different Services
+seeing how they work basically trying
+connecting to them and once you are
+satisfied with the initial test then you
+can plan your actions and come back and
+use the service for a longer duration
+now that's your big table which is one
+of the offerings we can go back into
+storage and here you have other options
+which are available so for example we
+were in big table you also have an
+option such as cloud data store now
+that's one more service which is offered
+by Google Cloud platform when it comes
+to storage domain so Google added
+software on top of big table which
+supports more than simple key value
+pairs when you talk about secondary
+indexes instead of just having having
+one primary index when you talk about
+asset properties for Reliable
+transactions such as SQL query like
+language so these features or these
+Services were added to or on top of your
+big table which gave birth to a new
+service which was released as cloud data
+store so this is where you have cloud
+data store and you can select a CL Cloud
+fire store mode so you can go for a
+native mode enable all Cloud fire stores
+features Fe with offline support or you
+can go for Cloud's data store system on
+top of Cloud's fire store so these are
+different options here and here we look
+at the API or scalability engine support
+how many rights it supports and so on
+you can choose one of these and then you
+can choose where to store your data so
+for example if I click on this one then
+it choose asks me to choose a location
+so it says the location of your database
+effect its cost availability and
+durability choose a regional location
+lower right latency lower cost or multi-
+region location here I can basically
+choose for example Europe and then I can
+go ahead and create a database so it
+says initializing Cloud fire store in
+data store mode services in eu3 this
+usually takes a few minutes you'll be
+redirect to your database once it is
+ready so if we compare the pricing
+structure between cloud data store and
+Cloud big table always remember cloud
+data store you pay for monthly storage
+which is also in the case of big table
+however here you are paying for monthly
+storage for reads and writs but in case
+of big table you're paying for cluster
+when it is running so cloud data store
+is a good option for small data
+infrequent access and it acts cheaper
+when you talk about large amount of data
+or big data and frequent access then you
+are talking about cloud big table so big
+table is cheaper when you talk about
+larger amount of data so here it says
+since your database is empty you can
+still switch to Cloud fire store in
+Native mode to get more features you
+could do that you could learn you could
+say query by
+gql as of now we don't have any data
+here let's look at the dashboard which
+says since your database is empty you
+can still switch to cloudfire store in
+Native mode to get more features so this
+is your cloud data store and it has many
+features which help you to work with
+your data however some features or
+important features of rdbms's were still
+missing and that's where Google created
+yet another big table based service
+called Cloud spanner now we can continue
+working on cloud data store which
+basically gives you one option to work
+with your data you can create an entity
+here by clicking on create entity and
+that basically gives you options such as
+default name space you can give a kind
+you can give numeric ID and you can
+start adding properties but to learn
+more about data store we will learn
+about this in further sessions so as of
+now I'm going to click on cancel I'm
+going to go back to my data store and
+this basically let's go to data store
+option or I can go into admin here which
+basically says if you have any entities
+you can import or export them so let's
+go back and let's again look into
+storage options so as of now we were in
+data store let's click on this one so as
+I mentioned your cloud data store which
+basically gives you some additional
+features on top of your big table but
+what Google also did was it realized
+that there was a need for rdbms feature
+support that is there were lot of featur
+Fe es now here we have created a data
+store and it says your datab base is
+ready to go just add data you can create
+entity start putting in data and then
+you can go ahead and query this so if
+you would want to learn more about your
+data store you can just click on this
+one and that takes you to the complete
+documentation of native mode and data
+store mode what is fire store in Native
+mode what is in data store mode what are
+pricing and locations how you choose a
+database mode what are the feature
+comparison ions what you can do what you
+are allowed to do here what programming
+languages can be used different regions
+pricing and so on as of now we'll click
+on this one and let's look at one
+Advanced service which Google Cloud came
+up with when it comes to your additional
+features of rdbms so Google created yet
+another big table based service called
+Cloud spanner now that you might not see
+here but if you scroll down you should
+be able to see your Cloud spanner in the
+options here or did we miss it on the
+top so let's again look here yeah so it
+is here and you can click on spanner so
+Cloud spanner was released in 2017 it
+basically supports relational schema so
+it offers strong consistency for all
+queries which can be SQL based you can
+have multi- region deployment now when
+it comes to massive scalability
+requirement and strong consistency Cloud
+spanner is a good option so it says
+Cloud spanner is a managed Mission
+critical globally consistent and
+scalable relational database so if you
+would want to use this then you will
+have to enable this API where it shows
+you an option here it says try this API
+so it's a managed service so it is one
+of the Google's most expensive database
+Services there is also one more database
+service which is cloudsql which can be
+used so when we talk about your Cloud
+span
+it is fully managed relational database
+service it is massively distributed you
+can have millions of machines across
+hundreds of data centers with support
+automatic sharding and synchronous
+replication it gives you low latency and
+schema updates without Dum time making
+data High availability and reliability
+so we'll learn about Cloud spanner with
+more details later in other sessions now
+we can also go back to storage and we
+can look at the different options which
+we have here so you have object storage
+you have spanner you also have your SQL
+based service which is yet another
+manage service offered by cloud or
+Google Cloud I would say so that's
+called cloudsql so this is basically a
+service which allows you to have fully
+manage relational MySQL postgress and
+SQL Server databases Google handles
+replication patch management database
+management and other things which are
+related to this managed or fully managed
+database service it can allow you to
+handle terabytes of storage capacity
+with
+40,000 iops with huge amount of ram per
+instance so you can click on create
+instance here and then you can choose
+one of the database which you would want
+to use so cloudsql is a managed service
+you can choose one of your MySQL or
+postgress and SQL Server say for example
+I choose MySQL now that basically tells
+me what is the instance ID it sets up a
+password you can always change the
+password you can change the region you
+can choose your database version and
+then you can also look at other
+configuration options which talk about
+machine type which will be used what is
+about your backup and Recovery
+maintenance and all that and if you
+click on create this will basically
+create a fully managed SQL service which
+can allow you to straight away start
+using MySQL on cloud thus allowing you
+to store your relational data when we
+talk about storage options how can we
+not talk about a data warehouse solution
+or basically an option which allows you
+to run your queries by directly updating
+data so you can use a data warehouse
+service which Google Cloud platform
+offers and that's called big query so
+basically you can be looking into the
+Big Data section here and here you have
+an option called Big query so this
+basically brings ease of implementation
+and speed so building your own data
+Weare house can be expensive time
+consuming and difficult to scale so with
+big query you just load data and pay
+only for what you use so it when it
+comes to Features you have features such
+as capability to process billions of
+rows in seconds and if you would want to
+do realtime analysis of streaming data
+that is also possible here so here we
+have clicked on big query which
+basically shows you the option where you
+can start typing your query and test
+your data access for example if I have
+uploaded some data so it shows me there
+are some queries which are saved here
+now I can schedule your query I can
+basically choose the format of a
+particular query by clicking on this
+more here I have an option which says
+add data so I can pin it to a particular
+project I can explore public data sets I
+can create a connection so if I click on
+explore public data sets then it takes
+me to a page from where you can get
+different kind of data sets which are
+already available which you can put into
+your big query and start querying your
+data by default it shows that it is
+aligned to my project and I don't need
+to worry about it I can look at saved
+query if I have already saved a
+particular query I can look at job
+history I can look at transfers
+scheduled queries and reservations so
+big query basically initially had its
+own version of SQL which was slightly
+different from standard SQL but in 2016
+big query 2 was released that supports
+SQL 2011 standard you can always select
+standard SQL now big query when it comes
+to pricing we need to remember that the
+storage is the storage cost is very less
+here approximately 02 cents per GB per
+month it is almost similar to near line
+where you can also have low cost that is
+01 cents per gigabyte per month there is
+no charge for reading data from Storage
+when it comes to querying and that's
+where the cost is incurred so one
+terabyte per month is free and after
+that it costs few cents per gigabyte so
+this is mainly for high volume customers
+there is a flat rate pricing which can
+be used so when you talk about querying
+you can save your query results you can
+create data set to store the results now
+results are put in a temp table in Cache
+and after you are done with that you can
+delete data set and delete all the data
+so when you talk about loading data into
+big query you can get the data from
+cloud storage Google Drive cloud data
+store stack driver stack uh driver other
+options you have Cloud big table or
+other web interfaces so you can download
+from URL such as CSV Json AO you can
+create data set create table and create
+from Source by doing a file upload so 10
+megabyte or less files can be uploaded
+using web interface as an option you can
+also use command line and then you can
+start working with your big query so
+here you can also work with streaming
+data by basically pushing in streaming
+data into your big query which allows
+you to add one record at a time now you
+could use something like cloud data flow
+which allows you to use a particular
+pipeline about cloud data flow we will
+learn later so you can benefit from
+different features of big query and thus
+use Google's offering to work on your
+structured data or I would say data
+which suits well in data warehouses now
+these are some of the storage related
+Services which Google Cloud offers
+although we will learn about using big
+query and running or uploading some data
+by creating add data set here by say
+creating connection or using a public
+data set so as of now I have this you
+can also access the command line to work
+with this but we will learn in detail
+about big query in later sessions now
+here you can scroll down and you also
+have an option within Big Data space and
+that is your data proc so when you talk
+about data proc this is again a manage
+service which allows you to run spark or
+Hadoop jobs so especially if you are
+interested in Big Data workload so for
+big data processing for machine learning
+you can always use cloud data proc this
+uses compute engine instances under the
+hood but takes care of management of
+these instances so it's a it's a layer
+on top to spin UPF clusters it's a
+manage service it's cheaper pay when the
+jobs are running only it's fast because
+it it is integrated with other Google
+cloud services you have open- Source
+components pre-installed and data proc
+is integrated with Yan to make cluster
+management easier when you talk about
+data proc you can click on create
+cluster and that basically allows you to
+set up your cluster by choosing a
+particular region which you would want
+to use for example I'll choose Europe
+West 4 here it tells what kind of
+machines you would want to use and by
+default it has pop pated as the machine
+here which is 4 CPU and 15 GB now since
+you might be using a free account let's
+not go for the high-end machine let's go
+for N1 standard 2 and then you can
+scroll down it says what is the primary
+dis what is the disk type and this one
+was for your master machine that is
+machine which will have the master
+processes running then you have your
+worker node configuration which tells
+this will be let's choose a lower end
+machine and we can choose how many
+worker notes you would have so it says
+minimum two you can choose the ssds and
+their capacity it talks about yarn cores
+and yarn memory which will be allocated
+and here we have then option of clicking
+on create so once you click on create
+this will basically spin up a cluster
+wherein you can straight away start
+submitting jobs to this you can
+basically go ahead once you cluster is
+ready you can go into the cluster you
+can submit a job you can choose a type
+which is spark or any other application
+which you would want to run and then
+basically you can use this fully managed
+service which allows you to run your big
+data clusters you can obviously control
+access via roles or Access Control list
+and you can have access as it is at
+project level or based on your data proc
+cluster or even at your worker notes so
+we'll learn about data proc in later
+sessions so as of now you see here the
+cluster is getting created it says the
+cloud storage bucket which it is using
+is this one now I can click on this and
+open link in a new tab it still takes me
+into console but now it is showing me
+the bucket which is being used by your
+data proc cluster this is the bucket
+which is being used and it is being used
+for un underlying metadata which gets
+stored here so you look at the cluster
+related folders you can click in these
+folders and then it can see what is the
+script output what it is doing and so on
+now I can come back here to my bucket
+which will basically show me what kind
+of buckets have been created so you see
+data proc service automatically created
+some buckets which will be holding some
+data you also have some other buckets
+which were created based on other
+services which we used the access
+control is fine grained in all cases
+plus it also shows our bucket so
+underlying it is using compute instances
+it is basically using let's go here and
+let's go to compute engine and let's
+look into VM instances so data proc
+which has spun up a cluster is also
+using the VM instances which we see here
+are running it is using the buckets and
+it has made a cluster ready to use so
+you can click on this cluster and that
+shows me my cluster related details if
+there are any jobs running what are VM
+instances what kind of configurations it
+has used and you can look at different
+details here you can look at the logs
+you can click on jobs and that will show
+you if you have basically run a job on
+this ready to use cluster so it says
+there is this particular job which was
+run
+which was a spark job you can click on
+submit and this one tells you what is
+the job ID what is the region you would
+choose for example we will again choose
+for example Europe West 4 it tells what
+is the job type so you can run all these
+type of jobs in this cluster such as
+Hadoop spark P spark Hive Pig Presto you
+can give your jar file so if you have
+packaged your application as a jar you
+can mention that here you can pass in
+some arguments you can also say some
+other jar files add some properties and
+then click on submit which will run your
+job on this ready to use cluster now
+since we have tested it I can basically
+go ahead and do a delete I don't want to
+incur any cost on these manage services
+which are running so there are lot more
+information about using these Services
+which Google Cloud platform offers and
+we can continue learning about these
+Services as we explore your Google Cloud
+console
+or even your command line option now we
+can come out of this one by clicking on
+this menu and then we have other options
+such as kubernetes you have Cloud
+functions you have your networking
+related Services monitoring related
+Services different kind of tools what
+you have you have other big data
+specific Services which you can learn
+about and for each of these service
+Google has a very good documentation
+available for example when you talk
+about publish subscribe messaging system
+it is a realtime manage service which
+basically is a Pioneer which was used
+and now you have a famous service such
+as Kafka which is being used for your
+publish subscribing or messaging system
+kind of
+requirements so to conclude about Google
+Cloud platform Services you can always
+go to cloud.google.com and look into the
+document section now here you have list
+of different featured products you also
+have list of your different domains and
+services which Google Cloud offers and
+you can learn about all the different
+Services which are offered by Google
+Cloud here you can click on featured
+products and that basically shows you
+compute engine Cloud run cloud storage
+you have cloudsql big query Vision AI
+you can scroll down and look at your art
+IAL intelligence and machine learning
+related Services platform and
+accelerators API
+management so Google Cloud platform
+offers different services in mainly in
+your compute storage and databases you
+have networking related Services Big
+Data specifics developer tools Cloud AI
+identity and Security iot Management
+tools API I platform and so on so
+basically learn about the gcp services
+which Google Cloud platform offers and
+in detail you can play around with
+different Services which are offered by
+creating a free account and as I
+demonstrated you can use any one of
+these Services quick start them
+basically connect to them put in your
+data or use a manage service to manage
+your data and benefit from Google CL
+platform thus having modernized
+infrastructure for your different use
+cases hi guys today we' got something
+very special in store for you we're
+going to talk about the best cloud
+computing platform available Amazon web
+services uh Rahul I think you said
+something wrong here the best cloud
+computing platform is obviously Google
+Cloud platform no it isn't AWS has more
+than 100 services that span a variety of
+domains all right but Google Cloud
+platform has cheaper instances what do
+you have to say about that well I guess
+there's only one place we can actually
+discuss this a boxing ring so guys I'm
+AA and I will be Google Cloud platform
+and I'm Rahul I'll be AWS so welcome to
+fight night this is AWS versus gcp the
+winner will be chosen on the basis of
+their origin and the features they
+provide their performance in the present
+day and comparing them on the basis of
+pricing market share and options the
+things they give you for free and
+instance configuration now first let's
+talk about AWS AWS was launched in 20 04
+and is a cloud service platform that
+helps businesses grow and scale by
+providing them services in a number of
+different domains these domains include
+compute database storage migration
+networking and so on a very important
+aspect about AWS is its years of
+experience now AWS has been in the
+market a lot longer than any other cloud
+service platform which means they know
+how businesses work and how they can
+contribute to the business growing also
+AWS has over $5.1 billion of Revenue in
+the last quarter this is a clear
+indication of how much f faith and trust
+people have in AWS they occupy more than
+40% of the market which is a significant
+chunk of the cloud computing Market they
+have at least 100 services that are
+available at the moment which means just
+about every issue that you have can be
+solved within AWS service now that was
+great but now can we talk about gcp I
+hope you know that gcp was launched very
+recently in 2011 and it is already
+helping businesses significantly with a
+suite of intelligent secure and flexible
+Cloud Computing Services it lets you
+build deploy and scale applications
+websites services on the same
+infrastructure as Google the intuitive
+user experience that gcp provides with
+dashboards Wizards is way better in all
+the aspects gcp has just stepped in the
+market and it is already offering a
+modest number of services and the number
+is rapidly increasing and the cost for a
+CPU instance or Regional storage that
+gcp provides is a whole lot cheaper and
+you also get a multi-regional cloud
+storage now what do you have to say on
+that I'm so glad you asked let's look at
+present day in fact let's look at the
+cloud market share of the fourth quarter
+of 2017 this will tell you once and for
+all that AWS is the leader when it comes
+to cloud computing Amazon web services
+contributes 47% of the market share
+others like Rackspace or Verizon cloud
+contribute 36% Microsoft aure
+contributes 10% the Google Cloud
+platform contributes 4% and IBM software
+contributes 3% 47% of the market share
+is contributed by AWS do you need me to
+convince you anymore wait wait wait all
+that is fine but we only started a few
+years back and have already grown so
+much in such a less span of time haven't
+you heard the latest news our revenue is
+already a billion dollars per quarter
+wait for a few more years and the world
+shall see and AWS makes $5.3 billion per
+quarter it's going to take a good long
+time before you can even get close to us
+yes yes we'll see now let's compare a
+few things for starters let's compare
+prices for AWS a computer instance of 2
+CPUs and 8 GB Ram costs approximately
+$68 now a computer instance is a virtual
+machine in which you can specify what
+operating system Ram or storage you want
+to have for cloud storage it costs 2.3
+cents per GB per month with AWS you
+really want to do that because gcp wins
+this hands down let's take the same
+compute instance of two CPUs with 8 GB
+Ram it will cost approximately $50 per
+month with gcp and as for my
+calculations that's a 25% annual cost
+reduction when compared to AWS talking
+about cloud storage cost it is only 2
+cents per GB per month with gcp what
+else do you want me to say let's talk
+about market share and options now AWS
+is the current market leader when it
+comes to cloud computing now as you
+remember we contribute at least 47% of
+the entire market share AWS also has at
+least 100 services available at the
+moment which is a clear indication of
+how well AWS understands businesses and
+helps them grow yeah that's true but you
+should also know that gcp is steadily
+growing we have over 60 services that
+are up and running as you can see here
+and a lot more to come it's only a
+matter of time when we will have as many
+services as you do many companies have
+already started adopting gcp as a cloud
+service provider now let's talk about
+things you get for free with AWS you get
+access to almost all the services for an
+entire year with usage limits now these
+limits include an hourly or by the
+minute basis for example with Amazon ec2
+you get 750 hours per month you also
+have limits on the number of request to
+services for example with AWS Lambda you
+have 1 million requests per month now
+after these limits are crossed you get
+charged standard rates with gcp you get
+access to all Cloud platform products
+like Firebase the Google Maps API and so
+on you also get $300 in credit to spend
+over a 12 Monon period on all the cloud
+platform products and interestingly
+after the free trial ends you won't be
+charged unless you manually upgrade to a
+paid account now there is also Al the
+always free version for which you will
+need an upgraded billing account here
+you get to use a small instance for free
+and 5gb of cloud storage any usage above
+this always free usage limits will be
+automatically built at standard rates
+now let's talk about how you can
+configure instances with AWS the largest
+instance that's offered is of 128 CPUs
+and 4 TVs of ram now other than the on
+demand method like a mentioned before
+you can also use spot instances now
+these are for situations where your
+application is more fault tolerant and
+can handle an interruption now you pay
+for the spot price which is effective at
+a particular hour now these spot prices
+do fluctuate but are adjusted over a
+period of time the largest instance
+offered with Google cloud is 160 CPUs
+and 3.75 TBS R like spot instances of
+AWS Google Cloud offers shortlived
+compute instances suitable for bad jobs
+and fall tolerant workloads they are
+called as preemptable instances so these
+instances are available at 80% off on on
+demand price hence they've reduce your
+compute engine cost significantly and
+unlike AWS these come at a fixed price
+Google Cloud platform is a lot more
+flexible when it comes to instance
+configuration you simply choose your CPU
+and RAM combination of course you can
+even create your own instance types this
+way before we wrap it up let's compare
+on some other things as well Telemetry
+it's a process of automatically
+collecting periodic measurements from
+remote devices for example GPS g gcp is
+obviously better because they have
+Superior Telemetry tools which help in
+analyzing services and providing more
+opportunities for improvement when it
+comes to application support AWS is
+obviously better since they have years
+of experience under their Bel AWS
+provides the best support that can be
+given to the customers containers are
+better with GCB a container is a virtual
+process running in user space as
+kubernetes was originally developed by
+Google gcp has full native support for
+the tool other cloud services are just
+fine-tuning a way to provide cuets as a
+service also the containers help with
+abstracting applications from their
+environment they originally running the
+applications can be deployed easily
+regardless of their environment when it
+comes to geographies AWS is better since
+they have a head start of a few years
+AWS in this span of time has been able
+to cover a larger market share and
+geographical locations now it's time for
+the big decision so who's it going to be
+yeah who is it going to be gcp or AWS I
+think I'm going to go for choosing the
+right cloud computing platform is the
+decision that's made on the basis of the
+user or the organization's requirement
+on that note I believe it's time for us
+to wrap this video up we hope you guys
+enjoyed this video and learn something
+new that AWS is better right no that
+choosing a platform entirely depends on
+you and your organization's requirement
+hello everyone welcome to this session
+on Google Cloud platform website hosting
+and let's understand what Google Cloud
+platform offers when it comes to your
+web hosting
+requirements here we will learn about
+gohle Cloud web hosting some basics of
+cloud computing web hosting service
+providers what is gcp and why go for it
+different types of web hosting which are
+possible a use case such as Lush and a
+quick handson on using gcp for web
+hosting when you talk about Cloud web
+hosting Google cloud has the Fe feature
+of hosting a secure and reliable
+websites easily it ensures customers and
+sites protection the website is a is
+hosted on a fast and reliable Network
+you can do more work for Less Price with
+Google Cloud now when we talk about
+Google Cloud it is always good to know
+some basics of our cloud computing now
+when we talk about cloud computing cloud
+computing is basically us using
+resources which are provided by your
+cloud service provider such as Google
+cloud and cloud computing basically
+means using hardware and software
+components to deliver a service on a
+network now here users can access files
+applications from any device that can
+access Internet so when we talk about
+cloud computing this is basically using
+Services which are host Ed on the
+infrastructure managed by cloud provider
+when we talk about resources which can
+be used that may include big data
+services storage options your Computing
+options networking options and various
+other services which a cloud provider
+offers cloud computing has various
+different service models such as you
+have platform as a service software as a
+service infrastructure as a service also
+these days we talk about containers as a
+service and these are your different
+Computing service models which are being
+offered by cloud service providers which
+allow you for automatic integration with
+your existing environment or if you
+would want to benefit from modernization
+by using a cloud providers
+infrastructure you have different
+Services which are offered some of them
+are for autos software integration or
+migration backing up and restoring data
+scaling your storage capacity that is
+going for an unlimited storage capacity
+and using a resource provided by cloud
+service provider benefiting from
+reliability cost efficiency which is
+offered by a cloud provider in this case
+we are talking about Google Cloud when
+you talk about web hosting service
+providers there are various web hosting
+service providers you have AWS you have
+Squarespace IBM Cloud GoDaddy Blu host
+and Google Cloud so what is gcp and why
+go for
+it when you talk about gcp or as we call
+it as Google Cloud platform it a set of
+Cloud Computing Services provided by
+Google that runs on the same
+infrastructure that Google uses for it
+end user products like YouTube Gmail and
+much more when you talk about gcp there
+are various reasons why anyone would
+choose it for their use cases now let's
+look at some reasons when you talk about
+pricing gcp has better pricing compared
+to its competitors depending on the
+services which you would use whether
+that would be infrastructure as a
+service such as using compute engine
+instances and running your applications
+on them or might be a managed service
+such as as data proc or big table or
+your big query where you can have your
+Hado clusters running or store huge
+amount of data or even build your data
+warehouse wherein you can store
+structured data so there are different
+services with gcp offers and pricing has
+been a better option in case of Google
+in comparison to other competitors when
+you talk about Speed and Performance
+it's very fast and increases the
+performance of your product project if
+you use different services offered by
+Google when you talk about live
+migration of apps this is one of the
+features which organizations usually
+like which none of other competitors are
+offering when it comes to live migration
+of apps so there are specific features
+for example when you talk about computer
+engine there is a feature stating live
+migration wherein your resources or your
+instances which are running app
+applications would be migrated during
+say maintenance from one underlying host
+to another underlying host without
+affecting your application's performance
+and you can benefit from that when you
+talk about Big Data Google cloud has
+various offerings in Big Data space and
+that's one of the advantages of gcp in
+comparison to other competitors you have
+different services for your big data
+needs such as Pub sub for publish
+subscri describing messaging system or
+going for data proc which basically
+allows you to spin up your Hadoop and
+Spark clusters to run your different
+jobs and so on so when we talk about
+features of Google Cloud platform it
+offers High productivity because you are
+using the resources which are based on
+the same infrastructure which Google
+uses for its own different use cases you
+can work from anywhere provided you have
+internet connection and you can connect
+to to the cloud platform and use
+different services offered via web you
+can quickly collaborate with different
+teams or different colleagues working on
+different projects which might be
+sharing or using different gcp resources
+you are benefiting from high security
+and different encryption and security
+mechanisms with gcp offers now there are
+fewer sources or you could say data
+which is stored or vulnerable devices
+there is high reliability flexibility or
+scalability which gcp offers and the
+cost Effectiveness really makes it as a
+good choice when you would want to
+benefit from infrastructure
+modernization and using a cloud platform
+solution for your use case now when you
+talk about different types of web
+hosting Google Cloud offers three types
+of web hosting you have WordPress now it
+is a free and open source content
+management system you might have used in
+past or have heard about WordPress where
+lot of websites are being created it is
+a popular web publishing platform to
+easily set up blogs and websites and
+thus used by organizations or even
+individual users for having their blogs
+or running their websites or promoting
+their products you have lamp which
+stands for Linux Apache MySQL and PHP
+and lamp stack consists of Linux Apache
+htd DP server MySQL and PHP and is used
+to host websites and web
+applications you also have your option
+of building your own website so you can
+develop website or web application with
+your own code directly on compute engine
+now let's look at a use case and
+understand what happened here when we
+talk about Lush so Lush was founded in
+1995 it's you might have seen this brand
+somewhere in the streets it is a global
+Cosmetics retailer headquartered in UK
+it sells a diverse range of fresh
+handmade products Lush had become a
+global brand with over 930 stores in 49
+countries so the challenges which were
+faced here was traffic on boxing day
+caused website crash for almost 18 hours
+and this is something which had a
+devastating effect on their business the
+previous platform had no scalability
+option what was the solution the
+movement of website during the peak time
+was easy due to flexibility of gcp
+platform with rapid BM deployment on
+Google compute engine the environments
+were monitored and destroyed in minutes
+so the team could test and deploy at
+speed by using Google Cloud SQL Lush
+took complete control of its
+infrastructure and optimize its systems
+for Effective scaling overall the
+platform resulted in lower cost that led
+to a bright future for Lush Cosmetics
+now what was the result of all this the
+availability during Peak loads was
+improved because of Google compute
+engines autoscaling feature the
+infrastructure hosting costs were
+reduced by 40% streamline data center
+usage from 5 to 3 with Google's
+highquality private Network really
+benefited Lush and it provided a
+flexible architecture and scalability
+for future business growth now what we
+have seen here is that your Google cloud
+and its web hosting basically offers
+users to run their websites or use a web
+hosting solution that can benefit in
+more than one way the simplest approach
+could be seen is by clicking and setting
+up a VM instance by going to your
+console for example if we go in to the
+Google Cloud platform clicking on
+console and here the easiest way I could
+test it is by going to my compute engine
+VM instances and here I can spin up an
+instance I can click on create now in my
+previous sessions I have also explained
+about how you could create a template
+and run an instance from that we can
+also click on new VM instance let's call
+it new instance I will choose a region
+for example Frankfurt I will let it be
+general purpose machine me let this
+machine be one virtual CPU core and 3.75
+GB Ram if I'm looking for a heavier
+website which might have more users
+logging in and so on then I can choose a
+higher configuration machine here we
+have the option to choose our
+distribution so for example I can choose
+u 2 and then I can choose a distribution
+version so let it be
+16.04 we can choose the dis size to be
+20 GB and we can use ssds or hdds so as
+of now it is standard persistent disk
+that is HDD and that should be enough
+let's click on select here I will say
+allow default access I would say allow
+HTTP and
+https so that if I have a website
+content hosted on this machine I can
+access it over HTTP now here you have
+management options for your instance you
+have security option which basically
+allows you to provide a public key if
+you are interested in using an external
+SSH client to connect now I have used
+puty gen and I have already created a
+private key which is here I have also
+converted that as a pem file and anytime
+if I would want to use this key all I
+need to do is click on puty gen where I
+had earlier created this PPK file now I
+can just do a load and I can choose the
+key which I have here
+and I can give the pass pH click on okay
+and that shows you the public key let's
+copy the public key from here let's go
+into our instance and I can give this
+here that resolves the name so I have
+the private key saved on my machine and
+public key which will be pushed into the
+machine I can click on Create and that
+should create my instance to which you
+can connect using SSH from the console
+itself or using a external client such
+as puty which will then need the public
+IP of this instance the PPK file what we
+have and you can connect to this
+instance what I can also do is I can
+just do a simple SSH from here and that
+will basically allow me to connect to
+the instance what we also need to
+remember is each instance what we create
+in compute is also having some default
+firewall rules now I have connected to
+my instance I can click on pseudo SU you
+I can log in as root and here if I would
+want I can install a particular service
+so let's say Apache uh let's say appt
+get install and then I can say Apache 2
+or
+httpd that is basically to host your web
+application so I'm installing the
+service and here I can check if the
+service is running by doing a service
+httpd status or I can say ser service
+Apache 2 status which says it is already
+running that means the Apache web server
+page will be accessible from HTTP
+provided my firewall rules allow that
+now before we look into this we can also
+for our instance look at the firewall
+rules so here you have Network details
+now since we created an instance by
+default Google has created some firewall
+rules which allow default HTTP
+https ICM P your default internal access
+RDP and SSH access and here it says
+these Ingress rules which allow incoming
+traffic are allowed from anywhere we can
+customize that as specific IP addresses
+we can also look at ESS which is
+basically outgoing traffic and this is
+again saying my machine can connect to
+the external World in different ways
+using different protocols so you can
+customize these firewall rules as of now
+I'm going to Let It Be default now we
+connected to our instance from the
+browser and we were basically checking
+how you can use this browser by clicking
+on this now what I can also do is here
+I'm logged into the instance my Apache
+server is running so the best way to
+check if the Apache web server is
+accessible via HTTP all I need is my
+public IP so let's copy this let's go
+here and I will say
+HTTP SL slash just give your public IP
+and that shows your Apache to web server
+page that means the Apache service has
+already been run now here it tells if
+you would want to host a particular page
+what you will have to do is as it says
+here it is based on equivalent page on
+dbn from which ubu Apache packaging is
+derived if you can read this page it
+means Apache HTTP server is installed at
+this site is working properly now you
+can replace this file located at VAR
+wwwh HTML index.html before continuing
+to operate your HTTP server so this is
+where you can change the particular page
+and you will be able to host your
+website on this particular ec2 instance
+what we can do is we can check this so
+we can go into the browser and we can
+look in VAR www and that has an HTML
+folder look into this and as of now you
+have a
+index.html and that basically is the
+page what we are seeing now I can click
+on this one and I can see I have a small
+HTML page which is basically showing me
+what we are seeing on our web server
+what I can also do is for now I can test
+it out and I can put in a different HTML
+page and see how that works so we had
+basically the page here in VAR
+www and then we had the HTML folder and
+in HTML folder what I had was this index
+file so as of now I just moved it and I
+put it in a different location so if I
+look in my home
+hdu index.html
+that shows me the complete HTML page
+what we were seeing on our web server
+and here it shows you what this page
+would display if you run it on your HTTP
+it says Apache to window default page it
+shows it works it shows the content and
+so on so for just testing I mve this
+page out from this location and what I
+did was I added a different page here so
+that page if if you look in HTML and
+then look in my page. HTML section I've
+just added some basic details of
+creating HTML I'm saying body I'm using
+Mari and then I'm closing this with HTML
+tag now this is a simple HTML page which
+I created and now what I did was once
+I've done this I basically did a service
+Apache restart so once you do that it
+will take up your new page and once you
+have done that now you can access that
+by going to your
+HTTP giv your details and then basically
+give your public IP which we can get
+from
+here and just paste it here now hit on
+this so that shows me there is a my
+page. HTML I can click on this and that
+basically shows the symbol page which I
+created so as of now this is my web page
+which I have created created and this is
+hosted on my compute instance now
+obviously we can create a more complex
+website backed up by a database use PHP
+use MySQL to store the data and then
+host your website on a Google Cloud
+platform service such as compute where
+your actual code is running so we can
+learn about your web hosting on
+computing instances in further
+sessions are you in the analytic space
+Have you ever wondered how data
+processing in the cloud is changing the
+analytic space if the answer is yes this
+is the course for you all major
+corporations are moving data
+infrastructure and Computing to the
+cloud to optimize costs to make
+analyzing data seamless technology
+leaders like Google and Amazon are
+investing heavily in SAS tools on the
+cloud Google is a Pioneer in this space
+the Google big cloud data and machine
+learning platform provides Cloud
+databases managed Hadoop and Spark
+services with tools like data flow and
+data proc the platform allows for highly
+scalable and reliable data processing
+the data lab big query and Cloud machine
+learning features make it a great choice
+for business intelligence large scale
+Analytics and machine learning its
+best-in-class performance and low cost
+makes Google Cloud popular and sought
+after technology giants like Spotify and
+apple have implemented the Google Cloud
+platform at their organizations and
+Healthcare and consumer goods leaders
+like Phillips and Coca-Cola are
+migrating to Google Cloud for their data
+analytics needs a Google data engineer
+with expertise in Google Cloud machine
+learning and big query earns
+$12,000 per year on average and the
+demand for Google data engineer
+certifications has never been H simply
+learns Google Cloud platform big data
+and machine learning fundamentals or cpb
+100 course offers a thorough overview of
+the Google Cloud platform covering its
+data processing capabilities with
+various use case studies it's the
+perfect course for data analysts
+business analysts and data scientist
+with real world experience in querying
+ETL data modeling or machine learning it
+decision makers evaluating the Google
+Cloud platform have also found the
+training very useful the course will
+cover everything you need to know about
+the Google Cloud platform and includes 8
+hours of instructor-led training modules
+on big data and machine learning with
+the Google
+Cloud hi my name is Randolph kale and
+I'm the co-author author of the Google
+Cloud platform certification courses for
+Google I'm certified on the Google Cloud
+platform and authorized Google
+instructor and the course adviser at
+simply learn I have over 40 years
+experience in the industry spanning
+different roles from development
+managing Cloud infrastructure to product
+management I've partnered with simply
+learn to ensure that you have the best
+opportunity to become certified in
+various Google Cloud platform
+Technologies gain hands-on experience on
+the cloud and make you job ready before
+we discuss the course and the reasons it
+will help you let me first introduce you
+to Google Cloud platform when you use
+the Google Cloud platform you are
+empowered to build test and deploy
+applications at Google
+scale the move to the cloud is happening
+today there is a broad industry adoption
+when I teach classes I see the pace
+accelerating across all companies Forbes
+projects a 19% growth rate to $40
+billion US on cloud services by
+2019 how can you move to the cloud how
+can you make a career in this fast
+growing part of the industry your first
+step is establishing your credentials in
+the Google Cloud platform domain and you
+can do that by getting certified the
+Google Cloud platform fundamentals
+course introduces you to the Google
+Cloud platform and shows you how you can
+incorporate cloud-based Solutions into
+your business
+strategies the course is intended for
+solution developers system operation
+professionals and solution Architects
+planning to deploy applications and
+create application environments on the
+Google Cloud platform it is also
+appropriate for executives and business
+decision makers evaluating the potential
+of Google Cloud platform to address
+their business needs completing this
+course will give you the skills and the
+confidence to take full advantage of the
+Google Cloud platform
+ecosystem simply learn offers you
+extensive training to help you
+understand the platform you get eight
+hours of interactive instructor-led live
+online sessions along with a course you
+receive a free trial account with $300
+credit toward the use of Google Cloud
+platform for 60 days the instructors are
+Google authorized trainers the content
+is engaging and all the topics are very
+well explained with simply learn you'll
+be enrolling for the online classroom
+flexi pass which gives you the
+flexibility to attend any of the weekday
+and weekend batches according to your
+convenience another thing that's
+impressive is the proactive teaching
+assistance where experts resolve all
+your course related project related or
+technical questions while pursuing the
+course so if you're looking for the
+training and guidance you need to have a
+deeper understanding about Google Cloud
+platform products and services this is
+the best course for you with a course
+material labs and authorize instructors
+with extensive experience I don't think
+you'll need to go anywhere else take
+charge of your career sign up for simply
+learn CP 100a training all the best to
+you and with that we have come to the
+end of this video on Google Cloud
+platform full course I hope you found it
+informative and interesting if you have
+any questions about the topics covered
+in this video please ask away in the
+comment section below our team will help
+you solve your queries thank you for
+watching stay safe and keep learning
+hi there if you like this video
+subscribe to the simply learn YouTube
+channel and click here to watch similar
+videos turn it up and get certified
+click
+here
+e
+e
+e
+e
+e
+e e

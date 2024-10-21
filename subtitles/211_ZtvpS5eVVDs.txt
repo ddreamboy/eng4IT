@@ -1,0 +1,1892 @@
+hello this is Matthew from simply learn
+and today we're gonna go through a
+complete end-to-end journey on what it
+takes to set up a dev ops team we're
+gonna go through what we need to be able
+to do to go to dev ops what the
+arguments are on why you need to do dev
+ops and they will actually go through
+with all the individual tools you need
+to be able to successfully implement dev
+ops within your organization in addition
+to that we're also going to take time
+and go through each of those tools so
+you get a good understanding of a
+step-by-step instructions on how to do
+basic setup of each of those tools so
+let's get started so what was dev ops
+before so what was the process that we
+took were doing delivery before dev ops
+well it was a model called waterfall and
+waterfall was a very traditional
+approach to actually building out
+solutions and the reason why it's called
+waterfall is that you bring out all the
+individual requirements and individual
+sections of a project and they cascade
+off each other
+so if we look at the breakdown we have
+requirements design we have
+implementation we have verification we
+have maintenance you'll have user
+acceptance testing and this is all based
+on the software development lifecycle
+model SDLC and it's been around for
+quite some time and it's still used by a
+lot of companies today the challenge
+you've had with the waterfall model is
+that it really is a very long drawn out
+model for actually building and
+delivering solutions so it took a very
+long time to actually write code and
+then deploy the code it was very
+difficult to actually identify problems
+within the code and provide feedback to
+the development team on what to fix and
+this really was a very time-consuming
+we're talking about months sometimes
+years for projects to be actually go
+through a waterfall model process so
+along came a new method of being able to
+do delivery and it's called agile and
+the agile approach is a way of being
+able to take the actual work that's done
+in a waterfall model and compress it
+down into small iterations and what we
+would do is a fundamental changes that
+you would actually take a team
+that were disparate and as part of the
+individual cascades within a waterful
+project and as you bring them together
+so you have your requirements team and
+person design developer and release
+management team all together in one
+group working on an iteration the great
+thing about agile is that you took a
+process that was weeks um or months or
+even years in length as it was with
+waterfall and you reduce it down to two
+or four week Sprint's by depending on
+the cadence for your team typically you
+have a two week spring and then the goal
+is is that at the end of each sprint or
+sometimes every other sprint you would
+do a software release and so that
+customers were getting the software much
+faster the problem that we still ran
+into though with agile is fundamentally
+similar to what we were having with
+waterfall you have your DevOps person
+working on code on their system and
+you'd be working great on their computer
+and then you have the operations person
+who's migrating the code from the
+developers environment the test
+environment - for the production
+environment and you would run into
+issues where the code simply wasn't
+working there's a lot of reasons why
+that would happen the actual developer
+environment would often be very
+different or would have different
+dependencies in it so the the hardware
+that the software there may be
+additional applications that were
+installed on the operating system that
+simply hadn't been transferred over to
+the operations environment and so what
+you would have is a disconnect between
+the developer environment and the
+operations environment making it
+difficult and try to roll out codes
+you'd run into a program where that when
+you rolled out code you'd have to have a
+rollback plan in case the code wouldn't
+work in production and so each release
+became a vent wherever I got very
+stressed about the actual event of
+releasing code because you didn't know
+whether it was going to work so dev amps
+really looks to address and solve a lot
+of these problems so the key word that
+you'll often hear with DevOps is
+continuous integration and what that
+means is essentially that as it dove
+is working on their coat the coat is
+constantly being tested against not just
+the actual code itself with unit testing
+but the environment with which it's
+going to be released in and the goal
+from a DevOps model is that the
+breakdown of communication that happens
+with waterfall and agile with dev
+developers and operations teams aren't
+working in the same brand is being
+removed and you're able to provide a
+continuous and contiguous environment
+between the developer and the apple
+actual operating model so the reality is
+when the developer is working on their
+code they're actually working in an
+environment that is identical to the
+production environment and so when the
+actual operations person comes try to do
+releases for the code and you can see
+some teams are doing as many as 22 even
+up to 50 releases to production
+environments every single day you're
+able to guarantee that the actual code
+itself will work and releases go from
+being a stressful event to a byproduct
+of good testing and good setup and
+structure for how you actually build out
+your solutions so what we're seeing here
+so the goal is that as a developer and
+as an Operations person that the code is
+working continuously in both
+environments you have continuous
+integration and continuous delivery so
+simply put what we're able to do is
+we're able to eliminate the problem of
+the operation environment not being in
+sync with the development environment
+and this is a improvement on edge on
+this is not to say that waterfall or
+agile are wrong as delivery models what
+it is is just a maturity of the ability
+to deliver solutions and DevOps is just
+another rung in that maturity curve
+using tools that are available to us now
+that 5 10 years ago simply weren't
+available so the goal is for you as a
+team to move to a dev ops model where
+you can implement continuous releases on
+your software as long as you're using
+the tools that are available and the
+good news is those tools are open source
+tools so let's go through
+some of the benefits of why you'd want
+to go and use DevOps so you know
+essentially what's in it for you so
+let's over the next few slides we're
+gonna go through what is DevOps we're
+gonna go through the benefits of DevOps
+so in the last few slides you've
+actually seen you know what is DevOps
+and the benefits of DevOps along with
+the lifecycle but we're also going to
+start digging into the tools that you
+have that are useful for DevOps
+and we're going to focus in on seven
+tools that can provide an end-to-end
+infrastructure for delivering DevOps
+solutions with there are significantly
+more tools available on the market but
+these are seven of the most popular for
+each of their categories so DevOps
+really is an essential collaboration
+between the development team and the
+operations team these are teams that
+have in past been somewhat at conflict
+with each other and what you have now is
+an opportunity where those teams can can
+now work continuously with each other
+the expectation with DevOps is that it
+will continue to mature indeed you're
+actually even seeing some groups which
+are now called dev sac ops where they're
+integrating security as part of the
+delivery between the development team
+and the operations team the bottom line
+is a DevOps engineer is highly in demand
+the demand for DevOps engineer is
+literally going through the roof with
+salaries going ups exponentially around
+that so let's dig into some of the
+benefits of DevOps it's not just a new
+catchphrase it's actually got
+significant value and how you can speed
+up delivery of your software so the
+benefits of DevOps can really broken up
+into a number of key areas first of all
+we have continuous delivery of software
+which allows you to continuously release
+new features with the security and
+understanding that the software going
+out is of high quality it allows the
+teams that are working on the software
+delivery within your organization to
+more effectively collaborate with each
+other so that you're all talking from
+the same page and understanding of what
+needs to be delivered the deployment
+process itself moves from being an event
+where there's a lot of stress and
+there's a lot of contingency plans to
+being a much easier deployment the
+efficiency within the actual code that
+you're writing the ability to scale up
+using the different tools are available
+allows you to be able to bring in and
+scale up and reduce the teams you have
+running the software as needed errors
+can be fixed much earlier and more
+quickly and can be caught before
+anything gets pushed out to the
+production environment and fundamentally
+what we're looking for is improving the
+security of the actual releases so the
+actual concept of security is Center to
+all the work you're doing and then
+finally what really allows you to reduce
+the number of errors is that there is
+much less manual intervention there is a
+greater reliance on scripted
+environments that you can actually test
+and validate for their security
+reliability and uptime efficiency so
+let's talk a little bit about the life
+cycle of a DevOps so the very first step
+that you're take is to actually build
+out a build and test environment and
+this is a continuous building testing
+brand and this is merge away the first
+step of your source code once you move
+through that and you're looking at
+continuous integration which means that
+every time somebody checks in their code
+they're validating that the code
+actually can run in the production
+environment once you've actually been
+passed the end continuous integration
+and the testing that you have with your
+code you're looking at continuous
+deployment if the code works and is
+available to be released into the
+production environment let's go ahead
+and release it and once you actually
+have release code then you want to be
+able to validate that your environment
+is working efficiently you may release
+code that is a new feature within your
+application and customers may then graft
+it immediately to that new feature if
+they do you want to be able to ensure
+that the code is working and more
+importantly but the infrastructure is
+there to support and then finally you're
+looking at software released as a
+continuous event and then you go back to
+the beginning you start working on more
+code you run it through your build
+environment and continuous integration
+deployment continuous monitoring and
+keep that cycle
+moving so let's dig into the tools that
+you as a DevOps engineer would need to
+learn if we break down the environment
+that we have all the way from source
+code management to software release and
+there are a number of key tools that you
+want to be able to use so for instance
+source code management can get is an
+open source tool that you would want to
+used from managing your code the
+continuous build and test environment
+will be managed with mavin and selenium
+integration with the environments that
+you're working on is managed through
+jenkins the actual deployment to your
+production environment will be managed
+with products such as ansible and docker
+and then the monitoring of your network
+would be used with tools like Nettie O's
+the thing that you have to remember with
+all these tools is that they're
+open-source tools there is no licensing
+that you have to you a purchase some of
+the tools will have a pro level
+licensing that you can choose to select
+but to get started
+all of these are open source tools you
+can actually start using for free right
+now so let's dig in to get so let's look
+at the the challenge that git is able to
+address so before git and you if you had
+a team of developers that were working
+on different pieces of code one the key
+problems you have is that there was no
+collaboration between the team and the
+the challenge you have is that with
+version control it was difficult and
+often required I'm having to check in
+two large environments or you had very
+you know quasi version control
+environments it was time consuming
+often there were problems that were
+would happen if this the version control
+server would crash and there wasn't a
+backup then you'd have to kind of
+essentially go back to square zero to
+see whether or not you actually had to
+do the work again so let's look at what
+git does to actually solve this so first
+of all one of the things that it does is
+it makes team collaboration much easier
+the software itself is more effectively
+documented and more and more effectively
+maintained the actual code that actually
+gets worked on by each developer in a
+gate environment is the complete code so
+it makes it much easier for backups and
+for sharing content amongst each and
+so the way in which get is able to
+accomplish this is that it is
+essentially a distributed version
+control solution and what that means is
+that when you have multiple developers
+yes you do have a git remote hub that
+you connect and are able to upload and
+download different branches of the code
+that you're working on but essentially
+as a developer when you actually have
+the code you actually have all of the
+code and you're able to imagine firm
+your local PC or your local development
+machine and without having to worry too
+much about the network or the server
+going down so some of the key things in
+which get is really good at it is you
+know a software management tool is
+designed from the ground up to merge
+code development it does track the
+changes on that code easily and
+effectively makes it easy for use
+developer to track your code the ability
+for multiple developers to work together
+is much easier in comparison to other
+solutions and and this is really the the
+key success point with a kit is that it
+allows for nonlinear code development so
+you can actually have people working on
+different areas of the code that may be
+released at different times because of
+what they're working on so if we
+actually break down the architecture of
+get it really calls into four key areas
+of a working directory a local staging
+area a local repository and a remote
+repository so the process you'll go
+through is you would add files to the
+staging area from your working directory
+this would be usually they get add
+command and then from your staging area
+when you're ready to actually then
+commit those files to a local repository
+you use the git commit command and then
+from there you would actually then push
+your local repository out to the remote
+repository for a final commit to the
+remote repository and this allows them
+the rest of the team to pull down your
+latest final changes so you can be
+working on your code locally and you can
+be using your local eat local staging
+area and local repository and when
+you're ready to commit your work
+committed and Anna Souza's committed the
+rest of the teams and then pulled out
+the latest changes that you have worked
+on and this allows for a complete and
+holistic check out round check-in
+process and then sometimes you want to
+be able to go through and then take the
+checked out code that you cram that
+you're pulling out and merge it with
+your local code and the merge process
+always ensure that you are working on
+the latest and best version of the code
+and everybody on the team is being
+consistent with the communication of the
+actual code that's being delivered okay
+so what we're gonna do is we're going to
+validate that we have get running on a
+computer we're gonna vent create a
+directory and a file to that directory
+make some changes to that file and then
+use the commit commands to be able to
+check in the files and validate to
+ensure being made so first thing we do
+is we're gonna see if we have git
+installed and still have do you just use
+the command git version and what you'll
+get - - version I'm not even give you
+the version number and now we're gonna
+create a new folder so m'kay dirt green
+and they'll create a new folder and
+we'll move our cursor into the green
+folder by changing the directory and we
+can go back into Windows and we can
+validate that that directory is actually
+there so here we go
+look we should see if there's the green
+folder if I double click into that
+you'll see there's nothing in the folder
+right now so what we have to do is we
+actually have to add the folder as part
+of a git project and so we're going to
+use our get in the in it and
+they'll actually initialize the folder
+and make it a git repository and so
+let's go ahead and create a file though
+actually go inside of that new
+initialized folder and you'll see that
+there's a dot git folder that's been
+added so the new text file we're gonna
+create it's gonna be code class and
+they'll let you be class dot txt the
+extension is hidden by default in the
+text file we're just gonna type in the
+text welcome to simply learn and save
+that now let's go ahead and check the
+status on all of that file in gate so to
+do git status and you'll see that it
+says yes there's a file there but it
+hasn't been committed to the repository
+that's why it's in red
+so we have to do is commit the file to
+the repository and it won't be able to
+track any changes that we do to that
+file so let's go ahead and commit the
+file so we do commit and class txt and
+they'll add back to the repository and
+there we are it's added and the final
+step is we want to do is commit it and
+to get so it's to get commit - and like
+and this will be our first commit and
+this is the description and so it she
+shows us committing the file it's the
+only item in the folder so now we can go
+over to the file that we just created
+and we can make some changes to it so
+open up the file so it says welcome to
+simply learn let's put in some text
+afterwards that says this is my demo and
+we'll save that close that and now if we
+go back to get we can do a compare and
+contrast between the original file that
+we committed and the new updates that
+we've just done and we can check the
+difference by using git diff and what
+you'll see is the red text was the
+original text and the green text is now
+the new text that's been added and so
+that shows you how you can she go and
+create a new git repository go through
+adding files committing the files into
+the repository and being able to see the
+different version controls let's move on
+to mavin so when I use mavin so so why
+use married well this look at some of
+the things that you were done in the
+past have you actually building out the
+tasks so let's break down what you would
+have done before using mavin if you were
+to create a game or football using Java
+you would actually have to go out and
+for your actual game you'd have to
+collect all the different components
+needed within the Java environment and
+to make sure that everything would work
+correctly and if you make the slightest
+mistake you wouldn't get the right
+output that you needed the actual
+process of building and deploying a
+project really would take quite a lot of
+time after mavin mavin allows you to be
+able to take templates that are stored
+locally and be able to use those to be
+able to improve the efficiency of being
+able to build out your environment by
+removing dependencies within the
+application it makes it a lot easier
+if you'd be able to focus on just
+writing the code for your game or your
+solution rather than having to manage
+the environment within which that
+solution would be deployed now the focus
+within mavin is that it is an automation
+tool and it's used for projects to have
+a short period of time so as you're
+starting on your environment for
+building out solutions mavin is great to
+get started with and then if you need to
+have longer-term projects then you can
+look at other alternative tools on the
+market so four key areas that you want
+to focus on why mavin can help you is
+that it does allow for efficient some
+parallel builds to be run concurrently
+it's really easy to use you can get up
+and started with math very quickly you
+do have fast access to new features and
+new configurations quickly within your
+environment and the build process that
+will allow you to be able to visualize
+your code happens very quickly the
+actual architecture of mavin is that the
+execution and commands are managed
+through what's known as a pom file the
+pom file itself is a project object
+model and it's an XML file that actually
+has the details for the project and the
+configuration for the build environment
+on file itself will then fetch
+dependencies from the local repository
+and will apply any plugins that you may
+have also included within your mapping
+environment the goal is that your
+software is build much more controlled
+at Manor so what we can do now is we're
+going to show you how to go through and
+run your very first project using maven
+the first steps you can have to do is
+make sure that you have the latest JDK
+installed on your computer so we're
+gonna go ahead and open up our web
+browser and get this installed on your
+computer so we're going to type in JDK
+download into our Chrome web browser and
+go to the oracle website which allows us
+to learn download the JDK because we're
+running this on Windows we're going to
+download the Windows version of the JDK
+and once you have that installed
+the next step is to actually then go
+ahead and download the Maven files so
+it's going to take us to the Maven
+apache
+org website where you can go ahead and
+download the version of maven that you
+need for your operating system we're
+going to go ahead and download the zip
+file instead of just an executable file
+now this will give you more control over
+how you install it onto your Windows PC
+after the file has been downloaded we
+want to go ahead and extract the entire
+file so you have the unzipped folder
+running on your computer
+so one of the things that we're gonna
+have to do is go through and set a
+number of system variables for the JDK
+infinite path to your mavim files and to
+do that you want to go into your control
+panel and select the system security and
+then system settings and then go into
+advanced system settings this will give
+you access to the Edit system variable
+setting that you're looking for
+so we're gonna go down to the path
+variable and you'll see already that we
+have pasted in the link to the JDK right
+there underneath the variable value if
+you've been stole the JDK it's likely
+that's already installed this path for
+you correctly
+the good news it's actually fairly easy
+to install the path to man and to the
+JDK because all you have to do is copy
+the path for where the folder is located
+on your system and just paste it into
+the variable value under the Edit
+Systems variable fault and file system
+and that should now get us all the files
+and you can see that we have our
+extracted folder already on our desktop
+there and the system path is now set to
+where the moment folder is located so we
+also have to go into system protection
+and
+[Music]
+set the system off - ummm folder now we
+have to go ahead and do a user variable
+that also part links to the path of
+mavin files
+so what we're doing right now is we're
+just validating that all the files have
+been extracted correctly they have which
+is good we can now go ahead and link to
+these moment folder all right so now
+what we do is we're going to move over
+to command prompt this is where we're
+going to do most of our work from here
+on out first come on we're going to do
+is MV so we go ahead and create a new
+user variable and we're going to type in
+we're gonna cause one enter - and then
+we'll put in the path to the apache
+moment folder you should be able to use
+m2 - home for your price but if it's not
+you can always use the verbal name map
+and - home and that will do exactly the
+same as empty I'm going to both here
+just so we have a backup
+so we're gonna open up command prompt
+and we're going to see if Maybin is in
+store we do that by writing MVN - -
+version and here we are yes so now we're
+going to go ahead and create our first
+maven project and the first part of
+creating maven project is actually the
+directory in which we will store the
+files that will be used to create for
+our project so we're just going to go
+ahead into the folder and we're gonna
+create new directory and we're going to
+call this one and we're gonna call it
+simply learn and we can just copy the
+path for them so I'm gonna write this
+the correct path for it so I'm gonna
+change directory CD and you copy the
+file location over alright we are now
+moved ourselves over to the simply
+learned folder and we'll be able to
+install the pom file which is what all
+the instructions for mavin are stored in
+into this area so to do that we're
+actually going to use a template that's
+already been created by mavin and this
+is going to be the MVN archetype
+template and so you just - mbm :
+generate and this will go ahead and
+create all the files for us
+so this can be quite a few files and
+they're all being downloaded from the
+event website and so it can take some
+time but as you see we've gone ahead and
+all the files have downloaded and we
+have everything up and running correctly
+inside of our environment on online and
+come on prompt so we'll have some values
+that we do have to say it
+the first one is group ID and we're
+going to call this one comm math and
+then the next one is going to be
+artifact ID and this is going to be MAV
+ma v - project hit return and then
+version is going to be 1.0 - snapshot
+which is put in the same value for this
+version 1.0 - snapshot and the package
+we're going to take call this one comb
+math dot demo and then we'll select yes
+so wife to create the environment and it
+will build the environment for us and
+what we have now so we have this screen
+which shows everything is up and running
+for us and we have a successful build
+and so let's go into the main folder and
+just see that we have our simply lim
+folder let's open up and see what's in
+there so we double click into that
+directory yep and there we are sty and
+see some of our files so it's the same
+project names as ma v - project and then
+we have our pom file that's in there
+which is fantastic under the source
+folder we'll actually see the demo and
+we have our app under the demo app
+we have our test file as well so in the
+main folder we have a file that's called
+the pom file and that really is the most
+important file that you need for your
+project you'll now go and you'd be able
+to set all your settings inside of that
+pom file but that's it that's what we
+have done here is we've gone through and
+we've gone through all the setup that
+allows you to make sure you have the
+right files running on your computer the
+right files to download from the Maven
+website how to install all the files the
+settings you need to make on your
+Windows computer and then all the
+settings that need to be done in the
+command line to be able to run the
+application and then from here you can
+actually start running maven now let's
+look at selenium as we get started
+looking at testing so before selenium if
+you want to run testing and particularly
+you want to do sequential testing it
+would take up a lot of time you'd have
+to run one test then the second test and
+then all the other tests and the actual
+time elapsed would be quite significant
+with Selim you're actually able to do
+parallel testing so instead of looking
+at the amount of time you take to
+achieve run a test and run the tests
+sequentially the length of time to
+actually run your tests is based on the
+length of the longest running test of
+which in this example the longest
+running test is two minutes now one of
+the things that you'll notice with
+selenium is that its focus is on web
+applications and it is an open source
+tool and it's really good at regression
+and functional testing of web
+applications if you're doing a mobile
+application or if you're doing an IOT
+application there are other tools you
+can use on the market as well but if you
+are new to DevOps and you're setting up
+your first DevOps environment selenium
+is a great place to start and web
+applications are mature and allow you to
+be able to test out and validate the
+concept of continuous testing in your
+environment so four key takeaways for
+selenium it really is fast and it's fast
+execution it's highly accurate so you
+can always validate that what you're
+doing will work correctly and feedback
+can be sent straight back to the
+but if their code doesn't pass the test
+allows you to script in the multiple
+languages again it's a great way for you
+to test and the focus is on web
+applications but you can test in
+multiple languages useful web
+applications and most importantly allows
+for parallel test execution which speeds
+up the whole test process significantly
+I want you to break down the
+architecture of selenium and what you'll
+find is the actual libraries that you
+can use for selenium run in c-sharp Java
+Python JavaScript PHP these are the
+common languages used to build out web
+applications the actual webdriver itself
+is an API driver which is fantastic
+because it makes it easier for you to
+integrate selenium with applications
+through API and you can run the solution
+through different web browsers the most
+popular being firefox chrome and edge so
+to focus the selenium webdriver codes
+are being used to build out the client
+libraries that make it LOM to allow you
+to be able to build solutions across
+multiple web application environments
+the webdriver application interface is
+you to integrate with the application to
+make it easy for testing the webdriver
+service provides an immutable stateless
+environment that makes it very easy for
+you to be able to use protocol such as
+JSON to wire up your test environment
+the driver manages the communication
+between the browsers and the wire
+protocol that's used for JSON within the
+web browser itself and then the actual
+commands are then run through the web
+browser for you to be able to get your
+results okay so before we had to get
+into the setup of so any of the first
+things we want to do is we want to make
+sure that we have the right version of
+Java installed and so I'm just using
+command window here I'm going to type in
+Java and she what it see now is I do
+have Java installed which is fantastic
+Oh as you'd have to go and download Java
+from Oracle's website the next step is
+to validate by have Eclipse installed
+and I'm just typing Eclipse and there we
+are I have the clips installed you can
+actually download eclipse from the
+eclipse website the third step I want to
+check is to validate that I
+a browser driver installed so I'm using
+Google's Chrome and for my main browser
+but you can actually go out and download
+the chromium driver and that's the
+actual core engine that powers Chrome
+interesting enough being used in the new
+Microsoft edge web browser so you get to
+go and download the latest chromium
+driver and install that and then the
+final stage is to go to the selenium web
+site and download the jar files
+themselves so just do a google search on
+selenium download and here we have the
+selenium hq2 org website when you take
+straight to a download page and we want
+to download the latest version and we've
+gone ahead and done that already so we
+have everything running and now the next
+step is for us to install all of this
+great content okay so before we had to
+get into the setup of so any of the
+first things we want to do is we want to
+make sure that we have the right version
+of driver install and so I'm just using
+command window here I'm going to type in
+Java and she what I see now is I do have
+Java installed which is fantastic oh as
+you'd have to go and download Java from
+Oracle's website the next step is to
+validate I have Eclipse installed and
+I'm just typing Eclipse and there we are
+I have the clips and so you can actually
+download eclipse from the Eclipse
+website the third step I want to check
+is to validate that I have a browser
+driver installed so I'm using Google's
+Chrome for my main browser but you can
+actually go out and download the
+chromium driver and that's the actual
+core engine that powers Chrome
+interesting enough being used in the new
+Microsoft edge web browser so you get to
+go and download the latest chromium
+driver and install that and then the
+final stage is to go to the selenium web
+site and download the jar files
+themselves so just do a google search on
+selenium download and here we have the
+selenium hq2 org website and you take
+straight to the download page and we
+want to download the latest version and
+we've gone ahead and done that already
+so we have everything running and now
+the next step is for us to install
+all of this great content so we're just
+going to go ahead and open up the
+Eclipse environment and it takes a
+moment to launch eclipse
+I'm going to go ahead and create a new
+project and we're going to call our
+project XYZ I think that should be fine
+and this is just a test after all and
+we're gonna go ahead and create a new
+class file by right-clicking and select
+new class and we're gonna go in here and
+give the class file a name of simply
+learn and let's see the finish button
+being selected so maybe we need to
+select some other options here oh you
+know I think it could be the package
+name yeah let me go ahead and change the
+package name and I'm going to change
+that to qwe qwf yep and the finish
+button has now been highlighted I can
+select that I can go select that let's
+like finish and we now have a test page
+as up and running and but what we have
+to do is validate that selenium is
+actually part of the project so to do
+that when you go to the source to the
+actual sauce XYZ file and right click on
+it and we want to validate that all the
+files are there correctly and so going
+to see that we have the libraries are
+there yep there's selenium if it's not
+there you can say add external files and
+find the selenium jar file sect open and
+they'll would load that in there and
+then you hit apply in close and they
+would apply it to your project and now
+we can actually start writing the code
+part so we're gonna put this code in the
+public static void section and the first
+command is going to be a system dot set
+property and we want to make sure that
+we're configuring the webdriver for
+chromium correctly so we're gonna do
+webdriver and chrome driver and then the
+argument is actually going to be the
+full path full network path to the
+chromium driver that you have on your PC
+so let's see we have chrome here we want
+to copy that path and so I paste that in
+and then after we
+paste it in the path we have to make
+sure that we also put a link to the
+actual file that we want to execute
+which in this case is chrome driver
+Exe
+and then we want to make sure that the
+web driver is pointing to the new Chrome
+driver
+and you'll notice that there's a couple
+of red colors on here which means that
+we don't have all of the public classes
+imported correctly so you can write
+clear commitments like import the
+webdriver and just select that real
+quick and that adds the import correctly
+at the top of the page and same for
+chrome driver and that's just a very
+quick way and when you're working
+Eclipse to import additional files so
+before we actually start our test we
+want to make sure that we've actually
+cleared out any potential browser
+cookies that would be within the
+criminal driver so for that we're just
+going to go ahead and we're going to
+write a script that allows us to remove
+the cookies
+so I want to drive a duck marriage and
+then delete all cookies
+and the next line we're going to do is
+to actually have the webpage that we're
+going to connect to open up in
+full-screen mode and for that to happen
+we're going to go and actually use the
+window property which wishes what I was
+writing before by mistake and so this
+will allow us to go fullscreen and now
+we need to pull in a web page so we're
+gonna get the get command and what we're
+going to do is we're actually just gonna
+pull in a web page from Amazon I would
+trade you something to have here so I'm
+just going to go to amazon web page and
+so I'm just gonna copy the URL and you
+know just need to copy HTTP wwm
+seungyeon or calm wherever you're
+located and so you can see that I've
+pulled in the Amazon Web page and then
+line 18 and she allows me to go and
+connect so here we are we have the
+Amazon Web page so I'm pulling in and
+then what I also want to do is I want to
+look for a specific ID in one of the
+elements and so I have the driver which
+is called fide and element and that
+allows me to look for any element that
+beyond the actual page so here we have
+the HTML in the console screen and I can
+actually then paste out an ID from the
+element that I want to use
+so the find element is just the ID for
+each element and most of them have them
+because they needed for the JavaScript
+and CSS so let's see there's quite a few
+IDs and we can select any of those so
+what we have here is we have two tab
+search text box and then what that
+actually does is that finds the ID for
+the text box used for searching and then
+we're gonna use the st. key command
+which allows us to actually pre fill in
+the search box and we're going to use
+the test of puma shoes this is a fixed
+string but you can actually put a
+variable in here if you want to pull
+strings from a database or an XML file
+and then the next line on line 19 which
+shows how long actually gonna run the
+actual script for the search which is
+only 10 seconds and then once the 10
+seconds has elapsed we'll actually quit
+this script which actually causes the
+web browser and takes us back into a
+screen hint let's test that make sure
+it's working and everything's looking
+good the web browser opens which is what
+we expect it goes to Amazon fantastic
+right now and she goes to the search
+screen and should fill in the Puma shoes
+there we get puma shoes and wait 10
+seconds and it closes and that's exactly
+what we were expecting now you can
+actually change the unit of time that
+you would have for the actual test so if
+you wanted to see what was happening so
+longer than 10 seconds you can actually
+change the actual time or the actual
+metric and so in this instance we got it
+says seconds and see unit of time or you
+could do minutes or hours or
+microseconds and you can change the
+keyword as well so it could be jigsaws
+or anything you want to check but if
+you're actually building your own
+application you want to be able to test
+your own data against your own
+application that's where you put in that
+specific data
+so let's look at the center the heart of
+your DevOps environment and that Center
+is with Jenkins
+so before Jenkins people would
+developers would work on their code and
+the code would then be checked into a
+source repository you would then check
+for any issues and then you would then
+send that code over to the operations
+team and there would be a delay for
+actually delivering software so the item
+challenges developers hand is that if
+they wanted to run any tests they had to
+wait until their software was built and
+there was a lot of problems in providing
+feedback and particularly had large
+teams working on software who actually
+had the error the actual delivery of
+software was often delayed because of
+these key problems
+so after Jenkins what we actually have
+is the ability to be able to streamline
+this whole process the build test and
+deploy happens continuously and are able
+to then notify developers and the actual
+specific developer of any errors that
+are detected being able to speed up the
+delivery process much more efficiently
+the focus of Jenkins is that it
+automates a continuous development
+testing and deployment environment and
+it's open source
+Jenkins is easy to install and configure
+it's been around for many years now and
+it is very mature
+there are many plugins that you can use
+within Jenkins to be able to have the
+Jenkins product work with your
+environment if there isn't a plug-in you
+can actually extend by you can actually
+write your own plugins if a plug-in
+doesn't exist so you can actually
+continue and extend and invest in the
+Jenkins ecosystem and it can be easily
+distributed across multiple machines so
+let's break out the architecture of
+Jenkins so checking such as a remote
+source code repository and it then pulls
+out the code every time there is a
+commit from and into the server master
+the server that master will then have a
+slave that will run on either Windows
+Linux or Mac OS to be able to just we
+just load across those environments and
+after it's actually gone
+true and run his tests ill then send out
+a report the goal of a report is to
+communicate back to the team what has
+passed and what has failed the actual
+check-in process okay so we're gonna go
+ahead and show you how to install
+Jenkins on your local PC so the first
+thing you want to do is check that you
+have Java installed so we're just gonna
+go into our system and see whether or
+not we have the Java JDK installed you
+ended up by going into system properties
+secondly advanced and environment
+settings and there we have Java JDK
+installed and you want to just double
+check on the system variables to make
+sure that you have the Java and score
+home installed correctly as well and we
+have that consult and under path also
+make sure you have a link to the Java
+JDK as well so we have everything
+installed and what we're going to do is
+we're gonna open up the command window
+and just do a door check right there
+so about command window and we're just
+going to check that we have Gerrans sort
+so we do Java - version and we have a
+version number comes back if we do have
+Java installed we'll and get a Java
+version number come back with a a Venera
+all right so everything that's good so
+next thing you want to do is to go to
+the Jenkins website and download the
+files so we're gonna go to Jenkins dot
+IO and that's the official drinkin's
+website and if you want to download you
+just go to Jenkins io / download or you
+can just type into your search bar
+download Jenkins and they'll give you a
+link straight to the download page and
+one of things that you'll see is that
+there's lots of different versions for
+Jenkins because Jenkins runs on pretty
+much most operating systems including
+Windows Linux and Mac OS but we want to
+select the Windows version so we've
+already gone ahead and downloaded zip
+file which contains all of the files
+that we need for Jenkins and so that's
+the zip file and we've expanded it and
+what we want to do now is double click
+the installer file and we'll go ahead
+and install that
+so we've already installed this so one
+things that we'll get is a message to
+ASCII we want to repair you did she get
+a install message because it would be a
+fresh install for you and but once
+you've done that has all the files and
+all
+two things correctly installed onto your
+Windows computer and we do all my
+commands for Jenkins through a web page
+that's run locally on your PC and so
+you're gonna type in localhost colon
+8080 and when you do that they'll
+actually take you to Jenkins running
+locally on your PC and here we have our
+Jenkins dashboard and we've already gone
+in and created some sample jobs and you
+can see those listed on the throwing on
+the right-hand side of the screen so
+let's go through some of the things you
+would want to set up here so first of
+all let's go into the manage Jenkins
+screen and that will achieve so we'll go
+to the manage Jenkins tab on the left
+hand side to do some standard
+configuration settings so we're going to
+the configuration systems and if you
+want to if you're like remotely
+connecting to a remote Jenkins
+environment you can actually install a
+JDK remotely but on that machine if you
+want to now we already have the JDK
+environment already set up so yeah
+that's good here it's going to do that
+but you also see as you go through the
+list of applications that you have
+Gradle ant mavin docker
+get and other tools that you would use
+in DevOps environments there are many
+other tools you can install through
+plugins as well let's have a look at one
+more setting here with the security the
+default security is Jenkins own user
+database that probably is not allowed
+within your company due to security
+restrictions and so you can choose LDAP
+which allows you to connect with your
+Active Directory configuration again
+because there are so many plugins for
+Jenkins there are plugins for sam'l
+authentication as well as auth
+so let's go ahead and start a new build
+new build job and so it's like a new
+item and we to select demo one from that
+create a new item and we're going to use
+just a freestyle project because I just
+want to demo how you can actually create
+a bill it's like okay description oh
+gosh what can we write here we can put
+in Snoopy demo and we're not gonna use
+source code for this one we can do that
+in the next demo but let's go we want to
+go down to is the
+uptime and we're going to build and we
+can just two and four win excuse me this
+magic wand and so let's just put in a
+very simple command and so I'm going to
+type in echo open quotes hello world and
+then we'll put in the timestamp so put
+in date first and then time as part of
+our output those quotes and we're gonna
+say that also save and that's our simple
+projects so we want to do now is we want
+to actually go and select the build now
+command to actually run this project
+built now take a couple of minutes for
+it to run and here we are this is our
+project and go geez now see the
+different builds that have happened and
+if you look on the build history you'll
+see the latest history shows when the
+build was executed and if you click on
+that you can actually start getting
+information such as the console output
+what she provide information that we
+were asking for so for instance we have
+its first so we can see that the build
+was successful and we see the output
+includes the hello all and date and time
+so we're gonna go ahead and create one
+more project where we can actually
+connect to a github and use the git
+command tool to be able to build a real
+project so we're gonna go ahead and
+create a new item and we're gonna call
+this one
+Jenkins it's freestyle project and our
+description is demo using git and so
+we're actually going to connect to
+github and so to do that we're gonna go
+in to source code management tab and we
+can stay get and so we select that we
+can actually now connect to github so to
+do that you go to your github account
+and you want to go in and select the
+clone or download and you get the URL
+link from there so copy that
+go back to Jenkins and add that in the
+repository URL so you paste that in and
+then for potentials we want to add in
+Jenkins credentials and so just make
+sure you have those selected correctly
+and we've sect add and then we just pull
+those from the drop-down and let's not
+change any of the other settings and
+then from the build we
+you're going to be building a java
+application so it's a slightly different
+set of build commands so we want to type
+in Java C book compile and then space
+and the file name is simply Java and you
+want to put Java and space is simply on
+a new line
+save that it's again it's a really
+simple application but it gives you the
+understanding of what you need to do
+here and so we saved it and this now go
+ahead and see if everything's working
+we'll do the build now and see what
+happens and here is our first build we
+select that we can go to the concert
+output for details and what we can
+actually see we scroll down is that the
+finished add the fish output at the very
+end says success which means everything
+was built correctly and so that's how
+you're able to connect Jenkins with a
+git repository and the thing that's
+great with working with Jenkins is that
+it connects to so many different systems
+and really does become the central point
+of your DevOps tool set so let's start
+looking at the operation side of the dev
+ops environment and let's focus in on
+docker so before darker the problem you
+had as a developer if you're working on
+a virtual machine the actual virtual
+machine was a your VM was a very complex
+piece of software so first of all VMs
+have not been around for very long and
+we're talking about less than ten years
+and the typical way of having a VM is
+that it's very heavy for usage on your
+computer you essentially are running
+everything of the VM plus the the tools
+to run the PM on your computer with
+docker what you're able to control is
+the actual development environment
+you're working in you don't have to be
+encumbered by all the additional
+extraneous processing that a vm
+environment has you're really stripped
+down to just the bare minimum that you
+need to have to run the environment
+using a containerized solution known as
+calm so doctor is essentially an OS
+level virtualization software it is a
+maturity of the solutions that were
+started with virtual environment and
+there are other solutions out there doc
+has become de facto
+containers solution that you can use for
+building out and guaranteed that what
+you the developer is building is going
+to be the same as what the operations
+team will use so doctor itself is highly
+scalable and efficient and you can have
+many docker environments running on a
+single piece of hardware the boot up
+time is incredibly short you can reuse
+the data volumes very very easily it's
+not complicated and the actual
+applications are completely isolated
+this is like a perfect sandbox
+environment so let's take through the
+architecture of Dhaka so there are
+really two parts to documents the docket
+engine there's the docket client the
+docket engine is comprised of the docker
+CLI which connects with the server
+daemon the docker client will then issue
+the commands to the docker daemon and
+then the docket demon will then interact
+with the system to be able to provide
+the tasks and tools needed for you to be
+able to build out your solution the
+actual images that docker uses are
+instructions for creating docker
+containers and the actual docker
+container itself is a lightweight
+package it contains all the dependencies
+needed to run an application now once
+you have created a container that is of
+value to your team you want to be able
+to store that container so that other
+team members can use it and this is
+where you would use a docker registry to
+be able to host and distribute multiple
+docker images so in this video we're
+going to go ahead and see how we can get
+docker installed and running so we're
+gonna go ahead and open up our terminal
+window and we want to date whether or
+not docker is installed if you haven't
+installed this docker you can go ahead
+and use the following command and that
+is to enter in sudo apt install Danka
+and that will go ahead and run the
+command to install docker now I already
+have dr. installed on my system so I'm
+not going to do that right now so I'm
+just going to delete that out but what I
+am going to do is check to see what
+docker images I have installed on my
+system and to do that I'm going to type
+in sudo docker images and when I run
+this will actually show how many images
+I have
+right now I don't have any images at all
+so when we go ahead and install an image
+there are two ways you can create an
+image for your dog environment one is to
+get one from docker hub and the other is
+to create your own image and let's go
+ahead and get one from docker hub and so
+the command line that we want to write
+is suno docker pull Redis : and after
+the colon we can actually write the name
+of the actual file that we're going to
+be connecting to from Daka so I'm gonna
+go ahead and go to docker hub and I've
+already logged in with my user ID in
+account so I'm gonna go to docker hub
+docker calm is the website address and
+I've already logged in with my simple
+own account and what you can actually
+see is different repositories that I
+have already created below but we
+clicked the Explorer button and I can
+see the the Redis image and these are
+all the different commands that I can
+actually use all the different
+variations that I can create so I can i
+I can do 500 I can do a 32-bit version I
+can do a 4.0 version or a 3.8 version or
+if I select latest that will allow me to
+just pull the latest version even if
+it's updated so I'm going to go back to
+my command line and dude latest and
+what's gonna happen now is that we're
+gonna pull the files live over the
+Internet and create the docker image so
+it's gonna take just a few minutes of
+course if your internet speed is faster
+and this will happen a lot faster
+oh yeah we have everything downloaded
+which is great and so let's just go and
+check and see if the image has been
+added to darker so we do sudo docket
+images and now you can actually see that
+we have the lettuce Rattus Rattus image
+and it's given the default image ID and
+there's the size of the docker image and
+the tag is latest so it's the latest
+version of Redis and I'm just checking
+to see if there's any other images
+running and no there isn't
+so let's go ahead and now create a
+container and so the command for that is
+sudo docker run - d/p 0.00
+think it's dot 80 colon 80 space Redis
+colon latest and let's run that got an
+error message okay now you know that
+it's a real demo this is really life so
+I'm just going to clear the screen and
+let's write that in again and so sudo
+docker run - D - P and in 0.0.0.0 colon
+8080 radius dog lead colitis and there
+we are everything's up and running
+awesome so let's just go ahead and check
+that we actually have the image running
+in docker so sudo docker PS and there
+you can see that we actually have the
+latest reddest version and it was
+created 16 seconds ago we have a new
+container ID for it and there's our port
+that we've created and let's see if we
+can view all the running containers and
+sudo docker PS - hey there we are and we
+created that container 42 seconds ago
+one of these young notice is the name
+for the dock is created automatically by
+Daka
+and here we have stupefied Engelbart's
+is the name let's change their names to
+something that's more meaningful for the
+work that we're doing so that's actually
+fairly easy to do and it's gonna be our
+final tasks here so we're going to type
+sudo darker and the command is renamed
+and we want to copy over the old name
+and then we put in the old name and they
+do a space and then you put in what you
+want the new name to be in which case
+we're gonna make it simply learn we run
+that command that's good now let's
+validate that's everything has been
+changed so we do sudo
+yes - a and just PS and there we are
+everything has been renamed and that
+gets you started working with dr. now
+let's move on to ansible so before
+ansible the ability to be able to deploy
+software across a network was pretty
+hard and you know you couldn't guarantee
+that your web servers were all
+consistent and that the database
+environments were consistent this was
+okay if you had a small environment but
+once you actually start getting into
+more complex environments it became very
+difficult to manage ansible is code that
+allows you to be able to consistently
+and reliably create and stand up the
+environments that you need to be able to
+store your code for production so
+whether or not you require one server
+environment or you need a thousand
+server environments using tools like
+ansible will allow you to be able to
+consistently deploy out environments
+that all look the same
+so essentially ansible is a
+configuration management tool and it
+allows you to be able to deploy
+automatically to a large variety of
+environments the actual tool itself is a
+push based configuration tool it is an
+agentless tool so there is no
+communication coming back about the
+health of the environment and we
+actually have tools that we'll cover
+later on the video that cover that as
+well does have a consistency of its
+product performance so you know that if
+you're using ansible that it's going to
+work it's just a very consistent product
+and it uses SSH for very secure
+connections so it doesn't matter whether
+or not you have one or a thousand pieces
+of hardware you're looking to configure
+you can actually be rest assured that
+there will be no security infringement
+because of the use of SSH and we're
+looking to the architecture of ansible
+it's a very simple architecture there is
+the antral management node that has
+playbooks which contains the
+instructions that you would have for
+your environment and that PlayBook is
+then pushed out to all the different
+nodes that contain the hardware that you
+wish to configure the actual module
+collection is the configuration code
+itself and the playbooks are the
+instructions of that configuration and
+then the inventory is the document
+the different groups and hardware within
+those groups that you can be pushing out
+to so we're going to go ahead and
+install ansible on to system here and
+we're actually running our environment
+in a Linux environment right now and so
+we have a must return an extended note
+but we're just going to go into our
+terminal window and we're gonna do
+everything on the master node so the
+first steps we want to do is actually go
+ahead and install ansible and we can do
+that by installing sudo yum install
+ansible - why and it's goes ahead and
+downloads all the files that we need and
+starts to run the installation
+and let's go ahead and see if it's
+installed correctly so we type in VI
+- etc - and so all slash hosts and there
+we see we actually have a default
+ansible hosts already up and running
+which is fantastic and we want to grab
+this IP address which is ansible servers
+and then the IP address with the
+password and root access and the IP will
+be specific to your local clients so
+this is my client system so by typing my
+config I'll actually see that the IP
+address matches up and then you want to
+make sure that your IP address is
+correct for your environment and so this
+is essentially a node in the ansible
+environment and this is the IP address
+and the password for that node so can
+access affect them correctly so I'm
+gonna hit colon at the bottom of the
+screen and I guess I was actually into
+ansible and we're going to do now is
+create a playbook to be able to run a
+sample script so we're gonna call it VI
+sample dot yml and here we have a sample
+playbook we have the name we have the
+host we have the right user and we have
+the task and in the task you have to see
+that we're looking to create a virtual
+web page with the content of welcome so
+that we actually see that the web page
+is loading and all of this is written
+with a very basic XML format called
+weimar which sounds for yet another
+markup language but it's very flexible
+and it's very easy to learn so let's see
+if we can go ahead and actually run this
+playbook so you can actually see it in
+action
+and so we're going to type in ansible -
+playbook and the sample dot yml and this
+will run the sample white male script -
+- syntax - check every time a pencil
+- playbook sampled so I had some issues
+there so I'm going to try that again and
+there so go in and writes the command
+again so ants will - playbook sampled
+away Mel - syntax - check and then run
+the actual playbook itself and let's see
+if it works yes everything's working and
+it'll take a moment for everything to
+initialize and now what we want to be
+able to do is go back to web browser and
+see whether or not we were able to
+create that default web page with the
+word welcome in it because that was the
+command that we created in our playbook
+and there we are there's the word
+welcome exactly as we planned and we can
+go back and we can review the playbook
+that we created just to validate that so
+let's go back into screen here and let's
+go in and look at the llamo page and
+there we go we see that the word welcome
+is there exactly as we expected now step
+into our final area which is network
+monitoring using a tool called Nagios so
+before you had no years sometimes you
+didn't know whether or not your network
+was working in fact the worst case
+scenario was when your customers caught
+up is it hey your website's not working
+you know the challenges you had is that
+you didn't know how the usage of the
+server was being managed you didn't know
+whether you up to 80% usage utilization
+on that server of you were at 50% it was
+difficult to get that information easily
+with Nagios you're able to set up email
+notifications and other notifications
+that allow you to stay ahead of issues
+that you would have within your
+environment so with this example if
+you're looking for memory utilization
+you can receive a notification telling
+you that your memory is almost full on a
+particular server and that you should be
+setting up a new server in this instance
+use Hansel to set up another server so
+again it's an as with the other tools
+that we
+covering Nagios is an open-source tool
+and it's specifically for monitoring
+systems servers and networks within your
+infrastructure very easy to use it has
+comprehensive monitoring tools that you
+could set control it is highly available
+and it is designed specifically a
+problem remediation you want to set it
+up so there is the eyes and ears of your
+network without you having to constantly
+monitor your network so the way that
+Negus works is that it's just constantly
+checking out your environment so the
+know your server is constantly checking
+the status of your systems and then is
+able to create visualization tools all
+of that data so you can actually then
+make quick responses or you can even
+send out alerts such as an email or push
+notification alert in this video we're
+going to take you through the steps that
+you need to follow if you want to set up
+Nagios and the dashboard now gives
+provides to be a help to help monitor
+your network so the first thing you want
+to do is go to NASSCOM and you can
+either download the application or you
+can actually do what we're gonna do here
+is actually just log into the actual
+application running on the nine years
+website so for that you want to go to
+now use na demos doc Magoo's comm and
+you can use the administration or normal
+user access IDs that Nagios provides and
+we've gone ahead and we've actually pre
+filled in our ID with no years admin and
+now you must admin for the username and
+password of course so that brings us
+into the Nagios dashboard and what
+you're gonna notice that there are three
+distinct areas that you should want to
+focus on you have the fixed sources
+which is all your actual fiscal hardware
+that you're monitoring you have alert
+summary and abnormal behavior so let's
+go check out the fixed sources so we
+have to default fixed sources here and
+why don't you can go one in Tulsa and
+and you can go ahead and set up
+additional sources but what you'll see
+is that this surprise a quick dashboard
+of the activity in the last 30 minutes
+the amount of usage on the disk you can
+go ahead and do the behavior tab and you
+can modify how you're monitoring and
+updating the actual sauce
+so and then the data from these reports
+will be from these sources well actually
+then user reports queries and alerts
+that you'll use so we'll go back to the
+board and here is though to fix sources
+so this look at lo summary when you
+expand it out and the other summary
+provides just a overview of the alerts
+that are being managed the others that
+you see here are the default alerts that
+have been created as part of the test
+environment it's very easy to create
+alerts and in this instance you can see
+that the Chicago sauce is being used to
+merge the alert what you can do is when
+you're actually setting up your own
+sources you'll see that the alert will
+then point specifically to the source
+that it's pulling the data from so in
+the PowerPoint in the presentation that
+we just went through you actually see
+how Nagios and aji is the center of
+collecting all the information but it's
+actually pulling information from the
+different networks and environments you
+have and then it stores that data
+locally to be able to create the
+visualizations and the alerts and we
+have here just a quick overview of an
+alert here inside of the summary which
+actually shows green which shows that
+the alert is actually good now there are
+three different types of colors there's
+green yellow and gray but you can see we
+have no critical alerts right now and
+you'll see the same thing happening and
+abnormal behavior as well where actually
+goes ahead and shows you the different
+colors that are available the thing
+that's great is but as soon as a warning
+status is created then allows you to
+trigger an email notification that gets
+sent out to you and has information in
+the email which you can then action so
+the alerts are very important in the
+alert again are pulling information from
+the fixed sources so they have no
+behavior is just gonna zero in and show
+any specific I've known behavior that
+would be happening with your fixed
+sources and so in this instance it's
+around bandwidth and everything is green
+so everything's looking good so we're
+going to the source tab but we're gonna
+look at the bandwidth graph and this is
+a more detailed visualization of the
+bandwidth that have playing through the
+Chicago fixed source again you can
+create your own fix sources and you'll
+be able to see the actual usage such as
+the bandwidth graph for that fixed
+source on this screen and the
+the screen we have just kind of the the
+most popular information that most
+network engineers are looking to assess
+on how a network is being used so you
+hit a Mickey suck reports and we can
+actually come in and we can either
+create our own custom report or you can
+use one of the many saved reports are
+already there if your new scenarios
+use the save reports because you'll be
+able to get in and get the great
+visualization tools that Nagios provides
+very quickly and be able to then action
+the information visually from what
+you're looking at these reports are
+absolutely fantastic and it was a really
+good to send to other team members that
+would have an interest in understanding
+the network usage and the different
+areas that you're imagining now if you
+want to get really specific on the type
+of data that you want in the report you
+can actually go in and create a query
+and the query can be customized to
+really however you want it to it to work
+the points of view are very specific
+insights into different data points that
+interact and they're very easy to create
+and a lot of them have been created as
+you can see on the screen already and as
+you can see on the left hand side there
+is an edit button that allows you to
+edit and modify those points of view
+very quickly now we're going to go ahead
+and create one right now and we're just
+going to put one in and put the limiter
+for IP address we're gonna change the
+dead lifetime united to alice days a
+week so we did 24 hours is fine so we'll
+just go ahead and we'll see what we have
+on the screen and as you can see there
+are just a lot already created select
+one will edit the FTP and we'll see what
+the only time for that is and it all
+looks good to a query will show all the
+saved queries you've created but you can
+actually go in and modify a query very
+easy you can go in and create a query
+and really essentially ask it to pull
+any kind of information that you would
+be looking at analyzing that has been
+captured by now yes and there's a
+dictionary you can use that no use has
+on their website that allows you to get
+better access in on sunny
+the querying constructs you can put
+together the alerts in my opinion are
+the most important part because these
+are the attractions are interact with
+the data sources and
+will trigger alerts that get sent to you
+so go back to the presentation again you
+can see that we're analyzing a lot of
+data but it's the data that gets sent
+here as an alert that allows you to
+immediately understand why you need to
+be able to go in and check out your
+network and this is why you're really
+using negatives because you need to have
+those alerts and so what we're going to
+do here is we're going through the steps
+you used to create an alert and we're
+just gonna do a light here that is gonna
+be on analyzing bytes of traffic and the
+final step is to actually go ahead and
+save the alert and really put in what
+the alert notification model method is
+going to be and the default is to use an
+email which is great but you can use an
+Aggie ice alert or as you know SMP a
+simple Network protocol or just use it
+and a command email is definitely the
+easiest one to use and so getting
+started I would recommend you use email
+so we're gonna go ahead and we're gonna
+create one and you want on workflow and
+we're going to set up the way which we
+gonna manage this so yeah thresholds
+gonna be 34 bytes or with a critical
+threshold of 50 bytes which is very
+small
+I expect an alert to be triggered
+because of this and we're just going to
+use the default emails to send out and
+you'll see by default that the new alert
+is now in painting and and the reason
+why we have impending is that it's just
+there to be reviewed by the system to
+make sure it meets all the standards I
+don't think there'll be a problem and
+I'm just looking at some of the other
+different commands we have here so we go
+back and we can get alerts from other
+negatives networks which connects to
+different networks right from this
+configuration screen and the same thing
+with the SMP receiver we can use simple
+network management protocol to connect
+to other receivers and the command tab
+allows us to create scripts that can be
+triggered from alerts that get created
+so you may want to have something that
+triggers a rebuild of a network
+environment which would allow you to
+authenticate through other systems now
+of course there are other things you can
+set up in the negev dashboard so you
+know things like information work
+profile you know defaults here
+such as language and your username you
+have the same thing for a system
+administrator where you can get you go
+in and set defaults for the sysadmin
+there's LDAP AD integration for simple
+and for sam'l authentication go back to
+the main dashboard if we scroll down
+you'll actually see that till we have an
+alert has been approved that's the alert
+that creating forum and it's now saying
+critical and because more than 50 bytes
+of information have been sent over our
+test Network and the fix source of
+Chicago surprise - 50 bytes is very easy
+to do so it's good to see that the
+system is working correctly and this is
+how our new years of brandman works and
+from here the next step is for you to be
+able to set up and configure Negi OHS -
+wrong with your infrastructure that's it
+we covered everything that you need to
+start up your DevOps environment and we
+encourage you to be able to go through
+and play with the different tools if you
+have any questions please post them in
+the comments below we always respond to
+questions that you have there we have a
+team of people from looking at those
+questions today and if you like this
+video we have a significant number of
+other videos and all you have to do is
+either go throughout the yo cat blog or
+hit this sub subscribe and like button
+and you'll be notified when new videos
+drop have a great day in DevOps land
+hi there if you like this video
+subscribe to the simple learn YouTube
+channel and click here to watch similar
+videos de nerd up and get certified
+click here

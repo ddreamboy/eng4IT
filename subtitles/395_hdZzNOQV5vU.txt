@@ -1,0 +1,1118 @@
+until recently access to the internet
+was limited via devices like the desktop
+tablet or smartphone but now with the
+internet of things aka iot practically
+all appliances can be connected to the
+internet and monitored remotely
+it is a system of interconnected devices
+that transfer data
+over a wireless network without any
+human intervention
+so hey everyone welcome to this iot
+tutorial video
+in this video we help you understand
+what iot is and how it is impacting our
+day-to-day life
+we will also understand the iot
+architecture and look at the new
+trending iot projects for 2021.
+but before that if you haven't
+subscribed to our channel already make
+sure to hit the subscribe button and the
+bell icon to never miss an update
+i'm sure you're excited to learn so
+let's dive right in
+imagine you're at work and realize that
+you might not have turned off the air
+conditioner while leaving your house
+instead of traveling all the way back
+home what if you could use your
+smartphone to know the status of your ac
+and perhaps even turn it off
+wouldn't that be amazing
+well yes
+and this can be achieved with the help
+of the internet of things
+until recently access to the internet
+was limited via devices like the desktop
+tablet or smartphone but now with iot
+practically all appliances can be
+connected to the internet and monitored
+remotely iot is shaping the way we live
+our lives it helps us get a better
+insight into the working of things
+around us
+so what exactly is the internet of
+things
+iot is a system of interrelated devices
+connected to the internet to transfer
+and receive data from one to the other a
+smart home is the best example of iot
+home appliances like the ac doorbell
+thermostats smoke detectors water
+heaters and security alarms can be
+interconnected to share data with the
+user over a mobile application
+the user can now get detailed insight
+into the working of the devices around
+him
+think about it until recently the
+internet helped people connect and
+interact with each other but now
+inanimate objects or things have the
+ability to sense the surroundings to
+interact and collaborate with one
+another
+for example
+in the morning when your alarm goes off
+the iot system can open the window
+blinds turn on the coffee pot for you
+and even turn on the water heater
+although all of this is fascinating
+there's a lot that goes on in the
+background to ensure seamless
+functioning from effective communication
+between devices to accurate processing
+of the data received a lot of components
+are involved
+in the context of iot devices hardware
+can be classified into general devices
+and sensing devices the general devices
+are the main components of the data hub
+and information exchange
+they are connected either by wired or
+wireless interfaces home appliances are
+a classic example of such devices
+the sensing devices on the other hand
+include sensors and actuators they
+measure the temperature humidity light
+intensity and other parameters
+these iot devices are connected to the
+network with the help of gateways
+these gateways or processing nodes
+process the information collected from
+the sensors and transfer it to the cloud
+the cloud acts as both the storage and
+processing unit actions are performed on
+the collected data for further learning
+and inferences
+wired and wireless interfaces like wi-fi
+bluetooth zigbee gsms and so on are used
+to provide connectivity to ensure its
+ubiquity applications need to support a
+diverse set of devices and communication
+protocols from tiny sensors capable of
+sensing and reporting the desired factor
+to powerful backend servers that are
+utilized for data analysis and knowledge
+extraction
+to help you understand it's working
+let's take a simple scenario
+let's suppose you want to water your
+garden every time the moisture level in
+the soil drops
+instead of doing it manually you could
+automate it using iot
+the sensors and actuators installed
+gauge the soil for its moisture this
+information is sent to the iot gateway
+with the help of communication protocols
+like mqtt or http the gateway
+significantly aggregates data and feeds
+it to the cloud with the help of wi-fi
+lan
+once the moisture level drops the system
+is immediately triggered and the
+sprinklers are turned on however with
+the information stored in the cloud a
+detailed analysis like the time of the
+day the sprinkler was turned on the rate
+at which the moisture in the soil
+reduces and so on can be done and the
+report could be sent over to you on your
+smartphone over an app
+with the improved response monitoring
+and analytical capabilities iot is being
+adopted in almost all industries and
+domains opening doors to endless
+applications
+today iot is being used extensively to
+lessen the burden on humans to name a
+few iot is deployed for smart homes
+wearables watches and bracelets smart
+cars
+smart farming smart retail smart grids
+smart city and smart health care
+with such a wide spectrum of
+applications the future of i.t looks
+more promising than ever before
+in 2018 there were about 23 billion
+connected devices which was more than
+double the world population
+according to experts there will be over
+80 billion devices by 2025. iot is a
+vision to connect all devices with the
+power of the internet always learning
+and always growing
+now that you have a picture of what iot
+is here's a simple question for you
+which of the following technologies is
+not used as an interface for a network
+one wi-fi
+two ethernet
+three
+zigbee
+four
+vpn
+give it a thought and leave your answers
+in the comments section below three
+lucky winners will receive amazon gift
+vouchers
+the integration of iot with other
+technologies like cloud computing
+machine learning and artificial
+intelligence is paving the way for many
+new and exciting innovations
+and that is the internet of things for
+you in short
+the first wave of the internet
+revolution came in with the growth of
+personal computers and in the second
+wave the internet came right onto our
+palms that is with the advent of mobile
+devices and here we are leaving the
+third wave where all electronic devices
+are almost already connected to the
+internet or will be in the near future
+yes the internet of things will bring
+about the next industrial revolution and
+will drastically transform the way we
+live and experience technology today
+quite possibly the internet of things
+will be as disruptive as the internet
+itself particularly when combined with
+big data and predictive analytics
+but what exactly is iot the concept
+behind iot is about connecting just
+about everything to the internet in real
+time which directly improves our quality
+of life and experiences
+for instance how are you watching this
+video right now on a pc a mobile or a
+tablet well whichever device you're
+using is definitely connected to the
+internet and that means you're already
+using an iot device
+sensors are becoming the end points of
+iot networks wondering what exactly a
+sensor is
+these sensors collect an increasing
+amount of context aware data and
+information such as location images
+weather conditions and inject them into
+networks actuators and applications in
+real time
+big data analytics and predictions have
+become apparent synonymous helping
+perform and execute tasks seamlessly
+with minimal to zero errors
+are you ready to admit a major
+breakthrough
+life in the present is great but the
+future looks like it could be way more
+exciting how we may ask
+since there are billions of physical
+devices around the world that are now
+connected to the internet collecting and
+sharing data in real time terabytes of
+data are going to become better bytes
+which represents 1000 terabytes each
+there is going to be a shift from
+wideband networks to narrowband networks
+for better range
+and you'll also soon witness the
+communication system transcend from 4g
+to 5g wireless communications
+[Music]
+iot will definitely be the paradigm
+shift of effective multitasking with
+massive applications
+now let's have a look at the future with
+iot environment
+imagine you're driving your smart car to
+work and you're quite late don't you
+worry because your car can now provide
+the shortest route with less congestion
+not only that the integrated sensors in
+the car alerts you about mechanical
+assistance you also have the access to
+automatic temperature control and not to
+forget in case you're tired or wary the
+car becomes self-driven since it comes
+with an accident prevention system
+[Music]
+as you are driving you see the smart
+farms through your window farmers are
+happier thanks to iot which helped them
+with better heat and provided more
+efficiency than ever
+you might wonder how with the help of
+systems like autonomous self-driving
+tractors adaptive irrigation systems
+soil health monitoring and animal
+welfare monitoring systems this is
+possible
+you also see smart factories which use
+iiot that is industrial internet of
+things with the help of analytics and
+automation systems iiot helps in
+tracking goods in real time inventory
+management automated delivery system and
+much more
+now you're returning home from office
+your car can park itself automatically
+your fingerprint voice or even your
+smartphone is enough to control all home
+appliances from lights to television and
+your door to water taps too are you
+excited to experience this smart future
+which is not far away of course you
+should be
+the applications of iot will be seen in
+every industry across sectors be it
+education healthcare manufacturing
+automotive you name it iot is definitely
+going to have a role to play in each one
+of them
+possibly the fourth wave will be the
+internet of everything or ioe
+which would encompass all physical
+things processes data and people through
+wearables and surgically implanted
+sensors unlike iot which focuses only on
+physical devices
+change is the only constant and the
+world will never be the same with the
+growth of ubiquitous connectivity and
+iot is sure to change the way billions
+of people live their lives today why to
+internet of things
+as a learner you should learn iot as it
+provides better scope for future data
+scientists as well as provides for
+promising career opportunities
+you can also build and manage your own
+iot for your home as a company executive
+you should learn iot because it will
+help you measure everything in the
+business you also get real-time metrics
+actionable data and better connectivity
+across industries
+after completing this course you should
+be able to explain the concept of
+internet of things comprehensive
+describe hardware software and other
+connectivity building blocks of iot
+describe design considerations
+pertaining architecture
+framework and interoperability
+explain the security considerations with
+iot pertaining to vulnerabilities
+explain industry 4.0 internet to
+everything and social iot
+and finally describe iot framework in
+enterprises
+in the context of iot devices hardware
+can be divided into two categories
+general devices and sensing devices
+the general devices do the embedded
+processing and connectivity for the
+platforms they are connected either by
+wired network or wireless interfaces
+they are the main component for data
+collection and information processing
+the current home appliances are classic
+example of such devices that are
+controlled by a sensor these sensors
+help solve common problems
+apart from sensors actuators are another
+important device in iot that perform
+similar functions with different
+capabilities they work as interface
+between sensors and machines and collect
+various information like humidity and
+light intensity
+this information is computed using the
+edge layer which typically sits between
+the cloud and the sensor they are the
+layers that store the intermittent
+transfer of information
+finally the backend server of the cloud
+processes this information
+both the sensors and actuators are the
+chief components of iot the sensors
+measure temperature humidity light
+intensity and other key parameters of
+home environment
+the second most crucial aspect of iot is
+device management platforms or dmps
+the dmvs as they are shortly called are
+the platforms through which these assets
+interact with the software layer through
+network gateways dmps come with various
+functionalities which include firmware
+upgrades security patching and reporting
+of metrics they also help develop alert
+mechanism for industrial equipment with
+more open source os like arduino overall
+it is an important aspect of the
+management of the device penetration
+connectivity blocks connectivity blocks
+collectively is considered as the
+backbone of an iot setup
+there are various connectivity layers
+like usb can protocols and modbus
+the next generation protocols of wi-fi
+are laura and zigbee they can interface
+with any application or modules a small
+device embedded in an object
+the entire landscape is called gateway
+architecture
+various ports are
+232.485 from usb that come with gateway
+architecture
+the device interface is important for
+the data transfer and enables digital
+transformation with third-party
+applications and systems
+communication protocols and standards
+let us try to understand the various
+communication protocols available to set
+up an iot
+the first is the satellite this enables
+the cell phone communication through an
+antenna situated within 10 to 15 miles
+they have a stable and universal
+connection
+the second is the protocol is the wi-fi
+and is based on five gigahertz
+frequencies
+it provides internet access within a
+certain range and are an affordable
+option
+it has well protected protocols
+the third is the radio frequency
+it is the easiest form of communication
+a few examples are zigbee and z-wave
+which use low-power rf radio
+it consumes low energy which is very
+advantageous
+it's relatively simple to configure
+the fourth in this list is rfid it uses
+wireless electromagnetic fields to
+identify sensors and objects
+good thing about it is that it does not
+require power
+the fifth is bluetooth which is useful
+for short term and short distance data
+exchange it is present in every
+smartphone and has sensors
+the final one is near field
+communication or nfc it uses
+electromagnetic induction and loop
+antennas
+it comes with encryption has low speed
+communication and is used for short
+range data exchange
+future of iot connectivity
+iot connectivity is the future the
+launch of new technologies like 5g
+the 5g with low latency and higher
+throughput will increase the penetration
+of iot
+5g cellular technology is supported by
+the network for virtualization
+even for the common use case such as for
+t vendor real-time predictive analytics
+can be available
+so
+overall the delivery time is reduced
+with iot
+5g and iot are embedded technologies
+both can be sliced and diced for
+predictive analytics and real-time
+business decisions
+5g will help devices connect through a
+network with high speed bandwidth
+iot device architecture
+there are four layers in the device
+architecture
+the base layer consists of iot devices
+this includes all the components like
+sensors with the ability to sense
+compute and connect other devices
+let's move on to the second layer which
+is the iot gateway or aggregation layer
+this layer significantly aggregates data
+from various sensors these two layers
+form the definition engine and they set
+the rules for data aggregation next
+layer is based on cloud it's called
+processing engine or event processing
+layer it has numerous algorithms and
+data processing elements that are
+ultimately displayed on a dashboard
+this layer basically processes the data
+obtained from the sensor layer
+the last layer is called the application
+layer or api management layer it acts as
+an interface between third-party
+application and infrastructure the
+entire landscape is supported by device
+managers and identity and access
+managers
+which are useful for security of the
+architecture
+many individuals and organizations have
+contributed to create and set the
+standard it covers the entire network
+and endpoint systems it brings a
+structural approach with security
+controls in place it provides a
+demarcation based on its uses for
+enterprise to build iot products this
+standard has 85 detailed recommendations
+and a structured approach that can fit
+into any iot ecosystem it has a flexible
+framework addressing the diversity of
+the technology aligned to the regulation
+it also has risk modeling capabilities
+for any organization to choose from
+including endpoint ecosystems the
+standard is very flexible and comes with
+the inbuilt risk assessments for any
+organization to adapt overall it is an
+interesting standard and easy to get
+trained at iot security best practices
+there are many best practices in iot
+security let's look at some best
+practices pertaining to iot hardware
+first of all the hardware should be
+tamper-proof
+they should have undergone dynamic
+testing with specific data protection
+algorithms and should be updated on
+firmware and patches
+the network components must be authentic
+with encryption kernel controls and
+division of networks into segments
+other security measures include privacy
+protection for sensitive information and
+other regulations like safe harbor
+statements
+there are many value drivers to help the
+internet of everything
+key drivers are employee productivity
+supply and logistics
+customer experiences
+innovation and time to market asset
+utilization all the factors are tightly
+linked to generate a new revenue gains
+for any enterprise
+time to market and innovation
+this will help with the competitive
+index
+of the organization
+he'll help discover mvp to reduce the
+cost of building
+and bring improvement in customer
+experience
+asset utilization is the form of digital
+physical and even smart assets the asset
+discovery is the requirement for the
+establishment of the iot ecosystem
+supply chain is also a key value driver
+and assesses the requirement of internet
+of everything
+in addition to the drivers there are
+significant elements
+the elements stand in four buckets the
+first is data which encapsulates sending
+and analyzing data
+the second bucket is the people
+who are always connected and have
+contextual subject mapping with the
+real-time world for decision making
+the third bucket is the things which
+link people to machine with endpoints
+ibi addresses and sensors
+the last bucket is machined to data
+which talks with a business value and
+action iteration
+essentially building simple models to
+achieve corporate results
+internet of everything growth engine the
+internet of everything comes with a
+growth engine for any organization it
+includes people or the most valuable
+resources
+the process of making the right effort
+the things that includes the physical
+devices other objects and the data taken
+from sensors to make actionable insights
+for decision making is important
+people
+process
+things
+and data are the growth engine elements
+it gives the company an edge in the
+digital transformation world
+with data privacy and transparency
+mechanism it is important for every
+organization to follow internet ethics
+and compliance
+iot and fleet management
+let's discuss some use cases of iot
+the fleet management is a classic
+example of iot in application in this
+domain iot is mainly used to track
+vehicles from one point to another
+using iot technology the entire fleet
+can be monitored with a support of rfid
+chips embedded within every car in the
+fleet
+the same rfid can also be used to track
+products such as consumer goods
+electronics and food items
+you can get real-time information on the
+routes that the fleet takes
+there are obd devices that can be used
+to track vehicles behavior and
+performance including fuel consumption
+and mileage
+this can reduce the total cost and
+provide greater return on investment
+according to a recent study the iot
+market will increase to 8.28 billion
+dollars by 2021. sensor's linked
+artificial intelligence help the bankers
+track all the activities in the back end
+the advancements of mobile phones and
+digital assistants along with 5g
+connectivity makes customer experience
+seamless
+first and foremost it is data
+data is the new oil
+financial institutions have structured
+and unstructured data of the customers
+they can slice and dice the data for
+profiling segmentation product launches
+and digital services enablement
+the data can create a large economic
+drive and give rise to new business
+models like nfc banking digital
+assistance banking and social media
+banking
+with this transformation internet of
+things provides competitive advantage to
+the banking insurance and financial
+services
+while the end goal remains to help
+customers save money and give a bundle
+offer
+let's understand how iot revolutionizes
+various industries
+with the advent of the internet of
+things there are many industries
+experiencing digital transformation such
+as financial services healthcare
+manufacturing communications energy
+retail and transportation
+iot has initiated changes at all levels
+user infrastructure and large-scale
+applications analytics with real-time
+dashboard and iot support allows
+informed decision making for businesses
+this also means that iot is introducing
+a new revenue model for enterprises
+around the world
+learning objectives by the end of this
+lesson you will be able to
+explain the iot architecture and
+frameworks describe the iot
+interoperability and its design
+considerations and discuss
+industry-aligned use cases
+iot device architecture
+there are four layers in the device
+architecture the base layer consists of
+iot devices
+this includes all the components like
+sensors with the ability to sense
+compute and connect other devices
+let's move on to the second layer which
+is the iot gateway or aggregation layer
+this layer significantly aggregates data
+from various sensors these two layers
+form the definition engine and they set
+the rules for data aggregation next
+layer is based on cloud is called
+processing engine or event processing
+layer it has numerous algorithms and
+data processing elements that are
+ultimately displayed on a dashboard
+this layer basically processes the data
+obtained from the sensor layer the last
+layer is called the application layer or
+api management layer
+it acts as an interface between
+third-party application and
+infrastructure the entire landscape is
+supported by device managers and
+identity and access managers
+which are useful for security of the
+architecture
+iot reference architecture next let's
+learn about the various layers in iot
+reference architecture device layer
+the device layer is the main component
+where there are various devices like
+sensors that are interconnected some
+examples are bluetooth connected via
+mobile phone and zigbee via zigbee
+gateway the other devices include the
+raspberry pi that's connected to the
+ethernet via wi-fi this is directly
+connected to the communication layers
+which are part of the second layer
+communication layer the communication
+layer or gateway layer has rest
+protocols
+and other application level protocols
+both layers are tightly coupled and
+generate enormous amount of data
+now the bus layer or aggregation layer
+acts as a message broker it forms a
+bridge between the data and the
+communication layer for the sensors
+this is an important layer for three
+reasons it supports an http server and
+or a mqtt broker
+it aggregates and combines
+communications via gateway and it
+bridges and transforms data between
+different protocols
+the next layer is the event processing
+and analytics layer which drives data
+and provides transformation to the data
+generated
+it provides the ability to do event
+processing the data is stored in the
+database
+the client layer is used to create a
+web-based engine to interact with
+external apis
+this can be fed into the api management
+systems this layer helps create a
+dashboard and provides a view of
+analytics and event processing
+this layer helps communicate with
+systems outside the network using
+machine and machine communication
+so we've seen the comprehensive iot
+reference architecture with various
+components rule engines interfaces and
+security systems embedded
+cross-functional architecture is
+possible using device manager that
+provides a single platform for remote
+management the device manager
+communicates with devices through set
+protocols
+device management uses device management
+agents and is responsible for the remote
+management of software
+the identity layer has the capabilities
+of cyber security including policy
+control and oauth 2 token instruments
+other capabilities include identity
+services xacml pdp and directory of
+users eg
+ldap iot reference frameworks there are
+a lot of frameworks for iot setup but
+the most common is the iso
+30141 and it provides commonly used
+vocabulary reusable designs and best
+practices for any developer to design an
+application
+it also has many secure application
+standards that derive the maximum
+benefit for the organization and reduce
+the risks
+iot standardization and design
+considerations
+there are a number of iot standards
+and these are evolving over time some of
+the key ones are m2m that is a machine
+to machine service layer that can be
+embedded in hardware and software to
+connect devices
+contiki which is an open source
+operating system for low cost low power
+iot microcontrollers
+light os
+a unix-like operating system for
+wireless sensor networks
+random phase multiple access
+this is a proprietary standard for
+connecting iot objects the last one is
+sig fox a proprietary low power low
+throughput technology for iot and m2m
+communications
+iot
+interoperability challenges
+iot maturity comes with several
+challenges specifically pertaining to
+interoperability and interfacing the
+reasons are coexistence of multifarious
+systems
+devices sensors equipment etc that
+interchange location time dependent
+information in varied data formats
+languages data models constructs data
+quality and complex interrelationships
+multivision
+system designed by manufacturers over
+time for varied application domains
+making formulation of global agreements
+and commonly accepted specifications
+very difficult
+new things that get introduced and that
+support a new unanticipated structures
+and protocols existence of low power
+devices which need to exchange data over
+lossy networks and may have minimal
+likelihood or accessibility for a power
+recharge in months or years
+iot design considerations when you
+choose an iot solution you need to
+consider several factors
+like its wireless capability
+functionality interoperability secure
+storage
+immediate boot capacity device
+categorization bandwidth cryptographic
+control and power management the design
+considerations should be a mix of the
+estimated average of all these
+components and index to balance the user
+requirements you also need to set up a
+dispute resolution mechanism in case of
+failure in the long run
+iot device architecture network and
+cloud there are four stages of
+integrating the different iot processes
+stage 1 network things wireless sensors
+and actuators
+stage 2 sensor data aggregation systems
+and analog to digital data conversion
+stage 3 the appearance of edge i.t
+systems
+stage four analysis management and
+storage of data as these stages are
+evolving the devices the network and the
+cloud application must be leveled
+equally in ecosystem for better
+stability and security the iot
+architecture is a combination of things
+devices platform and sensors with data
+stage 1 of an iot architecture consists
+of networked things typically wireless
+sensors and actuators stage 2 has
+internet gateways and data acquisition
+systems that includes sensor data
+aggregation systems and analog to
+digital conversion in stage 3 edge it
+systems perform pre-processing of the
+data before it moves to the data center
+or cloud finally in stage 4
+data center and cloud is where the data
+is analyzed managed and stored on
+traditional backend data center systems
+fundamentally we need to have a
+functional scalable available and
+maintainable architecture if these are
+not supported then architecture is not
+useful now let's look at the three
+architecture areas of iot one the client
+side iot device layer two operators on
+the server side iot gateway layer
+and three a pathway for connecting
+clients and operators iot platform layer
+these three layers interface with each
+other on a data synchronization front
+and pathway to generate more data from
+various applications the feasibility of
+the layers depends on their application
+let's now differentiate between
+centralized and decentralized iot
+architectures the centralized
+architecture is a hub and is managed
+from one point whereas the decentralized
+one is based on the use case
+they do not help in industrial iot
+solution the centralized architecture is
+associated with cloud architectures in
+which a central hub provides a series of
+back-end services to smart devices in
+decentralized architecture there are
+many scenarios that require autonomous
+communication between smart devices and
+an iot topology without the need of
+essential hub the centralized systems
+help in event processing and whereas
+decentralized systems operate more of
+peer-to-peer messaging the decentralized
+auditing is one of the essential
+features that decentralized architecture
+use case i have smart farming
+use case smart farming iot design this
+use case addresses the design
+formalities using iot iot design is an
+essential part of the navigational
+ecosystem smart farming requires precise
+architecture and components that help
+bring benefits to the farmers the
+various factors that determine the iot
+design are data cost efficiency and
+product quality the efficiency and
+durability of the ecosystem help the
+farmers plan their harvest and sow based
+on the climatic conditions using the
+sensors and geospatial location data so
+be precise any farmer needs to
+understand the fundamental design that
+can help run the ecosystem smart farming
+is useful as it helps the farmer to
+predict conditions and sow crops with
+less cost and utilize automation
+capabilities to have such systems you
+need to purchase the right hardware
+which can monitor the accuracy of data
+and quality of the sensor once you have
+these systems you can benefit more from
+farming there are four things you need
+to integrate for smart farming first is
+a data engine smart farming should have
+a robust data processing engine that can
+act as the brain and handle data
+processing storage and lead to efficient
+output
+the second is hardware you need to
+ensure that the hardware is durable and
+easy to maintain hardware or self-fixing
+algorithms is even better
+the third aspect is mobile access this
+is possible using a smartphone along
+with offline or online mobile
+applications
+to enable all three processes you need
+cloud infrastructure with the edge layer
+this iot system can enable smart farming
+for any crops in any geographical
+location let us look at another use case
+on using sim cards to monitor sugar
+level in a diabetic patient diabetes
+management is a recurring concept where
+the patient has to check the blood sugar
+at regular intervals in the traditional
+way he has to go to the physician lab or
+he has to have his home blood glucose
+monitoring system iot can help create a
+system with the blood glucose data will
+be transmitted remotely via smartphone
+and a sim embedded in it
+identifying the necessary and right
+hardware is one of the crucial steps of
+creating such a system you need to
+choose the sensors for your device or
+create a custom one which fits the
+glucometer this can be a sim card the
+next step is to ensure that the quality
+of your sensors is good and has seamless
+integration with the system finally make
+sure that the data monitoring happens in
+real time with high accuracy now when
+the hardware landscape of this ecosystem
+is ready you need to set the software
+then first it is crucial that you have
+software with software pair algorithm
+for service management to enable this
+process you need cloud infrastructure
+with edge and finally a smartphone to
+work with the devices and sensors
+key takeaways now that you have
+completed this lesson you should be able
+to explain iot reference architectures
+and frameworks describe the iot interop
+ability and its design considerations
+and finally
+discuss industry-aligned use cases
+here's a list of iot projects for 2020.
+first up is smart mirror smart mirrors
+are a very cool iot application
+these mirrors can be used to display
+temperature news weather calendar clock
+and complements on the screen apart from
+these smart mirrors can be used to click
+the perfect selfies with a built-in
+camera it can also be installed with
+speakers to play some music and they
+also provide on-demand workout sessions
+with world-class trainers
+the mirror can be used to browse the
+internet make phone calls and even be
+connected with other devices for
+collaboration
+next up is smart money transfer we're
+heading towards complete digitization
+transactions are made possible on your
+cell phone with apps like apple pay
+google pay and paypal
+but imagine if you could walk to a store
+and pay with a wrist watch wouldn't that
+be cool the purpose of the smart wallet
+is to provide an easy and reliable
+platform for money transactions it is
+compact variable and rechargeable for
+safety purposes the user authenticity is
+validated the smart money transfer
+technology can reduce the burden of
+mobile money transfer when you're on the
+go you could easily step into a store
+purchase the goods and pay hassle free
+after every successful transaction the
+balance is updated immediately to avoid
+any uncertainty next up is iot based
+smart arm
+now this project includes the creation
+of a robotic arm which can pick and
+place things from one place to another
+to control this action the robotic arm
+can be moved using specific commands
+some advanced arms allow the user to
+change the end effect of the arm to
+perform various different actions it can
+be used to make art print 3d images and
+build production lines
+it can also be used to perform your
+day-to-day chores at number four we have
+smart irrigation
+now with changing climate and recurrent
+water crisis
+farmers suffer a great deal with growing
+crops smart irrigation puts an end to
+this ordeal
+this system comes with the moisture
+sensor that checks the soil for its
+water content when the soil moisture
+drops below a certain value the system
+triggers the water supply at number five
+we have smart door now as the name
+suggests this project aims at creating
+smart doors that control the entry and
+exit of humans these doors open and
+close automatically when you pass by
+the door can also be controlled remotely
+you could unlock the door for a friend
+by tapping an icon on your smartphone
+once they exit you're immediately
+notified the owner can also choose who
+has the access to the door at number 6
+we have air monitoring system now air
+monitoring has become crucial for the
+environment and what better way to do it
+than incorporating iot the iot system
+uses air sensors to sense the presence
+of harmful gases or compounds in the air
+the data collected can be used by the
+local authorities to make a detailed
+analysis
+necessary actions can also be taken to
+ensure that the air quality levels don't
+reach an extreme low especially in areas
+with hospitals and schools
+moving on to number seven we have smart
+alarm clock now there are many
+variations of a smart alarm clock but
+the alarm we are talking about is a self
+setting alarm the smart alarm clock uses
+your google calendar to check your
+appointments to set the alarm it can
+also procure data from gps about your
+eta to a particular place and consider
+the weather to automatically adjust your
+wake time
+all of this is just making life more
+easier moving on at number eight we have
+iot based weather reporting system
+now the system deals with monitoring
+weather and climate changes like
+humidity temperature moisture wind speed
+uv radiation light intensity and even
+carbon monoxide levels in the air using
+multiple sensors now these installed
+sensors send data to the web page that
+is plotted as graphical statistics
+the project even consists of an
+application that sends notifications as
+an effective alert to warn people about
+sudden and drastic weather changes
+so when you're heading out the app could
+easily tell you what the weather will be
+like and suggest carrying an umbrella or
+perhaps a sunblock
+at number 9 we have smart wheelchair
+there are over 132 million wheelchair
+users across the globe
+smart wheelchairs is an excellent
+innovation typically it comes with
+built-in sensors on the seats that
+collect data every second
+the data provides insight into the
+seating behavior of the patient and the
+energy required to maintain the posture
+other variations of smart wheelchairs
+could include fall detection these
+features allow people to monitor the
+patient from a remote location
+and finally at number 10 we have smart
+street light system
+this iot based street light monitoring
+system not only monitors but also
+ensures low power consumption and
+detects faulty lights
+the street lights have external sensing
+that automatically turns on at the
+desired intensity based on the lighting
+needed
+control of light intensity is based on
+the movement of people or vehicles
+in case of an emergency the lights
+increase the brightness to maximum
+intensity thereby ensuring safety
+when deployed as a part of a smart city
+the users can be informed about any
+outages
+they can also register a complaint for
+immediate service
+and so with that we come to the end of
+this session i hope you have a good
+understanding of iot now thank you so
+much for being here keep learning and
+stay tuned to simply learn
+hi there if you like this video
+subscribe to the simply learn youtube
+channel and click here to watch similar
+videos to nerd up and get certified
+click here

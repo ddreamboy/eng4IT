@@ -1,0 +1,327 @@
+[MUSIC PLAYING]
+JOSH GORDON: Hey, everyone.
+Welcome back.
+Features are the way you
+represent your knowledge
+about the world
+for the classifier,
+and today I'll walk
+you through techniques
+you can use to represent
+your features and utilities
+TensorFlow provides to help.
+You use a dataset from the
+US census as an example,
+and the goal is to predict
+if someone's income is
+greater than $50,000 based
+on attributes like their age
+and occupation.
+The dataset is
+stored as a CSV file,
+and previously we've seen how to
+use the column values directly
+as features.
+But today we'll use
+feature engineering
+to transform them into a
+more useful representation.
+As we go, I'll visualize
+what these transformations do
+using a tool called Facets,
+and you can find a link to it
+in the description.
+You'll also find complete code
+to train a TensorFlow estimator
+on this dataset.
+OK, let's get started.
+Let's begin with a numeric
+attribute like age,
+and think about how we can
+use it to predict income.
+Now if you think about how
+age correlates with income,
+our first intuition is
+that as age increases,
+usually so does income.
+And the simplest way
+to represent this
+would just be to take
+the raw numeric value
+and use that as a feature.
+Here we're building
+a list of features
+we use to train the
+model, and each of these
+is stored as a feature column.
+This contains data about
+the column from the CSV file
+and how to represent it.
+Here we'll write a feature that
+just uses the raw value of age,
+and this string corresponds
+to a column in the CSV file.
+Now what can go wrong
+with this approach?
+Well, if we think more
+closely about age,
+we realize it's not in a linear
+relationship with income.
+The curve might look
+something like this.
+It's flat for children, then
+increases during working age,
+and decreases during retirement.
+A linear classifier,
+for example,
+is unable to capture
+this relationship.
+That's because it learns a
+single weight for each feature.
+To make it easier for the
+classifier, one thing we can do
+is bucket the feature.
+And bucketing transforms
+a numeric feature
+into several
+categorical ones based
+on the range it falls into,
+and each of these new features
+indicate whether a person's
+age falls into that range.
+And now a linear model can
+capture the relationship
+by learning different
+weights for each bucket.
+Let's see how this
+looks in Facets.
+Conveniently,
+there's a live demo
+that runs in the browser with
+our census data preloaded,
+and each individual from
+the CSV is visualized
+as a dot colored by income.
+If you click on a dot, you can
+see stats about the person.
+Now let's bucket
+by age, and you can
+adjust the number of buckets to
+make it more or less granular.
+How you choose the number
+of buckets is up to you,
+and ideally, you'd want to use
+your knowledge of the problem
+to do this well.
+In TensorFlow, we can
+create a bucketized feature
+by wrapping a numeric
+column from the CSV.
+And here we're
+specifying the number
+and the ranges of the
+buckets we'd like created.
+Once this is done, we can
+add the bucketized feature
+to the list used
+to train our model.
+Now let's see how to represent
+a categorical feature,
+and I'll use the education
+column as an example.
+Because there are
+only a few values,
+the best way to represent this
+is just use the raw value.
+And here we'll create
+a feature column
+that says education can be a
+single value from this list.
+Of course, you could also read
+the values from a file on disk
+rather than writing
+them out in code.
+Now using the raw value
+is the right thing
+to do when there are only a
+small number of possibilities.
+We'll cover the case
+where there are thousands
+of possibilities in a moment.
+First, let's take a look
+at feature crossing.
+Feature crossing is a way
+to create new features that
+are combinations
+of existing ones,
+and these can be especially
+helpful to linear classifiers,
+which can't model
+interactions between features.
+Here's what this
+looks like in Facets.
+I'll take our age
+buckets from before
+and cross them with education.
+Under the hood, you can think
+of a true-false feature being
+created for each
+bucket that tells
+the classifier whether
+an individual falls
+into that range.
+Now these buckets
+can be informative,
+and here we see some groups are
+likely to have a high income,
+and others low.
+In code, using a feature cross
+works the same way as before.
+We'll cross our age
+buckets with education
+and add it to the list
+of features to use.
+A feature cross can generate
+many possibilities quickly,
+which is why they
+are often represented
+under the hood with a hash.
+A hashed feature column is one
+way to efficiently represent
+a categorical feature
+with a large vocabulary.
+More importantly,
+you can use these
+as a way to make
+your data easier
+to work with because
+they free you from having
+to provide a vocabulary list.
+In this example, we'll
+represent the occupation column
+from our CSV file
+by using a hash
+with 1,000 possible values.
+Notice we don't have to
+provide a vocabulary list,
+and to avoid collisions,
+I've set the hash size
+so it's larger than the number
+of items in the vocabulary.
+Here's how this
+works under the hood.
+Normally, a categorical
+feature is represented
+as a one hot encoding.
+That means there's one bit
+for each possible value
+in the vocabulary.
+And we can create a lookup
+because we know the vocabulary
+list in advance.
+Now if we don't
+know the vocab, we
+can use a hash function to
+compute the bit automatically.
+The downside is there
+could be collisions,
+meaning different items are
+mapped to the same value.
+Hashes can also be used
+to limit memory usage
+at the cost of adding some
+noise to your training data.
+If you have a large
+vocabulary, it
+can be memory intensive
+to use that as input
+to a neural network.
+A hashed column can
+be used to limit
+the maximum number
+of possibilities,
+but I prefer them
+simply as a tool
+to save you programming time.
+Finally, I'd like to
+mention embeddings,
+and these can be less intuitive
+than the other techniques,
+but they're a powerful way
+to work with categorical data
+in a deep learning setting.
+You can think of an embedding
+as a vector that represents
+the meaning of a word.
+And we can visualize a
+dataset of word embeddings
+using the TensorFlow
+Embedding Projector,
+and there's an online demo you
+can find in the description.
+Here we're looking at a dataset
+of 10,000 words, each of which
+is represented by a vector
+with many dimensions,
+projected down to 3D
+so we can see them.
+You can search for words
+in the box to the right.
+And if you experiment
+a bit, you'll
+find similar words are
+often close together.
+For example, all of the words
+in this cluster are cities.
+What's neat about
+embeddings is that they're
+learned automatically in the
+process of training a DNN.
+And to make that happen,
+all you need to do
+is write an embedding column.
+Here we'll create an
+embedding for education
+with 10 dimensions.
+Now embeddings are helpful if
+you have a categorical column
+with a large
+vocabulary and you want
+to compress the representation
+so the classifier learns
+general concepts
+rather than memorizing
+the meaning of specific words.
+For example, imagine
+if the census data
+had a column called job title.
+There are thousands
+of different jobs,
+and an embedding could be used
+to help your classifier learn
+that words like programmer
+and software engineer
+often mean the same thing.
+OK, hope this was
+a helpful intro,
+and thinking about how to
+represent your features
+is one of the most
+important contributions
+you can make to a machine
+learning experiment.
+Feature columns are
+great because they
+let you experiment with
+different representations
+in code and make advanced
+features like embeddings
+accessible.
+As a next step,
+I'd recommend you
+try the code in the description
+and see if you can modify it
+for a problem you care about.
+Thanks for watching everyone,
+and I'll see you next time.
+[MUSIC PLAYING]
