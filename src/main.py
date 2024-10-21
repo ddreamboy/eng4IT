@@ -94,6 +94,7 @@ class LanguageLearningSystem:
             sentences = []
             paragraphs = []
             keywords = []
+            professional_terms = []
 
             for chunk in chunks:
                 chunk_processed = self.preprocessor.preprocess(chunk)
@@ -101,18 +102,21 @@ class LanguageLearningSystem:
                 sentences.extend(self.preprocessor.get_sentences(chunk_processed))
                 paragraphs.extend(self.preprocessor.get_paragraphs(chunk_processed))
                 keywords.extend(self.preprocessor.get_keywords(chunk_processed))
+                professional_terms.extend(self.preprocessor.get_professional_terms(chunk_processed))
 
             with self.lock:
                 self.text += processed_text
                 self.sentences.extend(sentences)
                 self.paragraphs.extend(paragraphs)
                 self.keywords.extend(keywords)
+                self.professional_terms = list(set(professional_terms))
 
             return {
                 'text': processed_text,
                 'sentences': sentences,
                 'paragraphs': paragraphs,
-                'keywords': list(set(keywords))
+                'keywords': list(set(keywords)),
+                'professional_terms': list(set(professional_terms))
             }
 
     def save_processed_data(self, original_filename, data):
