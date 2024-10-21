@@ -19,8 +19,8 @@ class TextPreprocessor:
         self.stop_words = set(stopwords.words('english'))
 
         # Загрузка модели и токенизатора для определения границ предложений
-        self.tokenizer = AutoTokenizer.from_pretrained("microsoft/deberta-v3-base")
-        self.model = AutoModelForTokenClassification.from_pretrained("microsoft/deberta-v3-base")
+        self.tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
+        self.model = AutoModelForTokenClassification.from_pretrained("bert-base-uncased")
         self.nlp_pipeline = pipeline("ner", model=self.model, tokenizer=self.tokenizer)
 
     def preprocess(self, text):
