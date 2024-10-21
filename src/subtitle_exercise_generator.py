@@ -5,6 +5,7 @@ from nltk.tokenize import word_tokenize, sent_tokenize
 import random
 from difflib import SequenceMatcher
 
+
 # Загрузка необходимых ресурсов NLTK
 nltk.download('punkt', quiet=True)
 nltk.download('stopwords', quiet=True)

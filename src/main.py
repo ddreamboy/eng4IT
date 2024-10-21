@@ -189,7 +189,7 @@ class LanguageLearningSystem:
         return self.user_progress.get_word_familiarity(user_id, word)
 
 if __name__ == "__main__":
-    system = LanguageLearningSystem(num_threads=8, max_length=900000)
+    system = LanguageLearningSystem(num_threads=16, max_length=900000)
 
     # Пытаемся загрузить сохраненные данные
     if not system.load_processed_data():
