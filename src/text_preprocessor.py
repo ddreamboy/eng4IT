@@ -1,4 +1,3 @@
-import re
 from collections import Counter
 import nltk
 from nltk.corpus import stopwords
