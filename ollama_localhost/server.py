@@ -1,30 +1,19 @@
-import requests
-import json
+from flask import Flask, request, jsonify
+import ollama
 
-HOST_IP = '192.168.31.39'  # IP-адрес хост-компьютера
-PORT = 5000  # Порт Flask-сервера
+app = Flask(__name__)
 
-url = f'http://{HOST_IP}:{PORT}/generate'
+@app.route('/generate', methods=['POST'])
+def generate():
+    data = request.json
+    model = data.get('model', 'llama2')
+    prompt = data.get('prompt', '')
 
-headers = {
-    'Content-Type': 'application/json'
-}
+    try:
+        response = ollama.generate(model=model, prompt=prompt)
+        return jsonify({'response': response['response']})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
-data = {
-    'model': 'llama2',
-    'prompt': 'Привет, как дела?'
-}
-
-try:
-    response = requests.post(url, headers=headers, data=json.dumps(data))
-
-    if response.status_code == 200:
-        result = response.json()
-        print('Ответ от Ollama:')
-        print(result['response'])
-    else:
-        print(f'Ошибка: {response.status_code}')
-        print(response.text)
-
-except requests.exceptions.RequestException as e:
-    print(f'Ошибка при подключении: {e}')
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
