@@ -1,105 +1,80 @@
 import random
 from difflib import SequenceMatcher
+from ollama_localhost.client import OllamaClient
 
 class Exercises:
     def __init__(self, preprocessor):
         self.preprocessor = preprocessor
+        self.ollama_client = OllamaClient()
 
-    def create_translation_exercise(self, sentences, num_questions=3):
+    def create_translation_exercise(self, num_questions=3):
         exercises = []
         for _ in range(num_questions):
-            sentence = random.choice(sentences)
-            russian_translation = self.preprocessor.translate_to_russian(sentence)
+            word = random.choice(self.preprocessor.keywords)
+            translation = self.preprocessor.translations.get(word, "")
             exercises.append({
-                "english": sentence,
-                "russian": russian_translation
+                "english": word,
+                "russian": translation
             })
         return exercises
 
-    def create_paragraph_order_exercise(self, paragraphs, num_paragraphs=3):
-        selected_paragraphs = random.sample(paragraphs, min(num_paragraphs, len(paragraphs)))
-        shuffled_paragraphs = selected_paragraphs.copy()
-        random.shuffle(shuffled_paragraphs)
-        return {
-            "shuffled": shuffled_paragraphs,
-            "correct_order": selected_paragraphs
-        }
-
-    def create_flashcards(self, keywords, sentences, num_cards=5):
+    def create_flashcards(self, num_cards=5):
         flashcards = []
         for _ in range(num_cards):
-            word = random.choice(keywords)
-            context = next((s for s in sentences if word in s.lower()), "No context found.")
-            flashcards.append({"word": word, "context": context})
+            word = random.choice(self.preprocessor.keywords)
+            translation = self.preprocessor.translations.get(word, "")
+            context = self.generate_context_sentence(word)
+            flashcards.append({"word": word, "translation": translation, "context": context})
         return flashcards
 
-    def fill_in_the_blanks(self, words, keywords, num_questions=3):
+    def generate_context_sentence(self, word):
+        prompt = f"Generate a short sentence using the word '{word}' in context:"
+        response = self.ollama_client.generate(prompt, model="llama3.2")
+        return response if response else f"No context generated for '{word}'"
+
+    def fill_in_the_blanks(self, num_questions=3):
         questions = []
-        attempts = 0
-        max_attempts = num_questions * 10  # Увеличиваем количество попыток
-
-        while len(questions) < num_questions and attempts < max_attempts:
-            word = random.choice(keywords)
-            context = self.find_context(word, words, window=5)
-
-            if context:
-                blank_context = context.replace(word, "___________", 1)
-                questions.append({"question": blank_context, "answer": word})
-
-            attempts += 1
-
+        for _ in range(num_questions):
+            word = random.choice(self.preprocessor.keywords)
+            context = self.generate_context_sentence(word)
+            blank_context = context.replace(word, "_____", 1)
+            questions.append({"question": blank_context, "answer": word})
         return questions
 
-    def find_context(self, word, words, window=5):
-        try:
-            index = words.index(word)
-            start = max(0, index - window)
-            end = min(len(words), index + window + 1)
-            return " ".join(words[start:end])
-        except ValueError:
-            return None
-
-    def multiple_choice(self, words, keywords, num_questions=3):
+    def multiple_choice(self, num_questions=3):
         questions = []
-        attempts = 0
-        max_attempts = num_questions * 10
-
-        while len(questions) < num_questions and attempts < max_attempts:
-            word = random.choice(keywords)
-            context = self.find_context(word, words)
-
-            if context:
-                options = [word] + random.sample([w for w in keywords if w != word], 3)
-                random.shuffle(options)
-                questions.append({
-                    "word": word,
-                    "context": context,
-                    "options": options,
-                    "correct_index": options.index(word)
-                })
-
-            attempts += 1
-
+        for _ in range(num_questions):
+            word = random.choice(self.preprocessor.keywords)
+            context = self.generate_context_sentence(word)
+            options = [word] + random.sample([w for w in self.preprocessor.keywords if w != word], 3)
+            random.shuffle(options)
+            questions.append({
+                "word": word,
+                "context": context,
+                "options": options,
+                "correct_index": options.index(word)
+            })
         return questions
 
-    def word_order(self, words, num_questions=3):
+    def word_order(self, num_questions=3):
         questions = []
-        attempts = 0
-        max_attempts = num_questions * 10
-
-        while len(questions) < num_questions and attempts < max_attempts:
-            start = random.randint(0, len(words) - 6)
-            phrase = words[start:start+5]
-            shuffled = phrase.copy()
+        for _ in range(num_questions):
+            sentence = self.generate_context_sentence(random.choice(self.preprocessor.keywords))
+            words = sentence.split()
+            shuffled = words.copy()
             random.shuffle(shuffled)
-
-            if phrase != shuffled:
-                questions.append({"shuffled": " ".join(shuffled), "correct": " ".join(phrase)})
-
-            attempts += 1
-
+            questions.append({"shuffled": " ".join(shuffled), "correct": sentence})
         return questions
 
     def check_answer(self, user_answer, correct_answer, threshold=0.8):
         similarity = SequenceMatcher(None, user_answer.lower(), correct_answer.lower()).ratio()
         return similarity >= threshold
+
+    def analyze_collocations(self):
+        collocations = []
+        for word in self.preprocessor.keywords:
+            prompt = f"Suggest common collocations or phrases using the word '{word}':"
+            response = self.ollama_client.generate(prompt, model="llama3.2")
+            if response:
+                collocations.append({"word": word, "collocations": response})
+        return collocations

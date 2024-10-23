@@ -1,3 +1,5 @@
 example_roadmap.md
 venv/
 __pycache__/
+node_modules/
+package-lock.json
