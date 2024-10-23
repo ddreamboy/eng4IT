@@ -1,0 +1,38 @@
+.recommendations {
+    text-align: left;
+}
+
+.recommendations ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recommendation-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.word-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.word-english {
+    font-weight: bold;
+}
+
+.word-russian {
+    color: #555;
+}
+
+.word-status {
+    font-size: 14px;
+    color: #888;
+}

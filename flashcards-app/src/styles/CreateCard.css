@@ -1,0 +1,36 @@
+.create-card {
+    text-align: left;
+}
+
+.create-card .form-group {
+    margin-bottom: 15px;
+}
+
+.create-card label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.create-card input,
+.create-card textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.create-card button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.create-card button:hover {
+    background-color: #45a049;
+}
