@@ -1,5 +1,22 @@
 example_roadmap.md
-venv/
-__pycache__/
 node_modules/
+package-lock.json
+.first_try/
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.swp
+*.swo
+*.egg-info/
+dist/
+build/
+venv/
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
 package-lock.json
