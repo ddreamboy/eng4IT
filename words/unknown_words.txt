@@ -17,3 +17,8 @@ gathers:::Собирает
 sentiment:::сентиментальность
 ingestion pipeline:::трубопровод для проглатывания
 production sentiment analysis service:::сервис анализа производственных настроений
+users:::пользователи
+implemented:::реализованы
+Unfortunately:::К сожалению
+leverage failover:::отказоустойчивость левериджа
+deque:::deque

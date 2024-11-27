@@ -1,58 +1,45 @@
 # Project Structure
 
-**Project Path:** `Q:\PythonProjects\eng4IT`
-**Generated at:** 2024-11-27 17:44:25
+**Project Path:** `/home/kadi/PythonProjects/eng4IT`
+**Generated at:** 2024-11-28 00:14:35
 **Ignored patterns:** .DS_Store, .env, .git, .idea, .pyc, .pytest_cache, .venv, .vscode, __pycache__, build, dist, env, get_structure.py, logs, migrations, node_modules, venv
 
 ## Directory Tree
 ```
+├── .ropeproject/
 ├── backend/
 │   ├── app/
 │   │   ├── database/
+│   │   │   ├── __init__.py
 │   │   │   ├── db.py
 │   │   │   └── scenarios.db
+│   │   ├── models/
+│   │   │   ├── __init__.py
+│   │   │   └── base.py
+│   │   ├── scripts/
+│   │   │   ├── migrate_to_db.py
+│   │   │   └── migrate_to_json.py
 │   │   ├── services/
-│   │   │   ├── model_cache/
-│   │   │   │   ├── .locks/
-│   │   │   │   │   └── models--Helsinki-NLP--opus-mt-en-ru/
-│   │   │   │   └── models--Helsinki-NLP--opus-mt-en-ru/
-│   │   │   │       ├── .no_exist/
-│   │   │   │       │   └── bb09c99d180016eac6819df3dae68edb1690fdee/
-│   │   │   │       │       ├── added_tokens.json
-│   │   │   │       │       ├── model.safetensors
-│   │   │   │       │       ├── model.safetensors.index.json
-│   │   │   │       │       ├── special_tokens_map.json
-│   │   │   │       │       ├── target_vocab.json
-│   │   │   │       │       └── tokenizer.json
-│   │   │   │       ├── blobs/
-│   │   │   │       │   └── eb1bda1bd256f14435a7904373c8bec152fe0e85503bcecf1373b2dd47a9f03f
-│   │   │   │       ├── refs/
-│   │   │   │       │   ├── refs/
-│   │   │   │       │   │   └── pr/
-│   │   │   │       │   │       └── 5
-│   │   │   │       │   └── main
-│   │   │   │       └── snapshots/
-│   │   │   │           ├── b3e725abcf85d1b8c6df4218e0c0b68564660bc6/
-│   │   │   │           │   └── model.safetensors
-│   │   │   │           └── bb09c99d180016eac6819df3dae68edb1690fdee/
-│   │   │   │               ├── config.json
-│   │   │   │               ├── generation_config.json
-│   │   │   │               ├── pytorch_model.bin
-│   │   │   │               ├── source.spm
-│   │   │   │               ├── target.spm
-│   │   │   │               ├── tokenizer_config.json
-│   │   │   │               └── vocab.json
 │   │   │   ├── __init__.py
 │   │   │   ├── constants.py
+│   │   │   ├── data_service.py
 │   │   │   ├── exceptions.py
 │   │   │   ├── gemini_service.py
 │   │   │   ├── ollama_service.py
 │   │   │   └── translation_service.py
 │   │   └── app.py
+│   ├── data/
+│   │   ├── models/
+│   │   │   └── config.json
+│   │   ├── scenarios/
+│   │   │   └── scenarios.json
+│   │   └── terms/
+│   │       ├── all_terms.json
+│   │       └── unknown_terms.json
 │   ├── templates/
 │   │   └── index.html
-│   ├── requirements.txt
-│   └── translation.log
+│   ├── requirements-lite.txt
+│   └── requirements.txt
 ├── frontend/
 │   ├── public/
 │   │   ├── favicon.ico
@@ -67,7 +54,8 @@
 │   │   │   ├── LearningInterface.js
 │   │   │   ├── SharedComponents.js
 │   │   │   ├── TermModal.js
-│   │   │   └── WordAssessment.js
+│   │   │   ├── WordAssessment.js
+│   │   │   └── WordList.js
 │   │   ├── App.css
 │   │   ├── App.js
 │   │   ├── App.test.js
@@ -130,10 +118,9 @@
 │       ├── requirements.txt
 │       ├── sprints.md
 │       └── words.js
-├── words/
-│   ├── categorized_words.md
-│   ├── en_words.py
-│   ├── unknown_words.txt
-│   └── unknown_words_.txt
-└── project_structure_20241120_175114.md
+└── words/
+    ├── categorized_words.md
+    ├── en_words.py
+    ├── unknown_words.txt
+    └── unknown_words_.txt
 ```

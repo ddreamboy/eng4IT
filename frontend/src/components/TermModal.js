@@ -12,6 +12,8 @@ const TermModal = ({ isOpen, onClose, term, translation, category }) => {
   const [currentModel, setCurrentModel] = useState('');
   const [showTranslation, setShowTranslation] = useState(false);
 
+  const termValue = typeof term === 'object' ? term.term : term;
+
   useEffect(() => {
     const fetchCurrentModel = async () => {
       try {
@@ -38,7 +40,7 @@ const TermModal = ({ isOpen, onClose, term, translation, category }) => {
     setIsLoading(true);
     try {
       const response = await axios.post('http://localhost:5000/api/explain-term', {
-        term,
+        term: termValue,
         category
       });
       setExplanation(response.data.explanation);
@@ -53,7 +55,7 @@ const TermModal = ({ isOpen, onClose, term, translation, category }) => {
     setIsTranslating(true);
     try {
       const response = await axios.post('http://localhost:5000/api/translate-term', {
-        term,
+        term: termValue,
         explanation: explanation || ''
       });
       setLlmTranslation(response.data.translation);
@@ -79,7 +81,9 @@ const TermModal = ({ isOpen, onClose, term, translation, category }) => {
             <X size={24} />
           </button>
 
-          <h3 className="text-xl font-semibold text-primary mb-2">{term}</h3>
+          <h3 className="text-xl font-semibold text-primary mb-2">
+            {typeof term === 'object' ? term.original : term}
+          </h3>
           
           {/* Кнопки управления */}
           <div className="flex gap-2 mb-4">
@@ -129,6 +133,24 @@ const TermModal = ({ isOpen, onClose, term, translation, category }) => {
               </span>
             </div>
           )}
+
+          {/* Статистика изучения */}
+          <div className="mb-4 p-3 bg-dark-lighter rounded-lg">
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <p className="text-sm text-gray-400">Попыток изучения</p>
+                <p className="text-lg text-primary">{term.attempts || 0}</p>
+              </div>
+              {term.last_attempt && (
+                <div>
+                  <p className="text-sm text-gray-400">Последняя попытка</p>
+                  <p className="text-lg text-primary">
+                    {new Date(term.last_attempt).toLocaleDateString()}
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
 
           {!explanation && (
             <button

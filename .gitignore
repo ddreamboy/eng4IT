@@ -62,3 +62,4 @@ migrations/
 
 # Model cache
 backend/app/services/model_cache/
+backend/data/models/config.json
