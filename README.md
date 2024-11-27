@@ -68,7 +68,7 @@
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/eng4IT.git
+git clone https://github.com/ddreamboy/eng4IT.git
 ```
 
 2. Install backend dependencies
