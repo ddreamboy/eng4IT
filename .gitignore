@@ -1,22 +1,64 @@
-example_roadmap.md
-node_modules/
-package-lock.json
-.first_try/
-
 # Python
-*.pyc
-*.pyo
-*.pyd
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+.env
+.venv
+env/
+venv/
+ENV/
+.pyc
+
+# Python IDE
+.idea/
+.vscode/
 *.swp
 *.swo
-*.egg-info/
-dist/
-build/
-venv/
 
-# Node.js
+# Node/React
 node_modules/
-npm-debug.log
-yarn-error.log
-package-lock.json
+/frontend/build/
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Database
+*.db
+*.sqlite3
+*.sqlite
+
+# Logs
+*.log
+logs/
+translation.log
+
+# Migration files
+migrations/
+
+# Model cache
+backend/app/services/model_cache/

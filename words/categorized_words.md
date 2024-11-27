@@ -1,0 +1,778 @@
+# Data Engineering
+
+## Big Data
+- ETL
+- MapReduce
+- batch processing
+- data catalog
+- data compression
+- data fabric
+- data federation
+- data governance
+- data ingestion
+- data lake
+- data lineage
+- data locality
+- data mart
+- data mesh
+- data observability
+- data partitioning
+- data pipeline
+- data profiling
+- data quality
+- data replication
+- data serialization
+- data sharding
+- data shuffling
+- data skew
+- data versioning
+- data virtualization
+- data warehouse
+- data wrangling
+- distributed computing
+- fault tolerance
+- stream processing
+
+## Data Processing
+- ETL
+- batch processing
+- data aggregation
+- data anonymization
+- data cleaning
+- data deduplication
+- data enrichment
+- data federation
+- data filtering
+- data ingestion
+- data integration
+- data lineage
+- data masking
+- data normalization
+- data orchestration
+- data parsing
+- data partitioning
+- data pipeline
+- data processing
+- data profiling
+- data quality
+- data reconciliation
+- data sampling
+- data schema
+- data standardization
+- data transformation
+- data validation
+- data versioning
+- data wrangling
+- stream processing
+
+## Data Storage
+- ACID properties
+- backup
+- checkpoint
+- collation
+- commit
+- constraint
+- cursor
+- data compression
+- data encryption
+- data migration
+- database index
+- database schema
+- deadlock
+- denormalization
+- foreign key
+- isolation level
+- materialized view
+- normalization
+- partition
+- primary key
+- query optimization
+- recovery
+- replication
+- rollback
+- savepoint
+- stored procedure
+- tablespace
+- transaction
+- trigger
+- vacuum
+- view
+
+
+# DevOps
+
+## CI/CD
+- GitLab CI
+- Jenkins
+- artifact
+- artifact repository
+- automated testing
+- blue-green deployment
+- branch strategy
+- build
+- build agent
+- build trigger
+- canary deployment
+- code coverage
+- configuration management
+- continuous delivery
+- continuous integration
+- dependency management
+- deployment environment
+- deployment strategy
+- feature flag
+- infrastructure as code
+- integration testing
+- merge conflict
+- pipeline
+- production
+- release management
+- rollback
+- staging
+- test automation
+- unit testing
+- version control
+
+## Cloud Computing
+- API gateway
+- AWS
+- IaaS
+- PaaS
+- SaaS
+- auto scaling
+- availability zone
+- cloud computing
+- cloud cost optimization
+- cloud migration
+- cloud monitoring
+- cloud native
+- cloud provider
+- cloud security
+- cloud storage
+- content delivery network
+- disaster recovery
+- elasticity
+- hybrid cloud
+- identity and access management
+- load balancer
+- managed service
+- multi-cloud
+- region
+- resource provisioning
+- scalability
+- serverless
+- service level agreement
+- virtual machine
+- virtualization
+
+## Containerization and Orchestration
+- Docker
+- Kubernetes
+- cluster
+- config map
+- container
+- container registry
+- container runtime
+- daemon set
+- deployment
+- docker compose
+- dockerfile
+- helm
+- image
+- ingress
+- load balancing
+- microservice
+- namespace
+- node
+- orchestration
+- persistent volume
+- pod
+- pod disruption budget
+- replica set
+- rolling update
+- scaling
+- secret
+- service
+- service mesh
+- statefulset
+- volume
+
+
+# MLOps
+
+## Experiment management
+- MLflow
+- baseline model
+- cross-validation
+- experiment configuration
+- experiment logging
+- experiment metadata
+- experiment pipeline
+- experiment run
+- experiment tracking
+- experiment tracking system
+- experiment visualization
+- experiment workflow
+- grid search
+- hyperparameter optimization
+- hyperparameter tuning
+- metrics tracking
+- model artifact
+- model checkpoint
+- model comparison
+- model evaluation
+- model iteration
+- model metrics
+- model registry
+- model selection
+- model versioning
+- parameter sweep
+- performance metrics
+- random search
+- reproducibility
+- version control
+
+## Model Deployment
+- API endpoint
+- batch inference
+- blue-green deployment
+- canary deployment
+- deployment pipeline
+- deployment strategy
+- inference
+- model artifact
+- model compression
+- model containerization
+- model deployment
+- model distillation
+- model endpoint
+- model health check
+- model latency
+- model load balancing
+- model optimization
+- model orchestration
+- model pipeline
+- model pruning
+- model quantization
+- model registry
+- model rollback
+- model scaling
+- model serialization
+- model serving
+- model throughput
+- model versioning
+- real-time inference
+- shadow deployment
+
+## Monitoring and Maintenance
+- alerting
+- automated monitoring
+- concept drift
+- data drift
+- data quality monitoring
+- incident response
+- model auditing
+- model debugging
+- model diagnostics
+- model drift
+- model feedback
+- model governance
+- model health
+- model logging
+- model maintenance
+- model metrics
+- model monitoring
+- model observability
+- model reliability
+- model retraining
+- model testing
+- model validation
+- model versioning
+- monitoring dashboard
+- performance baseline
+- performance degradation
+- performance monitoring
+- prediction monitoring
+- statistical monitoring
+- threshold monitoring
+
+
+# Machine Learning
+
+## Classic ML
+- ROC curve
+- anomaly detection
+- bagging
+- bias-variance tradeoff
+- classification
+- clustering
+- confusion matrix
+- cross-validation
+- decision tree
+- dimensionality reduction
+- ensemble
+- f1-score
+- feature
+- feature engineering
+- feature selection
+- gradient boosting
+- hyperparameter
+- inference
+- k-means
+- label
+- outlier
+- overfitting
+- precision
+- random forest
+- recall
+- regression
+- regularization
+- stacking
+- support vector machine
+- underfitting
+
+## Computer Vision
+- CNN
+- YOLO
+- anchor box
+- bounding box
+- convolution
+- edge detection
+- face recognition
+- feature extraction
+- feature map
+- feature pyramid
+- image augmentation
+- image classification
+- image enhancement
+- image preprocessing
+- image processing
+- image reconstruction
+- image registration
+- instance segmentation
+- kernel
+- object detection
+- object tracking
+- optical flow
+- padding
+- pixel
+- pooling layer
+- pose estimation
+- segmentation
+- semantic segmentation
+- stride
+- transfer learning
+
+## Deep Learning
+- ReLU
+- activation function
+- backpropagation
+- batch
+- batch normalization
+- bias
+- convolution
+- deep network
+- dense layer
+- dropout
+- embedding
+- epoch
+- feedforward
+- gradient descent
+- hyperparameter
+- layer
+- learning rate
+- loss function
+- neural network
+- neuron
+- optimizer
+- overfitting
+- pooling
+- regularization
+- sigmoid
+- softmax
+- tanh
+- tensor
+- underfitting
+- weight
+
+## NLP
+- TF-IDF
+- attention mechanism
+- bag of words
+- coreference resolution
+- corpus
+- decoder
+- dependency parsing
+- encoder
+- language model
+- lemmatization
+- machine translation
+- n-gram
+- named entity
+- named entity recognition
+- parsing
+- part of speech
+- self-attention
+- sentiment analysis
+- sequence-to-sequence
+- stemming
+- stop word
+- text classification
+- text mining
+- text summarization
+- tokenization
+- transformer
+- vocabulary
+- word embedding
+- word segmentation
+- word sense disambiguation
+
+
+# Programming Basics
+
+## Functional programming
+- algebraic type
+- applicative
+- closure
+- composition
+- continuation
+- currying
+- filter
+- first-class function
+- fold
+- functor
+- generator
+- higher-order function
+- immutability
+- lambda
+- lazy evaluation
+- map
+- memoization
+- middleware
+- monad
+- partial application
+- pattern matching
+- pipeline
+- predicate
+- pure function
+- recursion
+- reduce
+- referential transparency
+- side effect
+- tail recursion
+- type inference
+
+## Object-oriented programming
+- abstract class
+- abstraction
+- adapter
+- aggregation
+- class
+- command
+- composition
+- constructor
+- decorator
+- dependency injection
+- destructor
+- encapsulation
+- facade
+- factory method
+- inheritance
+- interface
+- iterator
+- mediator
+- method
+- object
+- observer
+- overload
+- override
+- polymorphism
+- property
+- prototype
+- proxy
+- singleton
+- state
+- strategy
+
+## Algorithms and data structures
+- AVL tree
+- AVL tree
+- adjacency matrix
+- adjacency matrix
+- array
+- backtracking
+- backtracking
+- balanced tree
+- binary heap
+- binary heap
+- binary search
+- binary search tree
+- binary search tree
+- binary tree
+- breadth-first search
+- bubble sort
+- bubble sort
+- chaining
+- chaining
+- circular buffer
+- circular buffer
+- collision
+- collision
+- complexity
+- depth-first search
+- deque
+- deque
+- divide and conquer
+- divide and conquer
+- doubly linked list
+- doubly linked list
+- dynamic programming
+- dynamic programming
+- edge
+- edge
+- fibonacci heap
+- fibonacci heap
+- graph
+- greedy algorithm
+- greedy algorithm
+- hash table
+- heap
+- heap sort
+- heap sort
+- insertion sort
+- insertion sort
+- iteration
+- linked list
+- memoization
+- memoization
+- merge sort
+- pointer
+- priority queue
+- priority queue
+- probing
+- probing
+- queue
+- quick sort
+- recursion
+- red-black tree
+- red-black tree
+- selection sort
+- selection sort
+- shortest path
+- shortest path
+- skip list
+- skip list
+- sorting
+- spanning tree
+- spanning tree
+- stack
+- topological sort
+- topological sort
+- traversal
+- trie
+- trie
+- union find
+- union find
+- vertex
+- vertex
+
+
+# Software Architecture
+
+## Architecture Patterns
+- adapter pattern
+- bridge pattern
+- builder pattern
+- chain of responsibility
+- circuit breaker
+- clean architecture
+- command pattern
+- command query separation
+- composite pattern
+- decorator pattern
+- domain-driven design
+- event-driven architecture
+- factory pattern
+- flyweight pattern
+- hexagonal architecture
+- iterator pattern
+- layered architecture
+- mediator pattern
+- model-view-controller
+- observer pattern
+- onion architecture
+- proxy pattern
+- publish-subscribe
+- repository pattern
+- saga pattern
+- singleton pattern
+- state pattern
+- strategy pattern
+- template method
+- visitor pattern
+
+## Microservices
+- api gateway
+- bounded context
+- bulkhead pattern
+- circuit breaker
+- distributed tracing
+- eventual consistency
+- health check
+- load balancer
+- polyglot persistence
+- saga pattern
+- service autonomy
+- service boundary
+- service choreography
+- service configuration
+- service contract
+- service decomposition
+- service deployment
+- service discovery
+- service idempotency
+- service isolation
+- service logging
+- service mesh
+- service monitoring
+- service orchestration
+- service registry
+- service registry
+- service resilience
+- service scaling
+- service telemetry
+- service versioning
+- sidecar pattern
+
+## System Design
+- asynchronous processing
+- backpressure
+- bottleneck
+- caching
+- capacity planning
+- concurrent processing
+- consensus
+- consistency
+- data partitioning
+- disaster recovery
+- failover
+- fault tolerance
+- high availability
+- horizontal scaling
+- infrastructure automation
+- latency
+- load balancing
+- partition tolerance
+- performance optimization
+- rate limiting
+- redundancy
+- replication
+- resource allocation
+- scalability
+- service level agreement
+- sharding
+- system monitoring
+- throttling
+- throughput
+- vertical scaling
+
+
+# Web Development
+
+## Backend
+- API endpoint
+- authentication
+- authorization
+- background job
+- caching
+- configuration management
+- connection pooling
+- database migration
+- dependency injection
+- error handling
+- event sourcing
+- graceful shutdown
+- health check
+- idempotency
+- load balancing
+- logging
+- message queue
+- middleware
+- rate limiting
+- request handling
+- request throttling
+- response formatting
+- routing
+- serialization
+- server-sent events
+- service discovery
+- session management
+- validation
+- webhook
+- websocket
+
+## Frontend
+- DOM
+- browser cache
+- bundling
+- code splitting
+- component
+- content security policy
+- cross-origin resource sharing
+- hot module replacement
+- hydration
+- internationalization
+- lazy loading
+- localization
+- polyfill
+- progressive enhancement
+- progressive web application
+- reactive programming
+- responsive design
+- routing
+- server-side rendering
+- service worker
+- shadow DOM
+- single page application
+- state management
+- static site generation
+- transpiling
+- tree shaking
+- user interface
+- virtual DOM
+- web accessibility
+- web components
+- web manifest
+
+## Web Security
+- SQL injection
+- SSL certificate
+- access control
+- brute force attack
+- clickjacking
+- cross-site request forgery
+- cross-site scripting
+- directory traversal
+- encryption
+- firewall
+- hashing
+- man-in-the-middle
+- penetration testing
+- role-based access control
+- sanitization
+- security audit
+- security breach
+- security compliance
+- security header
+- security incident
+- security misconfiguration
+- security monitoring
+- security patch
+- security token
+- security token service
+- session hijacking
+- threat modeling
+- two-factor authentication
+- vulnerability scanning
+- zero-day exploit
+
