@@ -1,28 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Clock, SortAsc } from 'lucide-react'; // Восстановлены необходимые импортируемые компоненты
+import { Clock, SortAsc, Eye, EyeOff } from 'lucide-react'; // Восстановлены необходимые импортируемые компоненты
 import { Link, useSearchParams } from 'react-router-dom';
 import axios from 'axios';
 // import { AlignJustify, SortAsc } from 'lucide-react'; // Удален AlignJustify
 import TermModal from './TermModal';
-
-const WordList = ({ word, translation, category, onClick }) => (
-  <div 
-    className="term-card cursor-pointer hover:scale-[1.02] transition-transform"
-    onClick={onClick}
-  >
-    <div className="flex justify-between items-start">
-      <div>
-        <h4 className="term">{word}</h4>
-        <p className="translation">{translation}</p>
-      </div>
-      {category && (
-        <span className="category-tag">
-          {category}
-        </span>
-      )}
-    </div>
-  </div>
-);
+import WordList from './WordList'; // Добавлен импорт WordList
 
 // Удалите неиспользуемые константы
 // const SortButton = ... // Удалено
@@ -42,6 +24,7 @@ const Dashboard = () => {
     gemini: 'gemini-1.5-flash'
   });
   const [apiKey, setApiKey] = useState('');
+  const [originalApiKey, setOriginalApiKey] = useState(''); // Добавляем новое состояние для хранения оригинального ключа
   const [unknownWords, setUnknownWords] = useState([]);
   const [allTerms, setAllTerms] = useState({});
   const [searchTerm, setSearchTerm] = useState('');
@@ -49,6 +32,8 @@ const Dashboard = () => {
   const [selectedTerm, setSelectedTerm] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modelOptions, setModelOptions] = useState({ ollama: false, gemini: true });
+  const [showApiKey, setShowApiKey] = useState(false);
+  const [displayedApiKey, setDisplayedApiKey] = useState(''); // Новое состояние для отображаемого значения
 
   // В компоненте Dashboard
   useEffect(() => {
@@ -72,8 +57,14 @@ const Dashboard = () => {
           setSubModel(prev => ({ ...prev, gemini: response.data.sub_model }));
         }
         
-        if (response.data.has_api_key) {
-          setApiKey('********');
+        if (response.data.has_api_key && response.data.api_key) {
+          setOriginalApiKey(response.data.api_key);
+          setApiKey(response.data.api_key);
+          setDisplayedApiKey('*'.repeat(response.data.api_key.length));
+        } else {
+          setOriginalApiKey('');
+          setApiKey('');
+          setDisplayedApiKey('');
         }
       } catch (error) {
         console.error('Error fetching model:', error);
@@ -102,8 +93,14 @@ const Dashboard = () => {
     }
   };
 
-  const handleTermClick = (term, translation, category) => {
-    setSelectedTerm({ term, translation, category });
+  const handleTermClick = (word) => {
+    setSelectedTerm({
+      term: word.original, // было просто word
+      translation: word.translation,
+      category: word.category,
+      attempts: word.attempts,
+      last_attempt: word.last_attempt
+    });
     setIsModalOpen(true);
   };
 
@@ -120,11 +117,13 @@ const Dashboard = () => {
       const data = {
         model,
         sub_model: model === 'ollama' ? subModel.ollama : subModel.gemini,
-        api_key: apiKey
+        api_key: apiKey !== '********' ? apiKey : undefined // Не отправляем маскированный ключ
       };
       
-      await axios.post('http://localhost:5000/api/model/set', data);
-      setCurrentModel(model);
+      const response = await axios.post('http://localhost:5000/api/model/set', data);
+      if (response.data.status === 'success') {
+        setCurrentModel(model);
+      }
     } catch (error) {
       console.error('Error setting model:', error);
     }
@@ -151,6 +150,8 @@ const Dashboard = () => {
   };
 
   const handleApiKeyChange = async (newApiKey) => {
+    if (!newApiKey) return;
+
     try {
       const data = {
         model: currentModel,
@@ -158,12 +159,26 @@ const Dashboard = () => {
         api_key: newApiKey
       };
       
-      await axios.post('http://localhost:5000/api/model/set', data);
-      setApiKey(newApiKey);
+      const response = await axios.post('http://localhost:5000/api/model/set', data);
+      if (response.data.status === 'success') {
+        setOriginalApiKey(newApiKey);
+        setApiKey(newApiKey);
+        setDisplayedApiKey('*'.repeat(newApiKey.length));
+        setShowApiKey(false);
+      }
     } catch (error) {
       console.error('Error setting API key:', error);
     }
   };
+
+  // Добавляем эффект для обработки показа/скрытия ключа
+  useEffect(() => {
+    if (showApiKey) {
+      setDisplayedApiKey(originalApiKey || apiKey);
+    } else {
+      setDisplayedApiKey(apiKey.startsWith('*') ? apiKey : '*'.repeat(apiKey.length));
+    }
+  }, [showApiKey, originalApiKey, apiKey]);
 
   const filteredTerms = Object.entries(allTerms).filter(([term]) => 
     term.toLowerCase().includes(searchTerm.toLowerCase())
@@ -204,9 +219,14 @@ const Dashboard = () => {
   const renderUnknownWordsContent = () => (
     <div className="space-y-6">
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-xl font-semibold text-primary">
-          Незнакомые слова
-        </h2>
+        <div>
+          <h2 className="text-xl font-semibold text-primary">
+            Незнакомые слова
+          </h2>
+          <p className="text-sm text-gray-400">
+            Всего слов: {unknownWords.length}
+          </p>
+        </div>
         <div className="flex gap-2">
           <button
             onClick={() => setSortType('newest')}
@@ -224,13 +244,17 @@ const Dashboard = () => {
           </button>
         </div>
       </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {sortedUnknownWords.map((word, index) => (
           <WordList 
             key={index}
             word={word.original}
             translation={word.translation}
-            onClick={() => handleTermClick(word.original, word.translation, word.category)}
+            category={word.category}
+            attempts={word.attempts}
+            lastAttempt={word.last_attempt}
+            onClick={() => handleTermClick(word)}
           />
         ))}
       </div>
@@ -294,7 +318,7 @@ const Dashboard = () => {
                     {currentModel === 'ollama' ? 'Модель Ollama' : 'Версия Gemini'}
                   </label>
                   <select
-                    value={subModel}
+                    value={currentModel === 'ollama' ? subModel.ollama : subModel.gemini}
                     onChange={(e) => handleSubModelChange(e.target.value)}
                     className="w-full bg-dark border border-gray-700 text-text px-4 py-2 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary"
                   >
@@ -315,16 +339,30 @@ const Dashboard = () => {
                       API Key
                     </label>
                     <div className="flex gap-2">
-                      <input
-                        type="password"
-                        value={apiKey}
-                        onChange={(e) => handleApiKeyChange(e.target.value)}
-                        placeholder="Введите API ключ Gemini"
-                        className="flex-1 bg-dark border border-gray-700 text-text px-4 py-2 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary"
-                      />
+                      <div className="flex-1 relative">
+                        <input
+                          type={showApiKey ? "text" : "password"}
+                          value={showApiKey ? apiKey : displayedApiKey}
+                          onChange={(e) => {
+                            const newValue = e.target.value;
+                            setApiKey(newValue);
+                            setDisplayedApiKey(newValue);
+                          }}
+                          placeholder="Введите API ключ Gemini"
+                          className="w-full bg-dark border border-gray-700 text-text px-4 py-2 pr-10 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary"
+                        />
+                        <button
+                          type="button"
+                          onClick={() => setShowApiKey(!showApiKey)}
+                          className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary"
+                        >
+                          {showApiKey ? <EyeOff size={20} /> : <Eye size={20} />}
+                        </button>
+                      </div>
                       <button
                         onClick={() => handleApiKeyChange(apiKey)}
-                        className="px-4 py-2 bg-primary hover:bg-primary-hover text-dark rounded-lg transition-colors"
+                        disabled={!apiKey || apiKey === displayedApiKey}
+                        className="px-4 py-2 bg-primary hover:bg-primary-hover text-dark rounded-lg transition-colors disabled:opacity-50"
                       >
                         Сохранить
                       </button>
@@ -345,12 +383,20 @@ const Dashboard = () => {
             <p className="page-subtitle">
               Практикуйтесь в чтении технических текстов и изучайте новые термины
             </p>
-            <Link
-              to="/learning"
-              className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-hover text-dark font-medium rounded-xl transition-all duration-200"
-            >
-              Начать практику
-            </Link>
+            <div className="flex justify-center gap-4">
+              <Link
+                to="/assessment"
+                className="inline-flex items-center px-6 py-3 bg-dark-card border border-primary text-primary hover:bg-primary hover:text-dark font-medium rounded-xl transition-all duration-200"
+              >
+                Начать оценку знаний
+              </Link>
+              <Link
+                to="/learning"
+                className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-hover text-dark font-medium rounded-xl transition-all duration-200"
+              >
+                Начать практику
+              </Link>
+            </div>
           </div>
         );
     }

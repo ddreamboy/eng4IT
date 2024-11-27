@@ -89,7 +89,12 @@ const WordAssessment = () => {
     const fetchWords = async () => {
       try {
         const response = await axios.get(`${API_URL}/assessment-words`);
-        setWords(response.data.words);
+        if (response.data.words && response.data.words.length > 0) {
+          setWords(response.data.words);
+          console.log('Fetched words:', response.data.words);
+        } else {
+          console.warn('No words received from API.');
+        }
       } catch (error) {
         console.error('Error fetching assessment words:', error);
       } finally {
@@ -126,12 +131,16 @@ const WordAssessment = () => {
 
   const handleAssessmentComplete = async () => {
     try {
+      // Сохраняем только неизвестные слова
       await axios.post(`${API_URL}/assessment-results`, {
-        knownWords,
-        unknownWords
+        unknownWords: unknownWords.map(word => ({
+          term: word.term,
+          category: word.category
+        }))
       });
-      // Перенаправляем на страницу обучения после сохранения результатов
-      navigate('/learning');
+
+      // Перенаправляем на страницу с неизвестными словами
+      navigate('/?tab=unknown-words');
     } catch (error) {
       console.error('Error saving assessment results:', error);
     }
@@ -151,6 +160,12 @@ const WordAssessment = () => {
   return (
     <div className="min-h-screen gradient-background flex flex-col items-center p-8">
       <div className="w-full max-w-md mx-auto">
+        {/* Отображать сообщение, если нет слов */}
+        {words.length === 0 && !isLoading && (
+          <div className="text-center text-red-500">
+            Нет доступных слов для оценки.
+          </div>
+        )}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-center bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent">
             Words Assessment
