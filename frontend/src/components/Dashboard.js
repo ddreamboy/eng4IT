@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Clock, SortAsc } from 'lucide-react'; // Восстановлены необходимые импортируемые компоненты
 import { Link, useSearchParams } from 'react-router-dom';
 import axios from 'axios';
-import { Clock, AlignJustify, SortAsc } from 'lucide-react';
+// import { AlignJustify, SortAsc } from 'lucide-react'; // Удален AlignJustify
 import TermModal from './TermModal';
 
 const WordList = ({ word, translation, category, onClick }) => (
@@ -23,97 +24,17 @@ const WordList = ({ word, translation, category, onClick }) => (
   </div>
 );
 
-
-const SortButton = ({ icon: Icon, label, isActive, onClick }) => (
-    <button
-      onClick={onClick}
-      className={`sort-btn ${isActive ? 'active' : ''}`}
-    >
-      <Icon size={16} />
-      <span>{label}</span>
-    </button>
-  );
-
-const ModelSelector = ({ model, subModel, onModelChange, onSubModelChange, apiKey, onApiKeyChange }) => (
-  <div className="space-y-6">
-    <div className="grid grid-cols-2 gap-4">
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
-          Основная модель
-        </label>
-        <div className="grid grid-cols-2 gap-2">
-          <button
-            onClick={() => onModelChange('ollama')}
-            className={`px-4 py-2 rounded-lg text-sm font-medium ${
-              model === 'ollama'
-                ? 'bg-indigo-600 text-white'
-                : 'bg-white text-gray-700 hover:bg-gray-50 border'
-            }`}
-          >
-            Ollama
-          </button>
-          <button
-            onClick={() => onModelChange('gemini')}
-            className={`px-4 py-2 rounded-lg text-sm font-medium ${
-              model === 'gemini'
-                ? 'bg-indigo-600 text-white'
-                : 'bg-white text-gray-700 hover:bg-gray-50 border'
-            }`}
-          >
-            Gemini
-          </button>
-        </div>
-      </div>
-
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
-          {model === 'ollama' ? 'Модель Ollama' : 'Версия Gemini'}
-        </label>
-        <select
-          value={subModel}
-          onChange={(e) => onSubModelChange(e.target.value)}
-          className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-        >
-          {model === 'ollama' ? (
-            <option value="llama3.2">Llama 3.2</option>
-          ) : (
-            <>
-              <option value="gemini-1.5-pro">gemini-1.5-pro</option>
-              <option value="gemini-1.5-flash">gemini-1.5-flash</option>
-              <option value="gemini-1.5-flash-8b">gemini-1.5-flash-8b</option>
-            </>
-          )}
-        </select>
-      </div>
-    </div>
-
-    {model === 'gemini' && (
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
-          API Key
-        </label>
-        <div className="flex gap-2">
-          <input
-            type="password"
-            value={apiKey}
-            onChange={(e) => onApiKeyChange(e.target.value)}
-            placeholder="Введите API ключ Gemini"
-            className="flex-1 px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          />
-          <button
-            onClick={() => onApiKeyChange(apiKey)} // Здесь можно добавить сохранение ключа
-            className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
-          >
-            Сохранить
-          </button>
-        </div>
-      </div>
-    )}
-  </div>
-);
+// Удалите неиспользуемые константы
+// const SortButton = ... // Удалено
+// const ModelSelector = ... // Удалено
 
 const Dashboard = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  // Было
+  // const [searchParams, setSearchParams] = useSearchParams();
+  
+  // Стало
+  const [searchParams] = useSearchParams();
+  
   const [activeTab, setActiveTab] = useState(searchParams.get('tab') || 'tasks');
   const [currentModel, setCurrentModel] = useState('ollama');
   const [subModel, setSubModel] = useState({
@@ -127,6 +48,7 @@ const Dashboard = () => {
   const [sortType, setSortType] = useState('newest'); // 'newest', 'alphabetical'
   const [selectedTerm, setSelectedTerm] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modelOptions, setModelOptions] = useState({ ollama: false, gemini: true });
 
   // В компоненте Dashboard
   useEffect(() => {
@@ -193,7 +115,7 @@ const Dashboard = () => {
     return -1;
   });
 
-  const handleModelChange = async (model) => {
+  const handleModelChange = useCallback(async (model) => {
     try {
       const data = {
         model,
@@ -206,7 +128,7 @@ const Dashboard = () => {
     } catch (error) {
       console.error('Error setting model:', error);
     }
-  };
+  }, [subModel, apiKey]);
 
   const handleSubModelChange = async (newSubModel) => {
     try {
@@ -259,6 +181,25 @@ const Dashboard = () => {
       fetchAllTerms();
     }
   }, [activeTab]);
+
+  useEffect(() => {
+    const checkAvailableModels = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/available-models');
+        const availableModels = response.data;
+        
+        if (!availableModels.ollama && currentModel === 'ollama') {
+          handleModelChange('gemini');
+        }
+        
+        setModelOptions(availableModels);
+      } catch (error) {
+        console.error('Error checking available models:', error);
+      }
+    };
+    
+    checkAvailableModels();
+  }, [currentModel, handleModelChange]);
 
   const renderUnknownWordsContent = () => (
     <div className="space-y-6">
@@ -336,6 +277,7 @@ const Dashboard = () => {
                     <button
                       onClick={() => handleModelChange('ollama')}
                       className={`settings-button ${currentModel === 'ollama' ? 'active' : ''}`}
+                      disabled={!modelOptions.ollama}
                     >
                       Ollama
                     </button>

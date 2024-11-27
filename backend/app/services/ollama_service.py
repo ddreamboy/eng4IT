@@ -1,28 +1,44 @@
 import os
 import random
-import asyncio
-from typing import List, Dict
-import markdown
 import logging
-from langchain.prompts import PromptTemplate
-from langchain_ollama import ChatOllama
-from flask import Flask, render_template, request, jsonify
+from typing import List, Dict, Tuple
+import markdown
+import requests
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+# Проверяем доступность langchain
+try:
+    from langchain.prompts import PromptTemplate
+    from langchain_community.llms import Ollama
+    LANGCHAIN_AVAILABLE = True
+except ImportError:
+    LANGCHAIN_AVAILABLE = False
+    logger.warning("Langchain not available, using basic template formatting")
+
 class KnowledgeEvaluator:
     def __init__(self, words_file: str, base_url: str = "http://localhost:11434"):
         """Инициализация оценщика знаний."""
-        self.llm = ChatOllama(model="llama3:instruct", base_url=base_url)
+        self.words_file = words_file
         self.categories = self._load_words_from_file(words_file)
-        
+        self.base_url = base_url
+
+        if LANGCHAIN_AVAILABLE:
+            try:
+                self.llm = Ollama(model="llama3:instruct", base_url=base_url)
+            except Exception as e:
+                logger.warning(f"Could not initialize Ollama: {e}")
+                self.llm = None
+        else:
+            self.llm = None
+
     def _load_words_from_file(self, filepath: str) -> Dict[str, Dict[str, List[str]]]:
         """Загружает слова из markdown файла."""
         categories = {}
         current_category = None
         current_subcategory = None
-        
+
         try:
             with open(filepath, 'r', encoding='utf-8') as f:
                 for line in f:
@@ -41,75 +57,101 @@ class KnowledgeEvaluator:
         except Exception as e:
             logger.error(f"Error loading words file: {e}")
             return {}
-            
+
         return categories
 
-    def _select_random_words(self, num_words: int = 5) -> tuple[List[str], Dict[str, str]]:
+    def _select_random_words(self, num_words: int = 5) -> Tuple[List[str], Dict[str, str]]:
         """Выбирает случайные слова из всех категорий и возвращает их категории."""
         all_words = []
-        word_categories = {}  # Словарь для хранения категорий слов
-        
+        word_categories = {}
+
         for category, subcategories in self.categories.items():
             for subcategory, words in subcategories.items():
                 for word in words:
                     all_words.append(word)
                     word_categories[word] = f"{category} -> {subcategory}"
-        
+
         selected_words = random.sample(all_words, min(num_words, len(all_words)))
         selected_categories = {word: word_categories[word] for word in selected_words}
-        
+
         return selected_words, selected_categories
 
-    def generate_evaluation_text(self, words: List[str], categories: Dict[str, str]) -> Dict:
-        prompt = PromptTemplate(
-            template=(
-                "STRICT FORMAT FOR ANSWER: ```\n scenario \n```\n"
-                "Generate a short technical scenario (90-150 words) that naturally "
-                "incorporates these technical terms: {words}.\n"
-                "The scenario should be challenging but realistic, suitable for evaluating "
-                "technical knowledge. Focus on practical application in a work situation.\n"
-                "Terms to include: {words}"
-            ),
-            input_variables=["words"]
+    def _format_prompt(self, words: List[str]) -> str:
+        """Форматирует промпт для генерации текста."""
+        template = (
+            "Generate a short technical scenario (90-150 words) that naturally "
+            "incorporates these technical terms: {words}.\n"
+            "The scenario should be challenging but realistic, suitable for evaluating "
+            "technical knowledge. Focus on practical application in a work situation."
         )
-        
-        try:
-            response = self.llm.invoke(
-                prompt.format(words=", ".join(words))
+
+        if LANGCHAIN_AVAILABLE:
+            prompt = PromptTemplate(
+                template=template,
+                input_variables=["words"]
             )
-            # Очищаем текст от маркеров и слова "scenario"
-            text = response.content.strip()
+            return prompt.format(words=", ".join(words))
+        else:
+            return template.format(words=", ".join(words))
+
+    def generate_evaluation_text(self, words: List[str], categories: Dict[str, str]) -> Dict:
+        """Генерация текста для оценки."""
+        try:
+            if self.llm:
+                # Используем Ollama через langchain если доступно
+                prompt = self._format_prompt(words)
+                response = self.llm.invoke(prompt)
+                text = response.content if hasattr(response, 'content') else str(response)
+            else:
+                # Используем прямой запрос к API Ollama если langchain недоступен
+                try:
+                    response = requests.post(
+                        f"{self.base_url}/api/generate",
+                        json={
+                            "model": "llama3:instruct",
+                            "prompt": self._format_prompt(words)
+                        }
+                    )
+                    if response.status_code == 200:
+                        text = response.json().get('response', '')
+                    else:
+                        raise Exception(f"Ollama API error: {response.status_code}")
+                except Exception as e:
+                    logger.error(f"Error using Ollama API directly: {e}")
+                    # Возвращаем базовый текст если все методы недоступны
+                    text = (
+                        f"This is a placeholder text for evaluation. "
+                        f"The following terms need to be learned: {', '.join(words)}. "
+                        "Please use Gemini model for actual text generation."
+                    )
+
+            # Очищаем текст от маркеров
             text = text.replace("```", "").strip()
             text = text.replace("scenario", "").strip()
             text = text.replace("Scenario:", "").strip()
             text = text.replace("Scenario", "").strip()
+
             return {
-                "text": text,  # Изменено с "scenario" на "text"
+                "text": text,
                 "categories": categories
             }
         except Exception as e:
             logger.error(f"Error generating evaluation text: {e}")
             return {
-                "text": "Failed to generate scenario",  # Добавлен текст по умолчанию
+                "text": "Failed to generate scenario",
                 "categories": categories
             }
 
-async def main():
-    words_file = r'Q:\PythonProjects\ENGY\words\categorized_words.md'
+if __name__ == "__main__":
+    words_file = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'words', 'categorized_words.md')
     evaluator = KnowledgeEvaluator(words_file)
     selected_words, categories = evaluator._select_random_words()
-    result = await evaluator.generate_evaluation_text(selected_words, categories)
-    
-    if "error" not in result:
-        print("\nГенерированный текст:")
-        print("-" * 80)
-        print(result["text"])
-        print("-" * 80)
-        print("\nИспользованные термины и их категории:")
-        for word, category in result["categories"].items():
-            print(f"- {word}: {category}")
-    else:
-        print("Ошибка:", result["error"])
+    result = evaluator.generate_evaluation_text(selected_words, categories)
 
-if __name__ == "__main__":
-    asyncio.run(main())
+    print("\nГенерированный текст:")
+    print("-" * 80)
+    print(result["text"])
+    print("-" * 80)
+    print("\nИспользованные термины и их категории:")
+    for word, category in result["categories"].items():
+        print(f"- {word}: {category}")
