@@ -1,4 +1,5 @@
-
+Чат с незнакомыми терминами где нужно по пордяку слова выбирать на ответы,
+как в дуолинго, но тут типа чат и тебе пишут и ты должен отвечать
 
 ### Implemented ✅
 
@@ -27,6 +28,13 @@
   - Comprehensive term database
   - Category-based organization
   - Progress tracking per term
+
+- **Chat Exercise System**
+  - Interactive dialogue-based learning
+  - Word ordering exercises similar to Duolingo
+  - Real-time translation and hints
+  - Progress tracking per dialogue
+  - Fallback between Gemini and Ollama for dialogue generation
 
 ### In Progress 🔨
 

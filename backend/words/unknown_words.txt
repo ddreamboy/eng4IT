@@ -1,0 +1,24 @@
+visualize:::Визуализация
+ingestion pipeline:::трубопровод для проглатывания
+these reviews:::эти обзоры
+GitLab CI:::Сигнал GitLab
+capacity planning:::планирование потенциала
+hashing:::хеширование
+rate limiting:::Ограничительная ставка
+anchor box:::Якорный ящик
+saga pattern:::Расположение saga
+code splitting:::Разделение кода
+data anonymization:::анонимизация данных
+data pipeline:::трубопровод данных
+batch normalization:::Регулирование партии
+marketing team:::Группа по маркетингу
+robust:::Надежный
+gathers:::Собирает
+sentiment:::сентиментальность
+ingestion pipeline:::трубопровод для проглатывания
+production sentiment analysis service:::сервис анализа производственных настроений
+users:::пользователи
+implemented:::реализованы
+Unfortunately:::К сожалению
+leverage failover:::отказоустойчивость левериджа
+deque:::deque

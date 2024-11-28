@@ -287,14 +287,33 @@ const LearningInterface = () => {
   
     setIsSaving(true);
     try {
-      await axios.post(`${API_URL}/save_words`, {
-        words: selectedWords
-      });
+      // 1. Получаем категоризацию для слов
+      const categorizationResponse = await axios.post(
+        `${API_URL}/categorize-words`,
+        { words: selectedWords }
+      );
   
-      // Перенаправляем на дашборд после сохранения слов
+      // 2. Проверяем ответ и обрабатываем категоризированные слова
+      if (categorizationResponse.data && Array.isArray(categorizationResponse.data.words)) {
+        const categorizedWords = categorizationResponse.data.words;
+        
+        // 3. Сохраняем слова с присвоенными категориями
+        await axios.post(`${API_URL}/save_words`, {
+          words: categorizedWords.map(word => ({
+            original: word.original || word.term,
+            translation: word.translation,
+            category: word.category // Теперь каждое слово имеет свою категорию
+          }))
+        });
+      } else {
+        throw new Error('Invalid categorization response format');
+      }
+  
+      // 4. Перенаправляем на дашборд
       navigate('/?tab=unknown-words');
     } catch (error) {
       console.error('Error handling next:', error);
+      // Добавьте обработку ошибок для пользователя
     } finally {
       setIsSaving(false);
     }

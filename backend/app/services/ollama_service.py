@@ -1,3 +1,4 @@
+import json
 import logging
 import os
 import random
@@ -23,17 +24,37 @@ class KnowledgeEvaluator:
     def __init__(self, words_file: str, base_url: str = 'http://localhost:11434'):
         """Инициализация оценщика знаний."""
         self.words_file = words_file
-        self.categories = self._load_words_from_file(words_file)
-        self.base_url = base_url
+        # Добавляем значения по умолчанию для categories
+        self.categories = {
+            'Programming Basics': {
+                'Algorithms': [],
+                'Data Structures': [],
+                'General': [],
+            },
+            'Web Development': {'Frontend': [], 'Backend': [], 'APIs': []},
+        }
 
+        # Пытаемся загрузить слова из файла
+        try:
+            loaded_categories = self._load_words_from_file(words_file)
+            if loaded_categories:
+                self.categories = loaded_categories
+        except Exception as e:
+            logger.warning(
+                f'Could not load words from file: {e}. Using default categories.'
+            )
+
+        self.base_url = base_url
+        self.llm = None
+
+        # Пытаемся инициализировать Ollama
         if LANGCHAIN_AVAILABLE:
             try:
-                self.llm = Ollama(model='llama3:instruct', base_url=base_url)
+                self.llm = Ollama(model='llama2', base_url=base_url)
+                self.llm.invoke('test')
             except Exception as e:
                 logger.warning(f'Could not initialize Ollama: {e}')
                 self.llm = None
-        else:
-            self.llm = None
 
     def _load_words_from_file(
         self, filepath: str
@@ -69,19 +90,44 @@ class KnowledgeEvaluator:
     def _select_random_words(
         self, num_words: int = 5
     ) -> Tuple[List[str], Dict[str, str]]:
-        """Выбирает случайные слова из всех категорий и возвращает их категории."""
+        """Выбирает случайные слова из категорий."""
         all_words = []
         word_categories = {}
 
-        for category, subcategories in self.categories.items():
-            for subcategory, words in subcategories.items():
-                for word in words:
-                    all_words.append(word)
-                    word_categories[word] = f'{category} -> {subcategory}'
+        # Добавляем базовые слова если нет других
+        if not any(
+            words
+            for subcat in self.categories.values()
+            for words in subcat.values()
+        ):
+            base_words = ['algorithm', 'database', 'API', 'framework', 'function']
+            for word in base_words:
+                all_words.append(word)
+                word_categories[word] = 'Programming -> General'
+        else:
+            for category, subcategories in self.categories.items():
+                for subcategory, words in subcategories.items():
+                    for word in words:
+                        all_words.append(word)
+                        word_categories[word] = f'{category} -> {subcategory}'
 
-        selected_words = random.sample(all_words, min(num_words, len(all_words)))
+        # Выбираем случайные слова
+        if all_words:
+            selected_words = random.sample(
+                all_words, min(num_words, len(all_words))
+            )
+        else:
+            selected_words = [
+                'algorithm',
+                'database',
+                'API',
+                'framework',
+                'function',
+            ][:num_words]
+
         selected_categories = {
-            word: word_categories[word] for word in selected_words
+            word: word_categories.get(word, 'Programming -> General')
+            for word in selected_words
         }
 
         return selected_words, selected_categories
@@ -152,6 +198,158 @@ class KnowledgeEvaluator:
             return {
                 'text': 'Failed to generate scenario',
                 'categories': categories,
+            }
+
+    def categorize_words(self, prompt: str) -> str:
+        """Categorize words using Ollama."""
+        try:
+            if self.llm is None:
+                try:
+                    self.llm = Ollama(model='llama3.2', base_url=self.base_url)
+                except Exception as e:
+                    logger.error(f'Failed to initialize Ollama: {e}')
+                    return self._fallback_categorization(prompt)
+
+            # Добавляем инструкции для более точного форматирования
+            enhanced_prompt = f"""{prompt}
+
+    Important: Format each response strictly as:
+    word: Category -> Subcategory
+
+    For example:
+    database: Databases -> SQL
+    api: Web Development -> REST
+    algorithm: Programming -> Data Structures
+
+    Use existing categories when possible, create new ones only when necessary.
+    Always include both Category and Subcategory separated by ' -> '."""
+
+            response = self.llm.invoke(enhanced_prompt)
+            result = (
+                response.content if hasattr(response, 'content') else str(response)
+            )
+
+            # Проверяем формат ответа
+            lines = result.strip().split('\n')
+            formatted_lines = []
+
+            for line in lines:
+                if ':' in line and '->' in line:
+                    word, category = line.split(':', 1)
+                    category = category.strip()
+                    word = word.strip()
+
+                    # Проверяем правильность формата категории
+                    if ' -> ' in category:
+                        formatted_lines.append(f'{word}: {category}')
+                    else:
+                        # Если формат неправильный, используем базовую категорию
+                        formatted_lines.append(f'{word}: Programming -> General')
+
+            if not formatted_lines:
+                return self._fallback_categorization(prompt)
+
+            return '\n'.join(formatted_lines)
+
+        except Exception as e:
+            logger.error(f'Error categorizing words with Ollama: {e}')
+            return self._fallback_categorization(prompt)
+
+    def _fallback_categorization(self, prompt: str) -> str:
+        """Базовая категоризация, когда LLM недоступен."""
+        words = []
+        for line in prompt.split('\n'):
+            if 'Words to categorize:' in line:
+                words = line.split(':')[1].strip().split(', ')
+                break
+
+        # Используем разные базовые категории для разнообразия
+        categories = [
+            'Programming -> Development',
+            'Web Development -> Frontend',
+            'Web Development -> Backend',
+            'Databases -> General',
+            'Software Engineering -> Tools',
+        ]
+
+        result = []
+        for i, word in enumerate(words):
+            category = categories[i % len(categories)]
+            result.append(f'{word}: {category}')
+
+        return '\n'.join(result)
+
+    def _fallback_categorization(self, prompt: str) -> str:
+        """Базовая категоризация, когда LLM недоступен."""
+        # Извлекаем слова из промпта
+        words = []
+        for line in prompt.split('\n'):
+            if 'Words to categorize:' in line:
+                words = line.split(':')[1].strip().split(', ')
+                break
+
+        # Возвращаем базовую категоризацию
+        return '\n'.join([f'{word}: Programming -> General' for word in words])
+
+    def generate_dialogue(self, terms):
+        """Генерация диалога через Ollama."""
+        prompt = f"""
+        Create a technical chat dialogue between colleagues using these terms: {', '.join([t.term for t in terms])}
+
+        Format:
+        {{
+            "steps": [
+                {{
+                    "messages": [
+                        {{"isUser": false, "text": "message", "translation": "RU translation"}},
+                        {{"isUser": true, "text": "response", "translation": "RU translation"}}
+                    ],
+                    "words": ["word1", "word2", "extra1"],
+                    "correctAnswer": "correct response"
+                }}
+            ]
+        }}
+
+        Requirements:
+        - 4-7 dialogue steps
+        - Short messages (1-2 sentences)
+        - Professional context
+        - Include translations
+        - Shuffle words in 'words' array
+        - Add 2-3 contextually relevant but incorrect words
+        """
+
+        try:
+            if self.llm is None:
+                self.llm = Ollama(model='llama2', base_url=self.base_url)
+
+            response = self.llm.invoke(prompt)
+            content = (
+                response.content if hasattr(response, 'content') else str(response)
+            )
+            return json.loads(content)
+        except Exception as e:
+            logger.error(f'Error generating dialogue with Ollama: {e}')
+            # Возвращаем базовый диалог в случае ошибки
+            return {
+                'steps': [
+                    {
+                        'messages': [
+                            {
+                                'isUser': False,
+                                'text': 'Could not generate dialogue',
+                                'translation': 'Не удалось сгенерировать диалог',
+                            },
+                            {
+                                'isUser': True,
+                                'text': 'Please try again later',
+                                'translation': 'Пожалуйста, попробуйте позже',
+                            },
+                        ],
+                        'words': ['try', 'again', 'later'],
+                        'correctAnswer': 'try again later',
+                    }
+                ]
             }
 
 
