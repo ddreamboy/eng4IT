@@ -1,0 +1,196 @@
+accuracydata:::данные
+data scientist:::Учёный в области данных
+implementing:::осуществление
+risk assessment model:::модель оценки рисков
+ensure:::обеспечить
+audited:::ревизованные
+audited biases:::проверенные погрешности
+accuracy:::точность
+tight deadline:::сжатые сроки
+chunks:::кусочки
+conquer strategy:::Завоевательская стратегия
+utilize:::использовать
+Additionally:::Кроме того
+from unauthorized use:::от несанкционированного использования
+sanitization:::Санитаризация
+consensus:::консенсуса
+command query separation:::Разделение запросов на команду
+release management:::управление высвобождением
+heap sort:::Тип груды
+vertical scaling:::вертикальное масштабирование
+sanitization:::Санитаризация
+consensus:::консенсуса
+command query separation:::Разделение запросов на команду
+release management:::управление высвобождением
+heap sort:::Тип груды
+vertical scaling:::вертикальное масштабирование
+high-volume:::большой объем
+multiple:::множество
+prevent:::предупреждение
+cascading:::каскадирование
+circuit breaker:::выключатель цепи
+Chaining is used:::Используется цепная цепочка
+ensures:::обеспечивает
+occurs:::происходит
+database nodes:::узлы базы данных
+hijacking:::угон
+troubleshoot:::Неполадки
+maintain:::поддержание
+availability:::наличие
+service decomposition:::Разложение сервиса
+service registry:::Реестр услуг
+hybrid cloud:::гибридное облако
+rate limiting:::Ограничительная ставка
+SSL certificate:::Сертификат SSL
+data replication:::копирование данных
+ETL:::ЕТЛ
+load balancing:::Балансирование нагрузки
+performance degradation::::: ухудшение показателей деятельности;
+cloud cost optimization:::оптимизация затрат на облако
+pod:::стручка
+union find:::Найти профсоюз
+model-view-controller:::Model-Meeting-Monitor
+data lake:::озеро данных
+ETL:::ЕТЛ
+event-driven architecture:::архитектура, ориентированная на конкретные события
+security header:::Заголовок обеспечения безопасности
+canary deployment:::Развертывание канарей
+data deduplication:::d) Опустынивание данных
+artifact:::артефакт
+build agent::::: сборка агента
+insertion sort:::Тип ввода
+dependency management:::Управление в отношении иждивенцев
+dependency management:::Управление в отношении иждивенцев
+replica set:::Копия комплекта
+service telemetry:::сервисная телеметрия
+selection sort:::Тип выбора
+feature extraction:::Извлечение свойств
+bias-variance tradeoff:::b) Противоположность с перекосом
+build agent::::: сборка агента
+insertion sort:::Тип ввода
+dependency management:::Управление в отношении иждивенцев
+dependency management:::Управление в отношении иждивенцев
+replica set:::Копия комплекта
+service telemetry:::сервисная телеметрия
+selection sort:::Тип выбора
+feature extraction:::Извлечение свойств
+bias-variance tradeoff:::b) Противоположность с перекосом
+experiment tracking system:::экспериментальная система отслеживания
+security incident:::Инцидент в плане безопасности
+experiment tracking system:::экспериментальная система отслеживания
+security incident:::Инцидент в плане безопасности
+experiment tracking system:::экспериментальная система отслеживания
+security incident:::Инцидент в плане безопасности
+experiment logging:::экспериментальная заготовка
+version control:::Регулирование вариантов
+data aggregation:::агрегирование данных
+f1-score:::f1-уровень
+cross-validation:::перекрестное подтверждение
+service level agreement:::Соглашение об уровне обслуживания
+builder pattern:::Строительный рисунок
+cloud computing:::облачные вычисления
+shadow deployment:::&lt; &lt; теневое развертывание &gt; &gt;
+composite pattern:::композитная структура
+pooling layer:::Сплоченный слой
+experiment logging:::экспериментальная заготовка
+version control:::Регулирование вариантов
+data aggregation:::агрегирование данных
+f1-score:::f1-уровень
+cross-validation:::перекрестное подтверждение
+service level agreement:::Соглашение об уровне обслуживания
+builder pattern:::Строительный рисунок
+cloud computing:::облачные вычисления
+shadow deployment:::&lt; &lt; теневое развертывание &gt; &gt;
+composite pattern:::композитная структура
+pooling layer:::Сплоченный слой
+experiment logging:::экспериментальная заготовка
+version control:::Регулирование вариантов
+data aggregation:::агрегирование данных
+f1-score:::f1-уровень
+cross-validation:::перекрестное подтверждение
+service level agreement:::Соглашение об уровне обслуживания
+builder pattern:::Строительный рисунок
+cloud computing:::облачные вычисления
+shadow deployment:::&lt; &lt; теневое развертывание &gt; &gt;
+composite pattern:::композитная структура
+pooling layer:::Сплоченный слой
+infrastructure as code:::инфраструктуры в качестве кода
+infrastructure as code:::инфраструктуры в качестве кода
+automated monitoring:::Автоматизированный мониторинг
+model rollback:::Модель возврата
+build:::строительство
+optical flow:::оптический поток
+traversal:::Траверсный
+data observability::::: защищенность данных
+memoization::::: памятка
+filter:::фильтр
+database schema:::Схема базы данныхa
+database schema:::Схема базы данныхa
+activation function:::функция активации
+probing:::поиск
+cluster:::группа вопросов
+security compliance:::Обеспечение соблюдения норм безопасности
+pipeline:::трубопровод
+data migration:::Миграция данных
+ETL:::ЕТЛ
+model latency:::модель запоздалости
+security breach:::нарушение безопасности
+infrastructure as code:::инфраструктуры в качестве кода
+infrastructure as code:::инфраструктуры в качестве кода
+automated monitoring:::Автоматизированный мониторинг
+model rollback:::Модель возврата
+build:::строительство
+optical flow:::оптический поток
+traversal:::Траверсный
+data observability::::: защищенность данных
+memoization::::: памятка
+filter:::фильтр
+database schema:::Схема базы данныхa
+database schema:::Схема базы данныхa
+activation function:::функция активации
+probing:::поиск
+cluster:::группа вопросов
+security compliance:::Обеспечение соблюдения норм безопасности
+pipeline:::трубопровод
+data migration:::Миграция данных
+ETL:::ЕТЛ
+model latency:::модель запоздалости
+security breach:::нарушение безопасности
+configuration management:::Управление конфигурацией
+e-commerce:::электронная торговля
+AI-powered:::Мощность АИ
+customer support:::Поддержка клиентов
+data sharding:::Осколки данных
+maintain:::поддержание
+performance:::результативность
+conditions:::условия
+text summarization:::Резюме текста
+machine translation:::машинный перевод
+machine translation:::машинный перевод
+underfitting:::недоукомплектованность
+higher-order function:::функция высшего порядка
+service resilience:::упругость обслуживания
+state:::Состояние
+rate limiting:::Ограничительная ставка
+browser cache:::Кэш браузера
+dense layer:::плотный слой
+object tracking:::Отслеживание объекта
+role-based access control:::контроль доступа на основе ролевого подхода;
+api gateway:::Вход api
+filter:::фильтр
+skip list:::пропустить список@ info: whatsthis
+data pipeline:::трубопровод данных
+dropout:::отсев
+random search:::случайный поиск
+random search:::случайный поиск
+isolation level:::Уровень изоляции
+accommodate:::размещение
+e-commerce:::электронная торговля
+thousands:::тыс.
+store:::магазин
+names:::имена и фамилии
+request:::просьба
+Furthermore:::Кроме того
+once:::Один раз
+auditing:::Ревизия
+coreference resolution:::coreference solution resolution

@@ -10,7 +10,16 @@ from models.base import (  # Добавьте импорт моделей
     Term,
     UnknownTerm,
 )
-from sqlalchemy import JSON, Column, DateTime, Integer, String, Text, create_engine
+from sqlalchemy import (
+    JSON,
+    Boolean,
+    Column,
+    DateTime,
+    Integer,
+    String,
+    Text,
+    create_engine,
+)
 from sqlalchemy.orm import sessionmaker
 
 # Удалите эту строку, так как Base уже импортирован из models.base
@@ -44,8 +53,8 @@ class ModelConfig(Base):
 
     id = Column(Integer, primary_key=True)
     current_model = Column(String, nullable=False, default='gemini')
-    sub_model = Column(String, nullable=False, default='gemini-1.5-pro')
-    gemini_api_key = Column(String, nullable=True)
+    sub_model = Column(String, nullable=False, default='gemini-1.5-flash')
+    has_api_key = Column(Boolean, default=False)  # Just track if key exists
     updated_at = Column(
         DateTime,
         default=lambda: datetime.datetime.now(datetime.timezone.utc),
@@ -56,7 +65,7 @@ class ModelConfig(Base):
         return {
             'current_model': self.current_model,
             'sub_model': self.sub_model,
-            'has_api_key': bool(self.gemini_api_key),
+            'has_api_key': bool(os.getenv('GEMINI_API_KEY')),
         }
 
 

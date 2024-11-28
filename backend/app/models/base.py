@@ -65,3 +65,22 @@ class LearningHistory(Base, TimestampMixin):
     term_id = Column(Integer, ForeignKey('terms.id'))
     action = Column(String)  # 'learn', 'review', 'forget'
     history_metadata = Column(JSON)  # Переименовано с metadata на history_metadata
+
+
+class Category(Base):
+    __tablename__ = 'categories'
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String, nullable=False, unique=True)
+    created_at = Column(DateTime, default=datetime.utcnow)
+    subcategories = relationship('Subcategory', back_populates='category')
+
+
+class Subcategory(Base):
+    __tablename__ = 'subcategories'
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String, nullable=False)
+    category_id = Column(Integer, ForeignKey('categories.id'))
+    created_at = Column(DateTime, default=datetime.utcnow)
+    category = relationship('Category', back_populates='subcategories')

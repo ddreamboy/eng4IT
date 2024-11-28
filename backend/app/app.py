@@ -13,7 +13,7 @@ from database.db import AssessmentWord, ModelConfig, Scenario, Session, init_db
 from dotenv import load_dotenv
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-from models.base import LearningHistory, Term, UnknownTerm
+from models.base import Category, LearningHistory, Subcategory, Term, UnknownTerm
 from services.gemini_service import GeminiService
 from services.ollama_service import KnowledgeEvaluator
 from services.translation_service import translator
@@ -101,15 +101,15 @@ def get_current_model():
     try:
         config = session.query(ModelConfig).first()
         if not config:
-            # Если конфигурации нет, создаем с Gemini по умолчанию
+            api_key = os.getenv('GEMINI_API_KEY')
             config = ModelConfig(
                 current_model='gemini',
-                sub_model='gemini-1.5-pro',
-                gemini_api_key=os.getenv('GEMINI_API_KEY'),
+                sub_model='gemini-1.5-flash',
+                has_api_key=bool(api_key),
             )
             session.add(config)
             session.commit()
-        return config.current_model, config.gemini_api_key
+        return config.current_model, os.getenv('GEMINI_API_KEY')
     finally:
         session.close()
 
@@ -140,21 +140,18 @@ def get_model():
             config = ModelConfig(
                 current_model='gemini',
                 sub_model='gemini-1.5-flash',
-                gemini_api_key=None,
+                has_api_key=bool(os.getenv('GEMINI_API_KEY')),
             )
             session.add(config)
             session.commit()
 
-        # Добавляем проверку на наличие ключа
-        api_key = config.gemini_api_key if config.gemini_api_key else None
-        has_api_key = bool(api_key)
-
+        api_key = os.getenv('GEMINI_API_KEY')
         return jsonify(
             {
                 'model': config.current_model,
                 'sub_model': config.sub_model,
-                'has_api_key': has_api_key,
-                'api_key': api_key,  # Передаем реальный ключ
+                'has_api_key': bool(api_key),
+                'api_key': api_key if api_key else None,
             }
         )
     finally:
@@ -291,20 +288,13 @@ def set_model():
             config = ModelConfig(
                 current_model=model_name,
                 sub_model=sub_model,
-                gemini_api_key=api_key
-                if model_name == 'gemini' and api_key
-                else None,
+                has_api_key=bool(os.getenv('GEMINI_API_KEY')),
             )
             session.add(config)
         else:
             config.current_model = model_name
             config.sub_model = sub_model
-            if model_name == 'gemini':
-                # Если ключ не предоставлен или пустой, устанавливаем его как None
-                config.gemini_api_key = api_key if api_key else None
-            else:
-                # Если текущая модель не 'gemini', очищаем ключ
-                config.gemini_api_key = None
+            config.has_api_key = bool(os.getenv('GEMINI_API_KEY'))
 
         session.commit()
         return jsonify(
@@ -312,8 +302,7 @@ def set_model():
                 'status': 'success',
                 'model': config.current_model,
                 'sub_model': config.sub_model,
-                'has_api_key': bool(config.gemini_api_key),
-                'api_key': config.gemini_api_key,  # Возвращаем актуальный ключ
+                'has_api_key': config.has_api_key,
             }
         )
     finally:
@@ -362,48 +351,51 @@ def generate_new():
         evaluator = KnowledgeEvaluator(words_file)
         selected_words, categories = evaluator._select_random_words()
 
+        result = None
+        error_message = None
+
         try:
             if current_model == 'gemini' and api_key:
-                # Используем Gemini с таймаутом
                 logger.info('Using Gemini for generation')
                 gemini_service = GeminiService(api_key)
                 result = gemini_service.generate_evaluation_text(
                     selected_words, categories
                 )
             else:
-                # Используем Ollama
                 logger.info('Using Ollama for generation')
                 result = evaluator.generate_evaluation_text(
                     selected_words, categories
                 )
 
-            logger.info(f'Generation result: {result}')
-
             if not result or not result.get('text'):
-                raise Exception('Empty result from generation service')
-
-            new_scenario = Scenario(
-                text=result['text'], terms=json.dumps(result['categories'])
-            )
-            session.add(new_scenario)
-            session.commit()
-
-            return jsonify(
-                {
-                    'text': new_scenario.text,
-                    'categories': json.loads(new_scenario.terms),
-                }
-            )
+                error_message = 'Empty result from generation service'
 
         except Exception as e:
-            logger.error(f'Error during generation: {e}')
-            # В случае ошибки возвращаем стандартный текст
+            error_message = f'Generation error: {str(e)}'
+            logger.error(error_message)
+
+        if error_message:
+            # Возвращаем информативное сообщение об ошибке
             return jsonify(
                 {
-                    'text': 'An error occurred while generating the scenario. Please try again.',
+                    'text': f'Service temporarily unavailable. {error_message}',
                     'categories': categories,
+                    'error': error_message,
                 }
-            ), 500
+            ), 503  # Service Unavailable
+
+        new_scenario = Scenario(
+            text=result['text'], terms=json.dumps(result['categories'])
+        )
+        session.add(new_scenario)
+        session.commit()
+
+        return jsonify(
+            {
+                'text': new_scenario.text,
+                'categories': json.loads(new_scenario.terms),
+            }
+        )
 
     finally:
         session.close()
@@ -647,6 +639,212 @@ def translate_term():
 @app.route('/api/available-models', methods=['GET'])
 def get_available_models():
     return jsonify(check_available_models())
+
+
+@app.route('/api/categorize-words', methods=['POST'])
+def categorize_words():
+    data = request.json
+    words = data.get('words', [])
+
+    if not words:
+        return jsonify({'error': 'No words provided'}), 400
+
+    try:
+        session = Session()
+        # Получаем все категории и подкатегории из БД
+        categories = session.query(Category).all()
+        categories_dict = {}
+
+        for category in categories:
+            subcategories = [sub.name for sub in category.subcategories]
+            categories_dict[category.name] = subcategories
+
+        # Формируем текст с категориями для промпта
+        categories_text = '\n'.join(
+            [
+                f"Category: {cat}\nSubcategories: {', '.join(subs)}"
+                for cat, subs in categories_dict.items()
+            ]
+        )
+
+        # Если категорий нет, создаем базовые
+        if not categories_dict:
+            default_categories = [
+                ('Programming', ['General', 'Algorithms', 'Data Structures']),
+                ('Web Development', ['Frontend', 'Backend', 'APIs']),
+                ('Databases', ['SQL', 'NoSQL', 'Design']),
+            ]
+
+            for cat_name, subcats in default_categories:
+                category = Category(name=cat_name)
+                session.add(category)
+                session.flush()
+
+                for subcat_name in subcats:
+                    subcategory = Subcategory(
+                        name=subcat_name, category_id=category.id
+                    )
+                    session.add(subcategory)
+
+            session.commit()
+
+            # Обновляем текст категорий
+            categories_text = '\n'.join(
+                [
+                    f"Category: {cat}\nSubcategories: {', '.join(subs)}"
+                    for cat, subs in default_categories
+                ]
+            )
+
+        prompt = f"""Given these existing categories and their subcategories:
+        {categories_text}
+
+        Please categorize the following words by assigning them to either existing or new categories.
+        Words to categorize: {', '.join([w['original'] for w in words])}
+
+        Return the results in the format:
+        word1: Category -> Subcategory
+        word2: Category -> Subcategory
+        ...
+
+        Important:
+        - Use existing categories when possible
+        - Create new categories only if really necessary
+        - Always use the format "Category -> Subcategory"
+        """
+
+        # Получаем текущую модель и ключ API
+        current_model, api_key = get_current_model()
+
+        try:
+            if current_model == 'gemini' and api_key:
+                categorization = gemini_service.categorize_words(prompt)
+            else:
+                service = KnowledgeEvaluator(
+                    os.path.join(WORDS_DIR, 'categorized_words.md')
+                )
+                categorization = service.categorize_words(prompt)
+
+            # Парсим результат и добавляем новые категории если нужно
+            categorized_words = []
+            for word in words:
+                word_category = None
+
+                # Ищем категоризацию для текущего слова
+                for line in categorization.strip().split('\n'):
+                    if ':' in line and '->' in line:
+                        cat_word, category = line.split(':', 1)
+                        if cat_word.strip().lower() == word['original'].lower():
+                            word_category = category.strip()
+                            break
+
+                if word_category and '->' in word_category:
+                    cat_name, subcat_name = [
+                        x.strip() for x in word_category.split('->')
+                    ]
+
+                    # Проверяем существование категории
+                    category = (
+                        session.query(Category).filter_by(name=cat_name).first()
+                    )
+                    if not category:
+                        category = Category(name=cat_name)
+                        session.add(category)
+                        session.flush()
+
+                    # Проверяем существование подкатегории
+                    subcategory = (
+                        session.query(Subcategory)
+                        .filter_by(category_id=category.id, name=subcat_name)
+                        .first()
+                    )
+                    if not subcategory:
+                        subcategory = Subcategory(
+                            name=subcat_name, category_id=category.id
+                        )
+                        session.add(subcategory)
+
+                    word['category'] = f'{cat_name} -> {subcat_name}'
+                else:
+                    word['category'] = 'Programming -> General'
+
+                categorized_words.append(word)
+
+            session.commit()
+            return jsonify({'words': categorized_words})
+
+        except Exception as e:
+            logger.error(f'Error during categorization: {e}')
+            session.rollback()
+            # В случае ошибки используем базовую категорию
+            return jsonify(
+                {
+                    'words': [
+                        {**w, 'category': 'Programming -> General'} for w in words
+                    ]
+                }
+            )
+
+    except Exception as e:
+        logger.error(f'Error in categorize_words: {e}')
+        if 'session' in locals():
+            session.rollback()
+        return jsonify({'error': str(e)}), 500
+
+    finally:
+        if 'session' in locals():
+            session.close()
+
+
+@app.route('/api/categories', methods=['GET'])
+def get_categories():
+    try:
+        session = Session()
+        categories = session.query(Category).all()
+
+        result = {}
+        for category in categories:
+            result[category.name] = [sub.name for sub in category.subcategories]
+
+        return jsonify(result)
+
+    except Exception as e:
+        logger.error(f'Error getting categories: {e}')
+        return jsonify({'error': str(e)}), 500
+
+    finally:
+        session.close()
+
+
+@app.route('/api/chat-exercise', methods=['GET'])
+def get_chat_exercise():
+    try:
+        session = Session()
+        current_model, api_key = get_current_model()
+
+        # Получаем неизвестные слова
+        unknown_terms = session.query(Term).join(UnknownTerm).all()
+
+        if current_model == 'gemini' and api_key:
+            service = GeminiService(api_key)
+        else:
+            service = KnowledgeEvaluator(
+                os.path.join(WORDS_DIR, 'categorized_words.md')
+            )
+
+        # Генерируем диалог
+        terms_for_dialogue = random.sample(
+            unknown_terms, min(10, len(unknown_terms))
+        )
+        dialogue = service.generate_dialogue(terms_for_dialogue)
+
+        return jsonify(dialogue)
+
+    except Exception as e:
+        logger.error(f'Error generating chat exercise: {e}')
+        return jsonify({'error': str(e)}), 500
+    finally:
+        session.close()
 
 
 # Перед app.run()

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Clock, SortAsc, Eye, EyeOff } from 'lucide-react'; // Восстановлены необходимые импортируемые компоненты
+import { Clock, SortAsc, Eye, EyeOff, MessageSquare, ClipboardCheck, BookOpen } from 'lucide-react'; // Восстановлены необходимые импортируемые компоненты
 import { Link, useSearchParams } from 'react-router-dom';
 import axios from 'axios';
 // import { AlignJustify, SortAsc } from 'lucide-react'; // Удален AlignJustify
@@ -369,6 +369,72 @@ const Dashboard = () => {
                     </div>
                   </div>
                 )}
+              </div>
+            </div>
+          </div>
+        );
+
+      case 'tasks':
+        return (
+          <div className="text-center py-12">
+            <h2 className="page-title">
+              Изучение технических терминов
+            </h2>
+            <p className="page-subtitle">
+              Практикуйтесь в чтении технических текстов и изучайте новые термины
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link
+                to="/assessment"
+                className="inline-flex items-center px-6 py-3 bg-dark-card border border-primary text-primary hover:bg-primary hover:text-dark font-medium rounded-xl transition-all duration-200"
+              >
+                Начать оценку знаний
+              </Link>
+              <Link
+                to="/learning"
+                className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-hover text-dark font-medium rounded-xl transition-all duration-200"
+              >
+                Начать практику
+              </Link>
+              <Link
+                to="/chat-exercise"
+                className="inline-flex items-center px-6 py-3 bg-dark-card border border-primary text-primary hover:bg-primary hover:text-dark font-medium rounded-xl transition-all duration-200"
+              >
+                <MessageSquare size={20} className="mr-2" />
+                Чат с коллегой
+              </Link>
+            </div>
+            
+            {/* Добавим краткое описание упражнений */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+              <div className="bg-dark-card p-6 rounded-xl border border-gray-800">
+                <div className="text-primary mb-3">
+                  <ClipboardCheck size={24} />
+                </div>
+                <h3 className="text-lg font-medium mb-2">Оценка знаний</h3>
+                <p className="text-gray-400 text-sm">
+                  Проверьте свое знание технических терминов и определите области для изучения
+                </p>
+              </div>
+              
+              <div className="bg-dark-card p-6 rounded-xl border border-gray-800">
+                <div className="text-primary mb-3">
+                  <BookOpen size={24} />
+                </div>
+                <h3 className="text-lg font-medium mb-2">Практика чтения</h3>
+                <p className="text-gray-400 text-sm">
+                  Читайте технические тексты и изучайте новые термины в контексте
+                </p>
+              </div>
+              
+              <div className="bg-dark-card p-6 rounded-xl border border-gray-800">
+                <div className="text-primary mb-3">
+                  <MessageSquare size={24} />
+                </div>
+                <h3 className="text-lg font-medium mb-2">Чат с коллегой</h3>
+                <p className="text-gray-400 text-sm">
+                  Практикуйте технический английский в формате диалога с коллегой
+                </p>
               </div>
             </div>
           </div>
