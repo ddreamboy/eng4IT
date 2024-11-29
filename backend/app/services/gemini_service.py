@@ -142,110 +142,141 @@ class GeminiService:
             raise
 
     def generate_dialogue(self, terms):
-        """Генерация диалога с использованием текущей модели."""
         try:
             terms_list = [t.term for t in terms]
             prompt = f"""
             Create a technical chat dialogue between colleagues using these terms: {', '.join(terms_list)}
 
-            Your response must be in valid JSON format like this example:
+            VERY IMPORTANT:
+            1. Preserve spaces in compound terms (e.g., "lazy loading" should remain "lazy loading", not "lazyloading")
+            2. When providing words array, keep compound terms as separate elements (e.g., ["lazy", "loading"] not ["lazyloading"])
+            3. The correctAnswer must exactly match the message text
+            4. All compound terms must keep their spaces in all places they appear
+
+            Format example:
             {{
                 "steps": [
                     {{
                         "messages": [
                             {{
                                 "isUser": false,
-                                "text": "Have you implemented the new API?",
-                                "translation": "Вы реализовали новый API?"
+                                "text": "Have you implemented lazy loading for the images?",
+                                "translation": "Вы реализовали ленивую загрузку для изображений?"
                             }},
                             {{
                                 "isUser": true,
-                                "text": "Yes, I've integrated it with the database.",
-                                "translation": "Да, я интегрировал его с базой данных."
+                                "text": "Yes, I've implemented lazy loading now.",
+                                "translation": "Да, я реализовал ленивую загрузку."
                             }}
                         ],
-                        "words": ["API", "database", "integration"],
-                        "correctAnswer": "Yes, I've integrated it with the database."
+                        "words": ["lazy", "loading", "implemented", "now"],
+                        "correctAnswer": "Yes, I've implemented lazy loading now."
                     }}
                 ]
             }}
 
             Requirements:
-            - Return only valid JSON
-            - 2-3 dialogue steps
-            - Short messages (1 short sentences)
-            - Professional context
-            - Include both English text and Russian translation
-            - Each step should use 2-3 technical terms
+            - Keep all spaces in compound terms
+            - Split compound terms into separate words in the words array
+            - Ensure exact match between correctAnswer and message text
+            - Professional or Semi-Proffesional context
+            - 2-3 dialogue steps, short messages about 1 sentence
             """
 
+            # Установим более низкую температуру для более предсказуемых результатов
             response = self.model.generate_content(
                 prompt,
                 generation_config={
-                    'temperature': 0.7,
-                    'top_p': 0.8,
+                    'temperature': 0.3,  # Снижаем температуру
+                    'top_p': 0.95,
                     'top_k': 40,
                     'max_output_tokens': 1000,
-                },
+                }
             )
 
             if not response or not response.text:
                 raise Exception('Empty response from Gemini')
 
-            # Пытаемся найти JSON в ответе
+            # Очищаем и подготавливаем текст для парсинга JSON
             text = response.text.strip()
+            # Находим первую открывающую и последнюю закрывающую скобки
+            start = text.find('{')
+            end = text.rfind('}') + 1
+            if start != -1 and end != -1:
+                json_str = text[start:end]
+            else:
+                raise ValueError('No valid JSON structure found in response')
+
             try:
-                # Ищем первую открывающую и последнюю закрывающую скобки
-                start = text.find('{')
-                end = text.rfind('}') + 1
-                if start != -1 and end != -1:
-                    json_str = text[start:end]
-                    return json.loads(json_str)
-                else:
-                    raise ValueError('No JSON found in response')
-            except json.JSONDecodeError:
-                # Если не удалось разобрать JSON, возвращаем базовый диалог
-                return {
-                    'steps': [
-                        {
-                            'messages': [
-                                {
-                                    'isUser': False,
-                                    'text': f"Let's discuss these technical terms: {', '.join(terms_list)}",
-                                    'translation': f"Давайте обсудим эти технические термины: {', '.join(terms_list)}",
-                                },
-                                {
-                                    'isUser': True,
-                                    'text': 'Sure, which term should we start with?',
-                                    'translation': 'Конечно, с какого термина начнем?',
-                                },
-                            ],
-                            'words': terms_list + ['discuss', 'technical'],
-                            'correctAnswer': 'Sure, which term should we start with?',
-                        }
-                    ]
-                }
+                data = json.loads(json_str)
+            except json.JSONDecodeError as e:
+                logger.error(f'JSON decode error: {e}\nResponse text: {text}')
+                raise
+
+            # Валидация и очистка данных
+            if not isinstance(data, dict) or 'steps' not in data:
+                raise ValueError('Invalid JSON structure: missing steps')
+
+            # Очищаем и валидируем каждый шаг
+            cleaned_steps = []
+            for step in data['steps']:
+                if not isinstance(step, dict):
+                    continue
+
+                # Проверяем обязательные поля
+                if not all(key in step for key in ['messages', 'words', 'correctAnswer']):
+                    continue
+
+                # Очищаем слова
+                clean_words = [w for w in step['words'] if w and isinstance(w, str) and w.strip()]
+
+                # Очищаем сообщения
+                clean_messages = []
+                for msg in step['messages']:
+                    if isinstance(msg, dict) and all(key in msg for key in ['isUser', 'text', 'translation']):
+                        clean_messages.append({
+                            'isUser': bool(msg['isUser']),
+                            'text': msg['text'].strip(),
+                            'translation': msg['translation'].strip()
+                        })
+
+                if clean_messages and clean_words:
+                    cleaned_step = {
+                        'messages': clean_messages,
+                        'words': clean_words,
+                        'correctAnswer': step['correctAnswer'].strip()
+                    }
+                    cleaned_steps.append(cleaned_step)
+
+            if not cleaned_steps:
+                raise ValueError('No valid steps after cleaning')
+
+            return {'steps': cleaned_steps}
 
         except Exception as e:
             logger.error(f'Error in generate_dialogue: {e}')
-            # Возвращаем простой диалог в случае ошибки
-            return {
-                'steps': [
-                    {
-                        'messages': [
-                            {
-                                'isUser': False,
-                                'text': 'Could not generate dialogue',
-                                'translation': 'Не удалось сгенерировать диалог',
-                            },
-                            {
-                                'isUser': True,
-                                'text': 'Please try again later',
-                                'translation': 'Пожалуйста, попробуйте позже',
-                            },
-                        ],
-                        'words': ['error', 'try', 'later'],
-                        'correctAnswer': 'Please try again later',
-                    }
-                ]
-            }
+            # В случае ошибки возвращаем базовый диалог
+            return self._fallback_dialogue()
+
+    def _fallback_dialogue(self):
+        """Возвращает базовый диалог в случае ошибки."""
+        return {
+            'steps': [
+                {
+                    'messages': [
+                        {
+                            'isUser': False,
+                            'text': 'Could not generate dialogue',
+                            'translation': 'Не удалось сгенерировать диалог',
+                        },
+                        {
+                            'isUser': True,
+                            'text': 'Please try again later',
+                            'translation': 'Пожалуйста, попробуйте позже',
+                        },
+                    ],
+                    'words': ['error', 'try', 'later'],
+                    'correctAnswer': 'Please try again later',
+                }
+            ]
+        }

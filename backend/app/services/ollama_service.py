@@ -257,30 +257,6 @@ class KnowledgeEvaluator:
 
     def _fallback_categorization(self, prompt: str) -> str:
         """Базовая категоризация, когда LLM недоступен."""
-        words = []
-        for line in prompt.split('\n'):
-            if 'Words to categorize:' in line:
-                words = line.split(':')[1].strip().split(', ')
-                break
-
-        # Используем разные базовые категории для разнообразия
-        categories = [
-            'Programming -> Development',
-            'Web Development -> Frontend',
-            'Web Development -> Backend',
-            'Databases -> General',
-            'Software Engineering -> Tools',
-        ]
-
-        result = []
-        for i, word in enumerate(words):
-            category = categories[i % len(categories)]
-            result.append(f'{word}: {category}')
-
-        return '\n'.join(result)
-
-    def _fallback_categorization(self, prompt: str) -> str:
-        """Базовая категоризация, когда LLM недоступен."""
         # Извлекаем слова из промпта
         words = []
         for line in prompt.split('\n'):
@@ -296,77 +272,49 @@ class KnowledgeEvaluator:
         prompt = f"""
         Create a technical chat dialogue between colleagues using these terms: {', '.join([t.term for t in terms])}
 
-        Format:
-        {{
-            "steps": [
-                {{
-                    "messages": [
-                        {{"isUser": false, "text": "message", "translation": "RU translation"}},
-                        {{"isUser": true, "text": "response", "translation": "RU translation"}}
-                    ],
-                    "words": ["word1", "word2", "extra1"],
-                    "correctAnswer": "correct response"
-                }}
-            ]
-        }}
-
         Requirements:
-        - 4-7 dialogue steps
-        - Short messages (1-2 sentences)
+        - Format as JSON with steps array
+        - Each step must have messages array and words array
+        - Do not include spaces or empty strings as words
+        - Ensure all words are meaningful and non-empty
         - Professional context
         - Include translations
-        - Shuffle words in 'words' array
-        - Add 2-3 contextually relevant but incorrect words
         """
 
         try:
-            if self.llm is None:
-                self.llm = Ollama(model='llama2', base_url=self.base_url)
-
             response = self.llm.invoke(prompt)
-            content = (
-                response.content if hasattr(response, 'content') else str(response)
-            )
-            return json.loads(content)
+            content = response.content if hasattr(response, 'content') else str(response)
+            data = json.loads(content)
+
+            # Очищаем слова в каждом шаге
+            for step in data['steps']:
+                step['words'] = [w for w in step['words'] if w and w.strip()]
+                step['correctAnswer'] = step['correctAnswer'].strip()
+
+            return data
+
         except Exception as e:
             logger.error(f'Error generating dialogue with Ollama: {e}')
-            # Возвращаем базовый диалог в случае ошибки
-            return {
-                'steps': [
-                    {
-                        'messages': [
-                            {
-                                'isUser': False,
-                                'text': 'Could not generate dialogue',
-                                'translation': 'Не удалось сгенерировать диалог',
-                            },
-                            {
-                                'isUser': True,
-                                'text': 'Please try again later',
-                                'translation': 'Пожалуйста, попробуйте позже',
-                            },
-                        ],
-                        'words': ['try', 'again', 'later'],
-                        'correctAnswer': 'try again later',
-                    }
-                ]
-            }
+            return self._fallback_dialogue()
 
-
-if __name__ == '__main__':
-    words_file = os.path.join(
-        os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
-        'words',
-        'categorized_words.md',
-    )
-    evaluator = KnowledgeEvaluator(words_file)
-    selected_words, categories = evaluator._select_random_words()
-    result = evaluator.generate_evaluation_text(selected_words, categories)
-
-    print('\nГенерированный текст:')
-    print('-' * 80)
-    print(result['text'])
-    print('-' * 80)
-    print('\nИспользованные термины и их категории:')
-    for word, category in result['categories'].items():
-        print(f'- {word}: {category}')
+    def _fallback_dialogue(self):
+        return {
+            'steps': [
+                {
+                    'messages': [
+                        {
+                            'isUser': False,
+                            'text': 'Could not generate dialogue',
+                            'translation': 'Не удалось сгенерировать диалог',
+                        },
+                        {
+                            'isUser': True,
+                            'text': 'Please try again later',
+                            'translation': 'Пожалуйста, попробуйте позже',
+                        },
+                    ],
+                    'words': ['try', 'again', 'later'],
+                    'correctAnswer': 'Please try again later',
+                }
+            ]
+        }
