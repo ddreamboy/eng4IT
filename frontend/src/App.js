@@ -6,6 +6,7 @@ import Dashboard from "./components/Dashboard";
 import WordAssessment from "./components/WordAssessment";
 import LearningInterface from "./components/LearningInterface";
 import ChatExercise from "./components/ChatExercise";
+import MatchingExercise from "./components/MatchingExercise";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/assessment" element={<WordAssessment />} />
         <Route path="/learning" element={<LearningInterface />} />
         <Route path="/chat-exercise" element={<ChatExercise />} />
+        <Route path="/matching" element={<MatchingExercise />} />
       </Routes>
     </Router>
   );

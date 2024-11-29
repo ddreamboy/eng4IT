@@ -280,3 +280,71 @@ class GeminiService:
                 }
             ]
         }
+
+
+    def improve_translations(self, pairs_data, pairs_count = 15):
+        """
+        Улучшает переводы пар слов с помощью Gemini.
+
+        Args:
+            pairs_data: словарь с парами для перевода
+        Returns:
+            dict: улучшенные пары переводов
+        """
+        try:
+            # Формируем текст пар для промпта
+            pairs_text = "\n".join([f"{p['english']} - {p['russian']}" for p in pairs_data['pairs']])
+
+            prompt = f"""
+            Improve these English-Russian translation pairs and return in JSON format.
+            Make translations more natural and technically accurate.
+            Original pairs:
+            {pairs_text}
+
+            Requirements:
+            1. Keep technical terms precise
+            2. Make Russian translations natural and professional
+            3. Return exactly {pairs_count} pairs
+            4. Format response strictly as JSON:
+            {{
+                "english": ["word1", "word2", "word3", "word4", "word5"],
+                "russian": ["перевод1", "перевод2", "перевод3", "перевод4", "перевод5"]
+            }}
+            """
+
+            response = self.model.generate_content(
+                prompt,
+                generation_config={
+                    'temperature': 0.3,
+                    'top_p': 0.8,
+                    'top_k': 40,
+                    'max_output_tokens': 1000,
+                }
+            )
+
+            # Извлекаем JSON из ответа
+            text = response.text.strip()
+            # Находим начало и конец JSON
+            start = text.find('{')
+            end = text.rfind('}') + 1
+            if start != -1 and end != -1:
+                json_str = text[start:end]
+                result = json.loads(json_str)
+
+                # Проверяем структуру ответа
+                if isinstance(result, dict) and 'english' in result and 'russian' in result:
+                    return {
+                        'english': result['english'],
+                        'russian': result['russian']
+                    }
+
+            raise ValueError('Invalid response format')
+
+        except Exception as e:
+            logger.error(f'Error in improve_translations: {e}')
+            # Возвращаем исходные пары в правильном формате
+            original_pairs = pairs_data['pairs']
+            return {
+                'english': [p['english'] for p in original_pairs],
+                'russian': [p['russian'] for p in original_pairs]
+            }
