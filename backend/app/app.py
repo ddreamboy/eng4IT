@@ -846,6 +846,86 @@ def get_chat_exercise():
     finally:
         session.close()
 
+@app.route('/api/matching-pairs', methods=['GET'])
+def get_matching_pairs():
+    use_ai = request.args.get('useAI') == 'true'
+    pairs_count = 15
+    session = Session()
+    try:
+        # Получаем все термины
+        terms = session.query(Term).all()
+
+        # Если терминов мало, добавляем базовые
+        if len(terms) < pairs_count:
+            basic_terms = [
+                {"term": "database", "translation": "база данных"},
+                {"term": "algorithm", "translation": "алгоритм"},
+                {"term": "framework", "translation": "фреймворк"},
+                {"term": "interface", "translation": "интерфейс"},
+                {"term": "variable", "translation": "переменная"},
+                {"term": "function", "translation": "функция"},
+                {"term": "array", "translation": "массив"},
+                {"term": "string", "translation": "строка"},
+                {"term": "object", "translation": "объект"},
+                {"term": "class", "translation": "класс"},
+                {"term": "method", "translation": "метод"},
+                {"term": "property", "translation": "свойство"},
+                {"term": "inheritance", "translation": "наследование"},
+                {"term": "polymorphism", "translation": "полиморфизм"},
+                {"term": "encapsulation", "translation": "инкапсуляция"},
+                {"term": "abstraction", "translation": "абстракция"},
+                {"term": "debugging", "translation": "отладка"},
+                {"term": "compiler", "translation": "компилятор"},
+                {"term": "runtime", "translation": "время выполнения"},
+                {"term": "memory", "translation": "память"}
+            ]
+            for term_data in basic_terms:
+                term = Term(
+                    term=term_data["term"],
+                    translation=term_data["translation"],
+                    category="Programming -> General"
+                )
+                session.add(term)
+            session.commit()
+            terms = session.query(Term).all()
+
+        # Выбираем 20 случайных терминов
+        selected_terms = random.sample(terms, min(pairs_count, len(terms)))  # Убедитесь, что здесь 20
+
+        # Формируем пары БЕЗ перемешивания
+        pairs = [
+            {
+                'english': term.term,
+                'russian': term.translation
+            }
+            for term in selected_terms
+        ]
+
+        if use_ai:
+            try:
+                current_model, api_key = get_current_model()
+                if current_model == 'gemini' and api_key:
+                    service = GeminiService(api_key)
+                    result = service.improve_translations({'pairs': pairs}, pairs_count=pairs_count)
+                    if result and 'english' in result and 'russian' in result:
+                        return jsonify({
+                            'english': result['english'],
+                            'russian': result['russian']
+                        })
+            except Exception as e:
+                logger.error(f'Error improving translations: {e}')
+
+        return jsonify({
+            'english': [p['english'] for p in pairs],
+            'russian': [p['russian'] for p in pairs]
+        })
+
+    except Exception as e:
+        logger.error(f'Error getting matching pairs: {e}')
+        return jsonify({'error': str(e)}), 500
+    finally:
+        session.close()
+
 
 # Перед app.run()
 if __name__ == '__main__':
