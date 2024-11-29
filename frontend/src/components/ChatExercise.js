@@ -2,19 +2,44 @@ import React, { useState, useEffect } from "react";
 import { MessageSquare, Volume2, Languages, Mic } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion"; // Добавляем AnimatePresence
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
-const HintMessage = ({ message }) => (
+// Обновляем компонент HintMessage
+const HintMessage = ({ message, onClose }) => (
   <motion.div
     initial={{ opacity: 0, y: -10 }}
     animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0, y: 10 }}
     className="absolute bottom-full left-0 right-0 mb-2 px-4 py-2 bg-zinc-800 rounded-lg shadow-lg"
   >
-    {message.split("\n").map((line, index) => (
-      <p key={index} className="text-sm text-zinc-300">
-        {line}
-      </p>
-    ))}
+    <div className="flex justify-between items-start gap-4">
+      <div className="flex-1">
+        {message.split("\n").map((line, index) => (
+          <p key={index} className="text-sm text-zinc-300">
+            {line}
+          </p>
+        ))}
+      </div>
+      <button
+        onClick={onClose}
+        className="text-zinc-400 hover:text-zinc-200 transition-colors p-1"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
   </motion.div>
 );
 
@@ -166,6 +191,96 @@ const AnimatedAnswerField = ({
   );
 };
 
+const Congratulations = ({ onHome, onNext }) => (
+  <motion.div
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm z-50"
+  >
+    <motion.div
+      initial={{ y: 50 }}
+      animate={{ y: 0 }}
+      transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
+      className="bg-zinc-900 rounded-2xl p-8 max-w-md mx-4 relative overflow-hidden"
+    >
+      {/* Конфетти эффект */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(45deg, rgba(74,222,128,0.1) 0%, rgba(34,197,94,0.1) 100%)",
+        }}
+      />
+
+      {/* Иконка успеха */}
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: 1, rotate: [0, 10, -10, 0] }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+        className="w-20 h-20 mx-auto mb-6 bg-primary/20 rounded-full flex items-center justify-center"
+      >
+        <svg
+          className="w-10 h-10 text-primary"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <motion.path
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M5 13l4 4L19 7"
+          />
+        </svg>
+      </motion.div>
+
+      {/* Текст поздравления */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+        className="text-center mb-8"
+      >
+        <h2 className="text-2xl font-bold text-primary mb-2">
+          Отличная работа!
+        </h2>
+        <p className="text-gray-400">
+          Вы успешно завершили диалог. Продолжайте практиковаться для улучшения
+          навыков!
+        </p>
+      </motion.div>
+
+      {/* Кнопки */}
+      <div className="flex gap-4">
+        <motion.button
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.6 }}
+          onClick={onHome}
+          className="flex-1 px-6 py-3 rounded-xl bg-zinc-800 text-zinc-300 hover:bg-zinc-700 transition-colors"
+        >
+          На главную
+        </motion.button>
+        <motion.button
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.7 }}
+          onClick={onNext}
+          className="flex-1 px-6 py-3 rounded-xl bg-primary text-dark hover:bg-primary-hover transition-colors"
+        >
+          Следующий диалог
+        </motion.button>
+      </div>
+    </motion.div>
+  </motion.div>
+);
+
 const ChatExercise = () => {
   const [dialogue, setDialogue] = useState(null);
   const [currentStep, setCurrentStep] = useState(0);
@@ -182,15 +297,47 @@ const ChatExercise = () => {
   const [progress, setProgress] = useState({ current: 0, total: 0 });
   const [attemptCount, setAttemptCount] = useState(0);
   const [showHintButton, setShowHintButton] = useState(false);
+  const [showCongratulations, setShowCongratulations] = useState(false);
+  const navigate = useNavigate(); // Добавляем хук для навигации
+  const [isLoading, setIsLoading] = useState(true);
+  const [isLoadingNew, setIsLoadingNew] = useState(false);
 
   const fetchDialogue = async () => {
     try {
+      setIsLoading(true);
       const response = await axios.get(
         "http://localhost:5000/api/chat-exercise",
       );
       setDialogue(response.data);
     } catch (error) {
       console.error("Error fetching dialogue:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Обработчики для кнопок
+  const handleHomeClick = () => {
+    navigate("/");
+  };
+
+  const handleNextDialogue = async () => {
+    try {
+      setIsLoadingNew(true);
+      setShowCongratulations(false);
+      setCurrentStep(0);
+      setMessages([]);
+      setProgress({ current: 0, total: 0 });
+      setSelectedWords([]);
+      setAvailableWords([]);
+      setIsCorrect(null);
+      setIncorrectWords([]);
+      setHint(null);
+      setShowHintButton(false);
+      setShowAnswerTranslation(false);
+      await fetchDialogue();
+    } finally {
+      setIsLoadingNew(false);
     }
   };
 
@@ -227,27 +374,43 @@ const ChatExercise = () => {
       setShowHintButton(false);
       const answer = dialogue.steps[currentStep].correctAnswer;
       const words = answer.split(" ");
-      const keyWords = dialogue.steps[currentStep].words || [];
+      // Изменяем обработку ключевых слов
+      const keyWords =
+        dialogue.steps[currentStep].words.map((word) =>
+          word.includes(" ") ? word : word.trim(),
+        ) || [];
+
+      // Очищаем слова от пустых значений и пробелов
+      const cleanWords = words.filter((word) => word.trim().length > 0);
 
       // Формируем начальный массив выбранных слов
-      const initialSelected = words.map((word, idx) => {
+      const initialSelected = cleanWords.map((word, idx) => {
         // Оставляем первое и последнее слово
-        if (idx === 0 || idx === words.length - 1) {
+        if (idx === 0 || idx === cleanWords.length - 1) {
           return word;
         }
-        // Показываем некоторые не-ключевые слова
-        if (!keyWords.includes(word) && Math.random() < 0.45) {
-          return word;
+
+        // Если слово входит в список ключевых, всегда скрываем его
+        if (keyWords.includes(word)) {
+          return null;
         }
-        return null;
+
+        // Для неключевых слов оставляем некоторые видимыми
+        return Math.random() > 0.4 ? word : null;
       });
 
-      // Собираем слова для угадывания
-      const wordsToGuess = words.filter((word, idx) => {
+      // Собираем слова для угадывания (только скрытые слова)
+      const wordsToGuess = cleanWords.filter((word, idx) => {
         return initialSelected[idx] === null;
       });
 
-      // Добавляем запутывающие слова
+      // Проверяем, что все ключевые слова включены в wordsToGuess
+      const missingKeyWords = keyWords.filter(
+        (word) => !wordsToGuess.includes(word),
+      );
+      const allGuessWords = [...wordsToGuess, ...missingKeyWords];
+
+      // Добавляем несколько запутывающих слов
       const extraWords = Object.values({
         technical: ["database", "server", "config", "deploy", "api", "cache"],
         general: ["usually", "typically", "currently", "already", "basically"],
@@ -261,20 +424,36 @@ const ChatExercise = () => {
         ],
       })
         .flat()
-        .filter((word) => !words.includes(word))
+        .filter((word) => !cleanWords.includes(word))
         .sort(() => Math.random() - 0.6)
-        .slice(0, 3);
+        .slice(0, 2); // Ограничиваем количество дополнительных слов
 
       // Формируем финальный набор слов
-      const availableWordsSet = new Set([...wordsToGuess, ...extraWords]);
+      const availableWordsSet = new Set([...allGuessWords, ...extraWords]);
 
       setSelectedWords(initialSelected);
-      setAvailableWords([...availableWordsSet]);
+      setAvailableWords(
+        [...availableWordsSet].filter((word) => word && word.length > 0),
+      );
+
+      // Для отладки
+      console.log({
+        answer,
+        keyWords,
+        initialSelected,
+        wordsToGuess,
+        availableWords: [...availableWordsSet],
+      });
     }
   }, [dialogue, currentStep]);
 
   // Обработка выбора слова
   const handleWordSelect = (word) => {
+    // Проверяем, является ли слово пустым или состоит только из пробелов
+    if (!word || word.trim().length === 0) {
+      return;
+    }
+
     setSelectedWords((prev) => {
       const newSelected = [...prev];
       // Подсчитываем количество пустых мест
@@ -355,7 +534,7 @@ const ChatExercise = () => {
     if (isAnswerCorrect) {
       setHint(null);
       setShowHintButton(false);
-      setAttemptCount(0); // Сбрасываем счетчик попыток
+      setAttemptCount(0);
       setShowAnswerField(false);
       setProgress((prev) => ({ ...prev, current: prev.current + 1 }));
 
@@ -391,28 +570,26 @@ const ChatExercise = () => {
           setTimeout(() => {
             setShowAnswerField(true);
           }, 1000);
+        } else {
+          setShowCongratulations(true);
         }
       }, 3000);
     } else {
       setIncorrectWords(wrongPositions);
-      setAttemptCount((prev) => prev + 1); // Увеличиваем счетчик попыток
+      setAttemptCount((prev) => prev + 1);
 
-      // Показываем кнопку подсказки после двух неудачных попыток
       if (attemptCount + 1 >= 2) {
         setShowHintButton(true);
       }
 
+      // Убираем автоматическое исчезновение подсказки и ошибок
       setTimeout(() => {
         setIncorrectWords([]);
         setIsCorrect(null);
-        setHint(null);
+        // Убрали setHint(null)
       }, 2000);
     }
   };
-
-  if (!dialogue) {
-    return <div>Loading...</div>;
-  }
 
   const showHintMessage = () => {
     const correctAnswer = dialogue.steps[currentStep].correctAnswer;
@@ -437,8 +614,50 @@ const ChatExercise = () => {
     setShowHintButton(false); // Скрываем кнопку после показа подсказки
   };
 
+  if (isLoading || isLoadingNew || !dialogue) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="bg-zinc-900 rounded-2xl p-6 shadow-xl"
+        >
+          <div className="flex items-center space-x-3">
+            <div className="w-4 h-4 border-2 border-primary border-t-transparent rounded-full animate-spin" />
+            <span className="text-gray-400">
+              {isLoadingNew
+                ? "Генерация нового диалога..."
+                : "Загрузка диалога..."}
+            </span>
+          </div>
+        </motion.div>
+      </div>
+    );
+  }
   return (
     <div className="max-w-2xl mx-auto p-6">
+      {/* Кнопка "На главную" */}
+      <motion.button
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        onClick={() => navigate("/")}
+        className="mb-4 px-4 py-2 flex items-center gap-2 text-zinc-400 hover:text-primary transition-colors"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+        <span>На главную</span>
+      </motion.button>
       <div className="bg-zinc-900 rounded-2xl p-6 shadow-xl relative">
         {/* Индикатор прогресса */}
         <div className="absolute top-4 right-4 bg-zinc-800 px-4 py-2 rounded-lg">
@@ -497,7 +716,15 @@ const ChatExercise = () => {
             )}
             {/* Подсказка */}
             <AnimatePresence>
-              {hint && <HintMessage message={hint} />}
+              {hint && (
+                <HintMessage
+                  message={hint}
+                  onClose={() => {
+                    setHint(null);
+                    setShowHintButton(true); // Опционально: показываем кнопку подсказки снова
+                  }}
+                />
+              )}
             </AnimatePresence>
 
             {/* Банк доступных слов */}
@@ -552,12 +779,21 @@ const ChatExercise = () => {
                   ? "Правильно!"
                   : isCorrect === false
                     ? "Попробуйте еще раз"
-                    : "Проверить"}
+                    : "Отправить"}
               </motion.button>
             </div>
           </motion.div>
         )}
       </div>
+      {/* Поздравление */}
+      <AnimatePresence>
+        {showCongratulations && (
+          <Congratulations
+            onHome={handleHomeClick}
+            onNext={handleNextDialogue}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 };
