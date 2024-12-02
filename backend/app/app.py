@@ -1258,6 +1258,73 @@ def complete_reading():
     finally:
         session.close()
 
+@app.route('/api/terms/add', methods=['POST'])
+def add_term():
+    data = request.json
+    term = data.get('term')
+    category = data.get('category')
+    subcategory = data.get('subcategory')
+
+    if not term or not category or not subcategory:
+        return jsonify({'status': 'error', 'error': 'Все поля обязательны'}), 400
+
+    session = Session()
+    try:
+        # Проверяем, существует ли термин
+        existing_term = session.query(Term).filter_by(term=term).first()
+        if existing_term:
+            return jsonify({'status': 'error', 'error': 'Термин уже существует'}), 400
+
+        # Проверяем, существует ли категория; если нет, создаем
+        if category not in session.query(Category.name).all():
+            new_category = Category(name=category)
+            session.add(new_category)
+            session.flush()  # Получение ID новой категории
+
+        # Получаем категорию
+        category_obj = session.query(Category).filter_by(name=category).first()
+
+        # Проверяем, существует ли подкатегория в этой категории; если нет, создаем
+        existing_subcategory = session.query(Subcategory).filter_by(
+            name=subcategory, category_id=category_obj.id
+        ).first()
+        if not existing_subcategory:
+            new_subcategory = Subcategory(name=subcategory, category_id=category_obj.id)
+            session.add(new_subcategory)
+
+        # Формируем строку категории
+        category_str = f"{category} -> {subcategory}"
+
+        # Создаем новый термин
+        new_term = Term(
+            term=term,
+            translation="",  # Можно оставить пустым или задать по умолчанию
+            category=category_str,
+            term_metadata={
+                'source': 'manual_add',
+                'added_at': datetime.now().isoformat(),
+            }
+        )
+        session.add(new_term)
+        session.flush()
+
+        # Добавляем в UnknownTerm по умолчанию
+        new_unknown = UnknownTerm(
+            term_id=new_term.id,
+            attempts=0,
+            last_attempt=datetime.now()
+        )
+        session.add(new_unknown)
+
+        session.commit()
+        return jsonify({'status': 'success'}), 201
+
+    except Exception as e:
+        session.rollback()
+        return jsonify({'status': 'error', 'error': 'Ошибка сервера'}), 500
+    finally:
+        session.close()
+
 
 
 # Перед app.run()

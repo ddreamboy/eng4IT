@@ -17,6 +17,7 @@ import { AnimatePresence } from "framer-motion";
 
 import TermModal from "./TermModal";
 import WordList from "./WordList";
+import AddTermModal from "./AddTermModal";
 // Удалили импорт StatisticsPanel, так как вкладка удалена
 
 const Dashboard = () => {
@@ -55,6 +56,7 @@ const Dashboard = () => {
     mainCategoryFilter: "all",
     subCategoryFilter: "all",
   });
+  const [isAddTermModalOpen, setIsAddTermModalOpen] = useState(false);
 
   // Загрузка всех данных
   useEffect(() => {
@@ -79,6 +81,28 @@ const Dashboard = () => {
 
     fetchData();
   }, []);
+
+  const refreshTerms = () => {
+    const fetchData = async () => {
+      setIsLoading(true);
+      try {
+        const [wordsRes, termsRes] = await Promise.all([
+          axios.get("http://localhost:5000/api/unknown-words"),
+          axios.get("http://localhost:5000/api/all-terms"),
+        ]);
+
+        setUnknownWords(wordsRes.data);
+        setAllTerms(termsRes.data);
+
+        console.log("Loaded terms:", termsRes.data); // Для отладки
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchData();
+  };
 
   // Обновление активной вкладки при изменении параметров URL
   useEffect(() => {
@@ -586,6 +610,12 @@ const Dashboard = () => {
             Все доступные технические термины
           </p>
         </div>
+        <button
+          onClick={() => setIsAddTermModalOpen(true)}
+          className="px-4 py-2 bg-primary hover:bg-primary-hover text-white rounded-lg"
+        >
+          Добавить термин
+        </button>
       </div>
 
       <div className="flex gap-4 mb-6">
@@ -833,6 +863,13 @@ const Dashboard = () => {
           )}
         </div>
       </div>
+
+      {/* Модальное окно для добавления термина */}
+      <AddTermModal
+        isOpen={isAddTermModalOpen}
+        onClose={() => setIsAddTermModalOpen(false)}
+        onTermAdded={refreshTerms}
+      />
 
       <TermModal
         isOpen={isModalOpen}
