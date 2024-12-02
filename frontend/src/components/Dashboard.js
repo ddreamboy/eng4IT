@@ -49,34 +49,6 @@ const Dashboard = () => {
   // Удалили состояние statistics, так как вкладка удалена
   const [viewMode, setViewMode] = useState("list");
   const [isLoading, setIsLoading] = useState(true);
-
-  // Создаём уникальный список категорий из allTerms
-  const categories = useMemo(() => {
-    const mapping = {};
-
-    Object.values(allTerms).forEach((categoryStr) => {
-      const [main, sub] = categoryStr.split("->").map((s) => s.trim());
-      if (main && sub) {
-        if (!mapping[main]) {
-          mapping[main] = new Set();
-        }
-        mapping[main].add(sub);
-      }
-    });
-
-    // Преобразуем Set в массив и сортируем
-    const sortedMapping = {};
-    Object.keys(mapping)
-      .sort()
-      .forEach((main) => {
-        sortedMapping[main] = Array.from(mapping[main]).sort();
-      });
-
-    return sortedMapping;
-  }, [allTerms]);
-
-  const mainCategories = useMemo(() => Object.keys(categories), [categories]);
-
   const [filters, setFilters] = useState({
     showFavorites: false,
     progressFilter: "all",
@@ -339,6 +311,32 @@ const Dashboard = () => {
     });
   }, [unknownWords, filters, searchTerm]);
 
+  const categories = useMemo(() => {
+    const mapping = {};
+
+    Object.values(allTerms).forEach((categoryStr) => {
+      const [main, sub] = categoryStr.split("->").map((s) => s.trim());
+      if (main && sub) {
+        if (!mapping[main]) {
+          mapping[main] = new Set();
+        }
+        mapping[main].add(sub);
+      }
+    });
+
+    // Преобразуем Set в массив и сортируем
+    const sortedMapping = {};
+    Object.keys(mapping)
+      .sort()
+      .forEach((main) => {
+        sortedMapping[main] = Array.from(mapping[main]).sort();
+      });
+
+    return sortedMapping;
+  }, [allTerms]);
+
+  const mainCategories = useMemo(() => Object.keys(categories), [categories]);
+
   const sortedWords = useMemo(() => {
     return [...filteredWords].sort((a, b) => {
       switch (sortType) {
@@ -411,7 +409,7 @@ const Dashboard = () => {
       <div className="flex gap-4 mb-6">
         <input
           type="text"
-          placeholder="Поиск слов..."
+          placeholder="Поиск терминов..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="flex-1 bg-dark-card border border-gray-800 rounded-xl px-4 py-2 text-gray-200 focus:border-primary focus:outline-none"
@@ -424,7 +422,7 @@ const Dashboard = () => {
             setFilters((f) => ({
               ...f,
               mainCategoryFilter: e.target.value,
-              subCategoryFilter: "all", // Сбрасываем подкатегорию при смене основной категории
+              subCategoryFilter: "all",
             }));
           }}
           className="bg-dark-card border border-gray-800 rounded-xl px-4 py-2 text-gray-200"
@@ -437,7 +435,7 @@ const Dashboard = () => {
           ))}
         </select>
 
-        {/* Второй Dropdown для Подкатегорий, отображается только если выбрана конкретная основная категория */}
+        {/* Второй Dropdown для Подкатегорий */}
         {filters.mainCategoryFilter !== "all" && (
           <select
             value={filters.subCategoryFilter}
