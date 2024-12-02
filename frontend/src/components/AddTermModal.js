@@ -1,111 +1,82 @@
 // frontend/src/components/AddTermModal.js
 import React, { useState, useEffect } from "react";
+import { X } from "lucide-react";
 import axios from "axios";
-import { motion } from "framer-motion";
-import { X, RefreshCw } from "lucide-react";
-
-const API_URL = "http://localhost:5000/api";
 
 const AddTermModal = ({ isOpen, onClose, onTermAdded }) => {
   const [term, setTerm] = useState("");
   const [category, setCategory] = useState("");
   const [subcategory, setSubcategory] = useState("");
-  const [categories, setCategories] = useState({});
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [error, setError] = useState("");
+  const [categorySuggestions, setCategorySuggestions] = useState([]);
+  const [subcategorySuggestions, setSubcategorySuggestions] = useState([]);
+  const [allCategories, setAllCategories] = useState({});
 
-  // Получение существующих категорий и подкатегорий
   useEffect(() => {
-    const fetchCategories = async () => {
-      try {
-        const response = await axios.get(`${API_URL}/categories`);
-        setCategories(response.data.categories);
-      } catch (err) {
-        console.error("Ошибка при получении категорий:", err);
-      }
-    };
-
+    // Получаем все категории при открытии модала
     if (isOpen) {
-      fetchCategories();
-      // Сброс полей при открытии модального окна
-      setTerm("");
-      setCategory("");
-      setSubcategory("");
-      setError("");
+      axios
+        .get("http://localhost:5000/api/categories")
+        .then((response) => {
+          setAllCategories(response.data);
+        })
+        .catch((error) => {
+          console.error("Error fetching categories:", error);
+        });
     }
   }, [isOpen]);
 
-  // Обработка выбора основной категории
-  const handleMainCategoryChange = (e) => {
-    setCategory(e.target.value);
-    setSubcategory(""); // Сброс подкатегории при смене основной категории
-  };
-
-  // Обработка генерации категории
-  const handleGenerateCategory = async () => {
-    if (!term.trim()) {
-      setError("Пожалуйста, введите термин для генерации категории.");
-      return;
+  useEffect(() => {
+    if (category) {
+      const filtered = Object.keys(allCategories).filter((cat) =>
+        cat.toLowerCase().includes(category.toLowerCase()),
+      );
+      setCategorySuggestions(filtered);
+    } else {
+      setCategorySuggestions([]);
     }
+  }, [category, allCategories]);
 
-    setIsGenerating(true);
-    setError("");
-
-    try {
-      const response = await axios.post(`${API_URL}/categorize-words`, {
-        words: [{ original: term.trim() }],
-      });
-
-      const categorizedWord = response.data.words[0];
-      if (categorizedWord && categorizedWord.category) {
-        const [genCategory, genSubcategory] = categorizedWord.category
-          .split("->")
-          .map((s) => s.trim());
-        setCategory(genCategory);
-        setSubcategory(genSubcategory);
-      } else {
-        setError("Не удалось сгенерировать категорию.");
-      }
-    } catch (err) {
-      console.error("Ошибка при генерации категории:", err);
-      setError("Ошибка при генерации категории.");
-    } finally {
-      setIsGenerating(false);
+  useEffect(() => {
+    if (subcategory && category) {
+      const subcats = allCategories[category] || [];
+      const filtered = subcats.filter((sub) =>
+        sub.toLowerCase().includes(subcategory.toLowerCase()),
+      );
+      setSubcategorySuggestions(filtered);
+    } else {
+      setSubcategorySuggestions([]);
     }
-  };
+  }, [subcategory, category, allCategories]);
 
-  // Обработка сохранения нового термина
-  const handleSave = async () => {
-    if (!term.trim()) {
-      setError("Термин не может быть пустым.");
-      return;
-    }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    if (!category.trim()) {
-      setError("Категория не может быть пустой.");
-      return;
-    }
-
-    if (!subcategory.trim()) {
-      setError("Подкатегория не может быть пустой.");
+    // Валидация
+    if (!term.trim() || !category.trim() || !subcategory.trim()) {
+      alert("Все поля должны быть заполнены.");
       return;
     }
 
     try {
-      const response = await axios.post(`${API_URL}/terms`, {
+      const response = await axios.post("http://localhost:5000/api/terms/add", {
         term: term.trim(),
-        category: `${category.trim()} -> ${subcategory.trim()}`,
+        category: category.trim(),
+        subcategory: subcategory.trim(),
       });
 
-      if (response.data.success) {
-        onTermAdded(response.data.term); // Обновляем список терминов в родительском компоненте
-        onClose(); // Закрываем модальное окно
+      if (response.data.status === "success") {
+        onTermAdded();
+        onClose();
+        // Сброс полей
+        setTerm("");
+        setCategory("");
+        setSubcategory("");
       } else {
-        setError(response.data.message || "Ошибка при сохранении термина.");
+        alert(`Ошибка: ${response.data.error}`);
       }
-    } catch (err) {
-      console.error("Ошибка при сохранении термина:", err);
-      setError("Ошибка при сохранении термина.");
+    } catch (error) {
+      console.error("Error adding term:", error);
+      alert("Произошла ошибка при добавлении термина.");
     }
   };
 
@@ -113,123 +84,74 @@ const AddTermModal = ({ isOpen, onClose, onTermAdded }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <motion.div
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.8, opacity: 0 }}
-        className="bg-dark-card border border-gray-800 rounded-2xl p-6 w-full max-w-md shadow-lg"
-      >
+      <div className="bg-dark-card p-6 rounded-xl w-full max-w-md relative">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-primary"
+          className="absolute top-4 right-4 text-gray-400 hover:text-white"
         >
-          <X size={24} />
+          <X size={20} />
         </button>
-
-        <h2 className="text-xl font-semibold text-primary mb-4">
-          Добавить Термин
+        <h2 className="text-lg font-semibold mb-4 text-primary">
+          Добавить термин
         </h2>
-
-        {error && (
-          <div className="bg-red-500/10 text-red-500 text-sm px-3 py-2 rounded mb-4">
-            {error}
+        <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Поле Термин */}
+          <div>
+            <label className="block text-primary mb-1">Термин</label>
+            <input
+              type="text"
+              value={term}
+              onChange={(e) => setTerm(e.target.value)}
+              required
+              className="w-full bg-dark border border-gray-700 text-text px-4 py-2 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary"
+            />
           </div>
-        )}
 
-        <div className="mb-4">
-          <label className="block text-gray-300 mb-1">Термин</label>
-          <input
-            type="text"
-            value={term}
-            onChange={(e) => setTerm(e.target.value)}
-            className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-gray-200 focus:outline-none focus:border-primary"
-            placeholder="Введите термин"
-          />
-        </div>
+          {/* Поле Категория */}
+          <div>
+            <label className="block text-primary mb-1">Категория</label>
+            <input
+              type="text"
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+              required
+              list="category-list"
+              className="w-full bg-dark border border-gray-700 text-text px-4 py-2 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary"
+            />
+            <datalist id="category-list">
+              {categorySuggestions.map((cat, idx) => (
+                <option key={idx} value={cat} />
+              ))}
+            </datalist>
+          </div>
 
-        <div className="mb-4">
-          <label className="block text-gray-300 mb-1">Категория</label>
-          <select
-            value={category}
-            onChange={handleMainCategoryChange}
-            className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-gray-200 focus:outline-none focus:border-primary"
-          >
-            <option value="">Выберите или введите категорию</option>
-            {Object.keys(categories).map((mainCat, index) => (
-              <option key={index} value={mainCat}>
-                {mainCat}
-              </option>
-            ))}
-          </select>
-          {/* Поле для ввода новой категории */}
-          <input
-            type="text"
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
-            className="mt-2 w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-gray-200 focus:outline-none focus:border-primary"
-            placeholder="Или введите новую категорию"
-          />
-        </div>
+          {/* Поле Подкатегория */}
+          <div>
+            <label className="block text-primary mb-1">Подкатегория</label>
+            <input
+              type="text"
+              value={subcategory}
+              onChange={(e) => setSubcategory(e.target.value)}
+              required
+              list="subcategory-list"
+              className="w-full bg-dark border border-gray-700 text-text px-4 py-2 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary"
+              disabled={!category}
+            />
+            <datalist id="subcategory-list">
+              {subcategorySuggestions.map((sub, idx) => (
+                <option key={idx} value={sub} />
+              ))}
+            </datalist>
+          </div>
 
-        <div className="mb-4">
-          <label className="block text-gray-300 mb-1">Подкатегория</label>
-          {category ? (
-            <>
-              <select
-                value={subcategory}
-                onChange={(e) => setSubcategory(e.target.value)}
-                className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-gray-200 focus:outline-none focus:border-primary"
-              >
-                <option value="">Выберите подкатегорию</option>
-                {categories[category] &&
-                  categories[category].map((subCat, idx) => (
-                    <option key={idx} value={subCat}>
-                      {subCat}
-                    </option>
-                  ))}
-              </select>
-              {/* Поле для ввода новой подкатегории */}
-              <input
-                type="text"
-                value={subcategory}
-                onChange={(e) => setSubcategory(e.target.value)}
-                className="mt-2 w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-gray-200 focus:outline-none focus:border-primary"
-                placeholder="Или введите новую подкатегорию"
-              />
-            </>
-          ) : (
-            <p className="text-gray-400">
-              Сначала выберите или введите категорию.
-            </p>
-          )}
-        </div>
-
-        <div className="flex justify-between items-center mb-4">
           <button
-            onClick={handleGenerateCategory}
-            disabled={isGenerating || !term.trim()}
-            className={`flex items-center bg-primary hover:bg-primary-hover text-dark px-4 py-2 rounded-lg transition-colors ${
-              isGenerating ? "opacity-50 cursor-not-allowed" : ""
-            }`}
-          >
-            {isGenerating ? (
-              "Генерация..."
-            ) : (
-              <RefreshCw size={16} className="mr-2" />
-            )}
-            Генерировать категорию
-          </button>
-        </div>
-
-        <div className="flex justify-end">
-          <button
-            onClick={handleSave}
-            className="bg-primary hover:bg-primary-hover text-dark px-6 py-2 rounded-lg transition-colors"
+            type="submit"
+            className="w-full px-4 py-2 bg-primary hover:bg-primary-hover text-white rounded-lg"
           >
             Сохранить
           </button>
-        </div>
-      </motion.div>
+        </form>
+      </div>
     </div>
   );
 };
