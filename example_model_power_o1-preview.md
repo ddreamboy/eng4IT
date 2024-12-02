@@ -1,3 +1,939 @@
+Claude 3.5 Sonnet и фикс отображения избранных слов в интерфейсе (спойлер: решение в 1 промпт)
+
+```js eng4IT/frontend/src/components/WordList.js
+// eng4IT/frontend/src/components/WordList.js
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Volume2, Star } from "lucide-react";
+import axios from "axios"; // Добавляем импорт axios
+
+const WordList = ({
+  id,
+  word,
+  translation,
+  category,
+  attempts,
+  lastAttempt,
+  progress,
+  isFavorite,
+  onClick,
+  onFavoriteToggle,
+}) => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [error, setError] = useState(null);
+
+  // Функция для озвучивания слова
+  const speak = (text) => {
+    setIsPlaying(true);
+    setError(null);
+
+    // Создаем новый экземпляр SpeechSynthesisUtterance
+    const utterance = new SpeechSynthesisUtterance(text);
+
+    // Настраиваем параметры
+    utterance.lang = "en-US"; // Устанавливаем английский язык
+    utterance.rate = 0.9; // Немного замедляем скорость
+    utterance.pitch = 1; // Стандартная высота тона
+
+    // Обработчики событий
+    utterance.onend = () => {
+      setIsPlaying(false);
+    };
+
+    utterance.onerror = (event) => {
+      setIsPlaying(false);
+      setError("Error speaking the word");
+      console.error("Speech synthesis error:", event);
+    };
+
+    // Останавливаем текущее произношение, если оно есть
+    window.speechSynthesis.cancel();
+
+    // Запускаем произношение
+    window.speechSynthesis.speak(utterance);
+  };
+
+  const handlePlaySound = (e) => {
+    e.stopPropagation();
+    speak(word);
+  };
+
+  const handleFavoriteClick = async (e) => {
+    e.stopPropagation();
+    try {
+      console.log("Toggling favorite for term ID:", id);
+      const response = await axios.post(
+        "http://localhost:5000/api/terms/favorite",
+        {
+          term_id: id,
+        },
+      );
+
+      if (response.data.status === "success") {
+        // Вызываем callback с новым значением is_favorite
+        onFavoriteToggle(response.data.term_id);
+      }
+    } catch (error) {
+      console.error("Error toggling favorite:", error);
+      setError("Error updating favorite status");
+    }
+  };
+
+  const formattedDate = lastAttempt
+    ? new Date(lastAttempt).toLocaleDateString("ru-RU", {
+        day: "numeric",
+        month: "short",
+        hour: "2-digit",
+        minute: "2-digit",
+      })
+    : null;
+
+  return (
+    <motion.div
+      layout
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      className="term-card cursor-pointer hover:scale-[1.02] transition-all duration-200 relative"
+      onClick={onClick}
+    >
+      <div className="flex justify-between items-start">
+        <div className="flex-1">
+          <div className="flex items-center space-x-2">
+            <h4 className="term text-lg font-medium text-primary">{word}</h4>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={handlePlaySound}
+              className={`text-gray-400 hover:text-primary transition-colors ${
+                isPlaying ? "animate-pulse text-primary" : ""
+              }`}
+              disabled={isPlaying}
+            >
+              <Volume2 size={18} />
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={handleFavoriteClick}
+              className={`${
+                isFavorite ? "text-yellow-500" : "text-gray-400"
+              } hover:text-yellow-500 transition-colors`}
+            >
+              <Star size={18} fill={isFavorite ? "currentColor" : "none"} />
+            </motion.button>
+          </div>
+          <p className="translation text-gray-300">{translation}</p>
+          {attempts > 0 && (
+            <p className="text-sm text-gray-500">Attempts: {attempts}</p>
+          )}
+        </div>
+
+        <div className="flex flex-col items-end">
+          {category && (
+            <span className="category-tag mb-2 px-2 py-1 bg-gray-800 rounded-lg text-xs text-gray-400">
+              {category}
+            </span>
+          )}
+          {progress !== undefined && (
+            <div className="w-24 bg-gray-700 rounded-full h-1 mb-2">
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: `${progress}%` }}
+                className="bg-primary h-full rounded-full"
+              />
+            </div>
+          )}
+          {lastAttempt && (
+            <span className="text-xs text-gray-500">{formattedDate}</span>
+          )}
+        </div>
+      </div>
+
+      {error && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="absolute bottom-2 right-2 bg-red-500/10 text-red-500 text-xs px-2 py-1 rounded"
+        >
+          {error}
+        </motion.div>
+      )}
+    </motion.div>
+  );
+};
+
+export default WordList;
+```
+
+
+```js eng4IT/frontend/src/components/Dashboard.js
+import React, { useState, useEffect, useCallback } from "react";
+import {
+  Clock,
+  SortAsc,
+  Eye,
+  EyeOff,
+  MessageSquare,
+  ClipboardCheck,
+  BookOpen,
+  Shuffle,
+  Star,
+  Layout,
+} from "lucide-react";
+import { Link, useSearchParams } from "react-router-dom";
+import axios from "axios";
+import { AnimatePresence } from "framer-motion";
+
+import TermModal from "./TermModal";
+import WordList from "./WordList";
+import StatisticsPanel from "./StatisticsPanel";
+
+const Dashboard = () => {
+  const [searchParams] = useSearchParams();
+  const [activeTab, setActiveTab] = useState(
+    searchParams.get("tab") || "tasks",
+  );
+  const [currentModel, setCurrentModel] = useState("ollama");
+  const [subModel, setSubModel] = useState({
+    ollama: "llama3.2",
+    gemini: "gemini-1.5-flash",
+  });
+  const [apiKey, setApiKey] = useState("");
+  const [originalApiKey, setOriginalApiKey] = useState("");
+  const [unknownWords, setUnknownWords] = useState([]);
+  const [allTerms, setAllTerms] = useState({});
+  const [searchTerm, setSearchTerm] = useState("");
+  const [sortType, setSortType] = useState("newest");
+  const [selectedTerm, setSelectedTerm] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modelOptions] = useState({
+    // Убираем setModelOptions
+    ollama: false,
+    gemini: true,
+  });
+  const [showApiKey, setShowApiKey] = useState(false);
+  const [displayedApiKey, setDisplayedApiKey] = useState("");
+  const [useAI, setUseAI] = useState(
+    () => localStorage.getItem("matchingUseAI") === "true",
+  );
+  const [statistics, setStatistics] = useState(null);
+  const [categories, setCategories] = useState([]);
+  const [viewMode, setViewMode] = useState("list");
+  const [isLoading, setIsLoading] = useState(true);
+  const [filters, setFilters] = useState({
+    showFavorites: false,
+    progressFilter: "all",
+    categoryFilter: "all",
+  });
+  const [favoriteIds, setFavoriteIds] = useState(new Set());
+
+  useEffect(() => {
+    const tab = searchParams.get("tab");
+    if (tab) {
+      setActiveTab(tab);
+    }
+  }, [searchParams]);
+
+  // Fetch current model settings
+  useEffect(() => {
+    const fetchCurrentModel = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:5000/api/model/current",
+        );
+        setCurrentModel(response.data.model);
+
+        if (response.data.model === "ollama") {
+          setSubModel((prev) => ({ ...prev, ollama: response.data.sub_model }));
+        } else {
+          setSubModel((prev) => ({ ...prev, gemini: response.data.sub_model }));
+        }
+
+        if (response.data.has_api_key && response.data.api_key) {
+          setOriginalApiKey(response.data.api_key);
+          setApiKey(response.data.api_key);
+          setDisplayedApiKey("*".repeat(response.data.api_key.length));
+        } else {
+          setOriginalApiKey("");
+          setApiKey("");
+          setDisplayedApiKey("");
+        }
+      } catch (error) {
+        console.error("Error fetching model:", error);
+      }
+    };
+
+    fetchCurrentModel();
+  }, []);
+
+  // Fetch all data
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsLoading(true);
+      try {
+        // Используем Promise.all для параллельной загрузки данных
+        const [wordsRes, statsRes, categoriesRes, termsRes] = await Promise.all(
+          [
+            axios.get("http://localhost:5000/api/unknown-words"),
+            axios.get("http://localhost:5000/api/terms/statistics"),
+            axios.get("http://localhost:5000/api/categories/tree"),
+            axios.get("http://localhost:5000/api/all-terms"),
+          ],
+        );
+
+        setUnknownWords(wordsRes.data);
+        setStatistics(statsRes.data);
+        setCategories(categoriesRes.data.categories);
+        setAllTerms(termsRes.data);
+
+        console.log("Loaded terms:", termsRes.data); // Добавим для отладки
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const fetchUnknownWords = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:5000/api/unknown-words",
+      );
+      console.log("Fetched words:", response.data); // Добавляем для отладки
+      setUnknownWords(response.data);
+    } catch (error) {
+      console.error("Error fetching unknown words:", error);
+    }
+  };
+
+  const fetchAllTerms = async () => {
+    try {
+      const response = await axios.get("http://localhost:5000/api/all-terms");
+      console.log("Fetched terms:", response.data); // Добавим для отладки
+      if (response.data) {
+        setAllTerms(response.data);
+      }
+    } catch (error) {
+      console.error("Error fetching terms:", error);
+    }
+  };
+
+  const handleFavoriteToggle = async (termId) => {
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/terms/favorite",
+        {
+          term_id: termId,
+        },
+      );
+
+      if (response.data.status === "success") {
+        // Обновляем состояние только для этого термина
+        const newFavoriteStatus = response.data.is_favorite;
+
+        setUnknownWords((prevWords) =>
+          prevWords.map((word) =>
+            word.id === termId
+              ? { ...word, is_favorite: newFavoriteStatus }
+              : word,
+          ),
+        );
+
+        // Перезагружаем список если включен фильтр избранного
+        if (filters.showFavorites) {
+          await fetchUnknownWords();
+        }
+      }
+    } catch (error) {
+      console.error("Error toggling favorite:", error);
+    }
+  };
+
+  const handleTermClick = (word) => {
+    setSelectedTerm({
+      term: word.original,
+      translation: word.translation,
+      category: word.category,
+      attempts: word.attempts,
+      last_attempt: word.last_attempt,
+    });
+    setIsModalOpen(true);
+  };
+
+  const handleModelChange = useCallback(
+    async (model) => {
+      try {
+        const data = {
+          model,
+          sub_model: model === "ollama" ? subModel.ollama : subModel.gemini,
+          api_key: apiKey !== "********" ? apiKey : undefined,
+        };
+
+        const response = await axios.post(
+          "http://localhost:5000/api/model/set",
+          data,
+        );
+        if (response.data.status === "success") {
+          setCurrentModel(model);
+        }
+      } catch (error) {
+        console.error("Error setting model:", error);
+      }
+    },
+    [subModel, apiKey],
+  );
+
+  const handleSubModelChange = async (newSubModel) => {
+    try {
+      const updatedSubModel = {
+        ...subModel,
+        [currentModel]: newSubModel,
+      };
+      setSubModel(updatedSubModel);
+
+      const data = {
+        model: currentModel,
+        sub_model: newSubModel,
+        api_key: apiKey,
+      };
+
+      await axios.post("http://localhost:5000/api/model/set", data);
+    } catch (error) {
+      console.error("Error setting sub-model:", error);
+    }
+  };
+
+  const handleApiKeyChange = async (newApiKey) => {
+    if (!newApiKey) return;
+
+    try {
+      const data = {
+        model: currentModel,
+        sub_model:
+          currentModel === "ollama" ? subModel.ollama : subModel.gemini,
+        api_key: newApiKey,
+      };
+
+      const response = await axios.post(
+        "http://localhost:5000/api/model/set",
+        data,
+      );
+      if (response.data.status === "success") {
+        setOriginalApiKey(newApiKey);
+        setApiKey(newApiKey);
+        setDisplayedApiKey("*".repeat(newApiKey.length));
+        setShowApiKey(false);
+      }
+    } catch (error) {
+      console.error("Error setting API key:", error);
+    }
+  };
+
+  useEffect(() => {
+    if (showApiKey) {
+      setDisplayedApiKey(originalApiKey || apiKey);
+    } else {
+      setDisplayedApiKey(
+        apiKey.startsWith("*") ? apiKey : "*".repeat(apiKey.length),
+      );
+    }
+  }, [showApiKey, originalApiKey, apiKey]);
+
+  useEffect(() => {
+    if (activeTab === "unknown-words") {
+      fetchUnknownWords();
+    }
+  }, [activeTab, filters.showFavorites]);
+
+  // Filter and sort words
+  const filteredWords = unknownWords.filter((word) => {
+    if (!word) return false;
+
+    // Проверяем фильтр избранного
+    if (filters.showFavorites && !word.is_favorite) {
+      return false;
+    }
+
+    // Остальные фильтры
+    if (
+      filters.categoryFilter !== "all" &&
+      word.category !== filters.categoryFilter
+    ) {
+      return false;
+    }
+
+    if (filters.progressFilter !== "all") {
+      if (
+        filters.progressFilter === "completed" &&
+        word.study_progress !== 100
+      ) {
+        return false;
+      }
+      if (
+        filters.progressFilter === "in-progress" &&
+        (word.study_progress === 0 || word.study_progress === 100)
+      ) {
+        return false;
+      }
+      if (
+        filters.progressFilter === "not-started" &&
+        word.study_progress !== 0
+      ) {
+        return false;
+      }
+    }
+
+    // Поиск по тексту
+    const searchQuery = searchTerm.toLowerCase();
+    return (
+      (word.original && word.original.toLowerCase().includes(searchQuery)) ||
+      (word.translation && word.translation.toLowerCase().includes(searchQuery))
+    );
+  });
+
+  const sortedWords = [...filteredWords].sort((a, b) => {
+    switch (sortType) {
+      case "alphabetical":
+        return a.term.localeCompare(b.term);
+      case "progress":
+        return (b.study_progress || 0) - (a.study_progress || 0);
+      case "category":
+        return a.category.localeCompare(b.category);
+      default: // 'newest'
+        return new Date(b.last_attempt || 0) - new Date(a.last_attempt || 0);
+    }
+  });
+
+  const renderUnknownWordsContent = () => (
+    <div className="space-y-6">
+      <div className="flex flex-wrap gap-4 items-center justify-between mb-6">
+        <div>
+          <h2 className="text-xl font-semibold text-primary">
+            Незнакомые слова
+          </h2>
+          <p className="text-sm text-gray-400">
+            Всего слов: {filteredWords.length}
+          </p>
+        </div>
+
+        <div className="flex gap-2">
+          <button
+            onClick={() => setViewMode(viewMode === "list" ? "grid" : "list")}
+            className="header-button"
+          >
+            <Layout size={16} />
+          </button>
+
+          <button
+            onClick={() => setSortType("newest")}
+            className={`header-button ${sortType === "newest" ? "active" : ""}`}
+          >
+            <Clock size={16} />
+            <span>Новые</span>
+          </button>
+
+          <button
+            onClick={() => setSortType("alphabetical")}
+            className={`header-button ${sortType === "alphabetical" ? "active" : ""}`}
+          >
+            <SortAsc size={16} />
+            <span>По алфавиту</span>
+          </button>
+
+          <button
+            onClick={() =>
+              setFilters((f) => ({ ...f, showFavorites: !f.showFavorites }))
+            }
+            className={`header-button ${filters.showFavorites ? "active" : ""}`}
+          >
+            <Star size={16} />
+            <span>Избранное</span>
+          </button>
+        </div>
+      </div>
+
+      <div className="flex gap-4 mb-6">
+        <input
+          type="text"
+          placeholder="Поиск слов..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="flex-1 bg-dark-card border border-gray-800 rounded-xl px-4 py-2 text-gray-200 focus:border-primary focus:outline-none"
+        />
+
+        <select
+          value={filters.progressFilter}
+          onChange={(e) =>
+            setFilters((f) => ({ ...f, progressFilter: e.target.value }))
+          }
+          className="bg-dark-card border border-gray-800 rounded-xl px-4 py-2 text-gray-200"
+        >
+          <option value="all">Весь прогресс</option>
+          <option value="completed">Изучены</option>
+          <option value="in-progress">В процессе</option>
+          <option value="not-started">Не начаты</option>
+        </select>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <AnimatePresence>
+          {sortedWords.map((word, index) => (
+            <WordList
+              key={word.id || index}
+              id={word.id} // Убедитесь, что передаете id
+              word={word.original}
+              translation={word.translation}
+              category={word.category}
+              attempts={word.attempts}
+              lastAttempt={word.last_attempt}
+              progress={word.study_progress}
+              isFavorite={word.is_favorite}
+              onClick={() => {
+                if (word && word.original) {
+                  setSelectedTerm(word);
+                  setIsModalOpen(true);
+                }
+              }}
+              onFavoriteToggle={() => handleFavoriteToggle(word.id)}
+            />
+          ))}
+        </AnimatePresence>
+      </div>
+    </div>
+  );
+
+  const renderSettingsContent = () => (
+    <div className="max-w-2xl mx-auto">
+      <div className="settings-section">
+        <h2 className="settings-title">Настройки генерации</h2>
+        <div className="space-y-6">
+          <div>
+            <label className="block text-primary mb-2">Основная модель</label>
+            <div className="settings-group">
+              <button
+                onClick={() => handleModelChange("ollama")}
+                className={`settings-button ${
+                  currentModel === "ollama" ? "active" : ""
+                }`}
+                disabled={!modelOptions.ollama}
+              >
+                Ollama
+              </button>
+              <button
+                onClick={() => handleModelChange("gemini")}
+                className={`settings-button ${
+                  currentModel === "gemini" ? "active" : ""
+                }`}
+              >
+                Gemini
+              </button>
+            </div>
+          </div>
+          <div>
+            <label className="block text-primary mb-2">
+              {currentModel === "ollama" ? "Модель Ollama" : "Версия Gemini"}
+            </label>
+            <select
+              value={
+                currentModel === "ollama" ? subModel.ollama : subModel.gemini
+              }
+              onChange={(e) => handleSubModelChange(e.target.value)}
+              className="w-full bg-dark border border-gray-700 text-text px-4 py-2 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary"
+            >
+              {currentModel === "ollama" ? (
+                <option value="llama3.2">Llama 3.2</option>
+              ) : (
+                <>
+                  <option value="gemini-1.5-pro">Gemini 1.5 Pro</option>
+                  <option value="gemini-1.5-flash">Gemini 1.5 Flash</option>
+                  <option value="gemini-1.5-flash-8b">
+                    Gemini 1.5 Flash 8B
+                  </option>
+                </>
+              )}
+            </select>
+          </div>
+          {currentModel === "gemini" && (
+            <div>
+              <label className="block text-primary mb-2">API Key</label>
+              <div className="flex gap-2">
+                <div className="flex-1 relative">
+                  <input
+                    type={showApiKey ? "text" : "password"}
+                    value={showApiKey ? apiKey : displayedApiKey}
+                    onChange={(e) => {
+                      const newValue = e.target.value;
+                      setApiKey(newValue);
+                      setDisplayedApiKey(newValue);
+                    }}
+                    placeholder="Введите API ключ Gemini"
+                    className="w-full bg-dark border border-gray-700 text-text px-4 py-2 pr-10 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowApiKey(!showApiKey)}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary"
+                  >
+                    {showApiKey ? <EyeOff size={20} /> : <Eye size={20} />}
+                  </button>
+                </div>
+                <button
+                  onClick={() => handleApiKeyChange(apiKey)}
+                  disabled={!apiKey || apiKey === displayedApiKey}
+                  className="px-4 py-2 bg-primary hover:bg-primary-hover text-dark rounded-lg transition-colors disabled:opacity-50"
+                >
+                  Сохранить
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderTermBase = () => (
+    <div className="space-y-6">
+      <div className="flex justify-between items-center mb-6">
+        <div>
+          <h2 className="text-xl font-semibold text-primary">База терминов</h2>
+          <p className="text-sm text-gray-400">
+            Все доступные технические термины
+          </p>
+        </div>
+      </div>
+
+      <div className="flex gap-4 mb-6">
+        <input
+          type="text"
+          placeholder="Поиск терминов..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="flex-1 bg-dark-card border border-gray-800 rounded-xl px-4 py-2 text-gray-200 focus:border-primary focus:outline-none"
+        />
+
+        <select
+          value={filters.categoryFilter}
+          onChange={(e) =>
+            setFilters((f) => ({ ...f, categoryFilter: e.target.value }))
+          }
+          className="bg-dark-card border border-gray-800 rounded-xl px-4 py-2 text-gray-200"
+        >
+          <option value="all">Все категории</option>
+          {Object.values(categories).map((category, index) => (
+            <option key={index} value={category}>
+              {category}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* Добавим проверку на наличие терминов */}
+      {Object.keys(allTerms).length === 0 ? (
+        <div className="text-center text-gray-400 py-8">
+          Термины загружаются...
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {Object.entries(allTerms)
+            .filter(([term, category]) => {
+              const termLower = term.toLowerCase();
+              const searchLower = searchTerm.toLowerCase();
+              const categoryMatch =
+                filters.categoryFilter === "all" ||
+                category === filters.categoryFilter;
+
+              return categoryMatch && termLower.includes(searchLower);
+            })
+            .map(([term, category], index) => (
+              <div
+                key={index}
+                className="bg-dark-card border border-gray-800 p-4 rounded-xl hover:border-primary transition-colors"
+              >
+                <h3 className="text-primary font-medium mb-2">{term}</h3>
+                <p className="text-sm text-gray-400">{category}</p>
+              </div>
+            ))}
+        </div>
+      )}
+
+      {/* Добавим отладочную информацию */}
+      {process.env.NODE_ENV === "development" && (
+        <div className="mt-4 p-4 bg-dark-card rounded-xl">
+          <p className="text-gray-400">Debug Info:</p>
+          <p>Terms count: {Object.keys(allTerms).length}</p>
+          <p>Categories count: {Object.keys(categories).length}</p>
+        </div>
+      )}
+    </div>
+  );
+
+  const renderTasksContent = () => (
+    <div className="text-center py-12">
+      <h2 className="page-title">Изучение технических терминов</h2>
+      <p className="page-subtitle">
+        Практикуйтесь в чтении технических текстов и изучайте новые термины
+      </p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <Link
+          to="/assessment"
+          className="bg-dark-card p-6 rounded-xl border border-gray-800 hover:border-primary transition-colors group"
+        >
+          <div className="text-primary mb-3">
+            <ClipboardCheck size={24} />
+          </div>
+          <h3 className="text-lg font-medium mb-2">Оценка знаний</h3>
+          <p className="text-gray-400 text-sm group-hover:text-gray-300">
+            Проверьте свое знание технических терминов
+          </p>
+        </Link>
+
+        <Link
+          to="/learning"
+          className="bg-dark-card p-6 rounded-xl border border-gray-800 hover:border-primary transition-colors group"
+        >
+          <div className="text-primary mb-3">
+            <BookOpen size={24} />
+          </div>
+          <h3 className="text-lg font-medium mb-2">Практика чтения</h3>
+          <p className="text-gray-400 text-sm group-hover:text-gray-300">
+            Читайте технические тексты в контексте
+          </p>
+        </Link>
+
+        <Link
+          to="/chat-exercise"
+          className="bg-dark-card p-6 rounded-xl border border-gray-800 hover:border-primary transition-colors group"
+        >
+          <div className="text-primary mb-3">
+            <MessageSquare size={24} />
+          </div>
+          <h3 className="text-lg font-medium mb-2">Чат с коллегой</h3>
+          <p className="text-gray-400 text-sm group-hover:text-gray-300">
+            Практикуйте технический английский в диалоге
+          </p>
+        </Link>
+
+        <div className="bg-dark-card p-6 rounded-xl border border-gray-800 hover:border-primary transition-colors group relative">
+          <div
+            className="absolute top-4 right-4 z-10"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="relative group/ai">
+              <button
+                className="w-10 h-5 bg-gray-700 rounded-full flex items-center relative"
+                onClick={() => {
+                  const newValue = !useAI;
+                  setUseAI(newValue);
+                  localStorage.setItem("matchingUseAI", newValue);
+                }}
+              >
+                <div
+                  className={`absolute w-3 h-3 rounded-full transition-all duration-200 ${
+                    useAI
+                      ? "translate-x-6 bg-primary"
+                      : "translate-x-1 bg-gray-400"
+                  }`}
+                />
+              </button>
+              <span className="absolute right-0 top-[-30px] opacity-0 group-hover/ai:opacity-100 transition-opacity whitespace-nowrap bg-dark-card px-2 py-1 rounded text-xs text-gray-400 border border-gray-700">
+                Улучшение перевода с ИИ
+              </span>
+            </div>
+          </div>
+
+          <Link to="/matching">
+            <div className="text-primary mb-3">
+              <Shuffle size={24} />
+            </div>
+            <h3 className="text-lg font-medium mb-2">Найти пару</h3>
+            <p className="text-gray-400 text-sm group-hover:text-gray-300">
+              Сопоставьте слова с их переводами
+            </p>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="min-h-screen gradient-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="glass-card rounded-2xl shadow-xl p-6">
+          <div className="border-b border-gray-800 mb-6">
+            <nav className="flex space-x-8" aria-label="Tabs">
+              <button
+                onClick={() => setActiveTab("tasks")}
+                className={`${activeTab === "tasks" ? "nav-link active" : "nav-link"} whitespace-nowrap pb-4 px-1 border-b-2 font-medium text-sm`}
+              >
+                Задания
+              </button>
+              <button
+                onClick={() => setActiveTab("unknown-words")}
+                className={`${activeTab === "unknown-words" ? "nav-link active" : "nav-link"} whitespace-nowrap pb-4 px-1 border-b-2 font-medium text-sm`}
+              >
+                Незнакомые слова
+              </button>
+              <button
+                onClick={() => setActiveTab("term-base")}
+                className={`${activeTab === "term-base" ? "nav-link active" : "nav-link"} whitespace-nowrap pb-4 px-1 border-b-2 font-medium text-sm`}
+              >
+                База терминов
+              </button>
+              <button
+                onClick={() => setActiveTab("statistics")}
+                className={`${activeTab === "statistics" ? "nav-link active" : "nav-link"} whitespace-nowrap pb-4 px-1 border-b-2 font-medium text-sm`}
+              >
+                Статистика
+              </button>
+              <button
+                onClick={() => setActiveTab("settings")}
+                className={`${activeTab === "settings" ? "nav-link active" : "nav-link"} whitespace-nowrap pb-4 px-1 border-b-2 font-medium text-sm`}
+              >
+                Настройки
+              </button>
+            </nav>
+          </div>
+
+          {isLoading ? (
+            <div className="flex items-center justify-center py-12">
+              <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+            </div>
+          ) : (
+            <>
+              {activeTab === "unknown-words" && renderUnknownWordsContent()}
+              {activeTab === "statistics" && (
+                <StatisticsPanel statistics={statistics} />
+              )}
+              {activeTab === "tasks" && renderTasksContent()}
+              {activeTab === "term-base" && renderTermBase()}
+              {activeTab === "settings" && renderSettingsContent()}
+            </>
+          )}
+        </div>
+      </div>
+
+      <TermModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        term={selectedTerm?.original} // Изменено с term на original
+        translation={selectedTerm?.translation}
+        category={selectedTerm?.category}
+      />
+    </div>
+  );
+};
+
+export default Dashboard;
+```
+
+
+```py eng4IT/backend/app/app.py
 # backend/app/app.py
 from sqlalchemy import func, desc
 from datetime import datetime, timedelta
@@ -111,18 +1047,6 @@ def initialize_assessment_words():
 
 # Инициализация базы данных словами
 initialize_assessment_words()
-
-def create_study_session(session, term_id, success_rate, session_type, time_spent=0, metadata=None):
-    """Создание записи о сессии изучения"""
-    study_session = StudySession(
-        term_id=term_id,
-        success_rate=success_rate,  # 0-100
-        time_spent=time_spent,      # в секундах
-        session_type=session_type,  # тип упражнения
-        session_metadata=metadata or {}
-    )
-    session.add(study_session)
-    return study_session
 
 
 def get_current_model():
@@ -1007,108 +1931,68 @@ def update_progress():
 @app.route('/api/terms/statistics', methods=['GET'])
 def get_statistics():
     """Get learning statistics"""
-    session = Session()
     try:
-        # Основная статистика
-        total_unknown = session.query(UnknownTerm).count()
+        session = Session()
+        # Получаем общую статистику
         total_terms = session.query(Term).count()
-        learning_progress = (total_terms - total_unknown) / total_terms * 100 if total_terms > 0 else 0
+        favorites = session.query(Term).filter(Term.is_favorite == True).count()
+        completed = session.query(Term).filter(Term.study_progress == 100).count()
+        in_progress = session.query(Term).filter(
+            Term.study_progress > 0,
+            Term.study_progress < 100
+        ).count()
 
-        # Статистика по типам упражнений
-        exercise_stats = session.query(
-            StudySession.session_type,
-            func.count().label('total_count'),
-            func.avg(StudySession.success_rate).label('avg_success')
-        ).group_by(StudySession.session_type).all()
+        # Получаем прогресс по категориям
+        category_progress = []
+        categories = session.query(Term.category).distinct().all()
+        for (category,) in categories:
+            terms = session.query(Term).filter(Term.category == category).all()
+            if terms:
+                avg_progress = sum(term.study_progress or 0 for term in terms) / len(terms)
+                category_progress.append({
+                    'category': category,
+                    'progress': float(avg_progress),
+                    'count': len(terms)
+                })
 
-        exercise_data = [{
-            'type': session_type,
-            'count': total_count,
-            'success_rate': float(avg_success or 0)
-        } for session_type, total_count, avg_success in exercise_stats]
-
-        # Статистика успешности
-        success_stats = {
-            'high_success': session.query(StudySession).filter(StudySession.success_rate >= 80).count(),
-            'medium_success': session.query(StudySession).filter(StudySession.success_rate.between(50, 79)).count(),
-            'low_success': session.query(StudySession).filter(StudySession.success_rate < 50).count()
-        }
-
-        # Активность за последние 30 дней
-        thirty_days_ago = datetime.now() - timedelta(days=30)
-        recent_activity = session.query(StudySession)\
-            .filter(StudySession.created_at > thirty_days_ago)\
+        # Получаем недавнюю активность
+        recent_sessions = session.query(StudySession)\
             .order_by(StudySession.created_at.desc())\
+            .limit(10)\
             .all()
 
-        activity_data = [{
-            'date': session.created_at.isoformat(),
-            'type': session.session_type,
-            'success_rate': session.success_rate,
-            'description': f"Изучено {session.time_spent//60} минут, успешность {session.success_rate}%"
-        } for session in recent_activity]
-
-        # Статистика по дням недели
-        weekly_activity = []
-        days = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
-        for day_idx, day_name in enumerate(days):
-            count = session.query(StudySession)\
-                .filter(func.extract('dow', StudySession.created_at) == day_idx)\
-                .count()
-            weekly_activity.append({
-                'day': day_name,
-                'words_count': count
-            })
-
-        # Кривая обучения
-        learning_curve = []
-        current_date = thirty_days_ago
-        while current_date <= datetime.now():
-            day_success = session.query(func.avg(StudySession.success_rate))\
-                .filter(
-                    StudySession.created_at >= current_date,
-                    StudySession.created_at < current_date + timedelta(days=1)
-                ).scalar() or 0
-
-            learning_curve.append({
-                'date': current_date.isoformat(),
-                'success_rate': float(day_success)
-            })
-            current_date += timedelta(days=1)
+        recent_activity = [
+            {
+                'date': session.created_at.isoformat(),
+                'success_rate': session.success_rate,
+                'type': session.session_type
+            } for session in recent_sessions
+        ]
 
         return jsonify({
             'overview': {
-                'unknown_words': total_unknown,
                 'total_terms': total_terms,
-                'learning_progress': learning_progress,
-                'favorites': session.query(Term).filter(Term.is_favorite == True).count()
+                'favorites': favorites,
+                'completed': completed,
+                'in_progress': in_progress
             },
-            'exercise_stats': exercise_data,
-            'success_stats': success_stats,
-            'recent_activity': activity_data,
-            'weekly_activity': weekly_activity,
-            'learning_curve': learning_curve
+            'category_progress': category_progress,
+            'recent_activity': recent_activity,
+            'learning_curve': [] # Добавьте реальные данные если необходимо
         })
-
     except Exception as e:
         logger.error(f'Error getting statistics: {e}')
         return jsonify({
             'overview': {
-                'unknown_words': 0,
                 'total_terms': 0,
-                'learning_progress': 0,
-                'favorites': 0
+                'favorites': 0,
+                'completed': 0,
+                'in_progress': 0
             },
-            'exercise_stats': [],
-            'success_stats': {
-                'high_success': 0,
-                'medium_success': 0,
-                'low_success': 0
-            },
+            'category_progress': [],
             'recent_activity': [],
-            'weekly_activity': [],
             'learning_curve': []
-        })
+        }), 200  # Возвращаем пустые данные вместо 500 ошибки
     finally:
         session.close()
 
@@ -1178,90 +2062,111 @@ def toggle_favorite():
     finally:
         session.close()
 
-@app.route('/api/exercises/matching/complete', methods=['POST'])
-def complete_matching():
-    """Сохранение результатов упражнения на сопоставление"""
-    data = request.json
-    session = Session()
-    try:
-        for result in data['results']:
-            create_study_session(
-                session=session,
-                term_id=result['term_id'],
-                success_rate=result['success_rate'],
-                session_type='matching',
-                time_spent=data.get('time_spent', 0),
-                metadata={
-                    'attempts': result.get('attempts', 0),
-                    'correct_matches': result.get('correct_matches', 0),
-                    'total_matches': result.get('total_matches', 0)
-                }
-            )
-        session.commit()
-        return jsonify({'status': 'success'})
-    except Exception as e:
-        session.rollback()
-        return jsonify({'error': str(e)}), 500
-    finally:
-        session.close()
-
-@app.route('/api/exercises/chat/complete', methods=['POST'])
-def complete_chat():
-    """Сохранение результатов чат-упражнения"""
-    data = request.json
-    session = Session()
-    try:
-        for result in data['results']:
-            create_study_session(
-                session=session,
-                term_id=result['term_id'],
-                success_rate=result['success_rate'],
-                session_type='chat',
-                time_spent=data.get('time_spent', 0),
-                metadata={
-                    'correct_responses': result.get('correct_responses', 0),
-                    'total_responses': result.get('total_responses', 0),
-                    'hints_used': result.get('hints_used', 0)
-                }
-            )
-        session.commit()
-        return jsonify({'status': 'success'})
-    except Exception as e:
-        session.rollback()
-        return jsonify({'error': str(e)}), 500
-    finally:
-        session.close()
-
-@app.route('/api/exercises/reading/complete', methods=['POST'])
-def complete_reading():
-    """Сохранение результатов упражнения на чтение"""
-    data = request.json
-    session = Session()
-    try:
-        for term in data['terms']:
-            create_study_session(
-                session=session,
-                term_id=term['term_id'],
-                success_rate=100,  # В чтении нет явного показателя успеха
-                session_type='reading',
-                time_spent=data.get('time_spent', 0),
-                metadata={
-                    'context': data.get('context', ''),
-                    'translations_viewed': term.get('translations_viewed', 0)
-                }
-            )
-        session.commit()
-        return jsonify({'status': 'success'})
-    except Exception as e:
-        session.rollback()
-        return jsonify({'error': str(e)}), 500
-    finally:
-        session.close()
-
-
 
 # Перед app.run()
 if __name__ == '__main__':
     # Инициализируем базу данных
     init_db()
     app.run(debug=True)
+```
+
+
+
+я открываю вкладку Незнакомые слова, нажимаю на звездочку на каком нибудь слове, она заполняется желтым, дальше я нажимаю в строке фильтров на кнопку Избранное, и слово не появляется в списке, в консоли ошибок нет, и если обновить страницу, то выделение звездочки пропадает
+
+The issue you're experiencing is due to duplicate API calls when toggling the favorite status of a word. Specifically, both the `WordList` component and the `Dashboard` component are making axios POST requests to the `/api/terms/favorite` endpoint, causing the favorite status to toggle twice and effectively negate the change. As a result, when you refresh the page, the favorite status reverts to its original state, and the favorite filter doesn't show the word.
+
+**Solution:**
+
+To resolve this, you need to ensure that only one API call is made when toggling the favorite status. Here's how you can fix the code:
+
+1. **Remove the axios call from `WordList.js`**:
+   In your `WordList.js` component, the `handleFavoriteClick` function currently makes an axios POST request. You should remove this API call and instead delegate the action to the parent component (`Dashboard`) via the `onFavoriteToggle` prop.
+
+   **Updated `handleFavoriteClick` in `WordList.js`:**
+
+   ```jsx
+   const handleFavoriteClick = (e) => {
+     e.stopPropagation();
+     onFavoriteToggle(id);
+   };
+   ```
+
+2. **Adjust the `onFavoriteToggle` prop in `WordList.js`**:
+   When rendering the `WordList` component in `Dashboard.js`, pass the `handleFavoriteToggle` function directly without wrapping it in another function.
+
+   **Updated usage of `WordList` in `Dashboard.js`:**
+
+   ```jsx
+   <WordList
+     key={word.id || index}
+     id={word.id}
+     word={word.original}
+     translation={word.translation}
+     category={word.category}
+     attempts={word.attempts}
+     lastAttempt={word.last_attempt}
+     progress={word.study_progress}
+     isFavorite={word.is_favorite}
+     onClick={() => {
+       if (word && word.original) {
+         setSelectedTerm(word);
+         setIsModalOpen(true);
+       }
+     }}
+     onFavoriteToggle={handleFavoriteToggle} // Pass the function directly
+   />
+   ```
+
+3. **Update `handleFavoriteToggle` in `Dashboard.js`**:
+   Ensure that `handleFavoriteToggle` accepts a `termId` and makes the axios POST request. Update the state of `unknownWords` with the new favorite status returned from the backend.
+
+   **Updated `handleFavoriteToggle` in `Dashboard.js`:**
+
+   ```jsx
+   const handleFavoriteToggle = async (termId) => {
+     try {
+       console.log("Toggling favorite for term ID:", termId);
+       const response = await axios.post(
+         "http://localhost:5000/api/terms/favorite",
+         {
+           term_id: termId,
+         },
+       );
+
+       if (response.data.status === "success") {
+         const newFavoriteStatus = response.data.is_favorite;
+
+         setUnknownWords((prevWords) =>
+           prevWords.map((word) =>
+             word.id === termId
+               ? { ...word, is_favorite: newFavoriteStatus }
+               : word,
+           ),
+         );
+
+         // Reload the list if the favorites filter is active
+         if (filters.showFavorites) {
+           await fetchUnknownWords();
+         }
+       }
+     } catch (error) {
+       console.error("Error toggling favorite:", error);
+     }
+   };
+   ```
+
+4. **Remove or adjust any unnecessary code**:
+   Ensure that there are no other unnecessary axios calls or state updates that might interfere with the favorite toggling functionality.
+
+**Explanation:**
+
+By making these changes, the favorite status will be toggled only once when the star icon is clicked. The state in the `Dashboard` component will be updated accordingly, and the favorite status will persist after refreshing the page. Additionally, the word will correctly appear when you apply the favorites filter because the `unknownWords` state now accurately reflects the favorited words.
+
+**Note:**
+
+- Ensure that the backend endpoint `/api/terms/favorite` is functioning correctly and returns the updated favorite status (`is_favorite`) in the response.
+- If you have any caching mechanisms or state management libraries (like Redux), make sure they are updated to reflect these changes.
+- Test the functionality thoroughly to confirm that the favorite status updates correctly in all scenarios.
+
+This should resolve the issue you're experiencing with favoriting words in your application.

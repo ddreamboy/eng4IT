@@ -1,30 +1,24 @@
-/** @type {import('tailwindcss').Config} */
+// eng4IT/frontend/tailwind.config.js
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#4ade80',
-          hover: '#22c55e'
+          DEFAULT: "var(--color-primary)",
+          hover: "var(--color-primary-hover)",
         },
         dark: {
-          DEFAULT: '#121212',
-          card: '#181818',
-          lighter: '#282828'
-        }
+          DEFAULT: "var(--color-background)",
+          card: "var(--color-card)",
+          lighter: "#2d2d2d",
+        },
       },
       backgroundColor: {
-        'card-hover': 'rgba(38, 38, 38, 0.95)'
-      },
-      backgroundImage: {
-        'gradient-primary': 'linear-gradient(135deg, #C5A572 0%, #E5C992 100%)',
+        "primary-20": "rgba(74, 222, 128, 0.2)",
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-  ],
-}
+  plugins: [],
+};

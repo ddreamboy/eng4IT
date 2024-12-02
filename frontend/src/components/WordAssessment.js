@@ -1,24 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence, useMotionValue, useTransform } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import {
+  motion,
+  AnimatePresence,
+  useMotionValue,
+  useTransform,
+} from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = "http://localhost:5000/api";
 
 const CardContent = ({ word, category }) => {
-  const [mainCategory, subCategory] = category.split('->').map(s => s.trim());
+  const [mainCategory, subCategory] = category.split("->").map((s) => s.trim());
 
   return (
     <div className="flex flex-col items-center justify-center h-full">
       <h3 className="text-3xl font-bold text-primary mb-4 text-center">
         {word}
       </h3>
-      <p className="text-gray-400 text-center mb-2">
-        {mainCategory}
-      </p>
-      <p className="text-gray-500 text-sm text-center">
-        {subCategory}
-      </p>
+      <p className="text-gray-400 text-center mb-2">{mainCategory}</p>
+      <p className="text-gray-500 text-sm text-center">{subCategory}</p>
     </div>
   );
 };
@@ -26,14 +27,17 @@ const CardContent = ({ word, category }) => {
 const WordCard = ({ word, category, onSwipe, active, exitX }) => {
   const x = useMotionValue(0);
   const rotate = useTransform(x, [-200, 200], [-30, 30]);
-  
+
   const leftIndicatorOpacity = useTransform(x, [-200, -100, 0], [1, 0.5, 0]);
   const rightIndicatorOpacity = useTransform(x, [0, 100, 200], [0, 0.5, 1]);
 
   const handleDragEnd = (event, info) => {
     const threshold = 100;
     if (Math.abs(info.offset.x) > threshold) {
-      onSwipe(info.offset.x > 0 ? 'unknown' : 'known', info.offset.x > 0 ? 300 : -300);
+      onSwipe(
+        info.offset.x > 0 ? "unknown" : "known",
+        info.offset.x > 0 ? 300 : -300,
+      );
     }
   };
 
@@ -43,11 +47,11 @@ const WordCard = ({ word, category, onSwipe, active, exitX }) => {
     <motion.div
       initial={{ scale: 0.5, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
-      exit={{ 
+      exit={{
         x: exitX,
         opacity: 0,
         scale: 0.5,
-        transition: { duration: 0.3 }
+        transition: { duration: 0.3 },
       }}
       style={{ x, rotate }}
       drag="x"
@@ -55,15 +59,15 @@ const WordCard = ({ word, category, onSwipe, active, exitX }) => {
       onDragEnd={handleDragEnd}
       className="absolute w-full"
     >
-      <motion.div 
-        style={{ opacity: leftIndicatorOpacity }} 
+      <motion.div
+        style={{ opacity: leftIndicatorOpacity }}
         className="absolute left-4 top-4 bg-primary text-dark px-3 py-1 rounded-lg z-10"
       >
         Yes
       </motion.div>
 
-      <motion.div 
-        style={{ opacity: rightIndicatorOpacity }} 
+      <motion.div
+        style={{ opacity: rightIndicatorOpacity }}
         className="absolute right-4 top-4 bg-red-500 text-white px-3 py-1 rounded-lg z-10"
       >
         No
@@ -80,7 +84,7 @@ const WordAssessment = () => {
   const navigate = useNavigate();
   const [words, setWords] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [knownWords, setKnownWords] = useState([]);
+  const [setKnownWords] = useState([]);
   const [unknownWords, setUnknownWords] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [exitX, setExitX] = useState(0);
@@ -91,12 +95,12 @@ const WordAssessment = () => {
         const response = await axios.get(`${API_URL}/assessment-words`);
         if (response.data.words && response.data.words.length > 0) {
           setWords(response.data.words);
-          console.log('Fetched words:', response.data.words);
+          console.log("Fetched words:", response.data.words);
         } else {
-          console.warn('No words received from API.');
+          console.warn("No words received from API.");
         }
       } catch (error) {
-        console.error('Error fetching assessment words:', error);
+        console.error("Error fetching assessment words:", error);
       } finally {
         setIsLoading(false);
       }
@@ -108,24 +112,24 @@ const WordAssessment = () => {
   const handleSwipe = (direction, xValue) => {
     const currentWord = words[currentIndex];
     setExitX(xValue);
-    
-    if (direction === 'known') {
-      setKnownWords(prev => [...prev, currentWord]);
+
+    if (direction === "known") {
+      setKnownWords((prev) => [...prev, currentWord]);
     } else {
-      setUnknownWords(prev => [...prev, currentWord]);
+      setUnknownWords((prev) => [...prev, currentWord]);
     }
 
     if (currentIndex + 1 >= words.length) {
       setTimeout(handleAssessmentComplete, 300);
     } else {
       setTimeout(() => {
-        setCurrentIndex(prev => prev + 1);
+        setCurrentIndex((prev) => prev + 1);
       }, 300);
     }
   };
 
   const handleButtonClick = (direction) => {
-    const xValue = direction === 'known' ? -300 : 300;
+    const xValue = direction === "known" ? -300 : 300;
     handleSwipe(direction, xValue);
   };
 
@@ -133,16 +137,16 @@ const WordAssessment = () => {
     try {
       // Сохраняем только неизвестные слова
       await axios.post(`${API_URL}/assessment-results`, {
-        unknownWords: unknownWords.map(word => ({
+        unknownWords: unknownWords.map((word) => ({
           term: word.term,
-          category: word.category
-        }))
+          category: word.category,
+        })),
       });
 
       // Перенаправляем на страницу с неизвестными словами
-      navigate('/?tab=unknown-words');
+      navigate("/?tab=unknown-words");
     } catch (error) {
-      console.error('Error saving assessment results:', error);
+      console.error("Error saving assessment results:", error);
     }
   };
 
@@ -196,14 +200,14 @@ const WordAssessment = () => {
         <div className="mt-8 flex justify-center space-x-4">
           <motion.button
             whileTap={{ scale: 0.95 }}
-            onClick={() => handleButtonClick('known')}
+            onClick={() => handleButtonClick("known")}
             className="bg-primary hover:bg-primary-hover text-dark px-6 py-2 rounded-xl transition-all duration-200"
           >
             Yes
           </motion.button>
           <motion.button
             whileTap={{ scale: 0.95 }}
-            onClick={() => handleButtonClick('unknown')}
+            onClick={() => handleButtonClick("unknown")}
             className="bg-red-600 hover:bg-red-1000 text-white px-6 py-2 rounded-xl transition-all duration-200"
           >
             No

@@ -281,6 +281,14 @@ class GeminiService:
             ]
         }
 
+    def get_model(self, model_name='gemini-1.5-pro'):
+        """Get specific Gemini model"""
+        try:
+            return genai.GenerativeModel(model_name)
+        except Exception as e:
+            logger.error(f'Error getting model {model_name}: {e}')
+            return self.model
+
 
     def improve_translations(self, pairs_data, pairs_count = 15):
         """
