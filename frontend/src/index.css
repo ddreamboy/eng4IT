@@ -204,6 +204,10 @@ body {
     font-weight: 500;
 }
 
+.subcategory-tag {
+    opacity: 0.7; /* Сделать подкатегорию тусклее */
+}
+
 .term-card .translation {
     color: var(--color-text);
 }
@@ -348,4 +352,350 @@ body {
     height: 10px;
     border-radius: 50%;
     animation: confetti 1s ease-out forwards;
+}
+
+.stat-card {
+    @apply bg-dark-card border border-gray-800 rounded-xl p-6 transition-all duration-200;
+}
+
+.stat-card:hover {
+    @apply border-primary shadow-lg transform scale-[1.02];
+}
+
+/* Стили для графиков */
+.tremor-Chart {
+    @apply bg-transparent !important;
+}
+
+.tremor-Card {
+    @apply bg-transparent border-gray-800 !important;
+}
+
+/* Анимации для списка слов */
+.word-list-enter {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.word-list-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+        opacity 300ms,
+        transform 300ms;
+}
+
+.word-list-exit {
+    opacity: 1;
+}
+
+.word-list-exit-active {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition:
+        opacity 300ms,
+        transform 300ms;
+}
+
+/* Стили для фильтров и поиска */
+.filter-button {
+    @apply px-3 py-1.5 rounded-lg text-sm font-medium transition-colors
+    bg-dark-lighter text-gray-400 hover:text-primary
+    border border-gray-800 hover:border-primary;
+}
+
+.filter-button.active {
+    @apply bg-primary-20 text-primary border-primary;
+}
+
+.search-input {
+    @apply w-full bg-dark-card border border-gray-800 rounded-xl
+    px-4 py-2 text-gray-200 placeholder-gray-500
+    focus:border-primary focus:outline-none transition-colors;
+}
+
+/* Стили для прогресс-бара */
+.progress-bar {
+    @apply w-full h-2 bg-gray-700 rounded-full overflow-hidden;
+}
+
+.progress-bar-fill {
+    @apply h-full bg-primary transition-all duration-300;
+}
+
+/* Стили для категорий */
+.category-tree {
+    @apply space-y-1;
+}
+
+.category-item {
+    @apply flex items-center space-x-2 p-2 rounded-lg cursor-pointer
+    hover:bg-gray-800 transition-colors;
+}
+
+.category-item.active {
+    @apply bg-primary-20 text-primary;
+}
+
+/* Стили для статистики */
+.stats-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4;
+}
+
+.stat-value {
+    @apply text-3xl font-bold text-primary;
+}
+
+.stat-label {
+    @apply text-sm text-gray-400;
+}
+
+/* Анимации для иконок */
+@keyframes pulse-ring {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    80%,
+    100% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+.icon-pulse::before {
+    content: "";
+    @apply absolute inset-0 rounded-full;
+    animation: pulse-ring 1.5s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+
+/* Стили для режима сетки */
+.grid-view {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4;
+}
+
+.list-view {
+    @apply space-y-4;
+}
+
+/* Стили для кнопок действий */
+.action-button {
+    @apply inline-flex items-center justify-center p-2
+    rounded-lg transition-colors duration-200
+    hover:bg-gray-800 text-gray-400 hover:text-primary;
+}
+
+.action-button.active {
+    @apply bg-primary-20 text-primary;
+}
+
+/* Анимации для карточек при наведении */
+.term-card {
+    @apply transform-gpu transition-all duration-200;
+}
+
+.term-card:hover .term-actions {
+    @apply opacity-100;
+}
+
+.term-actions {
+    @apply absolute right-2 top-2 flex space-x-1 opacity-0
+    transition-opacity duration-200;
+}
+
+/* Стили для модального окна */
+.modal-backdrop {
+    @apply fixed inset-0 bg-black/50 backdrop-blur-sm
+    flex items-center justify-center z-50;
+}
+
+.modal-content {
+    @apply bg-dark-card border border-gray-800 rounded-2xl
+    p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto
+    shadow-xl transform transition-all;
+}
+
+/* Стили для тегов категорий */
+.category-tag {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs
+    bg-gray-800 text-gray-400 border border-gray-700
+    transition-colors hover:border-primary hover:text-primary;
+}
+
+/* Стили для состояния загрузки */
+.loading-skeleton {
+    @apply animate-pulse bg-gray-800 rounded;
+}
+
+/* Стили для всплывающих подсказок */
+.tooltip {
+    @apply absolute z-50 px-2 py-1 text-xs rounded bg-gray-800
+    text-gray-200 border border-gray-700 shadow-lg
+    transition-opacity duration-200;
+}
+
+/* Стили для графиков статистики */
+.chart-container {
+    @apply bg-dark-card border border-gray-800 rounded-xl p-4
+    transition-all duration-200 hover:border-primary;
+}
+
+.chart-title {
+    @apply text-lg font-semibold text-primary mb-4;
+}
+
+/* Анимации для переключения вкладок */
+.tab-content-enter {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.tab-content-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition:
+        opacity 300ms,
+        transform 300ms;
+}
+
+.tab-content-exit {
+    opacity: 1;
+}
+
+.tab-content-exit-active {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition:
+        opacity 300ms,
+        transform 300ms;
+}
+
+/* Стили для прогресса изучения */
+.study-progress {
+    @apply relative h-1.5 bg-gray-700 rounded-full overflow-hidden;
+}
+
+.study-progress-bar {
+    @apply absolute left-0 top-0 h-full bg-primary
+    transition-all duration-300 ease-out;
+}
+
+/* Стили для избранного */
+.favorite-button {
+    @apply text-gray-400 hover:text-yellow-500
+    transition-colors duration-200;
+}
+
+.favorite-button.active {
+    @apply text-yellow-500;
+}
+
+/* Адаптивные стили */
+@media (max-width: 640px) {
+    .stats-grid {
+        @apply grid-cols-2;
+    }
+
+    .grid-view {
+        @apply grid-cols-1;
+    }
+}
+
+/* Темная тема */
+.dark {
+    --color-primary: #4ade80;
+    --color-primary-hover: #22c55e;
+    --color-background: #121212;
+    --color-card: #1e1e1e;
+    --color-text: #e0e0e0;
+    --color-text-secondary: #a0a0a0;
+}
+
+/* Светлая тема */
+:root {
+    --color-primary: #4ade80;
+    --color-primary-hover: #22c55e;
+    --color-background: #f3f4f6;
+    --color-card: #ffffff;
+    --color-text: #1f2937;
+    --color-text-secondary: #6b7280;
+}
+
+/* Темная тема */
+.dark {
+    --color-primary: #4ade80;
+    --color-primary-hover: #22c55e;
+    --color-background: #121212;
+    --color-card: #1e1e1e;
+    --color-text: #e0e0e0;
+    --color-text-secondary: #a0a0a0;
+}
+
+/* Общие классы с использованием переменных */
+.gradient-background {
+    background: var(--color-background);
+}
+
+.glass-card {
+    background: var(--color-card);
+    border-color: var(--border-color);
+}
+
+/* Обновленные стили для текста */
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-secondary {
+    color: var(--color-text-secondary);
+}
+
+/* Обновленные стили для карточек в светлой теме */
+.light .term-card {
+    background: var(--color-card);
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.light .term-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптированные стили для компонентов в светлой теме */
+.light .search-input {
+    background: var(--color-card);
+    border-color: #e5e7eb;
+    color: var(--color-text);
+}
+
+.light .filter-button {
+    background: var(--color-card);
+    border-color: #e5e7eb;
+    color: var(--color-text-secondary);
+}
+
+.light .category-tag {
+    background: #f3f4f6;
+    color: var(--color-text-secondary);
+    border-color: #e5e7eb;
+}
+
+/* Адаптация для графиков и статистики */
+.light .chart-container {
+    background: var(--color-card);
+    border-color: #e5e7eb;
+}
+
+.light .tremor-Card {
+    background: var(--color-card) !important;
+    border-color: #e5e7eb !important;
+}
+
+/* Анимации перехода между темами */
+.theme-transition {
+    transition:
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
 }

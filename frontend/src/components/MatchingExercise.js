@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import axios from "axios";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { calculateSuccessRate } from "../utils/statistics";
+import { useExerciseTimer } from "../hooks/useExerciseTimer";
 
 const MatchingExercise = () => {
   const [allPairs, setAllPairs] = useState([]); // Все 20 пар
@@ -18,12 +20,9 @@ const MatchingExercise = () => {
   const [score, setScore] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
   const [correctPairs, setCorrectPairs] = useState(new Map());
+  const [isSaving, setIsSaving] = useState(false);
+  const getTimeSpent = useExerciseTimer(); // Оставляем этот хук
 
-  // Показываем отладку только в режиме разработки
-  const isDev = process.env.NODE_ENV === "development";
-  const [showDebug, setShowDebug] = useState(isDev);
-
-  const [currentPairIndex, setCurrentPairIndex] = useState(0); // Добавим индекс текущей пары
   // Добавим состояние для отслеживания текущей группы пар
   const [currentGroup, setCurrentGroup] = useState(0);
 
@@ -113,32 +112,13 @@ const MatchingExercise = () => {
       }, 300); // Уменьшили время до 300мс
     } else {
       setIsComplete(true);
-    }
-  };
-
-  // Обновим функцию добавления новой пары
-  const addNewPair = () => {
-    if (currentPairIndex < allPairs.length) {
-      const newPair = allPairs[currentPairIndex];
-
-      setDisplayedPairs((prev) => {
-        // Удаляем сопоставленные пары и добавляем новую
-        const activePairs = prev.filter(
-          (p) =>
-            !matchedPairs.some(
-              (mp) => mp.english.toLowerCase() === p.english.toLowerCase(),
-            ),
-        );
-        return [...activePairs, newPair];
-      });
-
-      setCurrentPairIndex((prev) => prev + 1);
+      saveStatistics(); // Вызываем сохранение статистики при завершении
     }
   };
 
   // Изменим обработку правильного сопоставления
   const handleCardClick = (word, isEnglish) => {
-    const normalizedWord = word.toLowerCase();
+    const normalizedWord = typeof word === 'string' ? word.toLowerCase() : '';
 
     if (
       matchedPairs.some(
@@ -162,22 +142,30 @@ const MatchingExercise = () => {
       const correctTranslation = correctPairs.get(newSelectedPair.english);
 
       if (correctTranslation === newSelectedPair.russian) {
-        const matchedPair = {
-          english: newSelectedPair.english,
-          russian: newSelectedPair.russian,
-        };
+        // Найти соответствующую пару по английскому слову
+        const matchedPairData = allPairs.find(
+          (pair) => pair.english.toLowerCase() === newSelectedPair.english,
+        );
 
-        setMatchedPairs((prev) => [...prev, matchedPair]);
-        setScore((prev) => prev + 1);
-        setSelectedPair({ english: null, russian: null });
+        if (matchedPairData) { // Добавлена проверка
+          const matchedPair = {
+            id: matchedPairData.id,
+            english: newSelectedPair.english,
+            russian: newSelectedPair.russian,
+          };
 
-        // Проверяем, завершена ли текущая группа
-        const currentGroupMatched =
-          matchedPairs.length + 1 === (currentGroup + 1) * 5;
-        if (currentGroupMatched) {
-          setTimeout(() => {
-            loadNextGroup();
-          }, 1000);
+          setMatchedPairs((prev) => [...prev, matchedPair]);
+          setScore((prev) => prev + 1);
+          setSelectedPair({ english: null, russian: null });
+
+          // Проверяем, завершена ли текущая группа
+          const currentGroupMatched =
+            matchedPairs.length + 1 === (currentGroup + 1) * 5;
+          if (currentGroupMatched) {
+            setTimeout(() => {
+              loadNextGroup();
+            }, 1000);
+          }
         }
       } else {
         setWrongPair(newSelectedPair);
@@ -243,68 +231,8 @@ const MatchingExercise = () => {
       `}
     >
       <span className="text-white text-lg font-medium break-words">
-        {word.toLowerCase()}
+        {typeof word === 'string' ? word.toLowerCase() : JSON.stringify(word)}
       </span>
-    </div>
-  );
-
-  // Компонент для отображения отладочной информации
-  const DebugInfo = () => (
-    <div className="mt-8 p-4 bg-zinc-900 rounded-xl">
-      <div className="flex justify-between items-center mb-4">
-        <h3 className="text-lg font-semibold text-primary">
-          Отладочная информация
-        </h3>
-        <button
-          onClick={() => setShowDebug(!showDebug)}
-          className="text-zinc-400 hover:text-primary"
-        >
-          {showDebug ? "Скрыть" : "Показать"}
-        </button>
-      </div>
-
-      {showDebug && (
-        <div className="mt-4 text-sm">
-          <h4 className="text-zinc-400 mb-2">Текущий выбор:</h4>
-          <div className="flex gap-4">
-            <span className="text-white">
-              English: {selectedPair.english || "не выбрано"}
-            </span>
-            <span className="text-white">
-              Russian: {selectedPair.russian || "не выбрано"}
-            </span>
-          </div>
-        </div>
-      )}
-
-      {showDebug && (
-        <div className="grid grid-cols-2 gap-8">
-          <div>
-            <h4 className="text-zinc-400 mb-2">Оригинальные пары:</h4>
-            <div className="space-y-2">
-              {allPairs.map((pair, index) => (
-                <div key={index} className="flex justify-between text-sm">
-                  <span className="text-white">{pair.english}</span>
-                  <span className="text-primary">→</span>
-                  <span className="text-white">{pair.russian}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h4 className="text-zinc-400 mb-2">Текущие пары:</h4>
-            <div className="space-y-2">
-              {displayedPairs.map((pair, index) => (
-                <div key={index} className="flex justify-between text-sm">
-                  <span className="text-white">{pair.english}</span>
-                  <span className="text-primary">→</span>
-                  <span className="text-white">{pair.russian}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 
@@ -322,6 +250,10 @@ const MatchingExercise = () => {
       >
         <h2 className="text-2xl font-bold text-primary mb-4">Поздравляем!</h2>
         <p className="text-gray-300 mb-6">Вы успешно завершили упражнение</p>
+        <p className="text-gray-300 mb-2">
+          Правильных ответов: {score} из {allPairs.length}
+        </p>
+        {isSaving && <p className="text-gray-400">Сохранение результатов...</p>}
         <div className="space-x-4">
           <button
             onClick={() => window.location.reload()}
@@ -339,6 +271,39 @@ const MatchingExercise = () => {
       </motion.div>
     </motion.div>
   );
+
+  // Добавляем функцию сохранения статистики
+  const saveStatistics = async () => {
+    setIsSaving(true);
+    try {
+      const timeSpent = getTimeSpent();
+      const successRate = calculateSuccessRate(
+        matchedPairs.map((pair) => ({
+          isCorrect: true, // Пара сопоставлена правильно
+          attempts: 1, // Можно добавить подсчёт попыток
+        })),
+      );
+
+      await axios.post(
+        "http://localhost:5000/api/exercises/matching/complete",
+        {
+          results: matchedPairs.map((pair) => ({
+            term_id: pair.id,
+            success_rate: successRate,
+            attempts: 1,
+            correct_matches: score,
+            total_matches: allPairs.length,
+          })),
+          time_spent: timeSpent,
+        },
+      );
+    } catch (error) {
+      console.error("Ошибка при сохранении статистики:", error);
+      // Можно добавить уведомление об ошибке
+    } finally {
+      setIsSaving(false);
+    }
+  };
 
   if (isLoading) {
     return (
