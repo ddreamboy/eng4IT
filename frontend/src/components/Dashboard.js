@@ -10,6 +10,7 @@ import {
   Shuffle,
   Star,
   Layout,
+  Trash2,
 } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
 import axios from "axios";
@@ -18,6 +19,7 @@ import { AnimatePresence } from "framer-motion";
 import TermModal from "./TermModal";
 import WordList from "./WordList";
 import AddTermModal from "./AddTermModal";
+import ConfirmDeleteModal from "./ConfirmDeleteModal";
 // Удалили импорт StatisticsPanel, так как вкладка удалена
 
 const Dashboard = () => {
@@ -57,6 +59,66 @@ const Dashboard = () => {
     subCategoryFilter: "all",
   });
   const [isAddTermModalOpen, setIsAddTermModalOpen] = useState(false);
+  const [deleteConfig, setDeleteConfig] = useState({
+    isOpen: false,
+    termId: null,
+    termName: "",
+    context: "", // 'unknown-words' или 'term-base'
+  });
+
+  const handleDelete = (termId, termName, context) => {
+    setDeleteConfig({
+      isOpen: true,
+      termId,
+      termName,
+      context,
+    });
+  };
+
+  const confirmDelete = async () => {
+    const { termId, context } = deleteConfig;
+    try {
+      if (context === "unknown-words") {
+        // Удаляем из незнакомых слов
+        const response = await axios.delete(
+          `http://localhost:5000/api/unknown-words/${termId}`,
+        );
+        if (response.data.status === "success") {
+          setUnknownWords((prevWords) =>
+            prevWords.filter((word) => word.id !== termId),
+          );
+        }
+      } else if (context === "term-base") {
+        // Удаляем из базы терминов
+        const response = await axios.delete(
+          `http://localhost:5000/api/terms/${termId}`,
+        );
+        if (response.data.status === "success") {
+          // Обновляем оба списка
+          const [wordsRes, termsRes] = await Promise.all([
+            axios.get("http://localhost:5000/api/unknown-words"),
+            axios.get("http://localhost:5000/api/all-terms"),
+          ]);
+          setUnknownWords(wordsRes.data);
+          setAllTerms(termsRes.data);
+        }
+      }
+      setDeleteConfig({
+        isOpen: false,
+        termId: null,
+        termName: "",
+        context: "",
+      });
+    } catch (error) {
+      console.error("Error deleting term:", error);
+      setDeleteConfig({ ...deleteConfig, isOpen: false });
+      // Можно добавить уведомление об ошибке
+    }
+  };
+
+  const cancelDelete = () => {
+    setDeleteConfig({ isOpen: false, termId: null, termName: "", context: "" });
+  };
 
   // Загрузка всех данных
   useEffect(() => {
@@ -338,13 +400,16 @@ const Dashboard = () => {
   const categories = useMemo(() => {
     const mapping = {};
 
-    Object.values(allTerms).forEach((categoryStr) => {
-      const [main, sub] = categoryStr.split("->").map((s) => s.trim());
-      if (main && sub) {
-        if (!mapping[main]) {
-          mapping[main] = new Set();
+    Object.entries(allTerms).forEach(([term, termData]) => {
+      // Проверяем, что termData - это объект и у него есть свойство category
+      if (termData && typeof termData === "object" && termData.category) {
+        const [main, sub] = termData.category.split("->").map((s) => s.trim());
+        if (main && sub) {
+          if (!mapping[main]) {
+            mapping[main] = new Set();
+          }
+          mapping[main].add(sub);
         }
-        mapping[main].add(sub);
       }
     });
 
@@ -484,7 +549,7 @@ const Dashboard = () => {
         <AnimatePresence>
           {sortedWords.map((word) => (
             <WordList
-              key={word.id} // Используем только word.id, предполагая его уникальность
+              key={word.id}
               id={word.id}
               word={
                 typeof word.original === "string"
@@ -507,7 +572,10 @@ const Dashboard = () => {
                   setIsModalOpen(true);
                 }
               }}
-              onFavoriteToggle={handleFavoriteToggle} // Передаем функцию напрямую
+              onFavoriteToggle={handleFavoriteToggle}
+              onDelete={(id) =>
+                handleDelete(id, word.original, "unknown-words")
+              }
             />
           ))}
         </AnimatePresence>
@@ -669,9 +737,20 @@ const Dashboard = () => {
       {/* Обновите фильтрацию при отображении терминов */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {Object.entries(allTerms)
-          .filter(([term, category]) => {
+          .filter(([term, termData]) => {
+            // Проверяем что termData - это объект и у него есть свойство category
+            if (
+              !termData ||
+              typeof termData !== "object" ||
+              !termData.category
+            ) {
+              return false;
+            }
+
             // Разделяем категорию на основную и подкатегорию
-            const [mainCat, subCat] = category.split("->").map((s) => s.trim());
+            const [mainCat, subCat] = termData.category
+              .split("->")
+              .map((s) => s.trim());
 
             // Фильтрация по основной категории
             if (
@@ -693,14 +772,27 @@ const Dashboard = () => {
             const searchLower = searchTerm.toLowerCase();
             return term.toLowerCase().includes(searchLower);
           })
-          .map(([term, category]) => {
-            const [mainCat, subCat] = category.split("->").map((s) => s.trim());
+          .map(([term, termData]) => {
+            const [mainCat, subCat] = termData.category
+              .split("->")
+              .map((s) => s.trim());
             return (
               <div
                 key={term}
-                className="bg-dark-card border border-gray-800 p-4 rounded-xl hover:border-primary transition-colors"
+                className="bg-dark-card border border-gray-800 p-4 rounded-xl hover:border-primary transition-colors relative"
               >
-                <h3 className="text-primary font-medium mb-2">{term}</h3>
+                <div className="flex justify-between items-center mb-2">
+                  <h3 className="text-primary font-medium">{term}</h3>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleDelete(termData.id, term, "term-base");
+                    }}
+                    className="text-gray-400 hover:text-red-500 transition-colors ml-2"
+                  >
+                    <Trash2 size={16} />
+                  </button>
+                </div>
                 <p className="text-sm text-gray-400">{mainCat}</p>
                 <p className="text-sm text-gray-300">{subCat}</p>
               </div>
@@ -877,6 +969,12 @@ const Dashboard = () => {
         term={selectedTerm?.original}
         translation={selectedTerm?.translation}
         category={selectedTerm?.category}
+      />
+      <ConfirmDeleteModal
+        isOpen={deleteConfig.isOpen}
+        onClose={cancelDelete}
+        onConfirm={confirmDelete}
+        message={`Вы действительно хотите удалить термин "${deleteConfig.termName}"?`}
       />
     </div>
   );

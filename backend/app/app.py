@@ -196,9 +196,13 @@ def get_all_terms():
             # Получаем все термины из базы данных
             terms = session.query(Term).all()
 
-            # Формируем словарь с терминами
+            # Формируем словарь с терминами, включая ID
             terms_dict = {
-                term.term: term.category
+                term.term: {
+                    'id': term.id,
+                    'category': term.category,
+                    'translation': term.translation
+                }
                 for term in terms
             }
 
@@ -206,7 +210,6 @@ def get_all_terms():
                 logger.warning('No terms found in database')
 
             return jsonify(terms_dict)
-
         finally:
             session.close()
 
@@ -1261,36 +1264,58 @@ def complete_reading():
 @app.route('/api/terms/add', methods=['POST'])
 def add_term():
     data = request.json
+    logger.info(f"Received data for new term: {data}")  # Добавляем логирование
+
     term = data.get('term')
     category = data.get('category')
     subcategory = data.get('subcategory')
 
-    if not term or not category or not subcategory:
-        return jsonify({'status': 'error', 'error': 'Все поля обязательны'}), 400
+    # Валидация входных данных
+    if not all([term, category, subcategory]):
+        logger.warning(f"Missing required fields: term={term}, category={category}, subcategory={subcategory}")
+        return jsonify({
+            'status': 'error',
+            'error': 'Все поля обязательны',
+            'received_data': {
+                'term': term,
+                'category': category,
+                'subcategory': subcategory
+            }
+        }), 400
 
     session = Session()
     try:
-        # Проверяем, существует ли термин
+        # Проверяем существование термина
         existing_term = session.query(Term).filter_by(term=term).first()
         if existing_term:
-            return jsonify({'status': 'error', 'error': 'Термин уже существует'}), 400
+            logger.warning(f"Term already exists: {term}")
+            return jsonify({
+                'status': 'error',
+                'error': 'Термин уже существует'
+            }), 400
 
-        # Проверяем, существует ли категория; если нет, создаем
-        if category not in session.query(Category.name).all():
-            new_category = Category(name=category)
-            session.add(new_category)
-            session.flush()  # Получение ID новой категории
-
-        # Получаем категорию
+        # Проверяем/создаем категорию
         category_obj = session.query(Category).filter_by(name=category).first()
+        if not category_obj:
+            logger.info(f"Creating new category: {category}")
+            category_obj = Category(name=category)
+            session.add(category_obj)
+            session.flush()
 
-        # Проверяем, существует ли подкатегория в этой категории; если нет, создаем
-        existing_subcategory = session.query(Subcategory).filter_by(
-            name=subcategory, category_id=category_obj.id
-        ).first()
-        if not existing_subcategory:
-            new_subcategory = Subcategory(name=subcategory, category_id=category_obj.id)
-            session.add(new_subcategory)
+        # Проверяем/создаем подкатегорию
+        subcategory_obj = (
+            session.query(Subcategory)
+            .filter_by(name=subcategory, category_id=category_obj.id)
+            .first()
+        )
+        if not subcategory_obj:
+            logger.info(f"Creating new subcategory: {subcategory} for category {category}")
+            subcategory_obj = Subcategory(
+                name=subcategory,
+                category_id=category_obj.id
+            )
+            session.add(subcategory_obj)
+            session.flush()
 
         # Формируем строку категории
         category_str = f"{category} -> {subcategory}"
@@ -1298,7 +1323,7 @@ def add_term():
         # Создаем новый термин
         new_term = Term(
             term=term,
-            translation="",  # Можно оставить пустым или задать по умолчанию
+            translation="",  # Пустой перевод по умолчанию
             category=category_str,
             term_metadata={
                 'source': 'manual_add',
@@ -1308,7 +1333,7 @@ def add_term():
         session.add(new_term)
         session.flush()
 
-        # Добавляем в UnknownTerm по умолчанию
+        # Добавляем в UnknownTerm
         new_unknown = UnknownTerm(
             term_id=new_term.id,
             attempts=0,
@@ -1317,11 +1342,95 @@ def add_term():
         session.add(new_unknown)
 
         session.commit()
-        return jsonify({'status': 'success'}), 201
+        logger.info(f"Successfully added new term: {term}")
+        return jsonify({
+            'status': 'success',
+            'term_id': new_term.id
+        }), 201
 
     except Exception as e:
         session.rollback()
-        return jsonify({'status': 'error', 'error': 'Ошибка сервера'}), 500
+        logger.error(f"Error adding term: {str(e)}")
+        return jsonify({
+            'status': 'error',
+            'error': f'Ошибка сервера: {str(e)}'
+        }), 500
+    finally:
+        session.close()
+
+@app.route('/api/unknown-words/<int:id>', methods=['DELETE'])
+def delete_unknown_word(id):
+    session = Session()
+    try:
+        # Ищем запись в UnknownTerm по term_id, а не по id
+        unknown_term = session.query(UnknownTerm).filter_by(term_id=id).first()
+        if not unknown_term:
+            return jsonify({"status": "error", "message": "Unknown word not found"}), 404
+
+        session.delete(unknown_term)
+        session.commit()
+        return jsonify({"status": "success", "message": "Unknown word deleted"}), 200
+    except Exception as e:
+        session.rollback()
+        logger.error(f"Error deleting unknown word: {e}")
+        return jsonify({"status": "error", "message": "Failed to delete unknown word"}), 500
+    finally:
+        session.close()
+
+@app.route('/api/terms/<int:id>', methods=['DELETE'])
+def delete_term(id):
+    session = Session()
+    try:
+        # Находим термин только по ID
+        term = session.query(Term).filter_by(id=id).first()
+        if not term:
+            return jsonify({"status": "error", "message": "Term not found"}), 404
+
+        logger.info(f"Deleting term: {term.term} (ID: {term.id})")
+
+        try:
+            # Удаляем связанные записи из UnknownTerm
+            unknown_terms = session.query(UnknownTerm).filter_by(term_id=term.id).all()
+            for ut in unknown_terms:
+                session.delete(ut)
+                logger.info(f"Deleted unknown term record for term_id: {term.id}")
+
+            # Удаляем связанные записи из StudySession
+            study_sessions = session.query(StudySession).filter_by(term_id=term.id).all()
+            for ss in study_sessions:
+                session.delete(ss)
+                logger.info(f"Deleted study session record for term_id: {term.id}")
+
+            # Удаляем связанные записи из LearningHistory
+            learning_history = session.query(LearningHistory).filter_by(term_id=term.id).all()
+            for lh in learning_history:
+                session.delete(lh)
+                logger.info(f"Deleted learning history record for term_id: {term.id}")
+
+            # Удаляем сам термин
+            session.delete(term)
+            session.commit()
+            logger.info(f"Successfully deleted term and all related records")
+
+            return jsonify({
+                "status": "success",
+                "message": "Term and all related records deleted successfully"
+            }), 200
+
+        except Exception as e:
+            logger.error(f"Error while deleting term and related records: {e}")
+            session.rollback()
+            return jsonify({
+                "status": "error",
+                "message": f"Failed to delete term: {str(e)}"
+            }), 500
+
+    except Exception as e:
+        logger.error(f"Error in delete_term: {e}")
+        return jsonify({
+            "status": "error",
+            "message": f"Server error: {str(e)}"
+        }), 500
     finally:
         session.close()
 

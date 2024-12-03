@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import axios from "axios";
+import ErrorModal from "./ErrorModal";
 
 const AddTermModal = ({ isOpen, onClose, onTermAdded }) => {
   const [term, setTerm] = useState("");
@@ -10,6 +11,7 @@ const AddTermModal = ({ isOpen, onClose, onTermAdded }) => {
   const [categorySuggestions, setCategorySuggestions] = useState([]);
   const [subcategorySuggestions, setSubcategorySuggestions] = useState([]);
   const [allCategories, setAllCategories] = useState({});
+  const [error, setError] = useState({ show: false, message: "" });
 
   useEffect(() => {
     // Получаем все категории при открытии модала
@@ -53,7 +55,10 @@ const AddTermModal = ({ isOpen, onClose, onTermAdded }) => {
 
     // Валидация
     if (!term.trim() || !category.trim() || !subcategory.trim()) {
-      alert("Все поля должны быть заполнены.");
+      setError({
+        show: true,
+        message: "Все поля должны быть заполнены",
+      });
       return;
     }
 
@@ -71,13 +76,21 @@ const AddTermModal = ({ isOpen, onClose, onTermAdded }) => {
         setTerm("");
         setCategory("");
         setSubcategory("");
-      } else {
-        alert(`Ошибка: ${response.data.error}`);
       }
     } catch (error) {
       console.error("Error adding term:", error);
-      alert("Произошла ошибка при добавлении термина.");
+      const errorMessage =
+        error.response?.data?.error ||
+        "Произошла ошибка при добавлении термина";
+      setError({
+        show: true,
+        message: errorMessage,
+      });
     }
+  };
+
+  const closeErrorModal = () => {
+    setError({ show: false, message: "" });
   };
 
   if (!isOpen) return null;
@@ -152,6 +165,12 @@ const AddTermModal = ({ isOpen, onClose, onTermAdded }) => {
           </button>
         </form>
       </div>
+      {/* Добавляем модальное окно ошибки */}
+      <ErrorModal
+        isOpen={error.show}
+        onClose={closeErrorModal}
+        message={error.message}
+      />
     </div>
   );
 };

@@ -36,26 +36,38 @@ class Term(Base, TimestampMixin):
     examples = Column(JSON)
     related_terms = Column(JSON)
     term_metadata = Column(JSON)
-    is_favorite = Column(Boolean, default=False)  # Убедитесь, что это поле определено только один раз
+    is_favorite = Column(Boolean, default=False)
     pronunciation_url = Column(String)
     study_progress = Column(Integer, default=0)
     last_reviewed = Column(DateTime)
     review_count = Column(Integer, default=0)
+
+    # Определяем отношения с уникальными именами
+    unknown_terms = relationship("UnknownTerm",
+                               cascade="all, delete-orphan",
+                               back_populates="related_term")
+    study_sessions = relationship("StudySession",
+                                cascade="all, delete-orphan",
+                                back_populates="related_term")
+    learning_history = relationship("LearningHistory",
+                                  cascade="all, delete-orphan",
+                                  back_populates="related_term")
+    known_terms = relationship("KnownTerm",
+                             cascade="all, delete-orphan",
+                             back_populates="related_term")
 
 class StudySession(Base, TimestampMixin):
     __tablename__ = 'study_sessions'
 
     id = Column(Integer, primary_key=True)
     term_id = Column(Integer, ForeignKey('terms.id'))
-    success_rate = Column(Integer)  # 0-100%
-    time_spent = Column(Integer)    # в секундах
-    session_type = Column(String)   # тип упражнения
-    session_metadata = Column(JSON)  # дополнительные данные
+    success_rate = Column(Integer)
+    time_spent = Column(Integer)
+    session_type = Column(String)
+    session_metadata = Column(JSON)
 
-    # Связи
-    term = relationship('Term', backref='study_sessions')
+    related_term = relationship('Term', back_populates='study_sessions')
 
-    # Вычисляемые поля
     @property
     def is_successful(self):
         return self.success_rate >= 80
@@ -68,41 +80,35 @@ class StudySession(Base, TimestampMixin):
             return 'medium'
         return 'hard'
 
-
 class KnownTerm(Base, TimestampMixin):
-    """Модель для известных терминов"""
-
     __tablename__ = 'known_terms'
 
     id = Column(Integer, primary_key=True)
     term_id = Column(Integer, ForeignKey('terms.id'))
     learned_at = Column(DateTime, default=datetime.now)
-    confidence_level = Column(Integer, default=0)  # Уровень уверенности в знании
-    term_info = relationship('Term')
+    confidence_level = Column(Integer, default=0)
 
+    related_term = relationship('Term', back_populates='known_terms')
 
 class UnknownTerm(Base, TimestampMixin):
-    """Модель для неизвестных терминов"""
-
     __tablename__ = 'unknown_terms'
 
     id = Column(Integer, primary_key=True)
     term_id = Column(Integer, ForeignKey('terms.id'))
-    attempts = Column(Integer, default=0)  # Количество попыток изучения
+    attempts = Column(Integer, default=0)
     last_attempt = Column(DateTime)
-    term_info = relationship('Term')
 
-
+    related_term = relationship('Term', back_populates='unknown_terms')
 
 class LearningHistory(Base, TimestampMixin):
-    """История изучения терминов"""
-
     __tablename__ = 'learning_history'
 
     id = Column(Integer, primary_key=True)
     term_id = Column(Integer, ForeignKey('terms.id'))
-    action = Column(String)  # 'learn', 'review', 'forget'
-    history_metadata = Column(JSON)  # Переименовано с metadata на history_metadata
+    action = Column(String)
+    history_metadata = Column(JSON)
+
+    related_term = relationship('Term', back_populates='learning_history')
 
 
 class Category(Base):
