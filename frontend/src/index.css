@@ -773,3 +773,143 @@ body {
 .light select:hover {
     border-color: var(--color-primary);
 }
+
+.mobile-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: var(--color-card);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    backdrop-filter: blur(10px);
+}
+
+/* Мобильная навигация */
+@media screen and (max-width: 768px) {
+    .mobile-nav .nav-link {
+        border-bottom: none;
+        opacity: 0.7;
+        padding: 0.5rem;
+    }
+
+    .mobile-nav .nav-link.active {
+        opacity: 1;
+        color: var(--color-primary);
+    }
+
+    .mobile-nav .nav-link.active::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: var(--color-primary);
+    }
+
+    /* Добавьте отступ для контента, чтобы он не перекрывался навигацией */
+    .main-content {
+        padding-bottom: calc(4rem + env(safe-area-inset-bottom));
+    }
+
+    /* Карточки */
+    .term-card {
+        padding: 1rem;
+        margin: 0.5rem 0;
+    }
+
+    /* Сетка */
+    .grid-view {
+        grid-template-columns: 1fr;
+    }
+
+    /* Формы */
+    input,
+    select {
+        font-size: 16px; /* Предотвращает масштабирование на iOS */
+    }
+
+    /* Кнопки */
+    .action-button {
+        padding: 0.75rem;
+    }
+
+    /* Модальные окна */
+    .modal-content {
+        width: 90%;
+        margin: 1rem;
+        max-height: 80vh;
+    }
+    .settings-group {
+        flex-direction: column;
+    }
+
+    .settings-button {
+        width: 100%;
+    }
+
+    .header-button {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+    }
+
+    .page-subtitle {
+        font-size: 1rem;
+    }
+
+    /* Адаптация модальных окон */
+    .modal-content {
+        margin: 1rem;
+        padding: 1rem;
+        max-height: 85vh;
+    }
+
+    /* Адаптация карточек слов */
+    .term-card {
+        flex-direction: column;
+    }
+
+    .term-card .term {
+        font-size: 1rem;
+    }
+}
+
+/* Улучшенная touch-область для кнопок */
+@media (hover: none) {
+    .button,
+    .nav-link,
+    .action-button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* Адаптивные отступы */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    .card {
+        margin: 0.5rem 0;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-section {
+        padding: 1rem;
+    }
+}

@@ -191,9 +191,9 @@ const WordAssessment = () => {
   }
 
   return (
-    <div className="min-h-screen gradient-background flex flex-col items-center p-8">
+    <div className="min-h-screen gradient-background px-4 py-6 md:p-8">
       <AnimatePresence>{isSaving && <LoadingOverlay />}</AnimatePresence>
-      <div className="max-w-4xl mx-auto px-6 py-8">
+      <div className="max-w-4xl mx-auto">
         {/* Кнопка "На главную" */}
         <Link
           to="/"
@@ -222,7 +222,7 @@ const WordAssessment = () => {
             </div>
           </div>
 
-          <div className="relative h-80">
+          <div className="relative h-64 md:h-80">
             <AnimatePresence initial={false}>
               {words.map((word, index) => (
                 <WordCard

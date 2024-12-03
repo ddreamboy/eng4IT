@@ -13,8 +13,17 @@ const ThemeToggle = () => {
       animate={{ opacity: 1, scale: 1 }}
       whileTap={{ scale: 0.9 }}
       onClick={toggleTheme}
-      className="fixed bottom-6 right-6 p-3 rounded-full bg-dark-card border border-gray-800
-                 shadow-lg hover:border-primary transition-colors z-50"
+      className="fixed
+                sm:bottom-6 sm:right-6 sm:top-auto
+                top-4 right-4
+                p-2 sm:p-3
+                rounded-full
+                bg-dark-card
+                border border-gray-800
+                shadow-lg
+                hover:border-primary
+                transition-colors
+                z-50"
     >
       <motion.div
         initial={false}
@@ -22,9 +31,9 @@ const ThemeToggle = () => {
         transition={{ duration: 0.3 }}
       >
         {theme === "dark" ? (
-          <Sun className="w-6 h-6 text-primary" />
+          <Sun className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
         ) : (
-          <Moon className="w-6 h-6 text-primary" />
+          <Moon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
         )}
       </motion.div>
     </motion.button>

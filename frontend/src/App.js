@@ -1,5 +1,5 @@
 // eng4IT/frontend/src/App.js
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import ThemeToggle from "./components/ThemeToggle";
@@ -10,6 +10,18 @@ import ChatExercise from "./components/ChatExercise";
 import MatchingExercise from "./components/MatchingExercise";
 
 const App = () => {
+  useEffect(() => {
+    const meta = document.createElement("meta");
+    meta.name = "viewport";
+    meta.content =
+      "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no";
+    document.head.appendChild(meta);
+
+    return () => {
+      document.head.removeChild(meta);
+    };
+  }, []);
+
   return (
     <ThemeProvider>
       <Router>

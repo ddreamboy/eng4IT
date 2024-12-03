@@ -1,5 +1,9 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 import {
+  LayoutGrid, // для Заданий
+  Book, // для Незнакомых слов
+  Database, // для Базы терминов
+  Settings, // для Настроек
   Clock,
   SortAsc,
   Eye,
@@ -458,14 +462,6 @@ const Dashboard = () => {
         </div>
 
         <div className="flex gap-2">
-          {/* Переключатель режима отображения */}
-          <button
-            onClick={() => setViewMode(viewMode === "list" ? "grid" : "list")}
-            className="header-button"
-          >
-            <Layout size={16} />
-          </button>
-
           {/* Фильтры сортировки */}
           <button
             onClick={() => setSortType("newest")}
@@ -497,56 +493,87 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="flex gap-4 mb-6">
+      <div className="flex flex-col gap-4 mb-6">
+        {/* Поиск */}
         <input
           type="text"
           placeholder="Поиск терминов..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="flex-1 bg-dark-card border border-gray-800 rounded-xl px-4 py-2 text-gray-200 focus:border-primary focus:outline-none"
+          className={`w-full border rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50 ${
+            theme === "light"
+              ? "bg-white border-gray-300 text-gray-900 placeholder-gray-500"
+              : "bg-dark-card border-gray-800 text-gray-200 placeholder-gray-500"
+          }`}
         />
 
-        {/* Основной Dropdown для Категорий */}
-        <select
-          value={filters.mainCategoryFilter}
-          onChange={(e) => {
-            setFilters((f) => ({
-              ...f,
-              mainCategoryFilter: e.target.value,
-              subCategoryFilter: "all",
-            }));
-          }}
-          className="bg-dark-card border border-gray-800 rounded-xl px-4 py-2 text-gray-200"
-        >
-          <option value="all">Все категории</option>
-          {mainCategories.map((mainCat, index) => (
-            <option key={index} value={mainCat}>
-              {mainCat}
-            </option>
-          ))}
-        </select>
-
-        {/* Второй Dropdown для Подкатегорий */}
-        {filters.mainCategoryFilter !== "all" && (
+        {/* Фильтры в скроллящемся контейнере */}
+        <div className="flex gap-2 overflow-x-auto pb-2">
           <select
-            value={filters.subCategoryFilter}
-            onChange={(e) =>
-              setFilters((f) => ({ ...f, subCategoryFilter: e.target.value }))
-            }
-            className="bg-dark-card border border-gray-800 rounded-xl px-4 py-2 text-gray-200"
+            value={filters.mainCategoryFilter}
+            onChange={(e) => {
+              setFilters((f) => ({
+                ...f,
+                mainCategoryFilter: e.target.value,
+                subCategoryFilter: "all",
+              }));
+            }}
+            className={`min-w-[200px] border rounded-xl px-4 py-2 ${
+              theme === "light"
+                ? "bg-white border-gray-300 text-gray-900"
+                : "bg-dark-card border-gray-800 text-gray-200"
+            }`}
           >
-            <option value="all">Все подкатегории</option>
-            {categories[filters.mainCategoryFilter].map((subCat, idx) => (
-              <option key={idx} value={subCat}>
-                {subCat}
+            <option value="all">Все категории</option>
+            {mainCategories.map((mainCat, index) => (
+              <option
+                key={index}
+                value={mainCat}
+                className={
+                  theme === "light" ? "text-gray-900" : "text-gray-200"
+                }
+              >
+                {mainCat}
               </option>
             ))}
           </select>
+        </div>
+
+        {/* Подкатегории отдельным блоком на мобильных */}
+        {filters.mainCategoryFilter !== "all" && (
+          <div className="w-full">
+            <select
+              value={filters.subCategoryFilter}
+              onChange={(e) =>
+                setFilters((f) => ({ ...f, subCategoryFilter: e.target.value }))
+              }
+              className={`w-full border rounded-xl px-4 py-2 ${
+                theme === "light"
+                  ? "bg-white border-gray-300 text-gray-900"
+                  : "bg-dark-card border-gray-800 text-gray-200"
+              }`}
+            >
+              <option value="all">Все подкатегории</option>
+              {categories[filters.mainCategoryFilter].map((subCat, idx) => (
+                <option
+                  key={idx}
+                  value={subCat}
+                  className={
+                    theme === "light" ? "text-gray-900" : "text-gray-200"
+                  }
+                >
+                  {subCat}
+                </option>
+              ))}
+            </select>
+          </div>
         )}
       </div>
 
       <div
-        className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ${viewMode === "grid" ? "md:grid-cols-3" : "md:grid-cols-1"}`}
+        className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ${
+          viewMode === "grid" ? "md:grid-cols-3" : "grid-cols-1"
+        }`}
       >
         <AnimatePresence>
           {sortedWords.map((word) => (
@@ -688,71 +715,80 @@ const Dashboard = () => {
         </button>
       </div>
 
-      <div className="flex gap-4 mb-6">
+      <div className="flex flex-col gap-4 mb-6">
+        {/* Поиск */}
         <input
           type="text"
           placeholder="Поиск терминов..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className={`flex-1 border rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50 ${
+          className={`w-full border rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50 ${
             theme === "light"
               ? "bg-white border-gray-300 text-gray-900 placeholder-gray-500"
               : "bg-dark-card border-gray-800 text-gray-200 placeholder-gray-500"
           }`}
         />
-        {/* Dropdown для Категорий */}
-        <select
-          value={filters.mainCategoryFilter}
-          onChange={(e) => {
-            setFilters((f) => ({
-              ...f,
-              mainCategoryFilter: e.target.value,
-              subCategoryFilter: "all",
-            }));
-          }}
-          className={`border rounded-xl px-4 py-2 ${
-            theme === "light"
-              ? "bg-white border-gray-300 text-gray-900"
-              : "bg-dark-card border-gray-800 text-gray-200"
-          }`}
-        >
-          <option value="all">Все категории</option>
-          {mainCategories.map((mainCat, index) => (
-            <option
-              key={index}
-              value={mainCat}
-              className={theme === "light" ? "text-gray-900" : "text-gray-200"}
-            >
-              {mainCat}
-            </option>
-          ))}
-        </select>
-        {/* Dropdown для Подкатегорий */}
-        {filters.mainCategoryFilter !== "all" && (
+
+        {/* Фильтры в скроллящемся контейнере */}
+        <div className="flex gap-2 overflow-x-auto pb-2">
           <select
-            value={filters.subCategoryFilter}
-            onChange={(e) =>
-              setFilters((f) => ({ ...f, subCategoryFilter: e.target.value }))
-            }
-            className={`border rounded-xl px-4 py-2 ${
+            value={filters.mainCategoryFilter}
+            onChange={(e) => {
+              setFilters((f) => ({
+                ...f,
+                mainCategoryFilter: e.target.value,
+                subCategoryFilter: "all",
+              }));
+            }}
+            className={`min-w-[200px] border rounded-xl px-4 py-2 ${
               theme === "light"
                 ? "bg-white border-gray-300 text-gray-900"
                 : "bg-dark-card border-gray-800 text-gray-200"
             }`}
           >
-            <option value="all">Все подкатегории</option>
-            {categories[filters.mainCategoryFilter].map((subCat, idx) => (
+            <option value="all">Все категории</option>
+            {mainCategories.map((mainCat, index) => (
               <option
-                key={idx}
-                value={subCat}
+                key={index}
+                value={mainCat}
                 className={
                   theme === "light" ? "text-gray-900" : "text-gray-200"
                 }
               >
-                {subCat}
+                {mainCat}
               </option>
             ))}
           </select>
+        </div>
+
+        {/* Подкатегории отдельным блоком на мобильных */}
+        {filters.mainCategoryFilter !== "all" && (
+          <div className="w-full">
+            <select
+              value={filters.subCategoryFilter}
+              onChange={(e) =>
+                setFilters((f) => ({ ...f, subCategoryFilter: e.target.value }))
+              }
+              className={`w-full border rounded-xl px-4 py-2 ${
+                theme === "light"
+                  ? "bg-white border-gray-300 text-gray-900"
+                  : "bg-dark-card border-gray-800 text-gray-200"
+              }`}
+            >
+              <option value="all">Все подкатегории</option>
+              {categories[filters.mainCategoryFilter].map((subCat, idx) => (
+                <option
+                  key={idx}
+                  value={subCat}
+                  className={
+                    theme === "light" ? "text-gray-900" : "text-gray-200"
+                  }
+                >
+                  {subCat}
+                </option>
+              ))}
+            </select>
+          </div>
         )}
       </div>
 
@@ -967,34 +1003,50 @@ const Dashboard = () => {
   return (
     <div className="min-h-screen gradient-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="glass-card rounded-2xl shadow-xl p-6">
-          <div className="border-b border-gray-800 mb-6">
-            <nav className="flex space-x-8" aria-label="Tabs">
-              <button
-                onClick={() => setActiveTab("tasks")}
-                className={`${activeTab === "tasks" ? "nav-link active" : "nav-link"} whitespace-nowrap pb-4 px-1 border-b-2 font-medium text-sm`}
-              >
-                Задания
-              </button>
-              <button
-                onClick={() => setActiveTab("unknown-words")}
-                className={`${activeTab === "unknown-words" ? "nav-link active" : "nav-link"} whitespace-nowrap pb-4 px-1 border-b-2 font-medium text-sm`}
-              >
-                Незнакомые слова
-              </button>
-              <button
-                onClick={() => setActiveTab("term-base")}
-                className={`${activeTab === "term-base" ? "nav-link active" : "nav-link"} whitespace-nowrap pb-4 px-1 border-b-2 font-medium text-sm`}
-              >
-                База терминов
-              </button>
-              {/* Удалили кнопку "Статистика" */}
-              <button
-                onClick={() => setActiveTab("settings")}
-                className={`${activeTab === "settings" ? "nav-link active" : "nav-link"} whitespace-nowrap pb-4 px-1 border-b-2 font-medium text-sm`}
-              >
-                Настройки
-              </button>
+        <div className="glass-card rounded-2xl shadow-xl p-6 main-content">
+          <div className="border-b border-gray-800 mb-6 relative">
+            {/* Десктопная навигация */}
+            <nav className="hidden md:flex justify-center border-b border-gray-800">
+              <div className="flex gap-8">
+                <button
+                  onClick={() => setActiveTab("tasks")}
+                  className={`${
+                    activeTab === "tasks" ? "nav-link active" : "nav-link"
+                  } whitespace-nowrap pb-4 px-1 border-b-2 font-medium text-sm flex items-center gap-2`}
+                >
+                  <LayoutGrid size={24} />
+                  <span>Задания</span>
+                </button>
+                <button
+                  onClick={() => setActiveTab("unknown-words")}
+                  className={`${
+                    activeTab === "unknown-words"
+                      ? "nav-link active"
+                      : "nav-link"
+                  } whitespace-nowrap pb-4 px-1 border-b-2 font-medium text-sm flex items-center gap-2`}
+                >
+                  <Book size={24} />
+                  <span>Незнакомые слова</span>
+                </button>
+                <button
+                  onClick={() => setActiveTab("term-base")}
+                  className={`${
+                    activeTab === "term-base" ? "nav-link active" : "nav-link"
+                  } whitespace-nowrap pb-4 px-1 border-b-2 font-medium text-sm flex items-center gap-2`}
+                >
+                  <Database size={24} />
+                  <span>База терминов</span>
+                </button>
+                <button
+                  onClick={() => setActiveTab("settings")}
+                  className={`${
+                    activeTab === "settings" ? "nav-link active" : "nav-link"
+                  } whitespace-nowrap pb-4 px-1 border-b-2 font-medium text-sm flex items-center gap-2`}
+                >
+                  <Settings size={24} />
+                  <span>Настройки</span>
+                </button>
+              </div>
             </nav>
           </div>
 
@@ -1012,6 +1064,47 @@ const Dashboard = () => {
             </>
           )}
         </div>
+        {/* Мобильная навигация */}
+        <nav className="mobile-nav md:hidden">
+          <div className="flex justify-around items-center max-w-lg mx-auto">
+            <button
+              onClick={() => setActiveTab("tasks")}
+              className={`${
+                activeTab === "tasks" ? "nav-link active" : "nav-link"
+              } flex flex-col items-center py-2 px-4`}
+            >
+              <LayoutGrid size={24} />
+              <span className="text-xs mt-1">Задания</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("unknown-words")}
+              className={`${
+                activeTab === "unknown-words" ? "nav-link active" : "nav-link"
+              } flex flex-col items-center py-2 px-4`}
+            >
+              <Book size={24} />
+              <span className="text-xs mt-1">Слова</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("term-base")}
+              className={`${
+                activeTab === "term-base" ? "nav-link active" : "nav-link"
+              } flex flex-col items-center py-2 px-4`}
+            >
+              <Database size={24} />
+              <span className="text-xs mt-1">База</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("settings")}
+              className={`${
+                activeTab === "settings" ? "nav-link active" : "nav-link"
+              } flex flex-col items-center py-2 px-4`}
+            >
+              <Settings size={24} />
+              <span className="text-xs mt-1">Настройки</span>
+            </button>
+          </div>
+        </nav>
       </div>
 
       {/* Модальное окно для добавления термина */}

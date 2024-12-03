@@ -96,74 +96,76 @@ const AddTermModal = ({ isOpen, onClose, onTermAdded }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-dark-card p-6 rounded-xl w-full max-w-md relative">
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-white"
-        >
-          <X size={20} />
-        </button>
-        <h2 className="text-lg font-semibold mb-4 text-primary">
-          Добавить термин
-        </h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Поле Термин */}
-          <div>
-            <label className="block text-primary mb-1">Термин</label>
-            <input
-              type="text"
-              value={term}
-              onChange={(e) => setTerm(e.target.value)}
-              required
-              className="w-full bg-dark border border-gray-700 text-text px-4 py-2 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary"
-            />
-          </div>
-
-          {/* Поле Категория */}
-          <div>
-            <label className="block text-primary mb-1">Категория</label>
-            <input
-              type="text"
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-              required
-              list="category-list"
-              className="w-full bg-dark border border-gray-700 text-text px-4 py-2 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary"
-            />
-            <datalist id="category-list">
-              {categorySuggestions.map((cat, idx) => (
-                <option key={idx} value={cat} />
-              ))}
-            </datalist>
-          </div>
-
-          {/* Поле Подкатегория */}
-          <div>
-            <label className="block text-primary mb-1">Подкатегория</label>
-            <input
-              type="text"
-              value={subcategory}
-              onChange={(e) => setSubcategory(e.target.value)}
-              required
-              list="subcategory-list"
-              className="w-full bg-dark border border-gray-700 text-text px-4 py-2 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary"
-              disabled={!category}
-            />
-            <datalist id="subcategory-list">
-              {subcategorySuggestions.map((sub, idx) => (
-                <option key={idx} value={sub} />
-              ))}
-            </datalist>
-          </div>
-
+    <div className="fixed inset-0 z-50 overflow-y-auto px-4">
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="bg-dark-card p-4 md:p-6 rounded-xl w-full max-w-md relative">
           <button
-            type="submit"
-            className="w-full px-4 py-2 bg-primary hover:bg-primary-hover text-white rounded-lg"
+            onClick={onClose}
+            className="absolute top-4 right-4 text-gray-400 hover:text-white"
           >
-            Сохранить
+            <X size={20} />
           </button>
-        </form>
+          <h2 className="text-lg font-semibold mb-4 text-primary">
+            Добавить термин
+          </h2>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Поле Термин */}
+            <div>
+              <label className="block text-primary mb-1">Термин</label>
+              <input
+                type="text"
+                value={term}
+                onChange={(e) => setTerm(e.target.value)}
+                required
+                className="w-full bg-dark border border-gray-700 text-text px-4 py-2 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary"
+              />
+            </div>
+
+            {/* Поле Категория */}
+            <div>
+              <label className="block text-primary mb-1">Категория</label>
+              <input
+                type="text"
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
+                required
+                list="category-list"
+                className="w-full bg-dark border border-gray-700 text-text px-4 py-2 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary"
+              />
+              <datalist id="category-list">
+                {categorySuggestions.map((cat, idx) => (
+                  <option key={idx} value={cat} />
+                ))}
+              </datalist>
+            </div>
+
+            {/* Поле Подкатегория */}
+            <div>
+              <label className="block text-primary mb-1">Подкатегория</label>
+              <input
+                type="text"
+                value={subcategory}
+                onChange={(e) => setSubcategory(e.target.value)}
+                required
+                list="subcategory-list"
+                className="w-full bg-dark border border-gray-700 text-text px-4 py-2 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary"
+                disabled={!category}
+              />
+              <datalist id="subcategory-list">
+                {subcategorySuggestions.map((sub, idx) => (
+                  <option key={idx} value={sub} />
+                ))}
+              </datalist>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full px-4 py-2 bg-primary hover:bg-primary-hover text-white rounded-lg"
+            >
+              Сохранить
+            </button>
+          </form>
+        </div>
       </div>
       {/* Добавляем модальное окно ошибки */}
       <ErrorModal
