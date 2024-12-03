@@ -1,7 +1,7 @@
 // eng4IT/frontend/src/components/WordList.js
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Volume2, Star } from "lucide-react";
+import { Volume2, Star, Trash2 } from "lucide-react";
 
 const WordList = ({
   id,
@@ -14,6 +14,7 @@ const WordList = ({
   isFavorite,
   onClick,
   onFavoriteToggle,
+  onDelete,
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [error, setError] = useState(null);
@@ -106,6 +107,18 @@ const WordList = ({
               } hover:text-yellow-500 transition-colors`}
             >
               <Star size={18} fill={isFavorite ? "currentColor" : "none"} />
+            </motion.button>
+            {/* Кнопка удаления */}
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={(e) => {
+                e.stopPropagation();
+                onDelete(id);
+              }}
+              className="text-gray-400 hover:text-red-500 transition-colors ml-2"
+            >
+              <Trash2 size={18} />
             </motion.button>
           </div>
           <p className="translation text-gray-300">{translation}</p>
