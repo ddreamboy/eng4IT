@@ -121,7 +121,7 @@ class GeminiService:
         """Categorize words using Gemini."""
         try:
             response = self.get_model(
-                'gemini-1.5-pro'
+                'gemini-1.5-flash'
             ).generate_content(
                 prompt,
                 generation_config={
@@ -149,7 +149,7 @@ class GeminiService:
 
             VERY IMPORTANT:
             1. Preserve spaces in compound terms (e.g., "lazy loading" should remain "lazy loading", not "lazyloading")
-            2. When providing words array, keep compound terms as separate elements (e.g., ["lazy", "loading"] not ["lazyloading"])
+            2. When providing words array, keep compound terms as separate elements (e.g., ["lazy loading"] not ["lazyloading"])
             3. The correctAnswer must exactly match the message text
             4. All compound terms must keep their spaces in all places they appear
 
@@ -180,7 +180,7 @@ class GeminiService:
             - Split compound terms into separate words in the words array
             - Ensure exact match between correctAnswer and message text
             - Professional or Semi-Proffesional context
-            - 2-3 dialogue steps, short messages about 1 sentence
+            - 2-3 dialogue steps, short messages about 1 sentence without ';' or ':'. Simple, like B1 level.
             """
 
             # Установим более низкую температуру для более предсказуемых результатов

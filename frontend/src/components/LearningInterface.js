@@ -37,7 +37,7 @@ const TranslationPopup = ({ text, position }) => {
       className={`fixed z-50 px-3 py-1 text-sm rounded shadow-lg pointer-events-none transform -translate-x-1/2 border ${
         theme === "light"
           ? "bg-white border-gray-200 text-gray-800"
-          : "bg-dark-card border-gray-700 text-gray-800"
+          : "bg-dark-card border-gray-700 text-gray-200" // Changed text-gray-800 to text-gray-200
       }`}
       style={{
         left: position.x,
@@ -342,46 +342,81 @@ const LearningInterface = () => {
 
     setIsSaving(true);
     try {
-      // 1. Получаем категоризацию для слов
+      // 1. Сначала категоризируем слова
       const categorizationResponse = await axios.post(
         `${API_URL}/categorize-words`,
         { words: selectedWords },
       );
 
-      // 2. Проверяем ответ и обрабатываем категоризированные слова
       if (
         categorizationResponse.data &&
         Array.isArray(categorizationResponse.data.words)
       ) {
         const categorizedWords = categorizationResponse.data.words;
 
-        // 3. Сохраняем слова с присвоенными категориями
+        // 2. Сохраняем категоризированные слова
         await axios.post(`${API_URL}/save_words`, {
           words: categorizedWords.map((word) => ({
-            original: word.original || word.term,
+            original: word.original,
             translation: word.translation,
-            category: word.category, // Теперь каждое слово имеет свою категорию
+            category: word.category || "Programming -> General", // Добавляем дефолтную категорию
           })),
         });
-      } else {
-        throw new Error("Invalid categorization response format");
-      }
 
-      // 4. Перенаправляем на дашборд
-      navigate("/?tab=unknown-words");
+        // 3. После успешного сохранения перенаправляем на дашборд
+        navigate("/?tab=unknown-words");
+      }
     } catch (error) {
       console.error("Error handling next:", error);
-      // Добавьте обработку ошибок для пользователя
+      // Добавьте уведомление для пользователя об ошибке
+      // Например, используя toast или alert
+      alert(
+        "Произошла ошибка при сохранении слов. Пожалуйста, попробуйте снова.",
+      );
     } finally {
       setIsSaving(false);
     }
   };
 
+  const handleTouchStart = useCallback(
+    (e) => {
+      if (!e.target.classList.contains("word-span")) return;
+      setIsSelecting(true);
+      startWordRef.current = e.target;
+
+      currentSelection.forEach((span) => span.classList.remove("selected"));
+      setCurrentSelection([]);
+
+      selectWordsBetween(e.target, e.target);
+    },
+    [selectWordsBetween, currentSelection],
+  );
+
+  const handleTouchMove = useCallback(
+    (e) => {
+      if (!isSelecting) return;
+
+      const touch = e.touches[0];
+      const element = document.elementFromPoint(touch.clientX, touch.clientY);
+
+      if (element && element.classList.contains("word-span")) {
+        selectWordsBetween(startWordRef.current, element);
+      }
+    },
+    [isSelecting, selectWordsBetween],
+  );
+
+  const handleTouchEnd = useCallback(async () => {
+    if (!isSelecting) return;
+
+    await addToSelectedWords();
+    setIsSelecting(false);
+    startWordRef.current = null;
+  }, [isSelecting, addToSelectedWords]);
+
   return (
-    <div className="min-h-screen gradient-background py-8">
-      <AnimatePresence>
-        {(isLoading || isSaving) && <LoadingOverlay />}
-      </AnimatePresence>
+    <div className="in-h-screen gradient-background py-8 overflow-x-hidden">
+      <AnimatePresence>{isLoading && <LoadingOverlay />}</AnimatePresence>
 
       <TranslationPopup {...translationPopup} />
       <div className="max-w-4xl mx-auto px-4 md:px-6">
@@ -403,7 +438,7 @@ const LearningInterface = () => {
           <div className="flex items-center gap-4">
             {/* Чекбокс перевода */}
             <div
-              className={`flex items-center gap-3 px-4 py-2 rounded-xl border ${
+              className={`hidden md:flex items-center gap-3 px-4 py-2 rounded-xl border ${
                 theme === "light"
                   ? "bg-white border-gray-200 text-gray-700"
                   : "bg-dark-card border-gray-800 text-gray-300"
@@ -488,6 +523,9 @@ const LearningInterface = () => {
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
             onMouseLeave={() => {
               if (isSelecting) {
                 setIsSelecting(false);
