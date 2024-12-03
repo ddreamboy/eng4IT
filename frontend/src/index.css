@@ -37,20 +37,29 @@ body {
     margin: -2px 0;
     border-radius: 4px;
     position: relative;
+    border: 2px solid transparent;
 }
 
-.word-span:hover {
-    background-color: rgba(197, 165, 114, 0.2);
-    color: var(--color-primary);
+/* Стили для наведения в светлой теме */
+.light .word-span:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: inherit;
+}
+
+/* Стили для наведения в темной теме */
+.dark .word-span:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: inherit;
 }
 
 .word-span.selected {
-    background-color: var(--color-primary);
-    color: var(--color-background);
+    border-color: var(--color-primary);
+    color: inherit; /* Сохраняем цвет текста */
 }
 
+/* Убираем желтую подсветку при наведении */
 .word-span:hover:not(.selected) {
-    color: var(--color-primary);
+    color: inherit;
 }
 
 /* Обновленные стили для всплывающего перевода */
@@ -615,6 +624,7 @@ body {
 :root {
     --color-primary: #4ade80;
     --color-primary-hover: #22c55e;
+    --color-primary-dark: #16a34a;
     --color-background: #f3f4f6;
     --color-card: #ffffff;
     --color-text: #1f2937;
@@ -629,6 +639,16 @@ body {
     --color-card: #1e1e1e;
     --color-text: #e0e0e0;
     --color-text-secondary: #a0a0a0;
+}
+
+.light {
+    --color-primary: #4ade80;
+    --color-primary-hover: #22c55e;
+    --color-primary-dark: #16a34a;
+    --color-background: #f3f4f6;
+    --color-card: #ffffff;
+    --color-text: #1f2937;
+    --color-text-secondary: #6b7280;
 }
 
 /* Общие классы с использованием переменных */
@@ -659,7 +679,7 @@ body {
 
 .light .term-card:hover {
     border-color: var(--color-primary);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #f8fafc;
 }
 
 /* Адаптированные стили для компонентов в светлой теме */
@@ -698,4 +718,58 @@ body {
         background-color 0.3s ease-in-out,
         color 0.3s ease-in-out,
         border-color 0.3s ease-in-out;
+}
+
+/* Адаптированные стили для текста в светлой теме */
+.light .text-primary {
+    color: var(--color-primary-dark);
+}
+
+.light .text-secondary {
+    color: var(--color-text-secondary);
+}
+
+.light input[type="text"],
+.light input[type="search"],
+.light select {
+    background-color: #ffffff;
+    color: #1f2937;
+    border-color: #e5e7eb;
+}
+
+.light input[type="text"]::placeholder,
+.light input[type="search"]::placeholder {
+    color: #9ca3af;
+}
+
+.light input[type="text"]:focus,
+.light input[type="search"]:focus,
+.light select:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(74, 222, 128, 0.2);
+}
+
+/* Стили для выпадающих списков в светлой теме */
+.light select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Стили для опций выпадающего списка в светлой теме */
+.light select option {
+    background-color: #ffffff;
+    color: #1f2937;
+}
+
+/* Стили при наведении для полей в светлой теме */
+.light input[type="text"]:hover,
+.light input[type="search"]:hover,
+.light select:hover {
+    border-color: var(--color-primary);
 }

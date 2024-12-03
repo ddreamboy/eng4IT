@@ -5,6 +5,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import axios from "axios";
 import { UsedTermsSection, TranslationToggle } from "./SharedComponents";
+import { ArrowLeft } from "lucide-react";
+import { useTheme } from "../contexts/ThemeContext";
 
 const API_URL = "http://localhost:5000/api";
 
@@ -26,11 +28,17 @@ const LoadingOverlay = () => (
 );
 
 const TranslationPopup = ({ text, position }) => {
+  const { theme } = useTheme();
+
   if (!position) return null;
 
   return (
     <div
-      className="fixed z-50 px-3 py-1 text-sm bg-dark-card rounded shadow-lg pointer-events-none transform -translate-x-1/2 text-gray-200 border border-gray-700"
+      className={`fixed z-50 px-3 py-1 text-sm rounded shadow-lg pointer-events-none transform -translate-x-1/2 border ${
+        theme === "light"
+          ? "bg-white border-gray-200 text-gray-800"
+          : "bg-dark-card border-gray-700 text-gray-800"
+      }`}
       style={{
         left: position.x,
         top: position.y + 20,
@@ -59,6 +67,7 @@ const LearningInterface = () => {
     return saved !== null ? JSON.parse(saved) : true;
   });
   const [isSaving, setIsSaving] = useState(false);
+  const { theme } = useTheme();
 
   // Кэш переводов для оптимизации
   const [translationsCache] = useState(new Map());
@@ -369,48 +378,84 @@ const LearningInterface = () => {
   };
 
   return (
-    <div className="min-h-screen gradient-background relative">
+    <div className="min-h-screen gradient-background py-8">
       <AnimatePresence>
         {(isLoading || isSaving) && <LoadingOverlay />}
       </AnimatePresence>
 
-      <TranslationToggle
-        enabled={translationEnabled}
-        onChange={setTranslationEnabled}
-      />
-
       <TranslationPopup {...translationPopup} />
-      {/* Добавляем навигацию */}
-      <nav className="bg-dark-card/80 backdrop-blur-sm border-b border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
-            <div className="flex">
-              <Link
-                to="/"
-                className="flex items-center px-4 text-gray-400 hover:text-primary transition-colors"
-              >
-                На главную
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <div className="max-w-4xl mx-auto px-6">
+        {/* Кнопка "На главную" в стиле других компонентов */}
+        <Link
+          to="/"
+          className="inline-flex items-center text-gray-400 hover:text-primary mb-8"
+        >
+          <ArrowLeft className="mr-2" size={20} />
+          на главную
+        </Link>
 
-      <div className="max-w-5xl mx-auto p-8">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold bg-gradient-to-r from-green-500 to-green-600 bg-clip-text text-transparent">
             Technical Terms
           </h1>
-          <button
-            onClick={handleGenerateNew}
-            disabled={isLoading}
-            className="px-6 py-2 rounded-xl bg-dark-card border border-gray-800 text-gray-300 hover:text-primary hover:border-primary transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            {isLoading ? "Генерация..." : "Сгенерировать новый текст"}
-          </button>
+
+          {/* Контейнер для чекбокса и кнопки */}
+          <div className="flex items-center gap-4">
+            {/* Чекбокс перевода */}
+            <div
+              className={`flex items-center gap-3 px-4 py-2 rounded-xl border ${
+                theme === "light"
+                  ? "bg-white border-gray-200 text-gray-700"
+                  : "bg-dark-card border-gray-800 text-gray-300"
+              }`}
+            >
+              <span className="text-sm font-medium whitespace-nowrap">
+                Перевод при наведении
+              </span>
+              <label className="relative inline-block w-11 h-6">
+                <input
+                  type="checkbox"
+                  checked={translationEnabled}
+                  onChange={(e) => setTranslationEnabled(e.target.checked)}
+                  className="hidden"
+                />
+                <div
+                  className={`absolute cursor-pointer top-0 left-0 right-0 bottom-0 rounded-full transition-all duration-300 ${
+                    translationEnabled ? "bg-primary" : "bg-gray-400"
+                  }`}
+                >
+                  <div
+                    className={`absolute w-5 h-5 bg-white rounded-full shadow transition-transform duration-300 top-0.5 left-0.5 ${
+                      translationEnabled ? "transform translate-x-5" : ""
+                    }`}
+                  />
+                </div>
+              </label>
+            </div>
+
+            {/* Кнопка генерации */}
+            <button
+              onClick={handleGenerateNew}
+              disabled={isLoading}
+              className={`px-6 py-2 rounded-xl border transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed ${
+                theme === "light"
+                  ? "bg-white border-gray-200 text-gray-700 hover:border-primary hover:text-primary"
+                  : "bg-dark-card border-gray-800 text-gray-300 hover:border-primary hover:text-primary"
+              }`}
+            >
+              {isLoading ? "Генерация..." : "Сгенерировать новый текст"}
+            </button>
+          </div>
         </div>
 
-        <div className="bg-dark-card rounded-2xl p-8 mb-6 border border-gray-800">
+        {/* Текст */}
+        <div
+          className={`rounded-2xl p-8 mb-6 border ${
+            theme === "light"
+              ? "bg-white border-gray-200 text-gray-700"
+              : "bg-dark-card border-gray-800 text-gray-300"
+          }`}
+        >
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl font-semibold text-primary">
               Technical Text
@@ -420,7 +465,7 @@ const LearningInterface = () => {
               disabled={isSaving || isLoading}
               className={`px-6 py-2 rounded-xl transition-all duration-200 ${
                 isSaving || isLoading
-                  ? "bg-gray-700 cursor-not-allowed"
+                  ? "bg-gray-400 cursor-not-allowed"
                   : "bg-primary hover:bg-primary-hover text-dark"
               }`}
             >
@@ -434,8 +479,12 @@ const LearningInterface = () => {
               )}
             </button>
           </div>
+
+          {/* Сгенерированный текст */}
           <div
-            className="text-gray-300 leading-relaxed select-none"
+            className={`leading-relaxed select-none ${
+              theme === "light" ? "text-gray-700" : "text-gray-300"
+            }`}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
@@ -463,7 +512,14 @@ const LearningInterface = () => {
           </div>
         </div>
 
-        <div className="bg-dark-card rounded-2xl p-8 mb-6 border border-gray-800">
+        {/* Незнакомые слова */}
+        <div
+          className={`rounded-2xl p-8 mb-6 border ${
+            theme === "light"
+              ? "bg-white border-gray-200"
+              : "bg-dark-card border-gray-800"
+          }`}
+        >
           <h2 className="text-xl font-semibold text-primary mb-4">
             Незнакомые слова
           </h2>
@@ -475,9 +531,19 @@ const LearningInterface = () => {
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   exit={{ scale: 0 }}
-                  className="bg-dark-lighter border border-gray-800 text-gray-300 px-4 py-2 rounded-xl flex items-center space-x-2 group hover:border-primary transition-colors"
+                  className={`px-4 py-2 rounded-xl flex items-center space-x-2 group border transition-colors ${
+                    theme === "light"
+                      ? "bg-white border-gray-200 hover:border-primary"
+                      : "bg-dark-lighter border-gray-800 hover:border-primary"
+                  }`}
                 >
-                  <span>{original}</span>
+                  <span
+                    className={
+                      theme === "light" ? "text-gray-700" : "text-gray-300"
+                    }
+                  >
+                    {original}
+                  </span>
                   <span className="text-sm text-primary/80 ml-2">
                     {translation}
                   </span>
@@ -497,7 +563,75 @@ const LearningInterface = () => {
           </div>
         </div>
 
-        <UsedTermsSection terms={categories} />
+        {/* Использованные термины */}
+        <div
+          className={`rounded-2xl p-6 border ${
+            theme === "light"
+              ? "bg-white border-gray-200"
+              : "bg-dark-card border-gray-800"
+          }`}
+        >
+          <div className="flex items-center justify-between mb-6">
+            <div>
+              <h3 className="text-xl font-semibold text-primary mb-1">
+                Использованные термины
+              </h3>
+              <p
+                className={`text-sm ${
+                  theme === "light" ? "text-gray-600" : "text-gray-400"
+                }`}
+              >
+                Технические термины, встречающиеся в тексте
+              </p>
+            </div>
+            <div
+              className={`px-3 py-1 rounded-lg text-sm font-medium border ${
+                theme === "light"
+                  ? "bg-gray-50 text-primary border-gray-200"
+                  : "bg-dark-lighter text-primary border-gray-800"
+              }`}
+            >
+              {Object.keys(categories).length} терминов
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {Object.entries(categories).map(([term, category]) => {
+              const [mainCategory, subCategory] = category
+                .split("->")
+                .map((s) => s.trim());
+
+              return (
+                <motion.div
+                  key={term}
+                  className={`p-4 rounded-xl border transition-colors ${
+                    theme === "light"
+                      ? "bg-gray-50 border-gray-200 hover:border-primary"
+                      : "bg-dark-lighter border-gray-800 hover:border-primary"
+                  }`}
+                >
+                  <h4 className="text-primary font-semibold mb-2">{term}</h4>
+                  <div className="space-y-1">
+                    <p
+                      className={
+                        theme === "light" ? "text-gray-700" : "text-gray-300"
+                      }
+                    >
+                      {mainCategory}
+                    </p>
+                    <p
+                      className={
+                        theme === "light" ? "text-gray-500" : "text-gray-500"
+                      }
+                    >
+                      {subCategory}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );
