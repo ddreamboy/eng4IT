@@ -138,15 +138,6 @@ const WordList = ({
               {subCategory}
             </span>
           )}
-          {progress !== undefined && (
-            <div className="w-24 bg-gray-700 rounded-full h-1 mb-2">
-              <motion.div
-                initial={{ width: 0 }}
-                animate={{ width: `${progress}%` }}
-                className="bg-primary h-full rounded-full"
-              />
-            </div>
-          )}
           {lastAttempt && (
             <span className="text-xs text-gray-500">{formattedDate}</span>
           )}

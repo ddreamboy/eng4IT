@@ -15,6 +15,7 @@ import {
 import { Link, useSearchParams } from "react-router-dom";
 import axios from "axios";
 import { AnimatePresence } from "framer-motion";
+import { useTheme } from "../contexts/ThemeContext";
 
 import TermModal from "./TermModal";
 import WordList from "./WordList";
@@ -65,6 +66,7 @@ const Dashboard = () => {
     termName: "",
     context: "", // 'unknown-words' или 'term-base'
   });
+  const { theme } = useTheme();
 
   const handleDelete = (termId, termName, context) => {
     setDeleteConfig({
@@ -692,10 +694,13 @@ const Dashboard = () => {
           placeholder="Поиск терминов..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="flex-1 bg-dark-card border border-gray-800 rounded-xl px-4 py-2 text-gray-200 focus:border-primary focus:outline-none"
+          className={`flex-1 border rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50 ${
+            theme === "light"
+              ? "bg-white border-gray-300 text-gray-900 placeholder-gray-500"
+              : "bg-dark-card border-gray-800 text-gray-200 placeholder-gray-500"
+          }`}
         />
-
-        {/* Основной Dropdown для Категорий */}
+        {/* Dropdown для Категорий */}
         <select
           value={filters.mainCategoryFilter}
           onChange={(e) => {
@@ -705,28 +710,45 @@ const Dashboard = () => {
               subCategoryFilter: "all",
             }));
           }}
-          className="bg-dark-card border border-gray-800 rounded-xl px-4 py-2 text-gray-200"
+          className={`border rounded-xl px-4 py-2 ${
+            theme === "light"
+              ? "bg-white border-gray-300 text-gray-900"
+              : "bg-dark-card border-gray-800 text-gray-200"
+          }`}
         >
           <option value="all">Все категории</option>
           {mainCategories.map((mainCat, index) => (
-            <option key={index} value={mainCat}>
+            <option
+              key={index}
+              value={mainCat}
+              className={theme === "light" ? "text-gray-900" : "text-gray-200"}
+            >
               {mainCat}
             </option>
           ))}
         </select>
-
-        {/* Второй Dropdown для Подкатегорий */}
+        {/* Dropdown для Подкатегорий */}
         {filters.mainCategoryFilter !== "all" && (
           <select
             value={filters.subCategoryFilter}
             onChange={(e) =>
               setFilters((f) => ({ ...f, subCategoryFilter: e.target.value }))
             }
-            className="bg-dark-card border border-gray-800 rounded-xl px-4 py-2 text-gray-200"
+            className={`border rounded-xl px-4 py-2 ${
+              theme === "light"
+                ? "bg-white border-gray-300 text-gray-900"
+                : "bg-dark-card border-gray-800 text-gray-200"
+            }`}
           >
             <option value="all">Все подкатегории</option>
             {categories[filters.mainCategoryFilter].map((subCat, idx) => (
-              <option key={idx} value={subCat}>
+              <option
+                key={idx}
+                value={subCat}
+                className={
+                  theme === "light" ? "text-gray-900" : "text-gray-200"
+                }
+              >
                 {subCat}
               </option>
             ))}
@@ -823,39 +845,69 @@ const Dashboard = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <Link
           to="/assessment"
-          className="bg-dark-card p-6 rounded-xl border border-gray-800 hover:border-primary transition-colors group"
+          className={`bg-dark-card p-6 rounded-xl border border-gray-800 hover:border-primary transition-colors group ${
+            theme === "light"
+              ? "hover:bg-gray-50 group-hover:text-gray-900"
+              : "hover:bg-gray-800 group-hover:text-gray-100"
+          }`}
         >
           <div className="text-primary mb-3">
             <ClipboardCheck size={24} />
           </div>
           <h3 className="text-lg font-medium mb-2">Оценка знаний</h3>
-          <p className="text-gray-400 text-sm group-hover:text-gray-300">
+          <p
+            className={`text-sm ${
+              theme === "light"
+                ? "text-gray-600 group-hover:text-gray-800"
+                : "text-gray-400 group-hover:text-gray-300"
+            }`}
+          >
             Проверьте свое знание технических терминов
           </p>
         </Link>
 
         <Link
           to="/learning"
-          className="bg-dark-card p-6 rounded-xl border border-gray-800 hover:border-primary transition-colors group"
+          className={`bg-dark-card p-6 rounded-xl border border-gray-800 hover:border-primary transition-colors group ${
+            theme === "light"
+              ? "hover:bg-gray-50 group-hover:text-gray-900"
+              : "hover:bg-gray-800 group-hover:text-gray-100"
+          }`}
         >
           <div className="text-primary mb-3">
             <BookOpen size={24} />
           </div>
           <h3 className="text-lg font-medium mb-2">Практика чтения</h3>
-          <p className="text-gray-400 text-sm group-hover:text-gray-300">
-            Читайте технические тексты в контексте
+          <p
+            className={`text-sm ${
+              theme === "light"
+                ? "text-gray-600 group-hover:text-gray-800"
+                : "text-gray-400 group-hover:text-gray-300"
+            }`}
+          >
+            Читайте технические термины в контексте
           </p>
         </Link>
 
         <Link
           to="/chat-exercise"
-          className="bg-dark-card p-6 rounded-xl border border-gray-800 hover:border-primary transition-colors group"
+          className={`bg-dark-card p-6 rounded-xl border border-gray-800 hover:border-primary transition-colors group ${
+            theme === "light"
+              ? "hover:bg-gray-50 group-hover:text-gray-900"
+              : "hover:bg-gray-800 group-hover:text-gray-100"
+          }`}
         >
           <div className="text-primary mb-3">
             <MessageSquare size={24} />
           </div>
           <h3 className="text-lg font-medium mb-2">Чат с коллегой</h3>
-          <p className="text-gray-400 text-sm group-hover:text-gray-300">
+          <p
+            className={`text-sm ${
+              theme === "light"
+                ? "text-gray-600 group-hover:text-gray-800"
+                : "text-gray-400 group-hover:text-gray-300"
+            }`}
+          >
             Практикуйте технический английский в диалоге
           </p>
         </Link>
@@ -893,7 +945,13 @@ const Dashboard = () => {
               <Shuffle size={24} />
             </div>
             <h3 className="text-lg font-medium mb-2">Найти пару</h3>
-            <p className="text-gray-400 text-sm group-hover:text-gray-300">
+            <p
+              className={`text-sm ${
+                theme === "light"
+                  ? "text-gray-600 group-hover:text-gray-800"
+                  : "text-gray-400 group-hover:text-gray-300"
+              }`}
+            >
               Сопоставьте слова с их переводами
             </p>
           </Link>

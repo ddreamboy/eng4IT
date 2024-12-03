@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { X, Volume2 } from "lucide-react";
+import { useTheme } from "../contexts/ThemeContext";
 
 const TermModal = ({ isOpen, onClose, term, translation, category }) => {
   const [explanation, setExplanation] = useState("");
@@ -11,7 +12,7 @@ const TermModal = ({ isOpen, onClose, term, translation, category }) => {
   const [isTranslating, setIsTranslating] = useState(false);
   const [currentModel, setCurrentModel] = useState("");
   const [showTranslation, setShowTranslation] = useState(false);
-
+  const { theme } = useTheme();
   const [isPlaying, setIsPlaying] = useState(false);
 
   // Разделение категории на основную и подкатегорию
@@ -162,7 +163,11 @@ const TermModal = ({ isOpen, onClose, term, translation, category }) => {
               <button
                 onClick={getLlmTranslation}
                 disabled={isTranslating}
-                className="px-3 py-1 rounded-lg text-sm font-medium bg-primary/20 text-primary hover:bg-primary/30 disabled:opacity-50"
+                className={`px-3 py-1 rounded-lg text-sm font-medium ${
+                  theme === "light"
+                    ? "bg-primary/10 text-primary-dark hover:bg-primary/20"
+                    : "bg-primary/20 text-primary hover:bg-primary/30"
+                } disabled:opacity-50`}
               >
                 {isTranslating ? "Перевод..." : "Перевести LLM"}
               </button>
@@ -183,14 +188,26 @@ const TermModal = ({ isOpen, onClose, term, translation, category }) => {
               {llmTranslation && (
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <p className="text-sm text-primary mb-1">Перевод LLM:</p>
-                  <p className="text-gray-300">{llmTranslation}</p>
+                  <p
+                    className={`whitespace-pre-wrap ${
+                      theme === "light" ? "text-gray-700" : "text-gray-300"
+                    }`}
+                  >
+                    {llmTranslation}
+                  </p>
                 </div>
               )}
             </div>
           )}
 
-          {/* Статистика изучения */}
-          <div className="mb-4 p-3 bg-dark-lighter rounded-lg">
+          {/* Стили для попыток изучения */}
+          <div
+            className={`mb-4 p-3 ${
+              theme === "light"
+                ? "bg-gray-50 text-gray-800"
+                : "bg-dark-lighter text-gray-300"
+            } rounded-lg`}
+          >
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <p className="text-sm text-gray-400">Попыток изучения</p>
@@ -219,12 +236,19 @@ const TermModal = ({ isOpen, onClose, term, translation, category }) => {
             </button>
           )}
 
+          {/* Текст объяснения */}
           {explanation && (
             <div className="mt-4">
               <h4 className="text-lg font-medium text-primary mb-2">
                 Объяснение:
               </h4>
-              <p className="text-gray-300 whitespace-pre-wrap">{explanation}</p>
+              <p
+                className={`whitespace-pre-wrap ${
+                  theme === "light" ? "text-gray-700" : "text-gray-300"
+                }`}
+              >
+                {explanation}
+              </p>
             </div>
           )}
         </div>
