@@ -102,7 +102,7 @@ const WordAssessment = () => {
   const navigate = useNavigate();
   const [words, setWords] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [setKnownWords] = useState([]);
+  const [knownWords, setKnownWords] = useState([]);
   const [unknownWords, setUnknownWords] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [exitX, setExitX] = useState(0);

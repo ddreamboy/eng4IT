@@ -331,7 +331,7 @@ const MatchingExercise = () => {
   }
 
   return (
-    <div className="min-h-screen gradient-background py-8">
+    <div className="min-h-screen gradient-background py-8 matching-exercise">
       <div className="max-w-4xl mx-auto p-6">
         <Link
           to="/"
@@ -359,7 +359,7 @@ const MatchingExercise = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+        <div className="matching-exercise-grid">
           {/* Английские слова */}
           <div className="space-y-4">
             {displayedPairs.map((pair, index) => (

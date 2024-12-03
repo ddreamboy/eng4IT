@@ -859,7 +859,7 @@ const Dashboard = () => {
       </div>
 
       {/* Отладочная информация */}
-      {process.env.NODE_ENV === "development" && (
+      {/* {process.env.NODE_ENV === "development" && (
         <div className="mt-4 p-4 bg-dark-card rounded-xl">
           <p className="text-gray-400">Debug Info:</p>
           <p>Terms count: {Object.keys(allTerms).length}</p>
@@ -868,7 +868,7 @@ const Dashboard = () => {
             {JSON.stringify(allTerms, null, 2)}
           </pre>
         </div>
-      )}
+      )} */}
     </div>
   );
 

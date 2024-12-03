@@ -29,6 +29,13 @@ body {
 }
 
 .word-span {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    touch-action: none;
     user-select: none;
     cursor: pointer;
     transition: all 0.2s;
@@ -786,6 +793,12 @@ body {
     backdrop-filter: blur(10px);
 }
 
+.matching-exercise .matching-exercise-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
 /* Мобильная навигация */
 @media screen and (max-width: 768px) {
     .mobile-nav .nav-link {
@@ -880,6 +893,25 @@ body {
     .term-card .term {
         font-size: 1rem;
     }
+
+    .matching-exercise .matching-exercise-grid {
+        gap: 0.75rem;
+    }
+
+    .matching-exercise .Card {
+        min-height: 60px;
+        padding: 0.5rem;
+    }
+
+    .matching-exercise .Card span {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        word-break: break-word;
+    }
+
+    .matching-exercise .max-w-4xl {
+        padding: 1rem;
+    }
 }
 
 /* Улучшенная touch-область для кнопок */
@@ -911,5 +943,14 @@ body {
 
     .settings-section {
         padding: 1rem;
+    }
+
+    .matching-exercise .Card span {
+        font-size: 0.75rem;
+    }
+
+    .matching-exercise .Card {
+        padding: 0.25rem;
+        min-height: 50px;
     }
 }

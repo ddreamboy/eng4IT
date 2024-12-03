@@ -450,36 +450,61 @@ def save_words():
     try:
         session = Session()
         try:
-            words = request.get_json()['words']
-            if not words:
+            data = request.get_json()
+            if not data or 'words' not in data:
                 return jsonify({'error': 'No words provided'}), 400
 
+            words = data['words']
+            saved_terms = []
+
             for word_data in words:
-                if 'original' in word_data and 'translation' in word_data:
-                    term = Term(
+                if not all(key in word_data for key in ['original', 'translation']):
+                    continue
+
+                # Проверяем существование термина
+                existing_term = session.query(Term).filter_by(term=word_data['original']).first()
+
+                if existing_term:
+                    # Обновляем существующий термин
+                    existing_term.translation = word_data['translation']
+                    existing_term.category = word_data.get('category', 'Programming -> General')
+                    term_id = existing_term.id
+                else:
+                    # Создаем новый термин
+                    new_term = Term(
                         term=word_data['original'],
                         translation=word_data['translation'],
-                        category=word_data.get('category', 'Unknown'),
-                        term_metadata={  # Изменено с metadata на term_metadata
+                        category=word_data.get('category', 'Programming -> General'),
+                        term_metadata={
                             'source': 'learning_interface',
                             'added_at': datetime.now().isoformat(),
-                        },
+                        }
                     )
-                    session.add(term)
+                    session.add(new_term)
                     session.flush()
+                    term_id = new_term.id
 
+                # Проверяем существование записи в UnknownTerm
+                unknown_term = session.query(UnknownTerm).filter_by(term_id=term_id).first()
+                if not unknown_term:
                     unknown_term = UnknownTerm(
-                        term_id=term.id,
+                        term_id=term_id,
                         attempts=0,
-                        last_attempt=datetime.now(),
+                        last_attempt=datetime.now()
                     )
                     session.add(unknown_term)
 
+                saved_terms.append(term_id)
+
             session.commit()
-            return jsonify({'status': 'success'})
+            return jsonify({
+                'status': 'success',
+                'saved_terms': saved_terms
+            })
 
         except Exception as e:
             session.rollback()
+            logger.error(f'Error in save_words: {e}')
             raise e
         finally:
             session.close()
@@ -487,7 +512,6 @@ def save_words():
     except Exception as e:
         logger.error(f'Error saving words: {e}')
         return jsonify({'error': str(e)}), 500
-
 
 @app.route('/api/assessment-words', methods=['GET'])
 def get_assessment_words():
@@ -697,7 +721,7 @@ def categorize_words():
 
     try:
         session = Session()
-        # Получаем все категории и подкатегории из БД
+        # Получаем все существующие категории и подкатегории
         categories = session.query(Category).all()
         categories_dict = {}
 
@@ -705,20 +729,15 @@ def categorize_words():
             subcategories = [sub.name for sub in category.subcategories]
             categories_dict[category.name] = subcategories
 
-        # Формируем текст с категориями для промпта
-        categories_text = '\n'.join(
-            [
-                f"Category: {cat}\nSubcategories: {', '.join(subs)}"
-                for cat, subs in categories_dict.items()
-            ]
-        )
-
         # Если категорий нет, создаем базовые
         if not categories_dict:
             default_categories = [
                 ('Programming', ['General', 'Algorithms', 'Data Structures']),
                 ('Web Development', ['Frontend', 'Backend', 'APIs']),
                 ('Databases', ['SQL', 'NoSQL', 'Design']),
+                ('Networks', ['Protocols', 'Security', 'Architecture']),
+                ('Software Engineering', ['Design Patterns', 'Testing', 'DevOps']),
+                ('Operating Systems', ['Process Management', 'Memory Management', 'File Systems'])
             ]
 
             for cat_name, subcats in default_categories:
@@ -727,56 +746,52 @@ def categorize_words():
                 session.flush()
 
                 for subcat_name in subcats:
-                    subcategory = Subcategory(
-                        name=subcat_name, category_id=category.id
-                    )
+                    subcategory = Subcategory(name=subcat_name, category_id=category.id)
                     session.add(subcategory)
+
+                categories_dict[cat_name] = subcats
 
             session.commit()
 
-            # Обновляем текст категорий
-            categories_text = '\n'.join(
-                [
-                    f"Category: {cat}\nSubcategories: {', '.join(subs)}"
-                    for cat, subs in default_categories
-                ]
-            )
+        # Подготовка промпта с категориями
+        categories_text = "\n".join([
+            f"Category: {cat}\nSubcategories: {', '.join(subs)}"
+            for cat, subs in categories_dict.items()
+        ])
 
         prompt = f"""Given these existing categories and their subcategories:
         {categories_text}
 
-        Please categorize the following words by assigning them to either existing or new categories.
-        Words to categorize: {', '.join([w['original'] for w in words])}
-
-        Return the results in the format:
-        word1: Category -> Subcategory
-        word2: Category -> Subcategory
-        ...
+        Please categorize the following technical terms by assigning them to the most appropriate category and subcategory.
+        Terms to categorize: {', '.join([w['original'] for w in words])}
 
         Important:
-        - Use existing categories when possible
-        - Create new categories only if really necessary
-        - Always use the format "Category -> Subcategory"
+        - Use existing categories and subcategories when possible
+        - Consider the technical context and meaning of each term
+        - Return in format: term: Category -> Subcategory
+        - Be specific in categorization
+        - Analyze the term's primary function or domain
+
+        Terms for categorization:
+        {', '.join([w['original'] for w in words])}
         """
 
-        # Получаем текущую модель и ключ API
+        # Получаем модель и выполняем категоризацию
         current_model, api_key = get_current_model()
 
         try:
             if current_model == 'gemini' and api_key:
                 categorization = gemini_service.categorize_words(prompt)
             else:
-                service = KnowledgeEvaluator(
-                    os.path.join(WORDS_DIR, 'categorized_words.md')
-                )
+                service = KnowledgeEvaluator(os.path.join(WORDS_DIR, 'categorized_words.md'))
                 categorization = service.categorize_words(prompt)
 
-            # Парсим результат и добавляем новые категории если нужно
+            # Обработка результатов категоризации
             categorized_words = []
             for word in words:
                 word_category = None
 
-                # Ищем категоризацию для текущего слова
+                # Поиск категоризации для текущего слова
                 for line in categorization.strip().split('\n'):
                     if ':' in line and '->' in line:
                         cat_word, category = line.split(':', 1)
@@ -785,34 +800,37 @@ def categorize_words():
                             break
 
                 if word_category and '->' in word_category:
-                    cat_name, subcat_name = [
-                        x.strip() for x in word_category.split('->')
-                    ]
+                    cat_name, subcat_name = [x.strip() for x in word_category.split('->')]
 
                     # Проверяем существование категории
-                    category = (
-                        session.query(Category).filter_by(name=cat_name).first()
-                    )
+                    category = session.query(Category).filter_by(name=cat_name).first()
                     if not category:
-                        category = Category(name=cat_name)
-                        session.add(category)
-                        session.flush()
+                        # Если категория не существует, используем наиболее подходящую
+                        category = session.query(Category).filter_by(name='Programming').first()
+                        subcat_name = 'General'
+                    else:
+                        # Проверяем подкатегорию
+                        subcategory = session.query(Subcategory).filter_by(
+                            category_id=category.id,
+                            name=subcat_name
+                        ).first()
 
-                    # Проверяем существование подкатегории
-                    subcategory = (
-                        session.query(Subcategory)
-                        .filter_by(category_id=category.id, name=subcat_name)
-                        .first()
-                    )
-                    if not subcategory:
-                        subcategory = Subcategory(
-                            name=subcat_name, category_id=category.id
-                        )
-                        session.add(subcategory)
+                        if not subcategory:
+                            # Если подкатегория не существует, используем 'General'
+                            subcat_name = 'General'
+                            if 'General' not in [sub.name for sub in category.subcategories]:
+                                new_subcategory = Subcategory(
+                                    name='General',
+                                    category_id=category.id
+                                )
+                                session.add(new_subcategory)
+                                session.flush()
 
-                    word['category'] = f'{cat_name} -> {subcat_name}'
+                    word['category'] = f'{category.name} -> {subcat_name}'
                 else:
-                    word['category'] = 'Programming -> General'
+                    # Используем дефолтную категорию только если не удалось определить другую
+                    default_category = session.query(Category).filter_by(name='Programming').first()
+                    word['category'] = f'{default_category.name} -> General'
 
                 categorized_words.append(word)
 
@@ -822,14 +840,25 @@ def categorize_words():
         except Exception as e:
             logger.error(f'Error during categorization: {e}')
             session.rollback()
-            # В случае ошибки используем базовую категорию
-            return jsonify(
-                {
-                    'words': [
-                        {**w, 'category': 'Programming -> General'} for w in words
-                    ]
-                }
-            )
+            # В случае ошибки используем более подходящие категории на основе контекста
+            categorized_words = []
+            for word in words:
+                # Здесь можно добавить простую логику определения категории
+                # на основе ключевых слов в термине
+                term = word['original'].lower()
+                if any(kw in term for kw in ['api', 'http', 'rest']):
+                    category = 'Web Development -> APIs'
+                elif any(kw in term for kw in ['database', 'sql', 'query']):
+                    category = 'Databases -> SQL'
+                elif any(kw in term for kw in ['function', 'variable', 'loop']):
+                    category = 'Programming -> General'
+                else:
+                    category = 'Programming -> General'
+
+                word['category'] = category
+                categorized_words.append(word)
+
+            return jsonify({'words': categorized_words})
 
     except Exception as e:
         logger.error(f'Error in categorize_words: {e}')
@@ -840,7 +869,6 @@ def categorize_words():
     finally:
         if 'session' in locals():
             session.close()
-
 
 @app.route('/api/categories', methods=['GET'])
 def get_categories():
