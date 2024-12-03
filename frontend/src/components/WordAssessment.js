@@ -7,6 +7,8 @@ import {
 } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
 const API_URL = "http://localhost:5000/api";
 
@@ -80,6 +82,22 @@ const WordCard = ({ word, category, onSwipe, active, exitX }) => {
   );
 };
 
+const LoadingOverlay = () => (
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    className="fixed inset-0 z-50 flex items-center justify-center bg-white/30 backdrop-blur-sm"
+  >
+    <div className="glass-card p-8 rounded-2xl flex flex-col items-center space-y-4">
+      <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+      <span className="text-lg font-medium text-primary">
+        Сохранение результатов...
+      </span>
+    </div>
+  </motion.div>
+);
+
 const WordAssessment = () => {
   const navigate = useNavigate();
   const [words, setWords] = useState([]);
@@ -88,6 +106,8 @@ const WordAssessment = () => {
   const [unknownWords, setUnknownWords] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [exitX, setExitX] = useState(0);
+  const [isSaving, setIsSaving] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false);
 
   useEffect(() => {
     const fetchWords = async () => {
@@ -110,6 +130,10 @@ const WordAssessment = () => {
   }, []);
 
   const handleSwipe = (direction, xValue) => {
+    // Защита от повторных быстрых кликов
+    if (isProcessing) return;
+    setIsProcessing(true);
+
     const currentWord = words[currentIndex];
     setExitX(xValue);
 
@@ -120,10 +144,12 @@ const WordAssessment = () => {
     }
 
     if (currentIndex + 1 >= words.length) {
+      setIsSaving(true);
       setTimeout(handleAssessmentComplete, 300);
     } else {
       setTimeout(() => {
-        setCurrentIndex((prev) => prev + 1);
+        setCurrentIndex((prev) => Math.min(prev + 1, words.length - 1));
+        setIsProcessing(false);
       }, 300);
     }
   };
@@ -135,7 +161,6 @@ const WordAssessment = () => {
 
   const handleAssessmentComplete = async () => {
     try {
-      // Сохраняем только неизвестные слова
       await axios.post(`${API_URL}/assessment-results`, {
         unknownWords: unknownWords.map((word) => ({
           term: word.term,
@@ -143,10 +168,14 @@ const WordAssessment = () => {
         })),
       });
 
-      // Перенаправляем на страницу с неизвестными словами
-      navigate("/?tab=unknown-words");
+      // Добавим небольшую задержку перед редиректом
+      setTimeout(() => {
+        setIsSaving(false);
+        navigate("/?tab=unknown-words");
+      }, 1000);
     } catch (error) {
       console.error("Error saving assessment results:", error);
+      setIsSaving(false);
     }
   };
 
@@ -163,55 +192,67 @@ const WordAssessment = () => {
 
   return (
     <div className="min-h-screen gradient-background flex flex-col items-center p-8">
-      <div className="w-full max-w-md mx-auto">
-        {/* Отображать сообщение, если нет слов */}
-        {words.length === 0 && !isLoading && (
-          <div className="text-center text-red-500">
-            Нет доступных слов для оценки.
-          </div>
-        )}
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-center bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent">
-            Words Assessment
-          </h1>
-          <p className="text-center text-gray-400 mt-2">
-            Свайпните влево если знаете слово, вправо если нет
-          </p>
-          <div className="text-center text-gray-500 mt-2">
-            {currentIndex + 1} из {words.length}
-          </div>
-        </div>
+      <AnimatePresence>{isSaving && <LoadingOverlay />}</AnimatePresence>
+      <div className="max-w-4xl mx-auto px-6 py-8">
+        {/* Кнопка "На главную" */}
+        <Link
+          to="/"
+          className="inline-flex items-center text-gray-400 hover:text-primary mb-8"
+        >
+          <ArrowLeft className="mr-2" size={20} />
+          на главную
+        </Link>
+        <div className="w-full max-w-md mx-auto">
+          {/* Остальной контент */}
+          {words.length === 0 && !isLoading && (
+            <div className="text-center text-red-500">
+              Нет доступных слов для оценки.
+            </div>
+          )}
 
-        <div className="relative h-80">
-          <AnimatePresence initial={false}>
-            {words.map((word, index) => (
-              <WordCard
-                key={word.id}
-                word={word.term}
-                category={word.category}
-                onSwipe={handleSwipe}
-                active={index === currentIndex}
-                exitX={exitX}
-              />
-            ))}
-          </AnimatePresence>
-        </div>
+          <div className="mb-8">
+            <h1 className="text-3xl font-bold text-center bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent">
+              Words Assessment
+            </h1>
+            <p className="text-center text-gray-400 mt-2">
+              Свайпните влево если знаете слово, вправо если нет
+            </p>
+            <div className="text-center text-gray-500 mt-2">
+              {currentIndex + 1} из {words.length}
+            </div>
+          </div>
 
-        <div className="mt-8 flex justify-center space-x-4">
-          <motion.button
-            whileTap={{ scale: 0.95 }}
-            onClick={() => handleButtonClick("known")}
-            className="bg-primary hover:bg-primary-hover text-dark px-6 py-2 rounded-xl transition-all duration-200"
-          >
-            Yes
-          </motion.button>
-          <motion.button
-            whileTap={{ scale: 0.95 }}
-            onClick={() => handleButtonClick("unknown")}
-            className="bg-red-600 hover:bg-red-1000 text-white px-6 py-2 rounded-xl transition-all duration-200"
-          >
-            No
-          </motion.button>
+          <div className="relative h-80">
+            <AnimatePresence initial={false}>
+              {words.map((word, index) => (
+                <WordCard
+                  key={word.id}
+                  word={word.term}
+                  category={word.category}
+                  onSwipe={handleSwipe}
+                  active={index === currentIndex}
+                  exitX={exitX}
+                />
+              ))}
+            </AnimatePresence>
+          </div>
+
+          <div className="mt-8 flex justify-center space-x-4">
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={() => handleButtonClick("known")}
+              className="bg-primary hover:bg-primary-hover text-dark px-6 py-2 rounded-xl transition-all duration-200"
+            >
+              Yes
+            </motion.button>
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={() => handleButtonClick("unknown")}
+              className="bg-red-600 hover:bg-red-1000 text-white px-6 py-2 rounded-xl transition-all duration-200"
+            >
+              No
+            </motion.button>
+          </div>
         </div>
       </div>
     </div>
