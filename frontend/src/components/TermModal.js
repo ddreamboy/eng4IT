@@ -105,13 +105,13 @@ const TermModal = ({ isOpen, onClose, term, translation, category }) => {
   if (!isOpen || !term) return null;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto">
-      <div className="flex items-center justify-center min-h-screen px-4">
+    <div className="fixed inset-0 z-50 overflow-y-auto px-4">
+      <div className="flex items-center justify-center min-h-screen">
         <div
           className="fixed inset-0 bg-black opacity-30"
           onClick={onClose}
         ></div>
-        <div className="relative bg-dark-card border border-gray-800 rounded-2xl p-8 max-w-lg w-full shadow-xl">
+        <div className="relative bg-dark-card w-full max-w-lg mx-auto rounded-2xl p-4 md:p-8">
           <button
             onClick={handleClose}
             className="absolute top-4 right-4 text-gray-400 hover:text-primary"

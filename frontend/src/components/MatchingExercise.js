@@ -118,7 +118,7 @@ const MatchingExercise = () => {
 
   // Изменим обработку правильного сопоставления
   const handleCardClick = (word, isEnglish) => {
-    const normalizedWord = typeof word === 'string' ? word.toLowerCase() : '';
+    const normalizedWord = typeof word === "string" ? word.toLowerCase() : "";
 
     if (
       matchedPairs.some(
@@ -147,7 +147,8 @@ const MatchingExercise = () => {
           (pair) => pair.english.toLowerCase() === newSelectedPair.english,
         );
 
-        if (matchedPairData) { // Добавлена проверка
+        if (matchedPairData) {
+          // Добавлена проверка
           const matchedPair = {
             id: matchedPairData.id,
             english: newSelectedPair.english,
@@ -231,7 +232,7 @@ const MatchingExercise = () => {
       `}
     >
       <span className="text-white text-lg font-medium break-words">
-        {typeof word === 'string' ? word.toLowerCase() : JSON.stringify(word)}
+        {typeof word === "string" ? word.toLowerCase() : JSON.stringify(word)}
       </span>
     </div>
   );
@@ -358,7 +359,7 @@ const MatchingExercise = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           {/* Английские слова */}
           <div className="space-y-4">
             {displayedPairs.map((pair, index) => (

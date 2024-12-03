@@ -384,7 +384,7 @@ const LearningInterface = () => {
       </AnimatePresence>
 
       <TranslationPopup {...translationPopup} />
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-4 md:px-6">
         {/* Кнопка "На главную" в стиле других компонентов */}
         <Link
           to="/"
@@ -394,7 +394,7 @@ const LearningInterface = () => {
           на главную
         </Link>
 
-        <div className="flex justify-between items-center mb-8">
+        <div className="flex flex-col md:flex-row gap-4 items-start md:items-center justify-between mb-8">
           <h1 className="text-3xl font-bold bg-gradient-to-r from-green-500 to-green-600 bg-clip-text text-transparent">
             Technical Terms
           </h1>
